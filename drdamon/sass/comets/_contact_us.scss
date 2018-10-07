@@ -1,0 +1,49 @@
+/*-------------------------------------------*\
+    ::Page Styles - Contact Us
+\*-------------------------------------------*/
+.page-contact-us {
+	.page-torso__content:first-child {
+		background: $white;
+		box-shadow: 0px -3px 10px -2px rgba(0, 0, 0, 0.45);
+		margin-top: 700px;
+		padding: 35px 0 50px;
+		@include bp($solarsystem) {
+			margin-top: 0px;
+			box-shadow: none;
+		}
+	}
+	.page__group {
+		strong {
+			border-bottom: 1px solid #9c9c9c;
+			color: $color-2;
+			display: block;
+			font-family: $fam-heading;
+			font-weight: bold;
+			font-size: emCalc(20px);
+			line-height: 1.5em;
+			margin-bottom: 5px;
+			width: 100%;
+		}
+		p, a {
+			color: #555555;
+			line-height: 1.6em;
+			
+		}
+		a {
+			text-decoration: none;
+			transition: 400ms;
+			&:hover {
+				color: $color-3;
+			}
+		}
+	}
+	/*------------------------------------*\
+    	:: Remove CTA in footer  
+	\*------------------------------------*/
+	.main-foot {
+		.cta {
+			display: none;
+		}
+	}
+}
+

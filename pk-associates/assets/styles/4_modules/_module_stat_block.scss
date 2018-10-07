@@ -1,0 +1,46 @@
+/*------------------------------------*\
+    :: Map Block
+\*------------------------------------*/
+.stat-block {
+    width: 100%;
+    overflow: hidden;
+    background-color: $color-3-light;
+}
+.stat-block__content {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    text-align: center;
+}
+.stat-block__stat {
+    display: inline-block;
+    max-width: 215px;
+    margin: 4.5em auto 5.5em;
+    padding: $pad*0.5 $pad*2 $pad*1.5;
+    position: relative;
+    h1 {
+        color: $color-1;
+        font-size: 105px;
+    }
+    h4 {
+        display: inline-block;
+        width: 100%;
+        text-align: justify;
+    }
+    &:before {
+        height: 29px;
+        width: 29px;
+        content: url('assets/images/corner-top.svg');
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    &:after {
+        height: 29px;
+        width: 29px;
+        content: url('assets/images/corner-bottom.svg');
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+}

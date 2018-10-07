@@ -1,0 +1,126 @@
+/*------------------------------------*\
+    ::  Image Grid Styles
+\*------------------------------------*/
+$grid_pad:          2.134%;  // 24px
+$height_1:          28.75vw; // 400px
+$height_1_mobile:   47.75vw; // 190px @bp 500px
+$height_2:          13vw;    // 188px
+$height_2_mobile:   27.75vw; // 110px @bp 500px
+$height_3_mobile:   105vw;   // 420px @bp 500px
+$width_1:           42.5%;   // 622px
+$width_2:           15.8%;   // 232px
+$width_2_mobile:    48%;     // 232px
+$width_3:           19.4%;   // 282px
+$width_4:           33.73%;  // 488px
+$width_1_850:       33.5%;  
+$width_2_850:       19.8%;   
+$width_3_850:       20.5%;   
+$width_4_850:       41.73%;  
+.image-grid {
+    width: 100%;
+    overflow: hidden;
+    .image-grid__images {
+        display: block;
+        max-height: 400px;
+        overflow: hidden;
+        @include bp($max:640px) {
+            max-height: none;
+        }
+        .image-grid__image {
+            float: left;
+            margin: 0 $grid_pad 0 0;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            @extend %br;
+            @include bp($max:640px) {
+                margin: 0 0 1.5em 0;
+            }
+            &:nth-of-type(1) {
+                height: 400px;
+                width: $width_1;
+                @include bp($max:1440px) {
+                    border-top-left-radius: 0;
+                    border-bottom-left-radius: 0;
+                }
+                @include bp($max:1024px) {
+                    height: 324px;
+                }
+                @include bp($max:850px) { // change width
+                    width: $width_1_850;
+                }
+                @include bp($max:640px) {
+                    width: 100%;
+                    height: $height_1_mobile;
+                    max-height: 305px;
+                    border-top-left-radius: 10px;
+                    border-bottom-left-radius: 10px;
+                }
+            }
+            &:nth-of-type(2),
+            &:nth-of-type(3) {
+                height: 188px;
+                width: $width_2;
+                @include bp($max:1024px) {
+                    height: 150px;
+                }
+                @include bp($max:850px) { // change width
+                    width: $width_2_850;
+                }
+                @include bp($max:640px) {
+                    width: $width_2_mobile;
+                    height: $height_2_mobile;
+                    max-height: none;
+                    margin: 0 4% 1.5em 0;
+                }
+            }
+            &:nth-of-type(3) {
+                @include bp($max:640px) {
+                    margin-right: 0;
+                }
+            }
+            &:nth-of-type(4) {
+                float: right; 
+                margin: 0;
+                height: 400px;
+                width: $width_3;
+                @include bp($max:1440px) {
+                    border-top-right-radius: 0;
+                    border-bottom-right-radius: 0;
+                }
+                @include bp($max:1024px) {
+                    height: 324px;
+                }
+                @include bp($max:850px) { // change width
+                    width: $width_3_850;
+                }
+                @include bp($max:640px) {
+                    float: left;
+                    width: 100%;
+                    height: $height_3_mobile;
+                    max-height: 500px;
+                    margin: 0 0 1.5em 0;
+                    border-top-right-radius: 10px;
+                    border-bottom-right-radius: 10px;
+                }
+            }
+            &:nth-of-type(5) {
+                height: 188px;
+                width: $width_4;
+                margin-top: 1.5em;
+                @include bp($max:1024px) {
+                    height: 150px;
+                }
+                @include bp($max:850px) { // change width
+                    width: $width_4_850;
+                }
+                @include bp($max:640px) {
+                    width: 100%;
+                    height: $height_1_mobile;
+                    max-height: 305px;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}

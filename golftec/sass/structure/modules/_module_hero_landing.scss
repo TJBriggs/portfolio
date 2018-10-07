@@ -1,0 +1,241 @@
+/*------------------------------------*\
+    ::  Hero Landing Styles
+\*------------------------------------*/
+.hero-block--landing {
+	margin-top: 104px;
+	overflow: hidden;
+	@extend %bg-cover;
+	@include bp($max:767px) {
+		margin-top: 64px;
+	}
+	.hero-block__overlay {
+		@extend %overlay-medium;
+		text-align: left;
+	}
+	.hero-block__inner {
+		padding: 0 $pad*2;
+		@include bp($max:900px) {
+			padding: 0;
+		}
+	}
+	.hero-block__main-wrap {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	// Hero Text
+	.hero-block__text-wrap {
+		width: 50%;
+		position: relative;
+		padding-right: $pad*2;
+		@include bp($max:900px) {
+			width: 100%;
+			padding: $pad*1.5 0 $pad*1.5 $pad*3;
+		}
+		@include bp($max:640px) {
+			padding: $pad*1.5 $pad*2 $pad*1.5;
+		}
+	}
+	.hero-block__text {
+		position: absolute;
+		bottom: 4em;
+		@include bp($max:900px) {
+			position: static;
+		}
+		h4 {
+			margin: 0 0 1em;
+			color: $color-3;
+		}
+		p {
+			margin: 0;
+			color: $color-3;
+			font-size: 0.9em;
+			max-width: 475px;
+			@include bp($max:640px) {
+				max-width: none;
+			}
+		}
+		a {
+			display: inline-block;
+			margin-top: 1em;
+			color: $color-3;
+			font-size: 1.75em;
+			transition: color 400ms;
+			&:hover {
+				color: $color-2;
+				text-decoration: none;
+			}
+		}
+	}
+	.hero-block__form-wrap {
+		width: 50%;
+		margin-top: 1.5em;
+		padding-left: $pad*2;
+		@include bp($max:900px) {
+			width: 100%;
+			padding-left: 0;
+		}
+		form {
+			padding: $pad*0.5 $pad $pad*1.5;
+			background-color: rgba(44, 41, 45, 0.7);
+			overflow: hidden;
+			@include bp($max:900px) {
+				padding: $pad*0.5 $pad*3 $pad*1.5;
+			}
+			@include bp($max:640px) {
+				padding: $pad*0.5 $pad $pad*1.5;
+			}
+			label {
+				display: inline-block;
+				padding-bottom: 0.75em;;
+				margin-top: 0.75em;
+				color: $color-3;
+				font-size: 0.7em;
+				font-weight: 100;
+				letter-spacing: 0.095em;
+			}
+			.lock-icon {
+				height: 13px;
+				width: 13px;
+				margin-right: 8px;
+			}
+			.field-wrap--half { // For more compact form make the margin larger
+				width: 48%;
+				margin-right: 4%;
+			}
+			.field-wrap--last{ // For more compact form make the margin larger
+				width: 48%;
+				margin-right: 0;
+			}
+			.field-wrap--tablet-half {
+				@include bp($max:900px) {
+					width: 48%;
+					margin-right: 4%;
+				}
+				@include bp($max:500px) {
+					width: 100%;
+					margin-right: 0;
+				}
+			}
+			.field-wrap--tablet-half-last {
+				@include bp($max:900px) {
+					width: 48%;
+					margin-right: 0;
+				}
+				@include bp($max:500px) {
+					width: 100%;
+				}
+			}
+			input[type="submit"] {
+				width: 100%;
+				margin: 1.15em 0 0;
+			}
+		}
+	}
+}
+/*------------------------------------*\
+    ::  Custom Styling to add space 
+\*------------------------------------*/
+body.landing-page-b {
+	.hero-block--landing {
+		margin-top: 0;
+		.hero-block__overlay {
+			padding-top: 225px;
+			@include bp($max:1024px) {
+				padding-top: 90px;
+			}
+			@include bp($max:1024px) {
+				padding-top: 60px;
+			}
+		}
+	}
+}	
+/*------------------------------------*\
+    ::  KSS MarkUp (Ignore)
+\*------------------------------------*/    
+// Hero Landing Page
+//
+// Demo:<br><a href="../modules/module-hero-landing.php" target="_blank">module-hero-landing.php</a>
+//
+// Stylesheet:<br>
+// <a href="../sass/structure/modules/_module_hero_landing.scss" target="_blank">_module_hero_landing.scss</a><br>
+//
+// Path To The Code:<br>
+// golftec/golftec/modules/module-hero-landing.php
+//
+// Markup:
+// <section class="hero-block hero-block--landing" style="background-image: url('../images/modules/hero/home-hero-1.jpg')">
+//     <div class="hero-block__overlay">
+//         <div class="hero-block__inner">
+//             <div class="hero-block__main-wrap">
+//                 <div class="hero-block__text-wrap">
+//                     <div class="hero-block__text">
+//                         <h4>Request Detailed Pricing</h4>
+//                         <p>Submit this form and a local GolfTEC Coach will contact you to learn about your golf game and provide exact pricing for your area. The fastest way to learn about your game is with a Swing Evaluation. After your Swing Evaluation, we can tailor a plan that will improve your game.</p>
+//                         <a href="tel:8774465383">877.446.5383</a>
+//                     </div> <!-- // hero-block__text -->
+//                 </div> <!-- // hero-block__text-wrap -->
+//                 <div class="hero-block__form-wrap">
+//                     <form action="#">
+//                         <div class="field-wrap field-wrap--full field-wrap--tablet-half">
+//                             <label for="first-name">first name</label><br>
+//                             <input type="text" name="first-name">
+//                         </div>
+//                         <div class="field-wrap field-wrap--full field-wrap--tablet-half field-wrap--tablet-half-last">
+//                             <label for="last-name">last name</label><br>
+//                             <input type="text" name="email">
+//                         </div>
+//                         <div class="field-wrap field-wrap--full field-wrap--tablet-half">
+//                             <label for="email-address">email address</label><br>
+//                             <input type="email" name="email-address">
+//                         </div>
+//                         <div class="field-wrap field-wrap--full field-wrap--tablet-half field-wrap--tablet-half-last">
+//                             <label for="telephone">phone</label><br>
+//                             <input type="tel" name="telephone">
+//                         </div>
+//                         <div class="field-wrap field-wrap--half">
+//                             <label for="zipcode">zipcode</label><br>
+//                             <input type="text" name="zipcode">
+//                         </div>
+//                         <div class="field-wrap field-wrap--half field-wrap--last">
+//                             <label for="location"><img class="lock-icon" src="../images/global/lock-icon.svg" alt="Padlock Icon">please select a location</label><br>
+//                             <select name="location" id="location-field" disabled>
+//                                 <option value="">-- Select --</option>
+//                                 <option value="">Denver</option>
+//                             </select>
+//                             <div id="js-select" class="select-box__styled">
+//                                 <div class="select-box__wrap">
+//                                     <span class="dropdown-text">*Choose Your Preferred Center</span>
+//                                     <span class="arrow-down">
+//                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><path d="M223 12.3L777 497 223 987.7V12.3z"/></svg>
+//                                     </span>
+//                                 </div>
+//                             </div>
+//                         </div>
+//                         <div class="field-wrap field-wrap--full">
+//                             <label for="referral">where did you hear about us?</label>
+//                             <select name="referral" id="referral-field">
+//                                 <option value="">-- Select --</option>
+//                                 <option value="">Google</option>
+//                                 <option value="">Golf Digest</option>
+//                                 <option value="">104.3 The Fan</option>
+//                             </select>
+//                             <div id="js-select" class="select-box__styled">
+//                                 <div class="select-box__wrap">
+//                                     <span class="dropdown-text">*Select One</span>
+//                                     <span class="arrow-down">
+//                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><path d="M223 12.3L777 497 223 987.7V12.3z"/></svg>
+//                                     </span>
+//                                 </div>
+//                             </div>
+//                         </div>
+//                         <div class="field-wrap field-wrap--full">
+//                             <input type="submit" name="submit" value="Pricing Request Form">
+//                         </div>
+//                     </form> <!-- // form-->
+//                 </div> <!-- // hero-block__form-wrap -->
+//             </div> <!-- // hero-block__main-wrap -->
+//         </div> <!-- // hero-block__inner -->
+//     </div> <!-- // hero-block__overlay -->
+// </section> <!-- // hero-block -->
+//
+// Styleguide 5.5

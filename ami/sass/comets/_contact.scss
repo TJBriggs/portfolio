@@ -1,0 +1,26 @@
+/*------------------------------------*\
+    :: Contact Page
+\*------------------------------------*/
+.page-contact {
+	.main-head { // don't let the head darken on scroll for contact page
+		background: rgba(0,0,0,0.75);
+		&.main-head--dark { // seting opacities the same
+			background: rgba(0,0,0,0.75);
+		}
+	}
+	.content-block--contact {
+		padding-bottom: 0;
+		.title-wrap {
+			margin-bottom: 0;
+			.content-title {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+.form__wrap {
+	padding: 0 1.875rem;
+    background: #9cabb1;
+    border-radius: 0.15em;
+}

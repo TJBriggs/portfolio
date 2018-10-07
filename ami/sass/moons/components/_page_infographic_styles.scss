@@ -1,0 +1,24 @@
+/*------------------------------------*\
+    ::  Infographic Styles
+\*------------------------------------*/
+.infographic {
+	.infographic__subtitle {
+		color: #616161;
+		font-family: $fam-head-bold;
+		font-size: em(19px);
+		line-height: 1.45em;
+		text-align: center;
+		text-transform: uppercase;
+	}
+	.icon-wrap {
+		.icon { 
+			text-align: center;
+			figcaption {
+				color: $color-1-light;
+				font-family: $fam-nav;
+				text-align: center;
+				text-transform: uppercase;
+			}
+		}
+	}
+}

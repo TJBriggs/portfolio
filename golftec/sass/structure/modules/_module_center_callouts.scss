@@ -1,0 +1,127 @@
+/*------------------------------------*\
+    ::  Center Callouts Styles
+\*------------------------------------*/	
+.center-callouts {
+	background-color: $color-3;
+	&__inner {
+		padding: 3.8em $pad;
+	}
+	&__col-wrap {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	&__column {
+		display: flex;
+		flex-wrap: wrap;
+		width: 50%;
+		padding: 0 $pad;
+		transition: width 400ms;
+		@include bp($max:960px) {
+			width: 80%;
+			margin: 0 auto 3em;
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+		@include bp($max:768px) {
+			width: 100%;
+			max-width: 500px;
+			margin: 0 auto 3em;
+		}
+	}
+	&__img-wrap {
+		width: 50%;
+		transition: width 400ms;
+		@include bp($max:768px) {
+			width: 100%;
+		}
+	}
+	&__text-wrap {
+		width: 50%;
+		padding: 0 0 0 $pad*1.5;
+		transition: width 400ms;
+		h5 {
+			margin: 0 0 0.75em 0;
+			padding: 0;
+		}
+		ul {
+			margin: 0;
+			padding: 0 0 0 $pad;
+		}
+		li {
+			font-size: 0.8em;
+			line-height: 1.25em;
+		}
+		@include bp($max:960px) {
+			padding: 0 0 0 $pad*4;
+			h5 {
+				font-size: 1.5em;
+			}
+			li {
+				font-size: 0.95em;
+			}
+		}
+		@include bp($max:768px) {
+			width: 100%;
+			padding: 0 $pad;
+			h5 {
+				margin-top: 1em;
+			}
+		}
+	}
+}
+/*------------------------------------*\
+    ::  KSS MarkUp (Ignore)
+\*------------------------------------*/    
+// Center Callouts
+//
+// Demo &amp; Modifiers:<br><a href="../modules/module-center-callouts.php" target="_blank">module-center-callouts.php</a>
+//
+// Stylesheet:<br>
+// <a href="../sass/structure/modules/_module_center_callouts.scss" target="_blank">_module_center_callouts.scss</a><br>
+//
+// Path To The Code:<br>
+// golftec/golftec/modules/module-center-callouts.php
+//
+// Markup:
+// <article class="center-callouts main-torso__group">
+//     <div class="center-callouts__inner">
+//         <div class="center-callouts__col-wrap">
+//             <div class="center-callouts__column">
+//                 <div class="center-callouts__img-wrap">
+//                     <img src="../images/modules/center-callouts/center-callout-1.jpg" alt="Image of Golf Course">
+//                 </div>
+//                 <div class="center-callouts__text-wrap">
+//                     <h5><strong>Nearby Golf Courses</strong></h5>
+//                     <ul>
+//                         <li>Glenmoor Country Club</li>
+//                         <li>Cherry Hills Country Club</li>
+//                         <li>Wellshire Golf Course</li>
+//                         <li>Valley Country Club</li>
+//                         <li>Inverness Golf Club</li>
+//                     </ul>
+//                 </div> <!-- // center-services__text-wrap -->
+//             </div> <!-- // center-services__column -->
+//             <div class="center-callouts__column">
+//                 <div class="center-callouts__img-wrap">
+//                     <img src="../images/modules/center-callouts/center-callout-2.jpg" alt="Image of GolfTEC Equipment">
+//                 </div> <!-- // center-services__img-wrap -->
+//                 <div class="center-callouts__text-wrap">
+//                     <h5><strong>Unique Features</strong></h5>
+//                     <ul>
+//                         <li>One-on-one private golf instruction with a Certified Personal Coach</li>
+//                         <li>High-speed cameras</li>
+//                         <li>Foresight launch monitor technology</li> 
+//                         <li>GolfTEC's patented Motion Measurement technology</li>
+//                         <li>Video Practice with immediate visual feedback</li>
+//                         <li>TECfit Custom Club Fitting</li>
+//                         <li>TECplay Virtual Golf Simulator</li>
+//                         <li>150 renowned courses, including St. Andrews and Pebble Beach</li>
+//                     </ul>
+//                 </div> <!-- // center-services__text-wrap -->
+//             </div> <!-- // center-services__column -->
+//         </div> <!-- // center-services__col-wrap -->
+//     </div> <!-- // center-services__inner -->
+// </article> <!-- // center-services -->
+//
+// Styleguide 6.14

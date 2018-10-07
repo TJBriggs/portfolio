@@ -1,0 +1,74 @@
+/*------------------------------------*\
+    ::  Icon Slider Styles
+\*------------------------------------*/	
+.icon-slider {
+	background-color: $color-2;
+	// Nav Elements
+	&__nav {
+		&:after { // Underline
+			background-color: $color-1-light;
+		}
+	}
+	.nav-item {
+		list-style-type: none;
+		list-style-image: none;
+		&:after { // Active Arrow
+			border-style: solid;
+			border-width: 0 8px 13.9px 8px;
+			border-color: transparent transparent $color-1-light transparent;
+			font-size: 30px;
+			opacity: 0;
+			transition: opacity 400ms;
+			@include bp($max:600px) {
+				display: none;
+			}
+		}
+		&__link {
+			&:hover { // Turn off underline
+				text-decoration: none;
+			}
+		}
+		img, svg {
+			fill: #050608;
+			transition: fill 400ms;
+		}
+		h4 {
+			color: $color-1-light;
+			font-weight: bold;
+			@include bp($max:960px) {
+				font-size: 2vw;
+			}
+			@include bp($max:600px) {
+				font-size: emCalc(15px);
+			}
+			@include bp($max:400px) {
+				font-size: emCalc(13.5px);
+			}
+		}
+		&:hover {
+			&:after {
+				opacity: 1;
+				@include bp($max:479px) { // Turn blue arrow off
+					opacity: 0;
+				}
+			}
+		}
+		&.active {
+			&:after {
+				opacity: 1;
+			}
+			@include bp($max:600px) { // Only make the active icon blue once arrow icon is hidden
+				svg {
+					fill: $color-1-light;
+				}
+			}
+		}
+	}
+	// Slide Elements
+	&__slide {
+		font-size: emCalc(18px);
+		@include bp($max:480px) {
+			font-size: initial;
+		}
+	}
+}

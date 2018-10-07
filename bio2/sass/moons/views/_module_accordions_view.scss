@@ -1,0 +1,14 @@
+/*------------------------------------*\
+    ::  Accordions Styles
+\*------------------------------------*/	
+.accordions {
+	background-color: $color-2;
+	&__accordion {
+		border-bottom: 1px solid $color-1;
+	}
+	&__link {
+		color: $color-1-light;
+		cursor: pointer;
+		font-size: emCalc(22px);
+	}
+}

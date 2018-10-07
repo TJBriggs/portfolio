@@ -1,0 +1,86 @@
+/*------------------------------------*\
+    :: FLexslider
+\*------------------------------------*/
+//  Wall of Smiles Carousel (polaroids)
+.flexslider--polaroids {
+    .flex-control-paging {
+        bottom: 25px;
+        position: relative;
+        a {
+            background-color: $color-1;
+            border: .2em solid #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 1px 1px rgba(#000,.3);
+            height: 15px;
+            width: 15px;
+            padding: .3em;
+            transition: background-color 300ms;
+            @include bp($solarsystem) {
+                height: 25px;
+                width: 25px;
+            }
+            @include bp($planetary) {
+                height: 25px;
+                width: 25px;
+            }
+            &:hover,
+            &.flex-active {
+                background-color: $color-2;
+            }
+        }
+    }
+    .flex-direction-nav {
+        display: none;
+        position: relative;
+    }
+}
+
+
+//  News Slider
+.flexslider--news {
+    .flex-control-paging {
+        display: none;
+    }
+    .flex-direction-nav {
+        position: relative;
+        top: -165px;
+        transition: 400ms;
+        @include bp($planetary) {
+            top: -205px;
+        }
+        @include bp($max:320px) {
+            top: -275px;
+        }
+        a {
+            color: $color-4;
+            height: 20px;
+            width: 20px;
+            opacity: 0.75 !important;
+            z-index: 100;
+            &:before, &:after {
+                font-size: 20px;
+            }
+            &:hover {
+                opacity: 1 !important;
+            }
+            &.flex-prev {
+                left: 41.7%;
+                transition: 400ms;
+            }
+            &.flex-next {
+                right: 1%;
+                transition: 400ms;
+            }
+        }
+        @include bp($max: 960px) {
+            a {
+                &.flex-prev {
+                    left: 5%;
+                }
+                &.flex-next {
+                    right: 5%;
+                }
+            }
+        }
+    }
+}

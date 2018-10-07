@@ -1,0 +1,17 @@
+/*------------------------------------*\
+    ::Framework Customizations
+\*------------------------------------*/
+$row-width: 1140px;                     //sets the width of the rows for foundation (must be above all).
+$include-html-classes: false;           //eliminates foundation basic styling from founcations _global.scss
+
+//    ::Settings
+//    ----------------------------------*
+@import "settings/global/*";
+
+//    ::Structure
+//    ----------------------------------*
+@import "structure/**/*";
+
+//    ::Structure
+//    ----------------------------------*
+@import "modifiers/**/*";

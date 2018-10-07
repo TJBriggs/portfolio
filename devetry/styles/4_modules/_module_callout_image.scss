@@ -1,0 +1,100 @@
+/*------------------------------------*\
+    :: Callout w/BG Image Styles
+\*------------------------------------*/   
+.callout-image {
+    width: 100%;
+    overflow: hidden;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    @include bp($max:1024px) {
+        background-attachment: scroll;
+    }
+    &__overlay {
+        height: 100%;
+        width: 100%;
+        @extend %callout-overlay;
+    }
+    &__inner {
+        height: 100%;
+        width: 100%;
+    }
+    &__content {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justifjy-content: center;
+        padding: 6.5em 0;
+        @include bp($max:768px) {
+            padding: 4em 0;
+        }
+    }
+    &__text {
+        width: 100%;
+        text-align: center;
+        h1 {
+            color: $color-3;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .callout-image__blurb {
+            margin: 1.75em auto 0;
+            max-width: 830px;
+            color: $color-3;
+            font-size: 25px;
+            & > *:first-child {
+                margin-top: 0;
+            }
+            & > *:last-child {
+                margin-bottom: 0;
+            }
+            p {
+                font-size: 25px;
+                @include bp($max:768px) {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+    &__icon-wrap {
+        width: 100%;
+        max-width: 725px;
+        margin: 3.5em auto 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        @include bp($max:640px) {
+            margin: 3em auto 0;
+        }
+    }
+    &__icon {
+        display: inline-block;
+        width: 25%;
+        text-align: center;
+        padding: 0 $pad;
+        @include bp($max:640px) {
+            width: 50%;
+            margin-bottom: 2.5em;
+            &:nth-of-type(3), &:nth-of-type(4) {
+                margin-bottom: 0;
+            }
+        }
+        img {
+            display: inline-block;
+            height: 79px;
+            width: 79px;
+        }
+        h5 {
+            display: inline-block;
+            width: 100%;
+            margin-top: 0.5em;
+            color: $color-3;
+            @include bp($max:640px) {
+                font-size: 20px;
+            }
+        }
+    }
+} 

@@ -1,0 +1,46 @@
+/*------------------------------------*\
+    ::  Header Map Layout
+\*------------------------------------*/
+.header-map {
+    //height: emCalc(545px);
+    height: emCalc(445px);
+    width: 100%;
+    margin-top: 107px;
+    overflow: hidden;
+    img {
+        display: block;
+        max-width: none; 
+    }
+    @include bp($max:1024px) {
+        height: emCalc(425px);
+    }
+    @include bp($max:640px) {
+        height: emCalc(315px);
+        margin-top: 87px;
+    }
+}
+.gm-style {
+    img {max-width: none;}
+}
+.gm-style-iw {
+    h6 {
+        margin: 10px 0 0;
+    }
+    p {
+        margin: 5px 0;
+    }
+}
+/*-------------------------------------------------*\
+    ::  Adjust Top Margin if Admin Bar is visible
+\*-------------------------------------------------*/ 
+.admin-bar {
+    .header-map {
+        margin-top: 77px;
+        @include bp($max:782px) { // Admin bar gets taller here
+            margin-top: 63px;
+        }
+        @include bp($max:640px) { // Admin bar gets shorter again
+            margin-top: 44px;
+        }
+    }
+}  	

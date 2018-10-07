@@ -1,0 +1,252 @@
+/*---------------------------------------*\
+    ::Nav in the Header (Desktop Styles)
+\*---------------------------------------*/
+@include bp($min:1025px) {
+	.head-nav {
+		@include nav(
+		    $type: 'dropdown',           		//nav type: dropdown or nested
+		    $fade: .3s,                  		//fade speed (take out for no animation)
+		    $easy-hover: 50px,           		//amount of invisible overflow for sub menu (take out to not use)
+		    $easy-hover-top: 1.2em       		//set top easy-hover value (you can also set $easy-hover-right, -bottom, and -left separately)
+		);
+		float: right;
+		width: 80%;
+		position: relative;
+		top: em(55px);
+		transition: top 500ms;
+	}
+	// General Styles
+	.head-nav a {
+		display: block;
+		text-decoration: none;
+		transition: color 400ms;
+	}
+	// Main menu styles
+	.menu {
+		float: right;
+		margin: 0;
+		padding: 0;
+		position: relative;
+		> li {
+			margin: 0 $pad*1.5;
+			position: relative;
+			tranistion: margin 400ms;
+			letter-spacing: 0;
+			@include bp($max:1125px) {
+				margin: 0 em(13px);
+			}
+			&.menu-item-65  { // contact
+				margin-right: $pad*2;
+			}
+			> a {
+				height: em(71px);
+				font-family: $fam-semi;
+				font-size: em(14px);
+				color: $txt-color-3;
+				letter-spacing: 0;
+				&:hover {
+					color: $color-2;
+				}
+			}
+			// Active state
+			&.current-menu-item {
+				> a {
+					color: $color-2;
+				}
+			}
+		}
+		.menu-item-542 { // hidden phone # | Mobile only
+			display: none;
+		}
+	}
+	// Sub Menu Styles
+	.sub-menu {
+		width: 170px;
+		margin: 0;
+		left: -15px;
+		padding: $pad 0;
+		overflow: hidden;
+		background-color: rgba(116, 170, 202, 0.90);
+		> li {
+			width: 100%;
+			> a {
+				padding: em(4px) $pad;
+				color: $color-4;
+				font-family: $fam-semi;
+				font-size: em(13px);
+				transition: color 400ms;
+				&:hover {
+					color: $txt-color-2;
+				}
+			}
+			// Active state
+			&.current-menu-item {
+				> a {
+					color: $txt-color-2;
+					font-family: $fam-semi;
+				}
+			}
+		}
+	}
+	// Adjusting Sub-Menu widths based on text lengths
+	.menu-item-51 { // Practice Link
+		.sub-menu {
+			width: 120px;
+			left: -15px;
+		}
+	}
+	.menu-item-55 { // Treatments Link
+		.sub-menu {
+			width: 175px;
+			left: -15px;
+		}
+	}
+}
+/*------------------------------------*\
+    ::  Tablet Styles
+\*------------------------------------*/	
+@include bp($max:1024px) {
+	.head-nav {
+		width: 0;
+		margin: 0;
+		padding: 0;
+		position: fixed;
+		top: em(121px);
+		right: 0;
+		bottom: 0;
+		background-color: rgba(116, 170, 202, 0.95);
+		transition: width 400ms;
+		.main-head__trigger.active ~ .main-head__nav & { // when nav is toggled
+            width: 100%;
+            overflow-y: scroll;
+        }
+	}
+	// General li & a styles
+	li {
+		list-style-type: none;
+	}
+	.head-nav a {
+		display: block;
+		color: $color-4;
+		text-decoration: none;
+		transition: color 400ms;
+	}
+	.menu {
+		margin: 0;
+		padding: 1.5em $pad*2 1.5em;
+		> li {
+			width: 100%;
+			padding: 0 50px 0 0;
+			&.menu-item-has-children {
+        		position: relative;
+                &:before{
+                	content: '>'; // nav arrow
+                	display: block;
+                	position: absolute;
+                	top: -6px;
+                    right: 8px;
+                    backface-visibility: hidden;
+                    color: $color-4;
+                    cursor: pointer;
+                    font-family: $fam-light;
+                    font-size: em(35px);
+                    z-index: 100;
+                    transition: transform 250ms, color 400ms;
+                }
+                &.active{
+                	&:before {
+	                    transform: rotate(90deg);
+                	}
+                }
+            }
+			> a {
+				height: em(40px);
+				line-height: 45px;
+				font-family: $fam-semi;
+				font-size: em(17px);
+				transition: color 400ms;
+				&:hover {
+					color: $txt-color-2;
+				}
+			}
+			// Active State
+			&.current-menu-item {
+				> a {
+					color: $txt-color-2;
+					font-family: $fam-bold;
+				}
+			}
+		}
+		.menu-item-542 { // hidden phone # | Mobile only
+			display: none;
+			@include bp($max:640px) {
+				display: block;
+			}
+		}
+	}
+	.sub-menu {
+		height: 0;
+		visibility: hidden;
+		> li {
+			> a {
+				height: em(40px);
+				line-height: 40px;
+				font-family: $fam-bold;
+				font-size: em(14px);
+				transition: color 400ms;
+				&:hover {
+					color: $txt-color-2;
+				}
+			}
+			// Active State
+			&.current-menu-item {
+				> a {
+					color: $txt-color-2;
+				}
+			}
+		}
+	}
+	.menu-item-has-children {
+		&.active {
+			.sub-menu {
+				height: auto;
+				visibility: visible;
+			}
+		}
+	}
+}
+/*------------------------------------*\
+    ::  Phone Styles
+\*------------------------------------*/	
+@include bp($max:480px) {
+	.head-nav {
+		top: em(75px);
+	}
+}
+/*------------------------------------*\
+    ::  Sticky Nav Styles
+\*------------------------------------*/
+.nav--small {
+	// slide the nav items up on scroll
+	.head-nav {
+		top: -68px;
+	}
+}	
+
+// .touch {
+// 	.main-head__trigger.active ~ body & { // when nav is toggled
+// 		overflow: hidden;
+// 	}
+// 	.head-nav {
+// 		.main-head__trigger.active ~ .main-head__nav & { // when nav is toggled
+// 			height: 100%;
+// 			min-height: em(700px);
+//             width: 100%;
+//             overflow-y: scroll;
+//         }
+// 	}
+// }
+
+
+
+

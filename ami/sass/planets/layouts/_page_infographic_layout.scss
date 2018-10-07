@@ -1,0 +1,68 @@
+/*------------------------------------*\
+    ::  Infographic Layout
+\*------------------------------------*/
+.infographic {
+	width: 100%;
+	padding-bottom: em(110px);
+	@include bp($max:850px) {
+		padding-bottom: em(35px);
+	}
+	.infographic__subtitle {
+		margin: em(45px) auto 0;
+		position: relative;
+		img {
+			display: inline;
+			position: relative;
+			top: 4px;
+			max-width: 300px;
+			margin-bottom: em(18px);
+		}
+		@include bp($max:640px) { // reduce top margin to tighten up design
+			margin: em(35px) auto 0;
+		}
+		@include bp($max:450px) { 
+			padding: 0 $pad;
+			img {
+				max-width: 250px;
+			}
+		}
+	}
+	.icon-wrap {
+		margin-top: em(20px);
+		position: relative;
+		overflow: hidden;
+		&:before {
+			display: block;
+			content: url('images/global/border.svg');
+			width: 83%;
+			margin: 0 auto;
+		}
+		@include bp($max:450px) {
+			margin-top: em(10px);
+			&:before { // hide dotted border too small at phone
+				display: none;
+			}
+		}
+		.icon {
+			float: left;
+			height: auto;
+			width: 16%;
+			margin: 0 2%; 
+			figcaption {
+				width: 100%;
+				margin-top: em(10px);
+			}
+			@include bp($max:850px) {
+				width: 46%;
+				margin: 0 2%;
+				&:last-of-type { // center last box 
+					width: 46%;
+					margin: 0 27%;
+				}
+				figcaption {
+					min-height: em(65px); // set min-height so titles don't overflow
+				}
+			}
+		}
+	}
+}

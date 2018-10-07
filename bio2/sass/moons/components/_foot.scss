@@ -1,0 +1,226 @@
+/*------------------------------------*\
+    ::Footer
+\*------------------------------------*/
+@include sticky-footer(
+    $wrap: '.wrap-all-the-things',
+    $row:  '.main-head, .main-torso, .main-foot',
+    $flex: '.main-torso'
+);
+.main-foot {
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+	z-index: 1;
+	background-color: $color-1;
+	&__inner {
+		margin-top: em(50px);
+		margin-bottom: em(40px);
+		position: relative;
+		@include bp($max:1024px) {
+			min-height: 145px;
+		}
+		@include bp($max:515px) {
+			margin-top: 1.5em;
+			min-height: 205px;
+		}
+	}
+	&__logo {
+		display: block;
+		height: 90px;
+		width: 160px;
+		position: absolute;
+		left: $pad;
+		img {
+			max-height: 90px;
+			max-width: 160px;
+		}
+		@include bp($max:1024px) {
+			position: static;
+			float: left;
+			margin: 0 0 em(20px) $pad;
+		}
+		@include bp($max:515px) {
+			height: 70px;
+			width: 140px;
+			img {
+				max-height: 70px;
+				max-width: 140px;
+			}
+		}
+	}
+	&__social {
+		margin: 0;
+		padding: 0;
+		position: absolute;
+		bottom: -3px;
+		right: $pad;
+		text-align: center;
+		@include bp($max:515px) {
+			top: 45px;
+			bottom: auto;
+			left: 185px;
+		}
+		li {
+			display: inline-block;
+			list-style-type: none;
+			margin: 0 0.15em;
+			@include bp($max:325px) {
+				margin: 0 0.05em;
+			}
+			&:last-of-type {
+				margin: 0 0 0 0.15em;
+			}
+			a {
+				display: block;
+				svg {
+					height: 30px;
+					width: 30px;
+					fill: $color-2;
+					transition: fill 400ms;
+				}
+				&:hover {
+					svg {
+						fill: $color-1-light;
+					}
+				}
+			}
+		}
+	}
+	&__content {
+		width: 100%;
+		margin: 0 auto;
+		overflow: hidden;
+		@include bp($max:1024px) {
+			width: 77%;
+			margin: 0;
+			padding: 0 $pad 0 0;
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+		@include bp($max:768px) {
+			width: 70%;
+		}
+		@include bp($max:640px) {
+			width: 63%;
+		}
+		@include bp($max:515px) {
+			width: 100%;
+			margin-top: 100px;
+			padding: 0 $pad;
+		}
+	}
+	&__copy {
+		float: left;
+		width: 55%;
+		padding-left: 22%;
+		transition: padding 400ms;
+		@include bp($max:1090px) {
+			padding-left: 20%;
+		}
+		@include bp($max:1024px) {
+			float: left;
+			width: 48%;
+			padding: 0;
+		}
+		@include bp($max:768px) {
+			width: 42%;
+		}
+		@include bp($max:640px) {
+			width: 100%;
+		}
+		p {
+			margin: 0;
+			color: $color-1-light;
+			font-size: em(10px);
+			font-weight: 200;
+			letter-spacing: 0.035em;
+			line-height: 1.75em;
+			text-align: left;
+		}
+	}
+	&__caution {
+		float: left;
+		width: 45%;
+		padding-left: 0.5%;
+		padding-right: 9%; 
+		overflow: hidden;
+		transition: padding 400ms;
+		@include bp($max:1090px) {
+			padding-right: 6%;
+		}
+		@include bp($max:1024px) {
+			float: right;
+			width: 48%;
+			padding: 0;
+		}
+		@include bp($max:768px) {
+			width: 54%;
+		}
+		@include bp($max:640px) {
+			width: 100%;
+			margin-top: em(15px);
+		}
+		img {
+			float: left;
+			margin-top: 3px;
+		}
+		p {
+			float: left;
+			width: 75%;
+			margin: 0 0 0 10px;
+			color: $color-2;
+			font-size: em(10px);
+			font-weight: 200;
+			letter-spacing: 0.035em;
+			line-height: 1.75em;
+			text-align: left;
+			@include bp($max:1024px) {
+				width: 80%;
+			}
+			@include bp($max:768px) {
+				width: 80%;
+			}
+		}
+	}
+	&__design {
+		width: 100%;
+		background: #fff;
+		padding: em(25px) 0;
+		text-align: center;
+		a, span {
+			display: inline-block;
+			color: $color-1-light;
+			font-size: 13px;
+			font-weight: 200;
+			@include bp($max:600px) {
+				width: 100%;
+			}
+		}
+		a {
+			@include bp($max:600px) {
+				margin-top: 10px;
+				&:first-of-type {
+					margin-top: none;
+				}
+			}
+			&:hover {
+				text-decoration: none;;
+			}
+		}
+		.seperator {
+			display: inline-block;
+			margin: 0 15px;
+			@include bp($max:600px) {
+				display: none;
+			}
+		}
+		.zenman {
+			a {
+				@include bp($max:600px) {
+					width: auto;
+				}
+			}
+		}
+	}
+}

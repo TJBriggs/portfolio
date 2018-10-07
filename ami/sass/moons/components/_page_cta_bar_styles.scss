@@ -1,0 +1,20 @@
+/*------------------------------------*\
+    ::  CTA Bar Styles
+\*------------------------------------*/
+.cta-bar {
+	.cta-bar__icon {
+		text-align: center;
+	}
+	.cta-bar__text {
+		h2 {
+			&:after {
+				background: $color-3;
+			}
+		}
+		p {
+			margin: em(24px) 0 0 0;
+			line-height: 1.6em;
+		}
+
+	}
+}

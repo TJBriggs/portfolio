@@ -1,0 +1,181 @@
+/*------------------------------------*\
+	:: Hero Block Styles
+\*------------------------------------*/
+.hero-block {
+	height: 560px;
+	width: 100%;
+	margin-top: 100px;
+	overflow: hidden;
+	background-color: rgba(40, 48, 58, 0.5);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-blend-mode: multiply;
+	transition: height 400ms;
+	// Reduce Opacity on some pages
+	.page-id-5 & { //  Home Page
+		background-color: rgba(40, 48, 58, 0.77);
+	}
+	@include bp($max:960px) {
+		height: 460px;
+	}
+	@include bp($max:768px) {
+		margin-top: 65px;
+	}
+	@include bp($max:640px) {
+		height: 340px;
+	}
+	&__inner {
+		height: 100%;
+		width: 100%;
+		position: relative;
+		.hero-block__arrow {
+			display: none;
+		}
+	}
+	.hero-block__overlay {
+		height: 100%;
+		width: 100%;
+		&.ie-edge {
+			background-color: rgba(0,0,0, 0.55);
+		}
+	}
+	&__content {
+		height: 100%;
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+		h1 {
+			width: 100%;
+			max-width: 650px;
+			margin: 0 auto 20px;
+			padding-bottom: 28px;
+			position: relative;
+			color: $color-3;
+			text-align: center;
+			@include bp($max:768px) {
+				margin: 0 auto 8px;
+				padding-bottom: 18px;
+			}
+			&:after {
+				content: '';
+				height: 3px;
+				width: 45px;
+				position: absolute;
+				bottom: 0px;
+				background-color: $color-3;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+		}
+	}
+	&__btn-wrap {
+		width: 100%;
+		text-align: center;
+	}
+	.btn {
+		margin-top: 1em;
+		@include bp($max:480px) {
+			font-size: 13px;
+			padding: 1em $pad*2;
+		}
+		&.btn--alt {
+			margin-left: 10px;
+			@include bp($max:640px) {
+				margin-left: 0;
+			}
+			@include bp($max:480px) {
+				font-size: 13px;
+				line-height: 1.3em;
+				padding: 1em $pad*1.25 0.95em;
+				min-width: 0;
+			}
+			@include bp($max:400px) {
+				padding: 0.6em $pad*1.25 0.55em;
+			}
+		}
+	}
+}
+.hero-block--tall {
+	height: 650px;
+	@include bp($max:960px) {
+		height: 540px;
+	}
+	@include bp($max:640px) {
+		height: 405px;
+	}
+	.hero-block__inner {
+		position: relative;
+		.hero-block__arrow {
+			display: none;
+			height: 21px;
+			width: 18px;
+			position: absolute;
+			bottom: 20px;
+			left: 50%;
+			transform: translateX(-50%);
+			@include bp($max:768px) {
+				display: block;
+			}
+			&.buttons-present {
+				@include bp($max:480px) {
+					bottom: 15px;
+				}
+			}
+		}
+	}
+	.hero-block__item-wrap {
+		transform: translateY(-57px);
+		@include bp($max:768px) {
+			transform: translateY(0px);
+			&:after {
+				bottom: -50px;
+			}
+		}
+	}
+}
+
+.hero-block__blog {
+	overflow: visible;
+	position: relative;
+	.hero-block__content {
+		div {
+			text-align: center;
+			h1 {
+				line-height: 1.15em;
+			  &:after {
+				display: none;
+			  }
+			}
+			span {
+				display: inline-block;
+				margin-top: 0.75em;
+				position: relative;
+				color: $color-3;
+				font-size: 1.6em;
+				@include bp($max:768px) {
+					font-size: 1.5em;
+				}
+				@include bp($max:500px) {
+					font-size: 1.35em;
+				}
+				&:after {
+					content: '';
+					height: 3px;
+					width: 45px;
+					position: absolute;
+					bottom: -25px;
+					background-color: $color-3;
+					left: 50%;
+					transform: translateX(-50%);
+				}
+			}
+		}
+	}
+}
+
+.hero-block--none {
+	height: 0;
+}

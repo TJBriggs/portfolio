@@ -1,0 +1,161 @@
+/*------------------------------------*\
+    :: Header
+\*------------------------------------*/
+// General header styles go here.
+.main-head {
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9000;
+    background-color: $color-3;
+    box-shadow: 0px 3px 10px 0 rgba(0, 0, 0, 0.45);
+    @include bp($max:768px) {
+        height: 65px;
+    }
+}
+.main-head__inner {
+    height: 100%;
+    position: relative;
+}
+.main-head__logo {
+    display: inline-block;
+    height: auto;
+    width: 100%;
+    max-width: 190px;
+    margin: 1.25em 0;
+    @include bp($max:768px) {
+        max-width: 125px;
+        margin: 0.85em 0 0 0;
+    }
+    @include bp($max:399px) {
+        max-width: 115px;
+        margin:0.9em 0 0 0;
+    }
+}
+.main-head__cta {
+    float: right;
+    margin-top: 1.25em;
+    margin-left: 2.5em;
+    .btn {
+		padding: 1em $pad*1.5;
+		text-transform: none;
+		&:hover {
+			color: $color-3;
+		}
+    }
+    @include bp($max:1000px) {
+    	margin-top: 1.25em;
+        margin-right: 3.5em;
+        margin-left: 0;
+        transform: scale(0.85);
+    }
+    @include bp($max:768px) {
+    	margin-top: 0.3em;
+    	margin-right: 2.15em;
+		transform: scale(0.65);
+    }
+    @include bp($max:500px) {
+        margin-top: 1em;
+        margin-right: 3em;
+        transform: scale(1);
+        .btn {
+            min-width: 0;
+            padding: 0.45em 0.75em;
+            font-size: 11px;
+        }
+    }
+    @include bp($max:399px) {
+        margin-top: 1.125em;
+        margin-right: 2.6em;
+        .btn {
+            min-width: 0;
+            padding: 0.35em 0.55em;
+            font-size: 11px;
+        }
+    }
+}
+.main-head__trigger-wrap {
+    display: none;
+    position: absolute;
+    top: 1.3em;
+    right: $pad*2;
+    z-index: 9980;
+    text-align: center;
+    @include bp($max:1000px) {
+        display: block;
+    }
+    @include bp($max:768px) {
+        top: 0.325em;
+        transform: scale(0.85);
+    }
+    @include bp($max:500px) {
+        right: $pad;
+    }
+    @include bp($max:399px) {
+        transform: scale(0.7);
+        top: 0.4em;
+        right: $pad*0.75;
+
+    }
+}
+.main-head__trigger {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    margin-top: 10px;
+    position: relative;
+    span {
+        display: block;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        margin: 0 auto;
+        height: .4em;
+        background-color: $color-2;
+        opacity: 1;
+        transform: rotate(0deg);
+        transition: all .25s ease-in-out;
+        &:nth-child(1) {
+            top: 0px;
+        }
+        &:nth-child(2),
+        &:nth-child(3) {
+            top: .7em;
+        }
+        &:nth-child(4) {
+            top: 1.4em;
+        }
+    }
+    &.active {
+        span {
+            &:nth-child(1) {
+                left: 50%;
+                width: 0%;
+            }
+
+            &:nth-child(2) {
+                transform: rotate(45deg);
+            }
+
+            &:nth-child(3) {
+                transform: rotate(-45deg);
+            }
+
+            &:nth-child(4) {
+                left: 50%;
+                width: 0%;
+            }
+        }
+    }
+}
+/*------------------------------------*\
+    :: Landing Page Header Styles
+\*------------------------------------*/ 
+.main-head__landing {
+    .main-head__inner {
+        text-align: center;
+    }
+}   

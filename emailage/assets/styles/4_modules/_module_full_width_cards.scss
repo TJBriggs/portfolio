@@ -1,0 +1,74 @@
+/*------------------------------------*\
+    ::  Full Width Card Styles
+\*------------------------------------*/
+.full-cards {
+    width: 100%;
+    overflow: hidden;
+    .full-cards__colored-title {
+        text-align: center;
+    }
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-top: 3em;
+    }
+    .cards__card {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        padding: $pad*2;
+        background-color: $color-6;
+        @extend %br;
+        margin-bottom: 1.5em;
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+        @include bp($max:900px) {
+            display: inline-block;
+            width: 48%;
+            &:nth-of-type(even) {
+                margin-left: 3%;
+            }
+        }
+        @include bp($max:640px) {
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto 1.5em;
+            padding: $pad*1.5;
+            &:nth-of-type(even) {
+                margin: 0 auto 1.5em;
+            }
+        }
+    }
+    .cards__card-icon {
+        width: 10%;
+        text-align: center;
+        @include bp($max:900px) {
+            text-align: left;
+            width: 100%;
+        }
+    }
+    .cards__card-title {
+        width: 32%;
+        padding: 0 3.5%;
+        @include bp($max:900px) {
+            width: 100%;
+            margin: 1em 0;
+            padding: 0;
+        }
+    }
+    .cards__card-text {
+        width: 58%;
+        & > *:first-child {
+            margin-top: 0;
+        }
+        & > *:last-child {
+            margin-bottom: 0;
+        }
+        @include bp($max:900px) {
+            width: 100%;
+        }
+    }
+}

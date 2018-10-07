@@ -1,0 +1,111 @@
+/*------------------------------------*\
+    :: Blog Feed
+\*------------------------------------*/
+// This is the main blog feed styles for
+// category, archives, and tag pages. 
+.blog-feed {
+    width: 100%;
+    overflow: hidden;
+    &__colored-title {
+        text-align: center;
+        margin-bottom: 2.75em;
+    }
+    .blog-feed__filters {
+        width: 100%;
+        margin-bottom: 3em;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .facetwp-template, .blog-feed__wrap {
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .blog-feed__post {
+        display: inline-block;
+        width: 31.5%;
+        margin-right: 2.75%;
+        margin-bottom: 2em;
+        background-color: $color-5;
+        @extend %br;
+        text-align: center;
+        text-decoration: none;
+        &:nth-of-type(3n) {
+            margin-right: 0;
+        }
+        @include bp($max:900px) {
+            width: 48%;
+            margin-right: 4%;
+            &:nth-of-type(3n) {
+                margin-right: 4%;
+            }
+            &:nth-of-type(2n) {
+                margin-right: 0;
+            }
+        }
+        @include bp($max:640px) {
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto 2em;
+            &:nth-of-type(3n),
+            &:nth-of-type(2n) {
+                margin: 0 auto 2em;
+            }
+        }
+        &:hover {
+            .blog-feed__text {
+                h3 {
+                    color: $color-1;
+                }
+            }
+        }
+    }
+    .blog-feed__image {
+        height: 211px;
+        width: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    .blog-feed__text {
+        padding: 3em $pad*2 3.85em;
+        text-align: center;
+        h6, p {
+            color: #333;
+        }
+        h3 {
+            margin: 0.35em 0 0; 
+            color: $color-7;
+            transition: color 400ms;
+        }
+        p {
+            margin: 0;
+        }
+    }
+    .facetwp-pager {
+        display: inline-block;
+        width: auto;
+        .facetwp-pager-label {
+            display: none;
+        }
+        .facetwp-page {
+            height: 35px;
+            width: 35px;
+            padding-top: 3px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            @extend %blue-gradient;
+            color: $color-3;
+            &:hover, &.active {
+                @extend %green-gradient;
+                text-decoration: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,68 @@
+/*------------------------------------*\
+    :: Links
+\*------------------------------------*/
+// Add your text link styles here.
+a {
+    color: $color-1;
+    @extend %rb-light;
+    text-decoration: none;
+    cursor: pointer;
+    &:hover, &:focus, &:active {
+        text-decoration: underline;
+        outline: 0;
+    }
+    &.alt-link {
+        color: $color-3-dark;
+        transition: color 400ms;
+        &:after {
+            display: inline-block;
+            height: 10px;
+            width: 10px;
+            margin-left: 8px;
+            content: '\f101';
+            font-family: FontAwesome;
+            color: $color-1;
+            transition: margin-left 400ms;
+        }
+        &:hover {
+            text-decoration: none;
+            color: $color-1;
+            &:after {
+                margin-left: 12px;
+            }
+        }
+    }
+}
+/*------------------------------------*\
+    ::  Buttons
+\*------------------------------------*/	
+// Add your button styles here.
+.btn {
+    display: inline-block;
+    padding: 9px $pad*2 10px;
+    background-color: $color-1;
+    -webkit-transform-style: preserve-3d; // Helps with safari flicker bug
+    transition: transform 400ms, box-shadow 400ms;
+    span {
+        backface-visibility: hidden; // Helps with safari flicker bug
+        color: $color-3-light;
+        @extend %pn-black;
+        font-size: 0.95em;
+        letter-spacing: 0.04em;
+    }
+    &.btn--secondary {
+        background-color: $color-2-dark;
+    }
+    &:active, &:focus {
+        outline: 0;
+    }
+    &:hover {
+        position: relative;
+        box-shadow: 0 6px 20px 0 rgba(204, 45, 48, 0.65);
+        text-decoration: none;
+        transform: translateY(-3px);
+        &.btn--secondary {
+            box-shadow: 0 5px 20px 0 rgba(191, 194, 170, 0.95);
+        }
+    }
+}

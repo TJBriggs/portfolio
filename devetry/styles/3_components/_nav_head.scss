@@ -1,0 +1,201 @@
+/*------------------------------------*\
+	:: Nav in the Header
+\*------------------------------------*/
+// Header navigation styles go here.
+// Extend a styles outside media query
+.head-nav {
+	.menu {
+		> li {
+			> a {
+				@extend %kbold;
+
+			}
+		}
+	}
+}
+@include bp($min:1001px) {
+	.main-head__nav {
+		float: right;
+		margin-top: 2.05em;
+	}
+	.head-nav {
+		@include nav(
+			$type: 'dropdown',                  //nav type: dropdown or nested
+			$fade: .3s,                         //fade speed (take out for no animation)
+			$easy-hover: 50px,                  //amount of invisible overflow for sub menu (take out to not use)
+			$easy-hover-top: 1.2em              //set top easy-hover value (you can also set $easy-hover-right, -bottom, and -left separately)
+		);
+		.menu { // Main ul
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			> li {
+				margin-left: 2.5em;
+				> a {
+					display: block;
+					position: relative;
+					padding: 0 0 1.5em 0;
+					color: $color-2;
+					font-size: 16px;
+					letter-spacing: 0.04em;
+					text-decoration: none;
+					transition: color 400ms;
+					&:after {
+						content: '';
+						width: 100%;
+						height: 3px;
+						position: absolute;
+						bottom: 10px;
+						left: 0;
+						background-color: $color-1;
+						opacity: 0;
+						transition: bottom 300ms, opacity 300ms;
+					}
+					&:hover {
+						color: $color-1;
+						&:after {
+							bottom: 18px;
+							opacity: 1;
+						}
+					}
+				}
+				&.current-menu-item {
+					a {
+						color: $color-1;
+						&:after {
+							bottom: 18px;
+							opacity: 1;
+						}
+					}
+				}
+				&:first-of-type {
+					margin-right: 0;
+				}
+				&.address, &.social-icon {
+					display: none;
+				}
+			}
+		}
+	}
+}
+@include bp($max:1000px) {
+	.main-head__nav {
+		height: 100%;
+		width: 65%;
+		position: fixed;
+		top: 100px;
+		right: 0;
+		bottom: 0;
+		z-index: 9800;
+		background-color: rgba(62, 64, 70, 0.95);
+		overflow: hidden;
+		transform: translateX(100%);
+		transition: transform 400ms linear;
+		&.open {
+			transform: translateX(0%);
+		}
+	}
+	.head-nav {
+		margin: 50px 0 0 50px;
+		text-align: center;
+		ul {
+			margin: 0 auto;
+			padding: 0;
+			list-style-type: none;
+			text-align: left;
+			> li {
+				width: 100%;
+				margin-bottom: 45px;
+				> a {
+					display: inline-block;
+					position: relative;
+					padding: 0;
+					color: $color-3;
+					font-size: 18px;
+					letter-spacing: 0.04em;
+					text-decoration: none;
+					transition: color 400ms;
+					&:hover {
+						color: $color-1-light;
+					}
+				}
+				&.current-menu-item {
+					a {
+						color: $color-1;
+					}
+				}
+				&.address {
+					margin-bottom: 20px;
+					a {
+						font-family: karlaregular, serif;
+						font-weight: normal;
+						font-style: normal;
+						font-size: 14px;
+						line-height: 1.4em;
+					}
+				}
+				&.social-icon {
+					display: inline-block;
+					width: auto;
+					margin-right: 1em;
+					a {
+						padding: 10px 10px 10px 0;
+						font-size: 20px;
+					}
+				}
+			}
+		}
+	}
+}
+@include bp($max:768px) {
+	.main-head__nav {
+		top: 65px;
+	}
+}
+@include bp($max:399px) {
+	.main-head__nav {
+		width: 100%;
+		&.open {
+		   transform: translateX(0%);
+		}
+	}
+}
+// Keep Work in nav active when on single case study pages
+.post-type-archive-case-studies, .single-case-studies {
+	#menu-item-2723 {
+		a {
+			color: $color-1;
+			&:after {
+				bottom: 18px;
+				opacity: 1;
+			}
+		}
+	}
+}
+// Keep Blog in nav active when on single post pages
+.single-post {
+	#menu-item-2838 {
+		a {
+			color: $color-1;
+			&:after {
+				bottom: 18px;
+				opacity: 1;
+			}
+		}
+	}
+}
+// Keep Process in nav active when on discover, design, develop, and deploy pages
+.page-discover,
+.page-design,
+.page-develop,
+.page-deploy {
+	#menu-item-2931 {
+		a {
+			color: $color-1;
+			&:after {
+				bottom: 18px;
+				opacity: 1;
+			}
+		}
+	}
+}

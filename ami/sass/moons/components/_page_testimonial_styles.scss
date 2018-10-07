@@ -1,0 +1,41 @@
+/*------------------------------------*\
+    ::  Testimonial Styles
+\*------------------------------------*/
+.testimonial {
+	.testimonial__text {
+		text-align: center;
+		.content-title {
+			&:after {
+				background: $color-3;
+			}
+		}
+		strong {
+			color: $color-4;
+		} 
+	}
+	/*----------------------------------------------*\
+	    :: Background Modifiers
+	\*----------------------------------------------*/
+	// Static bg image
+	&[class*="--image"] {
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		.testimonial__overlay {
+		    background: rgba(30,31,35,0.75);
+		}
+	}
+	// Parallax bg image
+	&[class*="--parallax"] {
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-attachment: fixed;
+		.testimonial__overlay {
+		    background: rgba(30,31,35,0.75);
+		}
+		@include bp($max:1024px) {
+		    background-attachment: initial;
+		}
+	}
+}

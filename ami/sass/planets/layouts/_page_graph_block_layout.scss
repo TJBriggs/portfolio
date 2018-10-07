@@ -1,0 +1,238 @@
+/*------------------------------------*\
+    ::  Graph Block Layout
+\*------------------------------------*/
+.graph-block {
+	overflow: hidden;
+	.graph-block__inner {
+		padding: em(35px) 0 em(65px);
+		@include bp($max:1024px) {
+			padding: em(15px) 0 em(25px);
+		}
+	}
+	.graph-block__intro {
+		margin-bottom: em(45px); // add some margin between text and graph
+	}
+	.title-wrap {
+		margin-bottom: em(40px);
+		.content-title {
+			@include bp($max:495px) { // force title onto two lines
+				width: 70%;
+				margin: em(25px) auto em(20px);
+			}
+			@include bp($max:370px) { // make sure title doesn't go to three lines
+				width: 90%;
+			}
+		}
+	}
+	.graph-slider__slider {
+		float: right;
+		width: 48%;
+		padding: 0 $pad;
+		@include bp($max:960px) {
+			float: none;
+			width: 75%;
+			margin: 0 auto;
+		}
+		@include bp($max:640px) {
+			width: 100%;
+		}
+		.graph-slider__slides {
+			width: 100%;
+			margin: 0;
+			padding: 0;
+			.graph__text { // hide on desktop
+				display: none;
+				@include bp($max:960px) {
+					display: block;
+					max-width: 500px;
+					margin: em(15px) auto;
+				}
+				@include bp($max:960px) {
+					max-width: 100%;
+				}
+				.graph__title {
+					margin: 0;				
+				}
+				.graph__blurb {
+					margin: 0;					
+				}
+			}
+		}
+	}
+	.graph-slider__nav {
+		float: left;
+		width: 52%;
+		padding: 0 $pad;
+		@include bp($max:960px) {
+			float: none;
+			width: 50%;
+			margin: em(15px) auto 0;
+		}
+		@include bp($max:768px) {
+			width: 80%;
+		}
+		@include bp($max:640px) {
+			width: 100%;
+		}
+		.icons {
+			margin: 0;
+			padding: 0;
+			@include bp($max:960px) {
+				width: 100%;
+				overflow: hidden;
+			}
+			.icon {
+				display: block;
+				width: 100%;
+				overflow: hidden;
+				margin-bottom: em(30px);
+				@include bp($max:960px) {
+					float: left;
+					width: 33.3333333%;
+				}
+				.icon__icon {
+					display: inline-block;
+					float: left;
+					height: 90px;
+					width: 90px;
+					padding: 11px;
+					&:before { // centering unknown
+						content: '';
+						display: inline-block;
+						height: 100%;
+						vertical-align: middle;
+					}
+					img {
+						height: 100%;
+						width: 100%;
+						max-height: 50px;
+						max-width: 50px;
+						margin-right: em(5px); // nudges images to center
+						vertical-align: middle;
+					}
+					@include bp($max:1075px) {
+						height: 75px;
+						width: 75px;
+						padding: 0;
+						img {
+							max-height: 45px;
+							max-width: 45px;
+						}
+					}
+					@include bp($max:960px) {
+						float: none;
+						height: 90px;
+						width: 90px;
+						padding: 0;
+						img {
+							max-height: 50px;
+							max-width: 50px;
+						}
+					}
+					@include bp($max:640px) {
+						height: 75px;
+						width: 75px;
+						padding: 0;
+						img {
+							max-height: 45px;
+							max-width: 45px;
+						}
+					}	
+					
+				}
+				// text styles next to icon
+				.icon__text {
+					float: left;
+					width: 83%;
+					padding: 0 0 0 $pad;
+					@include bp($max:960px) { // hide on tablet and below
+						display: none;
+					}
+					.icon__title {
+						margin: 0;				
+					}
+					.icon__blurb {
+						margin: 0;				
+					}
+				}
+				
+			}
+		}
+	}
+	/*----------------------------------------------*\
+	    :: Background Modifiers
+	\*----------------------------------------------*/
+	// Static background image
+	&[class*="--image"] {
+	    position: relative;
+	    .graph-block__inner {
+	        position: relative;
+	        z-index: 50;
+	    }
+	}
+	// Parallax background image
+	&[class*="--parallax"] {
+	    padding: 0;
+	    .graph-block__inner {
+	        position: relative;
+	        z-index: 50;
+	    }
+	}
+}
+/*------------------------------------*\
+    ::  Scale Transitions
+\*------------------------------------*/
+// Hide icons add transition
+.no-touch {
+	.graph-block {
+		.graph-slider__nav {
+			.icons {
+				.icon {
+					.icon__icon {
+						transform: scale(0);
+						transition-property: transform;
+						transition-duration: 500ms;
+					}
+					&:nth-of-type(2) {
+						.icon__icon {
+							transition-delay: 250ms;
+						}
+					}
+					&:nth-of-type(3) {
+						.icon-list__icon {
+							transition-delay: 500ms;
+						}
+					}
+				}
+			}
+		}
+	}
+	// Scale icons up when in view
+	.graph-block {
+		.graph-slider__nav {
+			.icons {
+				.icon {
+					.icon__icon {
+						&.visible {
+							transform: scale(1);
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

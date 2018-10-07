@@ -1,0 +1,221 @@
+/*------------------------------------*\
+    ::  Dot Slider Styles
+\*------------------------------------*/	
+.dot-slider {
+	background-color: $color-3;
+	position: relative;
+	background-position: 27.5%;
+	background-repeat: no-repeat;
+	background-size: contain;
+	@include bp($max:1825px) {
+		background-position: 12%;
+	}
+	@include bp($max:1450px) {
+		background-position: 3%;
+	}
+	@include bp($max:1200px) {
+		background-position: -135px;
+	}
+	@include bp($max:640px) {
+		background-image: none!important; // Hide Inline Background Image
+	}
+	&__slide {
+		display: flex;
+		flex-wrap: wrap;
+		width: 100%;
+		padding: 0 $pad*2;
+		@include bp($max:640px) {
+			padding: 0 $pad 1em;
+		}
+	}
+	&__text-wrap {
+		height: 100%;
+		width: 43%;
+		vertical-align: middle;
+		align-self: center;
+		@include bp($max:640px) {
+			width: 100%;
+			max-width: 400px;
+			margin: 0 auto;
+		}
+	}
+	&__text {
+		width: 95%;
+		margin: 0 auto;
+		h5 {
+			margin-top: 0;
+			@include bp($max:640px) {
+				margin-top: 1.5em;
+			}
+		}
+		p {
+			max-width: 385px;
+			margin-bottom: 0;
+			@include bp($max:640px) {
+				max-width: none;
+			}
+		}
+		@include bp($max:640px) {
+			width: 100%;
+		}
+	}
+	&__image-wrap {
+		height: 28em;
+		width: 57%;
+		@extend %bg-cover;
+		@include bp($max:1024px) {
+			background-size: contain;
+		}
+		@include bp($max:640px) {
+			height: 60vw;
+			width: 100%;
+			max-width: 550px;
+			margin: 1.5em auto 0;
+		}
+		@include bp($max:480px) {
+			height: 70vw;
+		}
+
+	}
+}
+/*------------------------------------*\
+    ::  Owl Specific Styles
+\*------------------------------------*/	
+.dot-slider__slides{
+	.owl-carousel{
+		z-index: auto;
+		height: 100%;
+	}
+	.owl-wrapper-outer{
+		height: 100%;
+	}
+	.owl-wrapper{
+		height: 100%;
+		display: flex!important; // Forces the wrapper to go full height
+	}
+	.owl-item{
+		overflow: hidden;
+		cursor: pointer;
+	}
+	// Arrows
+	.owl-prev, .owl-next {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		opacity: 0.75;
+		transition: opacity 400ms;
+		&:hover {
+			opacity: 1;
+		}
+		@include bp($max:960px) {
+			display: none;
+		}
+	}
+	.owl-prev {
+		left: $pad;
+	}
+	.owl-next {
+		right: $pad;
+	}
+	// Pagination
+	.owl-pagination {
+		width: 100%;
+		position: absolute;
+		bottom: 2.5em;
+		right: 0;
+		left: 0;
+		text-align: center; // For layout purposes
+		@include bp($max:640px) {
+			bottom: 1.5em;
+		}
+		.owl-page {
+			display: inline-block;
+			margin-right: 0.75em;
+			&:last-of-type {
+				margin-right: 0;
+			}
+			span {
+				display: inline-block;
+				height: 15px;
+				width: 15px;
+				border: 2px solid $color-4-darkest;
+				border-radius: 50%;
+				background-color: transparent;
+				transition: background-color 400ms;
+			}
+			&.active {
+				span {
+					background-color: rgba(47, 41, 49, 1);
+				}
+			}
+			&:hover {
+				span {
+					background-color: rgba(47, 41, 49, 0.6);
+				}
+			}
+		}
+	}
+}
+/*------------------------------------*\
+    ::  KSS MarkUp (Ignore)
+\*------------------------------------*/   
+// Dot Slider
+//
+// Demo:<br><a href="../modules/module-dot-slider.php" target="_blank">module-dot-slider.php</a>
+//
+// Stylesheet:<br>
+// <a href="../sass/structure/modules/_module_dot_slider.scss" target="_blank">_module_dot_slider.scss</a><br>
+//
+// Path To The Code:<br>
+// golftec/golftec/modules/module-dot-slider.php<br>
+// golftec/golftec/js/sliders-src/dot-slider.js
+//
+// Markup:
+// <article class="dot-slider main-torso__group" style="background-image: url('../images/modules/dot-slider/golftec-g.png')">
+//     <div class="dot-slider__inner">
+//         <div class="dot-slider__slides owl-carousel js-owl-carousel--dot-slider">
+//             <div class="dot-slider__slide">
+//                 <div class="dot-slider__text-wrap">
+//                     <div class="dot-slider__text">
+//                         <h5><strong>Launch Monitor Data</strong><br>Sets the Foundation</h5>
+//                         <p>With launch monitor data captured by Foresight technology, our Certified Club Fitters will measure your swing and clubhead speeds, ball flight characteristics including launch angles, spin rates, carry distance and dispersion, and confirm your individual shot patterns to set the foundation for the rest of your custom club fitting.</p>
+//                     </div> <!-- // dot-slider__text -->
+//                 </div> <!-- // dot-slider__text-wrap -->
+//                 <div class="dot-slider__image-wrap" style="background-image: url('../images/modules/dot-slider/slide-1.png')">
+//                 </div> <!-- // dot-slider__image-wrap -->
+//             </div> <!-- // dot-slider__slide -->
+//             <div class="dot-slider__slide">
+//                 <div class="dot-slider__text-wrap">
+//                     <div class="dot-slider__text">
+//                         <h5>Find the Right <strong>Clubhead<br> &amp; Shaft</strong> Combination</h5>
+//                         <p>Your personal launch data is then cross-referenced with SwingLabs’ database of thousands of clubhead and shaft combinations to identify the models that will help to optimize the performance of your golf swing. The database includes all of the latest equipment from the largest club manufacturers in the game.</p>
+//                     </div> <!-- // dot-slider__text -->
+//                 </div> <!-- // dot-slider__text-wrap -->
+//                 <div class="dot-slider__image-wrap" style="background-image: url('../images/modules/dot-slider/slide-2-b.png')">
+//                 </div> <!-- // dot-slider__image-wrap -->
+//             </div> <!-- // dot-slider__slide -->
+//             <div class="dot-slider__slide">
+//                 <div class="dot-slider__text-wrap">
+//                     <div class="dot-slider__text">
+//                         <h5><strong>Hit the Clubs</strong><br>During Your Fitting</h5>
+//                         <p>After determining the top three models that will work for you, we’ll assemble the clubs using our fitting carts and components and have you hit each one of the clubs to reach a final decision on the right club, or set, that feels best and delivers maximum results.</p>
+//                     </div> <!-- // dot-slider__text -->
+//                 </div> <!-- // dot-slider__text-wrap -->
+//                 <div class="dot-slider__image-wrap" style="background-image: url('../images/modules/dot-slider/slide-3.png')">
+//                 </div> <!-- // dot-slider__image-wrap -->
+//             </div> <!-- // dot-slider__slide -->
+//             <div class="dot-slider__slide">
+//                 <div class="dot-slider__text-wrap">
+//                     <div class="dot-slider__text">
+//                         <h5>Order Your<br><strong>Custom Fit Golf Clubs</strong></h5>
+//                         <p>Once you have selected the clubs that are right for you, we’ll order them directly from the manufacturer where they will be custom built to your exact fitting specifications, including shaft length and flex, lie angle, and even grip size. These are not clubs off the rack, but made specifically to maximize your game. The best part - your custom clubs don’t cost anymore than if they weren't built just for you!</p>
+//                     </div> <!-- // dot-slider__text -->
+//                 </div> <!-- // dot-slider__text-wrap -->
+//                 <div class="dot-slider__image-wrap" style="background-image: url('../images/modules/dot-slider/slide-4-b.png')">
+//                 </div> <!-- // dot-slider__image-wrap -->
+//             </div> <!-- // dot-slider__slide -->
+//         </div> <!-- // owl-carousel -->
+//     </div> <!-- // dot-slider__inner -->
+// </article> <!-- // dot-slider -->
+//
+// Styleguide 6.16

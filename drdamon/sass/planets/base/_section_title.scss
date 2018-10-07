@@ -1,0 +1,15 @@
+/*-------------------------------------------*\
+    :: Main Title styles
+\*-------------------------------------------*/
+.section__title-wrap {
+    text-align: center;
+    margin: 0;
+    overflow: hidden;
+    h2 {
+        margin: 0;
+        padding: 0 $pad;
+        text-transform: lowercase;
+        -webkit-font-smoothing: antialiased;
+        text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+    }
+}

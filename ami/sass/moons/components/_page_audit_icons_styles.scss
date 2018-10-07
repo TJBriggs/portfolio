@@ -1,0 +1,158 @@
+/*------------------------------------*\
+    ::  Audit Icons Styles
+\*------------------------------------*/
+.audit-icons {
+	.icon-wrap {
+		.icon {
+			text-align: center;
+			text-decoration: none;
+			.icon__icon {
+				backface-visibility: hidden;
+				background: $color-1; /* Old browsers */
+				/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+				background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzJlM2M2MSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzJlM2M2MSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzM1NDU3MSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzNTQ1NzEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+				background: -ms-linear-gradient(left,  rgba(46,60,97,1) 0%,rgba(46,60,97,1) 50%,rgba(53,69,113,1) 50%,rgba(53,69,113,1) 100%); /* IE10+ */
+				background: linear-gradient(to right,  rgba(46,60,97,1) 0%,rgba(46,60,97,1) 50%,rgba(53,69,113,1) 50%,rgba(53,69,113,1) 100%); /* W3C */
+				border-radius: 50%;
+				border: 3px solid $color-2;
+				img {
+					filter: invert(1);
+				}
+			}
+			.icon__text {
+				border-right: 2px solid #bbbec6;
+				.icon__main-title {
+					color: $color-1;
+					font-family: $fam-head-bold;
+					font-size: em(18px);
+					strong {
+						color: $color-1;
+					}
+				}
+				.icon__blurb {
+					color: #505050;
+					font-size: em(15px);
+				}
+			}
+			&:last-of-type {
+				.icon__text {
+					border: none;
+				}
+			}
+			@include bp($max:1024px) {
+				&:nth-of-type(2) {
+					.icon__text {
+						border: none;
+					}
+				}
+			}
+			@include bp($max:640px) {
+				.icon__text {
+					border: none;
+					text-align: left;
+				}
+			}
+		}
+		/*------------------------------------*\
+		    :: Layout for 3 icons
+		\*------------------------------------*/
+		&[class*="--3"] {
+			.icon {
+				@include bp($max:1024px) {
+					&:nth-of-type(2) {
+						.icon__text {
+							border-right: 2px solid #bbbec6; 
+						}
+					}
+				}
+				@include bp($max:768px) {
+					&:nth-of-type(2) {
+						.icon__text {
+							border: none; 
+						}
+					}
+				}
+			}
+		}
+		/*------------------------------------*\
+		    :: Layout for 5 icons
+		\*------------------------------------*/
+		&[class*="--5"] {
+			.icon {
+				&:nth-of-type(3) {
+					.icon__text {
+						border: none;
+					}
+				}
+				@include bp($max:1024px) {
+					&:nth-of-type(2) {
+						.icon__text {
+							border-right: 2px solid #bbbec6; 
+						}
+					}
+				}
+				@include bp($max:768px) {
+					&:nth-of-type(2),
+					&:nth-of-type(4) {
+						.icon__text {
+							border: none; 
+						}
+					}
+					&:nth-of-type(3) {
+						.icon__text {
+							border-right: 2px solid #bbbec6; 
+						}
+					}
+				}
+				@include bp($max:640px) {
+					&:nth-of-type(3) {
+						.icon__text {
+							border: none; 
+						}
+					}
+				}
+			}
+		}
+		/*------------------------------------*\
+		    :: Layout for 6 icons
+		\*------------------------------------*/
+		&[class*="--6"]  {
+			.icon {
+				&:nth-of-type(3) {
+					.icon__text {
+						border: none;
+					}
+				}
+				@include bp($max:1024px) {
+					&:nth-of-type(2) {
+						.icon__text {
+							border-right: 2px solid #bbbec6; 
+						}
+					}
+				}
+				@include bp($max:768px) {
+					&:nth-of-type(2),
+					&:nth-of-type(4) {
+						.icon__text {
+							border: none; 
+						}
+					}
+					&:nth-of-type(3),
+					&:nth-of-type(5) {
+						.icon__text {
+							border-right: 2px solid #bbbec6; 
+						}
+					}
+				}
+				@include bp($max:640px) {
+					&:nth-of-type(3),
+					&:nth-of-type(5) {
+						.icon__text {
+							border: none; 
+						}
+					}
+				}
+			}
+		}
+	}
+}

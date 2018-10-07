@@ -1,0 +1,67 @@
+/*------------------------------------*\
+    :: Image Block
+\*------------------------------------*/
+// General Styles
+.image-block {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background-color: $color-3-light;
+    display: flex;
+    justify-content: flex-end;
+    .image-block__image {
+        display: inline-block;
+        height: 575px;
+        width: 100%;
+        margin-left: 17%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        transition: height 400ms;
+        @include bp($min:1500px) {
+            width: 100%;
+            max-width: 1140px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        @include bp($max:1250px) {
+            margin-left: 5%;
+        }
+        @include bp($max:1125px) {
+            margin-left: $pad*2;
+        }
+        @include bp($max:1024px) {
+            height: 400px;
+        }
+        @include bp($max:768px) {
+            height: 350px;
+        }
+        @include bp($max:500px) {
+            margin-left: $pad;
+        }
+    }
+}
+// Modifier for layout
+.image-block--left {
+    justify-content: flex-start;
+    .image-block__image {
+        margin-left: 0;
+        margin-right: 17%;
+        @include bp($min:1500px) {
+            float: none;
+            width: 100%;
+            max-width: 1140px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        @include bp($max:1250px) {
+            margin-right: 5%;
+        }
+        @include bp($max:1125px) {
+            margin-right: $pad*2;
+        }
+        @include bp($max:500px) {
+            margin-right: $pad;
+        }
+    }
+}

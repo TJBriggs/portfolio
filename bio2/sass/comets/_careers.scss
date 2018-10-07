@@ -1,0 +1,35 @@
+/*-------------------------------------*\
+    ::  Custom styles for Careers page
+\*-------------------------------------*/	
+[class*="--careers-social"] {
+	.link-wrap {
+		margin-top: emCalc(35px);
+		margin: emCalc(35px) 0 0;
+		right: 0;
+		overflow: hidden;
+		a {
+			display: inline-block;
+			float: left;
+			margin-right: emCalc(7px);
+			img, svg {
+				height: 35px;
+				width: 35px;
+				margin: 0;
+				fill: $color-1-light;
+				transition: fill 400ms;
+			}
+			&:last-of-type {
+				margin-right: 0;
+			}
+			&:hover {
+				svg {
+					fill: $color-1;
+				}
+			}
+		}
+		// hide weird br tags that WP is placing between links
+		br {
+			display: none;
+		}
+	}
+}

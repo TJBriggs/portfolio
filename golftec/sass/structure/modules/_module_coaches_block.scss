@@ -1,0 +1,210 @@
+/*------------------------------------*\
+    ::  Coaches Block Styles
+\*------------------------------------*/	
+.coaches-block {
+	background-color: $color-4-lightest;
+	&__inner {
+		padding: 3em $pad;
+	}
+	h2 {
+		margin: 0;
+		text-align: center;
+		@include bp($max:960px) {
+			font-size: 2.25em;
+		}
+		@include bp($max:600px) {
+			font-size: 1.8em;
+		}
+	}
+	&__main-wrap {
+		display: flex;
+		flex-wrap: wrap;
+		margin-top: 2em;
+	}
+	.coach {
+		display: flex;
+		flex-wrap: wrap;
+		width: 50%;
+		margin-bottom: 2.5em;
+		padding: 0 $pad;
+		&:nth-of-type(3),
+		&:nth-of-type(4) { // Remove bottom margin for 2nd row
+			margin-bottom: 0;
+		}
+		@include bp($max:960px) {
+			width: 100%;
+			max-width: 640px;
+			margin: 0 auto 3.25em;
+			&:nth-of-type(3),
+			&:nth-of-type(4) { // Add margin back when they stack
+				margin-bottom: 3.25em;
+			}
+		}
+		@include bp($max:600px) {
+			margin: 0 auto 2.25em;
+			&:nth-of-type(3),
+			&:nth-of-type(4) {
+				margin-bottom: 2.25em;
+			}
+		}
+	}
+	.coach__img-wrap {
+		width: 40%;
+		text-align: center;
+		padding: $pad*2 $pad 0 0;
+		img {
+			display: inline-block;
+		}
+		.coach__image {
+			height: 175px;
+			width: 175px;
+			border-radius: 50%;
+			opacity: 0;
+			backface-visibility: visible;
+		}
+		.coach__icon {
+			height: 65px;
+			width: 65px;
+			margin-top: $pad;
+			opacity: 0;
+			backface-visibility: visible;
+		}
+		@include bp($max:600px) {
+			width: 100%;
+			padding: 0;
+			.coach__icon {
+				margin-top: 0;
+			}
+		}
+	}
+	.coach__text-wrap {
+		width: 60%;
+		padding: 0 $pad*1.5;
+		h6 {
+			margin: 0 0 1em 0;
+			color: $color-1;
+			font-size: 1.1em;
+			font-weight: bold;
+		}
+		strong {
+			font-size: 0.8em;
+		}
+		p {
+			font-size: 0.9em;
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+		@include bp($max:600px) {
+			width: 100%;
+			margin-top: 1.75em;
+			padding: 0;
+		}
+	}
+	/*------------------------------------*\
+	    ::  Trigger Animations
+	\*------------------------------------*/
+	&.visible {
+		.coach {
+			.coach__image {
+				animation-name: flipInY;
+				animation-duration: 600ms;
+				opacity: 1;
+			}
+			.coach__icon {
+				animation-name: zoomIn;
+				animation-duration: 600ms;
+				opacity: 1;
+			}
+		}
+	}	
+}
+/*------------------------------------*\
+    ::  KSS MarkUp (Ignore)
+\*------------------------------------*/   
+// Coaches Block
+//
+// Demo:<br><a href="../modules/module-coaches-block.php" target="_blank">module-coaches-block.php</a>
+//
+// Stylesheet:<br>
+// <a href="../sass/structure/modules/_module_coaches_block.scss" target="_blank">_module_coaches_block.scss</a><br>
+// <a href="../sass/structure/base/_keyframes.scss" target="_blank">_keyframes.scss</a><br>
+//
+// Path To The Code:<br>
+// golftec/golftec/modules/module-coaches-block.php<br>
+// golftec/golftec/js/scripts-src/waypoints.js
+//
+// Markup:
+// <article class="coaches-block visible main-torso__group">
+//     <div class="coaches-block__inner">
+//         <h2>Coaches <strong>Who Care</strong></h2>
+//         <div class="coaches-block__main-wrap">
+//             <div class="coach">
+//                 <div class="coach__img-wrap">
+//                     <img class="coach__image" src="../images/modules/coaches-block/coach-1.jpg" alt="Image of Coach">
+//                     <img class="coach__icon" src="../images/modules/coaches-block/pga-icon.png" alt="PGA Icon">
+//                 </div> <!-- // coach__img-wrap -->
+//                 <div class="coach__text-wrap">
+//                     <h6>Brad Thorberg</h6>
+//                     <strong>Franchise owner / Certified Personal Coach</strong>
+//                     <p>
+//                         bthorberg@golftec.com<br>
+//                         PGA Status: PGA Member<br>
+//                         Hometown: Fort Collins, CO<br>
+//                     </p>
+//                     <p>Brad Thorberg is an owner/operator of the GolfTEC Fort Collins location. Brad graduated from the University of Nebraska Professional Golf Management program and has taught over 7,000 lessons in his career at GolfTEC. Brad has been an active member of the PGA since 2003, became Class A Certified in 2008.</p>
+//                 </div> <!-- // coach__text-wrap -->
+//             </div> <!-- // coach -->
+//             <div class="coach">
+//                 <div class="coach__img-wrap">
+//                     <img class="coach__image" src="../images/modules/coaches-block/coach-2.jpg" alt="Image of Coach">
+//                     <img class="coach__icon" src="../images/modules/coaches-block/pga-icon.png" alt="PGA Icon">
+//                 </div> <!-- // coach__img-wrap -->
+//                 <div class="coach__text-wrap">
+//                     <h6>Brandon Mcdermott</h6>
+//                     <strong>Franchise owner / Certified Personal Coach​​</strong>
+//                     <p>
+//                         bmcdermott@golftec.com<br>
+//                         PGA Status: PGA Member<br>
+//                         Hometown: Loveland, CO<br>
+//                     </p>
+//                     <p>Brandon McDermott is an owner/operator of the GolfTEC Fort Collins location. Brandon graduated from the University of Nebraska Professional Golf Management program and has taught over 4,500 lessons in his career at GolfTEC. Brandon has been an active member of the PGA since 2003, became Class A Certified in 2012.​</p>
+//                 </div> <!-- // coach__text-wrap -->
+//             </div> <!-- // coach -->
+//             <div class="coach">
+//                 <div class="coach__img-wrap">
+//                     <img class="coach__image" src="../images/modules/coaches-block/coach-3.jpg" alt="Image of Coach">
+//                     <img class="coach__icon" src="../images/modules/coaches-block/pga-icon.png" alt="PGA Icon">
+//                 </div> <!-- // coach__img-wrap -->
+//                 <div class="coach__text-wrap">
+//                     <h6>Harry Tanner</h6>
+//                     <strong>Certified Personal Coach​</strong>
+//                     <p>
+//                         htanner@golftec.com<br>
+//                         PGA Status: PGA Member<br>
+//                         Hometown: Fort Collins, Colorado<br>
+//                     </p>
+//                     <p>Harry Tanner is a graduate of the Golf Academy of America institute and has taught over 2,400 lessons in his career at GolfTEC. Harry has been an active member of the PGA since 2006, became Class A Certified in 2010.​</p>
+//                 </div> <!-- // coach__text-wrap -->
+//             </div> <!-- // coach -->
+//             <div class="coach">
+//                 <div class="coach__img-wrap">
+//                     <img class="coach__image" src="../images/modules/coaches-block/coach-4.jpg" alt="Image of Coach">
+//                     <img class="coach__icon" src="../images/modules/coaches-block/pga-icon.png" alt="PGA Icon">
+//                 </div> <!-- // coach__img-wrap -->
+//                 <div class="coach__text-wrap">
+//                     <h6>Ed Provow</h6>
+//                     <strong>Certified Personal Coach​</strong>
+//                     <p>
+//                         eprovow@golftec.com<br>
+//                         PGA Status: PGA Member<br>
+//                         Hometown: Masonville, Colorado<br>
+//                     </p>
+//                     <p>Ed is a PGA Class A Professional with over 20 years experience in the golf business. Ed moved to Fort Collins with his family from Naperville Illinois where he was the Director of Golf for 18 years responsible for two city courses. He has always been invested in teaching himself and mentoring his staff throughout his career. We are excited to welcome Ed to the team of coaches and the Fort Collins​</p>
+//                 </div> <!-- // coach__text-wrap -->
+//             </div> <!-- // coach -->
+//         </div> <!-- // coaches-block__main-wrap -->
+//     </div> <!-- // coaches-block__inner -->
+// </article> <!-- // coaches-block -->
+//
+// Styleguide 6.13

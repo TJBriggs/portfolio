@@ -1,0 +1,115 @@
+/*------------------------------------*\
+    ::  Login Page Styles
+\*------------------------------------*/	
+.login { 
+	background-color: #0f2029;
+}
+#login {
+	width: 320px;
+    padding: 8% 0 0;
+    margin: auto;
+}
+.login h1 {
+	height: 124px;
+	width: 320px;
+	margin: 0 auto 1em;
+	text-align: center;
+}
+.login h1 a {
+	display: inline-block;
+	height: 124px;
+	width: 210px;
+	background-image: url('images/global/login-logo.png') !important;
+	background-repeat: no-repeat;
+	background-size: 210px 124px;
+	color: rgba(0, 0, 0, 0);
+	pointer-events: none; 
+}
+#login .message {
+	padding: 0.9375rem;
+	background-color: #fff;
+	color: #767676;
+	font-family: 'montserrat', sans-serif;
+	font-size: 14px;
+	border-left: 4px solid #2d87c6;
+}
+
+#login form {
+	padding: 1em 1.5em;
+	background-color: #fff;
+	border-left: 4px solid #2d87c6;
+	overflow: hidden;
+	text-align: center;
+}
+#login form p {
+	margin: 0;
+}
+#login form label {
+	display: inline-block;
+	width: 100%;
+	color: #767676;
+	font-family: 'montserrat', sans-serif;
+	font-size: 14px;
+	text-align: left;
+}
+#login form input[type="text"],
+#login form input[type="password"] {
+	float: left;
+	height: 35px;
+	width: 99%;
+	margin: 10px 0 5px;
+	backface-visibility: hidden;
+	box-shadow: none;
+	color: #767676;
+	font-family: 'montserrat', sans-serif;
+	font-size: 14px;
+	text-align: left;
+	outline: none;
+}
+#login form .forgetmenot label {
+	width: auto;
+	float: left;
+	margin-top: 10px;
+}
+#login form input[type="checkbox"] {
+	width: auto;
+}
+#login form #wp-submit {
+	-webkit-appearance: none;
+	display: inline-block;
+	float: right;
+	height: 35px;
+	width: auto;
+	margin-top: 10px;
+	backface-visibility: hidden;
+	background-color: #2d87c6;
+	border: none;
+	border-radius: 0.2em;
+	color: #fff;
+	line-height: 33px;
+	text-align: left;
+	transition: background-color 400ms;
+	cursor: pointer;
+}
+#login form #wp-submit:hover {
+	background-color: #2471a8;
+}
+#nav {
+	width: 100%;
+}
+#login #nav, #login #nav a, 
+#login #backtoblog a {
+	display: inline-block;
+	margin: 5px 5px 0;
+	color: #fff;
+	text-decoration: none;
+	font-family: 'montserrat', sans-serif;
+	font-weight: 200;
+	font-size: 14px;
+	text-align: left;
+}
+
+#login #nav a:hover, 
+#login #backtoblog a:hover {
+	color: #2d87c6;
+}

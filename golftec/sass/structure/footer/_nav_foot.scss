@@ -1,0 +1,82 @@
+/*------------------------------------*\
+    ::  Footer Navigation Styles
+\*------------------------------------*/	
+.main-foot {
+	&__nav {
+		width: 76%;
+		position: relative;
+		z-index: 50;
+		@include bp($max:1024px) {
+			display: none;
+		}	
+		.foot-nav {
+			width: 100%;
+		}
+		.menu {
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			@include bp($max:1150px) {
+				font-size: 1.35vw;
+			}
+			> li {
+				float: left;
+				width: 17%;
+				padding-right: 3%;
+				list-style-type: none;
+				&:first-of-type { // Golf Lessons
+					width: 20%;
+					margin-left: 3%;
+				}
+				&:nth-of-type(2) { // About
+					width: 19%;					
+				}
+				&:nth-of-type(3) { // About
+					width: 17%;					
+				}
+				&:nth-of-type(4) { // About
+					width: 13%;
+					padding-right: 0;
+					.sub-menu {
+						padding-right: 1.75em;
+					}
+				}
+				&:last-of-type { // Blog
+					width: 18%;
+					margin-right: 0;
+				}
+				> a {
+					color: $color-3;
+					font-family: $fam-nav;
+					font-size: 0.85em;
+					letter-spacing: 0.085em;
+					transition: opacity 400ms;
+					&:hover {
+						opacity: 0.65;
+						text-decoration: none;
+					}
+				}
+			}
+		}
+		.sub-menu {
+			margin: 1.05em 0 0 0;
+			padding: 0;
+			overflow: hidden;
+			> li {
+				width: 100%;
+				margin-bottom: 0.75em;
+				> a {
+					color: $color-3;
+					font-size: 0.7em;
+					font-weight: 200;
+					line-height: 0;
+					transition: opacity 400ms;
+					&:hover {
+						text-decoration: none;
+						opacity: 0.65;
+					}
+				}
+			}
+		}
+	}
+}	

@@ -1,0 +1,229 @@
+/*------------------------------------*\
+    :: Forms
+\*------------------------------------*/
+// Add your custom styles for form elements here.
+.gform_wrapper {
+    overflow: hidden;
+    textarea {
+        margin: 0!important;
+    }
+    .ginput_container {
+        z-index: 50;
+        position: relative;
+    }
+    div.validation_error {
+        color: $color-1!important;
+        border-top: 2px solid $color-1!important;
+        border-bottom: 2px solid $color-1!important;
+    }
+    li {
+        .gfield.gfield_error {
+            margin-bottom: 0!important;
+            background-color: transparent!important;
+            border-top: none!important;
+            border-bottom: none!important;
+        }
+    } 
+    li.gfield_error textarea {
+        border: 4px solid $color-2-light!important;
+    }
+    .gfield_required {
+        display: none!important;
+    }
+}
+.gform_fields {
+    overflow: hidden;
+    position: relative;
+    list-style-type: none!important;
+    li {
+        float: left;
+        width: 48.5%;
+        padding: 0!important;
+        position: relative;
+        list-style-type: none!important;
+        &:before {
+            opacity: 0;
+        }
+        &.gfield_error {
+            width: 48.5%!important;
+            border: none!important;
+            @include bp($max:550px) {
+                width: 100%!important;
+            }
+            label {
+                margin-top: 0!important;
+                top: 27px;
+                color: $color-3-dark!important;
+            }
+            .ginput_container {
+                margin-top: 0!important;
+            }
+        }
+        &:nth-of-type(4) {
+            position: absolute;
+            top: 0;
+            right: 0;
+            &.gfield_error {
+                width: 48.5%!important;
+                margin-bottom: 0!important;
+                @include bp($max:550px) {
+                    width: 100%!important;
+                }
+                .validation_message {
+                    bottom: 0px;
+                }
+            }
+        }
+        @include bp($max:550px) {
+            width: 100%;
+            &:last-of-type {
+                position: relative;
+            }
+        }
+    }
+    .gfield_label {
+        padding: 2px;
+        @extend %rb-light;
+        font-size: 18px;
+        font-weight: 300!important;
+    }
+    input[type=text],
+    input[type=email] {
+        display: block;
+        height: 80px;
+        padding-left: $pad!important;
+        background-color: $color-3-light;
+        border: 4px solid $color-2-light;
+        @extend %rb-light;
+        font-size: 18px;
+        color: #666;
+        &:focus, &:active {
+            outline: 0;
+        }
+    }
+    input[type=text] + label,
+    input[type=email] + label ,
+    textarea + label {
+        padding: 2px;
+        position: absolute;
+        top: 27px;
+        left: 20px;
+        background-color: rgba(252, 253, 251, 0);
+        @extend %rb-light;
+        font-size: 18px;
+        color: #666;
+        transition: all 400ms;
+    }
+    input[type=text]:focus + label,
+    input[type=email]:focus + label ,
+    textarea:focus + label {
+        position: absolute;
+        top: -11px;
+        left: 10px;
+        text-transform: uppercase;
+        background-color: rgba(252, 253, 251, 1);
+    }
+    .ginput_container {
+        &.text-present {
+            input[type=text] + label,
+            input[type=email] + label ,
+            textarea + label {
+                position: absolute;
+                top: -11px;
+                left: 10px;
+                text-transform: uppercase;
+                background-color: rgba(252, 253, 251, 1);
+            }
+        }
+    }
+
+    textarea {
+        display: block;
+        height: 288px!important;
+        padding-top: 24px!important;
+        padding-left: $pad!important;
+        overflow: hidden;
+        background-color: $color-3-light;
+        border: 4px solid $color-2-light;
+        @extend %rb-light;
+        font-size: 18px;
+        color: #666;
+        &:focus, &:active {
+            outline: 0;
+        }
+    }
+    
+}
+.gform_footer {
+    float: left;
+    margin-top: 0.25em;
+    overflow: hidden;
+    text-align: center;
+    input[type=submit] {
+        -webkit-appearance: none!important;
+        border-radius: 0!important;
+        @extend .btn;
+        cursor: pointer;
+        font-size: 16px!important;
+        display: inline-block;
+        width: 100%!important;
+        max-width: 400px;
+        padding: 15px 0 15px!important;
+        margin: 0 auto!important;
+        color: $color-3-light;
+        outline: 0;
+        border: none;
+        border-radius: 0;
+        @include bp($max:641px) {
+            padding: 8px 0 8px!important;
+        }
+        @include bp($max:550px) {
+            max-width: none;
+        }
+    }
+}
+// validation Styles
+.gform_validation_error {
+    li.gfield_error {
+        border: none!important;
+    }
+}
+.validation_error {
+    color: $color-1;
+    @extend %rb-light;
+    font-weight: normal!important;
+}
+.validation_message {
+    width: 100%;
+    margin: 0!important;
+    padding: 0 $pad!important;
+    line-height: 80px!important;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 2px;
+    z-index: 100;
+    background-color: rgba(204, 32, 35, 0.8);
+    background-color: rgba(210, 12, 15, 0.8);
+    border: none;
+    color: $color-3-light!important;
+    cursor: pointer;
+}
+.gform_confirmation_message {
+    @extend %rb-light;
+}
+// Form Validations Overrides
+.gform_wrapper li.gfield_error input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]), .gform_wrapper li.gfield_error textarea {
+    border: 4px solid $color-2-light!important;
+    padding: 0 $pad!important;
+}
+#field_1_6 {
+    &.gfield_error {
+        margin-bottom: 0px!important;
+    }
+}
+.gform_wrapper ul.gform_fields li.gfield.gfield_error+li.gfield.gfield_error {
+    margin-top: 16px!important;
+}
+
+

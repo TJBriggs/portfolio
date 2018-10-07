@@ -1,0 +1,181 @@
+/*----------------------------------------*\
+    ::  Content Block W/Slider Layout
+\*----------------------------------------*/
+.content-block-slider {
+	width: 100%;
+	overflow: hidden;
+	.block__inner {
+		padding: em(50px) $pad*2;
+		@include bp($max:480px) {
+			padding: em(50px) $pad;
+		}
+	}	
+}
+.block__content-wrap {
+	width: 100%;
+	overflow: hidden;
+}
+.block__slider-wrap {
+	float: left;
+	width: 48%;
+	@include bp($max:900px) {
+		float: none;
+		width: 500px;
+		margin: 0 auto 20px;
+	}
+	@include bp($max:560px) {
+		width: 100%;
+		margin: 0 auto 20px;
+	}
+	.slider__image {
+		height: 425px;
+		width: 100%;
+		@include bp($max:480px) {
+			height: 350px;
+		}
+		@include bp($max:400px) {
+			height: 300px;
+		}
+		@include bp($max:350px) {
+			height: 250px;
+		}
+	}
+}
+.block__text-wrap {
+	float: right;
+	width: 48%;
+	margin-left: 4%;
+	overflow: hidden;
+	@include bp($max:900px) {
+		width: 100%;
+		margin: 0;
+	}
+	h3 {
+		margin: 15px 0;
+	}
+	h6 {
+		margin: 0 0 em(20px);
+	}
+	p {
+		margin: 0 0 em(25px);
+	}
+}
+/*------------------------------------*\
+    ::  Owl Slider Styles
+\*------------------------------------*/	
+.js-owl-carousel--image-slider {
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+	.owl-controls {
+		position: absolute;
+		bottom: 50px;
+		left: 0;
+		right: 0;
+		@include bp($max:480px) {
+			bottom: 25px;
+		}
+	}
+	.owl-pagination {
+		width: 100%;
+		text-align: center;
+		.owl-page {
+			display: inline-block;
+			margin: 0 em(10px);
+			cursor: pointer;
+			span {
+				display: inline-block;
+				height: 20px;
+				width: 20px;
+			}
+		}
+	}
+}
+/*------------------------------------*\
+    ::  Modifiers
+\*------------------------------------*/
+.content-block-slider--right {
+	.block__slider-wrap {
+		float: right;
+		@include bp($max:900px) {
+			float: none;
+			width: 500px;
+			margin: 0 auto 20px;
+		}
+		@include bp($max:560px) {
+			width: 100%;
+			margin: 0 auto 20px;
+		}
+	}
+	.block__text-wrap {
+		float: left;
+		margin: 0 4% 0 0;
+		@include bp($max:900px) {
+			float: none;
+			margin: 0;
+		}
+	}
+}	
+// Reduce bottom padding so it is keeps
+// the space in between sections even
+.content-block-slider--first-section {
+	.block__inner {
+		padding: em(50px) $pad*2 em(25px);
+		@include bp($max:480px) {
+			padding: em(50px) $pad em(25px);
+		}
+	}	
+}
+// Reduce top and bottom padding for middle sections
+// this keeps spacings even between sections
+.content-block-slider--middle-section {
+	.block__inner {
+		padding: em(25px) $pad*2;
+		@include bp($max:480px) {
+			padding: em(25px) $pad;
+		}
+	}	
+}
+// Reduce top padding so it is keeps
+// the space in between sections even
+.content-block-slider--last-section {
+	.block__inner {
+		padding: em(25px) $pad*2 em(50px);
+		@include bp($max:480px) {
+			padding: em(25px) $pad em(50px);
+		}
+	}	
+}
+// Vertically align content
+.content-block-slider--valign-sm {
+	.block__text-wrap {
+		padding-top: 10px;
+		@include bp($max:900px) {
+            padding-top: 0;
+        }
+	}
+}
+
+.content-block-slider--valign-md {
+	.block__text-wrap {
+		padding-top: 30px;
+		@include bp($max:900px) {
+            padding-top: 0;
+        }
+	}
+}
+
+.content-block-slider--valign-lg {
+	.block__text-wrap {
+		padding-top: 50px;
+		@include bp($max:900px) {
+            padding-top: 0;
+        }
+	}
+}
+
+	
+
+
+
+

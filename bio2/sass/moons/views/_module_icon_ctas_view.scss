@@ -1,0 +1,62 @@
+/*------------------------------------*\
+    ::  Icon CTAs Styles
+\*------------------------------------*/	
+.icon-ctas {
+	background-color: $color-2;
+	.icon-ctas__wrap {
+		.icon-ctas__cta {
+			text-align: center;
+		}
+		/*------------------------------------*\
+	    	::  Layout Modifiers
+		\*------------------------------------*/
+		&.icon-ctas--center {
+			.icon-ctas__cta {
+				img, svg {
+					fill: #000;
+				}
+				h1 {
+					font-size: emCalc(24px);
+					text-align: center;
+				}
+			}
+			&.icon-ctas--4 {
+				.icon-ctas__cta {
+					h1 {
+						font-size: emCalc(22px);
+						text-align: center;
+					}
+				}
+			}
+		}
+		&.icon-ctas--left {
+			.icon-ctas__cta {
+				img, svg {
+					fill: #1d374f;
+				}
+				h1 {
+					color: #1d374f;
+					font-size: emCalc(34px);
+					font-weight: bold;
+					text-transform: none;
+				}
+			}
+		}
+	}
+	/*------------------------------------*\
+	    ::  BG Modifiers
+	\*------------------------------------*/
+	&[class*="--bg-blue"] {
+		.icon-ctas--center,
+		.icon-ctas--left {
+			.icon-ctas__cta {
+				h1 {
+					color: $color-2;
+				}
+				img, svg {
+					fill: $color-1-light;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,63 @@
+/*------------------------------------*\
+    ::  Content Block Styles
+\*------------------------------------*/
+.content-block {
+	.content__group {
+		h1, h2, h3, h4, h5, h6 {
+			margin-top: 0;
+			padding: 0 8px; // to line up with images which have a 8px padding to allow for box-shadow
+		}
+		h2 {
+			&:first-of-type {
+				&:after {
+					left: 8px;
+				}
+			}
+		}
+		@include bp($max:1024px) {
+			h2 {
+				&:first-of-type {
+					text-align: center;
+				    &:after { // underline styles
+				        width: 100px;
+				        bottom: -20px;
+				        left: 50%;
+				        margin: 10px auto 0 -50px;
+				    }
+				}
+			}
+		}
+		p {
+			padding: 8px;
+		}
+		img {
+			border: 8px solid $color-4;
+			box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.45);
+		}
+	}
+	/*----------------------------------------------*\
+	    :: Background Modifiers
+	\*----------------------------------------------*/
+	// Static bg image
+	&[class*="--image"] {
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		&:before { // overlay
+			background: rgba(0,0,0,0.60);
+		}
+	}
+	// Parallax bg image
+	&[class*="--parallax"] {
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-attachment: fixed;
+		.content-block__overlay {
+		    background: rgba(0,0,0,0.65);
+		}
+		@include bp($max:1024px) {
+		    background-attachment: initial;
+		}
+	}
+}

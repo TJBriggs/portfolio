@@ -1,0 +1,46 @@
+/*------------------------------------*\
+    :: CTA Bar
+\*------------------------------------*/
+.cta-bar {
+    width: 100%;
+    padding: 1.5em 0;
+    overflow: hidden;
+    background-color: $color-5;
+    @include bp($max:768px) {
+        padding: 2.5em 0;
+    }
+    .cta-bar__main-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 875px;
+        margin: 0 auto;
+    }
+    .cta-bar__text-wrap {
+        width: 70%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        h3 {
+            width: 100%;
+        }
+        @include bp($max:768px) {
+            width: 100%;
+        }
+    }
+    .cta-bar__btn-wrap {
+        width: 30%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        @include bp($max:768px) {
+            width: 100%;
+            justify-content: flex-start;
+            margin-top: 1.5em;
+        }
+        @include bp($max:500px) {
+            .btn {
+                width: 100%;
+            }
+        }
+    }
+}

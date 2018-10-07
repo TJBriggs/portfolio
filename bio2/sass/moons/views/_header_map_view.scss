@@ -1,0 +1,20 @@
+/*------------------------------------*\
+    ::  Header Map View
+\*------------------------------------*/
+.infowindow {
+    color: $color-1;
+}
+
+.gm-style-iw {
+    h6 {
+        font-size: emCalc(15px);
+        strong {
+            font-weight: bold;
+        }
+    }
+    p {
+        color: $color-1;
+        font-weight: 400;
+        line-height: 1.25em;
+    }
+}

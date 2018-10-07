@@ -1,0 +1,38 @@
+/*------------------------------------*\
+            (╯°□°）╯︵ ┻━┻
+\*------------------------------------*/
+// Hide hero on Pattern Library page and adjust spacing
+.post-type-archive-patterns {
+	.patterns {
+		max-width: 1140px;
+		margin: 0 auto emCalc(35px);
+		padding: 0 $pad*3;
+		@include bp($max:480px) {
+			padding: 0 $pad*2;
+		}
+	}
+}
+// Remove top margin to account for spacing that is pushing
+// elements down on the single pages of the pattern library
+.single-patterns {
+	.hero-block {
+		margin-top: 0;
+	}
+}
+// Negative margins to tighten up spacing on mobile
+.venn-diagram__inner {
+	margin-top: -25px!important;
+    @include bp($max:640px) {
+        margin-top: -10px!important;
+    }
+}
+// Overwrites regular sidebar needed to be further down the cascade
+.single-careers {
+	#careers-sidebar {
+		li {
+			a {
+				font-size: emCalc(17px);
+			}
+		}
+	}
+}

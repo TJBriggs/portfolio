@@ -1,0 +1,68 @@
+/*------------------------------------*\
+    ::  Card Callouts View
+\*------------------------------------*/	
+.card-callouts {
+	&__card {
+		background-color: $color-3;
+		box-shadow: 0px 0px 60px 0px rgba(0,0,0,0);
+		cursor: pointer;
+		transition: box-shadow 400ms;
+		.card-callouts__title {
+			text-transform: none;
+		}
+		.card-callouts__text {
+			text-align: left;
+			opacity: 0;
+			transition: opacity 300ms;
+			color: $color-1;
+			line-height: 1.6em;
+		}
+		// Middle Card
+		&:nth-of-type(2) {
+			box-shadow: 0px 0px 60px 0px rgba(0,0,0,0.55);
+		}
+		// On hover
+		&.active {		
+			box-shadow: 0px 0px 60px 0px rgba(0,0,0,0.55);
+			.card-callouts__text {
+				opacity: 1;
+			}
+		}
+		/*------------------------------------*\
+		    ::  Stack Cards at 960px
+		\*------------------------------------*/	
+		@include bp($max:960px) {
+			cursor: default;
+			.card-callouts__text {
+				opacity: 1;
+			}
+			// Middle Card
+			&:nth-of-type(2) {
+				box-shadow: none;
+			}
+			&.active {
+				box-shadow: none;
+				.card-callouts__text {
+					opacity: 1;
+				}
+			}
+		}
+	}
+	/*------------------------------------*\
+	    :: Modifiers 
+	\*------------------------------------*/
+	&[class*="--bg-gray"],
+	&[class*="--bg-blue"] {
+		.card-callouts__card {
+			background-color: $color-2;
+		}
+	}
+	&[class*="--bg-image"] {
+		.card-callouts__overlay {
+			background-color: rgba(0, 0, 0, 0.5);
+		}
+		.card-callouts__card {
+			background-color: $color-2;
+		}
+	}	
+}

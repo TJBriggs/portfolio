@@ -1,0 +1,107 @@
+/*------------------------------------*
+    :: Flickr Overrides
+*------------------------------------*/
+.photonic-flickr-stream {
+    width: 100%;
+    ul.title-display-tooltip {
+        margin: 40px 0 30px;
+        padding: 0;
+        width: 100%;
+        li {
+            margin: 0;
+            padding: 0;
+            transform: scale(1, 1);
+            transition: 400ms;
+            width: 23%;
+            a {
+                display: block;
+                height: 100%;
+                width: 100%;
+                img {
+                    border: 1px solid $white;
+                    border-radius: 0.2em;
+                    box-shadow: 0px 1px 5px -1px rgba(0, 0, 0, 0.45);
+                    margin: 0;
+                    max-width: 100%;
+                    opacity: 1;
+                    padding: 0;
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            
+            &:nth-of-type(1) {
+                margin-left: 0px;
+            } 
+            &:nth-of-type(2),
+            &:nth-of-type(3),
+            &:nth-of-type(4) {
+                margin-left: 2.25%;
+            }
+            &:nth-of-type(4) {
+                margin-right: 0px;
+            }
+            &:hover {
+                transform: scale(1.05, 1.05);
+            }
+            @include bp($solarsystem) {
+                width: 30%;
+                &:nth-of-type(1),
+                &:nth-of-type(3) {
+                    margin-left: 14.75%;
+                    margin-right: 5%;
+                } 
+                &:nth-of-type(2),
+                &:nth-of-type(4) {
+                    margin-left: 5%;
+                    margin-right: 14.75%;
+                }
+                &:nth-of-type(3),
+                &:nth-of-type(4) {
+                    margin-top: 30px;
+                }
+            }
+            @include bp($max:850px) {
+                width: 40%;
+                &:nth-of-type(1),
+                &:nth-of-type(3) {
+                    margin-left: 7.5%;
+                    margin-right: 2%;
+                } 
+                &:nth-of-type(2),
+                &:nth-of-type(4) {
+                    margin-left: 2%;
+                    margin-right: 7.5%;
+                }
+            }
+            @include bp($planetary) {
+                width: 45%;
+                &:nth-of-type(1),
+                &:nth-of-type(3) {
+                    margin-left: 2.25%;
+                    margin-right: 2.25%;
+                } 
+                &:nth-of-type(2),
+                &:nth-of-type(4) {
+                    margin-left: 2.25%;
+                    margin-right: 2.25%;
+                }
+            }
+            @include bp($max:460px) {
+                width: 70%;
+                &:nth-of-type(1),
+                &:nth-of-type(2),
+                &:nth-of-type(3),
+                &:nth-of-type(4) {
+                    margin-left: 15%;
+                    margin-right: 15%;
+                } 
+                &:nth-of-type(2),
+                &:nth-of-type(3),
+                &:nth-of-type(4) {
+                    margin-top: 30px;
+                }
+            }
+        }
+    }
+}

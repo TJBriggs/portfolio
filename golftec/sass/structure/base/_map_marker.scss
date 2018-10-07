@@ -1,0 +1,93 @@
+/*------------------------------------*\
+    ::  Map Marker Styles
+\*------------------------------------*/	
+.gm-style-iw {
+	max-width: 250px;
+	@include bp($max:400px) {
+		max-width: 225px;
+	}
+}
+.map__marker {
+	width: 100%;
+	padding: 1em 0 0.5em;
+	display:flex;
+	flex-wrap: wrap;
+	@include bp($max:640px) {
+		padding-top: 0;
+	}
+	.marker__distance {
+		display: inline-block;
+		width: 23%;
+		padding-right: 0.5em;
+		strong {
+			font-size: 1.25em;
+			font-weight: 800;
+		}
+		span {
+			display: inline-block;
+			margin-top: 0.75em;
+			font-family: $fam-heading;
+			line-height: 1em;
+			text-transform: uppercase;
+		}
+		@include bp($max:640px) {
+			display: none;
+		}
+	}
+	.marker__details {
+		display: inline-block;
+		width: 77%;
+		padding: 0 0em 0.5em 1em;
+		border-left: 1px solid $color-6;
+		h5 { // Location Title
+			margin: 0;
+			color: $color-1;
+		}
+		a { // Tel Link
+			display: inline-block;
+			margin: 0.5em 0;
+			color: $color-6;
+			font-family: $fam-heading;
+			font-weight: bold;
+		}
+		p { // Address
+			margin: 0;
+			font-family: $fam-heading;
+			font-size: 0.9em;
+			font-weight: 100;
+			text-transform: uppercase;
+		}
+		@include bp($max:640px) {
+			border-left: none;
+			padding-left: 0;
+			h5 {
+				font-size: 1.15em;
+			}
+			a {
+				margin: 0.4em 0;
+				font-size: 1em;
+			}
+		}
+	}
+	.btn { // Center Button
+		width: 100%;
+		margin: 1em 0 0 0;
+		// Turn Button into a link
+		@include bp($max:640px) {
+			margin: 0;
+			padding: 0;
+			text-align: left;
+			background-color: transparent;
+			color: $color-2;
+			font-size: 0.9em;
+			font-weight: 200;
+			text-transform: none;
+			&:after {
+				display: none;
+			}
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}

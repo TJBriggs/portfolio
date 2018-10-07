@@ -1,0 +1,211 @@
+/*------------------------------------*\
+    ::  Case Studies Layout
+\*------------------------------------*/
+.case-studies {
+	width: 100%;
+}
+.case-study {
+	width: 100%;
+	overflow: hidden;
+	@include bp($max:1024px) {
+		border-bottom: 5px solid $color-2;
+		&:first-of-type {
+			border-top: 5px solid $color-2;
+		}
+	}
+	@include bp($max:480px) {
+		min-height: 540px;
+	}
+	@include bp($max:435px) {
+		min-height: 580px;
+	}
+	@include bp($max:360px) {
+		min-height: 660px;
+	}
+}
+.case-study__overlay {
+	min-height: 500px;
+	width: 50%;
+	padding: 0 em(55px);
+	position: relative;
+	transition-property: width;
+	transition-duration: 400ms;
+	transition-delay: 500ms;
+	&[class*="--layout-left"] {
+		float: left;
+		.case-study__text {
+			float: right;
+		}
+	}
+	&[class*="--layout-right"] {
+		float: right;
+		
+	}
+	@include bp($max:1024px) {
+		width: 100%;
+		padding: 0 $pad*2;
+	}
+	@include bp($max:480px) {
+		padding: 0 $pad;
+		min-height: 540px;
+	}
+	@include bp($max:435px) {
+		min-height: 580px;
+	}
+	@include bp($max:360px) {
+		min-height: 660px;
+	}
+}
+.case-study__text {
+	margin: em(140px) 0;
+	h2 {
+		max-width: 550px;
+	}
+	p {
+		max-width: 550px;
+	}
+	@include bp($max:1024px) {
+		h2 {
+			margin-left: auto;
+			margin-right: auto;
+			&:first-of-type {
+			    &:after { // underline styles
+			        width: 100px;
+			        bottom: -20px;
+			        left: 50%;
+			        margin: 10px auto 0 -50px;
+			    }
+			}
+		}
+		p {
+			max-width: 100%;
+		}
+		.btn {
+			margin: 0 auto;
+		}
+	}
+	@include bp($max:480px) {
+		margin: em(100px) 0;
+	}
+}
+.hidden-content { // hide until 
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	.hidden-content__close-wrap {
+		width: 100%;
+		height: 100%;
+		position: relative;
+		z-index: 500;
+		.hidden-content__close {
+			position: absolute;
+			top: em(25px);
+			right: $pad*2.5;
+			svg {
+				height: 40px;
+				width: 40px;
+				max-height: 40px;
+				max-width: 40px;
+			}
+			@include bp($max:480px) {
+				top: em(20px);
+				right: em(20px);
+				svg {
+					height: 30px;
+					width: 30px;
+					max-height: 30px;
+					max-width: 30px;
+				}
+			}
+		}
+	}
+}
+.hidden-content__slider {
+	width: 100%;
+	padding: em(80px) 0;
+	@include bp($max:1024px) {
+		padding: em(55px) 0;
+	}
+	@include bp($max:768px) {
+		padding: em(30px) 0;
+	}
+	.hidden-content__slides {
+		height: 100%;
+		width: 100%;
+		margin: 0;
+		padding: 0 0 em(40px);
+		overflow: hidden;
+		@include bp($max:360px) {
+			padding: 0 0 em(30px);
+		}
+		.hidden-content__slide {
+			height: 100%;
+			width: 100%;
+			padding: em(80px) $pad 0;
+			@include bp($max:960px) {
+				padding: em(60px) $pad 0;
+			}
+			@include bp($max:480px) {
+				padding: em(40px) $pad 0;
+			}
+			@include bp($max:400px) {
+				padding: em(20px) $pad 0;
+			}
+			@include bp($max:360px) {
+				padding: em(30px) $pad 0;
+			}
+			.hidden-content__title {
+				width: 80%;
+				margin: em(15px) auto em(25px);
+				&:after {
+					width: 100px;
+					left: 50%;
+					margin: 0 auto 0 -50px;
+				}
+				@include bp($max:640px) {
+					margin: em(15px) auto em(20px);
+				}
+				@include bp($max:390px) {
+					margin: em(15px) auto em(15px);
+				}
+			}
+			.hidden-content__text {
+				width: 80%;
+				margin: 0 auto 30px;
+				padding: 0 $pad*2;
+				p {
+					&:first-of-type {
+						margin-top: 0;
+					}
+				}
+				@include bp($max:1024px) {
+					width: 95%;
+				}
+				@include bp($max:768px) {
+					width: 100%;
+				}
+				@include bp($max:640px) {
+					padding: 0;
+				}
+			}
+		}
+	}
+}
+/*------------------------------------*\
+    ::  Show and Hide Transitions
+\*------------------------------------*/
+.case-studies {
+	.case-study {
+		&.active {
+			.case-study__overlay {
+				width: 100%;
+				transition-delay: 0ms;
+				.case-study__text {
+					//margin-bottom: 0;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,224 @@
+/*------------------------------------*
+    :: Parallax Styles
+*------------------------------------*/
+.parallax {  
+    .parallax__image {
+     background-size: cover;
+     width: 100%;
+     height: 100%;
+     position: fixed;
+     bottom: 3px;
+     z-index: -1;
+    }
+    .parallax__content--left,
+    .parallax__content--right,
+    .parallax__content--center {
+        background: rgba(0, 0, 0, 0.65);
+        float: left;
+        height: 100%;
+        padding: 0 $pad;
+        width: 100%;
+        .parallax-content__inner {
+            position: relative;
+            top: 0px;
+            .content-wrapper {
+                width: 50%;
+                height: 500px;
+                .parallax__title {
+                    color: $color-1;
+                    font-family: $fam-heading;
+                    font-size: emCalc(36px);
+                    letter-spacing: 0.03em;
+                    margin: 75px auto 25px;
+                    overflow: hidden;
+                    width: 100%;
+                }
+                .parallax__text {
+                    width: 80%;
+                    p {
+                        color: $white;
+                        font-size: emCalc(14px);
+                        letter-spacing: 0.03em;
+                        line-height: 2em;
+                    }
+                    a {
+                        color: $color-1;
+                        &:visited{
+                            color: $color-1;
+                        } 
+                        &:hover {
+                            color: darken($color-1, 6%);
+                        }
+                    }
+                }
+                .parallax__button {
+                    margin-top: 35px;
+                    width: 33%;
+                    border: none;
+                }
+            }
+        }
+        
+    } 
+    .parallax__content--left {
+        .content-wrapper {
+            float: left;
+            @include bp($max:1230px) {
+                padding-left: $pad;
+            }
+            @include bp($max:768px) {
+                padding-left: 0;
+            }
+        }
+    }
+    .parallax__content--right {
+         .content-wrapper {
+            float: right;
+        }
+    }
+    .parallax__content--center {
+        .parallax-content__inner {
+            .content-wrapper {
+                float: none;
+                height: 500px;
+                width: 90%;
+                margin: 0 auto;
+                text-align: center;
+                .parallax__text {
+                    font-size: emCalc(20px);
+                    margin: 0 auto;
+                }
+                .parallax__button {
+                    margin: 45px auto 0;
+                    width: 25%;
+                    border: none;
+                }
+                @include bp($max:768px) {
+                    width: 100%;
+                    .parallax__text {
+                        font-size: emCalc(14px);
+                    }
+                    .parallax__button {
+                        margin: 35px auto 0;
+                        width: 25%;
+                        border: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*------------------------------------*\
+    ::  Tablet
+\*------------------------------------*/
+@include bp($solarsystem) {
+    .parallax {
+        min-height: 500px;
+        height: 500px;
+        position: relative;
+        .parallax__image {
+            position: relative;
+            min-height: 600px;
+            height: 600px;
+        }
+        .parallax__content--left,
+        .parallax__content--right,
+        .parallax__content--center {
+            position: absolute;
+            top: 0px;
+            .parallax-content__inner {
+                .content-wrapper {
+                    .parallax__text {
+                        width: 95%;
+                    }
+                    .parallax__button {
+                        margin-top: 35px;
+                        width: 40%;
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include bp($max:768px) {
+    .parallax {
+        min-height: 500px;
+        height: 500px;
+        .parallax__image {
+            position: relative;
+            min-height: 500px;
+            height: 500px;
+        }
+        .parallax__content--left,
+        .parallax__content--right,
+        .parallax__content--center {
+            .parallax-content__inner {
+                .content-wrapper {
+                    width: 100%;
+                    .parallax__title {
+                        text-align: center;
+                    }
+                    .parallax__text {
+                        text-align: center;
+                        margin: 0 auto;
+                    }
+                    .parallax__button {
+                        margin: 35px auto 0;
+                        width: 40%;
+
+                    }
+                }
+            }
+        }
+    }
+}
+/*------------------------------------*\
+    :: Phone
+\*------------------------------------*/
+@include bp($planetary) {
+    .parallax {
+        min-height: 550px;
+        height: 550px;
+        .parallax__image {
+            position: relative;
+            min-height: 550px;
+            height: 550px;
+        }
+        .parallax__content--left,
+        .parallax__content--right,
+        .parallax__content--center {
+            .parallax-content__inner {
+                .content-wrapper {
+                    width: 100%;
+                    .parallax__title {
+                        text-align: center;
+                    }
+                    .parallax__text {
+                        text-align: center;
+                        margin: 0 auto;
+                    }
+                    .parallax__button {
+                        margin: 35px auto 0;
+                        width: 75%;
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include bp($max:320px) {
+    .parallax {
+        min-height: 620px;
+        height: 620px;
+        .parallax__image {
+            position: relative;
+            min-height: 620px;
+            height: 620px;
+        }
+    }
+}

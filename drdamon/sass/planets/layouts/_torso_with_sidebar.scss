@@ -1,0 +1,14 @@
+/*------------------------------------*\
+    ::Torso With Sidebar
+\*------------------------------------*/
+[class*="torso--sidebar"] {
+    [class*="torso__content"]{
+		@include grid-column(8);
+		@include bp($max:700px) {
+			@include grid-column(12);
+		}
+    }
+    [class*="torso__sidebar"]{
+        @include grid-column(4);
+    }
+}

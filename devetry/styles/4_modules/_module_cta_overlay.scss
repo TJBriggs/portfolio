@@ -1,0 +1,55 @@
+/*------------------------------------*\
+	::  CTA Overlay Styles
+\*------------------------------------*/
+.cta-overlay {
+	width: 100%;
+	overflow: hidden;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: $color-3;
+
+	.cta-overlay__overlay {
+		padding: 4.65em 0;
+
+		@include bp($max:640px) {
+			padding: 3em 0;
+		}
+	}
+
+	.cta-overlay__text-wrap {
+		max-width: 740px;
+	}
+
+	.cta-overlay__heading {
+		font-size: 28px;
+		font-weight: normal;
+		margin-bottom: 0.6em;
+	}
+
+	.cta-overlay__subheading {
+		font-size: 28px;
+		line-height: 1.35em;
+		margin-bottom: 1.25em;
+	}
+
+	.cta-overlay__main-text {
+		p, li {
+			font-size: 16px;
+		}
+	}
+
+	.btn {
+		margin-top: 1.75em;
+	}
+
+	// Modifiers
+	.cta-overlay--overlay-blue {
+		background-color: rgba(38, 117, 185, 0.8);
+	}
+	.cta-overlay--overlay-gray {
+		background-color: rgba(62, 64, 70, 0.8);
+	}
+}
+
+

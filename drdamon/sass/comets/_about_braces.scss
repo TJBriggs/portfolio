@@ -1,0 +1,54 @@
+/*-------------------------------------------*\
+    ::Page Styles - About Braces
+\*-------------------------------------------*/
+.page-all-about-braces {
+	.thirds__group { //general styles
+		ul {
+			margin: 0 $pad;
+			padding: 0;
+		}
+		p {
+	   		margin: 10px 0 0;
+	   	}
+	}
+	.page__group--foods-list {
+		padding-bottom: 50px;
+		.thirds__group--2 {
+			h3 {
+				margin-bottom: 3px;
+			}
+			.fancybox-media {
+				margin-top: 20px;
+			}
+		}
+		@include bp($solarsystem) {
+			.thirds__group--1 {
+				p {
+					text-align: center;
+				}
+			}
+			
+		}
+	}
+	.page__group--soreness {
+		padding: 50px 0;
+		.thirds__group {
+			h2 {
+				margin: 10px 0;
+			}
+		}
+		@include bp($solarsystem) {
+			padding: 20px 0 45px;
+			img {
+				margin-top: 20px;
+			}
+		}
+		@include bp($planetary) {
+			padding: 25px 0 45px;
+		}
+	}
+
+	.page__group--additional-info {
+		padding: 35px 0 40px;
+	}
+}

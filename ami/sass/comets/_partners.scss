@@ -1,0 +1,18 @@
+/*------------------------------------*\
+    :: Partners Page
+\*------------------------------------*/
+.page-partners {
+	.content-block {
+		&[class*="--valign-right"] { // reduce valign margin to compensate for button
+		    .content__group--2 {
+		        margin-top: emCalc(40px);
+		        h2 {
+		        	img { // remove border and box shadow on logo img
+		        		border: none;
+		        		box-shadow: none;
+		        	}
+		        }
+		    }
+		}
+	}
+}

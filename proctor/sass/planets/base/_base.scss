@@ -1,0 +1,41 @@
+/*------------------------------------*\
+    ::Base
+    ------------------------------------*
+    ::Normalize.css v3.0.0 | MIT License | git.io/normalize
+\*------------------------------------*/
+html {
+	color: #000000;
+	font-family: sans-serif;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	height: 100%;
+}
+body {
+	height: 100%;
+	margin: 0;
+	font-family: opensans-reg;
+	position: relative;
+}
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+a {
+	font-size: emCalc(14px);
+	text-decoration: none;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+.hide { // Hide SVG Store
+	display: none;
+}
+
+strong {
+	color: $color-1;
+	font-weight: normal;
+}
+
+.vignette {
+	background: rgba(0,0,0, 0.65);
+}

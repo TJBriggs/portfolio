@@ -1,0 +1,98 @@
+/*------------------------------------*\
+    ::Header
+\*------------------------------------*/
+.main-head__wrap {
+	background: transparent;
+	position: fixed;
+	height: 125px;
+	width: 100%;
+	z-index: 8000;
+	transition: 400ms;
+}
+
+.main-head__inner {
+	padding: $pad;
+}
+
+.main-head__logo{
+	@include col(6,$collapse:true);
+	.logo--mobile {
+		display: none;
+	}
+	@include bp($solarsystem) {
+	    @include col(6);
+	}
+	@include bp($planetary) {
+		width: 30%;
+		.logo--desktop {
+			display: none;
+		}
+		.logo--mobile {
+			display: block;
+			width: 65px;
+		}
+	}
+}
+
+.main-head__login {
+	float: right;
+	padding-bottom: 30px;
+	margin-right: $pad;
+	.phone {
+		position: relative;
+		padding-right: 10px;
+		pointer-events: none;
+		a {
+			color: $color-1;
+			text-decoration: none;
+			letter-spacing: 1px;
+		}
+		&:after {
+			content: "|";
+			color: $white;
+			position: absolute;
+			right: -5px;
+			top: -1px;
+		}
+	}
+	.login {
+		padding-left: 10px;
+		a {
+			text-decoration: none;
+			color: $white;
+		}
+	}
+	@include bp($planetary) {
+		padding-bottom: 0;
+		text-align: center;
+		.phone {
+			pointer-events: auto;
+		}
+	}
+}
+
+.main-head {
+	&.scroll {
+		.main-head__wrap {
+			background: rgba(0, 0, 0, 0.75);
+			@include bp($planetary) {
+				height: 95px;
+			}
+		}
+	}
+}
+
+.touch {
+	.main-head {
+		.main-head__wrap {
+			background: rgba(0, 0, 0, 0.75);
+			@include bp($max:1024px) {
+				background: rgba(0, 0, 0, 1);
+				position: static;
+			}
+			@include bp($planetary) {
+				height: 95px;
+			}
+		}
+	}
+}

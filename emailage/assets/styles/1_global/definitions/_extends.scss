@@ -1,0 +1,145 @@
+/*------------------------------------*\
+    :: Extends
+\*------------------------------------*/
+// Assign fonts a class
+%museo-300 { 
+    font-family: 'MuseoSansRounded-300', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    //letter-spacing: 0.04em;
+}
+%museo-500 { 
+    font-family: 'MuseoSansRounded-500', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    //letter-spacing: 0.06em;
+}
+%museo-700 {  
+    font-family: 'MuseoSansRounded-700', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    //letter-spacing: 0.04em;
+}
+%museo-900 {  
+    font-family: 'MuseoSansRounded-900', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}
+%calluna-reg { // Headline 5
+    font-family: 'Calluna-Regular', serif;
+    font-weight: normal;
+    font-style: normal;
+}
+%calluna-bold { // Headline 5
+    font-family: 'Calluna-Bold', serif;
+    font-weight: normal;
+    font-style: normal;
+}
+%h1 {
+    @extend %museo-500;
+    font-size: 2.441em;
+    @media (max-width: 767px) {
+        font-size: 1.61em;
+    }
+}
+%h2 {
+    @extend %museo-300;
+    font-size: 1.953em;
+    @media (max-width: 767px) {
+        font-size: 1.38em;
+    }
+}
+%h3 {
+    //@extend %calluna-bold;
+    @extend %museo-300;
+    font-size: 1.563em;
+    font-weight: bold;
+    letter-spacing: 0.03em;
+    @media (max-width: 767px) {
+        font-size: 1.22em;
+    }
+}
+%h4 {
+    @extend %museo-700;
+    font-size: 1em;
+}
+%h5 {
+    @extend %museo-900;
+    font-size: 0.8em;
+    text-transform: uppercase;
+}
+%h6 {
+    @extend %museo-500;
+    font-size: 0.8em;
+    text-transform: uppercase;
+}
+/*------------------------------------*\
+    :: Gradients
+\*------------------------------------*/    
+%gray-gradient {
+    background-image: -webkit-linear-gradient(top left, #969FA5 50%, #7C878E 100%);
+    background-image: -o-linear-gradient(top left, #969FA5 50%, #7C878E 100%);
+    background-image: linear-gradient(to bottom right, #969FA5 50%, #7C878E 100%);
+}
+%gray-gradient-dark {
+    background-image: -webkit-linear-gradient(top left, #687983 50%, #425764 100%);
+    background-image: -o-linear-gradient(top left, #687983 50%, #425764 100%);
+    background-image: linear-gradient(to bottom right, #687983 50%, #425764 100%);
+}
+%orange-gradient {
+    background-image: -webkit-linear-gradient(top left, #E7B162 50%, #E19E39 100%);
+    background-image: -o-linear-gradient(top left, #E7B162 50%, #E19E39 100%);
+    background-image: linear-gradient(to bottom right, #E7B162 50%, #E19E39 100%);
+}
+%green-gradient {
+    background-image: -webkit-linear-gradient(top left, #8AD07D 50%, #59BD45 100%);
+    background-image: -o-linear-gradient(top left, #8AD07D 50%, #59BD45 100%);
+    background-image: linear-gradient(to bottom right, #8AD07D 50%, #59BD45 100%);
+}
+%teal-gradient {
+    background-image: -webkit-linear-gradient(top left, #60D1CF 50%, #25BEBB 100%);
+    background-image: -o-linear-gradient(top left, #60D1CF 50%, #25BEBB 100%);
+    background-image: linear-gradient(to bottom right, #60D1CF 50%, #25BEBB 100%);
+}
+%red-gradient {
+    background-image: -webkit-linear-gradient(top left, #E77958 50%, #E2572D 100%);
+    background-image: -o-linear-gradient(top left, #E77958 50%, #E2572D 100%);
+    background-image: linear-gradient(to bottom right, #E77958 50%, #E2572D 100%);
+}
+%blue-gradient {
+    background-image: -webkit-linear-gradient(top left, #4C9FD0 50%, #0076BD 100%);
+    background-image: -o-linear-gradient(top left, #4C9FD0 50%, #0076BD 100%);
+    background-image: linear-gradient(to bottom right, #4C9FD0 50%, #0076BD 100%);
+}
+%purple-gradient {
+    background-image: -webkit-linear-gradient(top left, #8E9ACF 50%, #4357AD 100%);
+    background-image: -o-linear-gradient(top left, #8E9ACF 50%, #4357AD 100%);
+    background-image: linear-gradient(to bottom right, #8E9ACF 50%, #4357AD 100%);
+}
+%deep-orange-gradient {
+    background-image: -webkit-linear-gradient(top left, #F9B288 50%, #F79256 100%);
+    background-image: -o-linear-gradient(top left, #F9B288 50%, #F79256 100%);
+    background-image: linear-gradient(to bottom right, #F9B288 50%, #F79256 100%);
+}
+%sunset-orange-gradient {
+    background-image: -webkit-linear-gradient(top left, #F08274 50%, #EE6352 100%);
+    background-image: -o-linear-gradient(top left, #F08274 50%, #EE6352 100%);
+    background-image: linear-gradient(to bottom right, #F08274 50%, #EE6352 100%);
+}
+%lipstick-red-gradient {
+    background-image: -webkit-linear-gradient(top left, #DD5164 50%, #D7263D 100%);
+    background-image: -o-linear-gradient(top left, #DD5164 50%, #D7263D 100%);
+    background-image: linear-gradient(to bottom right, #DD5164 50%, #D7263D 100%);
+}
+%yellow-gradient {
+    background-image: -webkit-linear-gradient(top left, #EACE4B 50%, #E6C229 100%);
+    background-image: -o-linear-gradient(top left, #EACE4B 50%, #E6C229 100%);
+    background-image: linear-gradient(to bottom right, #EACE4B 50%, #E6C229 100%);
+}
+
+/*------------------------------------*\
+    :: Global Border Radius
+\*------------------------------------*/    
+%br {
+    border-radius: 10px;
+}

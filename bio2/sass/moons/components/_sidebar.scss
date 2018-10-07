@@ -1,0 +1,82 @@
+/*------------------------------------*\
+    ::Sidebar
+\*------------------------------------*/
+.single-torso__sidebar {
+	ul {
+		margin: 0;
+		padding: 0;
+	}
+	li {
+		margin-bottom: emCalc(15px);
+		list-style-type: none;
+		list-style-image: none;
+		a {
+			display: inline-block;
+			padding: 0 0 emCalc(10px);
+			position: relative;
+			color: $color-1-light;
+			font-size: 20px;
+			transition: color 400ms;
+			&:after {
+				content: '';
+				width: 0;
+				height: 2px;
+				position: absolute;
+				left: 0;
+				bottom: 5px;
+				background-color: $color-1-light;
+				transition: width 300ms;
+			}
+			&:hover {
+				text-decoration: none;
+				&:after {
+					width: 100%;
+				}
+			}
+		}
+	}
+	@include bp($max:768px) {
+		ul {
+			width: 100%;
+			text-align: center;
+			padding: 35px 0 0;
+			border-top: 2px solid #8e8e8e;
+		}
+		li {
+			display: inline-block;
+			width: auto;
+			margin: 0;
+			@include bp($max:600px) {
+				width: 100%;
+			}
+			&:after {
+				content: '|';
+				margin: 0 emCalc(15px);
+				color: $color-1;
+				font-size: em(20px);
+				position: relative;
+				@include bp($max:600px) {
+					display: none;
+				}
+			}
+			a {
+				display: inline-block;
+				position: relative;
+				padding: emCalc(10px) 0;
+				color: $color-1-light;
+				font-size: emCalc(19px);
+				text-decoration: none;
+				text-transform: uppercase;
+				@include bp($max:960px) {
+					font-size: emCalc(16px);
+				}
+			}
+			// Hide last pipe
+			&:last-of-type {
+				&:after {
+					display: none;
+				}
+			}
+		}
+	}
+}

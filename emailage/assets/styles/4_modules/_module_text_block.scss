@@ -1,0 +1,25 @@
+/*------------------------------------*\
+    ::  Text Block Styles
+\*------------------------------------*/
+.text-block {
+    width: 100%;
+    overflow: hidden;
+    &__colored-title {
+        text-align: center;
+    }
+    &--app-mod {
+        .text-block__narrow-inner {
+            width: 100%!important;
+            max-width: 1060px!important;
+            margin: 0 auto!important;
+        }
+        .text-block__colored-title,
+        .text-block__lead-text {
+            width: 100%;
+            max-width: 660px; // special size for this design
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+    }
+}

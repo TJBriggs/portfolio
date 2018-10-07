@@ -1,0 +1,25 @@
+/*------------------------------------*\
+    ::  Global Modifiers
+\*------------------------------------*/	
+// These modifiers can be applied to most modules
+[class*="--bg-gray"] {
+	background-color: $color-4-light;
+}
+[class*="--bg-white"] {
+	background-color: $color-3;
+}
+// Add border to top of module
+[class*="--border-top"] {
+	border-top: 1px solid #a4a1a4;
+}
+// Add border to bottom of module
+[class*="--border-bottom"] {
+	border-bottom: 1px solid #a4a1a4;
+}
+// Modifier to add top spacing when following the tab slider
+[class*="--follow-tab-slider"] {
+	padding-top: 5.75em;
+	@include bp($max:500px) {
+		padding-top: 3.75em;
+	}
+}

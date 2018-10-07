@@ -1,0 +1,189 @@
+/*------------------------------------*\
+    ::Fonts
+    ----------------------------------
+    ::Headings
+    ::Body
+\*------------------------------------*/
+// Headings
+// Roboto Regular - No woff2 available so loading all fallbacks
+@font-face {
+    font-family: 'roboto';
+    src: url('fonts/roboto/Roboto-Regular-webfont.eot');
+    src: url('fonts/roboto/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/roboto/Roboto-Regular-webfont.woff') format('woff'),
+         url('fonts/roboto/Roboto-Regular-webfont.ttf') format('truetype'),
+         url('fonts/roboto/Roboto-Regular-webfont.svg#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+// Roboto Light - No woff2 available so loading all fallbacks
+@font-face {
+    font-family: 'roboto';
+    src: url('fonts/roboto/Roboto-Light-webfont.eot');
+    src: url('fonts/roboto/Roboto-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/roboto/Roboto-Light-webfont.woff') format('woff'),
+         url('fonts/roboto/Roboto-Light-webfont.ttf') format('truetype'),
+         url('fonts/roboto/Roboto-Light-webfont.svg#robotoregular') format('svg');
+    font-weight: 100;
+    font-style: normal;
+}
+// Roboto Medium
+@font-face {
+    font-family: 'roboto';
+    src: url('fonts/roboto/roboto-medium-webfont.woff2') format('woff2'),
+         url('fonts/roboto/roboto-medium-webfont.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+}
+// Roboto Bold
+@font-face {
+    font-family: 'roboto';
+    src: url('fonts/roboto/roboto-bold-webfont.woff2') format('woff2'),
+         url('fonts/roboto/roboto-bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+// Roboto Black
+@font-face {
+    font-family: 'roboto';
+    src: url('fonts/roboto/roboto-black-webfont.woff2') format('woff2'),
+         url('fonts/roboto/roboto-black-webfont.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+
+
+// Body
+// Raleway Regular
+@font-face {
+    font-family: 'raleway';
+    src: url('fonts/raleway/Raleway-Regular-webfont.woff2') format('woff2'),
+         url('fonts/raleway/Raleway-Regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+// Raleway Medium
+@font-face {
+    font-family: 'raleway';
+    src: url('fonts/raleway/raleway-medium-webfont.woff2') format('woff2'),
+         url('fonts/raleway/raleway-medium-webfont.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+}
+// Raleway Semi-Bold
+@font-face {
+    font-family: 'raleway';
+    src: url('fonts/raleway/Raleway-SemiBold-webfont.woff2') format('woff2'),
+         url('fonts/raleway/Raleway-SemiBold-webfont.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+// Raleway Bold
+@font-face {
+    font-family: 'raleway';
+    src: url('fonts/raleway/Raleway-Bold-webfont.woff2') format('woff2'),
+         url('fonts/raleway/Raleway-Bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+// Raleway XBold
+@font-face {
+    font-family: 'raleway';
+    src: url('fonts/raleway/Raleway-ExtraBold-webfont.woff2') format('woff2'),
+         url('fonts/raleway/Raleway-ExtraBold-webfont.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+
+/*------------------------------------*\
+    ::  KSS MarkUp (Ignore)
+\*------------------------------------*/ 
+// Typefaces
+//
+// <div class="swatch" style="width:100%;">
+// <div class="group-title" style="width:100%;"><p>Roboto (Main Headings)</p></div>
+// <div class="text-swatch" style="width:100%;">
+// <div class="swatch__card">
+// <div class="text__item" style="background-color:#FFF;">
+// <h1>Roboto Medium</h1>
+// </div>
+// <div class="swatch__card">
+// <div class="group-title" style="width:100%;"><p>Roboto (Light)</p></div>
+// <div class="text__item" style="background-color:#FFF;">
+// <h1 style="font-weight: 100;">Roboto Light</h1>
+// </div>
+// <div class="text__var">`$fam-heading` `font-weight: 100;`</div>
+// <div class="swatch__card">
+// <div class="group-title" style="width:100%;"><p>Roboto (Regular)</p></div>
+// <div class="text__item" style="background-color:#FFF;">
+// <h1 style="font-weight: normal;">Roboto Regular</h1>
+// </div>
+// <div class="text__var">`$fam-heading` `font-weight: normal;`</div>
+// </div>
+// <div class="swatch__card">
+// <div class="group-title" style="width:100%;"><p>Roboto (Bold)</p></div>
+// <div class="text__item" style="background-color:#FFF;">
+// <h1 style="font-weight: bold;">Roboto Bold</h1>
+// </div>
+// <div class="text__var">`$fam-heading` `font-weight: bold;`</div>
+// <div class="swatch__card">
+// <div class="group-title" style="width:100%;"><p>Roboto (Black)</p></div>
+// <div class="text__item" style="background-color:#FFF;">
+// <h1 style="font-weight: 800;">Roboto Black</h1>
+// </div>
+// <div class="text__var">`$fam-heading` `font-weight: 800;`</div>
+// </div>
+// </div>
+//
+// <div class="swatch" style="width:100%;">
+// <div class="group-title" style="width:100%;"><p>Raleway (Main Body)</p></div>
+// <div class="text-swatch" style="width:100%;">
+// <div class="swatch__card">
+// <div class="text__item" style="background-color:#FFF;">
+// <p style="color: #2c2c2c;">Body text...Vestibulum id wigula porta felis euismod semper.</p>
+// </div>
+// <div class="text__var">`$fam-body` `font-weight: 200;`</div>
+// </div>
+// </div>
+// <div class="swatch" style="width:100%;">
+// <div class="group-title" style="width:100%;"><p>Raleway (Regular)</p></div>
+// <div class="text-swatch" style="width:100%;">
+// <div class="swatch__card">
+// <div class="text__item" style="background-color:#FFF;">
+// <p style="color: #2c2c2c; font-weight: normal;">Body text...Vestibulum id wigula porta felis euismod semper.</p>
+// </div>
+// <div class="text__var">`$fam-body` `font-weight: normal;`</div>
+// </div>
+// </div>
+// <div class="swatch" style="width:100%;">
+// <div class="group-title" style="width:100%;"><p>Raleway (Semi-Bold)</p></div>
+// <div class="text-swatch" style="width:100%;">
+// <div class="swatch__card">
+// <div class="text__item" style="background-color:#FFF;">
+// <p style="color: #2c2c2c; font-weight: 400;">Body text...Vestibulum id wigula porta felis euismod semper.</p>
+// </div>
+// <div class="text__var">`$fam-body` `font-weight: 400;`</div>
+// </div>
+// </div>
+// <div class="swatch" style="width:100%;">
+// <div class="group-title" style="width:100%;"><p>Raleway (Bold)</p></div>
+// <div class="text-swatch" style="width:100%;">
+// <div class="swatch__card">
+// <div class="text__item" style="background-color:#FFF;">
+// <p style="color: #2c2c2c; font-weight: bold;">Body text...Vestibulum id wigula porta felis euismod semper.</p>
+// </div>
+// <div class="text__var">`$fam-body` `font-weight: bold;`</div>
+// </div>
+// </div>
+// <div class="swatch" style="width:100%;">
+// <div class="group-title" style="width:100%;"><p>Raleway (Extra-Bold)</p></div>
+// <div class="text-swatch" style="width:100%;">
+// <div class="swatch__card">
+// <div class="text__item" style="background-color:#FFF;">
+// <p style="color: #2c2c2c; font-weight: 800;">Body text...Vestibulum id wigula porta felis euismod semper.</p>
+// </div>
+// <div class="text__var">`$fam-body` `font-weight: 800;`</div>
+// </div>
+// </div>
+//
+// Styleguide 2.1

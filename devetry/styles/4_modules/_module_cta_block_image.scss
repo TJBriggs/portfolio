@@ -1,0 +1,29 @@
+/*------------------------------------*\
+    :: CTA w/BG Image Styles
+\*------------------------------------*/
+.cta-block-image {
+    width: 100%;
+    &__inner {
+        padding-top: 6.75em;
+        padding-bottom: 6.75em;
+        text-align: center;
+        @include bp($max:768px) {
+            padding-top: 3em;
+            padding-bottom: 3em;
+        }
+    }
+    &__text {
+        max-width: 590px;
+        margin: 2.5em auto 0;
+        color: $color-2;
+        & > *:first-child {
+            margin-top: 0;
+        }
+        & > *:last-child {
+            margin-bottom: 0;
+        }
+    }
+    .btn {
+        margin-top: 3.5em;
+    }
+}

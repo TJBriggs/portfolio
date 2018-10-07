@@ -1,0 +1,362 @@
+/*------------------------------------*\
+    ::Footer
+\*------------------------------------*/
+// @include sticky-footer(
+//     $wrap: '.wrap-all-the-things',
+//     $row:  '.main-head, .main-torso, .main-foot',
+//     $flex: '.main-torso'
+// );
+
+@include sticky-footer(
+        $footer-height:         393px,                  //height of the footer
+        $wrap-element:          '.wrap-all-the-things', //wrapper of all but the footer
+        $container-element:     '.main',                //element the footer will bump into
+        $footer-element:        '.main-foot',           //the footer element
+        $footer-inner-element:  '.main-foot__nav'       //optional: inner footer element
+    );
+@include bp($max: 768px) {
+    @include sticky-footer(
+        $footer-height:         412px,                  //height of the footer
+        $wrap-element:          '.wrap-all-the-things', //wrapper of all but the footer
+        $container-element:     '.main',                //element the footer will bump into
+        $footer-element:        '.main-foot',           //the footer element
+        $footer-inner-element:  '.main-foot__nav'       //optional: inner footer element
+    );
+}
+@include bp($max: 479px) {
+    @include sticky-footer(
+        $footer-height:         480px,                  //height of the footer
+        $wrap-element:          '.wrap-all-the-things', //wrapper of all but the footer
+        $container-element:     '.main',                //element the footer will bump into
+        $footer-element:        '.main-foot',           //the footer element
+        $footer-inner-element:  '.main-foot__nav'       //optional: inner footer element
+    );
+}
+
+.footer__image {
+	background: url('images/global/footer-bg.jpg') no-repeat;
+	background-size: cover;
+	position: relative;
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+	&:after {
+		content: '';
+		display: block;
+		background: url("images/global/dotted-overlay.png");
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 2;
+		opacity: 0.75;
+	}
+}
+.main-foot__wrap {
+	border-top: 10px solid $color-1;
+	position: relative;
+	z-index: 5;
+}
+
+.social { // desktop
+	margin: 0 auto;
+	position: relative;
+	top: 100px;
+	width: 200px;
+	transition: 400ms;
+	z-index: 10;
+	.facebook,
+	.twitter,
+	.flick,
+	.pinterest {
+		@include col(3);
+		text-decoration: none;
+		text-align: center;
+		color: $white;
+		&:before {
+			@extend .icon;
+			font-size: emCalc(25px);
+		}
+		&:hover {
+			color: $color-1;
+		}
+	}
+	.facebook {
+		&:before {
+			@extend .icon--facebook;
+		}
+	}
+	.twitter {
+		&:before {
+			@extend .icon--twitter;
+		}
+	}
+	.flick {
+		&:before {
+			@extend .icon--flickr;
+		}
+	}
+	.pinterest {
+		&:before {
+			@extend .icon--pinterest;
+		}
+	}
+	@include bp($max:768px) { // tablet
+		top: 38px;
+		width: 400px;
+	}
+	@include bp($max:479px) { // mobile
+		top: 38px;
+		width: 240px;
+	}
+}
+
+.main-foot__nav {
+	margin-top: 100px;
+	position: relative;
+	z-index: 1;
+	ul {
+		margin: 0;
+		overflow: hidden;
+		padding: 0 $pad*2;
+		> li {
+			transition: 400ms;
+			&.menu-item-27,
+			&.menu-item-36 {
+				width: 20%;
+			} 
+			&.menu-item-32 {
+				width: 20%;
+				margin-right: 10%;
+			}
+			&.menu-item-35 {
+				width: 20%;
+				margin-left: 10%;
+			}
+			&.menu-item-35,
+			&.menu-item-36 {
+				text-align: right;
+			}
+			> a {
+				padding-bottom: 20px;
+			}
+			a {
+				text-decoration: none;
+				color: $white;
+				text-transform: lowercase;
+				font-family: $fam-nav;
+				letter-spacing: 1px;
+				&:hover {
+					color: $color-1;
+				}
+			}
+			> ul {
+				> li {
+					transition: 400ms;
+					@include bp($max:768px) {
+						text-align: center;
+						width: 100%;
+					}
+					@include bp($max:479px) {
+						text-align: left;
+					}
+					a {
+						padding-bottom: 10px;
+					}
+				}
+			}
+			@include bp($max:768px) {
+				&.menu-item-27,
+				&.menu-item-32,
+				&.menu-item-35,
+				&.menu-item-36, {
+					width: 25%;
+					margin: 0 0 0 0;
+					text-align: center;
+				} 
+			}
+			@include bp($max:479px) {
+				&.menu-item-27,
+				&.menu-item-32,
+				&.menu-item-35,
+				&.menu-item-36, {
+					width: 50%;
+					padding-left: 16%;
+					text-align: left;
+				} 
+				&.menu-item-27,
+				&.menu-item-32 {
+					height: 180px;
+				}
+			}
+			@include bp($max:320px) {
+				&.menu-item-27,
+				&.menu-item-32,
+				&.menu-item-35,
+				&.menu-item-36	{
+					padding-left: 12%;
+				} 
+			}
+		}
+	}
+}
+
+.main-foot__logo {
+	.logo {
+		display: block;
+		float: right;
+		margin-right: $pad*2;
+		margin-bottom: 30px;
+	}
+	.wordmark {
+		display: none;
+	}
+	@include bp($max:768px) {
+		.logo {
+			display: none;
+		}
+		.wordmark {
+			display: block;
+			margin: 0;
+			padding: 0;
+			/*------------------------------------*\
+		    ::SVG flickering fix on resize (safari)
+			\*------------------------------------*/
+			object {
+				display: block;
+				height: 55px;
+				max-height: 55px;
+				position: relative;
+				margin: 45px auto 50px;
+				transition: opacity 400ms;
+				width: 200px;
+			}
+			svg {
+				width: 100%;
+				height: 100%;
+				max-height: 55px;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+		}
+	}
+}
+
+
+.foot__bottom {
+	position: relative;
+	background: $color-2;
+	height: 52px;
+	bottom: 0px;
+	color: $white;
+	font-family: $fam-nav;
+	font-size: emCalc(11px);
+	letter-spacing: 1px;
+	width: 100%;
+	a {
+		color: $white;
+		font-size: emCalc(11px);
+	}
+	.copy-wrap {
+		float: left;
+		height: 50px;
+		line-height: 50px;
+		margin: 0;
+		padding: 0 0 0 $pad*2;
+		width: 75%;
+		.copyright {
+			padding-right: 5px;
+		}
+		.privacy {
+			padding-right: 5px;
+			&:before {
+				content: "|";
+				padding-right: 10px;
+				@include bp($max:575px) {
+					display: none;
+				}
+				@include bp($max:405px) {
+					display: inline-block;
+				}
+			}
+			a {
+				letter-spacing: 0.1em;
+				text-decoration: underline;
+				transition: 300ms;
+				&:hover {
+					color: $color-1;
+				}
+			}
+		}
+	}
+	.design-wrap {
+		float: right;
+		height: 50px;
+		line-height: 50px;
+		padding: 0 $pad*2 0 0;
+		width: 25%;
+		.web {
+			float: right;
+			a {
+				text-decoration: underline;
+				transition: 300ms;
+				&:hover {
+					color: $color-1;
+				}
+			}
+		}
+	}
+	@include bp($solarsystem) {
+		height: 75px;
+		.copy-wrap {
+			float: none;
+			height: 30px;
+			line-height: 30px;
+			margin-top: 10px;
+			padding-left: 0;
+			text-align: center;
+			width: 100%;
+		}
+		.design-wrap {
+			float: none;
+			height: 30px;
+			line-height: 30px;
+			padding-right: 0;
+			text-align: center;
+			width: 100%;
+			.web {
+				float: none;
+				margin: 0 auto;
+			}
+		}
+	}
+	@include bp($max:698px) {
+		height: 115px;
+		.design-wrap {
+			float: none;
+			height: 30px;
+			line-height: 30px;
+			margin-top: 30px;
+			padding-right: 0;
+			text-align: center;
+			width: 100%;
+			.web {
+				float: none;
+				margin: 0 auto;
+			}
+		}
+	}
+	@include bp($max:479px) {
+		.copy-wrap,
+		.design-wrap {
+			font-size: emCalc(9.5px);
+			a {
+				font-size: emCalc(9.5px);
+			}
+		}
+	}
+}

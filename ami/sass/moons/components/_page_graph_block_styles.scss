@@ -1,0 +1,104 @@
+/*------------------------------------*\
+    ::  Graph Block Styles
+\*------------------------------------*/
+.graph-block {
+	.title-wrap {
+		.content-title {
+			strong {
+				color: $color-4;
+			}
+		}
+	}
+	.graph-slider__slider {
+		@include bp($max:960px) {
+			.graph-slider__slide {
+				text-align: center;
+			}
+		}
+		.graph-slider__slides {
+			.graph__text { // hide on desktop
+				.graph__title {
+					font-family: $fam-rob-bold;
+					font-size: em(16px);
+					text-transform: none;				
+				}
+				.graph__blurb {
+					font-family: $fam-body;
+					font-size: em(14px);					
+				}
+			}
+		}
+	}
+	.graph-slider__nav {
+		.icons {
+			.icon {
+				cursor: pointer;
+				list-style-type: none;
+				@include bp($max:960px) {
+					text-align: center;
+				}
+				.icon__icon {
+					backface-visibility: hidden;
+					background: $color-1; /* Old browsers */
+					/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+					background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzJlM2M2MSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzJlM2M2MSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzM1NDU3MSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzNTQ1NzEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+					background: -ms-linear-gradient(left,  rgba(46,60,97,1) 0%,rgba(46,60,97,1) 50%,rgba(53,69,113,1) 50%,rgba(53,69,113,1) 100%); /* IE10+ */
+					background: linear-gradient(to right,  rgba(46,60,97,1) 0%,rgba(46,60,97,1) 50%,rgba(53,69,113,1) 50%,rgba(53,69,113,1) 100%); /* W3C */
+					border-radius: 50%;
+					border: 3px solid $color-2;
+					text-align: center;	
+					img {
+						filter: invert(1);
+					}
+				}
+				// hover and active states
+				&:hover, &.hover, &.flex-active {
+					.icon__icon {
+						background: $color-2;
+						img {
+							filter: invert(0);
+						}
+					}
+				}
+				// text styles next to icon
+				.icon__text {
+					.icon__title {
+						font-family: $fam-rob-bold;
+						font-size: em(16px);
+						text-transform: none;				
+					}
+					.icon__blurb {
+						font-family: $fam-body;
+						font-size: em(14px);				
+					}
+				}
+				
+			}
+		}
+	}
+	/*----------------------------------------------*\
+	    :: Background Modifiers
+	\*----------------------------------------------*/
+	// Static bg image
+	&[class*="--image"] {
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		.graph-block__overlay {
+		    background: rgba(29,32,42,0.75);
+		}
+	}
+	// Parallax bg image
+	&[class*="--parallax"] {
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-attachment: fixed;
+		.graph-block__overlay {
+		    background: rgba(29,32,42,0.75);
+		}
+		@include bp($max:1024px) {
+		    background-attachment: initial;
+		}
+	}
+}

@@ -1,0 +1,230 @@
+/*------------------------------------*\
+    ::  Basic Slider Styles
+\*------------------------------------*/	
+.basic-slider {
+	&__slide {
+		height: 32.75em;
+		@extend %bg-cover;
+		@include bp($max:767px) {
+			font-size: 2.1vw;
+		}
+		@include bp($max:640px) {
+			height: 28em;
+			font-size: 16px;
+		}
+	}
+	&__overlay {
+		height: 100%;
+		width: 100%;
+		@extend %overlay-medium;
+		font-size: 16px;
+	}
+	&__inner {
+		width: 100%;
+		height: 100%;
+		padding: 0 $pad;
+	}
+	&__content-wrap {
+		width: 100%;
+    	height: 100%;
+    	text-align: right;
+		&:before { // Centering the unknown
+			content: '';
+			height: 100%;
+			margin-left: -0.25em;
+			display: inline-block;
+			vertical-align: middle;
+		}
+		// Modifier to move text to left
+		&.basic-slider--content-left { // PHP or JS will be needed to add this modifier class to the content-wrap
+			text-align: left;
+		}
+		@include bp($max:960px) { // Center text at Tablet
+			text-align: center;
+			&.basic-slider--content-left { 
+				text-align: center;
+			}
+		}
+	}
+	&__content {
+		display: inline-block; // Centering the unknown
+		width: 50%;
+		vertical-align: middle; // Centering the unknown
+		text-align: left;
+		h5 {
+			margin-top: 0;
+			margin-bottom: 1em;
+			color: $color-3;
+		}
+		p {
+			color: $color-3;
+			font-family: $fam-heading;
+			font-weight: 100;
+		}
+		@include bp($max:960px) {
+			width: 70%;
+		}
+		@include bp($max:768px) {
+			width: 90%;
+		}
+		@include bp($max:640px) {
+			width: 95%;
+			h5 {
+				margin-bottom: 0.5em;
+			}
+			a { // remove top margin from button
+				margin-top: 0.5em;
+			}
+		}
+	}
+	/*------------------------------------*\
+	    ::  Owl Specific Styles
+	\*------------------------------------*/	
+	.owl-carousel{
+		z-index: auto;
+		height: 100%;
+	}
+	.owl-wrapper-outer{
+		height: 100%;
+	}
+	.owl-wrapper{
+		height: 100%;
+		display: flex!important; // Forces the wrapper to go full height
+	}
+	.owl-item{
+		overflow: hidden;
+		cursor: pointer;
+	}
+	// Arrows
+	.owl-prev, .owl-next {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		opacity: 0.75;
+		transition: opacity 400ms;
+		&:hover {
+			opacity: 1;
+		}
+		@include bp($max:960px) {
+			display: none;
+		}
+	}
+	.owl-prev {
+		left: $pad*2;
+	}
+	.owl-next {
+		right: $pad*2;
+	}
+	// Pagination
+	.owl-pagination {
+		display: none; // Hide on desktop
+		width: 100%;
+		position: absolute;
+		bottom: 6em;
+		right: 0;
+		left: 0;
+		text-align: center; // For layout purposes
+		@include bp($max:960px) {
+			display: block;
+			bottom: 3.9em;
+		}
+		@include bp($max:767px) {
+			bottom: 6.5vw;
+		}
+		@include bp($max:640px) {
+			bottom: 2.25em;
+		}
+		.owl-page {
+			display: inline-block;
+			margin-right: 0.75em;
+			&:last-of-type {
+				margin-right: 0;
+			}
+			span {
+				display: inline-block;
+				height: 15px;
+				width: 15px;
+				border: 2px solid $color-3;
+				border-radius: 50%;
+				background-color: transparent;
+				transition: background-color 400ms;
+			}
+			&.active {
+				span {
+					background-color: rgba(255, 255, 255,1);
+				}
+			}
+			&:hover {
+				span {
+					background-color: rgba(255, 255, 255, 0.6);
+				}
+			}
+		}
+	}
+}
+/*------------------------------------*\
+    ::  KSS MarkUp (Ignore)
+\*------------------------------------*/    
+// Basic Slider
+//
+// Demo &amp; Modifiers:<br><a href="../modules/module-basic-slider.php" target="_blank">module-basic-slider.php</a>
+//
+// Stylesheet:<br>
+// <a href="../sass/structure/modules/_module_basic_slider.scss" target="_blank">_module_basic_slider.scss</a><br>
+//
+// Path To The Code:<br>
+// golftec/golftec/modules/module-basic-slider.php<br>
+// golftec/golftec/js/sliders-src/basic-slider.js
+//
+// Markup:
+// <article class="basic-slider main-torso__group">
+//     <div class="basic-slider__slides owl-carousel js-owl-carousel--basic-slider">
+//         <div class="basic-slider__slide" style="background-image: url('../images/modules/basic-slider/basic-center-1.jpg')">
+//             <div class="basic-slider__overlay">
+//                 <div class="basic-slider__inner">
+//                     <div class="basic-slider__content-wrap">
+//                         <div class="basic-slider__content">
+//                             <h5>Bob S.</h5>
+//                             <p>It’s wonderfully helpful to review each lesson online, to view the recommended drills and to read the notes provided by my Coach, Erin. Since joining GolfTEC my handicap index has dropped from 18 to 7, I’m enjoying golf more, and now that I’m retired I can 
+//                             play several times a week.
+//                             </p>
+//                             <a class="basic-slider__btn btn" href="">Schedule Swing Evaluation</a>
+//                         </div> <!-- // basic-slider__content -->
+//                     </div> <!-- // basic-slider__content-wrap -->
+//                 </div> <!-- // basic-slider__inner -->
+//             </div> <!-- // basic-slider__overlay -->
+//         </div> <!-- // basic-slider__slide -->
+//         <div class="basic-slider__slide" style="background-image: url('../images/placeholders/placeholder.png')">
+//             <div class="basic-slider__overlay">
+//                 <div class="basic-slider__inner">
+//                     <div class="basic-slider__content-wrap basic-slider--content-left">
+//                         <div class="basic-slider__content">
+//                             <h5>Content Left</h5>
+//                             <p>It’s wonderfully helpful to review each lesson online, to view the recommended drills and to read the notes provided by my Coach, Erin. Since joining GolfTEC my handicap index has dropped from 18 to 7, I’m enjoying golf more, and now that I’m retired I can 
+//                             play several times a week.
+//                             </p>
+//                             <a class="basic-slider__btn btn" href="">Schedule Swing Evaluation</a>
+//                         </div> <!-- // basic-slider__content -->
+//                     </div> <!-- // basic-slider__content-wrap -->
+//                 </div> <!-- // basic-slider__inner -->
+//             </div> <!-- // basic-slider__overlay -->
+//         </div> <!-- // basic-slider__slide -->
+//         <div class="basic-slider__slide" style="background-image: url('../images/placeholders/placeholder.png')">
+//             <div class="basic-slider__overlay">
+//                 <div class="basic-slider__inner">
+//                     <div class="basic-slider__content-wrap">
+//                         <div class="basic-slider__content">
+//                             <h5>Content Right</h5>
+//                             <p>It’s wonderfully helpful to review each lesson online, to view the recommended drills and to read the notes provided by my Coach, Erin. Since joining GolfTEC my handicap index has dropped from 18 to 7, I’m enjoying golf more, and now that I’m retired I can 
+//                             play several times a week.
+//                             </p>
+//                             <a class="basic-slider__btn btn" href="">Schedule Swing Evaluation</a>
+//                         </div> <!-- // basic-slider__content -->
+//                     </div> <!-- // basic-slider__content-wrap -->
+//                 </div> <!-- // basic-slider__inner -->
+//             </div> <!-- // basic-slider__overlay -->
+//         </div> <!-- // basic-slider__slide -->
+//     </div> <!-- // basic-slider__slides -->
+// </article> <!-- // basic-slider -->
+//
+// Styleguide 6.15

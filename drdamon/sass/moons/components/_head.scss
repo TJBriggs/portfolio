@@ -1,0 +1,390 @@
+/*------------------------------------*\
+    ::Header
+\*------------------------------------*/
+.main-head { // Desktop
+	background: $white;
+	backface-visibility: hidden;
+	border-top: 8px solid $color-2;
+	box-shadow: 0px 4px 3px 0px rgba(0, 0, 0, 0.45);
+	height: 170px;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 800;
+	.logo {
+		display: block;
+		position: relative;
+		text-align: center;
+		width: 68%;
+		margin: 30px auto 0;
+		padding: 0;
+		transition: opacity 350ms;
+		/*------------------------------------*\
+	    ::SVG flickering fix on resize (safari)
+		\*------------------------------------*/
+		object {
+			width: 100%;
+			display: block;
+			height: 91px;
+			max-height: 91px;
+			position: relative;
+			//padding-top: 100%;
+		}
+		svg {
+			width: 100%;
+			height: 100%;
+			max-height: 91px;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		@include bp($max: 960px) {
+			width: 65%;
+		}
+		&:hover, &:focus {
+			opacity: 0.65;
+			outline: none;
+		}
+
+	}
+	.sticky-nav-logo, .mobile-logo {
+		display: none;
+	}
+	.m-nav {
+		display: none;
+		// font-size: emCalc(34px);
+		// color: $color-2;
+		// cursor: pointer;
+		// position: absolute;
+		// top: 31px;
+		// right: 30px;
+		// width: emCalc(40px);
+	}
+	.phone, .login {
+		float: right;
+		margin: 20px $pad 0 0;
+		position: relative;
+		text-align: right;
+		width: emCalc(132px);
+		z-index: 9000;
+		a {
+			color: $color-1;
+			text-decoration: none;
+			height: 100%;
+			&:before {
+				color: $color-2;
+				font-size: emCalc(21px);
+				padding-right: 10px;
+			}
+			&:hover, &:focus {
+				color: $color-2;
+				outline: none;
+			}
+			&:visited {
+				color: $color-1;
+			}
+		}
+	}
+	.phone {
+		a {
+			&:before {
+				@extend .icon;
+				@extend .icon--phone:before;
+			}
+		}
+	}
+	.login {
+		margin: 20px $pad*1.5 0 0;
+		a {
+			&:before {
+				@extend .icon;
+				@extend .icon--login:before;
+				font-size: emCalc(22px);
+			}
+		}
+	}
+	/*------------------------------------*\
+	    :: Tablet
+	\*------------------------------------*/
+	@include bp($solarsystem) {
+		border: 8px solid $color-2;
+		box-shadow: none;
+		height: 115px;
+		position: static;
+		left: 0;
+		right: 0;
+		width: 100%;
+		.logo, .sticky-nav-logo { 
+			display: none;
+		}
+		.phone, .login {
+			position: absolute;
+			top: 15px;
+			left: 95px;
+			height: 50px;
+			width: emCalc(50px);
+			margin: 20px 0 0 0;
+			a {
+				display: block;
+				font-size: emCalc(15px);
+				max-height: 40px;
+				overflow: hidden;
+				text-indent: -9999px;
+				width: emCalc(50px);
+				&:before {
+					color: $color-2;
+					display: block;
+					font-size: 2.4em;
+					text-indent: 0px;
+					padding-right: 0px;
+				}
+				&:visited {
+					color: $color-2;
+					&:before {
+						color: $color-2;
+					}
+				}
+				&:hover, &:focus {
+					color: $color-1;
+					outline: none;
+					&:before {
+						color: $color-1;
+					}
+				}
+			}
+		}
+		.login {
+			left: 30px;
+		}
+
+		// .m-nav {
+		// 	display: block;
+		// 	top: 33px;
+		// 	&:before {
+		//         font-size: emCalc(28px);
+		//     }
+		// }
+
+		.hamburger {
+			@include line($color: #0b497e);
+			position: relative;
+			&:before, &:after {
+				@include line($color: #0b497e);
+				position: absolute;
+				left: 0;
+				content: '';
+				transform-origin: $button-size/14 center;
+			}
+			&:before { top: $button-size/4; }
+			&:after { top: -$button-size/4; }
+			&.x-in-disguise{
+			    background: transparent;
+			    &:before, &:after{
+			      transform-origin: 50% 50%;
+			      top: 0;
+			      width: $button-size;
+			    }
+			    &:before{
+			      transform: rotate3d(0,0,1,45deg); 
+			      background: #0b497e;
+			    }
+			    &:after{
+			      transform: rotate3d(0,0,1,-45deg);
+			      background: #0b497e;
+			    }
+			}
+		}
+		.m-nav {
+			cursor: pointer;
+			display: block;
+			font-size: 3em;
+			right: $pad*2.23;
+			line-height: 1em;
+			margin: 0;
+			padding: {top:10px;right:$button-size/4;bottom:0;left:$button-size/4;}
+			position: absolute;
+			text-align: right;
+			transition: .3s;	
+			top: 10px;
+			z-index: 50;
+			&:hover {
+				opacity: 1;
+				.hamburger{
+					@include line($color: $color-1);
+					&:before, &:after{
+						@include line($color: $color-1);
+					}
+					&.x-in-disguise{
+					    background: transparent;
+					    color: $color-1;
+					}
+				}
+			}
+		}
+
+		.mobile-logo { 
+			display: block;
+			position: relative;
+			height: 70px;
+			width: 70px;
+			margin: 22px auto 0;
+			transition: opacity 350ms;
+			/*------------------------------------*\
+		    ::SVG flickering fix on resize (safari)
+			\*------------------------------------*/
+			object {
+				width: 100%;
+				display: block;
+				height: 70px;
+				max-height: 70px;
+				position: relative;
+				//padding-top: 100%;
+			}
+			svg {
+				width: 100%;
+				height: 100%;
+				max-height: 70px;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+			&:hover, &:focus {
+				opacity: 0.65;
+				outline: none;
+			}
+		}
+	}
+	/*------------------------------------*\
+    	::  Phone
+	\*------------------------------------*/
+	@include bp($max:640px) {
+		box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.50);
+		height: 75px;
+		.sticky-nav-logo {
+			top: 11px;
+			width: emCalc(80px);
+			img {
+				max-width: 100%;
+			}
+		}
+		.phone {
+			top: -7px;
+			left: 75px;
+			height: 40px;
+			width: emCalc(30px);
+			a {
+				display: block;
+				max-height: 55px;
+				overflow: hidden;
+				text-indent: -9999px;
+				width: emCalc(38px);
+				&:before {
+					display: block;
+					font-size: emCalc(36px);
+					text-indent: 0px;
+				}
+			}
+		}
+		.login {
+			top: -8px;
+			left: 25px;
+			height: 40px;
+			width: emCalc(30px);
+			a {
+				display: block;
+				max-height: 55px;
+				overflow: hidden;
+				text-indent: -9999px;
+				width: emCalc(38px);
+				&:before {
+					display: block;
+					font-size: emCalc(36px);
+					text-indent: 0px;
+				}
+			}
+		}
+		.mobile-logo { 
+			height: 55px;
+			width: 55px;
+			margin: 10px auto 0;
+			object {
+				width: 100%;
+				display: block;
+				height: 55px;
+				max-height: 55px;
+				position: relative;
+				//padding-top: 100%;
+			}
+			svg {
+				width: 100%;
+				height: 100%;
+				max-height: 55px;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+		}
+		// .m-nav {
+		// 	position: absolute;
+		// 	top: 14px;
+		// 	right: 15px;
+		// 	&:before {
+		//         font-size: emCalc(26px);
+		//     }
+		// }
+
+		.hamburger {
+			@include line-phone($color: #0b497e);
+			&:before, &:after {
+				@include line-phone($color: #0b497e);
+				transform-origin: $phone-button-size/14 center;
+			}
+			&:before { top: $phone-button-size/4; }
+			&:after { top: -$phone-button-size/4; }
+			&.x-in-disguise{
+			    &:before, &:after{
+			      width: $phone-button-size;
+			    }
+			}
+		}
+		.m-nav {
+			display: block;
+			padding: {top:0px;right:$phone-button-size/4;bottom:0;left:$phone-button-size/4;}
+			top: 0px;
+			right: $pad*1.5;
+			&:hover {
+				.hamburger{
+					@include line-phone($color: $color-1);
+					&:before, &:after{
+						@include line-phone($color: $color-1);
+					}
+				}
+			}
+		}
+	}
+	// Sticky Header
+	&.scroll {
+		@include bp($min: 1025px) {
+			height: 115px;
+			.main-head__inner {
+				height: 115px;
+			}
+			.logo {
+				display: none;
+			}
+			.sticky-nav-logo {
+				display: block;
+				position: relative;
+				top: 15px;
+				width: emCalc(131px);
+				margin: 0 auto;
+				z-index: 900; // Make sure sticky nav logo is above all other content (shadow)
+				img {
+					max-width: 100%;
+				}
+			}
+		}
+	}
+}

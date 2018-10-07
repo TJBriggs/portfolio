@@ -1,0 +1,56 @@
+/*-------------------------------------------*\
+    ::Page Styles - Smile Rewards
+\*-------------------------------------------*/
+.page-smile-rewards {
+	.page__group--intro {
+		padding-bottom: 40px;
+	}
+	.ctas {
+		h2 {
+			color: $color-1;
+		}
+		.ctas__section-intro {
+			p {
+				text-align: center;
+				@include bp($solarsystem) {
+	                margin: 15px $pad*2 0;
+	            }
+	            @include bp($planetary) {
+	                margin: 15px $pad 0;
+				}
+			}
+		}
+		.cta {
+			// add font icons before buttons
+			&:nth-of-type(1) {
+				.btn {
+					&:before {
+						@extend .icon--trophy:before;
+	                    @extend .icon;
+					}
+				}
+			}
+			&:nth-of-type(2) {
+				.btn {
+					&:before {
+						@extend .icon--like:before;
+	                    @extend .icon;
+					}
+
+				}
+			}
+			&:nth-of-type(3) {
+				.btn {
+					&:before {
+						@extend .icon--lock:before;
+	                    @extend .icon;
+					}
+
+				}
+			}
+		}
+	}
+	.page__group--rules {
+		padding: 20px 0 30px;
+	}
+}

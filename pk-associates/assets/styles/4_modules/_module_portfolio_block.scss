@@ -1,0 +1,94 @@
+/*------------------------------------*\
+    :: Portfolio Block
+\*------------------------------------*/
+// General Styles
+.portfolio-block {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background-color: $color-3-light;
+    &__wrap {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        padding: 0 0 0 4em;
+        @include bp($max:1250px) {
+            padding: 0;
+        }
+    }
+    // Left Column Styles
+    &__column-left {
+        width: 50%;
+        & > *:first-child {
+            margin-top: 0;
+        }
+        & > *:last-child {
+            margin-bottom: 0;
+        }
+        @include bp($max:767px) {
+            width: 100%;
+        }
+    }
+    &__text {
+        & > *:first-child {
+            margin-top: 0;
+        }
+        & > *:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &__quote {
+        margin-top: 4em;
+        @include bp($max:767px) {
+            margin-top: 3em;
+        }
+        h3 {
+            color: $color-1;
+            max-width: 420px;
+        }
+        h5 {
+            margin-top: 1.25em;
+        }
+        p {
+            margin: 0;
+        }
+    }
+    // Right Column Styles
+    &__column-right {
+        width: 50%;
+        padding: 0 $pad*2 0 $pad*2.5;
+        & > *:first-child {
+            margin-top: 0;
+        }
+        & > *:last-child {
+            margin-bottom: 0;
+        }
+        @include bp($max:767px) {
+            width: 100%;
+            padding: 0;
+            margin-top: 3em;
+        }
+    }
+    &__award {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 4em;
+        @include bp($max:767px) {
+            margin-top: 3em;
+        }
+    }
+    &__image-wrap {
+        width: 50%;
+        max-width: 200px;
+    }
+    &__caption-wrap {
+        width: 50%;
+        padding-left: $pad;
+        p {
+            margin: 0;
+        }
+    }
+}

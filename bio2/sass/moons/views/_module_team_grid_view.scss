@@ -1,0 +1,97 @@
+/*------------------------------------*\
+    ::  Team Grid Styles
+\*------------------------------------*/
+.team-grid {
+	background-color: $color-2;
+	.section-subtitle {
+		text-transform: none;
+		font-weight: bold;
+	}
+}
+/*------------------------------------*\
+    ::  Grid Content
+\*------------------------------------*/	
+.member {
+	.member__main-image {
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		transition: opacity 400ms;
+	}
+	.member__hover-name {
+		background-color: rgba(34,33,34,0.8);
+		color: $color-2;
+		font-size: 16px;
+		text-align: center;
+		text-transform: none;
+		@include bp($max:1024px) {
+			font-size: 15px;
+		}
+		@include bp($max:768px) {
+			font-size: 17px;
+		}
+		@include bp($max:640px) {
+			font-size: 15px;
+		}
+		@include bp($max:500px) {
+			font-size: 13px;
+		}
+	}
+}
+/*------------------------------------*\
+    ::  Dropdown Content
+\*------------------------------------*/	
+.closer {
+    svg {
+        fill: $color-2;
+        transition: fill 400ms;
+        &:hover {
+        	fill: $color-1-light;
+        }
+    }
+}
+.member-info__details {
+	p, li, span {
+		line-height: 1.5em;
+	}
+}
+.member-info__content-left {
+	background-color: $color-3;
+}
+.member-info__content-right {
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	@include bp($max:800px) {
+		background-position: center top;
+	}
+}
+.member-info__name {
+	color: $color-1-light;
+	font-weight: bold;
+	text-transform: none;
+	@include bp($max:480px) {
+		font-size: 28px;
+	}
+	@include bp($max:370px) {
+		font-size: 24px;
+	}
+}
+.member-info__title {
+	text-transform: none;
+	@include bp($max:370px) {
+		font-size: 18px;
+	}
+}
+.member-info__read-more {
+	font-weight: 100; 
+	&:after {
+		color: $color-1-light;
+	} 
+	&:hover {
+		text-decoration: none;
+	}
+}
+.member-info__bio-wrap {
+	background-color: $color-3;
+}

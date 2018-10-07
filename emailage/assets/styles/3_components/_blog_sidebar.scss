@@ -1,0 +1,47 @@
+/*------------------------------------*\
+    :: Blog Sidebar Styles
+\*------------------------------------*/
+// This is where the blog single page styles go.
+.blog-sidebar {
+    // width and layout controlled in _blog_single.scss file
+    // internal element styles only
+    .blog-sidebar__box {
+        width: 100%;
+        margin-bottom: 1.5em;
+        background-color: $color-5;
+        @extend %br;
+        text-align: center;
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+    .sidebar--author {
+        padding: 1.8em $pad 2em;
+        img {
+            display: inline-block;
+            margin-bottom: 0.75em;
+            border-radius: 50%;
+        }
+        h3 {
+            margin: 0 0 0.5em;
+        }
+        p {
+            margin: 0 auto;
+            max-width: 400px;
+            line-height: 1.2em;
+        }
+    }
+    .sidebar--tags {
+        overflow: hidden;
+        padding: $pad $pad 10px $pad;
+        text-align: left;
+        .tag-btn {
+            float: left;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+    }
+    .sidebar--newsletter {
+        padding: 1.8em $pad 2em;
+    }
+}

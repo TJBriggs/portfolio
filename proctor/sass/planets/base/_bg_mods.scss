@@ -1,0 +1,30 @@
+/*------------------------------------*
+    :: BG Mods
+*------------------------------------*/
+.page__group--bg-white {
+	background: $white;
+	h3.section-title {
+		color: $color-1;
+	}
+}
+
+.page__group--bg-orange {
+	background: $color-1;
+	color: $color-4;
+	h3.section-title {
+		color: $white;
+	}
+}
+
+.page__group--bg-dgray {
+	background: $color-2;
+	color: $white;
+}
+
+.page__group--bg-lgray {
+	background: $color-3;
+}
+
+.page__group--bg-image {
+	background: transparent;
+}

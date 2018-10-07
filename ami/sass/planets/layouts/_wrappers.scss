@@ -1,0 +1,13 @@
+/*------------------------------------*\
+    ::Wrappers
+\*------------------------------------*/
+[class*="__inner"] {
+    @include grid-row;
+}
+
+.torso-wrap {
+	width: 100%;
+	float: left;
+	position: relative;
+	z-index: 50;
+}

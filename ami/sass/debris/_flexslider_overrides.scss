@@ -1,0 +1,89 @@
+/*-------------------------------------------------------------*\
+    ::  Override styles for Tab Slider on Properties sub pages
+\*-------------------------------------------------------------*/
+.tab-slider, .icon-slider, 
+.hidden-content {
+	.flexslider {
+		height: 100%;
+		width: 100%;
+		margin: 0;
+		background: transparent;
+		border: none;
+		box-shadow: none;
+		overflow: hidden;
+	}
+}
+// graph block slider overrides
+// let section styles handle height and width
+.graph-block {
+	.flexslider {
+		//margin: 0;
+		background: transparent;
+		border: none;
+		box-shadow: none;
+		overflow: hidden;
+	}
+}
+.hidden-content__slider {
+	.flex-direction-nav {
+		.flex-prev, .flex-next {
+			color: $color-4;
+			opacity: 1;
+			transition: color 400ms;
+			text-decoration: none;
+			&:active {
+				color: $color-4;
+			}
+			&:hover {
+				color: $color-2;
+			}
+		}
+		@include bp($max:640px) {
+			display: none;
+		}
+	}
+	.flex-control-paging {
+		display: none; // hidden until mobile
+		height: 40px;
+		width: em(200px);
+		position: absolute;
+		bottom: 0px;
+		left:50%;
+		z-index: 500;
+		transform: translateX(-50%);
+		li {
+			margin: 0 8px;
+			a {
+				height: 15px;
+				width: 15px;
+				background: $white;
+				transition: background 400ms;
+				text-decoration: none;
+				&.flex-active {
+					background: $color-2;
+				}
+				&:hover {
+					background: $color-2;
+				}
+			}
+		}
+		@include bp($max:640px) {
+			display: block;
+		}
+	}
+}
+/*------------------------------------------------------*\
+    ::  Make flex-control-paging dots bigger on touch
+\*------------------------------------------------------*/
+.touch {
+	.hidden-content__slider {
+		.flex-control-paging {
+			li {
+				a {
+					height: 20px;
+					width: 20px;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,99 @@
+/*------------------------------------*\
+    ::  Callouts w-Intro Styles
+\*------------------------------------*/
+.callouts-intro {
+    width: 100%;
+    overflow: hidden;
+    .callouts-intro__colored-title {
+        text-align: center;
+    }
+    .callouts {
+        width: 100%;
+        margin-top: 3.75em;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        @media (max-width: 767px) {
+            margin-top: 2.25em;
+            justify-content: center;
+        }
+        .callouts__callout {
+            width: 31.5%;
+            padding: 2.25em $pad*1.5;
+            background-color: $color-6;
+            @extend %br;
+            .callouts__callout-content {
+                max-width: 440px;
+                margin-left: auto;
+                margin-right: auto;
+                img {
+                    height: 100px;
+                }
+            }
+            @media (max-width: 767px) {
+                width: 48%;
+                //max-width: 400px;
+                margin: 0 0 1.5em;
+                &:nth-of-type(2) {
+                    margin: 0 0 1.5em 4%;
+                }
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+            @media (max-width: 640px) {
+                width: 100%;
+                max-width: 400px;
+                margin: 0 auto 1.5em;
+                &:nth-of-type(2) {
+                    margin: 0 auto 1.5em;
+                }
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    // Layout Modifiers for Cards
+    .callouts--icons-left {
+        h2 {
+            margin-top: 1em;
+           // @extend %calluna-bold;
+        }
+        p {
+            margin: 1em 0 0 0;
+        }
+    }
+    .callouts--icons-center,
+    .callouts--no-icons {
+        text-align: center;
+        h2 {
+            position: relative;
+            margin: 1.1em 0 1.7em;
+            &:after {
+                content: '';
+                height: 5px;
+                width: 24px;
+                position: absolute;
+                bottom: -23px;
+                left: 50%;
+                background-color: $color-1;
+                border-radius: 5px;
+                transform: translateX(-50%);
+            }
+        }
+        p {
+            margin: 0;
+        }
+    }
+    .callouts--no-icons {
+        h2 {
+            margin: 0 0 1.5em;
+        }
+    }
+    &__btn-wrap {
+        width: 100%;
+        margin-top: 2.5em;
+        text-align: center;
+    }
+}

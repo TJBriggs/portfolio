@@ -1,0 +1,260 @@
+/*------------------------------------*\
+    ::Circle Statistics
+\*------------------------------------*/
+.stats {
+	///////////////////////////
+	// General Chart Styles
+	///////////////////////////
+	$pie-color: $color-1;
+	.circle, .chart__wrap {
+		float: left;
+		h3.graph-title {
+			font-size: emCalc(24px);
+			text-align: center;
+			width: 100%;
+		}
+		@include bp($max: 640px) {
+			margin-bottom: 50px;
+		}
+	}
+	.chart {
+		list-style: none;
+		li{
+			display: inline;
+	        letter-spacing: .1em;
+	        text-transform: uppercase;
+	        font:{
+				size: emCalc(12px);
+	        	weight: 100;
+	        }
+	        cursor: pointer;
+		}
+		&[data-pie-id],
+		&[data-line-id],
+		&[data-bar-id]{
+			@include darkened-children(4, $color-1);
+		}
+	}
+	///////////////////////////
+	// Circle Chart Styles
+	///////////////////////////
+	$stat-w-h: 150px;
+	.circle {
+		text-align: center;
+	    vertical-align: top;
+	    width: 33.333%;
+	    .circle__stat {
+	        display: inline-block;
+	        height: $stat-w-h;
+	        width: $stat-w-h;
+	        .circle__svg {
+				path{
+					stroke: $color-1;
+				}
+				text {
+					fill: $color-4;
+				}
+			}
+	    }
+	    .circle__per {
+	    	color: $color-2;
+	        position: relative;
+	        height: 0;
+	        line-height: 0;
+	        width: 100%;
+	        top: 50%;
+	        font-size: 2em;
+	        // text-align: center;
+	        font-family: $fam-body;
+	        font-weight: 100;
+	    }
+	    .circle__caption {
+	        padding: 0 2em;
+	        font-size: .7em;
+	        letter-spacing: .1em;
+	        text-transform: uppercase;
+	        font-weight: 100;
+	        color: $color-1;
+	    }
+	    @include bp($max:900px) {
+	    	width: 50%;
+	    }
+	    @include bp($max: 639px) {
+			width: 100%;
+		}
+	}
+	///////////////////////////
+	// Pie Chart Styles
+	///////////////////////////
+	.pie-chart {
+		width: 33.333%;
+		.chart {
+			float: left;
+			list-style: none;
+			margin: 25px 0 0;
+			padding: 0;
+			width: 25%;
+			h3.graph-title {
+				text-align: center;
+				height: 30px;
+			}
+		}
+		#pie0 {
+			float: left;
+			width: 75%;
+			text-align: center;
+			svg:not(:root) {
+				height: 70%;
+				width: 70%;
+				path{
+					stroke: $white;
+					stroke-width: 2px;
+				}
+				text {
+					fill: $color-4;
+				}
+			}
+		}
+		@include bp($max:900px) {
+	    	width: 50%;
+	    }
+		@include bp($max: 639px) {
+			width: 100%;
+			.chart {
+				width: 10%;
+				margin-left: 25%;
+				//padding: 0 30%;
+			}
+			#pie0 {
+				width: 50%;
+				margin-left: 5%;
+			}
+		}
+		@include bp($max:439px) {
+			.chart {
+				width: 5%;
+				margin-left: 10%;
+			}
+			#pie0 {
+				width: 75%;
+				margin-left: 0%;
+				text-align: right;
+			}
+		}
+	}
+	///////////////////////////
+	// Bar Chart Styles
+	///////////////////////////
+	.bar-chart {
+		overflow: hidden;
+		width: 33.333%;
+		.chart {
+			margin: 15px 0 0;
+			padding: 0;
+			text-align: center;
+			li {
+				margin: 0px 15%;
+			}
+		}
+		#bar30 {
+			svg:not(:root) {
+				text {
+					fill: $color-2;
+				}
+			}
+		}
+		@include bp($solarsystem) {
+			.chart {
+				li {
+					margin: 0px 8%;
+				}
+			}
+	    }
+		@include bp($max:900px) {
+			float: none;
+	 	  	width: 40%;
+	 	  	margin: 0 auto;
+	 	  	.chart {
+				li {
+					margin: 0px 16%;
+				}
+			}
+	    }
+	    @include bp($max: 640px) {
+			width: 45%;
+			.chart {
+				margin-top: 0;
+			}
+	    }
+	    @include bp($planetary) {
+			width: 65%;
+			.chart {
+				margin-top: 0;
+			}
+	    }
+	    @include bp($max:320px) {
+			width: 90%;
+			margin-bottom: 40px;
+			.chart {
+				margin-top: 0;
+				li {
+					margin: 0px 9.5%;
+				}
+			}
+	    }
+	
+	}
+}
+
+///////////////////////////
+// Keyframes
+///////////////////////////
+@keyframes bar-grow{
+	0%{
+		transform: scaleY(0);
+	}
+	100%{
+		transform: scaleY(1);
+	}
+}
+
+@keyframes line-grow{
+	0%{
+		stroke-dashoffset: 1000;
+	}
+	100%{
+	  stroke-dashoffset: 0;
+	}
+}
+
+@keyframes donut-fill{
+	0%{
+		transform: scale(0);
+	}
+	100%{
+		transform: scale(1);
+	}
+}
+.donut-fill{
+	path{
+		animation: donut-fill 2s 1;
+		transform-origin: center center;
+	}
+}
+.line-grow{
+	path{
+	    stroke-dasharray: 500;
+		animation: line-grow 5s 1;
+		transform-origin: bottom left;
+	}
+}
+.bar-grow{
+	rect{
+		animation: bar-grow 2s 1;
+		transform-origin: center top;
+	}
+}
+
+
+
+

@@ -1,0 +1,144 @@
+/*------------------------------------*\
+    ::  Hover Callouts
+\*------------------------------------*/		
+.hover-callouts {
+	display: flex;
+	flex-wrap: wrap;
+	&__box {
+		float: left; // For IE 10
+		height: 25em;
+		width: 25%;
+		position: relative;
+		overflow: hidden;
+		@extend %bg-cover;
+		@include bp($max:960px) {
+			width: 50%;
+		}
+		@include bp($max:700px) {
+			width: 100%;
+		}
+		&:after { // Gradient Overlay
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			z-index: 1;
+			/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.7+100 */
+			background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.9) 100%); /* FF3.6-15 */
+			background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.9) 100%); /* Chrome10-25,Safari5.1-6 */
+			background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.9) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#b3000000',GradientType=0 ); /* IE6-9 */
+			opacity: 0;
+			transition: opacity 600ms;
+			@include bp($max:960px) {
+				opacity: 1;
+			}
+		}
+		.box__title {
+			display: inline-block;
+			padding: $pad;
+			width: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 20;
+			background-color: rgba(18, 129, 65, 0.74);
+			color: $color-3;
+			font-family: $fam-heading;
+			font-size: 1em;
+			letter-spacing: 0.075em;
+			text-align: center;
+			text-transform: uppercase;
+			transition: background-color 600ms;
+		}
+		.box__text-wrap {
+			width: 100%;
+			padding: 0 $pad*2;
+			position: absolute;
+			bottom: -100%;
+			left: 50%;
+			z-index: 10;
+			transform: translateX(-50%);
+			transition: bottom 600ms, opacity 900ms;
+			opacity: 0;
+			@include bp($max:960px) {
+				bottom: 2em;
+				opacity: 1;
+			}
+			p {
+				color: $color-3;
+				font-size: 0.85em;
+				font-style: italic;
+				@include bp($max:960px) {
+					max-width: 275px;
+					font-size: 0.9em;
+				}
+				@include bp($max:700px) {
+					max-width: 310px;
+				}
+				@include bp($max:400px) {
+					max-width: none;
+				}
+			}
+		}
+		&:hover {
+			&:after {
+				opacity: 1;
+			}
+			.box__title {
+				background-color: rgba(18, 129, 65, 1);
+			}
+			.box__text-wrap {
+				bottom: 2em;
+				opacity: 1;
+				@include bp($max:960px) {
+					bottom: 1em;
+				}
+			}
+		}
+	}
+}
+/*------------------------------------*\
+    ::  KSS MarkUp (Ignore)
+\*------------------------------------*/   
+// Hover Callouts
+//
+// Demo:<br><a href="../modules/module-hover-callouts.php" target="_blank">module-hover-callouts.php</a>
+//
+// Stylesheet:<br>
+// <a href="../sass/structure/modules/_module_hover_callouts.scss" target="_blank">_module_hover_callouts.scss</a><br>
+//
+// Path To The Code:<br>
+// golftec/golftec/modules/module-hover-callouts.php
+//
+// Markup:
+// <article class="hover-callouts main-torso__group">
+//     <div class="hover-callouts__box" style="background-image: url('../images/modules/hover-callouts/bg-1.jpg')">
+//         <span class="box__title">Training Bay</span>
+//         <div class="box__text-wrap">
+//             <p>Here you will master the fundamentals of a solid, dependable swing that is easily repeatable on the golf course. We’ll sequentially address the key issues in your swing. Master your swing changes in a GolfTEC Training Bay and transfer better contact, more distance and greater accuracy to the golf course.</p>
+//         </div> <!-- // box__text-wrap -->
+//     </div> <!-- // hover-callouts__box -->
+//     <div class="hover-callouts__box" style="background-image: url('../images/modules/hover-callouts/bg-2.jpg')">
+//         <span class="box__title">Outdoor / On Course</span>
+//         <div class="box__text-wrap">
+//             <p>Translating what you learn in the Training Bay to the course is essential to improving your game, and with on-course lessons, your Coach is there to see how your swing is really working under the variable conditions on the course.</p>
+//         </div> <!-- // box__text-wrap -->
+//     </div> <!-- // hover-callouts__box -->
+//     <div class="hover-callouts__box" style="background-image: url('../images/modules/hover-callouts/bg-3.jpg')">
+//         <span class="box__title">Putting</span>
+//         <div class="box__text-wrap">
+//             <p>Grip, set-up, stance; we’ll address every part of the putting stroke. We'll work with different kinds of putting techniques to help you create a consistent swing line, contact and pace. You’ll learn putting drills you can take to the course to get you prepared for every round.</p>
+//         </div> <!-- // box__text-wrap -->
+//     </div> <!-- // hover-callouts__box -->
+//     <div class="hover-callouts__box" style="background-image: url('../images/modules/hover-callouts/bg-4.jpg')">
+//         <span class="box__title">Short Game</span>
+//         <div class="box__text-wrap">
+//             <p>This is where important skills are developed and better scoring happens. We’ll work on the different kinds of chipping and pitching shots that will let you stick a high approach shot, or master a chip and run, close to the pin. You’ll also learn to control your contact, spin, trajectory and roll.</p>
+//         </div> <!-- // box__text-wrap -->
+//     </div> <!-- // hover-callouts__box -->
+// </article> <!-- // hover-callouts -->
+//
+// Styleguide 6.20

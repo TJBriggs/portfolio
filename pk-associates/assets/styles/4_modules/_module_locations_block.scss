@@ -1,0 +1,46 @@
+/*------------------------------------*\
+    :: Locations Block
+\*------------------------------------*/
+.locations-block {
+    width: 100%;
+    overflow: hidden;
+    background-color: $color-3-light;
+    &__locations-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    &__location {
+        width: 48%;
+        margin-bottom: 2em;
+        padding: $pad*2;
+        background-color: $color-2-light;
+        background-image: -webkit-linear-gradient(bottom left, rgba(230,233,214,0.24) 0%, #E6E9D6 100%);
+        background-image: -o-linear-gradient(bottom left, rgba(230,233,214,0.24) 0%, #E6E9D6 100%);
+        background-image: linear-gradient(to top right, rgba(230,233,214,0.24) 0%, #E6E9D6 100%);
+        @include bp($max:600px) {
+            width: 100%;
+        }
+        h3 {
+            color: $color-1;
+            margin-bottom: 0.5em;
+        }
+        p {
+            margin: 0;
+            font-size: 14px;
+        } 
+        a {
+            @extend %rb-light;
+            font-size: 14px;
+            color: $color-3-dark;
+        }
+    }
+    &__contact-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 1em;
+        div {
+            width: 50%;
+        }
+    }
+}

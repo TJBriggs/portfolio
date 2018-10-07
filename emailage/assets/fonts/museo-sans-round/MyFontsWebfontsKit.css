@@ -1,0 +1,58 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 3477002, 2017-11-02T16:30:59-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: MuseoSansRounded-300 by exljbris
+ * URL: https://www.myfonts.com/fonts/exljbris/museo-sans-rounded/300/
+ * 
+ * Webfont: MuseoSansRounded-900 by exljbris
+ * URL: https://www.myfonts.com/fonts/exljbris/museo-sans-rounded/900/
+ * 
+ * Webfont: MuseoSansRounded-500 by exljbris
+ * URL: https://www.myfonts.com/fonts/exljbris/museo-sans-rounded/500/
+ * 
+ * Webfont: MuseoSansRounded-100 by exljbris
+ * URL: https://www.myfonts.com/fonts/exljbris/museo-sans-rounded/100/
+ * 
+ * Webfont: MuseoSansRounded-1000 by exljbris
+ * URL: https://www.myfonts.com/fonts/exljbris/museo-sans-rounded/1000/
+ * 
+ * Webfont: MuseoSansRounded-700 by exljbris
+ * URL: https://www.myfonts.com/fonts/exljbris/museo-sans-rounded/700/
+ * 
+ * 
+ * License: https://www.myfonts.com/viewlicense?type=web&buildid=3477002
+ * Licensed pageviews: 500,000
+ * Webfonts copyright: Copyright (c) 2011 by Jos Buivenga. All rights reserved.
+ * 
+ * © 2017 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/350e0a");
+
+  
+@font-face {font-family: 'MuseoSansRounded-300';src: url('350E0A_0_0.eot');src: url('350E0A_0_0.eot?#iefix') format('embedded-opentype'),url('350E0A_0_0.woff2') format('woff2'),url('350E0A_0_0.woff') format('woff'),url('350E0A_0_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'MuseoSansRounded-900';src: url('350E0A_1_0.eot');src: url('350E0A_1_0.eot?#iefix') format('embedded-opentype'),url('350E0A_1_0.woff2') format('woff2'),url('350E0A_1_0.woff') format('woff'),url('350E0A_1_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'MuseoSansRounded-500';src: url('350E0A_2_0.eot');src: url('350E0A_2_0.eot?#iefix') format('embedded-opentype'),url('350E0A_2_0.woff2') format('woff2'),url('350E0A_2_0.woff') format('woff'),url('350E0A_2_0.ttf') format('truetype');}
+ 
+  
+/*@font-face {font-family: 'MuseoSansRounded-100';src: url('350E0A_3_0.eot');src: url('350E0A_3_0.eot?#iefix') format('embedded-opentype'),url('350E0A_3_0.woff2') format('woff2'),url('350E0A_3_0.woff') format('woff'),url('350E0A_3_0.ttf') format('truetype');}*/
+ 
+  
+/*@font-face {font-family: 'MuseoSansRounded-1000';src: url('350E0A_4_0.eot');src: url('350E0A_4_0.eot?#iefix') format('embedded-opentype'),url('350E0A_4_0.woff2') format('woff2'),url('350E0A_4_0.woff') format('woff'),url('350E0A_4_0.ttf') format('truetype');}*/
+ 
+  
+@font-face {font-family: 'MuseoSansRounded-700';src: url('350E0A_5_0.eot');src: url('350E0A_5_0.eot?#iefix') format('embedded-opentype'),url('350E0A_5_0.woff2') format('woff2'),url('350E0A_5_0.woff') format('woff'),url('350E0A_5_0.ttf') format('truetype');}
+ 

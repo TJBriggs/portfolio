@@ -1,0 +1,15 @@
+/*------------------------------------*
+    :: Section Title
+*------------------------------------*/
+h3.section-title {
+	backface-visibility: hidden;
+	font-family: $fam-heading;
+	font-size: emCalc(36px);
+	letter-spacing: 0.05em;
+	margin: 50px auto 40px;
+	overflow: hidden;
+	text-align: center;
+	-webkit-font-smoothing: antialiased;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+	width: 100%;
+}

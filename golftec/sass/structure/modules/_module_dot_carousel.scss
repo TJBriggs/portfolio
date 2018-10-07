@@ -1,0 +1,263 @@
+/*------------------------------------*\
+    ::  Dot Carousel Styles
+\*------------------------------------*/	
+.dot-carousel {
+	background-color: $color-3;
+	position: relative;
+	padding: 3em $pad*2 5.5em;
+	@include bp($max:1024px) {
+		padding: 3em $pad*6 5.25em;
+	}
+	@include bp($max:850px) {
+		padding: 3em $pad*3 5.25em;
+	}
+	@include bp($max:700px) {
+		padding: 2em $pad*2 4.25em;
+	}
+	@include bp($max:500px) {
+		padding: 2em $pad 4.25em;
+	}
+	// Title & Subtitle
+	&__title{
+		margin: 0;
+		text-align: center;
+		@include bp($max:960px) {
+			font-size: 1.6em;
+		}
+		@include bp($max:700px) {
+			width: 100%;
+			margin: 0 auto;
+			padding: 0 $pad;
+			font-size: 1.4em;
+			text-align: left;
+			strong {
+				display: block;
+				width: 100%;
+			}
+		}
+	}
+	&__subtitle {
+		margin: 1em 0 0;
+		color: $color-1;
+		text-align: center;
+		font-style: italic;
+		@include bp($max:700px) {
+			width: 100%;
+			margin: 1em auto 0;
+			padding: 0 $pad;
+			text-align: left;
+		}
+	}
+	&__slides {
+		margin: 3em 0 0;
+		@include bp($max:640px) {
+			margin: 2em 0 0;
+		}
+	}
+	&__slide {
+		display: flex;
+		flex-wrap: wrap;
+		width: 100%;
+		padding: 0 $pad*3 0 0;
+		@include bp($max:700px) {
+			padding: 0 $pad 1em;
+		}
+	}
+	&__image-wrap {
+		height: 18vw;
+		max-height: 245px;
+		width: 38%;
+		@extend %bg-cover;
+		@include bp($max:1024px) {
+			height: 24vw;
+			max-height: 325px;
+		}
+		@include bp($max:700px) {
+			display: none;
+		}
+	}
+	&__text-wrap {
+		width: 56%;
+		margin-left: 6%;
+		@include bp($max:700px) {
+			width: 100%;
+			margin: 0 auto;
+		}
+	}
+	&__text {
+		h6 {
+			margin: 0;
+			.dot-carousel__number {
+				display: inline-block;
+				height: 40px;
+				width: 40px;
+				margin-right: 0.8em;
+				border: 4px solid $color-1;
+				border-radius: 50%;
+				color: $color-2;
+				font-size: 1.15em;
+				font-weight: 800;
+				line-height: 32px; // Ofset for borders
+				text-align: center;
+			}
+		}
+		p {
+			margin-bottom: 0;
+			font-size: 0.85em;
+		}
+		@include bp($max:640px) {
+			width: 100%;
+		}
+	}
+}
+/*------------------------------------*\
+    ::  Owl Specific Styles
+\*------------------------------------*/	
+.dot-carousel__slides {
+	.owl-carousel{
+		z-index: auto;
+		height: 100%;
+	}
+	.owl-wrapper-outer{
+		height: 100%;
+	}
+	.owl-wrapper{
+		height: 100%;
+		display: flex!important; // Forces the wrapper to go full height
+	}
+	// Arrows
+	.owl-buttons {
+		max-width: 170px;
+		margin: 0 auto;
+		position: relative;
+		@include bp($max:1024px) {
+			max-width: 220px;
+		}
+	}
+	.owl-item{
+		overflow: hidden;
+		cursor: pointer;
+	}
+	.owl-prev, .owl-next {
+		height: 24px;
+		width: 10px;
+		position: absolute;
+		bottom: -3.95em;
+		transform: translateY(-50%);
+		opacity: 1;
+		transition: opacity 400ms;
+		&:hover {
+			opacity: 0.7;
+		}
+		@include bp($max:640px) {
+			bottom: -3em;
+		}
+	}
+	.owl-prev {
+		left: $pad;
+	}
+	.owl-next {
+		right: $pad;
+	}
+	// Pagination
+	.owl-pagination {
+		width: 100%;
+		position: absolute;
+		bottom: -3em;
+		right: 0;
+		left: 0;
+		text-align: center; // For layout purposes
+		@include bp($max:640px) {
+			bottom: -2em;
+		}
+		.owl-page {
+			display: inline-block;
+			margin-right: 0.75em;
+			&:last-of-type {
+				margin-right: 0;
+			}
+			span {
+				display: inline-block;
+				height: 15px;
+				width: 15px;
+				border: 2px solid $color-4-darkest;
+				border-radius: 50%;
+				background-color: transparent;
+				transition: background-color 400ms;
+			}
+			&.active {
+				span {
+					background-color: rgba(47, 41, 49, 1);
+				}
+			}
+			&:hover {
+				span {
+					background-color: rgba(47, 41, 49, 0.6);
+				}
+			}
+		}
+	}
+}
+/*------------------------------------*\
+    ::  KSS MarkUp (Ignore)
+\*------------------------------------*/   
+// Dot Carousel
+//
+// Demo:<br><a href="../modules/module-dot-carousel.php" target="_blank">module-dot-carousel.php</a>
+//
+// Stylesheet:<br>
+// <a href="../sass/structure/modules/_module_dot_carousel.scss" target="_blank">_module_dot_carousel.scss</a><br>
+//
+// Path To The Code:<br>
+// golftec/golftec/modules/module-dot-carousel.php<br>
+// golftec/golftec/js/sliders-src/dot-carousel.js
+//
+// Markup:
+// <article class="dot-carousel main-torso__group">
+//     <h3 class="dot-carousel__title">The Process of <strong>Improving Your Game</strong></h3>
+//     <h6 class="dot-carousel__subtitle">The 4 Factors of GolfTEC's Process</h6>
+//     <div class="dot-carousel__slides owl-carousel js-owl-carousel--dot-carousel">
+//         <div class="dot-carousel__slide">
+//             <div class="dot-carousel__image-wrap" style="background-image: url('../images/modules/dot-carousel/slide-1.jpg')">
+//             </div> <!-- // dot-carousel__image-wrap -->
+//             <div class="dot-carousel__text-wrap">
+//                 <div class="dot-carousel__text">
+//                     <h6><strong class="dot-carousel__number">1</strong>Sequential Lessons</h6>
+//                     <p>True improvement requires more than a quick-fix or sporadic lessons. Rather than overwhelm you with too many changes at once, GolfTEC focuses on a simple, step-by-step approach to ensure consistent improvement and performance. As each change is mastered, we build on that to achieve the best swing possible that can be comfortably repeated on the golf course. While it involves multiple lessons, it is actually a faster approach to creating results that last a lifetime.</p>
+//                 </div> <!-- // dot-carousel__text -->
+//             </div> <!-- // dot-carousel__text-wrap -->
+//         </div> <!-- // dot-carousel__slide -->
+//         <div class="dot-carousel__slide">
+//             <div class="dot-carousel__image-wrap" style="background-image: url('../images/modules/dot-carousel/slide-2.jpg')">
+//             </div> <!-- // dot-carousel__image-wrap -->
+//             <div class="dot-carousel__text-wrap">
+//                 <div class="dot-carousel__text">
+//                     <h6><strong class="dot-carousel__number">2</strong>Advanced Retention Tools</h6>
+//                     <p>To review and reinforce the improvement process, GolfTEC’s online Player Performance Center and GolfTEC TO GO app provide 24/7 access to all of your lessons, coach’s comments and recommended practice drills. You can view your lessons from your mobile device to help your progress on the range, the course or wherever you are. In addition, you can schedule future lessons and manage your GolfTEC account when it’s convenient for you.</p>
+//                 </div> <!-- // dot-carousel__text -->
+//             </div> <!-- // dot-carousel__text-wrap -->
+//         </div> <!-- // dot-carousel__slide -->
+//         <div class="dot-carousel__slide">
+//             <div class="dot-carousel__image-wrap" style="background-image: url('../images/modules/dot-carousel/slide-3.jpg')">
+//             </div> <!-- // dot-carousel__image-wrap -->
+//             <div class="dot-carousel__text-wrap">
+//                 <div class="dot-carousel__text">
+//                     <h6><strong class="dot-carousel__number">3</strong>Video Practice</h6>
+//                     <p>Practice between your lessons is imperative to lasting improvement. The interactive video in every GolfTEC hitting bay lets you see immediate replays of each swing from two directions simultaneously, making your practice sessions more productive and improvement even faster. You can even use our video drawing tools to add a swing plane, posture and other lines that make it easier to see when you are achieving your swing changes and practice goals.</p>
+//                 </div> <!-- // dot-carousel__text -->
+//             </div> <!-- // dot-carousel__text-wrap -->
+//         </div> <!-- // dot-carousel__slide -->
+//         <div class="dot-carousel__slide">
+//             <div class="dot-carousel__image-wrap" style="background-image: url('../images/modules/dot-carousel/slide-4.jpg')">
+//             </div> <!-- // dot-carousel__image-wrap -->
+//             <div class="dot-carousel__text-wrap">
+//                 <div class="dot-carousel__text">
+//                     <h6><strong class="dot-carousel__number">4</strong>Fitted Clubs</h6>
+//                     <p>The confidence of using properly fit equipment is another key to your golf success - independent of skill or handicap. GolfTEC’s TECfit club-fitting system provides a precise, unbiased fitting experience with our experienced, certified professionals. We will cross-reference your ball flight characteristics with a database of thousands of club and shaft combinations to find the models that will optimize the results of your swing. Clubs will then be ordered and custom-built to maximize your game, and at no more cost than off-the-shelf clubs.</p>
+//                 </div> <!-- // dot-carousel__text -->
+//             </div> <!-- // dot-carousel__text-wrap -->
+//         </div> <!-- // dot-carousel__slide -->
+//     </div> <!-- // owl-carousel -->
+// </article> <!-- // dot-carousel -->
+//
+// Styleguide 6.22

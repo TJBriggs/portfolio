@@ -1,0 +1,431 @@
+/*------------------------------------*\
+    :: Polaroids
+\*------------------------------------*/
+.polaroids {
+    background: #fff;
+    box-shadow: inset 0px -9px 7px -7px rgba(0, 0, 0, 0.45);
+    padding: 0;
+    width: 100%;
+    .flexslider--polaroids {
+        .flex-viewport {
+            height: 565px;
+            margin: 0;
+            padding: 0;
+            z-index: 0;
+
+            @include bp($min: 1300px) {
+                margin: 0 auto;
+                width: 1300px;
+            }
+            @include bp($min: 1025px, $max: 1299px) {
+                height: 585px;
+            }
+            @include bp($max: 1024px) {
+                height: 505px;
+            } 
+            @include bp($min: 641px, $max: 1023px) {
+                height: 585px;
+            }
+            @include bp($max: 640px) {
+                height: 535px;
+            } 
+            @include bp($max: 550px) {
+                height: 505px;
+            }  
+            @include bp($planetary) {
+                height: 500px;
+            }
+            @include bp($max:320px) {
+                height: 450px;
+            }
+            ul {
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                li {
+                    height: 100%;
+                    .bubble {
+                        position: relative;
+                        top: 50px;
+                        left: 210px;
+                        opacity: 0;    // starting position
+                        //opacity: 1;  // ending position
+                        transition: 350ms;
+                        width: 90%;
+                        z-index: 5;
+                        img {
+                            max-width: 100%;
+                        }
+
+                        @include bp($min: 1025px) {
+                            max-width: 250px;
+                        }
+                        @include bp($solarsystem) {
+                            width: 70%;
+                        }
+                        @include bp($max: 960px) {
+                            top: 10px;
+                            left: 210px;
+                            width: 55%;
+
+                        }
+                        @include bp($max: 768px) {
+                            top: 40px;
+                            left: 210px;
+                            width: 70%;
+                        }
+                        @include bp($max: 640px) {
+                            top: 30px;
+                            left: 210px;
+                            width: 80%;
+                        }
+                        @include bp($max: 550px) {
+                            top: 35px;
+                            left: 60%;
+                            width: 75%;
+                        }
+                        @include bp($max: 500px) {
+                            top: 55px;
+                            left: 60%;
+                            width: 75%;
+                        }
+                        @include bp($planetary) {
+                            top: 55px;
+                            left: 75%;
+                            width: 90%;
+                        }
+                        &.visible {
+                            animation-name: fadein;
+                            animation-duration: 650ms;
+                            animation-timing-function: ease-in;
+                            animation-delay: 1600ms;
+                            animation-iteration-count: 1;
+                            animation-fill-mode: forwards; 
+                            animation-direction: normal;
+                            animation-play-state: running;
+                        }
+                    }
+                    .mascot {
+                        position: relative;
+                        top: -70px;
+                        left: 20px; 
+                        opacity: 0;    // starting position
+                        //opacity: 1;  // ending position
+                        width: 90%;
+                        transition: 350ms;
+                        img {
+                            max-width: 100%;
+                        }
+                        @include bp($min: 1025px) {
+                            max-width: 250px;
+                        }
+                        @include bp($solarsystem) {
+                            width: 70%;
+                        }
+                        @include bp($max: 960px) {
+                            top: -110px;
+                            width: 55%;
+                            margin-bottom: -110px;
+                        }
+                        @include bp($max: 768px) {
+                            top: -95px;
+                            width: 70%;
+                            margin-bottom: -95px;
+                        }
+                        @include bp($max: 640px) {
+                            top: -80px;
+                            width: 80%;
+                        }
+                        @include bp($max: 550px) {
+                            top: -50px;
+                            width: 75%;
+                            margin-bottom: -50px;
+                        }
+                        @include bp($max: 500px) {
+                            top: -30px;
+                            width: 75%;
+                            margin-bottom: -30px;
+                        }
+                        @include bp($planetary) {
+                            top: -20px;
+                            width: 85%;
+                            margin-bottom: -20px;
+                        }
+                        &.visible {
+                            animation-name: fadein;
+                            animation-duration: 650ms;
+                            animation-timing-function: ease-in;
+                            animation-delay: 1600ms;
+                            animation-iteration-count: 1;
+                            animation-fill-mode: forwards; 
+                            animation-direction: normal;
+                            animation-play-state: running;
+                        }
+                    }
+                    .polaroid-1,
+                    .polaroid-2,
+                    .polaroid-3,
+                    .polaroid-4 {
+                        background: #ebebeb;
+                        margin: 0 auto;
+                        max-width: 260px;
+                        padding: 4.2% 0 0 0;
+                        position: relative;  
+                        text-align: center;
+                        width: 65%;
+                        z-index: 100;
+                        @include bp($planetary) {
+                            width: 85%;
+                        }
+                        &:before{ 
+                            background: transparent;
+                            backface-visibility: none;
+                            content: ""; 
+                            z-index: -1; 
+                            position: absolute; 
+                            width: 44%; 
+                            top: 160px; 
+                            bottom: 12px; 
+                            left: 7px; 
+                            transform: rotate(-3deg); 
+                            box-shadow: 0px 15px 10px rgba(0, 0, 0, 0.45);
+                            @include bp($min: 1615px) {
+                                width: 45%;
+                            } 
+                            @include bp($max: 960px) {
+                                width: 45%;
+                            } 
+                            @include bp($max: 960px) {
+                                width: 44.5%;
+                            } 
+                        } 
+                        &:after{ 
+                            background: transparent;
+                            content: ""; 
+                            z-index: -1; 
+                            position: absolute; 
+                            width: 44%; 
+                            top: 10px; 
+                            right: 8px; 
+                            bottom: 12px; 
+                            transform: rotate(3deg); 
+                            box-shadow: 0px 15px 10px rgba(0, 0, 0, 0.45), 3px 12px 12px rgba(0, 0, 0, 0.45); 
+                            @include bp($min: 1615px) {
+                                width: 45%;
+                                top: 19px;
+                            } 
+                            @include bp($max: 960px) {
+                                width: 45%;
+                                top: 18px;
+                            } 
+                        }
+                        figure {
+                            background: #ebebeb;
+                            width: 100%;
+                            margin: 0 auto;
+                            .img-wrap {
+                                width: 90%;
+                                margin: 0 auto;
+                                img {
+                                    max-width: 100%;                                
+                                }
+                            }
+                            figcaption {
+                                font-family: $fultons-reg;
+                                font-size: emCalc(14px);
+                                font-weight: bold;
+                                padding: 10px 0 20px;
+                                width: 86%;
+                                word-spacing: -0.1em;
+                                margin: 0 auto;
+                                @include bp($max: 320px) {
+                                    font-size: emCalc(12px);
+                                    width: 90%;
+                                }
+                            }
+                        } 
+                    }
+                    .mascot-slide {
+                        margin: 0;
+                        padding: 0;
+                    }
+                    .polaroid-1 {
+                        margin-top: 700px;    // starting position
+                        //margin-top: 180px;  // ending position
+                        transition: 350ms;
+                        &.visible {
+                            animation-name: slideup1;
+                            animation-duration: 1400ms;
+                            animation-timing-function: linear;
+                            animation-delay: 0ms;
+                            animation-iteration-count: 1;
+                            animation-fill-mode: forwards; 
+                            animation-direction: normal;
+                            animation-play-state: running;
+                        }
+                        @include bp($min:481px, $max:959px) {
+                            &.visible {
+                                margin-top: 0px;
+                            }
+                        }
+                        @include bp($planetary) {
+                            margin-top: 680px;
+                        }
+                    }
+                    .polaroid-2 {
+                        margin-top: -500px;  // starting position
+                        //margin-top: 50px;  // ending position
+                        &.visible {
+                            animation-name: slidedown1;
+                            animation-duration: 1400ms;
+                            animation-timing-function: linear;
+                            animation-delay: 0ms;
+                            animation-iteration-count: 1;
+                            animation-fill-mode: forwards; 
+                            animation-direction: normal;
+                            animation-play-state: running;
+                        }
+                        
+                    }
+                    .polaroid-3{
+                        margin-top: 700px;    // starting position
+                        //margin-top: 190px;  // ending position
+                        &.visible {
+                            animation-name: slideup2;
+                            animation-duration: 1400ms;
+                            animation-timing-function: linear;
+                            animation-delay: 0ms;
+                            animation-iteration-count: 1;
+                            animation-fill-mode: forwards; 
+                            animation-direction: normal;
+                            animation-play-state: running;
+                        }
+                    }
+                    .polaroid-4 {
+                        margin-top: -500px;   // starting position
+                        //margin-top: 120px;  // ending position
+                        &.visible {
+                            animation-name: slidedown2;
+                            animation-duration: 1400ms;
+                            animation-timing-function: linear;
+                            animation-delay: 0ms;
+                            animation-iteration-count: 1;
+                            animation-fill-mode: forwards; 
+                            animation-direction: normal;
+                            animation-play-state: running;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+////////////////////////////////////////////////////////////////////////
+// Rotate polaroids for desktop...jagged edges when rotated on mobile
+////////////////////////////////////////////////////////////////////////
+.no-touch {
+    .rotate--left {
+        transform: rotate(-12deg);
+    }
+
+    .rotate--right {
+        transform: rotate(8deg);
+    }
+}
+///////////////////////////////////////////////////////////
+// Remove animations and reset elements for touch screens
+///////////////////////////////////////////////////////////
+.touch .page-home {
+    .polaroids {
+        .flexslider--polaroids {
+            .flex-viewport {
+                ul {
+                    li {
+                        .bubble {
+                            opacity: 1;
+                        }
+                        .mascot {
+                            opacity: 1;
+                        }
+                        .polaroid-1 {
+                            margin-top: 180px;
+                        }
+                        .polaroid-2 {
+                            margin-top: 50px;
+                        }
+                        .polaroid-3 {
+                            margin-top: 190px;
+                        }
+                        .polaroid-4 {
+                            margin-top: 120px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+//hide polaroid slider on page load if js is enable to create a smoother load
+.js {
+    &.no-touch {
+        .page-home {
+            .polaroids {
+                .flexslider--polaroids {
+                    opacity: 0;
+                }
+            }
+        }
+    }
+}
+/////////////////////////////
+// Keyframes
+/////////////////////////////
+// Polaroid #1
+@keyframes slideup1 {
+    from {
+        margin-top: 700px;
+    }
+    to {
+        margin-top: 200px;
+    }
+}
+
+// Polaroid #2
+@keyframes slidedown1 {
+    from {
+        margin-top: -500px;
+    }
+    to {
+        margin-top: 50px;
+    }
+}
+
+// Polaroid #3
+@keyframes slideup2 {
+    from {
+        margin-top: 700px;
+    }
+    to {
+        margin-top: 190px;
+    }
+}
+
+// Polaroid #4
+@keyframes slidedown2 {
+    from {
+        margin-top: -500px;
+    }
+    to {
+        margin-top: 120px;
+    }
+}
+
+// Mascot & Bubble
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

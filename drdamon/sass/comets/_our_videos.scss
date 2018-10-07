@@ -1,0 +1,129 @@
+/*------------------------------------*\
+    ::Your Team
+\*------------------------------------*/
+.page-our-videos {
+	.page__group {
+		background: #ffffff;
+		.thirds__group {
+			figcaption {
+				color: $color-1;
+				display: block;
+				font-family: $fam-heading;
+				font-size: emCalc(18px);
+				height: 50px;
+				margin: 10px 0 30px;
+				text-align: center;
+				width: 100%;
+			}
+		}
+		.thirds__group--1 { 
+	        @include col(6); // overide 1 column thirds styles so last video does not expand entire row
+	        @include bp($solarsystem) {
+	        	@include col(11, $center:true);
+	        }
+	        @include bp($planetary) {
+	        	@include col(12);
+	        }
+	    }
+	}
+	.page__group--video {
+		.thirds__group--1,
+		.thirds__group--2 {
+			opacity: 0;
+			transition: 1200ms;
+			&.visible {
+				opacity: 1;
+			}
+		}
+		
+	}
+	.page__group--row-1 {
+		padding: 35px 0 0;
+		.section__title-wrap {
+		    margin: 0 0 30px;
+		}
+		@include bp($min: 481px) { // unhide video 1 and 2 for tablet & desktop
+			.thirds__group--1,
+			.thirds__group--2 {
+				opacity: 1;
+			}
+		}
+		@include bp($planetary) { // hide video 2 for mobile
+			.thirds__group--1 {
+				opacity: 1;
+			}
+			.thirds__group--2 {
+				opacity: 0;
+			}
+		}
+	}
+	.page__group--row-2 {
+		@include bp($min: 1025px) { // unhide videos 3 and 4 at desktop
+			.thirds__group--1,
+			.thirds__group--2 {
+				opacity: 1;
+			}
+		}
+		@include bp($solarsystem) { // hide videos 3 and 4 for tablet and mobile
+			.thirds__group--1,
+			.thirds__group--2 {
+				opacity: 0;
+			}
+		}
+		@include bp($planetary) { // unhide videos 3 and 4 at desktop
+			.thirds__group--1,
+			.thirds__group--2 {
+				opacity: 0;
+			}
+		}
+	}
+}
+///////////////////////////////////////////////////////////
+// Remove animations and reset elements for touch screens
+///////////////////////////////////////////////////////////
+.touch .page-our-videos {
+	.page__group--row-1 {
+		@include bp($min: 481px) { // unhide video 1 and 2 for tablet & desktop
+			.thirds__group--1,
+			.thirds__group--2 {
+				opacity: 1;
+			}
+		}
+		@include bp($planetary) { // hide video 2 for mobile
+			.thirds__group--1 {
+				opacity: 1;
+			}
+			.thirds__group--2 {
+				opacity: 1;
+			}
+		}
+	}
+	.page__group--row-2 {
+		@include bp($min: 1025px) { // unhide videos 3 and 4 at desktop
+			.thirds__group--1,
+			.thirds__group--2 {
+				opacity: 1;
+			}
+		}
+		@include bp($solarsystem) { // hide videos 3 and 4 for tablet and mobile
+			.thirds__group--1,
+			.thirds__group--2 {
+				opacity: 1;
+			}
+		}
+		@include bp($planetary) { // unhide videos 3 and 4 at desktop
+			.thirds__group--1,
+			.thirds__group--2 {
+				opacity: 1;
+			}
+		}
+	}
+	.page__group--video {
+		.thirds__group--1,
+		.thirds__group--2 {
+			opacity: 1;
+			transition: none;
+		}
+	}
+}
+

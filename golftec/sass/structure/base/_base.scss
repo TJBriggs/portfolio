@@ -1,0 +1,91 @@
+/*------------------------------------*\
+    ::Base
+    ------------------------------------*
+    ::Normalize.css v3.0.0 | MIT License | git.io/normalize
+\*------------------------------------*/
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    border: none;
+}
+body {
+    margin: 0;
+    font-size: 16px;
+}
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+/*------------------------------------*\
+    ::  For Module Presentation Only
+\*------------------------------------*/    
+.module-separator {
+    width: 100%;
+    padding: 1.5em $pad;
+    background-color: $color-1;
+    h3 {
+        margin: 0;
+        padding: 0;
+        color: $color-3;
+        text-align: center;
+        line-height: 1.15em;
+    }
+    &--header {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+}
+/*------------------------------------*\
+    ::  Misc. Helper Classes
+\*------------------------------------*/    
+.hide {
+    display: none;
+}
+.screen-reader-text {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+.locked{
+    @include bp($max:1024px) {
+        &, body{
+            // overflow: hidden;
+            // height: auto;
+            // position: fixed;
+        }
+    }
+}
+.hide-tablet {
+    @include bp($max:960px) {
+        display: none;
+    }
+}
+.hide-mobile {
+    @include bp($max:500px) {
+        display: none;
+    }
+}
+/*------------------------------------*\
+    ::  Presentational Styles
+\*------------------------------------*/    
+// These styles are specific to the Styleguide and Pattern Libray
+// Elements. These styles will not be needed for the production site.
+.header-example {
+    background-color: $color-3;;
+}
+.hero-placeholder {
+    height: 950px;
+    width: 100%;
+    margin-bottom: 2800px;
+    z-index: 1;
+    background-image: url('images/placeholders/hero-placeholder.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}

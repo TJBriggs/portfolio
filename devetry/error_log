@@ -1,0 +1,14 @@
+[04-Feb-2018 22:30:20 America/Denver] PHP Fatal error:  Call to undefined function locate_template() in /home1/ttmabweb/public_html/devetry/wp-content/themes/devetry/functions.php on line 26
+[04-Feb-2018 22:30:21 America/Denver] PHP Fatal error:  Call to undefined function locate_template() in /home1/ttmabweb/public_html/devetry/wp-content/themes/devetry/functions.php on line 26
+[02-Mar-2018 21:28:42 America/Denver] PHP Fatal error:  Call to undefined function bloginfo() in /home1/ttmabweb/public_html/devetry/wp-content/themes/devetry/404.php on line 4
+[02-Mar-2018 21:28:42 America/Denver] PHP Fatal error:  Call to undefined function bloginfo() in /home1/ttmabweb/public_html/devetry/wp-content/themes/devetry/404.php on line 4
+[04-Mar-2018 22:53:42 America/Denver] PHP Fatal error:  Call to undefined function bloginfo() in /home1/ttmabweb/public_html/devetry/wp-content/themes/devetry/404.php on line 4
+[04-Mar-2018 22:53:43 America/Denver] PHP Fatal error:  Call to undefined function bloginfo() in /home1/ttmabweb/public_html/devetry/wp-content/themes/devetry/404.php on line 4
+[30-Mar-2018 02:11:18 America/Denver] PHP Fatal error:  Call to undefined function bloginfo() in /home1/ttmabweb/public_html/devetry/wp-content/themes/devetry/404.php on line 4
+[30-Mar-2018 02:11:18 America/Denver] PHP Fatal error:  Call to undefined function bloginfo() in /home1/ttmabweb/public_html/devetry/wp-content/themes/devetry/404.php on line 4
+[30-Mar-2018 23:56:47 America/Denver] PHP Fatal error:  Call to undefined function have_posts() in /home1/ttmabweb/public_html/devetry/wp-content/themes/devetry/index.php on line 1
+[30-Mar-2018 23:56:48 America/Denver] PHP Fatal error:  Call to undefined function have_posts() in /home1/ttmabweb/public_html/devetry/wp-content/themes/devetry/index.php on line 1
+[09-Apr-2018 03:17:08 America/Denver] PHP Fatal error:  Call to undefined function bloginfo() in /home1/ttmabweb/public_html/devetry/wp-content/themes/devetry/404.php on line 4
+[09-Apr-2018 03:17:08 America/Denver] PHP Fatal error:  Call to undefined function bloginfo() in /home1/ttmabweb/public_html/devetry/wp-content/themes/devetry/404.php on line 4
+[07-May-2018 01:50:35 America/Denver] PHP Fatal error:  Call to undefined function get_header() in /home1/ttmabweb/public_html/devetry/wp-content/themes/devetry/404.php on line 10
+[07-May-2018 05:26:17 America/Denver] PHP Fatal error:  Call to undefined function get_header() in /home1/ttmabweb/public_html/devetry/wp-content/themes/devetry/404.php on line 10

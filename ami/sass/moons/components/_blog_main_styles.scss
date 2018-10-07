@@ -1,0 +1,105 @@
+/*------------------------------------*\
+    ::  Main Blog Page Styles
+\*------------------------------------*/	
+.archive, .category {
+	.main-torso {
+		background-color: #faffff;
+	}
+	.category__wrap {
+		border-bottom: 2px solid #9cabb1;
+		li {
+			list-style-type: none;
+			color: #717372;
+			&:after {
+				font-size: em(20px);
+			}
+			a {
+				color: #717372;
+				font-family: $fam-rob-reg;
+				font-weight: bold;
+				transition: color 400ms;
+				&:hover {
+					color: $color-2;
+					text-decoration: none;
+				}
+			}
+			&.current-cat {
+				a {
+					color: $color-2;
+				}
+			}
+		}
+	}
+	.single-torso__image {
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	.post__overlay {
+		background-color: rgba(0, 0, 0, 0.55);
+	}
+	.social-links {
+		li {
+			list-style-type: none;
+			cursor: pointer;
+			a {
+				svg {
+					cursor: pointer;
+					fill: $color-4;
+					transition: fill 400ms;
+				}
+				&:hover {
+					svg {
+						fill: $color-2;
+					}
+				}
+			}
+		}
+	}
+	.single-torso__posted {
+		h4 {
+			font-family: $fam-head-bold;
+			a {
+				color: $color-1;
+				transition: 400ms;
+			}
+			&:hover {
+				a {
+					color: $color-2;
+					text-decoration: none;
+				}
+			}
+		}
+		.post-date {
+			color: #626667;
+		}
+		.post-tag {
+			color: $color-1;
+			transition: color 400ms;
+			a {
+				color: $color-1;
+				transition: color 400ms;
+				&:hover {
+					color: $color-2;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+	.single-torso__post {
+		p {
+			line-height: 1.45em;
+		}
+		.continue {
+			background-color: $color-1;
+			line-height: 46px;
+			letter-spacing: 0.05em;
+			color: $color-4;
+			transition: background-color 400ms;
+			&:hover {
+				background-color: $color-2;
+				text-decoration: none;
+			}
+		}
+	}
+}

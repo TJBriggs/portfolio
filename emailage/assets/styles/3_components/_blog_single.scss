@@ -1,0 +1,71 @@
+/*------------------------------------*\
+    :: Blog Single
+\*------------------------------------*/
+// This is where the blog single page styles go.
+.blog-single {
+    width: 100%;
+    overflow: hidden;
+    @include bp($max:767px) {
+        padding-top: 3em;
+    }
+    .blog-single__wrap {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        margin-bottom: 4em;
+    }
+    .blog-single__nested-wrap {
+        float: left;
+        width: 74.4%;
+        margin-right: 2.4%;
+        .blog-sidebar__left {
+            float: left;
+            width: 31.1827957%;
+        }
+        .blog-content {
+            float: right;
+            width: 65.5913978%;
+            margin-left: 3.2258065%;
+            .btn {
+                margin-top: 1em;
+            }
+        }
+        .blog-content__image {
+            height: 300px;
+            width: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin-bottom: 15px;
+            @include bp($max:500px) {
+                height: 250px;
+            }
+        }
+        @include bp($max:900px) {
+            float: none;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            .blog-sidebar__left {
+                float: none;
+                width: 100%;
+                margin-top: 2em;
+            }
+            .blog-content {
+                float: none;
+                width: 100%;
+                margin-left: 0;
+            }
+        }
+    }
+    .blog-sidebar__right {
+        float: right;
+        width: 23.2%;
+        @include bp($max:900px) {
+            float: none;
+            width: 100%;
+            max-width: 600px;
+            margin: 2em auto 0;
+        }
+    }
+}

@@ -1,0 +1,154 @@
+/*------------------------------------*\
+    ::  Title-wrap Styles
+\*------------------------------------*/
+.title-wrap {
+	width: 100%;
+	margin: 0 0 40px 0;
+	@include bp($max:1175px) {
+		width: 95%;
+		margin: 0 auto 40px auto;
+	}
+	.content-title {
+		width: 100%;
+		margin: em(25px) 0 em(20px);
+		padding: 0 $pad*4 em(20px);
+		position: relative;
+		color: $color-6;
+		font-family: $fam-head-bold;
+		line-height: 1.3em;
+		text-align: center;
+		border-bottom: 2px solid $color-6;
+		strong {
+			color: $color-6-dark;
+		}
+		@include bp($max:1024px) {
+			padding: 0 $pad*2 em(20px);
+		}
+		@include bp($max:480px) {
+			padding: 0 $pad em(20px);
+		}
+		
+	}
+}
+/*-----------------------------------------*\
+    ::  Logo png in title special styles
+\*-----------------------------------------*/
+.content-title {
+	img {
+		display: inline;
+		position: relative;
+		top: 6px;
+		margin-right: 4px;
+		max-width: 249px;
+		@include bp($max:524px) { // centers image when title breaks down to two lines
+			margin-right: 0;
+			left: 6px;
+		}
+	}
+}
+/*------------------------------------*\
+    ::  General Modifiers
+\*------------------------------------*/
+[class*="--underline-none"] {
+	.title-wrap {
+		margin: 0 auto 20px;
+		.content-title {
+			width: 100%;
+			margin: em(25px) 0 0;
+			padding: 0;
+			position: relative;
+			color: $color-1;
+			font-family: $fam-heading;
+			line-height: 1.3em;
+			text-align: center;
+			border-bottom: none;
+			strong {
+				color: $color-1;
+				font-family: $fam-head-bold;
+			}
+		}
+	}
+}
+[class*="--underline-small"] {
+	.title-wrap {
+		margin: 0 0 40px 0;
+		.content-title {
+			width: 100%;
+			margin: em(25px) 0 em(0px);
+			padding: 0;
+			position: relative;
+			color: $color-1;
+			font-family: $fam-heading;
+			line-height: 1.3em;
+			text-align: center;
+			border-bottom: none;
+			&:after { // underline styles
+				content: '';
+				height: 4px;
+				width: 120px;
+				position: absolute;
+				bottom: -18px;
+				left: 50%;
+				margin: 0 auto 0 -60px;
+				background: $color-3;
+			}
+			strong {
+				color: $color-1;
+				font-family: $fam-head-bold;
+			}
+		}
+	}
+}
+/*------------------------------------*\
+    ::  BG Modifiers
+\*------------------------------------*/
+[class*="--bg-lblue"], [class*="--bg-nblue"],
+[class*="--image"], [class*="--parallax"] {
+	.content-title {
+		color: $color-4;
+		border-bottom: 2px solid $color-4;
+		strong {
+			color: $color-2;
+		}
+		&:after { // underline styles
+			background: $color-4;
+		}
+	}
+	&[class*="--underline-none"] {
+		.content-title {
+			color: $color-4;
+			border-bottom: none;
+			strong {
+				color: $color-2;
+			}
+			&:after { // underline styles
+				background: $color-4;
+			}
+		}
+	}
+	&[class*="--underline-small"] {
+		.content-title {
+			color: $color-4;
+			border-bottom: none;
+			strong {
+				color: $color-4;
+			}
+			&:after { // underline styles
+				background: $color-2;
+			}
+		}
+	}
+}
+[class*="--bg-lgray"]  {
+	.content-title {
+		color: $color-1;
+		border-bottom: 2px solid $color-1;
+		strong {
+			color: $color-1;
+			font-family: $fam-head-bold;
+		}
+		&:after { // underline styles
+			background: $color-4;
+		}
+	}
+}

@@ -1,0 +1,216 @@
+/*------------------------------------*\
+    :: Contact form 7 Override Styles
+\*------------------------------------*/
+.wpcf7 {
+	/*------------------------------------*\
+	    ::  General Form Styles
+	\*------------------------------------*/
+	form {
+		padding: em(17px) 0 em(12px);
+		overflow: hidden;
+	}
+	::-webkit-input-placeholder {
+	   color: #a5adbe;
+	   font-family: $fam-rob-reg, sans-serif;
+	   font-size: em(15px);
+	}
+
+	:-moz-placeholder { /* Firefox 18- */
+	   color: #a5adbe;
+	   font-family: $fam-rob-reg, sans-serif;
+	}
+
+	::-moz-placeholder {  /* Firefox 19+ */
+	   color: #a5adbe;
+	   font-family: $fam-rob-reg, sans-serif;
+	}
+
+	:-ms-input-placeholder {  
+	   color: #a5adbe;
+	   font-family: $fam-rob-reg, sans-serif;
+	}
+	input, textarea {
+		height: 45px;
+		width: 100%;
+		padding: 0 $pad;
+		background: #f2f6f7;
+		border-radius: 0.2em;
+		border: 1px solid #9cabb1;
+		color: #717372;
+		font-family: $fam-rob-reg, sans-serif;
+		font-size: em(15px);
+		outline: none;
+		&:focus {
+			//border: 1px solid rgba($color-1, 0.75%);
+			box-shadow: inset 0 0 5px rgba($color-2, 0.80);
+		}
+	}
+	textarea {
+		height: 140px;
+		padding: $pad/2 $pad;
+		@include bp($max:480px) {
+			height: 180px;
+		}
+	}
+	select {
+		height: 45px;
+		width: 100%;
+		padding: 0 $pad;
+		background: #f2f6f7;
+		border: 1px solid #9cabb1;
+		color: #a5adbe;
+		font-family: $fam-rob-reg, sans-serif;
+		font-size: em(15px);
+		outline: none;
+	}
+	/*------------------------------------*\
+	    ::  Custom Styles
+	\*------------------------------------*/
+	.first-name-wrap,
+	.last-name-wrap,
+	.email-wrap,
+	.company-wrap {
+		float: left;
+		width: 49%;
+		margin: 0 0 $pad 0;
+		padding: 0;
+		position: relative;
+		@include bp($max:450px) {
+			float: none;
+			width: 100%;
+		}
+	}
+	.last-name-wrap,
+	.company-wrap {
+		margin-left: 2%;
+		@include bp($max:450px) {
+			margin-left: 0;
+		}
+	}
+	.message-wrap {
+		margin-bottom: 0;
+		height: auto;
+	}
+	.submit-wrap {
+		float: left;
+		height: 35px;
+		margin: em(5px) 0;
+		width: 40%;
+		input{
+			float: left;
+			display: block;
+			height: 35px;
+			width: 70%;
+			position: relative;
+			background: transparent;
+			border: 1px solid $color-1;
+			border-radius: 0;
+			color: $color-1;
+			font-family: $fam-body;
+			font-size: em(15px);
+			text-decoration: none;
+			text-align: center;
+			transition: color 300ms, background 300ms, border 300ms;
+			&:hover {
+				background: $color-2;
+				border: 1px solid $color-2;
+		    }
+		    &:focus {
+		    	outline: none;
+		    	box-shadow: none;
+		    }
+		}
+		img {
+			float: left;
+			height: 25px;
+			margin-top: 7px;
+			width: 25px;
+		}
+		@include bp($max: 480px) {
+			width: 100%;
+			input {
+				width: 100%;
+			}
+		}
+	}
+	// Validation Styles
+	// .wpcf7-form-control-wrap {
+	// 	display: block;
+	// 	position: relative;
+	// }
+	// .wpcf7-form {
+	// 	&.invalid {
+	// 		.wpcf7-form-control-wrap {
+	// 			display: block;
+	// 		}
+	// 	}
+	// }
+	span.wpcf7-not-valid-tip{
+		display: block;
+		height: 45px;
+		width: 100%;
+		padding: 0px 10px;
+		position: absolute;
+		top: -12px;
+		background: rgba(222, 93, 93, 0.65);
+		color: #fff;
+		cursor: pointer;
+		font-size: 13px;
+		line-height: 45px;
+		@include bp($max:1105px) {
+			padding: 5px 10px;
+			line-height: 1.2em;
+		}
+		@include bp($max:1024px) {
+			padding: 0px 10px;
+			line-height: 45px;
+		}
+		@include bp($max:800px) {
+			padding: 5px 10px;
+			line-height: 1.2em;
+		}
+		@include bp($max:768px) {
+			padding: 0px 10px;
+			line-height: 45px;
+		}
+		@include bp($max:580px) {
+			padding: 5px 10px;
+			line-height: 1.2em;
+		}
+		@include bp($max:450px) {
+			padding: 0 10px;
+			line-height: 45px;
+		}
+	}
+	div.wpcf7-response-output{
+		width: 55%;
+		margin-top: em(5px);
+		border: none;
+		line-height: 1.2em;
+		text-align: center;
+		@include bp($max:480px) {
+			width: 100%;
+			margin: 5px 0;
+		}
+		&.wpcf7-validation-errors{
+			float: left;
+			padding: 5px 10px;
+			background: #E49191;
+			border: 1px solid #C67779;
+			color: $color-4;
+			font-size: 13px;
+			letter-spacing: 0.02em;
+			text-align: left;
+		}
+		&.wpcf7-mail-sent-ok{
+			float: right;
+			margin-top: em(5px);
+			padding: 10px;
+			background: $color-2;
+			border: 1px solid #689022;
+			color: $color-4;
+			font-size: 14px;
+			text-align: left;
+		}
+	}
+}

@@ -1,0 +1,46 @@
+/*------------------------------------*\
+    :: Privacy Policy Page
+\*------------------------------------*/
+.page-privacy-policy {
+	.privacy-policy {
+		background: #f2f6f6;
+		.privacy-policy__inner {
+			padding: em(140px) $pad*2 em(90px);
+			@include bp($max:768px) {
+				padding: em(140px) $pad*2 em(60px);
+			}
+			@include bp($max:480px) {
+				padding: em(140px) $pad em(50px);
+			}
+			h2 {
+				&:first-of-type {
+					margin-top: 0;
+					margin-bottom: em(23px);
+					position: relative;
+				    &:after { // underline styles
+				    	content: '';
+				    	height: 4px;
+				    	width: 95px;
+				    	position: absolute;
+				    	bottom: -14px;
+				    	left: 0;
+				    	z-index: 1;
+				        background: $color-3;
+				    }
+				    @include bp($max:1024px) {
+				    	text-align: center;
+				    	&:after {
+				    		width: 100px;
+				    		bottom: -20px;
+				    		left: 50%;
+				    		margin: 10px auto 0 -50px;
+				    	}
+				    }
+				}
+			}
+			p {
+				color: $color-1;
+			}
+		}
+	}
+}

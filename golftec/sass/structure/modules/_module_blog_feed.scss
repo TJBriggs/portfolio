@@ -1,0 +1,347 @@
+/*------------------------------------*\
+    ::  Blog Feed Styles
+\*------------------------------------*/	
+.blog-feed {
+	background-color: $color-4-light;
+	&__inner {
+		padding: 5em $pad 5em;
+		@include bp($max:960px) {
+			padding: 1.7em 0 3em;
+		}
+		@include bp($max:480px) {
+			padding: 2em 0 2.5em;
+		}
+	}
+	&__wrap, &__head {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	&__wrap {
+		@include bp($max:960px) {
+			padding: 0 $pad;
+		}
+	}
+	&__head {
+		margin-bottom: 3.75em;
+		@include bp($max:480px) {
+			margin-bottom: 2.65em;
+		}
+	}
+	&__text {
+		width: 50%;
+		h4 {
+			margin: 0;
+			font-size: 1.5em;
+			font-weight: bold; 
+		}
+		h6 {
+			margin: 0.5em 0 0.6em;
+			font-style: italic;
+			font-weight: bold;
+		}
+		p {
+			max-width: 28.5em;
+			margin: 0;
+			font-size: 0.8em;
+			font-weight: 400;
+		}
+		@include bp($max:960px) {
+			width: 100%;
+			margin-bottom: 2em;
+			text-align: center;
+			h4 {
+				font-size: 1.8em;
+			}
+			h6 {
+				margin: 0.5em 0 0.5em;
+				font-size: 1.35em;
+			}
+			p {
+				margin: 0 auto; 
+				padding: 0 $pad;
+				font-size: 1em;
+			}
+		}
+		@include bp($max:480px) {
+			h4 {
+				max-width: 75%;
+				margin: 0 auto;
+				font-size: 1.6em;
+			}
+			h6 {
+				font-size: 1em;
+			}
+			p {
+				display: none;
+			}
+		}
+ 	}
+	&__form {
+		width: 50%;
+		padding: $pad $pad*1.5;
+		overflow: hidden;
+		border: 1px solid #c0c0c0;
+		box-shadow: 3px 0px 15px rgba(0, 0, 0, 0.20);
+		h6 {
+			float: left;
+			margin: 0 0 1em;
+			color: $color-2;
+			font-style: italic;
+		}
+		input {
+			float: left;
+			width: 48%;
+			margin: 0 4% 0 0;
+			&:last-of-type {
+				margin-right: 0;
+			}
+		}
+		input[type="email"] {
+			height: 47px;
+			padding: 0 $pad;
+			font-family: $fam-body;
+			font-size: 0.85em;
+			font-style: normal;
+			font-weight: 100;
+			letter-spacing: 0.075em;
+			&::placeholder {
+				font-family: $fam-body;
+				font-size: 0.85em;
+				font-style: italic;
+				font-weight: 100;
+				letter-spacing: 0.075em;
+			}
+			&:focus {
+				outline: none;
+			}
+		}
+		@include bp($max:960px) {
+			width: 100%;
+			padding: $pad*1.25 $pad*1.5;
+			text-align: center;
+			border-left: none;
+			border-right: none;
+			box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+			h6 {
+				width: 100%;
+			}
+			input {
+				float: none;
+				display: inline-block;
+				max-width: 250px;
+				margin-right: 1.5em;
+			}
+		}
+		@include bp($max:600px) {
+			input {
+				max-width: 190px;
+			}
+		}
+		@include bp($max:479px) {
+			h6 {
+				font-style: normal;
+			}
+			input {
+				display: block;
+				max-width: none;
+				margin: 0 auto;
+			}
+			input[type="email"] {
+				width: 80%;
+			}
+			input[type="submit"] {
+				width: 100%;
+				max-width: 250px;
+				margin: 1.25em auto 0.4em;
+			}
+		}
+	}
+	&__box {
+		width: 31%;
+		margin-right: 3.5%;
+		&:last-of-type {
+			margin-right: 0;
+		}
+		@include bp($max:1000px) {
+			font-size: 1.5vw;
+		}
+		@include bp($max:700px) {
+			width: 90%;
+			margin: 0 auto 2.5em;
+			font-size: 16px;
+			&:last-of-type {
+				margin: 0 auto 0;
+			}
+		}
+		@include bp($max:400px) {
+			width: 95%;
+			font-size: 4.45vw;
+		}
+		.box__image {
+			height: 18.15em;
+			width: 100%;
+			overflow: hidden;
+			position: relative;
+			z-index: 5;
+			@extend %bg-cover;
+			box-shadow: 3px 0px 10px rgba(0, 0, 0, 0.30);
+			&:before { // Centering the unknown
+				content: '';
+				height: 100%;
+				margin-left: -0.25em;
+				display: inline-block;
+				vertical-align: middle;
+			}
+			&:after { // Overlay
+				content: '';
+				height: 600px;
+				width: 600px;
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				z-index: 10;
+				@extend %overlay-dark;
+				opacity: 0;
+				transition: opacity 400ms;
+			}
+			@include bp($max:700px) {
+				height: 55vw;
+				background-size: 100% 55vw;
+			}
+			@include bp($max:400px) {
+				height: 65vw;
+				background-size: 100% 65vw;
+			}
+		}
+		.box__content {
+			display: inline-block; // Centering the unknown
+			width: 95%;
+			margin: 0 auto;
+			vertical-align: middle; // Centering the unknown
+			position: relative;
+			z-index: 15;
+			opacity: 1;
+			text-align: center;
+			transform: scale(0, 0);
+			transition: opacity 400ms, transform 400ms;
+			span {
+				color: $color-3;
+				font-family: $fam-heading;
+				font-weight: bold;
+				&:last-of-type {
+					margin-left: 1.05em;
+				}
+				img {
+					height: 17px;
+					width: 17px;
+					margin-right: 0.45em;
+				}
+			}
+			.box__btn {
+				margin-top: 0.75em;
+			}
+		}
+		.box__caption {
+			margin: 0;
+			padding: 1.7em $pad;
+			border-bottom: 1px solid $color-2;
+			color: $txt-color-1;
+			font-family: $fam-heading;
+			font-weight: bold;
+			text-align: center;
+		}
+		&:hover {
+			text-decoration: none;
+			.box__image {
+				&:after {
+					opacity: 1;
+				}
+			}
+			.box__content {
+				opacity: 1;
+				transform: scale(1, 1);
+			}
+		}
+	}
+}
+
+/*------------------------------------*\
+    ::  KSS MarkUp (Ignore)
+\*------------------------------------*/    
+// Blog Feed
+//
+// Demo &amp; Modifiers:<br><a href="../modules/module-blog-feed.php" target="_blank">module-blog-feed.php</a>
+//
+// Stylesheet:<br>
+// <a href="../sass/structure/modules/_module_hover_boxes.scss" target="_blank">_module_blog_feed.scss</a>
+//
+// Path To The Code:<br>
+// golftec/golftec/modules/module-blog-feed.php
+// 
+// Markup:
+// <article class="blog-feed main-torso__group">
+//     <div class="blog-feed__inner">
+//         <div class="blog-feed__head">
+//             <div class="blog-feed__text">
+//                 <h4>Instruction, Drills and Golf News</h4>
+//                 <h6>From the GolfTEC Scramble</h6>
+//                 <p>GolfTEC's official editorial site is your ultimate source for the latest tips and drills, news, equipment and more.</p>
+//             </div> <!-- // blog-feed__text -->
+//             <div class="blog-feed__form">
+//                 <form action="">
+//                     <h6>Subscribe to the Scramble Today and Play Better.</h6>
+//                     <input type="email" name="your-email" placeholder="Email Address">
+//                     <input type="submit" value="Sign Up Today">
+//                 </form>
+//             </div> <!-- // blog-feed__form -->
+//         </div> <!-- // blog-feed__head -->
+//         <div class="blog-feed__wrap">
+//             <div class="blog-feed__box">
+//                 <div class="box__image" style="background-image: url('../images/modules/blog-feed/blog-feed-1.jpg')";>
+//                     <div class="box__content">
+//                         <div class="box__counts">
+//                             <span><img src="../images/modules/blog-feed/book-icon.svg" alt="Book Icon">367</span>
+//                             <span><img src="../images/modules/blog-feed/comment-icon.svg" alt="Comment Icon">21</span>
+//                         </div>
+//                         <a class="box__btn btn" href="#">View Post</a>
+//                     </div>
+//                 </div>
+//                 <p class="box__caption">
+//                     The Key to Adam Scott's<br>Putting? Let's Read into it.
+//                 </p>
+//             </div> <!-- // blog-feed__box -->
+//             <div class="blog-feed__box">
+//                 <div class="box__image" style="background-image: url('../images/modules/blog-feed/blog-feed-2.jpg')";>
+//                     <div class="box__content">
+//                         <div class="box__counts">
+//                             <span><img src="../images/modules/blog-feed/book-icon.svg" alt="Book Icon">367</span>
+//                             <span><img src="../images/modules/blog-feed/comment-icon.svg" alt="Comment Icon">21</span>
+//                         </div>
+//                         <a class="box__btn btn" href="#">View Post</a>
+//                     </div>
+//                 </div>
+//                 <p class="box__caption">
+//                     Swing Kets for More Distance?<br>We Explain &amp; Give 2 Drills to Help.
+//                 </p>
+//             </div> <!-- // blog-feed__box -->
+//             <div class="blog-feed__box">
+//                 <div class="box__image" style="background-image: url('../images/modules/blog-feed/blog-feed-3.jpg')";>
+//                     <div class="box__content">
+//                         <div class="box__counts">
+//                             <span><img src="../images/modules/blog-feed/book-icon.svg" alt="Book Icon">367</span>
+//                             <span><img src="../images/modules/blog-feed/comment-icon.svg" alt="Comment Icon">21</span>
+//                         </div>
+//                         <a class="box__btn btn" href="#">View Post</a>
+//                     </div>
+//                 </div>
+//                 <p class="box__caption">
+//                     Practice Using Feedback! Part II:<br>Fix your Flop with the Punisher Drill.
+//                 </p>
+//             </div> <!-- // blog-feed__box -->
+//         </div> <!-- // blog-feed__wrap -->
+//     </div> <!-- // blog-feed__inner -->
+// </article> <!-- // blog-feed -->
+//
+// Styleguide 6.9

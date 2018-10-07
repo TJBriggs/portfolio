@@ -1,0 +1,37 @@
+/*------------------------------------*\
+    ::  Basic CTA Styles
+\*------------------------------------*/
+.basic-cta {
+    width: 100%;
+    overflow: hidden;
+    &__wrap {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 1.25em;
+    }
+    h4 {
+        font-size: 1em;
+        font-weight: 500;
+        text-transform: uppercase
+    }
+    p {
+        width: 590px;
+        margin: 0;
+        @extend %h1;
+        color: $color-7;
+        font-size: 2em;
+        letter-spacing: 0;
+        @media (max-width: 960px) {
+            width: 100%;
+        }
+    }
+    .btn {
+        min-width: 320px;
+        margin: 1.75em 0;
+        @media (max-width: 500px) {
+            min-width: 275px;
+        }
+    }
+}

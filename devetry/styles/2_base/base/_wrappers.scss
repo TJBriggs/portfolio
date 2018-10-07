@@ -1,0 +1,17 @@
+/*------------------------------------*\
+	:: Wrappers
+\*------------------------------------*/
+.main-wrap {
+	overflow: hidden;
+	padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+
+[class*="__inner"] {
+	width: 100%;
+	max-width: 1140px;
+	margin: 0 auto;
+	padding: 0 $pad*2;
+	@include bp($max:500px) {
+		padding: 0 $pad;
+	}
+}

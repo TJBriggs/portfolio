@@ -1,0 +1,200 @@
+/*------------------------------------*\
+    ::  Utility Nav Styles (Desktop)
+\*------------------------------------*/	
+.utility-nav__desktop {
+	height: 45px;
+	width: 100%;
+	position: relative; 
+	z-index: 1000;
+	background-color: $color-3;
+	@include bp($max:1024px) { // Hide on Tablet
+		display: none;
+	}
+	.utility-nav__inner {
+		height: 100%;
+		padding: 0 $pad;
+	}
+	ul {
+		float: right;
+		margin: 0;
+		padding: 0;
+		li {
+			margin: 0 0 0 2em;
+			display: inline-block;
+			list-style-type: none;
+			a {
+				display: block;
+				height: 45px;
+				width: auto;
+				color: $txt-color-2;
+				font-family: $fam-nav;
+				font-size: 0.75em;
+				font-weight: bold;
+				line-height: 45px;
+				text-decoration: none;
+				text-transform: uppercase;
+				img, svg {
+					height: 14px;
+					width: 14px;
+					margin-right: 0.6em;
+					position: relative;
+					top: 2px;
+					fill: $txt-color-2;
+				}
+				&:hover {
+					color: $color-2-dark;
+					svg {
+						fill: $color-2-dark;
+					}
+				}
+			}
+		}
+	}
+	/*------------------------------------*\
+	    ::  Individual Element Styles
+	\*------------------------------------*/	
+	.utility-nav__phone { // Phone Number
+		margin-left: 0; // remove margin from first list item
+		a {
+			font-size: 0.85em;
+			img, svg {
+				margin-right: 0.25em;
+				top: 3px; // vertically center icon with text
+			}
+		}
+	}
+	.utility-nav__country { // Country Select
+		position: relative;
+		top: -1px; // pulls up in safari to remove 1px gap between dropdown
+		a {
+			img, svg {
+		        height: 17px;
+		        width: 17px;
+		        margin-right: 0.6em;
+		        position: relative;
+		        top: 4px;
+		        border: none;
+		    }
+		    span {
+				height: 45px;
+		    	width: auto;
+				color: $txt-color-2;
+				font-family: $fam-nav;
+				font-size: 1.05em;
+				font-weight: bold;
+				line-height: 45px;
+				text-decoration: none;
+				text-transform: uppercase;
+				transition: color 400ms;
+		    }
+		}
+	    .sub-menu {
+	    	padding:  0.5em $pad;
+	    	position: absolute;
+	    	top: 45px;
+	    	left: 0;
+	    	background-color: $color-4-lightest;
+	    	opacity: 0;
+	    	visibility: hidden;
+	    	transition: all 400ms;
+	    	li {
+	    		width: 100%;
+	    		margin: 0;
+	    		padding: 0;
+	    		a {
+	    			height: 25px;
+	    			color: $txt-color-2;
+	    			line-height: 25px;
+	    			text-transform: none;
+	    			transition: color 400ms;
+	    			&:hover {
+	    				color: $color-2-dark;
+	    			}
+	    		}
+	    	}
+	    }
+	    &:hover {
+	    	.sub-menu {
+		    	opacity: 1;
+		    	visibility: visible;
+	    	}
+	    }
+	}
+	.utility-nav__chat { // Live Chat
+		a {
+			img,svg {
+				top: 3px; // vertically center icon with text
+			}
+		}
+	}
+	.utility-nav__contact {
+		a {
+			img,svg {
+				margin-right: 0.3em; // reduce right margin slightly
+			}
+		}
+	}
+}
+/*------------------------------------*\
+    ::  Utility Nav (Mobile)
+\*------------------------------------*/
+.utility-nav__mobile {
+	display: none; // Not visible on desktop
+	@include bp($max:1024px) {
+		display: block;
+		width: 100%;
+		padding: 0 $pad*2.3;
+		overflow: hidden;
+		@include bp($max:400px) {
+			padding: 0 $pad*1.5;
+		}
+		ul {
+			margin: 3.5em 0 2.5em; 
+			padding: 0;
+			white-space: nowrap;
+			> li {
+				display: inline-block;
+				margin: 0 $pad*1.25 0 0;
+				&:last-of-type { // Remove last margin
+					margin-right: 0;
+				}
+				> a {
+					color: $color-3;
+					font-family: $fam-body;
+					font-size: 0.8em;
+					font-weight: 200;
+					letter-spacing: 0.085em;
+					transition: color 400ms;
+					img, svg {
+						height: 12px;
+						width: 12px;
+						margin-left: 0.25em;
+						fill: $color-3;
+						transition: fill 400ms;
+					}
+					&.active {
+						color: $color-5;
+						svg {
+							fill: $color-5;
+						}
+					}
+					&:hover {
+						color: $color-5-light;
+						svg {
+							fill: $color-5-light;
+						}
+					}
+				}
+			}
+			// Stack Utility items
+			@include bp($max:465px) {
+				margin: 1.75em 0 1em;
+				> li {
+					display: block;
+					width: 100%;
+					margin-bottom: 0.55em;
+				}
+			}
+		}
+	}
+}	

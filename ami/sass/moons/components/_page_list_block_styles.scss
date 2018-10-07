@@ -1,0 +1,55 @@
+/*------------------------------------*\
+    ::  List Block Styles
+\*------------------------------------*/
+.list-block {
+	.list-block__list {
+		ul {
+			li {
+				//background: #E2E6E7;
+				color: $color-1;
+				font-family: $fam-rob-bold;
+				line-height: inherit; // sets it to normal compared to list items in the content block sections
+				list-style-type: none;
+				span {
+					&:before { // bullet 
+						color: $color-3;
+						font-family: sans-serif;
+						font-size: emCalc(55px);
+					}
+				}
+			}
+		}
+	}
+	@include bp($max:1024px) {
+		.list-block__text {
+			text-align: center;
+		}
+	}
+	/*------------------------------------*\
+	    :: BG Modifiers
+	\*------------------------------------*/
+	&[class*="--bg-lblue"],
+	&[class*="--bg-nblue"] {
+		.list-block__list {
+			ul {
+				li {
+					span {
+						&:before { // bullet
+							color: $color-2;
+						}
+					}
+				}
+			}
+		}
+	}
+	&[class*="--bg-lgray"] {
+		.list-block__list {
+			ul {
+				li {
+					background: $color-1;
+					color: $color-4;
+				}
+			}
+		}
+	}
+}

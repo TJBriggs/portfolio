@@ -1,0 +1,29 @@
+/*------------------------------------*\
+    ::  Section Title Styles
+\*------------------------------------*/	
+.section-title {
+    width: 100%;
+    margin: 0 0 1.3em;
+    padding: 0 $pad;
+    font-size: em(26px);
+    text-transform: uppercase;
+    @include bp($max:1024px) {
+        width: 91.66667%;
+        margin: 0 auto 1.3em;
+        font-size: em(26px);
+    }
+    @include bp($max:480px) {
+        width: 100%;
+        font-size: em(24px);
+    }
+}
+[class*="--title-center"] {
+	// Center section title
+	&[class*="--title"] {
+		.section-title {
+			text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+		}
+	}
+}

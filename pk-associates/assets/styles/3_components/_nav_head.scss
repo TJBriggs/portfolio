@@ -1,0 +1,196 @@
+/*------------------------------------*\
+    :: Nav in the Header
+\*------------------------------------*/
+// Header navigation styles go here.
+// Extend a styles outside media query
+.head-nav {
+    .menu {
+        > li {
+            > a {
+                @extend %pn-xbold;
+            }
+        }
+    }
+}
+@include bp($min:769px) {
+    .main-head__nav {
+        float: right;
+        margin-top: 2.15em;
+    }
+    .head-nav {
+        @include nav(
+            $type: 'dropdown',                  //nav type: dropdown or nested
+            $fade: .3s,                         //fade speed (take out for no animation)
+            $easy-hover: 50px,                  //amount of invisible overflow for sub menu (take out to not use)
+            $easy-hover-top: 1.2em              //set top easy-hover value (you can also set $easy-hover-right, -bottom, and -left separately)
+        );
+        .menu { // Main ul
+            margin: 0;
+            padding: 0;
+            > li {
+                margin-right: 0.8em;
+                &.home-link,
+                &.careers-link {
+                    display: none;
+                }
+                > a {
+                    display: block;
+                    position: relative;
+                    padding: 1em;
+                    color: $color-3-dark;
+                    font-size: 16px;
+                    letter-spacing: 0.04em;
+                    text-decoration: none;
+                    transition: color 400ms;
+                    &:before {
+                        content: '';
+                        height: 10px;
+                        width: 10px;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        opacity: 0;
+                        border: 2px solid $color-1;
+                        border-width: 2px 0 0 2px;
+                        transform: translate3d(10px, 10px, 0);
+                        transition: transform 400ms, opacity 400ms;
+                        transition-timing-function: cubic-bezier(0.17, 0.67, 0.05, 1.29);
+                    }
+                    &:after {
+                        content: '';
+                        width: 10px;
+                        height: 10px;
+                        position: absolute;
+                        right: 0;
+                        bottom: 0;
+                        opacity: 0;
+                        border: 2px solid #d94f5c;
+                        border-width: 0 2px 2px 0;
+                        transform: translate3d(-10px, -10px, 0);
+                        transition: transform 400ms, opacity 400ms;
+                        transition-timing-function: cubic-bezier(0.17, 0.67, 0.05, 1.29);
+                    }
+                    &:hover {
+                        color: $color-1;
+                        &:before {
+                            opacity: 1;
+                            transform: translate3d(0, 0, 0);
+                        }
+                        &:after {
+                            opacity: 1;
+                            transform: translate3d(0, 0, 0);
+                        }
+                    }
+                }
+                &.current-menu-item {
+                    a {
+                        color: $color-1;
+                    }
+                }
+                &:last-of-type {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
+
+@include bp($max:768px) {
+    .main-head__nav {
+        height: 100%;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 9800;
+        background-color: $color-2-light;
+        overflow: hidden; 
+        transform: translateY(-100%);
+        transition: transform 400ms linear;
+        &.open {
+           transform: translateY(0);
+        }
+    }
+    .head-nav {
+        margin-top: 85px;
+        text-align: center;
+        ul {
+            max-width: 125px;
+            margin: 0 auto;
+            padding: 0;
+            list-style-type: none;
+            > li {
+                width: 100%;
+                &.careers-link {
+                    display: none;
+                }
+                > a {
+                    display: block;
+                    position: relative;
+                    padding: 1em;
+                    color: $color-3-dark;
+                    font-size: 18px;
+                    letter-spacing: 0.04em;
+                    text-decoration: none;
+                    transition: color 400ms;
+                    &:before {
+                        content: '';
+                        height: 10px;
+                        width: 10px;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        opacity: 0;
+                        border: 2px solid $color-1;
+                        border-width: 2px 0 0 2px;
+                        transform: translate3d(10px, 10px, 0);
+                        transition: transform 400ms, opacity 400ms;
+                        transition-timing-function: cubic-bezier(0.17, 0.67, 0.05, 1.29);
+                    }
+                    &:after {
+                        content: '';
+                        width: 10px;
+                        height: 10px;
+                        position: absolute;
+                        right: 0;
+                        bottom: 0;
+                        opacity: 0;
+                        border: 2px solid #d94f5c;
+                        border-width: 0 2px 2px 0;
+                        transform: translate3d(-10px, -10px, 0);
+                        transition: transform 400ms, opacity 400ms;
+                        transition-timing-function: cubic-bezier(0.17, 0.67, 0.05, 1.29);
+                    }
+                    &:hover {
+                        color: $color-1;
+                        &:before {
+                            opacity: 1;
+                            transform: translate3d(0, 0, 0);
+                        }
+                        &:after {
+                            opacity: 1;
+                            transform: translate3d(0, 0, 0);
+                        }
+                    }
+                }
+                &.current-menu-item {
+                    a {
+                        color: $color-1;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-height: 550px) and (max-width: 768px) {
+    .head-nav {
+        ul {
+            > li {
+                &.careers-link {
+                    display: block;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,60 @@
+/*------------------------------------*\
+    :: Venn Diagram View
+\*------------------------------------*/
+/*------------------------------------*\
+    ::Individual Parts
+\*------------------------------------*/
+[class^="venn-diagram__part"]{
+    border-radius: 50%;
+}
+.venn-diagram__part--circle-1 { // Light blue top left
+    background-color: rgba(#308AC9,.8);
+}
+.venn-diagram__part--circle-2 { // Dark gray top right
+    background-color: rgba(#0F2029,.8);
+}
+.venn-diagram__part--circle-3 { // Navy blue center bottom
+    background-color: rgba(#27456C,.8);
+}
+
+/*------------------------------------*\
+    :: Circle Icons
+\*------------------------------------*/    
+.venn-diagram__icon {
+    fill: $color-2;
+}
+/*------------------------------------*\
+    :: Circle Text
+\*------------------------------------*/
+.venn-diagram__text {
+    color: $color-1;
+    font-weight: 100;
+    font-size: 1.4em;
+    @include bp($max:768px) {
+        color: $color-2;
+        font-size: 3vw;
+    }
+}
+
+/*------------------------------------*\
+    :: Lines
+\*------------------------------------*/
+@include bp($min: 550px){
+    .venn-diagram__text {
+        .venn-diagram__part--circle-1 & {
+            &:before { // line
+                border-bottom: 2px solid #2d87c6;
+            }
+        }
+        .venn-diagram__part--circle-2 & {
+            &:before { // line
+                border-bottom: 2px solid #2d87c6;
+            }
+        }
+        .venn-diagram__part--circle-3 & {
+            &:before { // line
+                border-bottom: 2px solid #2d87c6;
+            }
+        }
+    }
+}

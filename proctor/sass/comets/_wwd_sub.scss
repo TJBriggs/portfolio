@@ -1,0 +1,32 @@
+/*------------------------------------*
+    :: What We Do Subpage Styles
+*------------------------------------*/
+#what-we-do-sub {
+	.page__group--sub-intro {
+		padding-bottom: 40px;
+		.thirds__group {
+			p {
+				line-height: 2em;
+			}
+
+		}
+		.thirds__group--1 {
+			padding: 15px $pad;
+			@include bp($solarsystem) {
+				padding: 0 $pad;
+				margin: 0;
+				width: 100%;
+			}
+		}
+		.thirds__group--2 {
+			p {
+				text-align: center;
+				margin: 0 auto;
+				width: 100%;
+				img {
+					margin: 0;
+				}
+			}
+		}
+	}
+}

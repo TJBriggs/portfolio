@@ -1,0 +1,27 @@
+/*-----------------------------------------------------*\
+    ::Page Styles - Orthognathic Surgery & Retention
+\*-----------------------------------------------------*/
+.page__group--ortho-intro {
+    padding: 35px 0 0px;
+}
+.page__group--ortho-sbs {
+    box-shadow: 0px 4px 3px 0px rgba(0, 0, 0, 0.45);
+    padding-bottom: 20px;
+    p {
+        color: #555555;
+    }
+    .btn {
+        margin-top: 20px;
+        @include bp($solarsystem) {
+            float: none;
+            margin: 30px auto 40px;
+            width: 100%;
+        }
+    } 
+    @include bp($solarsystem) {
+        box-shadow: none;
+        .thirds__group--1 {
+            text-align: center;
+        }
+    } 
+}

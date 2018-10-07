@@ -1,0 +1,609 @@
+@import "settings/global/*";
+
+#kss-node { // start #kss-node specific styling
+    //Style Guide?
+
+    // define colors
+    $kss-color--text:           #fff;
+    $kss-color--section-bg:     #fff;
+    $kss-color--body-bg:        #fff;
+    $kss-color--hue-medium:     #f59231;
+    $kss-color--hue-light:      lighten(#f59231,20%);
+    $kss-color--hue-dark:       #404148;
+    $kss-color--lightest:       #fff;
+    $kss-color--darkest:        #000;
+
+    // define round corners
+    $kss-radius:                0.5em;
+    $kss-radius-big:            1em;
+    $kss-radius-small:          0.2rem;
+
+    // define gaps
+    $kss-gap:                   1em;
+
+/*------------------------------------*\
+    ::Theme Customizations
+\*------------------------------------*/
+// body styling
+background: #fff; // replaces gradient
+padding: 0;
+/*------------------------------------*\
+    ::  KSS Header
+\*------------------------------------*/    
+#kssref-0 { // Header
+    width: 100%;
+    //position: relative;
+    text-align: center;
+    .kss__menu-toggle {
+        display: inline-block;
+        height: 100px;
+        width: 100px;
+        background-color: red;
+        position: absolute;
+        top: 150px;
+
+        left: 0;
+        transform: translateY(-50%);
+        color: $color-3;
+        font-family: $fam-heading;
+        font-size: 1.5em;
+        text-transform: uppercase;
+        &:hover {
+            color: $color-1;
+            text-decoration: none;
+        }
+    }
+    img {
+        height: 110px;
+        width: 300px;
+    }
+    p {
+        color: #fff;
+        &:first-of-type {
+            margin: 0;
+        }
+    }
+}
+/*------------------------------------*\
+  :: Sidebar  
+\*------------------------------------*/    
+.kss-sidebar {
+    height: 100%;
+    width: 300px;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: auto;
+    right: -300px;
+    z-index: 9999;
+    overflow: visible;
+    padding: .5em 0 0 0;
+    transition: right 400ms, background 400ms;
+    background: rgba(255, 255, 255, 0.95);
+    &:before {
+        display: block;
+        content: 'MENU';
+        height: 45px;
+        width: 100px;
+        position: absolute;
+        top: 0;
+        left: -100px;
+        z-index: 9999;
+        background-color: rgba(236, 236, 236, 0.15);
+        color: $txt-color-1;
+        cursor: pointer;
+        font-weight: 800;
+        line-height: 45px;
+        text-align: center;
+        transition: background 400ms;
+    }
+    &:hover {
+        &:before {
+            background-color: rgba(236, 236, 236, 0.95);
+        }
+    }
+    .kss-nav {
+        width: 0;
+        margin: 0;
+        position: fixed;
+        top: 75px;
+        right: 0;
+        bottom: 0;
+        overflow-y: auto;
+        transition: width 400ms;
+    }
+    .kss-nav__menu-child {
+        padding-left: .7em;
+    }
+    .kss-nav__menu{
+        margin: {bottom:0!important;} //stupid important to override less styling using an ID.
+        > .kss-nav__menu-item{
+            padding: 0;
+            border-bottom: 1px solid #acacac;
+            font-size: 16px;
+            white-space: nowrap;
+            a:link{
+                display: block;
+                width: 100%;
+                margin: {bottom:0;}
+            }
+            .kss-nav__menu-child{
+                font-size: 16px;
+                .kss-nav__menu-item,
+                .kss-nav__menu-item:first-child{
+                    margin: 0;
+                    padding: 0;
+                }
+            }
+        }
+    }
+    .kss-nav__menu-item {
+        width: 100%;
+        li{
+            padding: {bottom:$pad;}
+            &:last-child{
+                padding: {bottom:0;}
+                margin: {bottom:0;}
+            }
+        }
+        &:last-child {
+            border: 0;
+        }
+        a {
+            padding: {top:.5em;right:1em;bottom:.5em;left:1em;}
+            transition: color 400ms;
+            &:link, &:visited {
+                color: #95979f;
+            }
+            &:hover, &:active {
+                background: #404148;
+                text-decoration: none;
+                span {
+                    color: $color-3;
+                }
+            }
+        }
+    }
+    .kss-nav__ref {
+        display: inline-block;
+        width: auto;
+        padding: .05em .4em;
+        margin-right: .4em;
+        font-weight: 100;
+        transition: 300ms;
+        color: currentcolor;
+    }
+    // Nav is open
+    &.active {
+        right: 0;
+        &:before {
+            background-color: rgba(255, 255, 255, 0.95);
+        }
+        .kss-nav {
+            width: 300px;
+        }
+    }
+}
+/*------------------------------------*\
+    ::  Expand/Collapse Code
+\*------------------------------------*/ 
+.accordion__link {
+    display: inline-block;
+    padding: 1em $pad;
+    color: $color-3!important;
+    font-size: 1.5em;
+    &:hover {
+        text-decoration: none;
+    }
+}   
+// universal
+.kss-style {
+    padding: $pad;
+    color: $kss-color--text;
+    p{
+        font-family: $fam-body;
+        font-weight: 200;
+        &:last-child{
+            margin: {bottom:0;}
+        }
+    }
+    a {
+        &:link, &:visited {
+            color: $color-1;
+            transition: 400ms;
+        }
+        &:hover, &:active {
+            text-decoration: none;
+            color: $color-1-light;
+        }
+    }
+    h1,h2,h3,h4,h5,h6{
+        margin: 0;
+        font-family: $fam-heading;
+    }
+    &.kss-markup{
+        &:last-child{
+            margin: {bottom:0;}
+        }
+    }
+}
+// titles/headings
+.kss-header{
+    margin: {top:1em;}
+}
+.code-reference {
+    margin-bottom: 1em;
+    color: $color-3;
+}
+#styleguide {
+    display: inline-block;
+    width: auto;
+}
+.kss-doc-title {
+    padding: {left:1em;}
+    color: #1d1e23;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+.kss-title {
+    font-family: $fam-heading;
+    .kss-title__ref {
+        color: #95979f;
+    }
+    a {
+        &:link,
+        &:visited {
+            color: #e1e1e1;
+        }
+        &:link:hover,
+        &:link:active {
+            color: #95979f;
+        }
+    }
+}
+.kss-title__permalink {
+    transition: opacity 400ms;
+    &:hover {
+       opacity: 0.5; 
+    }
+}
+/*--------------------------------------------*\
+    ::  Remove weird permalink text on hover
+\*--------------------------------------------*/    
+.kss-title__permalink-hash {
+    opacity: 0;
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+}
+.kss-description {
+    p {
+        color: $kss-color--text;
+    }
+    code {
+        background-color: lighten(#404148, 3%);
+        padding: .1em;
+        color: $kss-color--text;
+        border-radius: $kss-radius-small;
+    }
+}
+.kss-modifier__name {
+    background-color: $color-3;
+    color: $txt-color-1;
+}
+.kss-modifier__description {
+    margin-bottom: 0;
+    background-color: $color-3;
+    color: $txt-color-1;
+}
+.kss-modifier__heading {
+    margin-bottom: 0;
+    padding-top: 1.5em;
+    padding-left: $pad*1.5;
+    color: lighten($kss-color--text,20%);
+    color: $txt-color-1;;
+    border: 0;
+    background-color: $color-3;
+    border-radius: $kss-radius $kss-radius 0 0;
+    &:before {
+        content: "[";
+    }
+    &:after {
+        content: "]";
+    }
+}
+.kss-modifier__default-name {
+    margin-bottom: 0;
+    background-color: $color-3;
+    color: $txt-color-1;
+}
+
+.kss-modifier__example {
+    background-color: $color-3;
+    margin: 0;
+    &:after { // clearfix
+      content: "";
+      display: table;
+      clear: both;
+    }
+}
+.kss-nav__ref {
+    font-size: 12px;
+}
+.kss-nav__name {
+    font-size: 12px;
+}
+// sections/blocks
+.kss-main {
+    //padding: $kss-gap $kss-gap 0 (15em + $kss-gap);
+    padding: 0;
+    margin-left: 0;
+    width: 100%;
+    .group-title {
+        p {
+            color: $kss-color--text;
+            margin-bottom: 0.5em;
+        }
+    }
+    @include bp($galaxy) {
+        clear: both;
+        padding: {left:0;}
+    }
+}
+.kss-section {
+    margin-bottom: 0;
+    background-color: #404148;
+    border-bottom: 1px solid $color-3;
+    max-width: none; 
+}
+.kss-modifier__wrapper {
+    overflow: hidden;
+    margin-top: $kss-gap;
+    padding: 0;
+    border-color: darken($kss-color--section-bg,5%);
+    border-radius: $kss-radius-small $kss-radius-small 0 0;
+    background-color: darken($kss-color--lightest, 5%);
+    background-image:
+        linear-gradient(45deg, darken($kss-color--lightest, 7%) 25%, transparent 25%, transparent 75%, darken($kss-color--lightest, 7%) 75%, darken($kss-color--lightest, 7%)),
+        linear-gradient(45deg, darken($kss-color--lightest, 7%) 25%, transparent 25%, transparent 75%, darken($kss-color--lightest, 7%) 75%, darken($kss-color--lightest, 7%));
+    background-size: 1rem 1rem;
+    background-position:0 0, .5rem .5rem;
+}
+
+
+.kss-flex {
+    display: flex;
+    flex-wrap: wrap;
+    .btn,
+    button,
+    input[type="reset"], 
+    input[type="submit"] {
+        margin-right: $pad;
+    }
+}
+.kss-dark-example {
+    padding: 10px $pad;
+    background-color: $color-4-darkest;
+    border-radius: $kss-radius-small;
+}
+// special
+.kss-overview {
+    h1, h2, h3, h4, h5, h6 {
+        color: #fff;
+    }
+}
+/*------------------------------------*\
+    ::Color Swatches
+\*------------------------------------*/
+.swatch {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.swatch__card{
+    margin: {right:$pad/2;bottom:$pad;}
+}
+.swatch__var{
+    text-align: center;
+    margin: {top:$pad/2;}
+    font-size: 75%;
+    code{
+        border: 1px solid #acacac;
+        padding: $pad/4;
+    }
+}
+.swatch__item {
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 175px;
+    height: 75px;
+    padding: 5px;
+    margin: 2px;
+    border-radius: $kss-radius-small;
+    text-align: center;
+    font-size: 12px;
+    text-shadow: 0 1px 5px $kss-color--darkest;
+    border: 1px solid $kss-color--section-bg;
+    code {
+        color: $kss-color--lightest;
+        background-color: transparent;
+    }
+}
+/*------------------------------------*\
+    ::Text Swatches
+\*------------------------------------*/
+.text-swatch {
+    width: 100%;
+}
+.text__item {
+    width: 100%;
+    padding: 10px;
+    border-radius: $kss-radius-small;
+    p {
+        margin: 0;
+    }
+    code {
+        //color: $kss-color--lightest;
+        background-color: transparent;
+        //text-shadow: 0 1px 5px #000;
+    }
+}
+.text__var {
+    text-align: left;
+    margin: $pad 0;
+    font-size: 75%;
+    code{
+        padding: $pad/4;
+        border: 1px solid #acacac;
+        color: $kss-color--text;
+    }
+}
+/*------------------------------------*\
+    :: Link Layout Styling  
+\*------------------------------------*/  
+#kssref-3-1,
+#kssref-3-2,
+#kssref-3-3 { // Links section
+    .kss-modifier__example {
+        a {
+            display: inline-block;
+            padding-bottom: 1em;
+            &:first-of-type {
+                margin-left: $pad;
+            }
+        }
+        .kss-btn-wrap {
+            overflow: hidden;
+            .btn,
+            button,
+            input[type="reset"],
+            input[type="submit"],
+            input[type="button"] {
+                float: left;
+                margin-left: 1em;
+                padding-bottom: 0.7em;
+            }
+        }
+    }
+}  
+/*------------------------------------*\
+    ::  Text Layout Styling
+\*------------------------------------*/ 
+#kssref-2-2,
+#kssref-2-2-1,
+#kssref-2-3,
+#kssref-2-5-3,
+#kssref-2-7 {
+    .kss-modifier__example {
+        padding-left: $pad;
+    }
+}   
+/*------------------------------------*\
+    ::  Navigation Helper
+\*------------------------------------*/  
+.kss-modifier__example {
+    .main-head {
+        position: absolute;
+    }
+    .hero-placeholder,
+    .placeholder {
+        margin-bottom: 0;
+    }
+}  
+/*------------------------------------*\
+    ::  Landing Header Button Text
+\*------------------------------------*/   
+.kss-modifier__example {
+    .landing-head {
+        .landing-head__btn {
+            color: $color-3!important;
+            &:hover {
+                color: $color-3!important;
+                text-decoration: none;
+            }
+        }
+    }
+} 
+/*----------------------------------------*\
+    ::  Only float button examples in kss
+\*----------------------------------------*/    
+#kss-node {
+    .kss-modifier__example {
+        .kss-btn-wrap {
+            overflow: hidden;
+            .btn,
+            button,
+            input[type="reset"],
+            input[type="submit"],
+            input[type="button"] {
+                float: left;
+            }
+        }
+    }
+}
+  
+/*------------------------------------*\
+    ::  Hide actual html for pages
+\*------------------------------------*/ 
+.kss-modifier__example {
+    .wrap-all-the-things {
+        display: none;
+    }
+}  
+/*------------------------------------*\
+    :: Hide Code in Example 
+\*------------------------------------*/
+.kss-modifier__example {
+    .hero-block--slider,
+    .main-foot {
+        display: none;
+    }
+} 
+/*------------------------------------*\
+    ::Prettify Styling
+    ----------------------------------*
+    ::see https://code.google.com/p/google-code-prettify/source/browse/trunk/styles/desert.css
+\*------------------------------------*/
+/* desert scheme ported from vim to google prettify */
+pre.prettyprint { display: block; background-color: #333; font-size: .8em; overflow-x:scroll;}
+pre .nocode { background-color: none; color: #000 }
+pre .str { color: #ffa0a0 } /* string  - pink */
+pre .kwd { color: #f0e68c; font-weight: bold }
+pre .com { color: #87ceeb } /* comment - skyblue */
+pre .typ { color: #98fb98 } /* type    - lightgreen */
+pre .lit { color: #cd5c5c } /* literal - darkred */
+pre .pun { color: #fff }    /* punctuation */
+pre .pln { color: #fff }    /* plaintext */
+pre .tag { color: #f0e68c; font-weight: bold } /* html/xml tag    - lightyellow */
+pre .atn { color: #bdb76b; font-weight: bold } /* attribute name  - khaki */
+pre .atv { color: #ffa0a0 } /* attribute value - pink */
+pre .dec { color: #98fb98 } /* decimal         - lightgreen */
+
+/* Specify class=linenums on a pre to get line numbering */
+ol.linenums { margin-top: 0; margin-bottom: 0; color: #AEAEAE } /* IE indents via margin-left */
+li.L0,li.L1,li.L2,li.L3,li.L5,li.L6,li.L7,li.L8 { list-style-type: none }
+/* Alternate shading for lines */
+li.L1,li.L3,li.L5,li.L7,li.L9 { }
+
+@media print {
+  pre.prettyprint { background-color: none }
+  pre .str, code .str { color: #060 }
+  pre .kwd, code .kwd { color: #006; font-weight: bold }
+  pre .com, code .com { color: #600; font-style: italic }
+  pre .typ, code .typ { color: #404; font-weight: bold }
+  pre .lit, code .lit { color: #044 }
+  pre .pun, code .pun { color: #440 }
+  pre .pln, code .pln { color: #000 }
+  pre .tag, code .tag { color: #006; font-weight: bold }
+  pre .atn, code .atn { color: #404 }
+  pre .atv, code .atv { color: #060 }
+}
+.linenums li {
+    border-color: #3D3D3D !important;
+    &:nth-child(even) {background: #333 !important}
+    &:nth-child(odd) {background: #2D2D2D !important}
+}
+
+} // end #kss-node

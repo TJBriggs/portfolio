@@ -1,0 +1,77 @@
+/*------------------------------------*
+    :: CTA Bar
+*------------------------------------*/
+.cta-bar {
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 270px;
+	color: $white;
+	padding-bottom: 30px;
+	position: relative;
+	&:after {
+		content: '';
+		display: block;
+		background: url("images/global/dotted-overlay.png");
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 1;
+	}
+	.cta-bar__text {
+		float: left;
+		letter-spacing: 0.02em;
+		line-height: 1.8em;
+		margin-top: 103px;
+		padding: 0 $pad*2;
+		position: relative;
+		width: 72%;
+		z-index: 5;
+		p {
+			margin: 0;
+		}
+	}
+	.cta-bar__button {
+		float: right;
+		margin: 110px $pad*2 0;
+		position: relative;
+		width: 20%;
+		word-spacing: 1px;
+		z-index: 5;
+	}
+	@include bp($max:768px) {
+		height: 300px;
+		.cta-bar__text {
+			float: none;
+			margin: 50px auto 0;
+			text-align: center;
+			width: 90%;
+
+		}
+		.cta-bar__button {
+			float: none;
+			margin: 30px auto 30px;
+			width: 46.20%;
+		}
+	}
+	@include bp($max:640px) {
+		.cta-bar__text {
+			width: 100%;
+		}
+
+	}
+	@include bp($max:639px) {
+		.cta-bar__button {
+			width: 72%;
+		}
+	}
+	@include bp($max:479px) {
+		height: 350px;
+		.cta-bar__button {
+			width: 70%;
+		}
+	}
+}

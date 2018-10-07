@@ -1,0 +1,146 @@
+/*------------------------------------*\
+    ::Template Part Thirds
+\*------------------------------------*/
+.thirds {
+    p {
+        overflow: hidden;
+    }
+}
+
+.thirds--1 {
+    .thirds__group--1 {
+        @include col(12);
+    }
+}
+.thirds--2 {
+    &.thirds__two-col--half {
+        .thirds__group {
+            @include col(6);
+            &.thirds__group--no-prev {
+                margin-left: 50%;
+            }
+        }
+    }
+    &.thirds__two-col--two {
+        .thirds__group--1 {
+            @include col(8);
+        }
+        .thirds__group--2 {
+            @include col(4);
+            &.thirds__group--no-prev {
+                margin-left: 66.66667%;
+            }
+        }
+    }
+    &.thirds__two-col--one {
+        .thirds__group--1 {
+            @include col(4);
+        }
+        .thirds__group--2 {
+            @include col(8);
+            &.thirds__group--no-prev {
+                margin-left: 33.33333%;
+            }
+        }
+    }
+    @include bp($solarsystem){
+        [class*=" thirds__group--"]{ //it's a specificity thing
+            &.thirds__group {
+                @include col(11, $center:true);
+                //padding: 0 $pad;
+                //width: 100%;
+                &[class*="no-prev"]{
+                    margin-left: 50%;
+                }
+            }
+        }
+    }
+    @include bp($planetary){
+        [class*=" thirds__group--"]{ //it's a specificity thing
+            &.thirds__group {
+                width: 100%;
+                &[class*="no-prev"]{
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}
+.thirds--3 {
+    .thirds__group {
+        @include col(4);
+        &.thirds__group--no-prev {
+            margin-left: 33.33333%;
+        }
+        &.thirds__group--no-prev-2 {
+            margin-left: 66.66667%;
+        }
+        @include bp($solarsystem){
+            width: 100%;
+            &[class*="no-prev"]{
+                margin-left: 0;
+            }
+        }
+    }
+}
+.thirds--slider {
+    .thirds__slide-item {
+        padding: {
+            left: $pad; 
+            right: $pad;
+        }
+    }
+}
+.thirds__slider-wrap {
+    float: left;
+    width: 100%;
+}
+.thirds__slide-item {
+    @include box-sizing(content-box);
+}
+
+///////////////////////////////////////
+//  Modifiers
+///////////////////////////////////////
+.thirds--1 { // ensures 1 column paragraphs have same padding as other template parts at Solar and Planetary
+    p {
+         @include bp($solarsystem) {
+            margin: 15px $pad*2 0;
+        }
+        @include bp($planetary) {
+            margin: 15px 0 0;
+        }
+        &:nth-of-type(2) {
+            margin-top: 20px;
+        }
+    }
+}
+
+.page__group--intro {
+    padding: 35px 0 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

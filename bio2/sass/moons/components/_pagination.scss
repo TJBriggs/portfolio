@@ -1,0 +1,41 @@
+/*------------------------------------*\
+    ::  Pagination Styles
+\*------------------------------------*/	
+.pagination {
+	width: 100%;
+	padding: emCalc(10px) 0 emCalc(35px);
+	overflow: hidden;
+	text-align: center;
+	@include bp($max:960px) {
+		padding: 0 0 emCalc(25px);
+	}
+	.page-numbers {
+		display: inline-block;
+		height: 40px;
+		min-width: 40px;
+		padding: 0;
+		margin: 0 1px;
+		background-color: transparent;
+		border: 1px solid $color-1;
+		color: $color-1;
+		cursor: pointer;
+		font-weight: 200;
+		line-height: 40px;
+		text-align: center;
+		text-decoration: none;
+		transition: background 400ms, color 400ms, border 400ms;
+		&.current {
+			display: inline-block;
+			background-color: $color-1;
+			color: $color-2;
+			position: relative;
+			pointer-events: none;
+		}
+		&:hover {
+			background-color: $color-1-light;
+			border: 1px solid $color-1-light;
+			color: $color-2;
+			text-decoration: none;
+		}
+	}
+}

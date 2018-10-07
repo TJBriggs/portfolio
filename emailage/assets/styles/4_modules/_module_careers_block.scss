@@ -1,0 +1,98 @@
+/*------------------------------------*\
+    ::  Careers Block Styles
+\*------------------------------------*/
+.careers-block {
+    width: 100%;
+    overflow: hidden;
+    &__colored-title {
+        text-align: center;
+    }
+    &__filters {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 660px;
+        margin: 3em auto;
+        @include bp($max:640px) {
+            margin: 2em auto;
+        }
+        .fs-arrow {
+            @extend %teal-gradient;
+        }
+        .fs-dropdown {
+            .fs-option {
+                &:hover {
+                    background-color: $accent-teal;
+                }
+            }
+        }
+    }
+    .careers-block__posts {
+        width: 100%;
+        .facetwp-template {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+    }
+    &__post {
+        width: 31.333333%;
+        margin: 0 3% 3em 0;
+        padding-right: $pad;
+        p {
+            margin: 0.5em 0 0;
+            @extend %calluna-reg;
+        }
+        a {
+            display: inline-block;
+            margin-top: 1.35em;
+            @extend %h5;
+            color: $color-7;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: color 400ms;
+            &:after {
+                content: '\f105';
+                font-family: "FontAwesome";
+                font-size: 15px;
+                margin-left: 10px;
+                transition: margin-left 400ms;
+            }
+            &:hover {
+                color: $accent-teal;
+                text-decoration: none;
+                &:after {
+                    margin-left: 15px;
+                }
+            }
+        }
+        &:nth-of-type(3n) {
+            margin-right: 0;
+
+        }
+        @include bp($max:900px) {
+            width: 48.5%;
+            margin-right: 3%;
+            &:nth-of-type(3n) {
+                margin-right: 3%;
+            }
+            &:nth-of-type(2n) {
+                margin-right: 0;
+            }
+        }
+        @include bp($max:600px) {
+            width: 100%;
+            margin: 0 auto 2em;
+            &:nth-of-type(3n) {
+                margin-right: 0;
+            }
+            &:nth-of-type(2n) {
+                margin-right: 0;
+            }
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

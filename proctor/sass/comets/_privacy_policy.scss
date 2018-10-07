@@ -1,0 +1,39 @@
+/*-------------------------------------------*\
+    :: Privacy Policy Styles
+\*-------------------------------------------*/
+.page-privacy-policy {
+	.main-head {
+		.main-head__wrap {
+			background: rgba(0, 0, 0, 0.75);
+			z-index: 500;
+			@include bp($planetary) {
+				height: 95px;
+			}
+		}
+	}
+	.privacy-policy {
+		float: left;
+		width: 100%;
+		overflow: hidden;
+		padding-top: 155px;
+		padding-bottom: 75px;
+		@include bp($planetary) {
+			padding-top: 115px;
+		}
+		p, h1, h2, h3, h4, h5 {
+			padding-left: $pad;
+			padding-right: $pad;
+		}
+	}
+}
+
+.touch {
+	.main-head {
+		.main-head__wrap {
+			background: rgba(0, 0, 0, 1);
+		}
+	}
+	.privacy-policy {
+		padding-top: 20px;
+	}
+}

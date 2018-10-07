@@ -1,0 +1,116 @@
+/*------------------------------------*
+    :: Icon Slider Styles
+*------------------------------------*/
+.icon__slider {
+	padding-bottom: 75px;
+	@include bp($planetary) {
+		padding-bottom: 45px;
+	}
+	.icon__nav {
+		overflow: hidden;
+		padding-top: 20px;
+		@include bp($planetary) {
+			padding-top: 0;
+		}
+		.icon__nav-item {
+			cursor: pointer;
+			float: left;
+			position: relative;
+			width: 25%;
+			text-align: center;
+			transition: 400ms;
+			svg {
+				display: inline-block;
+				max-width: 165px;
+				max-height: 200px;
+				min-height: 170px;
+				fill: #444444;
+				&:hover {
+					fill: darken($color-1, 5%)
+				}
+				@include bp($max:768px) {
+					max-width: 135px;
+					max-height: 170px;
+					min-height: 140px;
+				}
+				@include bp($max:640px) {
+					max-width: 115px;
+					max-height: 150px;
+					min-height: 120px;
+				}
+			}
+			p {
+				font-family: $fam-body;
+				margin-top: 0;
+				overflow: hidden;
+			}
+			&.flex-active, &:hover {
+				p {
+					color: darken($color-1, 5%);
+					padding-bottom: 5px;
+					&:after {
+						content: '';
+						background: $color-1;
+						margin: 0 auto 0 -35px;
+						position: absolute;
+						bottom: 0px;
+						left: 50%;
+						width: 70px;
+						height: 7px;
+					}
+				}
+				svg {
+					fill: darken($color-1, 5%);
+				}
+			}
+
+			@include bp($max:480px) {
+				width: 50%;
+				&.flex-active, &:hover {
+					p {
+						padding-bottom: 0px;
+					}
+				}
+				&:nth-of-type(1), &:nth-of-type(2) {
+					margin-bottom: 20px;
+				}
+				svg {
+					max-width: 120px;
+				}
+			}
+			@include bp($max:320px) {
+				svg {
+					max-width: 100px;
+					max-height: 120px;
+				}
+			}
+		}
+	}
+	.slider--icon {
+		background: none;
+		box-shadow: none;
+		line-height: 2em;
+		overflow: hidden;
+		padding: 0 $pad;
+		margin-top: 45px;
+		margin-bottom: 0;
+		text-align: center;
+		@include bp($max:768px) {
+			margin-top: 25px;
+		}
+		@include bp($max:320px) {
+			margin-top: 5px;
+		}
+	}
+	.cta {
+		margin: 30px auto 0;
+		overflow: hidden;
+		width: 220px;
+		span {
+			margin-left: 18px;
+		}
+		@include bp($planetary) {
+			width: 100%;
+		}
+	}
+}

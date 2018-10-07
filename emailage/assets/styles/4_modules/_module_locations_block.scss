@@ -1,0 +1,82 @@
+/*------------------------------------*\
+    ::  Locations Block Styles
+\*------------------------------------*/
+.locations-block {
+    width: 100%;
+    overflow: hidden;
+    &__colored-title {
+        text-align: center;
+    }
+    .locations {
+        width: 100%;
+        margin-top: 3em;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .locations__location {
+        width: 31.5%;
+        margin-right: 2.75%;
+        &:nth-of-type(3n) {
+            margin-right: 0;
+        }
+        @include bp($max:900px) {
+            width: 48%;
+            margin-right: 4%;
+            &:nth-of-type(3n) {
+                margin-right: 4%;
+            }
+            &:nth-of-type(2n) {
+                margin-right: 0;
+            }
+        }
+        @include bp($max:500px) {
+            width: 100%;
+            margin-right: 4%;
+            &:nth-of-type(3n),
+            &:nth-of-type(2n) {
+                margin-right: 0;
+            }
+        }
+    }
+    .locations__map {
+        text-align: center;
+        iframe {
+            display: inline-block;
+            max-height: 317px;
+            max-width: 100%;
+            @extend %br;
+            @include bp($max:1024px) {
+                height: 30vw;
+            }
+            @include bp($max:900px) {
+                height: 317px;
+            }
+            @include bp($max:640px) {
+                height: 45vw;
+            }
+            @include bp($max:500px) {
+                height: 65vw;
+            }
+            @include bp($max:400px) {
+                height: 296px;
+            }
+        }
+    }
+    .locations__text {
+        text-align: center;
+        padding: 1.5em 0;
+        .locations__colored-title {
+            margin-bottom: 1em;
+        }
+        h3 {
+            margin-bottom: 0.5em;
+        }
+        h5 {
+            margin-bottom: 1em;
+        }
+        a {
+            @extend %h6;
+        }
+    }
+}

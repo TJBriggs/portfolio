@@ -1,0 +1,150 @@
+/*------------------------------------*\
+    ::  Icon Callouts
+\*------------------------------------*/
+.icon-callouts {
+	background-color: $color-3;
+	text-align: center; // For layout purposes
+	&__inner {
+		padding: 3.9em $pad;
+		@include bp($max:700px) {
+			padding: 40px $pad 45px;
+		}
+	}
+	&__section-title {
+		margin: 0 0 1em;
+		font-size: 2.35em;
+		strong {
+			font-size: 1.02em;
+		}
+		@include bp($max:1120px) {
+			font-size: 2.55em;
+		}
+		@include bp($max:700px) {
+			font-size: 28px;
+			strong { // Force onto new line
+				display: block;
+			}
+		}
+		@include bp($max:500px) {
+			font-size: 21px;
+		}
+	}
+	&__intro {
+		max-width: 80%;
+		margin: 0 auto;
+		font-size: 16px;
+		@include bp($max:700px) {
+			max-width: 95%;
+		}
+	}
+	&__wrap {
+		margin-top: 1.6em;
+		@include bp($max:700px) {
+			margin-top: 6.2em;
+		}
+	}
+	&__icon {
+		display: inline-block;
+		height: 5em;
+		width: 14em;
+		transform: translate3d(0, -3000px, 0);
+		&:nth-of-type(1) { // Callaway
+			margin-right: 2em;
+		}
+		&:nth-of-type(2) { // Mizuno
+			margin-right: 4.35em;
+		}
+		&:nth-of-type(3) { // TaylorMade
+			margin-right: 4.2em;
+		}
+		@include bp($max:700px) {
+			min-height: 85px;
+			width: 49%;
+			margin-bottom: 3em;
+			text-align: center;
+			// Remove right margins
+			&:nth-of-type(1),
+			&:nth-of-type(2),
+			&:nth-of-type(3) {
+				margin-right: 0;
+			}
+			// Make sure the bottom two don't have margins
+			&:nth-of-type(3),
+			&:nth-of-type(4) {
+				margin-bottom: 0;
+			}
+			img {
+				display: inline-block;
+				height: auto;
+				min-height: 0;
+				width: 26em;
+			}
+		}
+		@include bp($max:500px) {
+			min-height: 11em;
+			margin-bottom: 2em;
+			&:nth-of-type(3),
+			&:nth-of-type(4) {
+				margin-bottom: 0;
+			}
+			img {
+				width: 30em;
+			}
+		}
+	}
+	// Don't scale button
+	&__btn {
+		font-size: 16px;
+	}
+	// Scale down entire section
+	@include bp($max:1120px) {
+		font-size: 1.38vw;
+	}
+	&.visible {
+		.icon-callouts__icon {
+			transform: translateY(0px);
+			animation-name: bounceInDown;
+			animation-duration: 1600ms;
+		}
+	}
+}	
+/*------------------------------------*\
+    ::  KSS MarkUp (Ignore)
+\*------------------------------------*/    
+// Icon Callouts
+//
+// Demo &amp; Modifiers:<br><a href="../modules/module-icon-callouts.php" target="_blank">module-icon-callouts.php</a>
+//
+// Stylesheets:<br>
+// <a href="../sass/structure/modules/_module_icon_callouts.scss" target="_blank">_module_icon_callouts.scss</a><br>
+// <a href="../sass/structure/base/_keyframes.scss" target="_blank">_keyframes.scss</a>
+//
+// Path To The Code:<br>
+// golftec/golftec/modules/module-icon-callouts.php<br>
+// golftec/golftec/js/scripts-src/waypoints.js
+//
+// Markup:
+// <article class="icon-callouts visible main-torso__group">
+//     <div class="icon-callouts__inner">
+//         <h2 class="icon-callouts__section-title">The Right Clubs Can <strong>Exceed Your Expectations</strong></h2>
+//         <p class="icon-callouts__intro">We work with the top vendors in the industry who provide a complete range of clubs for all types of players. The right clubs and the right fit can make a huge difference in your game. Our TECfit club fitting will make sure you have both. You’ll swing more confidently, knowing you have the equipment to maximize every shot.
+//         </p>
+//         <div class="icon-callouts__wrap">
+//             <div class="icon-callouts__icon">
+//                 <img src="../images/modules/icon-callouts/callaway-icon.png" alt="Callaway Icon">
+//             </div>
+//             <div class="icon-callouts__icon">
+//                 <img src="../images/modules/icon-callouts/mizuno-icon.png" alt="Mizuna Icon">
+//             </div>
+//             <div class="icon-callouts__icon">
+//                 <img src="../images/modules/icon-callouts/taylormade-icon.png" alt="TaylorMade Icon">
+//             </div>
+//             <div class="icon-callouts__icon">
+//                 <img src="../images/modules/icon-callouts/ping-icon.png" alt="Ping Icon">
+//             </div>
+//         </div> <!-- // icon-callouts__wrap -->
+//         <a class="icon-callouts__btn btn" href="#">Schedule A Club Fitting</a>
+//     </div> <!-- // icon-callouts__inner -->
+// </article> <!-- // icon-callouts -->
+//
+// Styleguide 6.6

@@ -1,0 +1,50 @@
+/*------------------------------------*\
+    :: Portfolio Block
+\*------------------------------------*/
+// General Styles
+.media-block {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background-color: $color-3-light;
+    &__wrap {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    &__media {
+        width: 58%;
+        position: relative;
+        padding-right: $pad*2.5;
+        @include bp($max:767px) {
+            width: 100%;
+            padding: 0;
+        }
+    }
+    &__award {
+        width: 42%;
+        display: flex;
+        justify-content: center;
+        @include bp($max:767px) {
+            width: 100%;
+            justify-content: flex-start;
+            margin-top: 3em;
+        }
+    }
+    &__award-content {
+        width: auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    &__image-wrap {
+        max-width: 200px;
+    }
+    &__caption-wrap {
+        padding-left: $pad;
+        p {
+            margin: 0;
+        }
+    }
+}

@@ -1,0 +1,154 @@
+/*-------------------------------------------*\
+    ::Page Styles - Treatments & Appliances
+\*-------------------------------------------*/
+.page-appliances, .page-treatments {
+	.page-torso__content {
+		box-shadow: 0px -3px 10px -2px rgba(0, 0, 0, 0.45);
+		background: $white;
+		overflow: hidden;
+		@include bp($solarsystem) { // Remove box shadow for static mastheads
+			box-shadow: none;
+		}
+		.page__group {
+			margin-top: 0px;
+			.thirds__group {
+				p {
+					color: #555555;
+				}
+			}
+			.thirds__group--1 {
+				@include bp($solarsystem) {
+					text-align: center;
+				}
+			}
+			.thirds__group--2 {
+				p {
+					margin-top: 0px;
+				}
+				h3 {
+					font-family: $fam-heading;
+					color: $color-2;
+					margin-bottom: 10px;
+					padding-top: 10px;
+				}
+			}
+			@include bp($planetary) {
+				padding-top: 10px;
+			}
+			&:last-of-type {
+				padding-bottom: 70px;
+				@include bp($planetary) {
+					padding-top: 10px;
+					margin-top: 10px;
+				}
+			}
+			&:nth-of-type(2) { // cancel animation on first row
+				.thirds__inner {
+					.thirds__group--1 {
+						transform: translateX(0);
+						transition: none;
+						&.visible {
+							transform: translateX(0);
+						}
+					}
+				}
+			}
+			.btn {
+				margin-top: 20px;
+				@include bp($planetary) {
+					width: 100%;
+				}
+			}
+		}
+		.page__group--intro {
+			box-shadow: none; // turn off standard box shadow for intro
+			p {
+				@include bp($solarsystem) {
+					margin: 15px $pad*2 0;
+					text-align: left;
+				}
+				@include bp($planetary) {
+					margin: 15px 0 0;
+				}
+			}
+		}
+		.page__group--img-left {
+			margin-top: 70px;
+	    	.thirds__group--1 {
+	    		float: left;
+	    		transform: translateX(-500%);
+	    		position: relative;
+	    		transition: 1200ms;
+	    		transition-delay: 0ms;
+	    		&.visible {
+			    	transform: translateX(0%);
+		    	}
+	    	}
+	    	.thirds__group--2 {
+	    		float: right;
+	    	}
+	    	@include bp($solarsystem) {
+	    		margin-top: 30px;
+	    		.thirds__group--1 {
+	    			float: none;
+		    	}
+		    	.thirds__group--2 {
+		    		float: none;
+		    	}
+	    	}
+	    	@include bp($planetary) {
+				margin-top: 10px;
+	    	}
+	    }
+	    .page__group--img-right {
+	    	margin-top: 70px;
+	    	.thirds__group--1 {
+	    		float: right;
+	    		transform: translateX(500%);
+	    		position: relative;
+	    		transition: 1000ms;
+	    		&.visible {
+		    		transform: translateX(0%);	
+		    	}
+	    	}
+	    	.thirds__group--2 {
+	    		float: left;
+	    	}
+	    	@include bp($solarsystem) {
+	    		margin-top: 30px;
+	    		.thirds__group--1 {
+	    		float: none;
+		    	}
+		    	.thirds__group--2 {
+		    		float: none;
+		    	}
+	    	}
+	    	@include bp($planetary) {
+				margin-top: 10px;
+	    	}
+	    }
+	    .page__group--first-entry {
+	    	margin-top: 20px;
+	    }
+	}
+}
+///////////////////////////////////////////////////////////
+// Remove animations and reset elements for touch screens
+///////////////////////////////////////////////////////////
+.touch .page-appliances, .touch .page-treatments {
+	.page__group--img-left {
+    	.thirds__group--1 {
+			transform: translateX(0);
+			transition: none;
+    	}
+    }
+
+	.page__group--img-right {
+    	.thirds__group--1 {
+			transform: translateX(0);
+			transition: none;
+    	}
+    }
+}
+
+

@@ -1,0 +1,68 @@
+/*------------------------------------*\
+    ::Google Map
+\*------------------------------------*/
+.map {
+    height: 550px;
+    position: fixed;
+    right: 0;
+    left: 0;
+    overflow: hidden;
+    top: 0px;
+    z-index: 1;
+    width: 100%;
+    margin: 0 auto;
+    img {
+        display: block;
+        max-width: none; 
+    }
+    @include bp($solarsystem) {
+        height: 400px;
+        position: static;
+        z-index: 200;
+    }
+    @include bp($planetary) {
+        height: 300px;
+    }
+}
+#map {
+    @include bp($solarsystem){ 
+        height: 400px;       
+    }
+    @include bp($planetary){ 
+        height: 300px;       
+    }
+}
+.infowindow {
+    color: #000;
+}
+.gm-style {
+    img {max-width: none;}
+}
+.gm-style-iw {
+    overflow: hidden !important; // Overides google map inline style that gives the info box a vertical scrollbar when not needed
+    width: 155px;
+    p {
+    	color: $color-4;
+    	line-height: 1.3em;
+    	strong {
+    		color: $color-2;
+    		display: inline-block;
+    		font-weight: bold;
+    		margin-bottom: 2px;
+    	}
+    	a {
+    		color: $color-1;
+    		display: inline-block;
+    		text-decoration: none;
+    		margin-top: 5px;
+            &:hover {
+                color: $color-3;
+            }
+    	}
+    }
+    @include bp($planetary) {
+        position: relative;
+        top: 200px;
+    }
+}
+

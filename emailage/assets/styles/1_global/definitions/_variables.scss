@@ -1,0 +1,116 @@
+/*------------------------------------*\
+    :: Variables
+    ----------------------------------*
+    :: Colors
+    :: Breakpoints
+    :: Layout
+    :: Text Styling
+\*------------------------------------*/
+/*------------------------------------*\
+    :: Colors
+\*------------------------------------*/
+// Text Colors
+$color-1:                 #0076BD;  // Emailage Blue
+$color-2:                 #4A4A4A;  // Hero Text & Headline 4
+$color-3:                 #FFFFFF;  // White
+$color-4:                 #000000;  // Black All other text
+$color-5:                 #F8F9F9;  // Gray Light Card BG color, curved gray BGs, Footer BG
+$color-6:                 #F2F3F4;  // Gray Full Width Cards BG color
+//$color-7:                 #191919;  // H1 in Hero on Home page
+$color-7:                 #425764;  // New gray requested by client
+
+// Accent Colors
+$accent-gray:             #425764; // Colored Cards Subtitle color
+$accent-gray-light:       #B3BCC1; // Colored Cards Light text
+$accent-gray-xlight:      #ECEEEF; // Colored Cards BG - Left
+$accent-gray-dark:        #7A8992; // Colored Cards BG - Right
+$accent-gray-icon:        #8E9AA2; // Colored Cards Icon
+
+$accent-orange:           #E29E3D; // Colored Cards Subtitle color
+$accent-orange-light:     #F3D8B1; // Colored Cards Light text
+$accent-orange-xlight:    #FBF4E8; // Colored Cards BG - Left
+$accent-orange-dark:      #E8B164; // Colored Cards BG - Right
+$accent-orange-icon:      #EEC58B; // Colored Cards Icon
+
+$accent-green:            #56BD49; // Colored Cards Subtitle color
+$accent-green-light:      #BBE5B6; // Colored Cards Light text
+$accent-green-xlight:     #F1FAF0; // Colored Cards BG - Left
+$accent-green-dark:       #66C35B; // Colored Cards BG - Right
+$accent-green-icon:       #9AD792; // Colored Cards Icon
+
+$accent-teal:             #17BEBB; // Colored Cards Subtitle color
+$accent-teal-light:       #A2E5E4; // Colored Cards Light text
+$accent-teal-xlight:      #ECFAFA; // Colored Cards BG - Left
+$accent-teal-dark:        #45CBC9; // Colored Cards BG - Right
+$accent-teal-icon:        #74D8D6; // Colored Cards Icon
+
+$accent-blue:             $color-1;// Colored Cards Subtitle color
+$accent-blue-light:       #A2E5E4; // Colored Cards Light text
+$accent-blue-xlight:      #E9F9FA; // Colored Cards BG - Left
+$accent-blue-dark:        #45CBC9; // Colored Cards BG - Right
+$accent-blue-icon:        #000000; // Colored Cards Icon
+
+$accent-red:              #E4572F; // Colored Cards Subtitle color
+$accent-red-light:        #F4BCAC; // Colored Cards Light text
+$accent-red-xlight:       #FDF2EE; // Colored Cards BG - Left
+$accent-red-dark:         #E97959; // Colored Cards BG - Right
+$accent-red-icon:         #EF9A82; // Colored Cards Icon
+
+$accent-purple:              #4357AD; // Colored Cards Subtitle color
+$accent-purple-light:        #B4BCDF; // Colored Cards Light text
+$accent-purple-xlight:       #E2E4ED; // Colored Cards BG - Left
+$accent-purple-dark:         #6A79BE; // Colored Cards BG - Right
+$accent-purple-icon:         #8E9ACF; // Colored Cards Icon
+
+$accent-deep-orange:              #F79256; // Colored Cards Subtitle color
+$accent-deep-orange-light:        #FCD3BB; // Colored Cards Light text
+$accent-deep-orange-xlight:       #F4EAE4; // Colored Cards BG - Left
+$accent-deep-orange-dark:         #F9A878; // Colored Cards BG - Right
+$accent-deep-orange-icon:         #FABE9A; // Colored Cards Icon
+
+$accent-sunset-orange:              #EE6352; // Colored Cards Subtitle color
+$accent-sunset-orange-light:        #F7C1B9; // Colored Cards Light text
+$accent-sunset-orange-xlight:       #FDEFED; // Colored Cards BG - Left
+$accent-sunset-orange-dark:         #F08274; // Colored Cards BG - Right
+$accent-sunset-orange-icon:         #F4A197; // Colored Cards Icon
+
+$accent-lipstick-red:              #D7263D; // Colored Cards Subtitle color
+$accent-lipstick-red-light:        #EEA8B1; // Colored Cards Light text
+$accent-lipstick-red-xlight:       #FBE9EB; // Colored Cards BG - Left
+$accent-lipstick-red-dark:         #DD5164; // Colored Cards BG - Right
+$accent-lipstick-red-icon:         #E67C8B; // Colored Cards Icon
+
+$accent-yellow:              #E6C229; // Colored Cards Subtitle color
+$accent-yellow-light:        #F5E7A5; // Colored Cards Light text
+$accent-yellow-xlight:       #FCF9E8; // Colored Cards BG - Left
+$accent-yellow-dark:         #EACE4B; // Colored Cards BG - Right
+$accent-yellow-icon:         #EFDA78; // Colored Cards Icon
+
+// Background Colors
+$bg-blue:           #F4F9FC;
+$bg-gray:            $color-5;
+$bg-green:          #F8FCF7;
+$bg-orange:         #FDFBF7;
+$bg-red:            #FDF8F6;
+$bg-teal:           #F5FCFC;
+// alert colors
+$color-good:              #6ADE72;
+$color-bad:               #DE5D5D;
+$color-meh:               #EBE857;
+
+/*------------------------------------*\
+    :: Breakpoints
+\*------------------------------------*/
+$desktop:        1140px;
+$tablet:         1024px;
+$mobile:         480px;
+
+/*------------------------------------*\
+    :: Layout
+\*------------------------------------*/
+$pad:       0.9375rem;
+/*------------------------------------*\
+    :: Import Fonts
+\*------------------------------------*/
+@import url('/wp-content/themes/emailage/assets/fonts/calluna/MyFontsWebfontsKit.css'); // Load Calluna Fonts
+@import url('/wp-content/themes/emailage/assets/fonts/museo-sans-round/MyFontsWebfontsKit.css'); // Load Museo Sans Rounded Fonts

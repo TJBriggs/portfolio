@@ -1,0 +1,63 @@
+/*------------------------------------*\
+    ::  Hover CTAs Styles
+\*------------------------------------*/
+.hover-ctas {
+    width: 100%;
+    overflow: hidden;
+    &__main-colored-title {
+        text-align: center;
+    }
+    .ctas {
+        width: 100%;
+        margin-top: 3em;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .ctas__cta {
+        display: inline-block;
+        width: 25%;
+        padding: 0 $pad;
+        text-align: center;
+        text-decoration: none;
+        outline: none;
+        @extend %br;
+        .ctas__cta-icon {
+            height: 235px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            img, svg {
+                display: inline-block;
+                height: auto;
+                width: 100%;
+                max-height: 100px;
+                max-width: 100px;
+            }
+        }
+        h3 {
+            color: $color-7;
+            font-size: 1.45em;
+        }
+        .ctas__cta-link {
+            margin: 0.8em 0 2.8em;
+        }
+        @include bp($max:768px) {
+            width: 50%;
+            .ctas__cta-icon {
+                height: 150px;
+            }
+        }
+        @include bp($max:640px) {
+            .ctas__cta-icon {
+                height: 100px;
+                img, svg {
+                    max-width: 55px;
+                }
+            }
+            .ctas__cta-link {
+                margin: 1.2em 0 2.8em;
+            }
+        }
+    }
+}

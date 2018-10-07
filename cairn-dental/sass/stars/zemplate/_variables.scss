@@ -1,0 +1,96 @@
+/*------------------------------------*\
+    ::Variables
+    ----------------------------------*
+    ::Colors
+    ::Breakpoints
+    ::Layout
+    ::Text Styling
+\*------------------------------------*/
+
+/*------------------------------------*\
+    ::Colors
+\*------------------------------------*/
+
+//primary colors / page anchor tags
+$color-1:           #989a94; // Cairn Gray rgb(152, 154, 148);
+$color-1-light:     lighten($color-1,20%);
+$color-1-dark:      darken($color-1,20%);
+
+//secondary colors / global nav and Local Nav.
+$color-2:           #74aaca; // Cairn Blue rgb(116, 170, 202);
+$color-2-light:     lighten($color-2,10%);
+$color-2-dark:      darken($color-2,20%);
+
+//tertiary colors / secondary global nav and secondary local nav.
+$color-3:           #d0d1cd; // Light gray background for topo sections
+$color-3-light:     lighten($color-3,8%); // Light Gray BG Color
+$color-3-dark:      darken($color-3,20%); // Not used 
+
+$color-4:           #fff; // White
+$color-5:           #000; // Black
+
+
+//alert colors
+$color-good:        #66b96b;
+$color-bad:         #DE5D5D;
+$color-meh:         #EBE857;
+
+/*------------------------------------*\
+    ::Breakpoints
+\*------------------------------------*/
+$galaxy:        1140px;
+$solarsystem:   1024px;
+$planetary:     480px;
+
+/*------------------------------------*\
+    ::Layout
+\*------------------------------------*/
+$pad:       0.9375rem;
+
+/*------------------------------------*\
+    ::Text Styling
+\*------------------------------------*/
+
+//font colors
+$txt-color-1:       #464646; // Paragraph, li's, spans
+$txt-color-2:       #363636; // Normal Headers
+$txt-color-3:       #6e6d6a; // Light Header
+$txt-color-4:       #1c1e35; // Dark Blue, Icon CTA titles
+
+//font families
+$fam-xbold:         "open-xbold", sans-serif;
+$fam-bold:          "open-bold", sans-serif;
+$fam-semi:          "open-semi", sans-serif;
+$fam-reg:           "open-reg", sans-serif;
+$fam-light:         "open-light", sans-serif;
+
+
+//internal/page anchor tags
+$a-color-link:      $color-2;
+$a-color-visited:   $a-color-link;
+$a-color-hover:     lighten($a-color-link,20%);
+$a-color-active:    lighten($a-color-link,30%);
+
+//global nav
+$g-color-link:      $color-3;
+$g-color-visited:   $g-color-link;
+$g-color-hover:     lighten($g-color-link,20%);
+$g-color-active:    lighten($g-color-link,30%);
+
+//local nav
+$l-color-link:      $g-color-link;
+$l-color-visited:   $l-color-link;
+$l-color-hover:     lighten($l-color-link,20%);
+$l-color-active:    lighten($l-color-link,30%);
+
+//secondary global nav
+$g-2-color-link:    $color-2;
+$g-2-color-visited: $g-2-color-link;
+$g-2-color-hover:   lighten($g-2-color-link,20%);
+$g-2-color-active:  lighten($g-2-color-link,20%);
+
+//secondary local nav
+$l-2-color-link:    $g-color-link;
+$l-2-color-visited: $l-2-color-link;
+$l-2-color-hover:   lighten($l-2-color-link,20%);
+$l-2-color-active:  lighten($l-2-color-link,10%);

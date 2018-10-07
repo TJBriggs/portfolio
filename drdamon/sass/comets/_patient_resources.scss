@@ -1,0 +1,69 @@
+/*-------------------------------------------*\
+    ::Page Styles - Patient Resources
+\*-------------------------------------------*/
+.page-patient-resources {
+	.page-torso__content {
+		background: $white;
+		overflow: hidden;
+		@include bp($solarsystem) { // Remove box shadow for static masthead
+			box-shadow: none;
+		}
+		.section__title-wrap {
+	        text-align: center;
+	        margin: 35px 0 0;
+	        overflow: hidden;
+	        h2 {
+	            color: $color-1;
+	            margin: 0;
+	            padding: 0;
+	        }
+	    }
+		.page__group {
+			margin-top: 50px;
+			p {
+				color: #555555;
+			}
+			.thirds__group--2 {
+				p {
+					margin-top: 0px;
+				}
+				h3 {
+					font-family: $fam-heading;
+					color: $color-2;
+					margin-bottom: 10px;
+					padding-top: 10px;
+				}
+				.btn {
+					margin-top: 20px;
+					@include bp($planetary) {
+						width: 100%;
+					}
+				}
+			}
+			@include bp($planetary) {
+				padding-top: 10px;
+			}
+			&:first-of-type {
+				margin-top: 0px;
+				@include bp($solarsystem) {
+					p {
+					padding: 0 $pad*2;
+					}
+				}
+				@include bp($planetary) {
+					p {
+					padding: 0;
+					}
+				}
+			}
+			&:nth-of-type(2) {
+				margin-top: 20px;
+			}
+			&:last-of-type {
+				padding-bottom: 70px;
+			}
+			
+		}
+	}
+	
+}

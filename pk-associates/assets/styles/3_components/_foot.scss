@@ -1,0 +1,72 @@
+/*------------------------------------*\
+    :: Footer
+\*------------------------------------*/
+// General footer styles go here.
+@include sticky-footer(
+    $wrap: '.main-wrap',
+    $row:  '.main-head, .main-torso, .main-foot',
+    $flex: '.main-torso'
+);
+.main-foot {
+    width: 100%;
+    background-color: $color-3-light;
+    transition: background-color 400ms linear 50ms;
+}
+.main-foot__copy {
+    float: left;
+    width: 60%;
+    margin: 40px 0;
+    h5 {
+        color: $color-1;
+        font-size: 14px;
+        br {
+            display: none;
+        }
+    }
+    p {
+        margin: 0;
+        font-size: 14px;
+    }
+    @include bp($max: 960px) {
+        float: none;
+        width: 100%;
+        margin: 0.5em 0 2.25em;
+        text-align: center;
+    }
+    @include bp($max: 500px) {
+        h5 {
+            br {
+                display: block;
+            }
+            span {
+                display: none;
+            }
+        }
+    }
+}
+// When Mobile Nav Is Open
+// Show darker version of footer
+@media (min-height: 550px) and (max-width: 768px) {
+    body {
+        &.active {
+            overflow: hidden;
+            .main-foot {
+                height: auto;
+                position: fixed;
+                bottom: 0;
+                z-index: 9999;
+                background-color: $color-2-dark;
+                .foot-nav {
+                    li {
+                        &:nth-of-type(2) {
+                            margin: 0;
+                        }
+                        &:last-of-type {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

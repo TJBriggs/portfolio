@@ -1,0 +1,236 @@
+/*------------------------------------*\
+    :: Contact Footer
+\*------------------------------------*/
+// This footer includes the contact form so it is much taller and requires more media
+// queries for the sticky-footer. It also adds in a top border above the logo which is
+// not included in the normal footer
+.page-contact {
+	@include sticky-footer(
+	    $footer-height:         706px,                  //height of the footer
+	    $wrap-element:          '.wrap-all-the-things', //wrapper of all but the footer
+	    $container-element:     '.main',                //element the footer will bump into
+	    $footer-element:        '.main-foot',           //the footer element
+	    $footer-inner-element:  '.main-foot__nav'       //optional: inner footer element
+	);
+	@include bp($max: 1024px) {
+	    @include sticky-footer(
+	        $footer-height:         1028px,                  //height of the footer
+	        $wrap-element:          '.wrap-all-the-things', //wrapper of all but the footer
+	        $container-element:     '.main',                //element the footer will bump into
+	        $footer-element:        '.main-foot',           //the footer element
+	        $footer-inner-element:  '.main-foot__nav'       //optional: inner footer element
+	    );
+	}
+	@include bp($max: 960px) {
+	    @include sticky-footer(
+	        $footer-height:         1010px,                  //height of the footer
+	        $wrap-element:          '.wrap-all-the-things', //wrapper of all but the footer
+	        $container-element:     '.main',                //element the footer will bump into
+	        $footer-element:        '.main-foot',           //the footer element
+	        $footer-inner-element:  '.main-foot__nav'       //optional: inner footer element
+	    );
+	}
+	@include bp($max: 640px) {
+	    @include sticky-footer(
+	        $footer-height:         1105px,                  //height of the footer
+	        $wrap-element:          '.wrap-all-the-things', //wrapper of all but the footer
+	        $container-element:     '.main',                //element the footer will bump into
+	        $footer-element:        '.main-foot',           //the footer element
+	        $footer-inner-element:  '.main-foot__nav'       //optional: inner footer element
+	    );
+	}
+	@include bp($max: 500px) {
+	    @include sticky-footer(
+	        $footer-height:         1160px,                  //height of the footer
+	        $wrap-element:          '.wrap-a6l-the-things', //wrapper of all but the footer
+	        $container-element:     '.main',                //element the footer will bump into
+	        $footer-element:        '.main-foot',           //the footer element
+	        $footer-inner-element:  '.main-foot__nav'       //optional: inner footer element
+	    );
+	}
+	@include bp($max: 480px) {
+	    @include sticky-footer(
+	        $footer-height:         1218px,                  //height of the footer
+	        $wrap-element:          '.wrap-a6l-the-things', //wrapper of all but the footer
+	        $container-element:     '.main',                //element the footer will bump into
+	        $footer-element:        '.main-foot',           //the footer element
+	        $footer-inner-element:  '.main-foot__nav'       //optional: inner footer element
+	    );
+	}
+	@include bp($max: 450px) {
+	    @include sticky-footer(
+	        $footer-height:         1373px,                  //height of the footer
+	        $wrap-element:          '.wrap-a6l-the-things', //wrapper of all but the footer
+	        $container-element:     '.main',                //element the footer will bump into
+	        $footer-element:        '.main-foot',           //the footer element
+	        $footer-inner-element:  '.main-foot__nav'       //optional: inner footer element
+	    );
+	}
+	@include bp($max: 429px) {
+	    @include sticky-footer(
+	        $footer-height:         1440px,                  //height of the footer
+	        $wrap-element:          '.wrap-a6l-the-things', //wrapper of all but the footer
+	        $container-element:     '.main',                //element the footer will bump into
+	        $footer-element:        '.main-foot',           //the footer element
+	        $footer-inner-element:  '.main-foot__nav'       //optional: inner footer element
+	    );
+	}
+	.main-foot {
+		float: left;
+		width: 100%;
+		background: #faffff;
+		overflow: hidden;
+		.main-foot__inner {
+			padding: 0 $pad;
+		}
+
+	}
+	.main-foot__contact {
+		width: 100%;
+		overflow: hidden;
+		padding: em(80px) 0 em(40px);
+		@include bp($max:1024px) {
+			padding: em(45px) $pad em(45px);
+		}
+		@include bp($max:480px) {
+			padding: em(45px) 0 em(45px);
+		}
+	}
+	.contact-text {
+		float: left;
+		width: 48%;
+		@include bp($max:1024px) {
+			float: none;
+			width: 85%;
+			margin: 0 auto;
+			text-align: center; // center all text
+		}
+		@include bp($max:768px) {
+			width: 100%;
+		}
+		.text-wrap {
+			width: 93%;
+			h2 {
+				&:first-of-type {
+					margin-top: 0;
+					margin-bottom: em(23px);
+					position: relative;
+					&:after { // underline styles
+						content: '';
+						height: 4px;
+						width: 95px;
+						position: absolute;
+						bottom: -14px;
+						left: 0;
+						z-index: 1;
+						background: $color-3;
+					}
+				}
+			}
+			@include bp($max:1024px) {
+				width: 78%;
+				margin: 0 auto;
+				h2 {
+					&:first-of-type {
+						&:after { // underline styles
+							width: 100px;
+							left: 50%;
+							margin: 0 auto 0 -50px;
+						}
+					}
+				}
+			}
+			@include bp($max:768px) {
+				width: 100%;
+			}
+		}
+		.cta-phone {
+			p { // give us a call cta text
+				width: 100%;
+				margin-top: em(35px);
+				position: relative;
+				color: #707070;
+				font-family: $fam-rob-bold;
+				font-size: em(18px);
+				.hide-me { // span around specific text to hide at mobile
+					.or-text { // span around "or" to add space on each side for tablet and mobile
+						margin: 0 em(50px);
+					}
+					@include bp($max:480px) {
+						display: none;
+					}
+				}
+				&:after { // contact arrow
+					content: url(images/global/contact-arrow.png);
+					position: absolute;
+					top: em(32px);
+					right: 0;
+					
+				}
+				@include bp($max:1024px) {
+					margin-top: em(25px);
+					&:after {
+						display: none;
+					}
+				}
+				@include bp($max:480px) {
+					margin-top: em(15px);
+					font-size: em(24px);
+				}
+			}
+			a { // Phone number link
+				display: inline-block;
+				margin-top: em(6px);
+				color: $color-1;
+				font-family: $fam-rob-bold;
+				font-size: em(33px);
+				letter-spacing: 0.02em;
+				transition: color 350ms;
+				@include bp($max:1024px) {
+					margin-top: 0;
+				}
+				@include bp($max:480px) {
+					font-size: em(38px);
+				}
+				@include bp($max:400px) {
+					font-size: em(32px);
+				}
+				span { // +1 has a lighter font
+					font-family: $fam-rob-reg;
+					margin-right: em(1px);
+				}
+				&:visited {
+					color: $color-1;
+				}
+				&:hover {
+					color: $color-2;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+	.main-foot__contact-form {
+		float: right;
+		width: 48%;
+		padding: 0 $pad*2;
+		background: #9cabb1;
+		border-radius: 0.15em;
+		@include bp($max:1024px) {
+			float: none;
+			width: 70%;
+			margin: em(35px) auto 0;
+		}
+		@include bp($max:768px) {
+			width: 100%;
+		}
+		@include bp($max:480px) {
+			padding: 0 $pad;
+		}
+	}
+	/*------------------------------------*\
+	    ::  Add border top above logo
+	\*------------------------------------*/
+	.main-foot__logo { 
+		border-top: 2px solid #9cabb1;
+	}
+}

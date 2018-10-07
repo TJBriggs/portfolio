@@ -1,0 +1,162 @@
+/*------------------------------------*\
+    ::  Icon CTA Layout
+\*------------------------------------*/	
+.icon-ctas {
+	width: 100%;
+	.section-title {
+		float: left;
+		width: 100%;
+		margin-bottom: em(5px);
+		@include bp($max:480px) {
+			margin-bottom: em(7px);
+		}
+	}
+}
+.icon-ctas__inner {
+	overflow: hidden;
+	padding: em(35px) 0;
+	@include bp($max:480px) {
+		padding: em(25px) 0 em(50px);
+	}
+}
+.icon-ctas__wrap {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: 100%;
+}
+.cta {
+	display: inline-block;
+	height: 100%;
+	width: 33.333%;
+	overflow: hidden;
+
+	backface-visibility: hidden;
+	@include bp($max:900px) {
+		width: 50%;
+	}
+	@include bp($max:575px) {
+		width: 100%;
+	}
+	.cta__link {
+		display: block;
+		height: 100%;
+		width: 100%;
+	}
+	.cta__content {
+		height: 275px;
+		width: 100%;
+		margin: 0;
+		position: relative;
+		@include bp($max:575px) {
+			height: 230px;
+		}
+ 	}
+ 	.cta__hover {
+ 		width: 100%;
+ 		padding-top: 30px;
+		position: absolute;
+		top: 30px;
+		top: 0;
+		left: 0;
+		right: 0;
+		transition: padding 500ms;
+ 	}
+	.cta__icon {
+		height: 65px;
+		width: 65px;
+	}
+	.cta__title {
+		margin: em(18px) 0;
+		padding: 0 $pad;
+		span {
+			margin-left: em(10px);
+			position: relative;
+			top: em(1.5px);
+		}
+		@include bp($max:375px) {
+			margin: em(10px) 0;
+		}
+	}
+	.cta__text {
+		width: 100%;
+		margin: 0;
+		padding: 0 $pad*2;
+		position: absolute;
+		top: 165px;
+		@include bp($max:900px) {
+			padding: 0 $pad*3;
+		}
+		@include bp($max:575px) {
+			padding: 0 $pad*6;
+		}
+		@include bp($max:485px) {
+			padding: 0 $pad*2;
+		}
+		@include bp($max:400px) {
+			padding: 0 $pad;
+		}
+		@include bp($max:375px) {
+			top: 150px;
+		}
+	}
+	&:hover {
+		.cta__hover {
+			padding-top: 22.5%;
+		}
+		.cta__title {
+			margin: em(7px) 0;
+		}
+		@include bp($max:1024px) {
+			.cta__hover {
+				padding-top: 24%;
+			}
+		}
+		@include bp($max:900px) {
+			.cta__hover {
+				padding-top: 19%;
+			}
+		}
+		@include bp($max:768px) {
+			.cta__hover {
+				padding-top: 21.5%;
+			}
+		}
+		@include bp($max:640px) {
+			.cta__hover {
+				padding-top: 26%;
+			}
+		}
+		// No hovers under 575px
+		@include bp($max:575px) {
+			.cta__hover {
+				padding-top: 30px;
+			}
+			.cta__title {
+				margin: em(18px) 0;
+			}
+		}
+	}
+}
+/*------------------------------------*\
+    :: Modifier if Title is present 
+\*------------------------------------*/
+// addjust padding if a title is present
+.icon-ctas--title {
+	.icon-ctas__inner {
+		padding: em(15px) 0 em(35px);
+		@include bp($max:480px) {
+			padding: em(10px) 0 em(35px);
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+

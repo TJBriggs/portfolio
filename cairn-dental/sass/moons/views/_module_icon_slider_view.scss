@@ -1,0 +1,41 @@
+/*------------------------------------*\
+    ::  Icon Slider Styles
+\*------------------------------------*/	
+.icon-slider {
+	background: $color-4;
+}
+.icon-slider__nav {
+	list-style-type: none;
+}
+.nav__item {
+	background: transparent;
+	transition: background 400ms;
+	.nav__icon {
+		fill: $color-1;
+		transition: fill 400ms;
+	}
+	&.active, &:hover {
+		background: $color-2;
+		.nav__icon {
+			fill: $color-4;
+		}
+		@include bp($max:640px) {
+			background: transparent;
+			.nav__icon {
+				fill: $color-2;
+			}
+		}
+	}
+}
+.icon-slider__slide {
+	h2 {
+		color: $txt-color-3;
+		font-size: em(34px);
+		@include bp($max:515px) {
+			font-size: em(30px);
+		}
+	}
+	h6 {
+		color: $color-2;
+	}
+}

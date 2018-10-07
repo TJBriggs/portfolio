@@ -1,0 +1,247 @@
+/*------------------------------------*\
+    ::  Video Slider
+\*------------------------------------*/
+.tab-slider {
+	position: relative;
+	overflow: visible;
+	background-color: $color-3;
+	&__slide {
+		display: block;
+		height: 38.25em;
+		width: 100%;
+		@extend %bg-cover;
+		text-decoration: none;
+		@include bp($max:1024px) {
+			height: 25em;
+		}
+		&:hover {
+			text-decoration: none;
+			img {
+				opacity: 1;
+			}
+		}
+	}
+	&__slide-overlay {
+		height: 100%;
+		width: 100%;
+		background-color: rgba(37, 37, 37, 0.56);
+		text-align: center;
+		&:before { // Centering the unknown
+			content: '';
+			height: 100%;
+			margin-left: -0.25em;
+			display: inline-block;
+			vertical-align: middle;
+		}
+	}
+	&__slide-text {
+		display: inline-block; // Centering the unknown
+		width: 95%;
+		margin: 0 auto;
+		vertical-align: middle; // Centering the unknown
+		h3 {
+			margin: 0;
+			color: $color-3;
+			font-size: 1.9em;
+			font-style: italic;
+			@include bp($max:1024px) {
+				font-size: 1.5em;
+			}
+			@include bp($max:640px) {
+				font-size: 1.25em;
+			}
+		}
+		h5 {
+			margin: 0.9em 0 0 0;
+			color: $color-3;
+			font-size: 1em;
+			font-weight: normal;
+			@include bp($max:1024px) {
+				font-size: 15px;
+			}
+		}
+		img {
+			margin-top: 3em;
+			opacity: 0.75;
+			transition: opacity 400ms;
+			border-radius: 50%;
+			border: 10px solid rgba(255, 255, 255, 0.20);
+			@include bp($max:640px) {
+				margin-top: 2em;
+				height: 65px;
+				width: 65px;
+			}
+		}
+	}
+	&__nav-wrap {
+		width: 100%;
+		position: absolute;
+		bottom: -88px;
+		text-align: center; // For layout purposes
+		@include bp($max:640px) {
+			bottom: -77px;
+		}
+		@include bp($max:500px) {
+			bottom: -64px;
+		}
+		@include bp($max:400px) {
+			bottom: -74px;
+		}
+		@include bp($max:320px) {
+			bottom: -78px;
+		}
+	}
+	&__nav {
+		display: inline-block;
+		width: auto;
+		margin: 0;
+		padding: 0;
+		@include bp($max:500px) {
+			width: 100%;
+		}
+		li {
+			display: inline-block;
+			height: 135px;
+			width: 135px;
+			margin: 0 1em 0 0;
+			@include bp($max:640px) {
+				height: 105px;
+				width: 105px;
+				margin: 0 0.75em 0 0;
+			}
+			@include bp($max:500px) {
+				height: 105px;
+				width: 23.5%;
+				margin: 0;
+				font-size: 4vw;
+			}
+			&:last-of-type { // Remove right margin to keep circles centered
+				margin-right: 0;
+			}
+			a {
+				display: block;
+			}
+			p {
+				font-family: $fam-heading;
+				font-weight: normal;
+				@include bp($max:500px) {
+					display: none;
+				}
+			}
+			img {
+				height: 90px;
+				width: 90px;
+				backface-visibility: hidden;
+				border: 2px solid $color-3;
+				border-radius: 50%;
+				transition: transform 300ms;
+				@include bp($max:640px) {
+					height: 75px;
+					width: 75px;
+				}
+				@include bp($max:500px) {
+					height: 4em;
+					width: 4em;
+
+				}
+			}
+			&:hover, &.active {
+				a {
+					text-decoration: none;
+				}
+				img {
+					transform: scale(1.25);
+				}
+			}
+		}
+	}
+}
+/*------------------------------------*\
+    ::  KSS MarkUp (Ignore)
+\*------------------------------------*/    
+// Tab Slider
+//
+// Demo &amp; Modifiers:<br><a href="../modules/module-tab-slider.php" target="_blank">module-tab-slider.php</a>
+//
+// Stylesheet:<br>
+// <a href="../sass/structure/modules/_module_tab_slider.scss" target="_blank">_module_tab_slider.scss</a><br>
+//
+// Path To The Code:<br>
+// golftec/golftec/modules/module-tab-slider.php<br>
+// golftec/golftec/js/sliders-src/tab-slider.js
+// golftec/golftec/plugins/fancybox/source/jquery.fancybox.pack.js<br>
+// golftec/golftec//plugins/fancybox/source/helpers/jquery.fancybox-media.js
+//
+// Markup:
+// <article class="tab-slider tab-slider--video main-torso__group" style="margin-bottom: 100px;">
+//     <div class="tab-slider__slider-wrap">
+//         <div class="tab-slider__slides owl-carousel js-owl-carousel--tab-slider">
+//             <a class="tab-slider__slide fancybox-media" href="https://www.youtube.com/watch?v=5t_sev7ehy8" style="background-image: url('../images/modules/tab-slider/slide-1-image.jpg')">
+//                 <div class="tab-slider__slide-overlay">
+//                     <div class="tab-slider__slide-text">
+//                         <h3>"GolfTEC Technology and My Coach Helped Me Gain Confidence!"</h3>
+//                         <h5>Tim - GolfTEC Denver Student</h5>
+//                         <img src="../images/global/play-icon.png" alt="Play Icon">
+//                     </div>
+//                 </div>
+//             </a>
+//             <a class="tab-slider__slide fancybox-media" href="https://www.youtube.com/watch?v=5t_sev7ehy8" style="background-image: url('../images/placeholders/placeholder.png')">
+//                 <div class="tab-slider__slide-overlay">
+//                     <div class="tab-slider__slide-text">
+//                         <h3>"GolfTEC Technology and My Coach Helped Me Gain Confidence!"</h3>
+//                         <h5>Tim - GolfTEC Denver Student</h5>
+//                         <img src="../images/global/play-icon.png" alt="Play Icon">
+//                     </div>
+//                 </div>
+//             </a>
+//             <a class="tab-slider__slide fancybox-media" href="https://www.youtube.com/watch?v=5t_sev7ehy8" style="background-image: url('../images/placeholders/placeholder.png')">
+//                 <div class="tab-slider__slide-overlay">
+//                     <div class="tab-slider__slide-text">
+//                         <h3>"GolfTEC Technology and My Coach Helped Me Gain Confidence!"</h3>
+//                         <h5>Tim - GolfTEC Denver Student</h5>
+//                         <img src="../images/global/play-icon.png" alt="Play Icon">
+//                     </div>
+//                 </div>
+//             </a>
+//             <a class="tab-slider__slide fancybox-media" href="https://www.youtube.com/watch?v=5t_sev7ehy8" style="background-image: url('../images/placeholders/placeholder.png')">
+//                 <div class="tab-slider__slide-overlay">
+//                     <div class="tab-slider__slide-text">
+//                         <h3>"GolfTEC Technology and My Coach Helped Me Gain Confidence!"</h3>
+//                         <h5>Tim - GolfTEC Denver Student</h5>
+//                         <img src="../images/global/play-icon.png" alt="Play Icon">
+//                     </div>
+//                 </div>
+//             </a>
+//         </div> <!-- // tab-slider__slide -->
+//     </div> <!-- // slider__wrap -->
+//     <div class="tab-slider__nav-wrap">
+//         <ul class="tab-slider__nav">
+//             <li class="nav__item">
+//                 <a class="nav__link" href="javascript:void(0);">
+//                     <img class="nav__image" src="../images/modules/tab-slider/slide-1-thumb.jpg" alt="Slider Thumbnail">
+//                     <p>Tim</p>
+//                 </a>
+//             </li>
+//             <li class="nav__item">
+//                 <a class="nav__link" href="javascript:void(0);">
+//                     <img class="nav__image" src="../images/modules/tab-slider/slide-2-thumb.jpg" alt="Slider Thumbnail">
+//                     <p>Marci</p>
+//                 </a>
+//             </li>
+//             <li class="nav__item">
+//                 <a class="nav__link" href="javascript:void(0);">
+//                     <img class="nav__image" src="../images/modules/tab-slider/slide-3-thumb.jpg" alt="Slider Thumbnail">
+//                     <p>Chris</p>
+//                 </a>
+//             </li>
+//             <li class="nav__item">
+//                 <a class="nav__link" href="javascript:void(0);">
+//                     <img class="nav__image" src="../images/modules/tab-slider/slide-4-thumb.jpg" alt="Slider Thumbnail">
+//                     <p>Jimmy</p>
+//                 </a>
+//             </li>
+//         </ul> <!-- // tab-slider__nav -->
+//     </div> <!-- // tab-slider__nav__wrap -->
+// </article> <!-- // tab-slider -->
+//
+// Styleguide 6.7

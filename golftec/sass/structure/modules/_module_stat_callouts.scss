@@ -1,0 +1,147 @@
+/*------------------------------------*\
+    ::  Stat Callouts
+\*------------------------------------*/
+.stat-callouts {
+	background-color: $color-3;
+	&__inner {
+		padding: 3.25em $pad;
+		@include bp($max:500px) {
+			padding: 2.25em $pad 3.25em;
+		}
+	}
+	&__wrap {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	&__callout {
+		width: 33.333333%;
+		padding: 0 $pad;
+		text-align: left;
+		img {
+			display: inline-block;
+			height: 5.5em;
+			width: 30%;
+			vertical-align: top;
+		}
+		h4 {
+			display: inline-block;
+			width: 65%;
+			margin: 1em 0 0;
+			padding-left: 1.05em;
+			color: $color-2;
+			font-size: 1.2em;
+			font-weight: bold;
+			vertical-align: middle;
+			strong {
+				color: #302a32;
+				font-size: 1.35em;
+				font-weight: 800;
+			}
+		}
+		&:first-of-type { // Ball Icon
+			img {
+				height: 5em;
+				width: 30%;
+				margin-top: 0.5em;
+			}
+			h4 {
+				margin-top: 0;
+			}
+		}
+		&:last-of-type { // GolfTEC Icon
+			img {
+				height: 5em;
+				width: 30%;
+				margin-top: 0.5em;
+			}
+		}
+		@include bp($max:640px) {
+			width: 100%;
+			margin: 0 auto 2.5em;
+			padding: 0;
+			font-size: 16px;
+			text-align: center;
+			img {
+				height: 5.6em;
+				width: 5.6em;
+			}
+			h4 {
+				max-width: 175px;
+				margin-top: 0.85em;
+				margin-left: 1em;
+				padding-left: 0;
+				text-align: left;
+			}
+			&:first-of-type {
+				img {
+					height: 5.6em;
+					width: 5.6em;
+				}
+			}
+			&:last-of-type {
+				margin-bottom: 0;
+				img {
+					height: 5.6em;
+					width: 5.6em;
+				}
+				h4 {
+					margin-top: 1.15em;
+				}
+			}
+		}
+		@include bp($max:400px) {
+			h4 {
+				max-width: 160px;
+			}
+		}
+	}
+	// Scale entire module
+	@include bp($max:959px) {
+		font-size: 1.55vw;
+	}
+	// Set font back to fixed pixel value
+	@include bp($max:640px) {
+		font-size: 16px;
+	}
+	// Scale again
+	@include bp($max:400px) {
+		font-size: 4vw;
+	}
+}	
+/*------------------------------------*\
+    ::  KSS MarkUp (Ignore)
+\*------------------------------------*/    
+// Stat Callouts
+//
+// Demo:<br><a href="../modules/module-stat-callouts.php" target="_blank">module-stat-callouts.php</a>
+//
+// Stylsheet:<br>
+// <a href="../sass/structure/modules/_module_stat_callouts.scss" target="_blank">_module_stat_callouts.scss</a><br>
+//
+// Path To The Code:<br>
+// golftec/golftec/modules/module-stat-callouts.php<br>
+// golftec/golftec/js/stats-src/1_snap.svg.js<br>
+// golftec/golftec/js/stats-src/2_inview.js<br>
+// golftec/golftec/js/stats-src/3_stat.js
+//
+// Markup:
+// <article class="stat-callouts main-torso__group">
+//     <div class="stat-callouts__inner">
+//         <div class="stat-callouts__wrap">
+//             <div class="stat-callouts__callout stat__frame">
+//                 <img src="../images/modules/stat-callouts/ball-icon.svg" alt="Ball Icon">
+//                 <h4><strong class="stat__number">7</strong> Strokes Improvement<br>On Average</h4>
+//             </div>
+//             <div class="stat-callouts__callout stat__frame">
+//                 <img src="../images/modules/stat-callouts/swing-icon.svg" alt="Swing Icon">
+//                 <h4><strong class="stat__number">6077832</strong><br>Lessons Taught</h4>
+//             </div>
+//             <div class="stat-callouts__callout stat__frame">
+//                 <img src="../images/modules/stat-callouts/golftec-icon.svg" alt="GolfTEC Icon">
+//                 <h4><strong class="stat__number">200</strong> Centers Worldwide</h4>
+//             </div>
+//         </div> <!-- // stat-callouts__wrap -->
+//     </div> <!-- // stat-callouts__inner -->
+// </article> <!-- // stat-callouts -->
+//
+// Styleguide 6.4	

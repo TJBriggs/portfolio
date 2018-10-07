@@ -1,0 +1,84 @@
+/*------------------------------------*\
+    ::Nav in the Footer
+\*------------------------------------*/
+.foot-nav {
+	@include nav();
+	width: 100%;
+	.menu {
+		width: 85%;
+		margin: 0 auto;
+		padding: 0;
+		overflow: hidden;
+		@include bp($max:1024px) {
+			width: 100%;
+		}
+		@include bp($max:480px) {
+			width: 85%;
+			margin: 0 auto;
+		}
+		li {
+			height: 40px;
+			width: 20%;
+			text-align: center;
+			a {
+				display: inline-block;
+				position: relative;
+				color: #a5a8aa;
+				font-family: $fam-nav;
+				font-size: em(15px);
+				transition: color 400ms;
+				&:after {
+					position: absolute;
+					top: 100%;
+					left: 0px;
+					width: 100%;
+					height: 1px;
+					background: $color-2;
+					content: '';
+					opacity: 0;
+					transform: translateY(-10px);
+					transition: height 0.3s, opacity 0.3s, transform 0.3s;
+					@include bp($max:640px) {
+						display: none;
+					}
+				}
+                &:visited {
+            		color: #a5a8aa;
+            	}
+                &:hover {
+                	color: #707070;
+                	text-decoration: none;
+					&:after {
+						height: 4px;
+						opacity: 1;
+						transform: translateY(0px);
+					}
+				}
+			}
+	        &.current-menu-item { // active state
+		    	a {
+		    		color: #707070;
+		    		&:after {
+		    			height: 4px;
+		    			opacity: 1;
+		    			transform: translateY(0px);
+		    		}
+		    	}
+			}
+			@include bp($max:640px) {
+				width: 50%;
+				a {
+					display: block;
+					height: 100%;
+					width: 100%;
+				}
+			}
+			@include bp($max:480px) {
+				a {
+					text-align: left;
+				}
+			}
+		}
+	}
+}
+

@@ -1,0 +1,74 @@
+/*------------------------------------*\
+    ::Nav in the Footer
+\*------------------------------------*/
+.foot-nav {
+	@include nav();
+
+	@include col(7.75,$collapse:true);
+	padding-right: 0;
+	> ul {
+		margin: 0;
+		padding: 0;
+		li {
+			a {
+				color: $white;
+				text-decoration: none;
+				text-transform: uppercase;
+				&:hover {
+					color: $color-1;
+				}
+			}
+			&.current-menu-item {
+				> a {
+					color: $color-1;
+				}
+			}
+		}
+		> li {
+			@include col(3,$collapse:true);
+			font: {
+				family: $fam-nav;
+				size: emCalc(14px);
+			}
+			ul {
+				padding: 8px 0 0 0;
+				margin: 0;
+				li {
+					@include col(12,$collapse:true);
+					line-height: 1.5em;
+					a {
+						font: {
+							family: opensans-reg;
+							size: emCalc(11px);
+						}
+					}
+				}
+			}
+		}
+	}
+
+	@include bp($solarsystem) {
+		> ul {
+			li {
+				@include col(6);
+				text-align: center;
+				padding-bottom: 25px;
+				ul {
+					display: none;
+				}
+			}
+		}
+	}
+	@include bp($max:900px) {
+		@include col(12);
+		
+	}
+
+	@include bp($planetary) {
+		> ul {
+			li {
+				@include col(12);
+			}
+		}
+	}
+}

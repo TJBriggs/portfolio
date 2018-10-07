@@ -1,0 +1,25 @@
+/*------------------------------------*\
+    :: Technology Page
+\*------------------------------------*/
+.page-technology {
+	.content-title {
+		color: $color-1;
+		border-bottom: 2px solid $color-1;
+		strong {
+			color: $color-1;
+			font-family: $fam-head-bold;
+		}
+		&:after { // underline styles
+			background: $color-4;
+		}
+		img {
+			margin-bottom: em(10px);
+		}
+	}
+	.infographic__subtitle {
+		margin: em(25px) auto 0;
+		@include bp($max:640px) { // overwrite base spacing (infograpghic on home page)
+			margin: em(25px) auto 0;
+		}
+	}
+}

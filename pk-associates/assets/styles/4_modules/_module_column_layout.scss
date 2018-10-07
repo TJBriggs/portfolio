@@ -1,0 +1,60 @@
+/*------------------------------------*\
+    :: Column Layout 
+\*------------------------------------*/
+.column-layout {
+    width: 100%;
+    overflow: hidden;
+    background-color: $color-3-light;
+    &__intro-wrap {
+        width: 100%;
+        max-width: 570px;
+        @include bp($max:768px) {
+            max-width: none;
+        }
+    }
+    &__intro {
+        margin-bottom: 2.75em;
+    }
+    &__columns {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+    }
+    &__column {
+        padding-right: $pad;
+        &:last-of-type {
+            padding-right: 0;
+        }
+        h3 {
+            max-width: 210px;
+            margin-bottom: 0.5em;
+            color: $color-1;
+        }
+        @include bp($max:850px) {
+            width: 50%;
+            margin-bottom: 3em;
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+        @include bp($max:640px) {
+            h3 {
+                max-width: none;
+            }
+            width: 100%;
+            padding-right: 0;
+        }
+    }
+}  
+// Column Modifier
+.columns--2 {
+    justify-content: flex-start;
+    .column-layout__column {
+        width: 50%;
+        @include bp($max:640px) {
+            width: 100%;
+            padding-right: 0;
+        }
+    }
+}

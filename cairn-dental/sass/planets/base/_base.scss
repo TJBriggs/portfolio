@@ -1,0 +1,35 @@
+/*------------------------------------*\
+    ::Base
+    ------------------------------------*
+    ::Normalize.css v3.0.0 | MIT License | git.io/normalize
+\*------------------------------------*/
+html {
+	font-family: sans-serif;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+body {
+	margin: 0;
+	padding-top: em(115px); // Offsets the fixed header
+	&.active {
+		overflow: hidden;
+	}
+	@include bp($max:480px) {
+		padding-top: em(70px); // Offsets the fixed header
+	}
+}
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+.hide {
+	display: none;
+}
+.screen-reader-text {
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
+}

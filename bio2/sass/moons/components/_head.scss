@@ -1,0 +1,195 @@
+/*------------------------------------*\
+    ::Header
+\*------------------------------------*/
+.main-head {
+	height: 107px;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9990;
+	background-color: $color-1;
+	@include bp($max:640px) {
+		height: 87px;
+	}
+	&:after {
+		content: '';
+		position: absolute;
+		top: 107px;
+		left: 0;
+		right: 0;
+		height: 3px;
+		width: 100%;
+		background-color: $color-1-light;
+		@include bp($max:640px) {
+			top: 87px;
+		}
+	}
+	&__inner {
+		height: 100%;
+		padding: 0 $pad;
+		position: relative;
+	}
+	&__logo {
+		display: block;
+		height: 75px;
+		width: 125px;
+		position: absolute;
+		top: 1em;
+		left: $pad;
+		img {
+			max-height: 75px;
+			max-width: 125px;
+		}
+		@include bp($max:640px) {
+			height: 58px;
+			width: 95px;
+		}
+	}
+	&__login {
+		display: inline-block;
+		height: 30px;
+		padding: 0 1em;
+		position: absolute;
+		top: 0;
+		right: $pad;
+		background-color: $color-1-light;
+		border-bottom-right-radius: 0.25em;
+		border-bottom-left-radius: 0.25em;
+		color: $color-2;
+		font-size: 13px;
+		font-weight: 100;
+		letter-spacing: 0.075em;
+		line-height: 30px;
+		word-spacing: 0.2em;
+		transition: padding 400ms, height 400ms, line-height 400ms;
+		backface-visiblity: hidden;
+		&:hover {
+			height: 34px;
+			padding-top: 4px;
+			text-decoration: none;
+		}
+	}
+	&__trigger {
+		display: none;
+	    position: absolute;
+	    top: em(38px);
+	    right: $pad*1.3;
+	    cursor: pointer;
+		font-size: em(20px);
+		letter-spacing: 0.035em;
+		text-decoration: none;
+		&:hover {
+			text-decoration: none;
+		}
+		span {
+			color: $color-2;
+		}
+		@include bp($max:1024px) {
+			display: block;
+		}
+		@include bp($max:640px) {
+			top: em(30px);
+		}
+	}
+	&__search {
+		position: absolute;
+		bottom: -45px;
+		right: $pad;
+		z-index: -1; // puts search behind dropdowns
+		@include bp($max:767px) {
+			display: none;
+		}
+		form {
+			float: left;
+			height: 45px;
+			width: 0px;
+			display: inline-block;
+			transition: width 400ms;
+			.search-wrap {
+				height: 45px;
+				position: relative;
+			}
+			
+			input[type=search] {
+				width: 0px;
+				height: 45px;
+				padding: 0 $pad;
+				position: absolute;
+				right: 15px;
+				border: 0;
+				background-color: $color-1-light;
+				border-bottom-left-radius: 15px;
+				color: rgba(255, 255, 255, 0);
+				font-weight: 100;
+				letter-spacing: 0.035em;
+				transition: width 400ms, color 500ms;
+				&:focus {
+					outline: none;
+				}
+				&::placeholder {
+					color: $color-2;
+					font-weight: 100;
+					opacity: 0;
+					transition: opacity 500ms;
+				}
+			}
+			input[type=submit] {
+				height: 45px;
+				width: 60px;
+				position: absolute;
+				top: 0;
+				right: 0;
+				background: $color-1-light url('images/global/search.png') no-repeat center;
+				outline: none;
+				border: none;
+				border-bottom-left-radius: 15px;
+				border-bottom-right-radius: 15px;
+			}
+			.main-head__search-icon {
+				display: inline-block;
+				height: 45px;
+				width: 60px;
+				position: absolute;
+				top: 0; 
+				right: 0;
+				z-index: 9999;
+				background-color: transparent;
+				border-bottom-left-radius: 15px;
+				border-bottom-right-radius: 15px;
+				cursor: pointer;
+				text-align: center;
+			}
+		}
+		&.active {
+			form {
+				width: 200px;
+				input[type=search] {
+					width: 200px;
+					color: rgba(255, 255, 255, 1);
+					&::placeholder {
+						opacity: 1;
+					}
+				}
+				.main-head__search-icon {
+					display: none;
+				}
+			}
+		}
+	}
+}
+/*------------------------------------*\
+    ::  Admin Bar Styles
+\*------------------------------------*/
+.admin-bar { // Push body down so it isn't covered by admin bar
+	padding-top: 32px;
+    .main-head {
+        top: 32px;
+    }
+    @include bp($max:782px) { // Admin bar gets taller here
+    	top: 46px;
+        .main-head {
+	        top: 46px;
+	    }
+    }
+}  	

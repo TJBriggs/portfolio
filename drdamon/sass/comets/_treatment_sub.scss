@@ -1,0 +1,76 @@
+/*-------------------------------------------*\
+    ::Page Styles - Treatment subpages
+\*-------------------------------------------*/
+.no-touch { // only show on desktop for parallax effect
+    #treatments-sub {  // light blue background for parallax
+        background: $bg-light-blue;
+    }
+}
+.page__group--treatment-sub {
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.45);
+    padding: 35px 0 45px;
+    @include bp($solarsystem) {
+        box-shadow: none;
+    }
+    .section__title-wrap {
+        h2 {
+            margin: 0;
+        }
+    }
+    p, li, span {
+        color: #555555;
+        font-size: 0.875em;
+        letter-spacing: 0.02em;
+        line-height: 1.875rem;
+    }
+    .btn {
+        margin-top: 20px;
+        @include bp($solarsystem) {
+            float: none;
+            margin: 30px 0 50px;
+        }
+        @include bp($planetary) {
+            margin: 30px auto 40px;
+            width: 100%;
+        }
+    }
+}
+
+//////////////////////////////////////////////////////
+// Watch Video Button Styles
+//////////////////////////////////////////////////////
+.thirds__group {
+    a.btn {
+        &:first-of-type {
+            float: left;
+            margin: 15px 30px 40px 0; 
+            @include bp($solarsystem) {
+                margin-bottom: 10px; 
+            }
+            @include bp($planetary) {
+                margin: 20px 0px 10px 0;
+            }
+        }
+    }
+    .fancybox-media {
+        float: left;
+        margin: 15px 0 40px 0;
+    } 
+}
+
+
+//////////////////////////////////////////////////////
+// Parallax spacing before FAQs on Treatment Pages
+//////////////////////////////////////////////////////
+#treatments-sub {
+    .faqs {
+        box-shadow: 0px -3px 10px -2px rgba(0, 0, 0, 0.45);
+        margin-top: 470px;
+        padding: 10px 0 80px;
+        width: 100%;
+        @include bp($solarsystem) {
+            box-shadow: none;
+            margin-top: 0;
+        }
+    }
+}

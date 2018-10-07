@@ -1,0 +1,255 @@
+/*-----------------------------------------*\
+    ::  Content Block Layout
+\*-----------------------------------------*/
+.content-block {
+    width: 100%;
+    .section-title {
+        width: 100%;
+        max-width: 800px;
+        margin: 25px auto 35px;
+        padding: 0 $pad;
+        @include bp($max:1024px) {
+            width: 91.66667%;
+        }
+        @include bp($max:480px) {
+            width: 100%;
+        }
+    }
+    p { 
+        overflow: hidden; // remove horizontal scroll on mobile
+    }
+}
+.content-block__overlay {
+    height: 100%;
+    width: 100%; 
+}
+.content-block__inner {
+    padding: 50px $pad;
+    @include bp($max:1024px) {
+        padding: 50px 0;
+    }
+}
+.content__group { 
+    // Remove top margin from first element
+    & > *:first-child {
+        margin-top: 0;
+        @include bp($max:1024px) {
+            margin-top: $pad;
+        }
+    }
+    // Remove bottom margin from last element
+    & > *:last-child {
+        margin-bottom: 0;
+        @include bp($max:1024px) {
+            margin-bottom: $pad;
+        }
+    }
+    // Set all header to consistent margins
+    h1, h2, h3, h4, h5, h6 {
+        margin: 15px 0;
+    }
+    // Center images at 1024px or less
+    p {
+        img {
+            margin: 0;
+            @include bp($max:1024px) {
+                display: block;
+                margin: 0 auto;
+            }
+        }
+    }
+    ul, ol {
+        margin: 0;
+        padding: 0 0 0 20px;
+    }
+    // Button Styles
+    .btn--one, .btn--two {
+        margin-top: 25px;
+        @include bp($max:515px) {
+            width: 100%;
+        }
+    }
+    .btn--two {
+        margin-left: 15px;
+        @include bp($max:515px) {
+            margin-left: 0;
+        }
+    }
+}
+.content--1 {
+    .content__group--1 {
+        @include col(12);
+    }
+}
+.content--2 {
+    &.content__two-col--half {
+        .content__group {
+            @include col(6);
+            &.content__group--no-prev {
+                margin-left: 50%;
+            }
+        }
+    }
+    &.content__two-col--two {
+        .content__group--1 {
+            @include col(8);
+        }
+        .content__group--2 {
+            @include col(4);
+            &.content__group--no-prev {
+                margin-left: 66.66667%;
+            }
+        }
+    }
+    &.content__two-col--one {
+        .content__group--1 {
+            @include col(4);
+        }
+        .content__group--2 {
+            @include col(8);
+            &.content__group--no-prev {
+                margin-left: 33.33333%;
+            }
+        }
+    }
+    @include bp($max:1024px){
+        [class*=" content__group--"]{ //it's a specificity thing
+            &.content__group {
+                @include col(11, $center:true);
+                &[class*="no-prev"]{
+                    margin-left: 50%;
+                }
+            }
+        }
+    }
+    @include bp($planetary){
+        [class*=" content__group--"]{ //it's a specificity thing
+            &.content__group {
+                width: 100%;
+                &[class*="no-prev"]{
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}
+.content--3 {
+    .content__group {
+        @include col(4);
+        &.content__group--no-prev {
+            margin-left: 33.33333%;
+        }
+        &.content__group--no-prev-2 {
+            margin-left: 66.66667%;
+        }
+        @include bp($max:1024px){
+            width: 100%;
+            &[class*="no-prev"]{
+                margin-left: 0;
+            }
+        }
+    }
+}
+/*------------------------------------*\
+    ::  Content Modifiers
+\*------------------------------------*/
+// Add extra bottom padding when title
+// is present to keep spacing of section even
+.content-block--title {
+    .content-block__inner {
+        padding: 40px $pad 55px;
+        @include bp($max:1024px) {
+            padding: 20px 0 35px;
+        }
+    } 
+}
+// Align Section Title to left
+.content-block--title-align-left {
+    .section-title {
+        width: 100%;
+        max-width: none;
+        @include bp($max:1024px) {
+            width: 91.66667%;
+            margin: 25px auto 15px;
+        }
+        @include bp($max:480px) {
+            width: 100%;
+        }
+    }
+}
+// Vertically align content on the left
+.content-block--left-valign-sm {
+    .content__group--1 {
+        padding-top: 10px;
+        @include bp($max:1024px) {
+            padding-top: 0;
+        }
+    }
+}
+.content-block--left-valign-md {
+    .content__group--1 {
+        padding-top: 20px;
+        @include bp($max:1024px) {
+            padding-top: 0;
+        }
+    }
+}
+.content-block--left-valign-lg {
+    .content__group--1 {
+        padding-top: 30px;
+        @include bp($max:1024px) {
+            padding-top: 0;
+        }
+    }
+}
+// Vertically align content on the right
+.content-block--right-valign-sm {
+    .content__group--2 {
+        padding-top: 10px;
+        @include bp($max:1024px) {
+            padding-top: 0;
+        }
+    }
+}
+.content-block--right-valign-md {
+    .content__group--2 {
+        padding-top: 20px;
+        @include bp($max:1024px) {
+            padding-top: 0;
+        }
+    }
+}
+.content-block--right-valign-lg {
+    .content__group--2 {
+        padding-top: 30px;
+        @include bp($max:1024px) {
+            padding-top: 0;
+        }
+    }
+}
+// Vertical Spacing adds extra pading-top on the second content
+// group at 1024px, this will give some seperation when content stacks
+.content-block--vertical-spacing {
+    @include bp($max:1024px) {
+        .content__group--2 {
+            padding-top: 15px;
+        }
+    }
+}
+// Image-top, floats the first column to the right
+// So it will be on top at tablet and mobile
+.content-block--image-top {
+    &.content--2 {
+        &.content__two-col--half {
+            .content__group--1 {
+                float: right;
+                @include bp($max:1024px) {
+                    float: none;
+                }
+            }
+        }
+    }
+}
+
+
+

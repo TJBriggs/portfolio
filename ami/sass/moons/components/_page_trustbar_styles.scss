@@ -1,0 +1,35 @@
+/*------------------------------------*\
+    ::  Trustbar Styles
+\*------------------------------------*/
+.trust-bar {
+	.trust-bar__logos {
+		.trust-bar__logo {
+			text-align: center;
+		}
+	}
+	/*----------------------------------------------*\
+	    :: Background Modifiers
+	\*----------------------------------------------*/
+	// Static bg image
+	&[class*="--image"] {
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		.trust-bar__overlay {
+		    background: rgba(29,32,42,0.82);
+		}
+	}
+	// Parallax bg image
+	&[class*="--parallax"] {
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-attachment: fixed;
+		.trust-bar__overlay {
+		    background: rgba(29,32,42,0.82);
+		}
+		@include bp($max:1024px) {
+		    background-attachment: initial;
+		}
+	}
+}

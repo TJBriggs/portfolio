@@ -1,0 +1,154 @@
+/*------------------------------------*\
+    ::  Blog Single Page Styles
+\*------------------------------------*/
+.single {
+	.main-torso {
+		background-color: #faffff;
+	}	
+	.single-torso__content {
+		&:after {
+			background-color: #9cabb1;
+		}
+	}
+	.single-torso__posted {
+		h4 {
+			font-family: $fam-head-bold;
+			a {
+				color: $color-1;
+				transition: color 400ms;
+			}
+			&:hover {
+				a {
+					color: $color-2;
+					text-decoration: none;
+				}
+			}
+		}
+		.post-date {
+			color: #626667;
+			font-size: 20px;
+			font-family: $fam-rob-reg;
+		}
+		.post-categories {
+			list-style-type: none;
+			@include bp($max:550px) {
+				&:before {
+					color: #626667;
+					font-size: 24px;
+				}				
+			}
+			li {
+				color: #626667;
+				&:after {
+					font-size: 18px;
+					font-weight: bold;
+				}
+				@include bp($max:550px) {
+					a {
+						font-size: 20px;
+					}
+				}
+				a {
+					color: #626667;
+					font-family: $fam-rob-reg;
+					font-size: 18px;
+					font-weight: bold;
+					pointer-events: none;
+				}
+			}
+		}
+		.social-links {
+			li {
+				list-style-type: none;
+				a {
+					svg {
+						cursor: pointer;
+						fill: #626667;
+						transition: fill 400ms;
+					}
+					&:hover {
+						svg {
+							fill: $color-2;
+						}
+					}
+				}
+			}
+		}
+		.post-tag {
+			color: $color-1;
+			transition: color 400ms;
+			a {
+				color: $color-1;
+				font-family: $fam-rob-reg;
+				font-size: 18px;
+				font-weight: bold;
+				transition: color 400ms;
+				&:hover {
+					color: $color-2;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+	/*------------------------------------*\
+    	::  Application Form Styles
+	\*------------------------------------*/
+	.form__title {
+		margin: 25px 0 45px;
+		font-family: $fam-heading;
+		strong {
+			font-family: $fam-head-bold;
+		}
+		&:after {
+			content: '';
+			height: 4px;
+			width: 95px;
+			position: absolute;
+			bottom: -14px;
+			left: 0;
+			z-index: 1;
+			background: $color-3;
+		}
+	}
+	.email-wrap {
+		float: left;
+		width: 100%!important;
+		margin: 0 0 0.9375rem 0;
+		position: relative;
+	}	
+	.resume-wrap {
+		float: left;
+		height: 45px;
+		width: 100%;
+		background: #f2f6f7;
+		border-radius: 0.2em;
+		border: 1px solid #9cabb1;
+		margin: 0 0 0.9375rem 0;
+		position: relative;
+
+		.upload-box {
+			position: absolute;
+			top: 8px;
+			left: $pad;
+			svg {
+				fill: #888c93;
+			}
+			span {
+				color: #a5adbe;
+				font-family: $fam-rob-reg, sans-serif;
+				font-size: 15px;
+	   			letter-spacing: -0.01em;
+			}
+		}
+		.resume {
+			display: block;
+			width: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 500;
+			cursor: pointer;
+			opacity: 0;
+		}
+	}
+}	

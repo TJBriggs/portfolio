@@ -1,0 +1,160 @@
+/*------------------------------------*\
+    :: Content Block
+\*------------------------------------*/
+// General Styles
+.content-block {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background-color: $color-3-light;
+}
+.content-block--image {
+    .content-block__image {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 45%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        @include bp($max:959px) {
+            position: static;
+            height: 25em;
+            width: 100%;
+            margin-left: $pad*2;
+        }
+        @include bp($max:640px) {
+            height: 20em;
+        }
+        @include bp($max:500px) {
+            height: 17em;
+            margin-left: $pad;
+        }
+    }
+    .content-block__content {
+        float: right;
+        min-height: 400px;
+        width: 100%;
+        max-width: 500px;
+        margin: 0 55% 0 0;
+        padding: 2em $pad*3 2em $pad*2;
+        h2 {
+            max-width: 420px;
+        }
+        .content-block__text {
+            & > *:last-child {
+                margin-bottom: 0;
+            }
+        }
+        @include bp($max:1065px) {
+            width: 45%;
+            max-width: none;
+            padding: 2em $pad*2;
+        }
+        @include bp($max:959px) {
+            min-height: 0;
+            width: 100%;
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 2.5em $pad*2 0;
+            h2 {
+                max-width: none;
+            }
+        }
+        @include bp($max:500px) {
+            margin-right: 0;
+            padding: 2.5em $pad 0;
+        }
+    }
+}
+// Image Layout Modifier
+.content-block--image {
+    &.content-block--right {
+        .content-block__image {
+            right: 45%;
+            left: 0;
+            @include bp($max:959px) {
+                margin-right: $pad*2;
+            }
+            @include bp($max:500px) {
+                margin-right: $pad;
+            }
+        }
+        .content-block__content {
+            float: left;
+            width: 100%;
+            max-width: 500px;
+            margin: 0 0 0 55%;
+            padding: 2em $pad*2 2em $pad*3;
+            @include bp($max:1065px) {
+                width: 45%;
+                max-width: none;
+                padding: 2em $pad*2;
+            }
+            @include bp($max:959px) {
+                width: 100%;
+                max-width: 1140px;
+                margin: 0 auto;
+                padding: 2.5em $pad*2 0;
+            }
+            @include bp($max:500px) {
+                padding: 2.5em $pad 0;
+            }
+        }
+    }
+}
+/*------------------------------------*\
+    :: Content Block Video
+\*------------------------------------*/    
+.content-block--video {
+    .content-block__main-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row-reverse;
+        width: 100%;
+    }
+    .content-block__wrap-video {
+        width: 60%;
+        @include bp($max:959px) {
+            width: 100%;
+            padding-top: 0!important;
+        }
+    }
+    .content-block__content {
+        width: 40%;
+        padding: 0 3em 0 0;
+        h2 {
+            max-width: 420px;
+        }
+        .content-block__text {
+            & > *:last-child {
+                margin-bottom: 0;
+            }
+        }
+        @include bp($max:959px) {
+            width: 100%;
+            padding: 2.5em 0 0;
+            h2 {
+                max-width: none;
+            }
+        }
+    }
+}
+// Video Layout Modifier
+.content-block--video {
+    &.content-block--right {
+        .content-block__main-wrap {
+            flex-direction: row;
+            @include bp($max:959px) {
+                flex-direction: row-reverse;
+            }
+        }
+        .content-block__content {
+            padding: 0 0 0 3em;
+            @include bp($max:959px) {
+                padding: 2.5em 0 0;
+            }
+        }
+    }
+}

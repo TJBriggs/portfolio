@@ -1,0 +1,31 @@
+/*-------------------------------------------*\
+    ::Page Styles - Invisalign
+\*-------------------------------------------*/
+.page__group--invisalign-cost {
+    box-shadow: 0px 1px 8px 3px rgba(0, 0, 0, 0.45);
+    margin-top: 470px;
+    padding: 40px 0 50px;
+    width: 100%;
+    @include bp($solarsystem) {// remove parallax spacing for mobile
+        margin-top: 0px;
+    }
+    .section__title-wrap {
+        h2 {
+            color: $color-3;
+        }
+    }
+    li {
+        color: $color-3;
+    }
+}
+//////////////////////////////////////////
+// Parallax spacing before Cost section
+//////////////////////////////////////////
+#treatments-sub {
+    &.page-invisalign {
+        .faqs {
+            box-shadow: none;
+            margin-top: 0px;
+        }
+    }
+}

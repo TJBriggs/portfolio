@@ -1,0 +1,164 @@
+/*------------------------------------*\
+    ::Nav in the Header
+\*------------------------------------*/
+.nav__activator{
+    @include col(4.5, $offset: 1,$float:right);
+    padding:{top:5px;}
+    font-family:$fam-nav;
+    text-align:right;
+    a{
+        
+        @extend .icon--menu;
+        color:$white;
+        font-family: $fam-nav;
+        font-size: 1.5em;
+        transition:400ms;
+        &:before{
+            @extend .icon;
+            float:right;
+            padding:{left:10px;}
+            font-size:3.25em;
+            line-height:.45em;
+            color: $white;
+        }
+        &:hover{
+            color:$color-1;
+        }
+    }
+    @include bp($planetary) {
+        @include col(5.5, $offset:0);
+        float: right;
+        a {
+            font-size: emCalc(22px);
+        }   
+    }
+}
+.icon--cancel{
+    margin:{top:15px;left:20px;};
+    color:$white;
+    font:{
+        size:3em;
+    }
+    cursor:pointer;
+    transition:300ms;
+    &:hover{
+        color: $color-1;
+    }
+}
+.head-nav__wrap{
+    position:fixed;
+    top:0;
+    right:0;
+    width:0;
+    height:100%;
+    overflow:hidden;
+    background:$color-2;
+    background:rgba($color-2, 0.95);
+    transition:400ms;
+    z-index: 9999;
+    &.active{
+        width:415px;
+        // min-height:574px;
+        overflow:scroll;
+    }
+    .head-nav {
+        @include nav(
+            $type: 'nested',                     //nav type: drop down or nested
+            $fade: .3s,                          //fade speed (take out for no animation)
+            $easy-hover: 50px,                   //amount of invisible overflow for sub menu (take out to not use)
+            $easy-hover-top: 1.2em               //set top easy-hover value (you can also set $easy-hover-right, -bottom, and -left separately)
+        );
+        > ul{
+            margin:{top:30px;}
+            padding:{right:140px;left:60px};
+            > li{
+                padding:{bottom:15px;}
+                > a{
+                    font: {
+                    size:1.5em;
+                }
+                }
+            }
+        }
+        li{
+            clear:both;
+            padding:{top:5px;bottom:5px;}
+            &.current_page_item,
+            &.current-menu-item{
+                > a{
+                    color:$color-1;
+                }
+            }
+        }
+        a{
+            overflow:hidden;
+            color:$white;
+            font: {
+                family:$fam-nav;
+                weight:100;
+            }
+            white-space:nowrap;
+            transition:400ms;
+            &:hover{
+                color:$color-1;
+            }
+            text:{
+                decoration:none;
+                transform:uppercase;
+            }
+        }
+    }
+    @include bp($planetary) {
+        &.active{
+            width:100%;
+            min-height:0;
+            overflow:scroll;
+        }
+        .head-nav{
+            > ul{
+                padding:{left:20px;}
+            }
+        }
+        .head-nav__phone{
+            padding:{left:20px;}
+        }
+    }
+}
+.sub-menu {
+    li{
+        a{
+            color:darken($white, 25%);
+            font:{
+                size: .8em;
+            }
+        }
+    }
+}
+.head-nav__phone{
+    @include col(12);
+    padding:{left:60px;}
+    margin: 10px 0;
+    color:$white;
+    font:{
+        family:$fam-heading;
+        size:1.65em;
+    }
+    a{
+        color:$white;
+        text-decoration:none;
+        pointer-events:none;
+    }
+    .note {
+        display:inline-block;
+        margin-left: 5px;
+        font: {
+            size: .5em;
+        }
+    }
+    @include bp($planetary) {
+        a{
+            text-decoration:underline;
+            pointer-events:auto;
+        }
+    }
+}

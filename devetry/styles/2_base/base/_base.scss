@@ -1,0 +1,21 @@
+/*------------------------------------*\
+    :: Base
+\*------------------------------------*/
+// Set high level styles for elements like HTML, Body, etc here.
+// body#tinymce {
+//   margin: 12px !important;
+// }
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    width: 100%;
+}
+.main-torso__module {
+    float: left;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}

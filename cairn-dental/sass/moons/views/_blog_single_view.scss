@@ -1,0 +1,77 @@
+/*------------------------------------*\
+    ::  Blog Single Page Styles
+\*------------------------------------*/
+.single {
+	.main-torso {
+		background-color: $color-4;
+	}	
+	.single-torso__content {
+		&:after {
+			background-color: $color-1;
+		}
+	}
+	.single-torso__hero {
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		.hero__overlay {
+			background-color: rgba(0, 0, 0, 0.45);
+			transition: background-color 500ms;
+			&:hover {
+				background-color: rgba(0, 0, 0, 0.65);
+			}
+		}
+	}
+	.social-links {
+		li {
+			list-style-type: none;
+			a {
+				line-height: 0;
+				svg {
+					fill: $color-4;
+					opacity: 0.55;
+					transition: opacity 500ms;
+				}
+				&:hover {
+					svg {
+						opacity: 1;
+					}
+				}
+			}
+		}
+	}
+	.single-torso__posted {
+		h4 {
+			color: $txt-color-4;
+			a {
+				color: $color-1;
+				transition: color 400ms;
+			}
+			&:hover {
+				a {
+					color: $color-2;
+					text-decoration: none;
+				}
+			}
+		}
+		.post-date {
+			color: $color-1;
+			font-family: $fam-bold;
+			font-size: 20px;
+		}
+		.post-tag {
+			color: $color-2;
+			transition: color 400ms;
+			a {
+				color: $color-2;
+				font-family: $fam-semi;
+				font-size: 16px;
+				transition: color 400ms;
+				&:hover {
+					color: $txt-color-4;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}	

@@ -1,0 +1,81 @@
+/*------------------------------------*\
+    ::  Text Block Layout
+\*------------------------------------*/	
+.text-block {
+	width: 100%;
+	overflow: hidden;
+	&__inner {
+		padding: 0 $pad;
+	}
+	.section-title {
+		padding: 0;
+		@include bp($max:1024px) {
+			width: 100%;
+		}
+	}
+	&__item {
+		h5 {
+			margin-bottom: 0.5em;
+		}
+		p {
+			margin-bottom: o.5em;
+		}
+	}
+	&__item-link {
+		&:after {
+			content: '>';
+			position: relative;
+			margin-left: 10px;
+			transition: margin 300ms;
+		}
+		&:hover {
+			&:after {
+				margin-left: 15px;
+			}
+		}
+	}
+	&__foot-btns {
+		margin-top: 2.5em;
+		.btn {
+			margin: 0;
+			&:first-of-type {
+				margin-right: 1em;
+				margin-bottom: 1em
+			}
+			@include bp($max:400px) {
+				width: 100%;
+			}
+		}
+	}
+	/*------------------------------------*\
+	    ::  Modifiers
+	\*------------------------------------*/
+	&.text-block--two-column {
+		.text-block__inner {
+			padding-left: $pad;
+			padding-right: $pad;
+		}
+		.section-title {
+			padding: 0 $pad;
+			margin-bottom: 0.25em;
+			@include bp($max:480px) {
+				padding: 0;
+			}
+		}
+		.text-block__items {
+			display: flex;
+			flex-wrap: wrap;
+			.text-block__item {
+				width: 50%;
+				padding: 0 $pad;
+				transition: width 400ms;
+				@include bp($max:700px) {
+					width: 100%;
+				}
+				@include bp($max:480px) {
+					padding: 0;
+				}
+			}
+		}
+	}	
+}

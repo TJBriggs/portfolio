@@ -1,0 +1,177 @@
+/*------------------------------------*\
+    ::  Carousel Slider Layout
+\*------------------------------------*/	
+.carousel-slider {
+	width: 100%;
+	overflow: hidden;
+	.section-title {
+		height: 60px;
+		width: 100%;
+		margin: 0;
+		span {
+			display: inline-block;
+			height: 100%;
+			width: auto;
+			padding: 0 $pad*1.5;
+		}
+		@include bp($max:500px) {
+			padding: 0;
+			span {
+				width: 100%;
+			}
+		}
+	}
+	&__slides {
+		margin: 15px 0 0;
+		padding: 0 $pad*3 0 $pad*4;
+		@include bp($max:1024px) {
+			padding: 0 0 0 $pad;
+		}
+		@include bp($max:500px) {
+			padding: 0 0 30px $pad;
+		}
+	}
+	&__slide {
+		height: 235px;
+		margin-right: $pad;
+		position: relative;
+		text-align: center; // For layout purposes
+		&:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			z-index: 1;
+		}
+		.carousel-slider__content {
+			height: 100%;
+			width: 100%;
+			position: relative;
+			z-index: 10;
+		}
+		h3 {
+			display: inline-block;
+			width: auto;
+			margin: 0 auto;
+			padding: 20px $pad 12px;
+			position: relative;
+			&:after {
+				content: '';
+				width: 100%;
+				height: 1px;
+				position: absolute;
+				left: 0;
+				bottom: 0;
+			}
+		}
+		p {
+			margin: 0;
+			padding: 0 $pad;
+			position: absolute;
+			left: 0;
+			bottom: $pad;
+		}
+	}
+	/*------------------------------------*\
+	    ::  Owl Arrows & Dots
+	\*------------------------------------*/
+	// Make the controls wrapper be the relative parent 
+	// at 1024px to move the arrows down by the dots.
+	.owl-controls { 
+		width: 100%;
+		margin-top: 18px;
+		text-align: center; // For layout purposes
+		@include bp($max:1024px) {
+			display: inline-block;
+			width: auto;
+			position: relative;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+	.owl-prev, .owl-next {
+		height: 235px;
+		width: 55px;
+		position: absolute;
+		top: 0;
+		img {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+		@include bp($max:1024px) {
+			height: 25px;
+			width: 13px;
+			top: -2px;
+			img {
+				height: 25px;
+				width: 13px;
+				top: 0;
+				transform: none;
+			}
+		}
+	}
+	.owl-prev {
+		left: 0;
+		img {
+			left: $pad;
+		}
+		@include bp($max:1024px) {
+			left: -30px;
+			img {
+				left: 0;
+			}
+		}
+		@include bp($max:500px) {
+			left: -75px;
+		}
+	}
+	.owl-next {
+		right: 0;
+		img {
+			right: $pad;
+		}
+		@include bp($max:1024px) {
+			right: -30px;
+			img {
+				right: 0;
+			}
+		}
+		@include bp($max:500px) {
+			right: -75px;
+		}
+	}
+	.owl-pagination {
+		display: inline-block;
+		text-align: center; // For layout purposes
+		@include bp($max:500px) {
+			display: none;
+		}
+		.owl-page {
+			display: inline-block;
+			margin: 0 em(8px);
+			span {
+				display: inline-block;
+				height: 18px;
+				width: 18px;
+			}
+		}
+	}
+	/*------------------------------------*\
+	    ::  Spacing Modifiers
+	\*------------------------------------*/	
+	&.carousel-slider--pad-top {
+	    padding-top: emCalc(45px);
+	}
+	&.carousel-slider--pad-top-lg {
+	    padding-top: emCalc(60px);
+	}
+	&.carousel-slider--pad-bot {
+	    padding-bottom: emCalc(45px);
+	}
+	&.carousel-slider--pad-bot-lg {
+	    padding-bottom: emCalc(60px);
+	}
+}

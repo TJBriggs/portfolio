@@ -1,0 +1,73 @@
+/*------------------------------------*\
+    ::  Icon CTA Styles
+\*------------------------------------*/	
+.icon-ctas {
+	background-color: $color-4;
+	.section-title {
+		text-align: center;
+		@include bp($max:480px) {
+			font-size: 30px;
+		}
+	}
+}
+.cta__wrap {
+	text-align: center;
+}
+.cta {
+	.cta__content {
+		background: transparent;
+		transition: background 500ms;
+ 	}
+ 	.cta__hover {
+		text-align: center;
+ 	}
+	.cta__icon {
+		fill: $color-1;
+		transition: fill 500ms;
+	}
+	.cta__title {
+		color: $txt-color-4;
+		font-family: $fam-semi;
+		font-size: em(19px);
+		span {
+			color: $color-4;
+			font-family: $fam-light;
+			font-size: 0;
+			opacity: 0;
+			transition: opacity 400ms;
+		}
+		@include bp($max:575px) {
+			color: $color-2;
+			span {
+				color: $color-2;
+				font-size: em(17px);
+				opacity: 1;
+			}
+		}
+	}
+	.cta__text {
+		font-size: em(13.5px);
+		transition: opacity 500ms;
+	}
+	&:hover {
+		// Only run hover effects on tablet and desktop
+		@include bp($min:576px) {
+			.cta__content {
+				background: $color-2;
+			}
+			.cta__icon {
+				fill: $color-4;
+			}
+			.cta__title {
+				color: $color-4;
+				span {
+					font-size: em(17px);
+					opacity: 1;
+				}
+			}
+			.cta__text {
+				opacity: 0;
+			}
+		}
+	}
+}

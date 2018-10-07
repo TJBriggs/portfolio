@@ -1,0 +1,35 @@
+/*-------------------------------------------*\
+    ::Page Styles - About Braces
+\*-------------------------------------------*/
+.page-emergency-care {
+
+	.page__group--intro {
+		padding-bottom: 40px;
+	}
+	.page__group--video-links {
+		padding: 55px 0 40px;
+		text-align: center;
+		.section__title-wrap {
+			margin-bottom: 25px;
+		}
+		.thirds__group {
+			h2 {
+				color: $white;
+				font-size: emCalc(26px);
+				margin-bottom: 30px;
+			}
+		}
+	}
+	.fancybox-media {
+		margin: 0 auto 60px;
+		float: none;
+	}
+	.thirds__group {
+		a.btn {
+			&:first-of-type {
+				float: none;
+				margin: 0 auto 60px;
+			}
+		}
+	}
+}

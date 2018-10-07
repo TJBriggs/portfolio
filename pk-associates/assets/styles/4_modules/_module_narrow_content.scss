@@ -1,0 +1,24 @@
+/*------------------------------------*\
+    :: Narrow & Wide Content
+\*------------------------------------*/
+.narrow-content, .wide-content {
+    width: 100%;
+    overflow: hidden;
+    background-color: $color-3-light;
+}
+.narrow-content__content, .wide-content__content {
+    h2 {
+        margin-bottom: 0.4em;
+    }
+    div {
+        & > *:first-child {
+            margin-top: 0;
+        }
+        & > *:last-child {
+            margin-bottom: 0;
+        }
+    }
+    .btn {
+        margin-top: 2.25em;
+    }
+}

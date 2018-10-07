@@ -1,0 +1,147 @@
+/*------------------------------------*\
+    ::  Navigation Styles (Desktop)
+\*------------------------------------*/		
+.main-head__nav {
+	@include bp($min:1025px) {
+		float: left;
+		height: auto;
+		width: 100%;
+		.head-nav {
+			float: right;
+			width: 80%;
+			position: relative;
+		}
+		// General Styles
+		.head-nav a {
+			display: block;
+			text-decoration: none;
+			transition: font-weight 400ms;
+		}
+		// Main menu styles
+		.menu {
+			float: right;
+			margin: 0;
+			padding: 2.1em $pad 0 0;
+			position: relative;
+			z-index: 500;
+			> li {
+				float: left;
+				margin: 0 1.45em 0 0;
+				position: relative;
+				list-style-type: none;
+				> a {
+					height: 3.75em;
+					padding: 0 $pad;
+					color: $color-3;
+					font-family: $fam-nav;
+					font-size: 0.8em;
+					font-weight: 200;
+					letter-spacing: 0.1em;
+					line-height: 4em;
+					text-transform: uppercase;
+					transition: text-shadow 400ms;
+				}
+				&:hover {
+					> a {
+						text-shadow: 
+							0.003em 0px 0.003em $color-3, 
+							-0.003em 0px 0.003em $color-3,
+							0px -0.003em 0.003em$color-3, 
+							0px 0.003em 0.003em $color-3;
+					}
+					// Expand Sub-menu on Hover
+					.sub-menu {
+						visibility: visible;
+						height: auto;
+						max-height: 500px;
+						opacity: 1;
+						overflow: visible;
+					}
+				}
+				// Set max-widths on li's to keep main nav items spaced correctly
+				// Sub-menu text lengths are expanding the the length and breaking the spacing
+				&:nth-of-type(1) { // Golf Lessons
+					max-width: 140px;
+				}
+				&:nth-of-type(2) { // Club Fitting
+					max-width: 130px;
+				}
+				&:nth-of-type(3) { // Locations
+					max-width: 110px;
+				}
+				&:nth-of-type(4) { // About
+					max-width: 78px;
+				}
+				&:nth-of-type(5) { // Blog
+					max-width: 67px;
+				}
+				&:nth-of-type(6) { // Book a Lesson
+					margin-right: 0;
+					> a {
+						padding: 0;
+						span { // For border
+							display: inline-block;
+							height: 2.95em;
+							padding: 0 $pad;
+							background-color: transparent;
+							border: 2px solid $color-3;
+							color: $color-3;
+							line-height: 2.75em;
+							letter-spacing: 0.085em;
+							transition: all 400ms;
+						}
+						&:hover { // Special hover for border, background, text
+							span {
+								background-color: $color-2;
+								border: 2px solid $color-2;
+								text-shadow: 
+									0.003em 0px 0.003em $color-2, 
+									-0.003em 0px 0.003em $color-2,
+									0px -0.003em 0.003em$color-2, 
+									0px 0.003em 0.003em $color-2;
+							}
+						}
+					}
+				}
+			}
+		}
+		// Sub Menu Styles
+		.sub-menu {
+			max-height: 0;
+			width: 250px;
+			margin: 0;
+			padding: 0;
+			position: relative;
+			left: $pad;
+			overflow: hidden;
+			z-index: 9999;
+			background-color: transparent;
+			opacity: 0;
+			visibility: hidden;
+			transition: max-height 800ms, opacity 400ms;
+			> li {
+				width: 100%;
+				list-style-type: none;
+				> a {
+					height: 1.25em;
+					padding: 5px 0;
+					color: $color-3;
+					font-family: $fam-body;
+					font-size: 0.8em;
+					font-weight: 200;
+					letter-spacing: 0.085em;
+					text-shadow: none;
+					transition: text-shadow 400ms;
+					white-space: nowrap; // Force text on one line
+					&:hover {
+						text-shadow: 
+							0.003em 0px 0.003em $color-3, 
+							-0.003em 0px 0.003em $color-3,
+							0px -0.003em 0.003em$color-3, 
+							0px 0.003em 0.003em $color-3;
+					}
+				}
+			}
+		}
+	}
+}

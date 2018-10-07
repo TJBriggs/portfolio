@@ -1,0 +1,236 @@
+/*------------------------------------*\
+    :: Blog | Archive | Single Styles
+\*------------------------------------*/
+//////////////////////////////////////////////////////
+// Spacing offset for header (Desktop)
+//////////////////////////////////////////////////////
+@include bp($min: 1025px) {
+	.archive,  {
+		.cat-torso__inner, .arch-torso__inner {
+			margin-top: 175px;
+		}
+	}
+	.single, .category {
+		.single-torso__inner {
+			margin-top: 175px;
+		}
+	}
+
+}
+////////////////////////////////////////////////////////
+// Remove Spacing offset for Static header (mobile)
+////////////////////////////////////////////////////////
+@include bp($solarsystem) {
+	.archive,  {
+		.cat-torso__inner, .arch-torso__inner {
+			border-top: 8px solid $color-2;
+			margin-top: 0px;
+		}
+	}
+	.single, .category {
+		.single-torso__inner {
+			border-top: 8px solid $color-2;
+			margin-top: 0px;
+		}
+	}
+}
+////////////////////////////////////////////////////////
+// Global Blog Styles
+////////////////////////////////////////////////////////
+.single-torso__feat-image {
+	margin: 30px 0;
+}
+
+.archive, .category {
+	.arch-torso__content,
+	.cat-torso__content {
+		margin-bottom: 30px;
+		.single-torso__feat-image {
+			margin: 30px 0;
+		}
+		h1 {
+			color: $color-2;
+			margin: 30px 0 0;
+			padding: 0;
+		}
+		.single-torso__post {
+			padding-bottom: 10px;
+			border-bottom: 1px solid $color-2;
+			margin-bottom: 35px;
+			.single-torso__feat-image {
+				margin: 30px 0;
+			}
+			.single-torso__post-title {
+				color: $color-1;
+				display: block;
+				font-family: $fam-heading;
+				font-size: 2.15em;
+				font-weight: normal;
+				letter-spacing: 0.01em;
+				margin-top: 5px;
+				text-decoration: none;
+		   		transition: 400ms;
+		   		&:visited {
+					color: $color-1;
+				}
+		   		&:hover {
+					color: lighten($color-1, 15%);
+				}
+				
+			}
+			.single-torso__posted {
+				color: darken(#555555, 0.70%);
+				font-family: $fam-body;
+				font-weight: bold;
+				margin-bottom: 20px;
+			}
+		}
+		h2 {
+			color: $color-1;
+			margin: 20px 0 5px;;
+			padding: 0;
+		}
+		h3, h4, h5, h6 {
+			color: $color-2;
+		}
+		strong {
+			color: $color-2;
+			font-weight: bold;
+		}
+		p {
+			color: #555555;
+			font-size: 0.875em;
+	        line-height: 1.875rem;
+	        margin: 20px 0 0 0;
+	        overflow: hidden;
+		}
+		.single-torso__excerpt {
+			padding: 0;
+			width: 100%;
+			margin-bottom: 30px;
+			.excerpt-link {
+				color: $color-1;
+				text-decoration: none;
+		   		transition: 400ms;
+		   		&:visited {
+					color: $color-1;
+				}
+		   		&:hover {
+					color: lighten($color-1, 15%);
+				}
+				
+			}
+		}
+	} 
+}
+
+///////////////////////////
+// Single Page Styles
+///////////////////////////
+.single {
+	h2 {
+		color: $color-1;
+		margin: 20px 0 5px;
+		padding: 0;
+	}
+	h3, h4, h5, h6 {
+		color: $color-2;
+	}
+	strong {
+		color: $color-2;
+		font-weight: bold;
+	}
+	p {
+		color: #555555;
+		font-size: 0.875em;
+        line-height: 1.875rem;
+        margin: 20px 0 0 0;
+        overflow: hidden;
+	}
+	.post__posted {
+		color: darken(#555555, 0.70%);
+		font-family: $fam-body;
+		font-weight: bold;
+	}
+	.post__text {
+		margin-bottom: 50px;
+		a {
+	   		color: $color-1;
+	   		text-decoration: none;
+	   		transition: 400ms;
+	   		&:visited {
+	   			color: $color-1;
+	   		}
+	   		&:hover {
+	   			color: darken(#00a4e2,10%)
+	   		}
+	   	}
+	   	li {
+	   		color: #555555;
+	   	}
+	}
+}
+///////////////////////////
+// Pagination Styles
+///////////////////////////
+.arch-torso__paginate, .cat-torso__paginate {
+	.nav-previous, .nav-next {
+		width: 40%;
+		margin: 0;
+		a {
+			background: $color-1;
+			color: $white;
+			display: block;
+			font-size: emCalc(18px);
+			height: 50px;
+			line-height: 50px;
+			text-align: center;
+			text-decoration: none;
+			transition: 400ms;
+			width: 100%;
+			&:hover {
+				color: #fff;
+				background: darken($color-1,10%);
+			}
+		}
+	}
+	@include bp($max:700px) {
+		.nav-previous {
+			width: 45%;
+		}
+		.nav-next {
+			width: 45%;
+		}
+	}
+	@include bp($planetary) {
+		.nav-previous {
+			border-right: 1px solid $white;
+			width: 50%;
+		}
+		.nav-next {
+			border-left: 1px solid $white;
+			width: 50%;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,267 @@
+/*------------------------------------*\
+    ::  Venn Diagram Layout
+\*------------------------------------*/	
+
+$info-parent: 960px;
+$info-width: 45%;
+$info-offset: 16%;
+$info-border: 50%;
+$info-icon-width: 20%;
+$info-text-offset: 50%;
+
+
+/*------------------------------------*\
+    ::Containers
+\*------------------------------------*/
+.venn-diagram__wrapper {
+    display: block;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    &:hover {
+        text-decoration: none;
+    }
+}
+.venn-diagram {
+    text-align: center;
+    max-width: $info-parent;
+    margin: 0 auto 0;
+    padding: 0 2em 2em;
+    @include bp($max:768px) {
+        padding-bottom: 0;
+    }
+    @include bp($max:640px) {
+        max-width: 620px;
+        padding-bottom: 45px;
+    }
+}
+.venn-diagram__inner {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    padding-bottom: 100%;
+    transform: translate3d(0,0,0);
+}
+
+/*------------------------------------*\
+    ::Individual Parts
+\*------------------------------------*/
+.venn-diagram {
+    .section-title {
+        margin-top: emCalc(60px);
+        margin-bottom: 0;
+        @include bp($max:768px) {
+            display: none;
+        }
+    }
+}
+[class^="venn-diagram__part"]{
+    @extend %abs-center;
+    width: $info-width;
+    height: $info-width;
+    @include bp($max:640px) {
+        height: 55%;
+        width: 55%;
+    }
+}
+.venn-diagram__part--circle-1 { // Light blue top left
+    margin-top: -$info-offset;
+    margin-left: -$info-offset;
+    z-index: 50;
+    @include bp($max:640px) {
+        left: 45%;
+    }
+}
+.venn-diagram__part--circle-2 { // Dark gray top right
+    margin-top: -$info-offset;
+    margin-left: $info-offset;
+    z-index: 40;
+     @include bp($max:640px) {
+        left: 55%;
+    }
+}
+.venn-diagram__part--circle-3 { // Navy blue center bottom
+    z-index: 30;
+     @include bp($max:640px) {
+        top: 55%;
+    }
+}
+
+/*------------------------------------*\
+    :: Logos
+\*------------------------------------*/
+.venn-diagram__primary-logo {
+    height: 14%;
+    width: 14%;
+    @extend %abs-center;
+    top: 47.5%;
+    z-index: 60;
+    @include bp($max:768px) {
+        height: 12%;
+        width: 12%;
+    }
+    @include bp($max:640px) {
+        height: 14%;
+        width: 14%;
+    }
+}
+.venn-diagram__secondary-logo {
+    position: absolute;
+    bottom: 60px;
+    left: 62%;
+    width: 370px;
+    height: auto;
+    z-index: 1;
+    @include bp($max:1024px) {
+        left: 63%;
+        max-width: 300px;
+    }
+    @include bp($max:960px) {
+        left: 63%;
+        max-width: 250px;
+    }
+    @include bp($max:768px) {
+        position: static;
+        width: 90%;
+        max-width: 370px;
+        margin: 45px auto 0;
+    }
+}
+
+/*------------------------------------*\
+    :: Circle Icons
+\*------------------------------------*/    
+.venn-diagram__icon {
+    @extend %abs-center;
+    height: 75px;
+    width: 75px;
+    @include bp($max:640px) {
+        height: 55px;
+        width: 55px;
+    }
+    @include bp($max:450px) {
+        height: 45px;
+        width: 45px;
+    }
+    .venn-diagram__part--circle-2 & {
+        height: 85px;
+        width: 85px;
+        @include bp($max:640px) {
+            height: 65px;
+            width: 65px;
+        }
+        @include bp($max:450px) {
+            height: 55px;
+            width: 55px;
+        }
+    }
+    .venn-diagram__part--circle-3 & {
+        height: 85px;
+        width: 85px;
+        @include bp($max:640px) {
+            height: 65px;
+            width: 65px;
+        }
+        @include bp($max:450px) {
+            height: 55px;
+            width: 55px;
+        }
+    }
+}
+/*------------------------------------*\
+    :: Circle Text
+\*------------------------------------*/
+.venn-diagram__text {
+    height: 1.5em;
+    width: 75%;
+    position: absolute;
+    top: 20%;
+    z-index: 10;
+    @include bp($max:768px) {
+        top: 67%;
+    }
+    @include bp($max:640px) {
+        top: 70%;
+    }
+    .venn-diagram__part--circle-1 & {
+        left: -25%;
+        text-align: left;
+        @include bp($max:768px) {
+            left: 50%;
+            text-align: center;
+            transform: translateX(-50%);
+        }
+    }
+    .venn-diagram__part--circle-2 & {
+        right: -25%;
+        text-align: right;
+        @include bp($max:768px) {
+            right: 50%;
+            text-align: center;
+            transform: translateX(50%);
+        }
+    }
+    .venn-diagram__part--circle-3 & {
+        top: 58%;
+        left: -$info-text-offset;
+        left: -25%;
+        text-align: left;
+        @include bp($max:768px) {
+            top: 67%;
+            left: 50%;
+            text-align: center;
+            transform: translateX(-50%);
+        }
+         @include bp($max:640px) {
+            top: 73%;
+        }
+    }
+    .venn-diagram__part--circle-1 &,
+    .venn-diagram__part--circle-2 & {
+        @include bp($max: 551px){
+            left: 50%;
+            top: 68%;
+            transform: translateX(-50%);
+            text-align: center;
+        }
+    }
+    .venn-diagram__part--circle-3 & {
+        @include bp($max: 551px){
+            top: 68%;
+        }
+    }
+}
+
+/*------------------------------------*\
+    :: Lines
+\*------------------------------------*/
+@include bp($min: 550px){
+    .venn-diagram__text {
+        &:before { // line
+            content: "";
+            position: absolute;
+            bottom: -3px;
+            width: 100%;
+            @include bp($max:768px) {
+                display: none;
+            }
+        }
+        .venn-diagram__part--circle-1 & {
+            &:before { // line
+                right: 0;
+            }
+        }
+        .venn-diagram__part--circle-2 & {
+            &:before { // line
+                left: 0;
+            }
+        }
+        .venn-diagram__part--circle-3 & {
+            &:before { // line
+                top: 0;
+                right: 0;
+            }
+        }
+    }
+}

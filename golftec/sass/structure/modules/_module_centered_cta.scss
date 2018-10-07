@@ -1,0 +1,126 @@
+/*------------------------------------*\
+    ::  Centered CTA Styles
+\*------------------------------------*/
+.centered-cta { // Golfer BG Image
+	height: 31em;
+	max-height: 450px;
+	width: 100%;
+	max-width: 1440px;
+	margin: 0 auto;
+	text-align: center; // For layout purposes
+	background-color: $color-3;
+	background-position: -100% 0;
+	background-repeat: no-repeat;
+	background-size: 35em;
+	transition: background-position 1200ms;
+	&.visible {
+		background-position: 0 0;
+	}
+	&__wrap { // Club BG Image
+		height: 100%;
+		width: 100%;
+		background-position: 200% 0;
+		background-repeat: no-repeat;
+		background-size: 35em;
+		transition: background-position 1200ms;
+		&.visible {
+			background-position: 100% 0;
+		}
+		&:before { // Centering the unknown
+			content: '';
+			height: 100%;
+			margin-left: -0.25em;
+			display: inline-block;
+			vertical-align: middle;
+		}
+	}
+	&__content {
+		display: inline-block; // Centering the unknown
+		width: 99%; // Extra space for Centering the unknown
+		max-width: 500px;
+		margin: 7em auto 0;
+		vertical-align: middle; // Centering the unknown
+		transition: margin 400ms;
+		h4 {
+			margin: 0;
+			font-size: 1.65em;
+			line-height: 1.25em;
+		}
+		p {
+			max-width: 400px;
+			margin: 1.65em auto 0;
+		}
+		// Keep button size fixed
+		.centered-cta__btn {
+			font-size: 16px;
+			margin-bottom: 0;
+			margin-top: 2.1em;
+		}
+	}
+	// Scale Down
+	@include bp($max:1320px) {
+		font-size: 1.25vw;
+	}
+	@include bp($max:1024px) {
+		height: 430px;
+		font-size: 16px;
+		background-image: none!important; // Overrides inline style
+		&__wrap {
+			background-image: none!important; // Overrides inline style
+		}
+		&__content {
+			margin-top: 6em;
+		}
+	}
+	@include bp($max:500px) {
+		height: 25em;
+		font-size: 3.2vw;
+		&__content {
+			max-width: none;
+			margin-top: 12vw;
+			padding: 0 $pad;
+			p {
+				margin-top: 15px;
+				font-size: 15px;
+			}
+			.centered-cta__btn {
+				min-width: 225px;
+				margin-top: 20px;
+			}
+		}
+	}
+	@include bp($max:400px) {
+		height: 32em;
+		font-size: 3.5vw;
+		&__content {
+			margin-top: 14vw;
+		}
+	}
+}	
+/*------------------------------------*\
+    ::  KSS MarkUp (Ignore)
+\*------------------------------------*/ 
+// Centered CTA
+//
+// Demo:<br><a href="../modules/module-centered-cta.php" target="_blank">module-centered-cta.php</a>
+//
+// Stylesheet:<br>
+// <a href="../sass/structure/modules/_module_centered_cta.scss" target="_blank">_module_centered_cta.scss</a><br>
+//
+// <h5 class="code-reference">Path To The Code:</h5>
+// golftec/golftec/modules/module-centered-cta.php<br>
+// golftec/golftec/js/scripts-src/waypoints.js
+//
+// Markup:
+// <article class="centered-cta main-torso__group" style="background-image: url('../images/modules/centered-cta/swinger-opaque.jpg')";>
+//     <div class="centered-cta__wrap" style="background-image: url('../images/modules/centered-cta/club-opaque.jpg')";>
+//         <div class="centered-cta__content">
+//             <h4><strong>Talk With A Coach</strong> To Learn How You Can Drastically Improve Your Game.</h4>
+//             <p>Each of our Certified Personal Coaches is an experienced golf professional, and passionate about improving your game.
+//             </p>
+//             <a class="centered-cta__btn btn" href="#" style="float:none;">Improve Your Game</a> <!-- // float:none; KSS only to center -->
+//         </div> <!-- // centered-cta__content -->
+//     </div> <!-- // centered-cta__wrap -->
+// </article> <!-- // centered-cta -->
+//
+// Styleguide 6.8

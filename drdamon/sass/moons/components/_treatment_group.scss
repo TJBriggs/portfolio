@@ -1,0 +1,130 @@
+/*------------------------------------*\
+    :: Treatment Group on Home Page
+\*------------------------------------*/
+.treat-group {
+    padding: 60px 0 40px;
+    .treat-group__title {
+        color: $color-1;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        width: 100%;
+    }
+    .treat-group__text {
+        margin: 35px 0 35px;
+        p {
+            color: #555555;
+            font-family: $italic;
+            font-size: emCalc(18px);
+            letter-spacing: 0.02em;
+            line-height: 2.3em;
+            width: 72%;
+            margin: 0 auto;
+        }
+    }
+    .treat-list {
+        margin: 0 auto;
+        padding: 0;
+        width: 65%;
+        @include bp($planetary) {
+            width: 85%;
+        }
+        li {
+            float: left;
+            list-style-type: none;
+            padding: 0 5%;
+            width: 33.333%;
+            @include bp($max: 768px) {
+                width: 50%;
+            }
+            a {
+                color: $color-2;
+                display: block;
+                font-family: $fam-body;
+                font-size: emCalc(18px);
+                height: 100%;
+                text-align: center;
+                text-decoration: none;
+                width: 100%;
+                transition: all 400ms;
+                &:visited, &.active {
+                    color: $color-2;
+                }
+                &:hover { // Change text color for treatment name
+                    color: $color-3;
+                }
+                &:hover {
+                    h4 {
+                        &:before { // Change icon color for treatment
+                            color: $color-2;
+                        }
+                    } 
+                }
+            }
+            h4 {
+                margin: 0 0 30px 0;
+                padding: 0;
+                &:before {
+                    color: $color-1;
+                    font-size: emCalc(100px);
+                    margin: 25px 0 0;
+                    padding: 20px 0 40px 0;
+                    transition: all 400ms;
+                    width: 100%;
+                    &:hover {
+                        color: $color-2;
+                    }
+                }
+            }
+            &:nth-of-type(1) {
+                h4 {
+                    &:before {
+                        @extend .icon--braces:before;
+                        @extend .icon;
+                    }
+                }
+            }
+            &:nth-of-type(2) {
+                h4 {
+                    &:before {
+                        @extend .icon--invisalign:before;
+                        @extend .icon;
+                    }
+                }
+            }
+            &:nth-of-type(3) {
+                h4 {
+                    &:before {
+                        @extend .icon--lingual-braces:before;
+                        @extend .icon;
+                    }
+                }
+            }
+            &:nth-of-type(4) {
+                h4 {
+                    &:before {
+                        @extend .icon--early-treatment:before;
+                        @extend .icon;
+                    }
+                }
+            }
+            &:nth-of-type(5) {
+                h4 {
+                    &:before {
+                        @extend .icon--retention:before;
+                        @extend .icon;
+                    }
+                }
+            }
+            &:nth-of-type(6) {
+                h4 {
+                    &:before {
+                        @extend .icon--invisalign-teen:before;
+                        @extend .icon;
+                    }
+                }
+            }
+            
+        }
+    }
+}

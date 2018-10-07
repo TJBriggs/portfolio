@@ -1,0 +1,207 @@
+/*------------------------------------*\
+    :: Hero Grid
+\*------------------------------------*/ 
+.hero-grid-html {
+    body {
+        overflow: hidden;
+        @media screen and (max-width:959px) , screen and (max-height:700px) {
+            overflow: auto;
+            padding-top: 85px;
+        }  
+    }
+    .main-head {
+        position: static;
+        @media screen and (max-width:959px) , screen and (max-height:700px) {
+            position: fixed;
+            &.nav--visible {
+                box-shadow: 0 6px 20px 0 rgba(155, 155, 155, 0.85);
+            }
+        } 
+    }
+}
+.hero-grid {
+    display: table-row;
+    height: 100%;
+    @media screen and (max-width:959px) , screen and (max-height:700px) {
+        display: block;
+    }
+    & + section { // hide .main-torso
+        height: 0;
+    }
+}   
+.hero-grid__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    padding: 1vw;
+    background-color: $color-3-light;
+    @media screen and (max-width:959px) , screen and (max-height:700px) {
+        display: block;
+        padding: 2vw;
+    }
+    @include bp($max:768px) {
+        padding: 0 $pad $pad;
+    }
+}
+// Common Box Styles
+.hero-grid__box {
+    display: block;
+    width: 100%;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: $color-3-light;
+    text-decoration: none;
+    &:after { // Gradient Overlay
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        @extend %gradient-bottom;
+    }
+    &:hover, &:active, &:focus {
+        outline: 0;
+    }
+}
+// Primary Grid Section
+.hero-grid__main {
+    height: 100%;
+    width: 61vw;
+    margin-right: 1vw;
+    overflow: hidden;
+    @media screen and (max-width:959px) , screen and (max-height:700px) {
+        height: auto;
+        width: 100%;
+        margin-right: 0;
+    }
+    h3 {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        height: 18.55%;
+        padding-right: $pad;
+        @include bp($max:1024px) {
+            font-size: 20px;
+        }
+        @media screen and (max-width:959px) , screen and (max-height:700px) {
+            height: auto;
+            padding: 0.75em 0;
+            font-size: 32px;
+        }
+        @include bp($max:640px) {
+            width: 100%;
+        }
+        span {
+            font-size: 32px;
+            text-align: right;
+            line-height: 1.2em;
+            br {
+                display: none;
+            }
+            @include bp($max:640px) {
+                .bullet {
+                    display: none;
+                }
+                br {
+                    display: inline-block;
+                }
+            }   
+        }
+        strong {
+            color: $color-1;
+            font-weight: normal;
+        }
+    }
+    .hero-grid__box {
+        height: 81.25%;
+        @media screen and (max-width:959px) , screen and (max-height:700px) {
+            height: 53vw;
+        }
+        @include bp($max:640px) {
+            height: 260px;
+        }
+        div {
+            position: absolute;
+            bottom: 4.5em;
+            left: 2em;
+            z-index: 10;
+            transition: bottom 300ms;
+            h1 {
+                line-height: 1.1em;
+                @include bp($max:640px) {
+                    font-size: 2.5em;
+                    letter-spacing: 5px;
+                }
+            }
+        }
+        &:hover {
+            div {
+                bottom: 2.75em;
+            }
+        }
+    }
+}
+// Aside Section of Grid
+.hero-grid__aside {
+    height: 100%;
+    width: 36vw;
+    margin: 0;
+    overflow: hidden;
+    @media screen and (max-width:959px) , screen and (max-height:700px) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        height: auto;
+        width: 100%;
+        margin-top: 2vw;
+    }
+    @include bp($max:640px) {
+        margin-top: $pad;
+    }
+    .hero-grid__box {
+        height: 49%;
+        background-color: $color-2-light;
+        background-blend-mode: multiply;
+        &:first-of-type {
+            margin-bottom: 3%;
+        }
+        h2 {
+            position: absolute;
+            bottom: 1.62em;
+            left: 1em;
+            z-index: 10;
+            transition: bottom 300ms;
+            &:after {
+                content: '\f101';
+                font-family: FontAwesome;
+                font-size: 1.1em;
+                margin-left: 15px;
+            }
+        }
+        &:hover {
+            h2 {
+                bottom: 0.95em;
+            }
+        }
+        @media screen and (max-width:959px) , screen and (max-height:700px) {
+            height: 44vw;
+            width: 47vw;
+            margin: 0;
+            &:first-of-type {
+                margin: 0;
+            }
+        }
+        @include bp($max:640px) {
+            height: 260px;
+            width: 100%;
+            margin: 0;
+            &:first-of-type {
+                margin: 0 0 $pad 0;
+            }
+        }
+    }
+}

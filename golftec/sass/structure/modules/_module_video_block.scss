@@ -1,0 +1,109 @@
+/*------------------------------------*\
+    ::  Video Block Styles
+\*------------------------------------*/
+.video-block {
+	height: 34.25em;
+	@extend %bg-cover;
+	@include bp($max:960px) {
+		height: 25em;
+	}
+	&__overlay {
+		height: 100%;
+		background-color: rgba(47, 41, 49, 0.51);
+		text-align: center;
+		&:before { // Centering the unknown
+			content: '';
+			height: 100%;
+			margin-left: -0.25em;
+			display: inline-block;
+			vertical-align: middle;
+		}
+	}
+	&__text {
+		display: inline-block; // Centering the unknown
+		width: 95%;
+		margin: 0 auto;
+		vertical-align: middle; // Centering the unknown
+		h3 {
+			margin: 0;
+			color: $color-3;
+			font-size: 1.9em;
+			@include bp($max:640px) {
+				font-size: 1.65em;
+			}
+		}
+		h5 {
+			margin: 0.9em 0 0 0;
+			color: $color-3;
+			font-size: 1em;
+			font-weight: normal;
+			font-style: italic;
+			letter-spacing: 0.085em;
+			@include bp($max:1024px) {
+				font-size: 15px;
+			}
+			@include bp($max:640px) {
+				font-size: 15px;
+			}
+		}
+		.video-block__play-btn {
+			display: inline-block;
+			width: 100%;
+			img {
+				display: inline-block;
+				margin-top: 2em;
+				opacity: 0.75;
+				transition: opacity 400ms;
+				border-radius: 50%;
+				border: 10px solid rgba(255, 255, 255, 0.20);
+				transition: opacity 400ms;
+				@include bp($max:960px) {
+					height: 80px;
+					width: 80px;
+				}
+				@include bp($max:640px) {
+					height: 65px;
+					width: 65px;
+				}
+			}
+			&:hover {
+				img {
+					opacity: 1;
+				}
+			}
+		}
+		.video-block__btn {
+			margin: 2em 0 0 0;
+		}
+	}	
+}
+/*------------------------------------*\
+    ::  KSS MarkUp (Ignore)
+\*------------------------------------*/   
+// Video Block
+//
+// Demo:<br><a href="../modules/module-video-block.php" target="_blank">module-video-block.php</a>
+//
+// Stylesheet:<br>
+// <a href="../sass/structure/modules/_module_video_block.scss" target="_blank">_module_video_block.scss</a><br>
+//
+// Path To The Code:<br>
+// golftec/golftec/modules/module-video-block.php<br>
+// golftec/golftec/plugins/fancybox/source/jquery.fancybox.pack.js<br>
+// golftec/golftec//plugins/fancybox/source/helpers/jquery.fancybox-media.js
+//
+// Markup:
+// <article class="video-block main-torso__group" style="background-image: url('../images/modules/video-block/video-block-bg.jpg')">
+//     <div class="video-block__overlay">
+//         <div class="video-block__text">
+//             <h3>Player Performance Center</h3>
+//             <h5>Tracking Your Progress at Home</h5>
+//             <a class="video-block__play-btn fancybox-media" href="https://www.youtube.com/watch?v=5t_sev7ehy8">
+//                 <img src="../images/global/play-icon.png" alt="Play Icon">
+//             </a>
+//             <a class="video-block__btn btn" href="#">Log In As Existing Student</a>
+//         </div> <!-- // video-block__text -->
+//     </div> <!-- // video-block__overlay -->
+// </article> <!-- // video-block -->
+//
+// Styleguide 6.23	

@@ -1,0 +1,65 @@
+/*------------------------------------*\
+    ::Extends
+\*------------------------------------*/
+/*------------------------------------*\
+    ::Buttons
+\*------------------------------------*/
+%btn {
+	display: inline-block;
+    width: auto;
+    margin: 1.5em 0;
+    padding: 0.9em $pad*1.25 0.7em; // Vertically center due to line-height
+    position: relative;
+    background-color: $color-2;
+    border: none;
+    border-radius: 0;
+    color: $color-3;
+    cursor: pointer;
+    font-size: 1em;
+    letter-spacing: 0.085em;
+    line-height: 1.35em; // Need line height for long button text on mobile
+    outline: 0;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    &:after {
+    	content: "";
+	    position: absolute;
+	    top: -110px;
+	    left: -180%;
+	    width: 140%;
+	    height: 180px;
+	    background-color: rgba(255,255,255,0.4);
+	    transition: none;
+	    transform: rotate(40deg);
+    }
+    &:hover {
+    	text-decoration: none;
+    	&:after {
+    		left: 100%;
+    		background-color: rgba(255,255,255,0);
+    		transition: left 1400ms, background-color 700ms;
+    	}
+    }
+}
+/*------------------------------------*\
+    ::  Background Image Cover
+\*------------------------------------*/
+%bg-cover {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+} 
+/*------------------------------------*\
+    ::  Overlays
+\*------------------------------------*/ 
+%overlay {
+    background-color: rgba(0, 0, 0, 0.30);
+}   
+%overlay-medium {
+    background-color: rgba(0, 0, 0, 0.47);
+}  
+%overlay-dark {
+    background-color: rgba(2, 3, 6, 0.68);
+} 

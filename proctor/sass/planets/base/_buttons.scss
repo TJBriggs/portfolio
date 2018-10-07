@@ -1,0 +1,39 @@
+.btn {
+	background: $color-1;
+	border: 1px solid #ffffff;
+	color: #ffffff;
+	display: block;
+	font-size: emCalc(16px);
+	height: 45px;
+	letter-spacing: 0.03em;
+	line-height: 42px;
+	text-align: center;
+	transition: 400ms;
+	&:visited {
+		color: #ffffff;
+	}
+	&:hover {
+		color: #ffffff;
+		background: darken($color-1, 10%);
+	}
+}
+
+.btn-clear {
+	background: rgba(255, 255, 255, 0.0);
+	border: 1px solid #ffffff;
+	color: #ffffff;
+	display: block;
+	font-size: emCalc(16px);
+	height: 45px;
+	letter-spacing: 0.03em;
+	line-height: 42px;
+	text-align: center;
+	transition: 400ms;
+	&:visited {
+		color: #ffffff;
+	}
+	&:hover {
+		color: #ffffff;
+		background: rgba(255, 255, 255, 0.4);
+	}
+}

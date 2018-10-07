@@ -1,0 +1,113 @@
+/*------------------------------------*\
+    ::  List Block Layout
+\*------------------------------------*/
+.list-block {
+	padding-bottom: em(55px);
+	.title-wrap {
+		margin-bottom: em(60px);
+		.content-title {
+			padding: 0 $pad*6.5 em(20px); // force line break at right position based on design
+			@include bp($max:1080px) {
+				padding: 0 $pad*4 em(20px); // set it back to normal
+			}
+			@include bp($max:1024px) {
+				padding: 0 $pad*2 em(20px);
+			}
+			@include bp($max:480px) {
+				padding: 0 $pad em(20px);
+			}
+		}
+	}
+	.list-block__text {
+		float: left;
+		width: 50%;
+		padding: 0 $pad;
+	}
+	.list-block__list {
+		float: left;
+		width: 50%;
+		padding: 0 $pad;
+		ul {
+			margin: 0;
+			padding: 0;
+			li {
+				display: block;
+				width: 100%;
+				margin-bottom: 20px;
+				padding: $pad/1.5;
+				&:before { // centering the unknown
+					content: '';
+					display: inline-block;
+					height: 100%; 
+					margin-right: -0.25em; 
+					vertical-align: middle;
+				}
+				span {
+					display: inline-block;
+					position: relative;
+					margin-left: em(30px);
+					vertical-align: middle;
+					&:before { // bullet
+						content: '\2022';
+						display: block;
+						position: absolute;
+						top: -18px;
+						left: -28px;  
+					}
+				}
+			}
+		}
+	}
+	@include bp($max:1024px) {
+		.list-block__text {
+			float: none;
+			width: 78%;
+			margin: 0 auto;
+			h2 {
+				&:first-of-type {
+					&:after { // underline styles
+						width: 100px;
+						left: 50%;
+						margin: 0 auto 0 -50px;
+					}
+				}
+			}
+		}
+		.list-block__list {
+			float: none;
+			width: 85%;
+			margin: em(40px) auto 0;
+			padding: 0 $pad*2;
+		}
+	}
+	@include bp($max:768px) {
+		.list-block__text {
+			width: 100%;
+			padding: 0 $pad*2;
+		}
+		.list-block__list {
+			width: 100%;
+			margin: em(35px) auto 0;
+		}
+	}
+	@include bp($max:480px) {
+		.list-block__text,
+		.list-block__list {
+			padding: 0 $pad;
+		}
+	}
+	/*------------------------------------*\
+	    :: Modifiers
+	\*------------------------------------*/
+	&[class*="--underline-small"] {
+		.title-wrap {
+			margin-bottom: em(70px);
+			.content-title {
+				padding: 0 $pad*6.5 0; // set bottom margin to 0 to reduce gap
+				@include bp($max:1080px) {
+					padding: 0 $pad*4 0; // keep bottom margin at 0 for bp
+				}
+			}
+		}
+	}
+}

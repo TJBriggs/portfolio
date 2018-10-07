@@ -1,0 +1,68 @@
+/*---------------------------------------*\
+    :: @imports
+    -------------------------------------*
+    The following imports will pull in 
+    all SASS partials in the listed 
+    directory or sub-directories when
+    appropiate.
+\*---------------------------------------*/
+/*---------------------------------------*\
+    :: Bootstrap
+    -------------------------------------*
+    Import Bootstrap's grid system so 
+    it can be utilized in the .scss files.
+\*---------------------------------------*/
+@import "0_bootstrap/scss/bootstrap-grid";
+/*---------------------------------------*\
+    :: Global
+    -------------------------------------*
+    Global styling that affects nearly
+    every page goes here, like SASS
+    variables, mixins, extends, and 
+    global text styling, links, buttons,
+    form elements. All reusable elements.
+\*---------------------------------------*/
+@import "1_global/**/*";
+
+/*---------------------------------------*\
+    :: Base
+    -------------------------------------*
+    High level styling like WP classes,
+    HTML, Body styles. You can also load
+    plugin styles here to.
+\*---------------------------------------*/
+@import "2_base/**/*";
+
+/*---------------------------------------*\
+    :: Components
+    -------------------------------------*
+    Styling for all major site components
+    like the header, footer, sidebar,
+    blog, and navigations.
+\*---------------------------------------*/
+@import "3_components/*";
+
+/*---------------------------------------*\
+    :: Modules
+    -------------------------------------*
+    Styling for all major site modules
+\*---------------------------------------*/
+@import "4_modules/*";
+
+/*---------------------------------------*\
+    :: Pages
+    -------------------------------------*
+    Page or template specific styles.
+\*---------------------------------------*/
+@import "5_pages/*";
+
+/*---------------------------------------*\
+    :: Shame
+    -------------------------------------*
+    Styling that is quick and dirty can
+    go here, like unrefined styling you
+    plan to refine later or plugin/IE
+    resets that require !important to
+    work.
+\*---------------------------------------*/
+@import "6_misc/*";

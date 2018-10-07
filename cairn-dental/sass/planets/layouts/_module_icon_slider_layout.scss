@@ -1,0 +1,111 @@
+/*------------------------------------*\
+    ::  Icon Slider Layout
+\*------------------------------------*/
+.icon-slider {
+	width: 100%;
+	overflow: hidden;
+}
+.icon-slider__wrap {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	max-width: 1240px;
+	margin: 0 auto;
+	padding: em(65px) $pad*2;
+	@include bp($max:1024px) {
+		max-width: 1140px;
+		padding: em(65px) $pad*2 em(43px);
+	}
+	@include bp($max:480px) {
+		padding: em(50px) $pad em(43px);
+	}
+	@include bp($max:400px) {
+		padding: em(50px) $pad em(27px);
+	}
+}
+.nav__wrap {
+	width: 50%;
+	position: relative;
+	@include bp($max:1024px) {
+		width: 100%;
+		margin-bottom: em(45px);
+	}
+	@include bp($max:640px) {
+		margin-bottom: em(25px);
+	}
+	@include bp($max:400px) {
+		margin-bottom: em(20px);
+	}
+}
+.icon-slider__nav {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	width: 100%;
+	margin: 0;
+	padding: 0 $pad*2;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	overflow: hidden;
+	transform: translateY(-50%);
+	@include bp($max:1024px) {
+		position: static;
+		transform: translateY(0);
+		width: 100%;
+	}
+	@include bp($max:500px) {
+		padding: 0;
+	}
+}
+.nav__item {
+	width: 20%;
+	text-align: center; // center icons
+	.nav__link {
+		display: block;
+		padding: 25px 0;
+		@include bp($max:640px) {
+			padding: 5px 0;
+		}
+	}
+	.nav__icon {
+		height: 45px;
+		width: 45px;
+		@include bp($max:400px) {
+			height: 35px;
+			width: 35px;
+		}
+	}
+}
+.slider__wrap {
+	width: 50%;
+	padding: 0 0 0 $pad*2;
+	@include bp($max:1024px) {
+		width: 100%;
+		padding: 0;
+	}
+}
+.icon-slider__slides {
+	width: 100%;
+	overflow: hidden;
+}
+.icon-slider__slide {
+	@include bp($max:1024px) {
+		padding: 0 $pad*4;
+	}
+	@include bp($max:768px) {
+		padding: 0 $pad*2;
+	}
+	@include bp($max:480px) {
+		padding: 0 $pad;
+	}
+	h2 {
+		margin: 0 0 35px;
+		@include bp($max:640px) {
+			margin: 0 0 25px;
+		}
+	}
+	h6 {
+		margin: 0 0 20px;
+	}
+}

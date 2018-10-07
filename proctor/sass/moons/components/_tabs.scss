@@ -1,0 +1,162 @@
+/*------------------------------------*
+    :: Tabs Styles
+*------------------------------------*/
+.tabs {
+	float: left;
+	border-top: 10px solid $color-1;
+	width: 100%;
+	.tabs__nav {
+		height: 70px;
+		margin: 0;
+		position: relative;
+		.tabs-nav__inner {
+			padding: 0 0 0 $pad*2;
+			.tabby__nav-item {
+				cursor: pointer;
+				float: left;
+				height: 100%;
+				width: 18%;
+				&.border-left {
+					border-left: 3px solid #e6e6e6;
+				}
+				&.border-right {
+					border-right: 3px solid #e6e6e6;
+				}
+				&:nth-of-type(1) {
+					span {
+						&:before {
+							@extend .icon;
+							@extend .icon--flickr;
+							margin-right: 15px;
+							font-size: emCalc(30px);
+						}
+					}
+				}
+				&:nth-of-type(2) {
+					span {
+						&:before {
+							@extend .icon;
+							@extend .icon--instagram;
+							margin-right: 15px;
+							font-size: emCalc(30px);
+						}
+					}
+				}
+				&:nth-of-type(3) {
+					span {
+						&:before {
+							@extend .icon;
+							@extend .icon--facebook;
+							margin-right: 15px;
+							font-size: emCalc(30px);
+						}
+					}
+				}
+				span {
+					color: $color-4;
+					display: block;
+					font-family: $fam-bold;
+					font-size: emCalc(18px);
+					height: 70px;
+					letter-spacing: 0.03em;
+					line-height: 70px;
+					padding: 0;
+					text-align: center;
+					transition: 300ms;
+				}
+				&.flex-active {
+					border: none;
+					span {
+						background: $color-1;
+						color: $white;
+					}
+					&:hover {
+						span {
+							color: $white;
+						}
+					}
+				}
+				&:hover {
+					span {
+						color: $color-1;
+					}
+				}
+				@include bp($max:960px) {
+					span {
+						display: block;
+						text-indent: -9999px;
+						overflow: hidden;
+						position: relative;
+						text-align: center;
+						&:before {
+							display: inline-block;
+							position: absolute;
+							top: 0;
+							left: 0;
+							text-indent: 0px;
+							width: 100%;
+						}
+					}
+				}
+				@include bp($max:480px) {
+					width: 25%;
+				}
+			}
+		}
+	}
+	.slider--tabs {
+		background: #e6e6e6;
+		margin: 0;
+		overflow: hidden;
+		padding: 0;
+		width: 100%;
+		.tab__slides {
+			padding: 0 $pad*2;
+		}
+	}
+	.content-right {  // Styles for facebook tab
+		float: left;
+		padding: $pad*2 0 $pad*2 $pad*2;
+		width: 50%;
+		h3 {
+			font-family: $fam-semi-bold;
+			font-size: emCalc(21px);
+			margin-bottom: 0px;
+		}
+		p {
+			margin-top: 15px;
+			margin-bottom: 25px;
+		}
+		.fb-btn {
+			width: 45%;
+			@include bp($max:960px) {
+				width: 60%;
+			}
+		}
+		@include bp($max:1140px) {
+			p {
+				margin-top: 15px;
+				margin-bottom: 15px;
+			}
+		}
+		@include bp($max:768px) {
+			width: 100%;
+			padding: 0px;
+			p {
+				margin-top: 20px;
+				margin-bottom: 25px;
+			}
+			.fb-btn {
+				margin-bottom: 50px;
+			}
+		}
+		@include bp($max:479px) {
+			.fb-btn {
+				width: 100%;
+			}
+		}
+		@include bp($max:320px) {
+			margin-top: 20px;
+		}
+	}
+}

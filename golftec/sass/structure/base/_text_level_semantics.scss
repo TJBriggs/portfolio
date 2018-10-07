@@ -1,0 +1,178 @@
+/*------------------------------------*\
+    ::Text Level Semantics
+    ------------------------------------*
+    ::Normalize.css v3.0.0 | MIT License | git.io/normalize
+\*------------------------------------*/
+
+abbr[title] {
+	border-bottom: 1px dotted;
+}
+b,
+strong {
+	font-weight: bold;
+}
+dfn {
+	font-style: italic;
+}
+body {
+	letter-spacing: 0.075em;
+}
+h1, h2, h3, h4, h5, h6 {
+	color: $txt-color-1;
+	font-family: $fam-heading;
+	font-weight: 200;
+	letter-spacing: 0.035em;
+	strong {
+		font-weight: bold;
+	}
+}
+h1 {
+	margin: 0.67em 0;
+	font-size: 3.25em;
+	line-height: 1.25em;
+	@include bp($max:500px) {
+		font-size: 1.75em;
+	}
+}
+h2 {
+	font-size: 2.75em;
+	strong {
+		font-size: 1.05em;
+	}
+}
+h3 {
+	font-size: 2.25em;
+	strong {
+		font-size: 1.05em;
+	}
+}
+h4 {
+	font-size: 1.75em;
+	line-height: 1.4em;
+	strong {
+		font-size: 1.01em;
+	}
+}
+h5 {
+	font-size: 1.25em;
+	strong {
+		font-size: 1.05em;
+	}
+}
+h6 {
+	font-size: 1em;
+	strong {
+		font-size: 1.05em;
+	}
+}
+p, span, li {
+	color: $txt-color-1;
+	font-family: $fam-body;
+	font-weight: 200;
+	letter-spacing: 0.035em;
+}
+p, span {
+	line-height: 1.45em;
+}
+blockquote {
+	font-style: italic;
+}
+hr {
+	height: 1px;
+	border: 0;
+	background-color: $color-2;
+}
+mark {
+	background: #ff0;
+	color: #000;
+}
+small {
+	font-size: 80%;
+}
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	left: 2px;
+	vertical-align: baseline;
+}
+sup {
+	top: -0.5em;
+}
+sub {
+	font-size: 0.6em;
+	bottom: -0.35em;
+}
+/*------------------------------------*\
+    ::  KSS MarkUp (Ignore)
+\*------------------------------------*/ 
+// Text
+//
+// This section defines global text level semantics throughout the site.
+//
+// Styleguide 2
+
+// Headings
+//
+// These are standard heading styles.
+//
+// Markup:
+// <h1>Heading 1</h1>
+// <h2>Heading 2</h2>
+// <h3>Heading 3</h3>
+// <h4>Heading 4</h4>
+// <h5>Heading 5</h5>
+// <h6>Heading 6</h6>
+//
+// Styleguide 2.2
+
+// Headings w/Emphasis
+//
+// These are standard headings with the &lt;strong&gt; element applied to specific words for emphasis.
+//
+// Markup:
+// <h1><strong>Swing</strong> Better</h1>
+// <h2><strong>The World Leader</strong> in Golf Lessons</h2>
+// <h3><strong>$95 Swing Evaluation</strong> On Sale</h3>
+// <h4>Help People <strong>Play Better Golf</strong></h4>
+// <h5>From the <strong>GolfTEC Scramble</strong></h5>
+// <h6>Build a <strong>Better</strong> Swing</h6>
+//
+// Styleguide 2.2.1
+
+// Paragraphs
+//
+// Markup:
+// <p>Regular paragraph. Etiam iaculis nunc ac metus. <strong>bold</strong> <em>italic</em> <strong><em>bold and italic</em></strong>. Vestibulum eu odio. Cras sagittis. Sed aliquam ultrices mauris. Curabitur a felis in nunc fringilla tristique.</p>
+// <p><strong>Strong</strong></p>
+// <p><em>Emphasis</em></p>
+// <p><strong><em>Both Strong</em></strong><em><strong> and Emphasis</strong></em></p>
+//
+// Styleguide 2.3
+
+// Blockquote
+//
+// Markup:
+// <blockquote>
+// Nullam id dolor id nibh ultricies vehicula ut id elit. Donec ullamcorper nulla non metus auctor fringilla. Donec id elit non mi porta gravida at eget metus.
+// </blockquote>
+//
+// Styleguide 2.4
+
+// Rules
+//
+// Markup:
+// <hr>
+//
+// Styleguide 2.6
+
+// Misc. Elements
+//
+// Markup:
+// <h4 style="margin-bottom: 10px">&lt;sup&gt; Element</h4>
+// <h5>golfTEC<sup>&reg;</sup></h5>
+// <h4 style="margin-bottom: 10px">&lt;sub&gt; Element</h4>
+// <h5>Footnote<sub>1</sub></h5>
+//
+// Styleguide 2.7

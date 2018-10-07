@@ -1,0 +1,60 @@
+/*------------------------------------*\
+    :: Variables
+    ----------------------------------*
+    :: Colors
+    :: Breakpoints
+    :: Layout
+    :: Text Styling
+\*------------------------------------*/
+
+/*------------------------------------*\
+    :: Colors
+\*------------------------------------*/
+
+// primary color
+$color-1:           #CC2D30;  // PKA Red rgba(204, 45, 48, 100);
+$color-1-light:     lighten($color-1,20%);
+$color-1-dark:      darken($color-1,20%);
+
+// secondary color
+$color-2:           #DDE0C6; // Beige
+$color-2-light:     #E6E9D6; // Light Beige
+$color-2-dark:      #BFC2AA; // Dark Beige
+
+// tertiary color
+$color-3:           #E8E8E8; // Neutral Gray
+$color-3-light:     #FCFDFB; // Whitish
+$color-3-dark:      #090C02; // Blackish
+
+$white:             #FFF; // True White
+$black:             #000; // True Black
+
+// alert colors
+$color-good:        #6ADE72;
+$color-bad:         #DE5D5D;
+$color-meh:         #EBE857;
+
+/*------------------------------------*\
+    :: Breakpoints
+\*------------------------------------*/
+$desktop:        1140px;
+$tablet:         1024px;
+$mobile:         480px;
+
+/*------------------------------------*\
+    :: Layout
+\*------------------------------------*/
+$pad:       0.9375rem;
+
+/*------------------------------------*\
+    :: Import Fonts
+\*------------------------------------*/
+@import url('/wp-content/themes/pka/assets/fonts/proxima-nova/MyFontsWebfontsKit.css'); // Load Proxima Nova Fonts
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,900'); // Load Roboto Fonts
+@font-face { // Load Bebas Neue Font
+    font-family: 'bebas_neuebook';
+    src: url('/wp-content/themes/pka/assets/fonts/bebas-neue/bebasneue_book-webfont.woff2') format('woff2'),
+         url('/wp-content/themes/pka/assets/fonts/bebas-neue/bebasneue_book-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

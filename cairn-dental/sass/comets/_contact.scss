@@ -1,0 +1,105 @@
+/*---------------------------------------*\
+    ::  Custom Styles for Contact Page
+\*---------------------------------------*/	
+.page-id-37 {
+	.content-block--contact-intro {
+		.content-block__inner {
+			padding-bottom: 0;
+		}
+		.content__group--1 {
+			// Line up text with section below at tablet
+			@include bp($max:1024px) {
+				float: none;
+				width: 91.66667%;
+				margin: 0 auto;
+				padding-left: $pad;
+				padding-right: $pad;
+ 			}
+ 			@include bp($max:480px) {
+				float: none;
+				width: 100%;
+				margin: 0 auto;
+				padding-left: $pad;
+				padding-right: $pad;
+ 			}
+ 			h2 {
+ 				margin-top: 0!important; // override first-child styles
+ 			}
+			h6 {
+				margin-top: 25px;
+				margin-bottom: 0;
+			}
+			.line-break { // hr
+				margin-top: 36px;
+				@include bp($max:1024px) {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+	.content-block--contact-main {
+		.content-block__inner {
+			padding-top: 42px;
+			@include bp($max:1024px) {
+				padding-top: 32px;
+				padding-bottom: 32px;
+			}
+		}
+		.content__group--1 {
+			// add bottom margin when section stacks
+			@include bp($max:1024px) {
+				margin-bottom: 42px;
+			}	
+			h1 {
+				font-size: 30px;
+				margin-top: 0;
+			}
+			.phone, .address, .facebook {
+				position: relative;
+				width: 90%;
+				padding-left: 40px;
+				a {
+					color: darken($color-1, 5%);
+					font-family: $fam-semi;
+					text-decoration: none;
+					transition: color 400ms;
+					&:hover {
+						color: $color-2;
+					}
+				}
+				&:before {
+					height: 22px;
+					width: 22px;
+					position: absolute;
+					left: 0;
+					top: 2px;
+				}
+			}
+			.phone {
+				&:before {
+					content: url('images/global/phone.svg');
+				}
+			}
+			.address {
+				&:before {
+					content: url('images/global/location.svg');
+				}
+			}
+			.facebook {
+				a {
+					color: darken($color-1, 5%);
+					text-decoration: none;
+					transition: color 400ms;
+					&:hover {
+						color: $color-2;
+					}
+				}
+				&:before {
+					top: 0;
+					content: url('images/global/facebook-icon.svg');
+				}
+			}
+
+		}
+	}
+}

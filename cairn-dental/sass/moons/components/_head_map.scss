@@ -1,0 +1,157 @@
+/*------------------------------------*\
+    ::  Google Maps Styles
+\*------------------------------------*/
+.map-block {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.header-map {
+	height: em(650px);
+	width: 100%;
+	position: relative;
+	@include bp($max:1024px) {
+		height: em(450px);
+	}
+	@include bp($max:640px) {
+		height: em(340px);
+	}
+    img {
+        display: block;
+        max-width: none; 
+    }
+}
+/*------------------------------------*\
+    :: Marker Styles 
+\*------------------------------------*/
+.infowindow {
+    color: #000;
+}
+.gm-style {
+    img {max-width: none;}
+}
+.gm-style-iw {
+    overflow: hidden !important; // Overrides google map inline style that gives the info box a vertical scrollbar when not needed
+    width: 155px;
+    h5 {
+        margin: em(15px) 0 em(5px) 0;
+        color: $txt-color-3;
+        font-size: em(18px);
+    }
+    p {
+        color: $color-1;
+        font-size: emCalc(14px);
+        line-height: 1.3em;
+        margin: em(4px) 0;
+        a {
+            display: inline-block;
+            font-size: emCalc(14px);
+            text-decoration: none;
+            margin-top: 0;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    @include bp($max:580px) {
+        position: relative;
+        top: 200px;
+    }
+}
+/*------------------------------------*\
+    ::  Overlay Styles
+\*------------------------------------*/    
+.map-block__overlay {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 6, 3, 0.76);
+    @include bp($max:767px) {
+        display: none;
+    }
+    .overlay__inner {
+        padding: 0 $pad*2; 
+        @include bp($max:480px) {
+            padding: 0 $pad;
+        }
+    }
+    .overlay__content {
+        height: 80px;
+        width: 100%;
+        margin: em(43px) 0 em(45px);
+        &:before { // centering the unknown
+            content: '';
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+            margin-right: -0.25em; /* Adjusts for spacing */    
+        }
+        @include bp($max:1024px) {
+            height: auto;
+            &:before {
+                display: none;
+            }
+        }
+        @include bp($max:640px) {
+            margin: em(28px) 0 em(30px);
+        }
+    }
+    .title__wrap {
+        display: inline-block;
+        width: 22%;
+        vertical-align: middle;
+        h1 {
+            margin: 0;
+            padding: 0;
+            color: $color-4;
+            line-height: 1.15em;
+        }
+        @include bp($max:1024px) {
+            width: 100%;
+            margin-bottom: em(25px);
+            line-height: 1em;
+        }
+        @include bp($max:640px) {
+            margin-bottom: em(15px);
+        }
+    }
+    .text__wrap {
+        display: inline-block;
+        width: 55%;
+        margin: 0 4%;
+        vertical-align: middle;
+        p {
+            margin: 0;
+            padding: 0;
+            color: $color-4;
+            font-family: $fam-light;
+            font-size: em(14px);
+            letter-spacing: 0.075em;
+        }
+        @include bp($max:1024px) {
+            width: 100%;
+            margin: 0;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

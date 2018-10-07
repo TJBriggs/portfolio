@@ -1,0 +1,17 @@
+/*------------------------------------*\
+    ::  CTA Bar Styles
+\*------------------------------------*/	
+.cta-bar {
+	p {
+		font-size: 2em;
+		font-weight: bold;
+		line-height: 1.5em;
+		transition: font-size 400ms;
+		@include bp($max:768px) {
+			font-size: 1.65em;
+		}
+		@include bp($max:640px) {
+			font-size: 1.55em;
+		}
+	}
+}

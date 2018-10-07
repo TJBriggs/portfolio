@@ -1,0 +1,177 @@
+/*------------------------------------*\
+    ::  Center Services Styles
+\*------------------------------------*/	
+.center-services {
+	background-color: $color-3;
+	&__inner {
+		display: flex;
+		flex-wrap: wrap;
+		padding: 5em $pad;
+		@include bp($max:960px) {
+			padding: 3em $pad;
+		}
+		@include bp($max:500px) {
+			padding: 2.5em $pad*2 0;
+		}
+	}
+	&__text-wrap {
+		display: flex;
+		flex-wrap: wrap;
+		width: 66.666666%;
+		@extend %bg-cover;
+		h4 {
+			margin-top: 0;
+			padding: 0 $pad;
+		}
+		@include bp($max:960px) {
+			width: 100%;
+			max-width: 640px;
+			margin: 0 auto;
+			h4 {
+				width: 100%;
+				margin-bottom: 1.25em;
+				padding: 0 $pad;
+				font-size: 1.5em;
+			}
+		}
+		@include bp($max:700px) {
+			max-width: calc(95% - 0.9375rem*2); // Offset for $pad's
+			background-size: 650px 650px; // Reduce background size so image doesn't get clipped
+		}
+		@include bp($max:640px) {
+			width: 100%;
+			max-width: none;
+		}
+		@include bp($max:500px) { // Remove background image and place on main article
+			background-image: none!important; // Overrides Inline style
+			h4 {
+				padding: 0;
+			}
+		}
+	}
+	&__column {
+		width: 50%;
+		padding: 0 $pad;
+		& > *:first-child {
+			margin-top: 0;
+		}
+		h5 {
+			margin-bottom: 0;
+		}
+		p {
+			font-size: 0.9em;
+			font-style: italic;
+			line-height: 1.35em;
+		}
+		@include bp($max:960px) {
+			width: 100%;
+			max-width: 640px;
+			margin: 0 auto;
+		}
+		@include bp($max:700px) {
+			width: 95%;
+			max-width: none;
+			padding: 0;
+			h5 {
+				margin-top: 0;
+			}
+		}
+		@include bp($max:500px) {
+			h5 {
+				margin-bottom: 0.75em;
+				padding-left: 40px;
+				position: relative;
+				&:before { // Add checklist bullets
+					content: '';
+					height: 22px;
+					width: 22px;
+					position: absolute;
+					top: 2px;
+					left: 0;
+					background-image: url('images/global/bullet-image.png');
+				}
+			}
+			p {
+				display: none; // Hide on Mobile
+			}
+		}
+		&:last-of-type { // Second or Last Column
+			h5 {
+				// Remove margin from very last checklist item
+				&:last-of-type { 
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+	&__promo-wrap {
+		display: block;
+		width: 33.333333%;
+		max-width: calc(33.333333% - 0.9375rem*2); // Offset for $pad's
+		margin: 0 auto;
+		@extend %bg-cover;
+		@include bp($max:960px) {
+			height: 76px;
+			width: 100%;
+			max-width: calc(640px - 0.9375rem*2); // Offset for $pad's
+			margin: 1.5em auto 0;
+			padding: 0;
+			background-image: url('images/promos/center-promo-hor.jpg')!important; // Override Inline Style
+			background-size: contain;
+		}
+		@include bp($max:700px) {
+			max-width: calc(95% - 0.9375rem*4); // Offset for $pad's
+		}
+		@include bp($max:640px) {
+			width: 100%;
+			max-width: none;
+		}
+		@include bp($max:500px) {
+			height: 100vw;
+			width: 100%;
+			margin: 1em auto 0;
+			padding: 0;
+			background-image: url('images/promos/center-promo-sqr.jpg')!important; // Override Inline Style
+			background-size: contain;
+		}
+	}
+}
+/*------------------------------------*\
+    ::  KSS MarkUp (Ignore)
+\*------------------------------------*/ 
+// Center Services
+//
+// Demo:<br><a href="../modules/module-center-services.php" target="_blank">module-center-services.php</a>
+//
+// Stylesheet:<br>
+// <a href="../sass/structure/modules/_module_center_services.scss" target="_blank">_module_center_services.scss</a><br>
+//
+// Path To The Code:<br>
+// golftec/golftec/modules/module-center-services.php
+//
+// Markup:
+// <article class="center-services main-torso__group">
+//     <div class="center-services__inner">
+//         <div class="center-services__text-wrap" style="background-image: url('../images/modules/center-services/center-services-bg.png')">
+//             <h4><strong>Services Provided</strong> at Fort Collins South GolfTEC​</h4>
+//             <div class="center-services__column">
+//                 <h5>Lessons and Game Plans</h5>
+//                 <p>In-Bay, On-Course, Short Game and Putting Lessons are all available. With a Game Plan, you receive sequential lessons that build on each milestone to build a better swing that can be comfortably repeated on the golf course.​</p>
+//                 <h5>Online Player Performance Center​</h5>
+//                 <p>GolfTEC’s online Player Performance Center and GolfTEC TO GO app provide 24/7 access to all of your lessons as well as Coach’s notes, comments and recommended practice drills. You can even view your lessons from your mobile device to help your progress on the range, the course or wherever you are.​</p>
+//                 <h5>TECplay Virtual Indoor Golf​</h5>
+//                 <p>GolfTEC Denver Tech Center also features simulator golf in the TECplay bay. With TECplay you can play virtual golf indoors and work on your game on any of TECplay’s 150 world-renowned courses, including St. Andrews and Pebble Beach. It’s a great place for playing lessons with a GolfTEC Coach.​</p>
+//             </div> <!-- // center-services__column -->
+//             <div class="center-services__column">
+//                 <h5>Video Practice​</h5>
+//                 <p>The interactive video of every GolfTEC training bay lets you see immediate replay of each swing from two directions simultaneously, making your practice sessions more productive and faster improvement.​</p>
+//                 <h5>TECfit Custom Club Fitting​</h5>
+//                 <p>TECfit, GolfTEC’s club-fitting system, provides a precise, unbiased fitting experience with our experienced and certified professionals. The confidence of using properly fit equipment is another key to your golf success.​</p>
+//             </div> <!-- // center-services__column -->
+//         </div> <!-- // center-services__text-wrap -->
+//         <a class="center-services__promo-wrap" href="#" style="background-image: url('../images/promos/center-promo-vert.jpg')">
+//         </a> <!-- // center-services__promo -->
+//     </div> <!-- // center-services__inner -->
+// </article> <!-- // center-services -->
+//
+// Styleguide 6.12

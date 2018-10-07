@@ -1,0 +1,266 @@
+/*------------------------------------*\
+    ::Forms
+    ------------------------------------*
+    ::Normalize.css v3.0.0 | MIT License | git.io/normalize
+\*------------------------------------*/
+button,
+input,
+optgroup,
+select,
+textarea {
+	margin: 0;
+	color: $color-1;
+	font-family: $fam-heading;
+	font-weight: 100;
+	font-size: emCalc(16px);
+}
+button {
+	overflow: visible;
+}
+button,
+select {
+	text-transform: none;
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	-webkit-appearance: button;
+	cursor: pointer;
+}
+button[disabled],
+html input[disabled] {
+	cursor: default;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+input {
+	line-height: normal;
+}
+input[type="checkbox"],
+input[type="radio"] {
+	box-sizing: border-box;
+	padding: 0;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+	height: auto;
+}
+input[type="search"] {
+	-webkit-appearance: textfield;
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+fieldset {
+	border: 1px solid #c0c0c0;
+	margin: 0 2px;
+	padding: 0.35em 0.625em 0.75em;
+}
+legend {
+	border: 0;
+	padding: 0;
+}
+textarea {
+	overflow: auto;
+}
+optgroup {
+	font-weight: bold;
+}
+/*------------------------------------*\
+    ::  General Form Styles
+\*------------------------------------*/	
+// Text and Textarea
+input[type="text"], input[type="search"], input[type="email"], textarea {
+	height: 50px;
+	width: 100%;
+	padding: 0 emCalc(13px);
+	border: 1px solid $color-1-light;
+	color: $color-1;
+	letter-spacing: 0.05em;
+	outline: 0;
+	&::placeholder {
+		color: $color-1;
+		transition: opacity 300ms;
+	}
+	&:focus {
+		outline: 0;
+		background-color: #f2faff;
+		&::placeholder {
+			opacity: 0.30;
+		}
+	}
+}
+input[type="text"] {
+	line-height: 50px;
+}
+textarea {
+	height: emCalc(125px);
+	padding: emCalc(13px);
+}
+// Radio & Checkbox Fields
+input[type="radio"], input[type="checkbox"] {
+	margin: 0 10px 0 5px;
+}
+// Select Field
+select {
+	display: inline-block;
+	float: left;
+	width: 99.5%; // So dropdown doesn't get clipped in chrome
+	margin: 0 0.25%;
+}
+option {
+	font-weight: 100;
+}
+// Submit Button
+input[type="submit"] {
+	display: inline-block;
+	float: left;
+  	height: 50px;
+  	width: 85%;
+  	max-width: 200px;
+  	padding: 0 $pad;
+  	position: relative;
+  	z-index: 1;
+	background: transparent;
+  	border: 3px solid $color-1-light;
+  	color: #19374f;
+  	font-size: emCalc(18px);
+  	font-weight: 100;
+  	line-height: 46px;
+  	letter-spacing: 0.025em;
+  	transition: color 300ms, background 300ms;
+  	&:focus {
+  		outline: none;
+  	}
+  	&:hover {
+  		background-color: $color-1-light;
+  		color: $color-2;
+  		text-decoration: none;
+  	}
+}
+// Layout Styles
+.wpcf7-form {
+	overflow: hidden;
+}
+.form-col-third {
+	float: left;
+	width: 30.6667%;
+	margin: 0 0 1em 4%;
+	&.form-col-third--first {
+		margin-left: 0;
+	}
+	&.form-col-third--last {
+		margin-right: 33.6667%;
+	}
+	@include bp($max:600px) {
+		width: 100%;
+		margin: 0 0 1em 0;
+	}
+}
+.form-col-half {
+	float: left;
+	width: 48%;
+	margin: 0 0 1em 4%;
+	&.form-col-half--first {
+		margin-left: 0;
+	}
+	@include bp($max:600px) {
+		width: 100%;
+		margin: 0 0 1em 0;
+	}
+}
+.form-col-full {
+	float: left;
+	width: 100%;
+	margin: 0 0 1em 0;
+}
+.textarea-tall {
+	textarea {
+		height: 225px;
+	}
+}
+.submit-wrap {
+	float: left;
+	margin: 0;
+	width: 40%;
+	img {
+		float: left;
+		height: 25px;
+		margin-top: 11px;
+		width: 25px;
+	}
+	@include bp($max: 480px) {
+		width: 100%;
+		input {
+			width: 100%;
+		}
+	}
+}
+// Validation Styles
+.wpcf7-form-control-wrap {
+	display: inline-block;
+	width: 100%;
+}
+span.wpcf7-not-valid-tip{
+	display: block;
+	height: 50px;
+	width: 100%;
+	padding: 0px 10px;
+	position: absolute;
+	top: 0;
+	background: rgba(222, 93, 93, 0.75);
+	color: #fff;
+	cursor: pointer;
+	font-size: 13px;
+	line-height: 50px;
+}
+div.wpcf7-response-output{
+	width: 58%;
+	margin: 0;
+	padding: emCalc(8px) emCalc(12px);
+	border: none;
+	color: $color-2;
+	font-weight: 100;
+	font-size: 14px;
+	@include bp($max:480px) {
+		width: 100%;
+		margin: 5px 0;
+	}
+	&.wpcf7-validation-errors{
+		float: left;
+		background: #E49191;
+		text-align: left;
+	}
+	&.wpcf7-mail-sent-ok{
+		float: right;
+		height: 50px;
+		padding: 0 emCalc(12px);
+		line-height: 50px;
+		background: $color-good;
+		text-align: center;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,97 @@
+/*------------------------------------*\
+    ::  Icon CTAs Layout
+\*------------------------------------*/
+.icon-ctas {
+	width: 100%;
+	overflow: hidden;
+	&__inner {
+		padding: 0 $pad;
+	}
+	.icon-ctas__wrap {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		width: 100%;
+		margin-top: emCalc(45px);
+		/*------------------------------------*\
+	    	::  Layout Modifiers
+		\*------------------------------------*/
+		//
+		&.icon-ctas--center {
+			.icon-ctas__cta {
+				width: 33.3%;
+				@include bp($max:1024px) {
+					width: 50%;
+					&:nth-of-type(1),
+					&:nth-of-type(2) {
+						margin-bottom: emCalc(35px);
+					}
+				}
+				@include bp($max:600px) {
+					width: 100%;
+				}
+				img, svg {
+					display: inline-block;
+					height: 50px;
+					width: 50px;
+					@include bp($max:1024px) {
+						height: 75px;
+						width: 75px;
+					}
+				}
+				h1 {
+					margin: emCalc(24px) auto emCalc(5px);
+					@include bp($max:1100px) { // Force Titles onto two lines for
+						max-width: 250px;
+					}
+				}
+			}
+			&.icon-ctas--4 {
+				.icon-ctas__cta {
+					width: 25%;
+					@include bp($max:1024px) {
+						width: 50%;
+					}
+					@include bp($max:600px) {
+						width: 100%;
+						&:nth-of-type(3) {
+							margin-bottom: emCalc(35px);
+						}
+					}
+				}
+			}
+		}
+		&.icon-ctas--left {
+			.icon-ctas__cta {
+				width: 25%;
+				@include bp($max:1024px) {
+					width: 50%;
+					&:nth-of-type(1),
+					&:nth-of-type(2) {
+						margin-bottom: emCalc(45px);
+					}
+				}
+				@include bp($max:600px) {
+					width: 100%;
+					&:nth-of-type(1),
+					&:nth-of-type(2),
+					&:nth-of-type(3) {
+						margin-bottom: emCalc(35px);
+					}
+				}
+				img, svg {
+					display: inline-block;
+					height: 40px;
+					width: 40px;
+					position: relative;
+					top: 7px;
+				}
+				h1 {
+					display: inline-block;
+					width: auto;
+					margin: 0 0 emCalc(15px) emCalc(15px);
+				}
+			}
+		}
+	}
+}	

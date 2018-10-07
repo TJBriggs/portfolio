@@ -1,0 +1,10 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Compass/SASS/SCSS
+.sass-cache
+
+# Other
+node_modules
+vendor

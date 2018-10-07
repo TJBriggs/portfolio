@@ -1,0 +1,70 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 3476162, 2017-11-01T13:42:40-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: Calluna-Regular by exljbris
+ * URL: https://www.myfonts.com/fonts/exljbris/calluna/regular/
+ * 
+ * Webfont: Calluna-Bold by exljbris
+ * URL: https://www.myfonts.com/fonts/exljbris/calluna/bold/
+ * 
+ * Webfont: Calluna-BoldIt by exljbris
+ * URL: https://www.myfonts.com/fonts/exljbris/calluna/bold-italic/
+ * 
+ * Webfont: Calluna-It by exljbris
+ * URL: https://www.myfonts.com/fonts/exljbris/calluna/italic/
+ * 
+ * Webfont: Calluna-Semibold by exljbris
+ * URL: https://www.myfonts.com/fonts/exljbris/calluna/semibold/
+ * 
+ * Webfont: Calluna-SemiboldIt by exljbris
+ * URL: https://www.myfonts.com/fonts/exljbris/calluna/semibold-italic/
+ * 
+ * Webfont: Calluna-Light by exljbris
+ * URL: https://www.myfonts.com/fonts/exljbris/calluna/light/
+ * 
+ * Webfont: Calluna-Black by exljbris
+ * URL: https://www.myfonts.com/fonts/exljbris/calluna/black/
+ * 
+ * 
+ * License: https://www.myfonts.com/viewlicense?type=web&buildid=3476162
+ * Licensed pageviews: 500,000
+ * Webfonts copyright: &#x00A9; 2009 exljbris Font Foundry. All rights reserved.
+ * 
+ * © 2017 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/350ac2");
+
+  
+@font-face {font-family: 'Calluna-Regular';src: url('350AC2_0_0.eot');src: url('350AC2_0_0.eot?#iefix') format('embedded-opentype'),url('350AC2_0_0.woff2') format('woff2'),url('350AC2_0_0.woff') format('woff'),url('350AC2_0_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'Calluna-Bold';src: url('350AC2_1_0.eot');src: url('350AC2_1_0.eot?#iefix') format('embedded-opentype'),url('350AC2_1_0.woff2') format('woff2'),url('350AC2_1_0.woff') format('woff'),url('350AC2_1_0.ttf') format('truetype');}
+ 
+  
+/*@font-face {font-family: 'Calluna-BoldIt';src: url('webfonts/350AC2_2_0.eot');src: url('webfonts/350AC2_2_0.eot?#iefix') format('embedded-opentype'),url('webfonts/350AC2_2_0.woff2') format('woff2'),url('webfonts/350AC2_2_0.woff') format('woff'),url('webfonts/350AC2_2_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'Calluna-It';src: url('webfonts/350AC2_3_0.eot');src: url('webfonts/350AC2_3_0.eot?#iefix') format('embedded-opentype'),url('webfonts/350AC2_3_0.woff2') format('woff2'),url('webfonts/350AC2_3_0.woff') format('woff'),url('webfonts/350AC2_3_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'Calluna-Semibold';src: url('webfonts/350AC2_4_0.eot');src: url('webfonts/350AC2_4_0.eot?#iefix') format('embedded-opentype'),url('webfonts/350AC2_4_0.woff2') format('woff2'),url('webfonts/350AC2_4_0.woff') format('woff'),url('webfonts/350AC2_4_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'Calluna-SemiboldIt';src: url('webfonts/350AC2_5_0.eot');src: url('webfonts/350AC2_5_0.eot?#iefix') format('embedded-opentype'),url('webfonts/350AC2_5_0.woff2') format('woff2'),url('webfonts/350AC2_5_0.woff') format('woff'),url('webfonts/350AC2_5_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'Calluna-Light';src: url('webfonts/350AC2_6_0.eot');src: url('webfonts/350AC2_6_0.eot?#iefix') format('embedded-opentype'),url('webfonts/350AC2_6_0.woff2') format('woff2'),url('webfonts/350AC2_6_0.woff') format('woff'),url('webfonts/350AC2_6_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'Calluna-Black';src: url('webfonts/350AC2_7_0.eot');src: url('webfonts/350AC2_7_0.eot?#iefix') format('embedded-opentype'),url('webfonts/350AC2_7_0.woff2') format('woff2'),url('webfonts/350AC2_7_0.woff') format('woff'),url('webfonts/350AC2_7_0.ttf') format('truetype');}
+ */

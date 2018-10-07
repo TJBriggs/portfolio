@@ -1,0 +1,113 @@
+/*------------------------------------*\
+    ::  Spacing Modifiers
+\*------------------------------------*/    
+[class*="--pad-top"] {
+    [class*="__inner"] {
+        padding-top: emCalc(45px);
+    }
+}
+[class*="--pad-top-lg"] {
+    [class*="__inner"] {
+        padding-top: emCalc(60px);
+    }
+}
+[class*="--pad-bot"] {
+    [class*="__inner"] {
+        padding-bottom: emCalc(45px);
+    }
+}
+[class*="--pad-bot-lg"] {
+    [class*="__inner"] {
+        padding-bottom: emCalc(60px);
+    }
+}
+[class*="--pad-bot-xsmall"] {
+    [class*="__inner"] {
+        padding-bottom: emCalc(20px);
+    }
+}
+/*------------------------------------*\
+    ::  Background Modifiers
+\*------------------------------------*/	
+[class*="--bg-blue"],
+[class*="--bg-lblue"] {
+	background-color: $color-1;
+	p, li, span {
+		color: $color-2;
+ 	}
+ 	.btn {
+		color: $color-2;
+	}
+}
+[class*="--bg-lblue"] {
+	background-color: $color-1-light;
+	.btn {
+		border-color: $color-2;
+		&:after {
+	      background-color: $color-2;
+	    }
+	    &:hover {
+	    	color: $color-1-light;
+	    }
+	}
+}
+[class*="--bg-gray"] {
+	background-color: $color-3;
+	.btn {
+ 		color: $color-1;
+ 		&:hover {
+ 			color: $color-2;
+ 		}
+ 	}
+}
+[class*="--bg-image"] {
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	.content-block__overlay {
+		background-color: rgba(34, 33, 34, 0.8);
+	}
+	p, li, span {
+		color: $color-2;
+ 	}
+	.btn {
+ 		color: $color-2;
+ 	}
+ 	&[class*="--bg-img-only"] {
+ 		height: 400px;
+ 		@include bp($max:768px) {
+ 			height: 350px;
+ 		}
+ 		@include bp($max:640px) {
+ 			height: 325px;
+ 		}
+ 		@include bp($max:500px) {
+ 			height: 300px;
+ 		}
+ 	}
+}
+/*------------------------------------*\
+    ::  Misc. Modifiers
+\*------------------------------------*/	
+[class*="--rounded-corners"] {
+	// Round image corners
+	img {
+		border-radius: 0.5em;
+	}
+}
+[class*="--teal-overlay"] {
+	.content-block__overlay {
+		background-color: rgba(5, 42, 44, 0.75);
+	}
+}
+[class*="--no-overlay"] {
+	[class*="__overlay"] {
+		background-color: transparent;
+	}
+}
+[class*="--border-top"] {
+	border-top: 1px solid $color-2;
+}
+[class*="--border-bottom"] {
+	border-bottom: 1px solid $color-2;
+}

@@ -1,0 +1,44 @@
+/*------------------------------------*\
+    :: Home Page
+\*------------------------------------*/
+.home {
+    .hero-block {
+        &.hero-block--figure {
+            .hero-block__figure-wrap {
+                top: -15px;
+                @include bp($max:767px) {
+                    top: 0;
+                }
+            }
+        }
+    }
+    // Hero Figure has shadow so figure has to be smaller to see shadow
+    // This modifier pulls up the padding on mobile so the gap is
+    // not too large
+    .main-torso__module {
+        &:first-of-type {
+            padding-top: 0;
+            @include bp($max:768px) {
+                padding-top: 3em;
+            }
+            @include bp($max:500px) {
+                padding-top: 0;
+            }
+        }
+    }
+    // The CTA Figure towards the bottom is smaller in width then the
+    // others on the site. This page specific modifier reduces the right
+    // to reduce gap between text on large screens
+    .cta-figure {
+        &.cta-figure--page-mod {
+            .cta-figure__figure-wrap {
+                @include bp($min:1441px) {
+                    position: absolute;
+                    top: 0;
+                    right: -40px;
+                    z-index: 50;
+                }
+            }
+        }
+    }
+}

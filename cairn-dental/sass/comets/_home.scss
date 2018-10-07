@@ -1,0 +1,35 @@
+/*------------------------------------*\
+    ::  Home Custom Styles
+\*------------------------------------*/	
+.page-id-5 {
+	// Add Arrow to h1
+	.content-block--doctors-arrow {
+		.content__group--2 {
+			h1 {
+				&:first-of-type {
+					position: relative;
+					&:after {
+						content: url(images/global/arrow.png);
+						max-height: 40px;
+						max-width: 170px;
+						position: absolute;
+						top: 6px;
+						right: 10px;
+						@include bp($max: 1120px) {
+							right: -10px;
+						}
+						@include bp($max: 1024px) {
+							display: none;
+						}
+					}
+				}
+				@include bp($max:1024px) {
+					margin-top: 0;
+				}
+				@include bp($max:375px) {
+					font-size: 32px;
+				}
+			}
+		}
+	}
+}

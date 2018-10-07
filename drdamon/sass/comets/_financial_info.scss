@@ -1,0 +1,30 @@
+/*-------------------------------------------*\
+    ::Page Styles - Your First Visit
+\*-------------------------------------------*/
+.page-financial-information {
+	.thirds__group {
+		h3 {
+			margin-bottom: 10px;
+		}
+		ul {
+			margin: 0 $pad;
+			padding: 0;
+		}
+	   	.btn {
+	   		margin: 20px 0 60px;
+	   	}
+	}
+	.page__group--offers {
+		padding-bottom: 30px;
+		@include bp($solarsystem) {
+			.thirds__group--1 {
+				p {
+					text-align: center;
+				}
+			}
+		}
+	}
+	.page__group--insurance-info {
+		padding: 35px 0 50px;
+	}
+}

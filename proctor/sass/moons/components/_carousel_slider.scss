@@ -1,0 +1,33 @@
+/*------------------------------------*
+    :: Carousel Slider Layout
+*------------------------------------*/
+.carousel {
+	margin: 0;
+	padding: 0;
+	.carousel--slider {
+		.slides {
+			margin: 0;
+			overflow: hidden;
+			padding: 0;
+			width: 100%;
+			.carousel__slide-item {
+				background-repeat: no-repeat;
+				background-position: bottom;
+				box-sizing: content-box;   
+				height: 350px;
+				margin: 0;
+				padding: 0;
+				max-height: 380px;
+				max-width: 100%;
+				overflow: hidden;
+				width: 100%;
+				p {
+					color: $white;
+					font-size: emCalc(18px);
+					letter-spacing: 1px;
+					text-align: center;
+				}
+			}
+		}
+	}
+}

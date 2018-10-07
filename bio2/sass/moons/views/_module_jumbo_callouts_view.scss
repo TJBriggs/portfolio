@@ -1,0 +1,28 @@
+/*------------------------------------*\
+    ::  Jumbo Callouts Styles
+\*------------------------------------*/	
+.jumbo-callouts {
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	@include bp($max:800px) {
+		background-position: 0px -75px;
+	}
+	@include bp($max:750px) {
+		background-size: contain;
+	}
+	@include bp($max:640px) {
+		background-position: 0px -35px;
+	}
+	@include bp($max:480px) {
+		background-position: 0px 0px;
+	}
+	&__callout {
+		img, svg {
+			fill: #000;
+		}
+		h1 {
+			font-weight: bold;
+		}
+	}
+}

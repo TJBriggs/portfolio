@@ -1,0 +1,48 @@
+/*------------------------------------*\
+    :: Landing Page Template
+\*------------------------------------*/
+// Remove opacity on hero
+.landing-page {
+	.hero-block {
+		background-color: transparent;
+		background-blend-mode: normal;
+	}
+	.form-block--text {
+	    &.form-block--overlap {
+	    	@include bp($max:640px) {
+				padding: 0 $pad;
+            }
+	        .form-block__inner {
+	            top: -430px;
+	            margin-bottom: -430px;
+	            @include bp($max:960px) {
+					margin-bottom: -350px;
+	                top: -350px;
+	            }
+	            @include bp($max:640px) {
+	            	padding: 2em $pad*2;
+					margin-bottom: -275px;
+					top: -275px;
+					border-radius: 5px;
+            		box-shadow: 12px 3px 7px -4px rgba(0, 0, 0, 0.15), -12px 3px 7px -4px rgba(0, 0, 0, 0.15);
+	            }
+	        }
+	        // @include bp($max:960px) {
+	        //     .form-block__inner {
+	        //         margin-bottom: -350px;
+	        //         top: -350px;
+	        //     }
+	        // }
+	        // @include bp($max:640px) {
+         //    padding: 0;
+         //    .form-block__inner {
+         //        margin-bottom: 0px;
+         //        padding: 4em $pad*2;
+         //        top: 0px;
+         //        border-radius: 0;
+         //        box-shadow: none;
+         //    }
+       // }
+	    }
+	}
+}

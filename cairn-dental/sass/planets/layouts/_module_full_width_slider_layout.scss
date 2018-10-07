@@ -1,0 +1,176 @@
+/*------------------------------------*\
+    ::  Full Width Slider Layout
+\*------------------------------------*/
+.full-width-slider {
+	width: 100%;
+	overflow: hidden;
+	// fixes white gap inbetween slider and footer on blog pages
+	&.full-width-slider--blog {
+		float: left;
+	}
+}	
+.owl-carousel--full {
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+}
+
+.full-width-slider__slide {
+	width: 100%;
+}
+.slide__overlay {
+	height: 100%;
+	width: 100%;
+}
+.slide__inner {
+	height: 525px;
+	position: relative;
+	@include bp($max:1024px) {
+		height: 450px;
+	}
+	@include bp($max:640px) {
+		height: 400px;
+	}
+	@include bp($max:480px) {
+		height: 350px;
+	}
+}
+.slide__content {
+	width: 50%;
+	overflow: hidden;
+	position: absolute;
+	top: 50%;
+	left: $pad*2;
+	transform: translateY(-50%);
+	@include bp($max:1250px) {
+		left: $pad*4;
+	}
+	@include bp($max:1024px) {
+		left: $pad*6;
+	}
+	@include bp($max:768px) {
+		width: 75%;
+		right: 0;
+	}
+	@include bp($max:640px) {
+		width: 80%;
+		left: $pad*4;
+	}
+	@include bp($max:480px) {
+		left: $pad*3;
+	}
+}
+.slide__text {
+	width: 100%;
+	h3 {
+		margin: 0 0 30px 0;
+		padding: 0;
+		@include bp($max:640px) {
+			margin: 0 0 20px 0;
+		}
+	}
+	p {
+		margin: 0;
+		padding: 0;
+	}
+	.btn {
+		margin-top: 25px;
+	}
+}
+/*------------------------------------*\
+    ::  Layout Modifiers
+\*------------------------------------*/
+.slider-text--right {
+	.slide__content {
+		left: auto;
+		right: $pad*2;
+		transform: translateY(-50%);
+		@include bp($max:1250px) {
+			right: $pad*4;
+		}
+		@include bp($max:1024px) {
+			right: $pad*6;
+		}
+		@include bp($max:768px) {
+			width: 75%;
+			right: auto;
+			left: $pad*6;
+		}
+		@include bp($max:640px) {
+			width: 80%;
+			left: $pad*4;
+		}
+		@include bp($max:480px) {
+			left: $pad*3;
+		}
+	}
+}
+.slider-text--center {
+	.slide__content {
+		width: 75%;
+		left: 50%;
+		right: auto;
+		transform: translate(-50%, -50%);
+		text-align: center;
+	}
+}
+/*------------------------------------*\
+    ::  Owl Arrows
+\*------------------------------------*/
+.owl-carousel--full {
+	.owl-prev {
+		position: absolute;
+		top: 50%;
+		left: 20%;
+		transform: translateY(-50%);
+		@include bp($max:1950px) {
+			left: 15%;
+		}
+		@include bp($max:1675px) {
+			left: 10%;
+		}
+		@include bp($max:1475px) {
+			left: 5%;
+		}
+		@include bp($max:1315px) {
+			left: $pad*2;
+		}
+		@include bp($max:1150px) {
+			width: 15px;
+			left: $pad;
+		}
+	}
+	.owl-next {
+		position: absolute;
+		top: 50%;
+		right: 20%;
+		transform: translateY(-50%);
+		@include bp($max:1950px) {
+			right: 15%;
+		}
+		@include bp($max:1675px) {
+			right: 10%;
+		}
+		@include bp($max:1475px) {
+			right: 5%;
+		}
+		@include bp($max:1315px) {
+			right: $pad*2;
+		}
+		@include bp($max:1150px) {
+			width: 15px;
+			right: $pad;
+		}
+	}
+}	
+/*------------------------------------*\
+    ::  Custom Modifiers
+\*------------------------------------*/	
+// Increase height of slider for sections with lots of text
+.full-width-slider--mobile-ht-lg {
+	.slide__inner {
+		@include bp($max:480px) {
+			height: 425px;
+		}
+	}
+}

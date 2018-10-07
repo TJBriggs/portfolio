@@ -1,0 +1,85 @@
+/*------------------------------------*\
+    ::Base
+    ------------------------------------*
+    ::Normalize.css v3.0.0 | MIT License | git.io/normalize
+\*------------------------------------*/
+html {
+	font-family: $fam-heading;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+body {
+	margin: 0;
+}
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+.hide {
+	display: none;
+}
+.screen-reader-text {
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
+}
+.locked{
+	&, body{
+		overflow: hidden;
+		height: auto;
+		position: fixed;
+	}
+}
+/*--------------------------------------------------------------*\
+    ::  Zenman Icon for All The Things - Remove Before Launch
+\*--------------------------------------------------------------*/
+.zen-options {
+	display: none;
+}
+.logged-in {
+	.zen-options {
+		display: block;
+		width: 60px;
+		padding: em(10px) $pad em(7px);
+		position: fixed;
+		top: em(170px);
+		right: em(-10px);
+		z-index: 9999;
+		backface-visibility: hidden;
+		background: rgba(#0d0e0e, 0.85);
+		border-top: 1px solid #8E8D89;
+		border-left: 1px solid #8E8D89;
+		border-bottom: 1px solid #8E8D89;
+		border-top-left-radius: 0.3em;
+		border-bottom-left-radius: 0.3em;
+		transition: border 400ms, right 400ms, top 600ms 50ms;
+		.zen-icon {
+			display: block;
+			width: 20px;
+			opacity: 0.45;
+			transition: opacity 400ms;
+		}
+		&:hover {
+			border-color: #fff;
+			right: 0px;
+			.zen-icon {
+				opacity: 1;
+			}
+		}
+	}
+}
+.single-patterns {
+	padding-top: 107px;
+	@include bp($max:640px) {
+		padding-top: 87px;
+	}
+}
+.post-type-archive-patterns {
+	padding-top: 137px;
+	@include bp($max:640px) {
+		padding-top: 117px;
+	}
+}

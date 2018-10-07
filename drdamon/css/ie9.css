@@ -1,0 +1,29 @@
+/*  Keyframe workaround for IE 9 */
+.no-touch .page-home .polaroids .flexslider--polaroids .flex-viewport ul li .bubble {
+	opacity: 1;
+}
+
+.no-touch .page-home .polaroids .flexslider--polaroids .flex-viewport ul li .mascot {
+	opacity: 1;
+}
+
+.no-touch .page-home .polaroids .flexslider--polaroids .flex-viewport ul li .polaroid-1 {
+	margin-top: 190px;
+}
+
+.no-touch .page-home .polaroids .flexslider--polaroids .flex-viewport ul li .polaroid-2 {
+	margin-top: 50px;
+}
+
+.no-touch .page-home .polaroids .flexslider--polaroids .flex-viewport ul li .polaroid-3 {
+	margin-top: 190px;
+}
+
+.no-touch .page-home .polaroids .flexslider--polaroids .flex-viewport ul li .polaroid-4 {
+	margin-top: 120px;
+}
+
+.no-touch .page-home .testimonial__text {
+	opacity: 1;
+	top: 0px;
+}

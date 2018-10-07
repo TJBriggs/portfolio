@@ -1,0 +1,105 @@
+/*------------------------------------*\
+    ::  Content Block Styles
+\*------------------------------------*/
+.content-block {
+    background-color: $color-4;
+    .section-title {
+        color: $txt-color-2;
+        font-family: $fam-bold;
+        font-size: em(28px);
+        text-align: center;
+        @include bp($max:1024px) {
+            font-size: em(26px);
+        }
+        @include bp($max:480px) {
+            font-size: em(24px);
+        }
+    }
+    p { 
+        line-height: 1.5em;
+    }
+}
+.content__group { 
+    // Reorganize font families, 
+    // font sizes, and colors
+    h1 {
+        color: $txt-color-2;
+        font-family: $fam-reg;
+        font-size: em(38px);
+    } 
+    h2 {
+        color: $txt-color-2;
+        font-family: $fam-bold;
+        font-size: em(30px);
+    }
+    h3 {
+        color: $txt-color-2;
+        font-family: $fam-bold;
+        font-size: em(27px);
+    }
+    h6 {
+        margin-bottom: 25px;
+    }
+}
+/*------------------------------------*\
+    ::  BG Modifiers 
+\*------------------------------------*/ 
+// Topographical Pattern
+.content-block--bg-topo {
+    background-color: $color-3;
+    background-image: url('images/global/topo_pattern.png');
+    background-repeat: repeat;
+    .content__group {
+        // Set links to white so they are readable
+        a {
+            color: $color-4;
+        }
+    }
+}  
+// Light Gray Background Color 
+.content-block--bg-gray {
+    background-color: $color-3-light;
+} 
+// Background Image General Styles
+.content-block--bg-image-cover,
+.content-block--bg-image-repeat {
+    // Turn on overlay
+    .content-block__overlay {
+        background-color: rgba(0, 0, 0, 0.60);
+        // Set font color to white
+        .section-title, 
+        p, li, span, h1, h2, 
+        h3, hr, h5, h6 {
+            color: $color-4;
+        }
+    }
+    .content__group {
+        a {
+            color: lighten($color-2, 10%);
+        }
+    }
+}
+// BG Cover Styles
+.content-block--bg-image-cover {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+// Parallax Specific Styles will work
+// on Topo Bg, BG repeat, and BG cover
+.content-block--parallax  {
+    background-attachment: fixed;
+    @include bp($max:1024px) {
+        background-attachment: initial;
+    }
+}
+/*------------------------------------*\
+    ::  Content Modifiers
+\*------------------------------------*/
+// Align Section Title to left
+.content-block--title-align-left {
+    .section-title {
+        text-align: left;
+    }
+}
+

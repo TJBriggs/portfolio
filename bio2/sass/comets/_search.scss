@@ -1,0 +1,98 @@
+/*------------------------------------*\
+    ::  Search Styles
+\*------------------------------------*/	
+.search {
+	.search-torso {
+		width: 100%;
+		overflow: hidden;
+		background-color: $color-2;
+		&__inner {
+			padding: 2em $pad*3 2.5em;;
+			@include bp($max:640px) {
+				padding: 1.5em $pad*2 2em;
+			}
+			@include bp($max:480px) {
+				padding: 1.5em $pad 2em;
+			}
+		}
+		&__wrap {
+			.search-wrap {
+				overflow: hidden;
+				&:after {
+					content: '';
+					clear: both;	
+				}
+			}
+			h1 {
+				margin-bottom: 1.5em;
+				color: #6d6d6d;
+				text-transform: none;
+			}
+			input[type="search"] {
+				float: left;
+				height: 48px;
+				width: 50%;
+				font-weight: 100;
+				@include bp($max:767px) {
+					width: 95%;
+				}
+				@include bp($max:480px) {
+					width: 90%;
+				}
+				@include bp($max:320px) {
+					width: 89%;
+				}
+			}
+			input[type="submit"] {
+				float: left;
+				width: 200px;
+				margin-left: 0.75em;
+				position: relative;
+				top: 1px;
+				outline: none;
+				@include bp($max:767px) {
+					margin-top: 1.5em;
+					margin-left: 0;
+				}
+			}
+			h4 {
+				margin: 0;
+				padding: 2em 0;
+				color: #6d6d6d;
+				border-bottom: 1px solid $color-1-light;
+				text-transform: none;
+			}
+			p {
+				strong {
+					color: $color-1-light;
+					text-transform: uppercase;
+				}
+			}
+		}
+		&__result {
+			padding-bottom: 1.5em;
+			border-bottom: 1px solid $color-1-light;
+			&:last-of-type {
+				border: none;
+			}
+			.search-torso__page-title {
+				margin-bottom: 0.5em;
+				a {
+					color: #6d6d6d;
+				}
+			}
+			.search-torso__permalink {
+				font-weight: 100;
+			}
+		}
+		&__no-results {
+			padding-bottom: 1.5em;
+			h1 {
+				margin-bottom: 0.5em;
+			}
+			p {
+				margin-bottom: 1.5em;
+			}
+		}
+	}
+}

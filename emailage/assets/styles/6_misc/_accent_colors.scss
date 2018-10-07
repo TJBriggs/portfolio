@@ -1,0 +1,895 @@
+/*------------------------------------*\
+    :: Accent Colors
+\*------------------------------------*/    
+// This is where you place any modifiers that are based on Accent Colors 
+/*------------------------------------*\
+    :: Gray
+\*------------------------------------*/ 
+[class*="--accent-gray"] {
+    [class*="__colored-title"] {
+        color: $accent-gray;
+    }
+    .btn {
+        @extend %gray-gradient;
+    }
+    input[type=submit] {
+        @extend %gray-gradient;
+        background-image: -webkit-linear-gradient(top left, $accent-gray 100%, $accent-gray 100%);
+        background-image: -o-linear-gradient(top left, $accent-gray 100%, $accent-gray 100%);
+        background-image: linear-gradient(to bottom right, $accent-gray 100%, $accent-gray 100%);
+    }
+    // Module Specific Modifiers
+    .callouts--no-icons,
+    .callouts--icons-center {
+        h2 {
+            &:after {
+                background-color: $accent-gray;
+            }
+        }
+    }
+    .figure-block__figure-wrap, .landing-page__stat {
+        background-color: $accent-gray;
+    }
+    .figure-block__quote {
+        fill: $accent-gray;
+    }
+    .figure-block__quote-text {
+        h4 {
+            color: $accent-gray;
+        }
+    }
+    // Colored Cards & Hover CTAs
+    .cards__card-icon, .ctas__cta-icon {
+        svg {
+            fill: $accent-gray-icon;
+        }
+    }
+    .cards__card-left {
+        h5 {
+            color: $accent-gray;
+        }
+    }
+    .cards__card-right {
+        background-color: $accent-gray-dark;
+        h4 {
+            color: $accent-gray-light;
+        }
+    }
+    .ctas__cta-link {
+        color: $accent-gray-icon;
+    }
+    .ctas__cta {
+        background-color: transparent;
+        &:hover {
+            background-color: $accent-gray-xlight;
+        }
+    }
+}
+[class*="--main-accent-gray"] {
+    [class*="__main-colored-title"] {
+        color: $accent-gray;
+    }
+} 
+/*------------------------------------*\
+    :: Orange
+\*------------------------------------*/    
+[class*="--accent-orange"] {
+    [class*="__colored-title"] {
+        color: $accent-orange;
+    }
+    .btn {
+        @extend %orange-gradient;
+    }
+    input[type=submit] {
+        @extend %orange-gradient;
+        background-image: -webkit-linear-gradient(top left, $accent-orange 100%, $accent-orange 100%);
+        background-image: -o-linear-gradient(top left, $accent-orange 100%, $accent-orange 100%);
+        background-image: linear-gradient(to bottom right, $accent-orange 100%, $accent-orange 100%);
+    }
+    // Module Specific Modifiers
+    .callouts--no-icons,
+    .callouts--icons-center {
+        h2 {
+            &:after {
+                background-color: $accent-orange;
+            }
+        }
+    }
+    .figure-block__figure-wrap, .landing-page__stat {
+        background-color: $accent-orange;
+    }
+    .figure-block__quote {
+        fill: $accent-orange;
+    }
+    .figure-block__quote-text {
+        h4 {
+            color: $accent-orange;
+        }
+    }
+    // Colored Cards & Hover CTAs
+    .cards__card-icon, .ctas__cta-icon {
+        svg {
+            fill: $accent-orange-icon;
+        }
+    }
+    .cards__card-left {
+        h5 {
+            color: $accent-orange;
+        }
+    }
+    .cards__card-right {
+        background-color: $accent-orange-dark;
+        h4 {
+            color: $accent-orange-light;
+        }
+    }
+    .ctas__cta-link {
+        color: $accent-orange-icon;
+    }
+    .ctas__cta {
+        background-color: transparent;
+        &:hover {
+            background-color: $accent-orange-xlight;
+        }
+    }
+}
+[class*="--main-accent-orange"] {
+    [class*="__main-colored-title"] {
+        color: $accent-orange;
+    }
+}
+/*------------------------------------*\
+    :: Green
+\*------------------------------------*/    
+[class*="--accent-green"] {
+    [class*="__colored-title"] {
+        color: $accent-green;
+    }
+    .btn {
+        @extend %green-gradient;
+    }
+    input[type=submit] {
+        @extend %green-gradient;
+        background-image: -webkit-linear-gradient(top left, $accent-green 100%, $accent-green 100%);
+        background-image: -o-linear-gradient(top left, $accent-green 100%, $accent-green 100%);
+        background-image: linear-gradient(to bottom right, $accent-green 100%, $accent-green 100%);
+    }
+    // Module Specific Modifiers
+    .callouts--no-icons,
+    .callouts--icons-center {
+        h2 {
+            &:after {
+                background-color: $accent-green;
+            }
+        }
+    }
+    .figure-block__figure-wrap, .landing-page__stat {
+        background-color: $accent-green;
+    }
+    .figure-block__quote {
+        fill: $accent-green;
+    }
+    .figure-block__quote-text {
+        h4 {
+            color: $accent-green;
+        }
+    }
+    // Colored Cards & Hover CTAs
+    .cards__card-icon, .ctas__cta-icon {
+        svg {
+            fill: $accent-green-icon;
+        }
+    }
+    .cards__card-left {
+        h5 {
+            color: $accent-green;
+        }
+    }
+    .cards__card-right {
+        background-color: $accent-green-dark;
+        h4 {
+            color: $accent-green-light;
+        }
+    }
+    .ctas__cta-link {
+        color: $accent-green-icon;
+    }
+    .ctas__cta {
+        background-color: transparent;
+        &:hover {
+            background-color: $accent-green-xlight;
+        }
+    }
+}
+[class*="--main-accent-green"] {
+    [class*="__main-colored-title"] {
+        color: $accent-green;
+    }
+}
+/*------------------------------------*\
+    :: Teal 
+\*------------------------------------*/    
+[class*="--accent-teal"] {
+    [class*="__colored-title"] {
+        color: $accent-teal;
+    }
+    .btn {
+        @extend %teal-gradient;
+    }
+    input[type=submit] {
+        @extend %teal-gradient;
+        &:hover {
+            background-image: -webkit-linear-gradient(top left, $accent-teal 100%, $accent-teal 100%);
+            background-image: -o-linear-gradient(top left, $accent-teal 100%, $accent-teal 100%);
+            background-image: linear-gradient(to bottom right, $accent-teal 100%, $accent-teal 100%);
+        }
+    }
+    // Module Specific Modifiers
+    .callouts--no-icons,
+    .callouts--icons-center {
+        h2 {
+            &:after {
+                background-color: $accent-teal;
+            }
+        }
+    }
+    .figure-block__figure-wrap, .landing-page__stat {
+        background-color: $accent-teal;
+    }
+    .figure-block__quote {
+        fill: $accent-teal;
+    }
+    .figure-block__quote-text {
+        h4 {
+            color: $accent-teal;
+        }
+    }
+    // Colored Cards & Hover CTAs
+    .cards__card-icon, .ctas__cta-icon {
+        svg {
+            fill: $accent-teal-icon;
+        }
+    }
+    .cards__card-left {
+        h5 {
+            color: $accent-teal;
+        }
+    }
+    .cards__card-right {
+        background-color: $accent-teal-dark;
+        h4 {
+            color: $accent-teal-light;
+        }
+    }
+    .ctas__cta-link {
+        color: $accent-teal-icon;
+    }
+    .ctas__cta {
+        background-color: transparent;
+        &:hover {
+            background-color: $accent-teal-xlight;
+        }
+    }
+}
+[class*="--main-accent-teal"] {
+    [class*="__main-colored-title"] {
+        color: $accent-teal;
+    }
+}
+/*------------------------------------*\
+    :: Blue
+\*------------------------------------*/    
+[class*="--accent-blue"] {
+    [class*="__colored-title"] {
+        color: $accent-blue;
+    }
+    .btn {
+        @extend %blue-gradient;
+    }
+    input[type=submit] {
+        @extend %blue-gradient;
+        &:hover {
+            background-image: -webkit-linear-gradient(top left, $accent-blue 100%, $accent-blue 100%);
+            background-image: -o-linear-gradient(top left, $accent-blue 100%, $accent-blue 100%);
+            background-image: linear-gradient(to bottom right, $accent-blue 100%, $accent-blue 100%);
+        }
+    }
+    // Module Specific Modifiers
+    .callouts--no-icons,
+    .callouts--icons-center {
+        h2 {
+            &:after {
+                background-color: $accent-blue;
+            }
+        }
+    }
+    .figure-block__figure-wrap, .landing-page__stat {
+        background-color: $accent-blue;
+    }
+    .figure-block__quote {
+        fill: $accent-blue;
+    }
+    .figure-block__quote-text {
+        h4 {
+            color: $accent-blue;
+        }
+    }
+    // Colored Cards & Hover CTAs
+    .cards__card-icon, .ctas__cta-icon {
+        svg {
+            fill: $accent-blue-icon;
+        }
+    }
+    .cards__card-left {
+        h5 {
+            color: $accent-blue;
+        }
+    }
+    .cards__card-right {
+        background-color: $accent-blue-dark;
+        h4 {
+            color: $accent-blue-light;
+        }
+    }
+    .ctas__cta-link {
+        color: $accent-blue-icon;
+    }
+    .ctas__cta {
+        background-color: transparent;
+        &:hover {
+            background-color: $accent-blue-xlight;
+        }
+    }
+}
+[class*="--main-accent-blue"] {
+    [class*="__main-colored-title"] {
+        color: $accent-blue;
+    }
+}
+/*------------------------------------*\
+    :: Red
+\*------------------------------------*/    
+[class*="--accent-red"] {
+    [class*="__colored-title"] {
+        color: $accent-red;
+    }
+    .btn {
+        @extend %red-gradient;
+    }
+    input[type=submit] {
+        @extend %red-gradient;
+        &:hover {
+            background-image: -webkit-linear-gradient(top left, $accent-red 100%, $accent-red 100%);
+            background-image: -o-linear-gradient(top left, $accent-red 100%, $accent-red 100%);
+            background-image: linear-gradient(to bottom right, $accent-red 100%, $accent-red 100%);
+        }
+    }
+    // Module Specific Modifiers
+    .callouts--no-icons,
+    .callouts--icons-center {
+        h2 {
+            &:after {
+                background-color: $accent-red;
+            }
+        }
+    }
+    .figure-block__figure-wrap, .landing-page__stat {
+        background-color: $accent-red;
+    }
+    .figure-block__quote {
+        fill: $accent-red;
+    }
+    .figure-block__quote-text {
+        h4 {
+            color: $accent-red;
+        }
+    }
+    // Colored Cards & Hover CTAs
+    .cards__card-icon, .ctas__cta-icon {
+        svg {
+            fill: $accent-red-icon;
+        }
+    }
+    .cards__card-left {
+        h5 {
+            color: $accent-red;
+        }
+    }
+    .cards__card-right {
+        background-color: $accent-red-dark;
+        h4 {
+            color: $accent-red-light;
+        }
+    }
+    .ctas__cta-link {
+        color: $accent-red-icon;
+    }
+}
+[class*="--main-accent-red"] {
+    [class*="__main-colored-title"] {
+        color: $accent-red;
+    }
+}
+/*------------------------------------*\
+    :: Purple
+\*------------------------------------*/    
+[class*="--accent-purple"] {
+    [class*="__colored-title"] {
+        color: $accent-purple;
+    }
+    .btn {
+        @extend %purple-gradient;
+    }
+    input[type=submit] {
+        @extend %purple-gradient;
+        &:hover {
+            background-image: -webkit-linear-gradient(top left, $accent-purple 100%, $accent-purple 100%);
+            background-image: -o-linear-gradient(top left, $accent-purple 100%, $accent-purple 100%);
+            background-image: linear-gradient(to bottom right, $accent-purple 100%, $accent-purple 100%);
+        }
+    }
+    // Module Specific Modifiers
+    .callouts--no-icons,
+    .callouts--icons-center {
+        h2 {
+            &:after {
+                background-color: $accent-purple;
+            }
+        }
+    }
+    .figure-block__figure-wrap, .landing-page__stat {
+        background-color: $accent-purple;
+    }
+    .figure-block__quote {
+        fill: $accent-purple;
+    }
+    .figure-block__quote-text {
+        h4 {
+            color: $accent-purple;
+        }
+    }
+    // Colored Cards & Hover CTAs
+    .cards__card-icon, .ctas__cta-icon {
+        svg {
+            fill: $accent-purple-icon;
+        }
+    }
+    .cards__card-left {
+        h5 {
+            color: $accent-purple;
+        }
+    }
+    .cards__card-right {
+        background-color: $accent-purple-dark;
+        h4 {
+            color: $accent-purple-light;
+        }
+    }
+    .ctas__cta-link {
+        color: $accent-purple-icon;
+    }
+    .ctas__cta {
+        background-color: transparent;
+        &:hover {
+            background-color: $accent-purple-xlight;
+        }
+    }
+}
+[class*="--main-accent-purple"] {
+    [class*="__main-colored-title"] {
+        color: $accent-purple;
+    }
+}
+
+/*------------------------------------*\
+    :: Deep Orange
+\*------------------------------------*/  
+[class*="--accent-deep-orange"] {
+    [class*="__colored-title"] {
+        color: $accent-deep-orange;
+    }
+    .btn {
+        @extend %deep-orange-gradient;
+    }
+    input[type=submit] {
+        @extend %deep-orange-gradient;
+        &:hover {
+            background-image: -webkit-linear-gradient(top left, $accent-deep-orange 100%, $accent-deep-orange 100%);
+            background-image: -o-linear-gradient(top left, $accent-deep-orange 100%, $accent-deep-orange 100%);
+            background-image: linear-gradient(to bottom right, $accent-deep-orange 100%, $accent-deep-orange 100%);
+        }
+    }
+    // Module Specific Modifiers
+    .callouts--no-icons,
+    .callouts--icons-center {
+        h2 {
+            &:after {
+                background-color: $accent-deep-orange;
+            }
+        }
+    }
+    .figure-block__figure-wrap, .landing-page__stat {
+        background-color: $accent-deep-orange;
+    }
+    .figure-block__quote {
+        fill: $accent-deep-orange;
+    }
+    .figure-block__quote-text {
+        h4 {
+            color: $accent-deep-orange;
+        }
+    }
+    // Colored Cards & Hover CTAs
+    .cards__card-icon, .ctas__cta-icon {
+        svg {
+            fill: $accent-deep-orange-icon;
+        }
+    }
+    .cards__card-left {
+        h5 {
+            color: $accent-deep-orange;
+        }
+    }
+    .cards__card-right {
+        background-color: $accent-deep-orange-dark;
+        h4 {
+            color: $accent-deep-orange-light;
+        }
+    }
+    .ctas__cta-link {
+        color: $accent-deep-orange-icon;
+    }
+    .ctas__cta {
+        background-color: transparent;
+        &:hover {
+            background-color: $accent-deep-orange-xlight;
+        }
+    }
+}
+[class*="--main-accent-deep-orange"] {
+    [class*="__main-colored-title"] {
+        color: $accent-deep-orange;
+    }
+}
+/*------------------------------------*\
+    :: Sunset Orange
+\*------------------------------------*/ 
+[class*="--accent-sunset-orange"] {
+    [class*="__colored-title"] {
+        color: $accent-sunset-orange;
+    }
+    .btn {
+        @extend %sunset-orange-gradient;
+    }
+    input[type=submit] {
+        @extend %sunset-orange-gradient;
+        &:hover {
+            background-image: -webkit-linear-gradient(top left, $accent-sunset-orange 100%, $accent-sunset-orange 100%);
+            background-image: -o-linear-gradient(top left, $accent-sunset-orange 100%, $accent-sunset-orange 100%);
+            background-image: linear-gradient(to bottom right, $accent-sunset-orange 100%, $accent-sunset-orange 100%);
+        }
+    }
+    // Module Specific Modifiers
+    .callouts--no-icons,
+    .callouts--icons-center {
+        h2 {
+            &:after {
+                background-color: $accent-sunset-orange;
+            }
+        }
+    }
+    .figure-block__figure-wrap, .landing-page__stat {
+        background-color: $accent-sunset-orange;
+    }
+    .figure-block__quote {
+        fill: $accent-sunset-orange;
+    }
+    .figure-block__quote-text {
+        h4 {
+            color: $accent-sunset-orange;
+        }
+    }
+    // Colored Cards & Hover CTAs
+    .cards__card-icon, .ctas__cta-icon {
+        svg {
+            fill: $accent-sunset-orange-icon;
+        }
+    }
+    .cards__card-left {
+        h5 {
+            color: $accent-sunset-orange;
+        }
+    }
+    .cards__card-right {
+        background-color: $accent-sunset-orange-dark;
+        h4 {
+            color: $accent-sunset-orange-light;
+        }
+    }
+    .ctas__cta-link {
+        color: $accent-sunset-orange-icon;
+    }
+    .ctas__cta {
+        background-color: transparent;
+        &:hover {
+            background-color: $accent-sunset-orange-xlight;
+        }
+    }
+}
+[class*="--main-accent-sunset-orange"] {
+    [class*="__main-colored-title"] {
+        color: $accent-sunset-orange;
+    }
+}
+
+/*------------------------------------*\
+    :: Lipstick Red
+\*------------------------------------*/ 
+[class*="--accent-lipstick-red"] {
+    [class*="__colored-title"] {
+        color: $accent-lipstick-red;
+    }
+    .btn {
+        @extend %lipstick-red-gradient;
+    }
+    input[type=submit] {
+        @extend %lipstick-red-gradient;
+        &:hover {
+            background-image: -webkit-linear-gradient(top left, $accent-lipstick-red 100%, $accent-lipstick-red 100%);
+            background-image: -o-linear-gradient(top left, $accent-lipstick-red 100%, $accent-lipstick-red 100%);
+            background-image: linear-gradient(to bottom right, $accent-lipstick-red 100%, $accent-lipstick-red 100%);
+        }
+    }
+    // Module Specific Modifiers
+    .callouts--no-icons,
+    .callouts--icons-center {
+        h2 {
+            &:after {
+                background-color: $accent-lipstick-red;
+            }
+        }
+    }
+    .figure-block__figure-wrap, .landing-page__stat {
+        background-color: $accent-lipstick-red;
+    }
+    .figure-block__quote {
+        fill: $accent-lipstick-red;
+    }
+    .figure-block__quote-text {
+        h4 {
+            color: $accent-lipstick-red;
+        }
+    }
+    // Colored Cards & Hover CTAs
+    .cards__card-icon, .ctas__cta-icon {
+        svg {
+            fill: $accent-lipstick-red-icon;
+        }
+    }
+    .cards__card-left {
+        h5 {
+            color: $accent-lipstick-red;
+        }
+    }
+    .cards__card-right {
+        background-color: $accent-lipstick-red-dark;
+        h4 {
+            color: $accent-lipstick-red-light;
+        }
+    }
+    .ctas__cta-link {
+        color: $accent-lipstick-red-icon;
+    }
+    .ctas__cta {
+        background-color: transparent;
+        &:hover {
+            background-color: $accent-lipstick-red-xlight;
+        }
+    }
+}
+[class*="--main-accent-lipstick-red"] {
+    [class*="__main-colored-title"] {
+        color: $accent-lipstick-red;
+    }
+}
+/*------------------------------------*\
+    :: Yellow
+\*------------------------------------*/ 
+[class*="--accent-yellow"] {
+    [class*="__colored-title"] {
+        color: $accent-yellow;
+    }
+    .btn {
+        @extend %yellow-gradient;
+    }
+    input[type=submit] {
+        @extend %yellow-gradient;
+        &:hover {
+            background-image: -webkit-linear-gradient(top left, $accent-yellow 100%, $accent-yellow 100%);
+            background-image: -o-linear-gradient(top left, $accent-yellow 100%, $accent-yellow 100%);
+            background-image: linear-gradient(to bottom right, $accent-yellow 100%, $accent-yellow 100%);
+        }
+    }
+    // Module Specific Modifiers
+    .callouts--no-icons,
+    .callouts--icons-center {
+        h2 {
+            &:after {
+                background-color: $accent-yellow;
+            }
+        }
+    }
+    .figure-block__figure-wrap, .landing-page__stat {
+        background-color: $accent-yellow;
+    }
+    .figure-block__quote {
+        fill: $accent-yellow;
+    }
+    .figure-block__quote-text {
+        h4 {
+            color: $accent-yellow;
+        }
+    }
+    // Colored Cards & Hover CTAs
+    .cards__card-icon, .ctas__cta-icon {
+        svg {
+            fill: $accent-yellow-icon;
+        }
+    }
+    .cards__card-left {
+        h5 {
+            color: $accent-yellow;
+        }
+    }
+    .cards__card-right {
+        background-color: $accent-yellow-dark;
+        h4 {
+            color: $accent-yellow-light;
+        }
+    }
+    .ctas__cta-link {
+        color: $accent-yellow-icon;
+    }
+    .ctas__cta {
+        background-color: transparent;
+        &:hover {
+            background-color: $accent-yellow-xlight;
+        }
+    }
+}
+[class*="--main-accent-yellow"] {
+    [class*="__main-colored-title"] {
+        color: $accent-yellow;
+    }
+}
+
+/*------------------------------------*\
+    :: Colored Cards Main BG
+\*------------------------------------*/  
+.card--accent-gray {
+    .cards__left-wrap {
+        background-color: $color-5;
+    }
+}  
+.card--accent-orange {
+    .cards__left-wrap {
+        background-color: $accent-orange-xlight;
+    }
+} 
+.card--accent-green {
+    .cards__left-wrap {
+        background-color: $accent-green-xlight;
+    }
+}  
+.card--accent-teal {
+    .cards__left-wrap {
+        background-color: $accent-teal-xlight;
+    }
+}  
+.card--accent-blue {
+    .cards__left-wrap {
+        background-color: $accent-blue-xlight;
+    }
+}  
+.card--accent-red {
+    .cards__left-wrap {
+        background-color: $accent-red-xlight;
+    }
+} 
+.card--accent-purple {
+    .cards__left-wrap {
+        background-color: $accent-purple-xlight;
+    }
+} 
+.card--accent-deep-orange {
+    .cards__left-wrap {
+        background-color: $accent-deep-orange-xlight;
+    }
+} 
+.card--accent-sunset-orange {
+    .cards__left-wrap {
+        background-color: $accent-sunset-orange-xlight;
+    }
+} 
+.card--accent-lipstick-red {
+    .cards__left-wrap {
+        background-color: $accent-lipstick-red-xlight;
+    }
+} 
+.card--accent-yellow {
+    .cards__left-wrap {
+        background-color: $accent-yellow-xlight;
+    }
+} 
+/*------------------------------------*\
+    :: Hover CTA's Hover BG
+\*------------------------------------*/   
+.cta--accent-gray,
+.cta--accent-orange,
+.cta--accent-green,
+.cta--accent-teal,
+.cta--accent-blue,
+.cta--accent-purple,
+.cta--accent-deep-orange,
+.cta--accent-sunset-orange,
+.cta--accent-yellow,
+.cta--accent-lipstick-red,
+.cta--accent-red {
+    background-color: transparent;
+    transition: background-color 400ms;
+}
+.cta--accent-gray {
+    &:hover {
+        background-color: $color-5;
+    }
+}
+.cta--accent-orange {
+    &:hover {
+        background-color: $accent-orange-xlight;
+    }
+}
+.cta--accent-green {
+    &:hover {
+        background-color: $accent-green-xlight;
+    }
+}
+.cta--accent-teal {
+    &:hover {
+        background-color: $accent-teal-xlight;
+    }
+}
+.cta--accent-blue {
+    &:hover {
+        background-color: $accent-blue-xlight;
+    }
+}
+.cta--accent-red {
+    &:hover {
+        background-color: $accent-red-xlight;
+    }
+}
+.cta--accent-purple {
+    &:hover {
+        background-color: $accent-purple-xlight;
+    }
+}
+.cta--accent-deep-orange {
+    &:hover {
+        background-color: $accent-deep-orange-xlight;
+    }
+}
+.cta--accent-sunset-orange {
+    &:hover {
+        background-color: $accent-sunset-orange-xlight;
+    }
+}
+.cta--accent-lipstick-red {
+    &:hover {
+        background-color: $accent-lipstick-red-xlight;
+    }
+}
+.cta--accent-yellow {
+    &:hover {
+        background-color: $accent-yellow-xlight;
+    }
+}

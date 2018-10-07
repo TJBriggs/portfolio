@@ -1,0 +1,106 @@
+/*------------------------------------*\
+    ::  Case Studies Styles
+\*------------------------------------*/
+.case-study {
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.case-study__overlay {
+	background: rgba(33, 38, 56, 0.80);
+	.case-study__text {
+		transition-property: opacity;
+		transition-duration: 400ms;
+		transition-delay: 500ms;
+		h2 {
+			color: $color-4;
+			strong {
+				color: $color-4;
+			}
+			&:first-of-type {
+				&:after {
+					background: $color-3;
+				}
+			}
+		}
+		@include bp($max:1024px) {
+			text-align: center;
+			h2 {
+				&:first-of-type {
+					text-align: center;
+				}
+			}
+		}
+	}
+}
+.hidden-content { 
+	transform: scale(0);
+	transition-property: transform;
+	transition-duration: 500ms;
+	transition-delay: 0ms;
+	.hidden-content__close-wrap {
+		.hidden-content__close {
+			cursor: pointer;
+			opacity: 0;
+			transition-property: opacity;
+			transition-duration: 500ms;
+			transition-delay: 900ms; // fade in the close icon just a bit later than the the scale up of content
+			svg {
+				fill: $color-4;
+				transition: fill 400ms;
+			}
+			&:hover {
+				svg {
+					fill: $color-2;
+				}
+			}
+		}
+	}
+}
+.hidden-content__slider {
+	.hidden-content__slides {
+		.hidden-content__slide {
+			text-align: center;
+			.hidden-content__title {
+				font-family: $fam-head-bold;
+				&:after {
+					background: $color-3;
+				}
+			}
+			.hidden-content__text {
+				text-align: left;
+				@include bp($max:640px) {
+					p, li, a {
+						font-size: em(15px);
+					}
+				}
+			}
+		}
+	}
+}
+/*------------------------------------*\
+    ::  Show and Hide Transitions
+\*------------------------------------*/
+.case-studies {
+	.case-study {
+		&.active {
+			.case-study__overlay {
+				.case-study__text {
+					opacity: 0;
+					transition-delay: 0;
+				}
+			}
+			.hidden-content {
+				transform: scale(1);
+				transition-property: transform;
+				transition-duration: 500ms;
+				transition-delay: 400ms;
+				.hidden-content__close-wrap {
+					.hidden-content__close {
+						opacity: 1;
+					}
+				}
+			}
+		}
+	}
+}

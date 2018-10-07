@@ -1,0 +1,53 @@
+/*------------------------------------*\
+            (╯°□°）╯︵ ┻━┻
+\*------------------------------------*/
+body.page-id-15 {
+	.head-nav {
+		height: 0;
+		min-height: 0;
+
+	}
+	.head-nav.hey_nav {
+		height: 50em;
+		min-height: em(700px);
+	}
+}
+
+// Override the jump to top of page 
+// and remove background scroll
+.fancybox-lock body {
+    overflow: visible !important;
+}
+// set min-height on form wrapper for mobile and tablet 
+// to validation does not get cut off
+.fancybox-skin,
+.fancybox-outer,
+.fancybox-inner {
+	.form__wrap {
+		max-width: 600px;
+		padding: em(25px);
+		background: #9cabb1;
+		@include bp($max:480px) {
+			min-height: 690px;
+		}
+		@include bp($max:320px) {
+			min-height: 700px;
+		}
+		h2 {
+			margin-bottom: 10px;
+			@include bp($max:360px) {
+				font-size: em(26px);
+			}
+			&:after { // underline styles
+				content: '';
+				height: 4px;
+				width: 95px;
+				position: absolute;
+				bottom: -10px;
+				left: 0;
+				z-index: 1;
+				background: $color-3;
+			}
+		}
+	}
+}

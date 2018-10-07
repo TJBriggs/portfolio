@@ -1,0 +1,12 @@
+/*--------------------------------------------*\
+    ::  Custom styles for Angel Catheter page
+\*--------------------------------------------*/
+.cta-bar {
+	&.cta-bar--center-button {
+		@include bp($max:1030px) {
+			.cta-bar__btn {
+				margin-left: 0;
+			}
+		}
+	}	
+}

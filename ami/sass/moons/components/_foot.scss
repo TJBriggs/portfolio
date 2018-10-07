@@ -1,0 +1,207 @@
+/*------------------------------------*\
+    ::Footer
+\*------------------------------------*/
+@include sticky-footer(
+    $footer-height:         180px,                  //height of the footer
+    $wrap-element:          '.wrap-all-the-things', //wrapper of all but the footer
+    $container-element:     '.main',                //element the footer will bump into
+    $footer-element:        '.main-foot',           //the footer element
+    $footer-inner-element:  '.main-foot__nav'       //optional: inner footer element
+);
+@include bp($max: 960px) {
+    @include sticky-footer(
+        $footer-height:         212px,                  //height of the footer
+        $wrap-element:          '.wrap-all-the-things', //wrapper of all but the footer
+        $container-element:     '.main',                //element the footer will bump into
+        $footer-element:        '.main-foot',           //the footer element
+        $footer-inner-element:  '.main-foot__nav'       //optional: inner footer element
+    );
+}
+@include bp($max: 640px) {
+    @include sticky-footer(
+        $footer-height:         289px,                  //height of the footer
+        $wrap-element:          '.wrap-all-the-things', //wrapper of all but the footer
+        $container-element:     '.main',                //element the footer will bump into
+        $footer-element:        '.main-foot',           //the footer element
+        $footer-inner-element:  '.main-foot__nav'       //optional: inner footer element
+    );
+}
+@include bp($max: 500px) {
+    @include sticky-footer(
+        $footer-height:         369px,                  //height of the footer
+        $wrap-element:          '.wrap-all-the-things', //wrapper of all but the footer
+        $container-element:     '.main',                //element the footer will bump into
+        $footer-element:        '.main-foot',           //the footer element
+        $footer-inner-element:  '.main-foot__nav'       //optional: inner footer element
+    );
+}
+
+.main-foot {
+	float: left;
+	width: 100%;
+	background: #faffff;
+	overflow: hidden;
+	.main-foot__inner {
+		padding: 0 $pad;
+	}
+}
+.main-foot__logo {
+	width: 100%;
+	padding: em(5px) 0 0;
+	//border-top: 2px solid #9cabb1;
+	text-align: center;
+	a {	
+		display: inline-block;
+		width: 250px;
+		margin: 0 auto;
+		svg {
+			max-height: 70px;
+			width: 250px;
+		}
+		@include bp($max:375px) {
+			width: 210px;
+			svg {
+				width: 210px;
+			}
+		}
+	}
+}
+.main-foot__nav {
+	width: 100%;
+	padding-bottom: em(5px);
+	border-bottom: 2px solid #9cabb1;
+}
+.main-foot__copy {
+	width: 100%;
+	overflow: hidden;
+	@include bp($max:960px) {
+		overflow: visible;
+	}
+	@include bp($max:500px) {
+		overflow: hidden;
+		position: relative;
+	}
+	p { // general p styles for copy section
+		font-family: $fam-nav;
+		font-size: em(13px);
+		@include bp($max:350px) {
+			font-size: em(12px);
+		}
+		a { // privacy policy and zenman links
+			color: #707070;
+			font-family: $fam-head-bold;
+			font-size: em(17px);
+			transition: color 400ms;
+			&:visited {
+				color: #707070;
+			}
+			&:hover {
+				color: $color-2;
+				text-decoration: none;
+			}
+		}
+	}
+}
+.copy-text {
+	float: left;
+	width: 33.333336%;
+	p {
+		span {
+			margin: 0 em(7px);
+		}
+		
+	}
+	@include bp($max:960px) {
+		float: left;
+		height: 30px;
+		width: 80%;
+		padding-left: $pad;
+		p {
+			height: 100%;
+			line-height: 30px;
+		}
+	}
+	@include bp($max:500px) {
+		float: none;
+		width: 100%;
+		margin-top: em(70px);
+		padding: 0;
+		text-align: center;
+	}
+}
+.social-icons {
+	float: left;
+	width: 33.333336%;
+	padding-top: em(10px);
+	text-align: center;
+	.icon-wrap {
+		display: inline-block;
+		width: em(100px);
+		.twitter, .linkedin {
+			float: left;
+			width: 49.5%;
+			svg {
+				max-height: 25px;
+				width: 25px;
+				fill: #707070;
+				transition: fill 400ms;
+				&:hover {
+					fill: $color-2;
+				}
+			}
+		}
+		.linkedin {
+			margin-left: 1%;
+		}
+	}
+	@include bp($max:960px) {
+		float: right;
+		width: 20%;
+		padding-top: em(25px);
+		text-align: right;
+		.icon-wrap {
+			padding-right: $pad;
+			.twitter, .linkedin {
+				svg {
+					max-height: 35px;
+					width: 35px;
+				}
+			}
+		}
+	}
+	@include bp($max:500px) {
+		float: none;
+		width: 100px;
+		padding-top: em(20px);
+		position: absolute;
+		top: 0;
+		left: 50%;
+		margin-left: -58px;
+		.icon-wrap {
+			padding: 0;
+		}
+	}
+}
+.design-text {
+	float: right;
+	width: 33.333336%;
+	text-align: right;
+	@include bp($max:960px) {
+		float: left;
+		height: 30px;
+		width: 80%;
+		margin-bottom: 25px;
+		padding-left: $pad;
+		text-align: left;
+		p {
+			height: 100%;
+			line-height: 30px;
+		}
+	}
+	@include bp($max:500px) {
+		float: none;
+		width: 100%;
+		padding: 0;
+		text-align: center;
+	}
+}

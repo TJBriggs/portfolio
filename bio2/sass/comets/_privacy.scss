@@ -1,0 +1,14 @@
+/*------------------------------------*\
+    ::  Privacy Policy Styles
+\*------------------------------------*/	
+.page-privacy-policy {
+	.content-block {
+		margin-top: 150px;
+		@include bp($max:640px) {
+			margin-top: 125px;
+		}
+		h4 {
+			text-transform: none;
+		}
+	}
+}

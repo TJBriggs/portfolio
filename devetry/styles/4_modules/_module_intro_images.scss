@@ -1,0 +1,156 @@
+/*------------------------------------*\
+    ::  Intro w/Images Styles
+\*------------------------------------*/ 
+.intro-images {
+    width: 100%;
+    background-color: $color-3;
+    position: relative;
+    z-index: 5;
+    &__inner {
+        @include bp($max:768px) {
+            padding: 0;
+        }
+    }
+    &__content-wrap {
+        width: 100%;
+        max-width: 1080px;
+        margin: 0 auto -90px;
+        padding: 5em 0 0;
+        position: relative;
+        top: -90px;
+        background-color: $color-3;
+        box-shadow: 12px 3px 7px -4px rgba(0, 0, 0, 0.15), -12px 3px 7px -4px rgba(0, 0, 0, 0.15);
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        text-align: center;
+        transition: all 400ms;
+        @include bp($max:768px) {
+            max-width: none;
+            margin: 0 auto;
+            top: 0px;
+            background-color: transparent;
+            box-shadow: none;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+        @include bp($max:640px) {
+            padding: 4em 0 0;
+        }
+        &:before {
+            content: '';
+            width: 100%;
+            height: 12px;
+            @extend %btog;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            @include bp($max:768px) {
+                border-top-left-radius: 0;
+                border-top-right-radius: 0;
+            }
+        }
+        h2 {
+            height: 46px;
+            text-align: center;
+            padding: 0 $pad*2;
+            img {
+                height: auto;
+                max-width: 200px;
+                display: inline-block;
+                margin-left: 10px;
+                position: relative;
+                top: 5px;
+            }
+            @include bp($max:960px) {
+                font-size: 45px;
+            }
+            @include bp($max:640px) {
+                strong {
+                    display: none;
+                }
+            }
+        }
+        h4 {
+            margin: 0.75em 0 1.25em;
+            padding: 0 $pad*2;
+            text-align: center;
+            color: $color-2;
+            line-height: 1.1em;
+        }
+        .intro-images__intro {
+            max-width: 755px;
+            margin: 0 auto;
+            padding: 0 $pad*2;
+            text-align: center;
+            & > *:first-child {
+                margin-top: 0;
+            }
+            & > *:last-child {
+                width: 100%;
+                max-width: 700px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 0;
+                @include bp($max:768px) {
+                    max-width: 630px;
+                }
+                // @include bp($max:640px) {
+                //     display: none;
+                // }
+            }
+        }
+        .btn {
+            margin-top: 2.25em;
+        }
+        .intro-images__image-wrap {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 5.8em;
+            @include bp($max:768px) {
+                margin-top: 4em;
+            }
+        }
+        .intro-images__image {
+            height: 335px;
+            width: 33.1%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            z-index: 100;
+            @include bp($max:1024px) {
+                height: 32.5vw;
+            }
+            @include bp($max:640px) {
+                height: 75.5vw;
+                width: 100%;
+                &:first-of-type,
+                &:last-of-type {
+                    display: none;
+                }
+            }
+        }
+        .intro-images__icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            height: 50px;
+            width: 50px;
+            position: relative;
+            top: -25px;
+            z-index: 115;
+            @extend %btog;
+            border-radius: 50%;
+            img, svg {
+                display: inline-block;
+                height: 25px;
+                width: 25px;
+                fill: $color-3;
+            }
+        }
+    }
+}

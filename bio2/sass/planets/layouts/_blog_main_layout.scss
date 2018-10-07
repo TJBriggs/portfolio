@@ -1,0 +1,177 @@
+/*------------------------------------*\
+    ::  Main Blog Page Layout
+\*------------------------------------*/	
+.archive, .category, .blog-feed {
+	.cat-torso__inner {
+		padding: 0 $pad emCalc(25px);
+	}
+	.category__wrap {
+		width: 100%;
+		margin: 3.15em 0 2.9em;
+		overflow: hidden;
+		@include bp($max:960px) {
+			margin: 2.55em 0 2.35em;
+		}
+		@include bp($max:600px) {
+			margin: 2.15em 0 2.0em;
+		}
+		ul {
+			margin: 0;
+			padding: 0;
+			text-align: center; // for layout purposes
+		}
+		li {
+			display: inline-block;
+			width: auto;
+			margin: 0;
+			@include bp($max:600px) {
+				width: 100%;
+			}
+			&:after { // Add pipes
+				content: '|';
+				margin: 0 emCalc(15px);
+				@include bp($max:600px) {
+					display: none;
+				}
+			}
+			&:last-of-type { // Hide last pipe
+				&:after {
+					display: none;
+				}
+			}
+			a {
+				display: inline-block;
+				position: relative;
+				padding: emCalc(10px) 0;
+				&:after {
+					content: '';
+					width: 0;
+					height: 2px;
+					position: absolute;
+					left: 0;
+					bottom: 5px;
+					transition: width 300ms;
+				}
+				&:hover {
+					&:after {
+						width: 100%;
+					}
+				}
+			}
+		}
+		// Special li for tag title since there is no link
+		.tag-title {
+			position: relative;
+			padding: emCalc(10px) 0;
+		}
+	}
+	.cat-torso__content {
+		display: flex;
+		flex-wrap: wrap;
+		padding: 0;
+	}
+	.single-torso__item {
+		width: 33.33333%;
+		padding: 0 10px 50px;
+		@include bp($max:960px) {
+			width: 50%;
+		}
+		@include bp($max:700px) {
+			width: 100%;
+			padding: 0 $pad 50px;
+		}
+		@include bp($max:480px) {
+			padding: 0 0 50px;
+		}
+	}
+	.single-torso__image {
+		height: 315px;
+		width: 100%;
+		position: relative;
+		overflow: hidden;
+		@include bp($max:700px) {
+			height: 350px;
+		}
+		@include bp($max:480px) {
+			height: 300px;
+		}
+		@include bp($max:400px) {
+			height: 275px;
+		}
+		@include bp($max:370px) {
+			height: 225px;
+		}
+		.post__overlay {
+			width: 100%;
+			position: absolute;
+			bottom: -40px;
+			transition: bottom 300ms;
+			@include bp($max:1024px) {
+				bottom: 0;
+			}
+			.post-date {
+				display: inline-block;
+				position: absolute;
+				top: emCalc(20px);
+				right: 1.5em;
+			}
+			p {
+				height: 85px;
+				margin: 0 0 15px 0;
+				padding: 0 1.5em;
+				overflow: hidden;
+				@include bp($max:700px) {
+					height: auto;
+				}
+			}
+			.read-more {
+				display: block;
+				width: 100%;
+				margin: 0 0 20px 0;
+				padding: 0 1.30em;
+				&:after {
+					content: '>';
+					margin-left: 10px;
+					position: relative;
+					top: 0;
+					transition: margin 300ms;
+				}
+				&:hover {
+					&:after {
+						margin-left: 15px;
+					}
+				}
+			}
+		}
+		&:hover {
+			.post__overlay {
+				bottom: 0;
+			}
+		}
+	}
+	.social-links {
+		width: 100%;
+		overflow: hidden;
+		margin: emCalc(20px) 0 emCalc(5px);
+		padding: 0 1.35em;
+		li {
+			float: left;
+			margin: 0 emCalc(4px);
+			&:first-of-type  {
+				margin-left: 0;
+			}
+			a {
+				display: block;
+				svg {
+					height: 26px;
+					width: 26px;
+				}
+			}
+		}
+	}
+	.post-tag {
+		display: block;
+		width: 100%;
+		padding: 15px 1.25em 0;
+	}
+}

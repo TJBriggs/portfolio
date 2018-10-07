@@ -1,0 +1,25 @@
+/*------------------------------------*
+    :: What We Do Page Styles
+*------------------------------------*/
+.page-what-we-do {
+	.cta-centered {
+		float: left;
+		width: 100%;
+		.cta-centered__text {
+			font-size: emCalc(24px);
+			width: 100%;
+			padding: 0 $pad;
+			text-align: center;
+		}
+		.cta-centered__button {
+			width: 20%;
+			margin: 25px auto 50px;
+			@include bp($max:700px) {
+				width: 30%;
+			}
+			@include bp($max:480px) {
+				width: 90%;
+			}
+		}
+	}
+}

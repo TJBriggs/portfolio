@@ -1,0 +1,54 @@
+/*------------------------------------*\
+    ::  Jumbo Callouts Layout
+\*------------------------------------*/
+.jumbo-callouts {
+	width: 100%;
+	overflow: hidden;
+	&__inner {
+		padding: 0 $pad;
+	}
+	&__wrap {
+		display: flex;
+		flex-wrap: wrap;
+		margin-top: 500px;
+		@include bp($max:1399px) {
+			margin-top: 33vw;
+		}
+		@include bp($max:480px) {
+			margin-top: 50vw;
+		}
+	}
+	&__callout {
+		width: 50%;
+		@include bp($max:640px) {
+			width: 100%;
+		}
+		&:first-of-type {
+			padding-right: $pad*2.25;
+			@include bp($max:1024px) {
+				padding-right: $pad;
+			}
+		}
+		&:last-of-type {
+			padding-left: $pad*2.25;
+			@include bp($max:1024px) {
+				padding-left: $pad;
+			}
+			@include bp($max:640px) {
+				padding-left: 0;
+			}
+		}
+		img, svg {
+			display: inline-block;
+			height: 35px;
+			width: 35px;
+			position: relative;
+			top: 7px;
+		}
+		h1 {
+			display: inline-block;
+			margin-left: emCalc(15px);
+			margin-bottom: emCalc(0);
+		}
+	}
+}	

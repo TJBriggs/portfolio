@@ -1,0 +1,181 @@
+/*------------------------------------*\
+    ::  Icon Callout Layout
+\*------------------------------------*/
+.icon-callouts {
+	width: 100%;
+	overflow: hidden;
+}
+.icon-callouts__inner {
+	padding: em(65px) $pad*2;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	@include bp($max:960px) {
+		padding: em(35px) $pad*2;
+	}
+	@include bp($max:640px) {
+		padding: em(25px) $pad*2;
+	}
+	@include bp($max:500px) {
+		padding: em(45px) $pad*2 em(32px);
+	}
+	@include bp($max:480px) {
+		padding: em(45px) $pad em(32px);
+	}
+	.section-title {
+		width: 100%;
+	}
+}
+.icon-callouts__callout {
+	height: 300px;
+	width: 33%;
+	position: relative;
+	.icon-callouts__icon {
+		height: 100px;
+		width: 100px;
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	h5 {
+		width: 100%;
+		position: absolute;
+		top: 90px;
+		left: 0;
+	}
+	p {
+		width: 100%;
+		padding: 0 $pad*2;
+		position: absolute;
+		top: 160px;
+		left: 0;
+	}
+	@include bp($max:960px) {
+		height: auto;
+		width: 100%;
+		padding: em(35px) 0;
+		.icon-callouts__icon {
+			height: 125px;
+			width: 125px;
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: translate(0, -50%);
+		}
+		h5 {
+			width: 100%;
+			margin: em(10px) 0 em(5px) 0;
+			padding-left: 175px;
+			position: static;
+		}
+		p {
+			width: 100%;
+			margin-top: 0;
+			padding-left: 175px;
+			position: static;
+		}
+	}
+	@include bp($max:640px) {
+		padding: em(25px) 0;
+		.icon-callouts__icon {
+			height: 100px;
+			width: 100px;
+		}
+		h5 {
+			padding-left: 125px;
+			padding-right: 0;
+		}
+		p {
+			padding-left: 125px;
+			padding-right: 0;
+		}
+	}
+	@include bp($max:500px) {
+		padding: 0 0 em(30px);
+		&:last-of-type {
+			padding-bottom: 0;
+		}
+		.icon-callouts__icon {
+			display: inline-block;
+			height: 100px;
+			width: 100px;
+			margin: 0 auto;
+			position: static;
+			transform: translateX(0);
+		}
+		h5 {
+			width: 100%;
+			padding-left: 0;
+			padding-right: 0;
+			text-align: center;
+		}
+		p {
+			width: 100%;
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+}
+/*------------------------------------*\
+    ::  Modifier 4+ Icons
+\*------------------------------------*/
+.icon-callouts--4,	
+.icon-callouts--5,	
+.icon-callouts--6 {
+	.icon-callouts__inner {
+		padding: em(65px) $pad*2 em(33px);
+	}
+	.icon-callouts__callout {
+		margin-bottom: em(45px);
+		&:nth-of-type(4),
+		&:nth-of-type(5),
+		&:nth-of-type(6) {
+			margin-bottom: 0;
+		}
+	}
+	@include bp($max:960px) {
+		.icon-callouts__inner {
+			padding: em(35px) $pad*2;
+		}
+		.icon-callouts__callout {
+			margin-bottom: 0;
+		}
+	}
+	@include bp($max:640px) {
+		.icon-callouts__inner {
+			padding: em(25px) $pad*2;
+		}
+	}
+	@include bp($max:500px) {
+		.icon-callouts__inner {
+			padding: em(45px) $pad*2 em(32px);
+		}
+	}
+	@include bp($max:480px) {
+		.icon-callouts__inner {
+			padding: em(45px) $pad em(32px);
+		}
+	}
+}
+/*------------------------------------*\
+    ::  Modifier with Section Title
+\*------------------------------------*/
+// Adjust spacing if a title is present
+.icon-callouts--title {
+	.icon-callouts__inner {
+		padding: em(15px) $pad*2 em(65px);
+		@include bp($max:960px) {
+			padding: em(15px) $pad*2 em(33px);
+			.section-title {
+				margin-bottom: 0;
+			}
+		}
+		@include bp($max:480px) {
+			.section-title {
+				margin-bottom: em(15px);
+			}
+		}
+	}
+}	
+

@@ -1,0 +1,19 @@
+/*------------------------------------*\
+    :: 404 Styles
+\*------------------------------------*/
+// Styles for the 404 page go here.
+.fourofour__content {
+    margin-top: 7.5em;
+    text-align: center;
+    @include bp($max:768px) {
+        margin-top: 4.5em;
+    }
+    img { 
+        max-width: 400px;
+        display: inline-block;
+        margin: 0 auto 1.5em;
+    }
+    h3 {
+        color: $color-1;
+    }
+}

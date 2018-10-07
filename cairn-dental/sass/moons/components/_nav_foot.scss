@@ -1,0 +1,61 @@
+/*------------------------------------*\
+    ::Nav in the Footer
+\*------------------------------------*/
+.foot-nav {
+	@include nav();
+}
+.main-foot__nav {
+		float: left;
+		width: 51%;
+		text-align: center;
+		@include bp($max:1024px) {
+			display: none;
+		}
+		.foot-nav {
+			display: inline-block;
+		}
+		.menu {
+			width: 100%;
+			margin: 0;
+			padding: 0;
+			text-align: left;
+			> li {
+				float: none;
+				width: 100%;
+				margin: 0;
+				> a {
+					display: inline-block;
+					height: 100%;
+					width: auto;
+					padding: em(10px) 0;
+					color: $color-4;
+					font-family: $fam-semi;
+					font-size: em(16px);
+					letter-spacing: 0.03em;
+					text-decoration: none;
+					transition: color 400ms;
+					&:hover {
+						color: $color-2-light;
+					}
+				}
+			}
+			.current-menu-item {
+				
+				a {
+					position: relative;
+					color: $color-4;;
+					&:before {
+						content: '';
+						position: absolute;
+						top: 51%;
+						left: -20px;
+						height: 10px;
+						width: 10px;
+						border-radius: 50%;
+						background-color: lighten($color-2, 13%);
+						transform: translateY(-50%);
+					}
+				}
+			} 
+		}
+	}

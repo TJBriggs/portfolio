@@ -1,0 +1,139 @@
+/*------------------------------------*\
+    ::  Team Grid Layout
+\*------------------------------------*/
+.team-grid {
+	width: 100%;
+	padding: 50px $pad*2;
+	@include bp($max:960px) {
+		padding: 50px $pad;
+	}
+	@include bp($max:480px) {
+		padding: 35px $pad/2;
+	}
+}
+.team-grid__grid {
+	width: 100%;
+	position: relative;
+	z-index: 5;
+}
+.member {
+	display: block;
+	float: left;
+	width: 24.3%;
+	margin:  4px 0.35%;
+	padding-top: 25%;
+	position: relative;
+	overflow: hidden;
+	@include bp($max:768px) {
+		width: 48.55%;
+		margin:  5px 0.65%;
+		padding-top: 50%;
+	}
+	@include bp($max:480px) {
+		width: 47.55%;
+		margin:  5px 1.22%;
+	}
+	.member__main-image {
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+	}
+	.member__hover-name {
+		width: 100%;
+		margin: 0;
+		padding: 15px $pad;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		transform: translateY(100%);
+		transition: transform 400ms;
+	}
+	&:hover {
+		.member__hover-name {
+			transform: translateY(0%);
+		}
+	}
+}
+/*------------------------------------*\
+    ::  Dropdown Content
+\*------------------------------------*/	
+.member-info {
+	display: none;
+}
+.team-grid__row-wrap {
+	display: block;
+	width: 100%;
+	margin: 0;
+	padding: 0 .25em;
+	position: relative;
+	z-index: 5;
+	overflow: hidden;
+	clear: both;
+}
+.closer {
+	display: block;
+    position: absolute;
+    top: 52px;
+    right: $pad*1.5;
+    overflow: hidden;
+    z-index: 10;
+    svg {
+    	display: block;
+    	width: 35px; 
+        height: 35px;
+    }
+    @include bp($max:800px) {
+    	top: 30px;
+	}
+}
+.member-info__details {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 35px 0;
+	@include bp($max:960px) {
+		margin: 15px 0;
+	}
+	@include bp($max:960px) {
+		margin: 25px 0 15px;
+	}
+}
+.member-info__content-left {
+	width: 50%;
+	padding: 25px $pad*2;
+	@include bp($max:960px) {
+		padding: 25px $pad;
+	}
+	@include bp($max:800px) {
+		width: 100%;
+		padding: 0 $pad 25px;
+	}
+	@include bp($max:480px) {
+		padding: 0 $pad 18px;
+	}
+}
+.member-info__content-right {
+	min-height: 500px;
+	width: 50%;
+	@include bp($max:800px) {
+		width: 100%;
+		min-height: 0;
+		height: 350px;
+	}
+	@include bp($max:400px) {
+		min-height: 0;
+		height: 300px;
+	}
+	@include bp($max:375px) {
+		height: 250px;
+	}
+}
+.member-info__name {
+	margin: 0;
+}
+.member-info__title {
+	margin: 15px 0;
+}

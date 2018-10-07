@@ -1,0 +1,78 @@
+/*------------------------------------*\
+    :: Main CTA Buttons Under Masthead
+\*------------------------------------*/
+.product-bar { 
+    overflow: hidden;
+    padding: 25px 0;
+    @include bp($max: 960px) {
+        padding: 0;
+    }
+    .product-image {
+        float: left;
+        height: 100px;
+        margin: 0;
+        padding: 0;
+        opacity: 0.70;
+        transition: 400ms;
+        width: 20%;
+        a {
+            display: block;
+            height: 100%;
+            width: 100%;
+            img {
+                max-width: 100%;
+            }
+        }        
+        &:hover {
+            opacity: 1;
+        }
+        @include bp($max: 960px) {
+            height: 70px;
+            width: 33%;
+            a {
+                text-align: center;
+                img {
+                    width: 80%;
+                }
+            }
+            &:nth-of-type(4) {
+                margin-left: 17%;
+            }
+        }
+        @include bp($max: 768px) {
+            height: 80px;
+            width: 50%;
+            a {
+                text-align: center;
+                img {
+                    width: 70%;
+                }
+            }
+            &:nth-of-type(4) {
+                margin-left: 0;
+            }
+        }
+        @include bp($planetary) {
+            height: 70px;
+            a {
+                img {
+                    width: 90%;
+                }
+            }
+        }
+    }
+    hr {
+        border: 0;
+        height: 1px;
+        background: #b2b2b2;
+        position: relative;
+        margin: 0 auto 5px;
+        max-width: 1140px;
+        @include bp($max: 960px) {
+            margin-top: 35px;
+        }
+        @include bp($planetary) {
+            margin-top: 20px;
+        }
+    }
+}

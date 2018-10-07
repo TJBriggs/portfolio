@@ -1,0 +1,101 @@
+/*------------------------------------*\
+    ::  Hero Styles
+\*------------------------------------*/
+.hero-block {
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	white-space: nowrap; // centering unknown
+	&:after { // vignette general styles
+		background: darken($color-5-dark, 12%);
+		background-image: radial-gradient(center, ellipse cover, transparent,black);
+		@include bp($max:480px) {
+			opacity: 0.70;
+		}
+	}
+	/*------------------------------------*\
+	    :: Full Hero Styles
+	\*------------------------------------*/
+	&.hero-block--full {
+		&:after { // vignette opacity adjustments
+			opacity: 0.30;
+			transition: opacity 400ms;
+			@include bp($max:480px) {
+				opacity: 0.70;
+			}
+		}
+	}
+	.hero-block__text {
+		text-align: center;
+		white-space: normal; // reverse of centering unknown so text wraps
+		.hero-block__intro-text {
+			color: $color-4;
+			font-family: $fam-heading;
+			font-size: em(22px);
+			text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.85);
+			@include bp($max:480px) {
+				display: none; // hide this text on mobile
+			}
+		}
+		.hero-block__bold-text {
+			color: $color-4;
+			font-family: $fam-head-bold;
+			font-size: em(38px);
+			text-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.45);
+			text-transform: uppercase;
+			&:after { // underline styles
+				background: $color-3;
+			}
+			@include bp($max:767px) {
+				font-size: em(34px);
+				
+			}
+			@include bp($max:480px) {
+				font-size: em(30px);
+			}
+		}
+		.hero-block__button-text {
+			color: $color-4;
+			font-family: $fam-body;
+			font-size: em(19px);
+			text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.85);
+			@include bp($max:767px) {
+				font-size: em(17px);
+			}
+		}
+		.hero-block__scroll-btn {
+			svg {
+				fill: $color-4;
+				transition: fill 350ms;
+				&:hover {
+					fill: $color-2;
+				}
+			}
+		}
+	}
+	/*------------------------------------*\
+	    ::  Half Hero Styles
+	\*------------------------------------*/
+	&.hero-block--half {
+		&:after { // vignette opacity adjustments
+			opacity: 0.70;
+			transition: opacity 400ms;
+			@include bp($max:480px) {
+				opacity: 0.80;
+			}
+		}
+	}
+	.hero-block__title { // main title for sub pages
+		color: $color-4;
+		font-family: $fam-head-bold;
+		font-size: em(50px);
+		text-align: center;
+		white-space: normal; // reverse of centering unknown so text wraps
+		@include bp($max:767px) {
+			font-size: em(40px);
+		}
+		@include bp($max:480px) {
+			font-size: em(30px);
+		}
+	}
+}

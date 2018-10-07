@@ -1,0 +1,14 @@
+/*------------------------------------*\
+    ::  Centered CTA Styles
+\*------------------------------------*/
+.centered-cta {
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    .centered-cta__lead-text {
+        text-align: center;
+    }
+    .btn {
+        margin-top: 0.8em;
+    }
+}

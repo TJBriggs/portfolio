@@ -1,0 +1,111 @@
+/*------------------------------------*\
+    ::  CTA Bar Styles
+\*------------------------------------*/
+.cta-bar {
+	@extend %bg-cover;
+	&__overlay {
+		height: 100%;
+		@extend %overlay;
+	}
+	&__inner {
+		padding: 4.35em $pad;
+		@include bp($max:767px) {
+			padding: 2.75em $pad*2;
+		}
+		@include bp($max:400px) {
+			padding: 0;
+		}
+	}
+	&__wrap {
+		display: flex;
+		flex-wrap: wrap;
+		@include bp($max:400px) {
+			display: block;
+		}
+	}
+	&__text-wrap {
+		width: 75%;
+		h3 {
+			margin: 0;
+			color: $color-3;
+		}
+		h4 {
+			margin: 0;
+			color: $color-3;
+		}
+		@include bp($max:767px) {
+			width: 100%;
+		}
+		@include bp($max:640px) {
+			h3 {
+				font-size: 5.5vw;
+			}
+			h4 {
+				font-size: 4.75vw;
+			}
+		}
+		@include bp($max:400px) {
+			max-width: 85%;
+			margin: 0 auto;
+			h3 {
+				padding-top: 3em;
+			}
+		}
+	}
+	&__btn-wrap {
+		width: 25%;
+		text-align: right; // For layout purposes
+		.cta-bar__btn {
+			display: inline-block;
+			margin-bottom: 0;
+		}
+		@include bp($max:767px) {
+			width: 100%;
+			text-align: left; // Move btn to left side
+		}
+		@include bp($max:400px) {
+			.cta-bar__btn {
+				width: 100%;
+				position: relative;
+				top: 4px; // Push down to cover weird space issue
+			}
+		}
+	}
+}	
+/*------------------------------------*\
+    ::  KSS MarkUp (Ignore)
+\*------------------------------------*/ 
+// Modules
+//
+// This section defines the various modules that will be used throughout the site.
+//
+// Styleguide 6
+   
+// CTA Bar
+//
+// Demo:<br><a href="../modules/module-cta-bar.php" target="_blank">module-cta-bar.php</a>
+//
+// Stylesheet:<br>
+// <a href="../sass/structure/modules/_module_cta_bar.scss" target="_blank">_module_cta_bar.scss</a><br>
+//
+// Path To The Code:<br>
+// golftec/golftec/modules/module-cta-bar.php
+//
+// Markup:
+// <article class="cta-bar main-torso__group" style="background-image: url('../images/modules/cta-bar/cta-bg.jpg')";>
+//     <div class="cta-bar__overlay">
+//         <div class="cta-bar__inner">
+//             <div class="cta-bar__wrap">
+//                 <div class="cta-bar__text-wrap">
+//                     <h3><strong>$95 Swing Evaluation</strong> On Sale</h3>
+//                     <h4>Normally $125</h4>
+//                 </div>
+//                 <div class="cta-bar__btn-wrap">
+//                     <a class="cta-bar__btn btn" href="#">Get Signed Up</a>
+//                 </div>
+//             </div> <!-- // cta-bar__wrap -->
+//         </div> <!-- // cta-bar__inner -->
+//     </div> <!-- // cta-bar__overaly -->
+// </article> <!-- // cta-bar -->
+//
+// Styleguide 6.1

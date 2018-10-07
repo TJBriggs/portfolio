@@ -1,0 +1,28 @@
+/*------------------------------------*
+    :: Image Slider Styles
+*------------------------------------*/
+.image--flexslider {
+	height: 100%;
+	position: relative;
+	&.flexslider {
+		margin: 0;
+	}
+	.slides {
+		.image__slide-item {
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			height: 750px;
+			width: 100%;
+			@include bp($max:960px) {
+				height: 575px;
+			}
+			@include bp($max:768px) {
+				height: 350px;
+			}
+			@include bp($max:479px) {
+				height: 325px;
+			}
+		}
+	}
+}

@@ -1,0 +1,131 @@
+/*------------------------------------*
+    :: Icon Slider
+*------------------------------------*/
+.flexslider {
+	border: none;
+    box-shadow: none;
+}
+
+.carousel--slider {
+    .flex-direction-nav {
+        position: relative;
+        top: -200px;
+        z-index: 5;
+        @include bp($max:1150px) {
+            top: -30px; 
+        }
+        a {
+            opacity: 1;
+            color: #fff;
+            &:hover {
+                opacity: 0.65;
+            }
+        }
+        .flex-next {
+        	right: -15px;
+        	@include bp($max:1200px) {
+        		right: -5px;
+        	}
+			@include bp($max:1150px) {
+        		right: 15px;
+        	}
+        	@include bp($max:768px) {
+        		right: 25px;
+        	}
+        }
+        .flex-prev {
+        	left: -15px;
+        	@include bp($max:1200px) {
+        		left: -5px;
+        	}
+			@include bp($max:1150px) {
+        		left: 15px;
+        	}
+        	@include bp($max:768px) {
+        		left: 25px;
+        	}
+        }
+    }
+}
+
+.image--flexslider {
+    .flex-control-paging {
+        bottom: 35px;
+        left: 30px;
+        position: absolute;
+        text-align: left;
+        z-index: 5;
+        @include bp($max:768px) {
+            text-align: center;
+            bottom: 0;
+            top: 20px;
+            left: 0;
+        }
+        a {
+            background-color: transparent;
+            border: .2em solid $color-1;
+            border-radius: 50%;
+            padding: .3em;
+            transition: background-color 300ms;
+            width: 18px;
+            height: 18px;
+            &:hover,
+            &.flex-active {
+                background-color: $color-1;
+                border: .2em solid $white;
+            }
+        }
+    }
+}
+
+.project--flexslider {
+    .flex-control-paging {
+        bottom: 15px;
+        height: 50px;
+        left: 30px;
+        position: absolute;
+        text-align: left;
+        z-index: 5;
+        width: 100%;
+        @include bp($max:768px) {
+            text-align: center;
+            bottom: 0;
+            top: 20px;
+            left: 0;
+        }
+        a {
+            background-color: transparent;
+            border: .2em solid $color-1;
+            border-radius: 50%;
+            padding: .3em;
+            transition: background-color 300ms;
+            width: 18px;
+            height: 18px;
+            &:hover,
+            &.flex-active {
+                background-color: $color-1;
+                border: .2em solid $white;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

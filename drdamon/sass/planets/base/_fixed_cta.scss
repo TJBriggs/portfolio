@@ -1,0 +1,68 @@
+/*------------------------------------*\
+    :: Floating CTA Styles
+\*------------------------------------*/
+.fixed-cta__wrap {
+    background: $color-1;
+    border: 2px solid $white;
+    border-bottom: none;
+    border-radius: .2em;
+    box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.35);
+    position: fixed;
+    top: 245px;
+    left: 0px;
+    transform-origin: 18% 18%;
+    transform: rotate(90deg);
+    transition: 400ms;
+    z-index: 799;
+    @include bp($max:1024px) {
+        display: none;
+    }
+    .fixed-cta__btn {
+        color: $white;
+        display: block;
+        font-family: opensans-semi;
+        //font-family: $fultons-reg;
+        font-size: emCalc(20px);
+        height: 60px;
+        letter-spacing: 0.05em;
+        line-height: 52px;
+        text-decoration: none;
+        margin: 0;
+        padding: 0;
+        width: 250px;
+        .cta-icon {
+            display: block;
+            float: left;
+            margin-top: 9px;
+            margin-left: 40px;
+            margin-right: 16px;
+            height: 35px;
+            width: 35px;
+            transform-origin: 50% 50%;
+            transition: 200ms;
+            object {
+                svg {
+                    min-height: 35px;
+                    min-width: 35px;
+                    max-height: 35px;
+                    max-width: 35px
+                }
+            }
+        }
+        .cta-text {
+            color: $white;
+            display: block;
+            float: left;
+        }
+    }
+    &:hover {
+        background: darken($color-1, 5%);
+        .fixed-cta__btn {
+            .cta-icon {
+                margin-top: 10px;
+                transform: rotate(-90deg);
+            }
+        }
+    }
+}
+

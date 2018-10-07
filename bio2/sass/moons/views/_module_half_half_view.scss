@@ -1,0 +1,34 @@
+/*------------------------------------*\
+    ::  Half Half View
+\*------------------------------------*/	
+.half-half {
+	&__video, &__image {
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	&__video {
+		cursor: pointer;
+		svg {
+			opacity: 0.65;
+			transition: opacity 400ms;
+		}
+		&:hover {
+			svg {
+				opacity: 1;
+			}
+		}
+	}
+	&__content {
+		font-weight: 100;
+		line-height: 1.5em;
+	}
+}
+/*------------------------------------*\
+    ::  Modifiers
+\*------------------------------------*/
+.half-half--bg-blue {
+	.half-half__content {
+		color: $color-2;
+	}
+}

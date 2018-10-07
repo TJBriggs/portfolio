@@ -1,0 +1,49 @@
+/*------------------------------------*\
+    ::  FAQs Layout
+\*------------------------------------*/	
+.faqs {
+	width: 100%;
+	overflow: hidden;
+}
+.faqs__inner {
+	padding: em(70px) $pad*2 em(80px);
+	@include bp($max:700px) {
+		padding: em(52px) $pad*2 em(65px);
+	}
+	@include bp($max:480px) {
+		padding: em(52px) $pad em(65px);
+	}
+	.section-title {
+		margin: 0;
+	}
+}
+.accordion {
+	width: 100%;
+	padding: 35px 0;
+	@include bp($max:700px) {
+		padding: 20px 0;
+	}
+}
+.accordion__link {
+	display: block;
+	width: 100%;
+	span {
+		display: inline-block;
+		height: 30px;
+		width: 30px;
+		margin-right: em(10px);
+		position: relative;
+		top: 2px;
+		@include bp($max:700px) {
+			height: 27px;
+			width: 27px;
+		}
+	}
+}
+.accordion__content {
+	display: none;
+	padding: em(25px) em(53px) 0;
+	@include bp($max:700px) {
+		padding: em(10px) em(45px) 0;
+	}
+}

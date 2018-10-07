@@ -1,0 +1,57 @@
+/*------------------------------------*\
+    ::  Testimonial Block Styles
+\*------------------------------------*/
+.testimonial-block {
+    width: 100%;
+    background-color: $color-3;
+    //background-color: #cdcdcd;
+    overflow: hidden;
+    text-align: center;
+    padding: 3.5em 0;
+    @include bp($max:640px) {
+        padding: 3em 0;
+    }
+    &__content {
+        max-width: 610px;
+        margin: 0 auto;
+        padding: 2.5em 0;
+        background-image: url('assets/images/testimonial-bg.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        @include bp($max:400px) {
+            background-size: 125%;
+        }
+        h4 {
+            color: $color-2-light;
+            strong {
+                color: $color-1;
+                font-weight: normal;
+            }
+            @include bp($max:640px) {
+                max-width: 430px;
+                margin: 0 auto;
+                font-size: 18px;
+            }
+        }
+        hr.small-rule {
+            margin-top: 1.5em;
+            margin-bottom: 1.5em;
+            background-color: $color-1;
+            @include bp($max:640px) {
+                display: none;
+            }
+        }
+        p {
+            @extend %kbold;
+            font-size: 18px;
+            margin-top: 0;
+            @include bp($max:640px) {
+                max-width: 180px;
+                margin: 1em auto 1.5em;
+                font-size: 30px;
+            }
+        }
+    }
+}

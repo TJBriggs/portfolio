@@ -1,0 +1,152 @@
+/*------------------------------------*\
+    ::  Hover Boxes Styles
+\*------------------------------------*/	
+.hover-boxes {
+	background-color: $color-3;
+	&__inner {
+		padding: 2.25em $pad 0;
+		@include bp($max:960px) {
+			padding: 1.25em $pad 0;
+		}
+	}
+	&__wrap {
+		width: 100%;
+		margin-bottom: 3.8em;
+		display: flex;
+		flex-wrap: wrap;
+		overflow: hidden;
+		@include bp($max:960px) {
+			margin-bottom: 2.2em;
+		}
+	}
+	&__box {
+		float: left; // For IE 10
+		width: 31%;
+		margin-right: 3.5%;
+		position: relative;
+		&:last-of-type {
+			margin-right: 0;
+		}
+		@include bp($max:1000px) {
+			font-size: 1.5vw;
+		}
+		@include bp($max:700px) {
+			width: 90%;
+			margin: 0 auto 2.5em;
+			font-size: 16px;
+			&:last-of-type {
+				margin: 0 auto 0;
+			}
+		}
+		@include bp($max:400px) {
+			width: 95%;
+			font-size: 4.45vw;
+		}
+		.box__image-wrap {
+			overflow: hidden;
+		}
+		.box__image {
+			height: 18.15em;
+			width: 100%;
+			overflow: hidden;
+			backface-visibility: hidden;
+			@extend %bg-cover;
+			box-shadow: 3px 0px 10px rgba(0, 0, 0, 0.30);
+			transition: transform 400ms;
+			@include bp($max:700px) {
+				height: 55vw;
+			}
+			@include bp($max:400px) {
+				height: 65vw;
+			}
+		}
+		.box__title {
+			display: inline-block;
+			padding: $pad;
+			width: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 20;
+			background-color: rgba(18, 129, 65, 0.74);
+			color: $color-3;
+			font-family: $fam-heading;
+			font-size: 1em;
+			letter-spacing: 0.075em;
+			text-align: center;
+			text-transform: uppercase;
+			transition: background-color 400ms;
+		}
+		.box__caption {
+			margin: 0;
+			padding: 1.7em $pad;
+			border-bottom: 1px solid $color-2;
+			color: $txt-color-1;
+			font-family: $fam-heading;
+			font-weight: bold;
+			text-align: center;
+		}
+		&:hover {
+			text-decoration: none;
+			.box__title {
+				background-color: rgba(225, 33, 39, 1);
+			}
+			.box__image {
+				transform: scale(1.10, 1.10);
+				backface-visibility: hidden;
+			}
+		}
+	}
+}
+/*------------------------------------*\
+    ::  KSS MarkUp (Ignore)
+\*------------------------------------*/    
+// Hover Boxes
+//
+// Demo &amp; Modifiers:<br><a href="../modules/module-hover-boxes.php" target="_blank">module-hover-boxes.php</a>
+//
+// Stylesheet:<br>
+// <a href="../sass/structure/modules/_module_hover_boxes.scss" target="_blank">_module_hover_boxes.scss</a><br>
+//
+// Path To The Code:<br>
+// golftec/golftec/modules/module-hover-boxes.php
+//
+// Markup:
+// <article class="hover-boxes main-torso__group">
+//     <div class="hover-boxes__inner">
+//         <div class="hover-boxes__wrap">
+//             <a class="hover-boxes__box" href="#">
+//                 <span class="box__title">Lesson Plans</span>
+//                 <div class="box__image-wrap">
+//                     <div class="box__image" style="background-image: url('../images/modules/hover-boxes/lesson-plans.jpg')">  
+//                     </div>
+//                 </div>
+//                 <p class="box__caption">
+//                     Build a Better Swing<br>with Golf Lessons at GolfTEC.
+//                 </p>
+//             </a> <!-- // hover-boxes__box -->
+//             <a class="hover-boxes__box" href="#">
+//                 <span class="box__title">Club Fittings</span>
+//                 <div class="box__image-wrap">
+//                     <div class="box__image" style="background-image: url('../images/modules/hover-boxes/club-fittings.jpg')">
+//                     </div>
+//                 </div>
+//                 <p class="box__caption">
+//                     Maximize Every Shot You<br>Take with the Right Equipmnet.
+//                 </p>
+//             </a> <!-- // hover-boxes__box -->
+//             <a class="hover-boxes__box" href="#">
+//                 <span class="box__title">Center Locations</span>
+//                 <div class="box__image-wrap">
+//                     <div class="box__image" style="background-image: url('../images/modules/hover-boxes/center-locations.jpg')">
+//                     </div>
+//                 </div>
+//                 <p class="box__caption">
+//                     Convenient Locations<br>Across the Country.
+//                 </p>
+//             </a> <!-- // hover-boxes__box -->
+//         </div> <!-- // hover-boxes__wrap -->
+//     </div> <!-- // hover-boxes__inner -->
+// </article> <!-- // hover-boxes -->
+//
+// Styleguide 6.2

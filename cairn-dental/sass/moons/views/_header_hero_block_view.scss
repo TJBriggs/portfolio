@@ -1,0 +1,97 @@
+/*------------------------------------*\
+    ::  Hero View Styles
+\*------------------------------------*/
+.hero-block--static {
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	&.hero-block--position-left {
+		background-position: left center;
+	}
+}
+.hero-block__overlay {
+	background-color: rgba(0, 6, 3, 0.76);
+}
+.title__wrap {
+	h1 {
+		color: $color-4;
+		line-height: 1.15em;
+	}
+	@include bp($max:1024px) {
+		h1 {
+			line-height: 1em;
+		}
+	}
+}
+.text__wrap {
+	p {
+		color: $color-4;
+		font-family: $fam-light;
+		font-size: em(14px);
+		letter-spacing: 0.075em;
+	}
+}
+.btn__wrap {
+	.btn-hero {
+		line-height: 42px;
+	}
+}
+/*------------------------------------*\
+    ::  Slider Specific styles
+\*------------------------------------*/	
+.item {
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	&.item--position-left {
+		background-position: left center;
+	}
+	.text__wrap {
+		h1 {
+			color: $color-4;
+			font-size: em(30px);
+			line-height: 1.15em;
+		}
+		p {
+			font-size: em(15px);
+		}
+	}
+	@include bp($max:1024px) {
+		.text__wrap {
+			p {
+
+				font-size: em(16px);
+			}
+		}
+	}
+	@include bp($max:640px) {
+		.text__wrap {
+			h1 {
+				font-size: em(22px);
+				font-family: $fam-reg;
+			}
+			p {
+				font-size: em(15px);
+			}
+		}
+	}
+	@include bp($max:375px) {
+		.btn__wrap {
+			.btn-hero {
+				font-size: em(14px);
+			}
+		}
+	}
+}
+/*------------------------------------*\
+    ::  Owl Carousel Styles
+\*------------------------------------*/	
+.owl-carousel--hero {
+	.owl-prev {
+		text-indent: 9999px;
+	}
+	.owl-next {
+		text-indent: -9999px;
+	}
+
+}

@@ -1,0 +1,67 @@
+/*------------------------------------*\
+    :: Nav in the Footer
+\*------------------------------------*/
+// Footer navigation styles go here.
+.foot-nav {
+    width: 60%;
+    @include bp($max:768px) {
+        width: 100%;
+    }
+	@include nav();
+    .menu {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        display: flex;
+        flex-wrap: wrap;
+        > li {
+            width: 100%;
+            margin-bottom: 0.5em;
+            @include bp($max:768px) {
+                &:nth-of-type(odd) {
+                    width: 70%;
+                }
+                &:nth-of-type(even) {
+                    width: 30%;
+                }
+            }
+            @include bp($max:500px) {
+                &:nth-of-type(odd) {
+                    width: 100%;
+                }
+                &:nth-of-type(even) {
+                    width: 100%;
+                }
+            }
+            a {
+                
+                @extend %h6;
+                color: $color-7;
+                text-decoration: none;
+                transition: color 400ms;
+                &:hover {
+                    color: $color-1;
+                }
+            }
+        }
+    }
+}
+.main-foot__social {
+    width: 40%;
+    a {
+        display: inline-block;
+        margin-right: 1em;
+        color: $color-1;
+        transition: color 400ms;
+        &:hover {
+            color: #66ADD7;
+        }
+    }
+    @include bp($max:768px) {
+        width: 100%;
+        margin-top: 1em;
+        a {
+            font-size: 20px;
+        }
+    }
+}

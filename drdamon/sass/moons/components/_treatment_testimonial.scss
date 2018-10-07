@@ -1,0 +1,200 @@
+/*-----------------------------------------*\
+    :: Testimonials on Treatment Sub Pages
+\*-----------------------------------------*/
+.treat-testimonial {
+    padding: 100px 0 100px;
+    position: fixed;
+    width: 100%;
+    top: 600px;
+    z-index: -1;
+    .testimonial-img {
+        @include col(5);
+        figure {
+            img {
+                border: 10px solid $white;
+            } 
+        }
+        @include bp($max: 960px) {
+            @include col(5, $center: true);         
+            margin-top: 90px;
+        }
+        @include bp($max: 768px) {
+            @include col(6.5, $center: true);         
+            margin-top: 90px;
+        }
+        @include bp($max: 640px) {
+            @include col(7, $center: true);         
+            margin-top: 130px;
+        }
+        @include bp($max: 480px) {
+            @include col(12, $center: true);         
+            margin-top: 70px;
+        }
+        @include bp($max: 320px) {
+            @include col(12, $center: true);         
+            margin-top: 90px;
+        }
+    }
+    .testimonial-text {
+        @include col(7);
+        color: #252525;
+        font-size: 0.875em;
+        letter-spacing: 0.03em;
+        line-height: 1.875rem;
+        padding: 65px 0;
+        z-index: 3;
+        p {
+            font-family: $fultons-reg;
+            font-size: emCalc(24px);
+            margin: 0;  
+            padding: 0 $pad*2 0 0;
+        }
+        .signature {
+            display: block;
+            margin-top: 20px;
+            overflow: hidden;
+            padding: 0 $pad*2 0 0;
+            width: 100%;
+            p {
+                font-size: emCalc(28px);
+                font-weight: bold;
+                margin: 0;
+                padding: 0;
+                text-align: right;
+                width: 100%;
+            }
+        }
+        .test-cta {
+            margin-top: 20px;
+            padding: 0 $pad*2 0 0;
+            width: 100%;
+            .btn {
+                float: right;
+                width: 45%;
+            }
+        }
+        @include bp($max: 960px) {
+            @include col(9, $center: true);
+            margin-bottom: 200px;
+            padding: 15px 0;
+            p {
+                font-size: emCalc(18px);
+                padding: 0;
+                text-align: center;
+            }
+            .signature {
+                margin-top: 20px;
+                padding: 0;
+                p {
+                    font-size: emCalc(22px);
+                    text-align: center;
+                }
+            }
+            .test-cta {
+                padding: 0;
+                .btn {
+                    float: none;
+                    margin: 0 auto;
+                    width: 65%;
+                }
+            }
+        }
+        @include bp($max: 480px) {
+            @include col(11, $center: true);
+            p {
+                font-size: emCalc(16px);
+            }
+            .signature {
+                p {
+                    font-size: emCalc(20px);
+                }
+            }
+            .test-cta {
+                .btn {
+                    width: 75%;
+                }
+            }
+        }
+        @include bp($max: 320px) {
+            @include col(12, $center: true);
+            p {
+                font-size: emCalc(16px);
+            }
+            .signature {
+                p {
+                    font-size: emCalc(20px);
+                }
+            }
+            .test-cta {
+                .btn {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    @include bp($solarsystem) { // Remove Parallax effect for mobile
+        background: $bg-light-blue;
+        box-shadow: inset 0px 7px 10px -5px rgba(0, 0, 0, 0.45), inset 0px -9px 5px -7px rgba(0, 0, 0, 0.35);
+        margin: 0;
+        padding: 50px 0 45px;
+        position: relative;
+        width: 100%;
+        top: 0;
+        .testimonial-img {
+            margin-top: 0px;
+        }
+        .testimonial-text {
+            margin-bottom: 0px;
+        }
+        @include bp($max: 640px) {      
+            padding: 30px 0 25px;
+        }
+    }
+}
+///////////////////////////////////////////////////////////////////
+// Treatment Page Modifiers (orthognathic surgery & retention)
+///////////////////////////////////////////////////////////////////
+.page-orthognathic-surgery, .page-retention {
+    .treat-testimonial {
+        padding: 100px 0 100px;
+        position: fixed;
+        width: 100%;
+        z-index: -1;
+        top: 720px;
+        @include bp($solarsystem) {
+            background: $bg-light-blue;
+            box-shadow: inset 0px 7px 10px -5px rgba(0, 0, 0, 0.45), inset 0px -9px 5px -7px rgba(0, 0, 0, 0.35);
+            margin: 0;
+            padding: 50px 0 45px;
+            position: relative;
+            width: 100%;
+            top: 0;
+            .testimonial-img {
+                margin-top: 0px;
+            }
+            .testimonial-text {
+                margin-bottom: 0px;
+            }
+            @include bp($max: 640px) {      
+                padding: 30px 0 25px;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

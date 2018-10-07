@@ -1,0 +1,29 @@
+/*------------------------------------*
+    :: Carousel Slider Layout
+*------------------------------------*/
+.team {
+	ul {
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		li {
+			background-repeat: no-repeat;
+			background-size: cover;
+			float: left;  
+			height: 375px;
+			list-style-type: none;
+			max-height: 380px;
+			width: 33%;
+			p {
+				color: $white;
+				font-size: emCalc(18px);
+				letter-spacing: 1px;
+				text-align: center;
+			}
+			@include bp($solarsystem) {
+				width: 100%;
+				float: none;
+			}
+		}
+	}
+}

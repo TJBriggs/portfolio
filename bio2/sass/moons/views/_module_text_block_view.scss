@@ -1,0 +1,17 @@
+/*------------------------------------*\
+    ::  Text Block Styles
+\*------------------------------------*/	
+.text-block {
+	&__item {
+		h5 {
+			font-weight: bold;
+			text-transform: none;
+		}
+	}
+	&__item-link {
+		font-weight: 100;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}

@@ -1,0 +1,202 @@
+/*------------------------------------*\
+	:: Footer
+\*------------------------------------*/
+// General footer styles go here.
+@include sticky-footer(
+	$wrap: '.main-wrap',
+	$row:  '.main-torso, .main-foot',
+	$flex: '.main-torso'
+);
+.main-foot {
+	width: 100%;
+	overflow: hidden;
+	background-color: $color-3;
+	.main-foot__inner {
+		overflow: hidden;
+		padding-top: 45px;
+		padding-bottom: 45px;
+		@include bp($max:400px) {
+			padding-top: 25px;
+			padding-bottom: 20px;
+		}
+	}
+	.main-foot__image-wrap {
+		float: left;
+		@include bp($max:870px) {
+			float: none;
+			width: 100%;
+			text-align: center;
+		}
+		img {
+			height: 200px;
+			width: 200px;
+			@include bp($max:435px) {
+				height: 180px;
+				width: 180px;
+			}
+			@include bp($max:400px) {
+				height: 140px;
+				width: 140px;
+			}
+		}
+
+	}
+	.main-foot__content {
+		padding-top: 23px;
+		float: right;
+		@include bp($max:870px) {
+			float: none;
+			padding-top: 20px;
+		}
+	}
+	.main-foot__address {
+		font-size: 18px;
+		text-align: right;
+		a {
+			text-decoration: none;
+			color: $color-2;
+			br {
+				display: none;
+			}
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+		@include bp($max:870px) {
+			float: none;
+			width: 100%;
+			font-size: 14px;
+			text-align: center;
+			a {
+				br {
+					display: block;
+				}
+			}
+		}
+		@include bp($max:435px) {
+			display: inline-block;
+			text-align: left;
+			width: auto;
+		}
+	}
+	.main-foot__social-wrap {
+		width: 100%;
+		margin: 20px 0;
+		text-align: right;
+		@include bp($max:870px) {
+			float: none;
+			width: auto;
+			margin: 20px 0;
+			text-align: center;
+		}
+		@include bp($max:435px) {
+			float: right;
+			margin: 10px 0 0 0;
+		}
+	}
+	.main-foot__social-links {
+		display: inline-block;
+		margin: 0;
+		padding: 0;
+		li {
+			display: inline-block;
+			list-style-type: none;
+			margin-left: 5px;
+			a {
+				padding: 10px 5px;
+				color: $color-1;
+				font-size: 20px;
+				transition: color 400ms;
+				&:hover {
+					color: $color-2;
+				}
+			}
+			&:first-of-type {
+				margin-left: 0;
+			}
+			&:last-of-type {
+				a {
+					padding-right: 0;
+				}
+			}
+		}
+		@include bp($max:768px) {
+			li {
+				a {
+					font-size: 16px;
+				}
+			}
+		}
+		@include bp($max:400px) {
+			li {
+				margin-left: 2px;
+				a {
+					font-size: 14px;
+				}
+			}
+		}
+	}
+	.main-foot__copyright {
+		color: #8f9192;
+		font-size: 14px;
+		text-align: right;
+		text-transform: uppercase;
+		a {
+			color: $color-2-light;
+			text-decoration: none;
+			&:hover {
+				color: $color-1!important;
+				text-decoration: underline;
+			}
+		}
+		@include bp($max:870px) {
+			width: 100%;
+			float: none;
+			margin-top: 1.25em!important;
+			font-size: 12px;
+			text-align: center;
+		}
+		@include bp($max:435px) {
+			max-width: 210px;
+			margin: 1.25em 0 0 0;
+			text-align: left;
+			width: 100%;
+		}
+	}
+}
+/*------------------------------------*\
+	:: Landing Page Footer Styles
+\*------------------------------------*/
+.main-foot__landing {
+	.main-foot__content {
+		float: none;
+		text-align: center;
+		.main-foot__address, .main-foot__social-wrap, .main-foot__copyright {
+			float: none;
+			text-align: center;
+		}
+		.main-foot__address {
+			a {
+				display: block;
+				margin-bottom: 1.25em;
+				br {
+					display: none;
+				}
+			}
+		}
+		@include bp($max:500px) {
+			.main-foot__address {
+				a {
+					br {
+						display: block;
+					}
+				}
+			}
+		}
+		@include bp($max:400px) {
+			.main-foot__copyright {
+				margin: 0 auto;
+			}
+		}
+	}
+}

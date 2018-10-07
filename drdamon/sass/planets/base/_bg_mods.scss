@@ -1,0 +1,153 @@
+/*-------------------------------------------*\
+    ::Page Styles - BG color modifiers
+\*-------------------------------------------*/
+.bg--white {
+	background-color: $bg-white;
+	h2  {
+		color: $color-2;
+	}
+	h3 {
+		color: $color-2;
+	}
+	p, li, strong {
+		color: #555555;
+    }
+    a {
+		color: $color-1;
+		text-decoration: none;
+		transition: 400ms;
+		&:visited {
+			color: $color-1;
+		}
+		&:hover {
+			color: lighten($color-1, 15%);
+		}
+	}
+	.btn {
+		color: $white;
+		&:hover {
+			color: $white;
+			background-color: darken(#00a4e2,10%);
+		}
+		&:visited {
+			color: $white;
+		}
+	}
+	.section__title-wrap {
+	    h2 {
+	    	color: $color-1;
+	    }
+	}
+}
+
+.bg--light-blue {
+	background-color: $bg-light-blue;
+	box-shadow: inset 0px 7px 10px -5px rgba(0, 0, 0, 0.45), inset 0px -9px 5px -7px rgba(0, 0, 0, 0.45);
+	h2 {
+		color: #263249;
+	}
+	h3 {
+		color: $color-4;
+	}
+	p, li, strong {
+		color: #252525;
+    }
+    a {
+		color: $white;
+		text-decoration: none;
+		transition: 400ms;
+		&:visited {
+			color: $white;
+		}
+		&:hover {
+			color: $color-2;
+		}
+	}
+    .btn {
+		color: $white;
+		&:hover {
+			color: $white;
+		}
+		&:visited {
+			color: $white;
+		}
+	}
+	.section__title-wrap {
+	    h2 {
+	    	color: #263249;
+	    }
+	}
+}
+
+.bg--dark-blue {
+	background-color: $bg-dark-blue;
+	h2  {
+		color: $color-3;
+	}
+	h3 {
+		color: $color-3;
+	}
+	p, li, strong {
+		color: $white;
+    }
+    a {
+		color: $color-3;
+		text-decoration: none;
+		transition: 400ms;
+		&:visited {
+			color: $color-3;
+		}
+		&:hover {
+			color: darken(#00a4e2,10%);
+		}
+	}
+	.btn {
+		color: $white;
+		&:hover {
+			color: $white;
+			background-color: darken(#00a4e2,10%);
+		}
+		&:visited {
+			color: $white;
+		}
+	}
+	.section__title-wrap {
+	    h2 {
+	    	color: $color-3;
+	    }
+	}
+}
+
+.bg--gray {
+	background-color: $bg-gray;
+	h2 {
+		color: $color-3;
+	}
+	h3 {
+		color: $color-3-dark;
+	}
+	p, li, strong {
+		color: $white;
+    }
+    a {
+		color: $color-1;
+		text-decoration: none;
+		transition: 400ms;
+		&:visited {
+			color: $white;
+		}
+		&:hover {
+			color: darken(#00a4e2,10%);
+		}
+	}
+    .btn {
+		color: $white;
+		&:hover {
+			color: $white;
+		}
+		&:visited {
+			color: $white;
+		}
+	}
+
+}

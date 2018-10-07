@@ -1,0 +1,72 @@
+/*------------------------------------*\
+    ::Home Page Styles
+\*------------------------------------*/
+.page__group--why-drd {
+    padding: 10px 0 50px;
+    h2 {
+        color: $color-1;
+        margin: 10px 0 0;;
+    }
+    .thirds__group--2 {
+        p {
+            text-align: center;
+            @include bp($solarsystem) {
+                margin-top: 30px; 
+            }
+        }
+        .video-container {
+            @include bp($solarsystem) {
+                margin-top: 25px;
+            }
+        }
+    }
+} 
+
+.page__group--smile-rewards {
+    padding: 50px 0;
+    .thirds__group--1 {
+        p {
+            text-align: center;
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+    .btn {
+        margin-top: 35px;
+    }
+    @include bp($solarsystem) {
+        padding: 40px 0 60px;
+    }
+    @include bp($planetary) {
+        .btn {
+            width: 100%;
+        }
+    }
+}   
+
+.page__group--aao-figures {
+    padding: 50px 0 40px 0;
+    .section__title {
+        margin-bottom: 20px;
+    }
+    .thirds__group--1 {
+        p {
+            margin: 0;
+            text-align: center;
+            strong {
+                display: inline-block;
+                font-size: emCalc(12px);
+                line-height: 1.5em;
+                font-weight: normal;
+                font-style: italic;
+            }
+        }
+    }
+    .thirds__group--2 {
+        margin-top: 45px;
+        h3 {
+            font-size: emCalc(28px);
+        }
+    }
+} 

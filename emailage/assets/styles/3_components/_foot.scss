@@ -1,0 +1,54 @@
+/*------------------------------------*\
+    :: Footer
+\*------------------------------------*/
+// General footer styles go here.
+@include sticky-footer(
+    $wrap: '.main-wrap',
+    $row:  '.main-head, .main-torso, .main-foot',
+    $flex: '.main-torso'
+);
+.main-foot {
+    width: 100%;
+    overflow: hidden;
+    background-color: $color-5;
+}
+.main-foot__wrap {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2.2em 0;
+}
+.main-foot__nav {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    @include bp($max:768px) {
+        width: 100%;
+        max-width: 550px;
+        margin: 0 auto 1.5em;
+    }
+}
+.main-foot__text {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    @include bp($max:768px) {
+        width: 100%;
+        max-width: 550px;
+        margin: 0 auto;
+    }
+}
+.main-foot__copy {
+    color: $color-1;
+    text-transform: none;
+    margin-bottom: 1.2em;
+}
+.main-foot__disclosure {
+    @extend %museo-300;
+    font-size: 0.8em;
+    p {
+        margin: 0;
+        line-height: 1.3em;
+    }
+}

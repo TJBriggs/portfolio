@@ -1,0 +1,92 @@
+/*------------------------------------*\
+    :: News Reel Styles
+\*------------------------------------*/
+.news-reel {
+	height: 400px;
+	padding: 50px 0;
+	@include bp($max: 960px) {
+		padding: 30px 0;
+	}
+	@include bp($max: 500px) {
+		height: 420px;
+	}
+	@include bp($max: 480px) {
+		height: 480px;
+	}
+	@include bp($max: 320px) {
+		height: 560px;
+	}
+	.news-slider {
+		height: auto;
+		ul {
+			margin: 0;
+			padding: 0;
+			li {
+				width: 100%;
+				.news__image {
+					@include col(5);
+					float: left;
+					text-align: center;
+
+					img {
+						max-width: 100%;
+						max-height: 300px;
+					}
+					@include bp($max: 960px) {
+						display: none;
+					}
+				}
+				.news__text {
+					@include col(7);
+					float: left;
+					padding: 15px 2em;
+					@include bp($max: 960px) {
+						@include col(10, $center: true);
+					}
+					h2 {
+						margin: 0 0 20px;
+						padding: 0;
+						color: #263249;
+					}
+					a {
+						color: #252525;
+						text-decoration: none;
+						transition: 400ms;
+						h3 {
+							font-family: $fam-heading;
+							font-size: emCalc(16px);
+							margin: 0;
+							padding: 0;
+							color: inherit;
+						}
+						&:hover {
+							color: $white;
+						}
+					}
+					p {
+						color: #252525;
+						font-size: 0.875em;
+						margin: 5px 0 0 0;
+						.excerpt-link {
+							letter-spacing: 0.02em;
+							color: $white;
+							float: right;
+							margin: 20px $pad 0 0;
+							transition: 400ms;
+							&:hover {
+								color: $color-2;
+							}
+							@include bp($max: 960px) {
+								margin-top: 30px;
+							}
+							@include bp($max: 320px) {
+								margin-top: 10px;
+							}
+						}
+					}
+
+				}
+			}
+		}
+	}
+}

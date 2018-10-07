@@ -1,0 +1,73 @@
+/*------------------------------------*\
+    ::  Background Mod Styles
+\*------------------------------------*/
+[class*="--bg-white"] {
+	background: #faffff;
+	h2 { // Underline Red
+		&:first-of-type {
+			&:after { // underline style red
+				background: $color-3;
+			}
+		}
+	}
+	h1{
+		strong {
+			color: #616161;
+			font-family: $fam-rob-bold;
+		}
+	}
+}
+[class*="--bg-lblue"], [class*="--bg-nblue"] {
+	background: $color-1-light;
+}
+[class*="--bg-lblue"], [class*="--bg-nblue"], 
+[class*="--image"], [class*="--parallax"], .case-studies {
+	h1,  h2, h4, h5 {
+		color: $color-4; // white
+	}
+	h3, h6 {
+		color: $color-2; // green
+	}
+	h2 { // Underline green
+		&:first-of-type {
+			&:after { // underline styles green
+				background: $color-2;
+			}
+		}
+	}
+	p, li {
+		color: $color-4;
+	}
+	a:not(.btn){
+		color: $color-2;
+		text-decoration: underline;
+		transition: color 400ms;
+		&:hover {
+			color: $color-2-dark;
+		}
+	}
+	strong {
+		color: $color-2;
+		font-family: $fam-rob-bold;
+	}
+}
+[class*="--bg-nblue"] { // darken bg color but keep text styles same as light blue
+	background: $color-1;
+}
+[class*="--bg-lgray"] {
+	background: #f2f6f6;
+	h2 { // Underline Red
+		&:first-of-type {
+			&:after { // underline style red
+				background: $color-3;
+			}
+		}
+	}
+	p, li {
+		color: $color-1;
+	}
+	strong {
+		color: $color-1;
+		font-family: $fam-rob-bold;
+	}
+}

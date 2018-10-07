@@ -1,0 +1,23 @@
+/*------------------------------------*\
+    ::  Privacy Policy Page Styles
+\*------------------------------------*/
+.page-id-39 {
+	.privacy-policy__inner {
+		padding: 25px $pad*2 50px;
+		@include bp($max:480px) {
+			padding: 10px $pad 25px;
+		}
+	}
+	h1 {
+		color: $color-2;
+		@include bp($max:640px) {
+			font-size: 26px;
+		}
+	}
+	h3 {
+		color: $txt-color-3;
+		@include bp($max:640px) {
+			font-size: 19px;
+		}
+	}
+}	

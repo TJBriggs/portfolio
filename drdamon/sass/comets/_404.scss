@@ -1,0 +1,59 @@
+/*-------------------------------------------*\
+    ::Page Styles - 404
+\*-------------------------------------------*/
+.error404 {
+	.fourofour-torso {
+		.fourofour__inner {
+			.fourofour__content {
+				margin: 230px 0 50px;
+				transition: 400ms;
+				aside {
+					@include col(4);
+					margin-bottom: 30px;
+				}
+				div {
+					@include col(8);
+					padding-top: 30px;
+					h1 {
+						color: $color-1;
+					}
+					h3 {
+						color: $color-2;
+					}
+				}
+				@include bp($solarsystem) {
+					margin: 85px 0 50px;
+				}
+				@include bp($max:700px) {
+					margin: 65px 0 50px;
+					aside {
+						@include col(4, $center:true);
+						margin-bottom: 10px;
+					}
+					div {
+						@include col(10, $center:true);
+					}
+				}
+				@include bp($planetary) {
+					margin: 65px 0 60px;
+					aside {
+						@include col(7, $center:true);
+						margin-bottom: 0px;
+					}
+					div {
+						@include col(11, $center:true);
+						h1 {
+							font-size: emCalc(20px);
+						}
+						h3 {
+							font-size: emCalc(16px);
+						}
+					}
+				}
+			}
+			@include bp($solarsystem) {
+				border-top: 8px solid $color-2;
+			}
+		}
+	}
+}

@@ -1,0 +1,47 @@
+/*------------------------------------*\
+	:: Variables
+	----------------------------------*
+	:: Colors
+	:: Layout
+	:: Font Imports
+\*------------------------------------*/
+
+/*------------------------------------*\
+	:: Colors
+\*------------------------------------*/
+// primary color
+$color-1:           #2675b9; // Devetry Blue rgba(38, 117, 185, 1);
+$color-1-dark:      #28303a; // Grayish Blue rgba(40, 48, 58, 1);
+$color-1-light:     #a5dbfe; // Light Blue rgba(165, 219, 254, 1);
+
+// Main Text Color
+$color-2:           #3e4046; // Dark Gray rgba(62, 64, 70, 1);
+$color-2-light:     #8d8f90; // Light Gray rgba(141, 143, 144, 1);
+
+// Grayscale
+$color-3:           #FFF; // White
+$color-4:           #000; // Black
+$color-5:           #F5F5F5; // Light Gray
+$color-6:			#F4F6F9; // Half Half Gray
+// alert colors
+$color-good:        #6ADE72;
+$color-bad:         #DE5D5D;
+$color-meh:         #EBE857;
+
+/*------------------------------------*\
+	:: Breakpoints
+\*------------------------------------*/
+$desktop:        1140px;
+$tablet:         1024px;
+$mobile:         500px;
+
+/*------------------------------------*\
+	:: Layout
+\*------------------------------------*/
+$pad:       0.9375rem;
+
+/*------------------------------------*\
+	:: Import Fonts
+\*------------------------------------*/
+@import url('/wp-content/themes/devetry/assets/fonts/karla/stylesheet.css'); // Load Karla Fonts
+

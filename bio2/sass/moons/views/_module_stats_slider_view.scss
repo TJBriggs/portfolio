@@ -1,0 +1,43 @@
+/*------------------------------------*\
+    ::  Stats Slider Styles
+\*------------------------------------*/	
+.stats-slider {
+	&__text {
+		h2 {
+			color: $color-1;
+			font-size: emCalc(32px);
+			text-transform: none;
+		}
+		p {
+			color: $color-1-light;
+			font-size: emCalc(20px);
+			line-height: 1.5em;
+			span {
+				font-weight: bold;
+			}
+		}
+	}
+	&__wrap {
+		h6 {
+			font-size: emCalc(12px);
+			font-weight: bold;
+			text-align: left;
+			text-transform: none;
+		} 
+		ol {
+			text-align: left;
+			li {
+				font-size: emCalc(8px);
+				line-height: 1.35em;
+			}
+		}
+	}
+	/*------------------------------------*\
+	    :: Modifiers
+	\*------------------------------------*/	
+	&[class*="--bg-blue"] {
+		h2 {
+			color: $color-1-light;
+		}
+	}
+}

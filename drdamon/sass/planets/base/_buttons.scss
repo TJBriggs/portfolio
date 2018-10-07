@@ -1,0 +1,78 @@
+/*------------------------------------*\
+    ::Button Styles
+\*------------------------------------*/
+/////////////////////////
+// General Buttons
+/////////////////////////
+.btn {
+	display: block;
+	background: #00a4e2;
+	width: 200px;
+	padding: 8px 10px;
+	font-family: opensans-bld;
+	font-size: emCalc(14px);
+	letter-spacing: 1px;
+	border-radius: 3px;
+	text-decoration: none;
+	text-align: center;
+	&:hover {
+        color: $white;
+		background: darken($color-1,10%);
+	}
+    @include bp($planetary) {
+        width: 100%;
+    }
+    &:visited {
+        color: $white;
+    }
+}
+
+/////////////////////////
+// Masthead Buttons
+/////////////////////////
+ .mastBtn {
+    background-color: transparent;
+    color: $white;
+    border: 2px solid $white;
+    border-radius: 3px;
+    cursor: pointer;
+    display: block;
+    height: 100%;
+    font-family: opensans-bld;
+    font-size: emCalc(14px);
+    letter-spacing: 1px;
+    padding: 15px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 400ms;
+    &:hover {
+        color: $white;
+        background-color: rgba(255, 255, 255, 0.35);
+    }
+    &:visited {
+        color: $white;
+    }
+}
+
+/////////////////////////
+// Main CTA Buttons
+/////////////////////////
+.main_cta_btn {
+    background: $color-1;
+    border: 8px solid darken($bg-gray, 5%);
+    border-radius: 3px;
+    cursor: pointer;
+    display: block;
+    height: 60px;
+    font-family: opensans-bld;
+    font-size: emCalc(18px);
+    letter-spacing: 1px;
+    padding: 10px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 400ms;
+    &:visited {
+        color: $white;
+    }
+}
+

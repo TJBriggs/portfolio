@@ -1,0 +1,278 @@
+/*------------------------------------*\
+    ::  Hover Box Layout
+\*------------------------------------*/
+.hover-boxes {
+	width: 100%;
+	padding-top: em(7px);
+	overflow: hidden;
+}
+.hover-box__box {
+	float: left;
+	height: 385px;
+	width: 32.6666667%;
+	margin: 0 0.5% em(7px) 0; 
+	overflow: hidden;
+	@include bp($max:1024px) {
+		height: 300px;
+	}
+	@include bp($max:768px) {
+		height: 225px;
+	}
+	@include bp($max:480px) {
+		height: 310px;
+	}
+	&:nth-of-type(1),
+	&:nth-of-type(4),
+	&:nth-of-type(7) {
+		margin-left: 0.5%;
+	}
+	.hover-box__content {
+		height: 100%;
+		width: 100%;
+		position: relative;
+		backface-visibility: hidden;
+	}
+	.hover-box__title {
+		width: 100%;
+		margin: 0;
+		padding: 0 $pad;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		right: 0;
+		transform: translateY(-50%);
+		transition: top 400ms, color 400ms;
+		@include bp($max:900px) {
+			top: 25%;
+		}
+		@include bp($max:768px) {
+			top: 20%;
+		}
+		@include bp($max:640px) {
+			top: 18%;
+		}
+		@include bp($max:480px) {
+			top: 22%;
+		}
+		@include bp($max:350px) {
+			top: 19%;
+		}
+	}
+	.hover-box__text {
+		width: 80%;
+		margin: 0;
+		padding: 0 $pad;
+		position: absolute;
+		top: 80%;
+		left: 10%;
+		transform: translateY(-50%);
+		transition: top 400ms;
+		@include bp($max:900px) {
+			width: 60%;
+			top: 47.5%;
+			left: 20%;
+		}
+		@include bp($max:768px) {
+			width: 70%;
+			top: 46%;
+			left: 15%;
+		}
+		@include bp($max:640px) {
+			width: 80%;
+			left: 10%;
+		}
+		@include bp($max:480px) {
+			width: 90%;
+			top: 48%;
+			left: 5%;
+		}
+	}
+	.hover-box__button {
+		height: em(100px);
+		width: 100%;
+		position: absolute;
+		bottom: -100px;
+		left: 0;
+		right: 0;
+		line-height: 100px;
+		transition: bottom 400ms;
+		@include bp($max:1024px) {
+			height: em(65px);
+			line-height: 65px;
+		}
+		@include bp($max:900px) {
+			bottom: 0; ///
+		}
+		@include bp($max:768px) {
+			height: em(60px);
+			line-height: 60px;
+		}
+		span {
+			display: inline-block;
+			margin-left: em(15px);
+			position: relative;
+			top: em(1.5px);
+		}
+	}
+	&:hover {
+		@include bp($min:1025px) {
+			.hover-box__title {
+				top: 25%;
+			}
+			.hover-box__text {
+				top: 50%;
+			}
+			.hover-box__button {
+				bottom: 0;
+			}
+		}
+		@include bp($min:901px, $max:1024px) {
+			.hover-box__title {
+				top: 16%;
+			}
+			.hover-box__text {
+				top: 47%;
+			}
+			.hover-box__button {
+				bottom: 0;
+			}
+		}
+	}
+}
+/*----------------------------------------*\
+    ::  Layout Modifiers based on count
+\*----------------------------------------*/
+.hover-boxes--2 {
+	.hover-box__box {
+		width: 49.25%;
+	}
+}	
+.hover-boxes--4 {
+	.hover-box__box {
+		width: 49.25%;
+		&:nth-of-type(1),
+		&:nth-of-type(3) {
+			margin-left: 0.5%;
+		}
+		&:nth-of-type(4) {
+			margin-left: 0;
+		}
+	}
+}
+.hover-boxes--5 {
+	.hover-box__box {
+		&:nth-of-type(1),
+		&:nth-of-type(2) {
+			width: 49.25%;
+		}
+		&:nth-of-type(3) {
+			margin-left: 0.5%;
+		}
+		&:nth-of-type(4) {
+			margin-left: 0;
+		}
+	}
+}
+.hover-boxes--7 {
+	.hover-box__box {
+		width: 49.25%;
+		&:nth-of-type(5),
+		&:nth-of-type(6),
+		&:nth-of-type(7) {
+			width: 32.6666667%;
+		}
+		&:nth-of-type(3),
+		&:nth-of-type(5) {
+			margin-left: 0.5%;
+		}
+		&:nth-of-type(4), 
+		&:nth-of-type(7) {
+			margin-left: 0;
+		}
+	}
+}
+.hover-boxes--8 {
+	.hover-box__box {
+		&:nth-of-type(1),
+		&:nth-of-type(2) {
+			width: 49.25%;
+		}
+		&:nth-of-type(3), 
+		&:nth-of-type(6) {
+			margin-left: 0.5%;
+		}
+		&:nth-of-type(4),
+		&:nth-of-type(7) {
+			margin-left: 0;
+		}
+	}
+}
+// Set all boxes to full width
+@include bp($max:900px) {
+	.hover-boxes--2,
+	.hover-boxes--3,
+	.hover-boxes--4,
+	.hover-boxes--5,
+	.hover-boxes--6,
+	.hover-boxes--7,
+	.hover-boxes--8,
+	.hover-boxes--9 {
+		.hover-box__box {
+			width: 98%;
+			margin: 0 1% em(8px); 
+			&:nth-of-type(1),
+			&:nth-of-type(2),
+			&:nth-of-type(3),
+			&:nth-of-type(4),
+			&:nth-of-type(5),
+			&:nth-of-type(6),
+			&:nth-of-type(7) {
+				width: 98%;
+				margin: 0 1% em(8px); 
+			}
+		}
+	}
+}
+// Remove side margins from all boxes
+@include bp($max:480px) {
+	.hover-boxes--2,
+	.hover-boxes--3,
+	.hover-boxes--4,
+	.hover-boxes--5,
+	.hover-boxes--6,
+	.hover-boxes--7,
+	.hover-boxes--8,
+	.hover-boxes--9 {
+		.hover-box__box {
+			width: 100%;
+			margin: 0 0 em(8px); 
+			&:nth-of-type(1),
+			&:nth-of-type(2),
+			&:nth-of-type(3),
+			&:nth-of-type(4),
+			&:nth-of-type(5),
+			&:nth-of-type(6),
+			&:nth-of-type(7) {
+				width: 100%;
+				margin: 0 0 em(8px); 
+			}
+		}
+	}
+}
+/*------------------------------------*\
+	:: Modifiers
+\*------------------------------------*/
+.hover-boxes {
+	// Remove padding so that there is not extra whitespace
+	// above the section
+	&.hover-boxes--remove-pad-top {
+		padding-top: 0;
+	}
+}	
+
+
+
+
+
+
+

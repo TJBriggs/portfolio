@@ -1,0 +1,31 @@
+/*------------------------------------*\
+    ::  Icon Callouts Layout
+\*------------------------------------*/
+.icon-callouts {
+	background: $color-4;
+}
+.icon-callouts__inner {
+	.section-title {
+		text-align: center;
+	}
+}
+.icon-callouts__callout {
+	h5 {
+		text-align: center;
+	}
+	p {
+		font-family: $fam-light;
+	}
+	@include bp($max:960px) {
+		h5 {
+			text-align: left;
+		}
+	}
+	@include bp($max:500px) {
+		text-align: center;
+		h5 {
+			text-align: center;
+		}
+	}
+}	
+

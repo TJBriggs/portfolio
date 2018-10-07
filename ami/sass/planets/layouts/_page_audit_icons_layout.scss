@@ -1,0 +1,212 @@
+/*------------------------------------*\
+    ::  Audit Icons Layout
+\*------------------------------------*/
+.audit-icons {
+	padding: em(15px) 0 em(40px);
+	.icon-wrap {
+		width: 100%;
+		margin-top: em(55px);
+		overflow: hidden;
+		@include bp($max:640px) {
+			margin-top: em(35px);
+		}
+		.icon {
+			float: left;
+			display: block;
+			width: 25%; // set to design of 4 ctas - modifiers below for other counts
+			.icon__circle {
+				display: inline-block;
+				width: auto;
+				height: auto;
+			}
+			.icon__icon {
+				display: inline-block;
+				height: 130px;
+				width: 130px;
+				padding: 15px;
+				&:before {
+					content: '';
+					display: inline-block;
+					height: 100%;
+					vertical-align: middle;
+				}
+				img {
+					height: 70px;
+					width: 70px;
+					margin-right: em(5px); // nudges images to center
+					vertical-align: middle;
+				}
+			}
+			.icon__text {
+				min-height: 135px;
+				width: 99.99%;
+				margin-top: em(30px);
+				padding: 0 $pad*1.25;
+				.icon__main-title {
+					margin: 0;
+				}
+				.icon__blurb {
+					margin-top: em(15px);
+				}
+			}
+			@include bp($max:1024px) {
+				width: 50%;
+			}
+			@include bp($max:640px) {
+				width: 100%;
+				margin-bottom: em(45px);
+				padding: 0 $pad*2;
+				position: relative;
+				.icon__circle {
+					float: left;
+					display: block;
+					position: absolute;
+					top: 0;
+					left: $pad*2;
+				}
+				.icon__icon {
+					display: inline-block;
+					height: 70px;
+					width: 70px;
+					padding: 10px;
+					&:before {
+						display: none;
+					}
+					img {
+						height: 35px;
+						width: 35px;
+						margin: em(5px) em(1px) em(5px) 0;
+						vertical-align: middle;
+					}
+				}
+				.icon__text {
+					height: auto;
+					min-height: 0;
+					margin: 0;
+					padding: 0;
+					.icon__main-title {
+						margin-top: em(5px);
+						margin-left: 90px;
+						padding: 0;
+					}
+					.icon__blurb {
+						display: block;
+						margin: em(5px) 0 0 90px;
+					}
+				}
+			}
+		}
+		/*------------------------------------*\
+		    ::  Layout for 2 icons
+		\*------------------------------------*/
+		&[class*="--2"] {
+			.icon {
+				width: 50%;
+				@include bp($max:640px) {
+					width: 100%;
+				}
+			}
+		}
+		/*------------------------------------*\
+		    :: Layout for 3 icons
+		\*------------------------------------*/
+		&[class*="--3"]  {
+			.icon {
+				width: 33.33336%;
+				@include bp($max:768px) {
+					width: 50%;
+					&:nth-of-type(3) {
+						width: 100%;
+						margin-top: em(45px);
+						.icon__text {
+							width: 50%;
+							margin: 0 auto;
+						}
+					}
+				}
+				@include bp($max:640px) {
+					width: 100%;
+					&:nth-of-type(3) {
+						width: 100%;
+						margin-top: 0;
+						.icon__text {
+							width: 100%;
+							margin: 0;
+						}
+					}
+				}
+			}
+		}
+		/*------------------------------------*\
+		    :: Layout for 5 icons
+		\*------------------------------------*/
+		&[class*="--5"] {
+			.icon {
+				width: 33.33336%;
+				&:nth-of-type(4),
+				&:nth-of-type(5) {
+					width: 50%;
+					margin-top: em(45px);
+				}
+				@include bp($max:768px) {
+					width: 50%;
+					&:nth-of-type(4) {
+						margin-top: 0;
+					}
+					&:nth-of-type(5) {
+						width: 100%;
+						margin-top: em(45px);
+						.icon__text {
+							width: 50%;
+							margin: 0 auto;
+						}
+					}
+				}
+				@include bp($max:640px) {
+					width: 100%;
+					&:nth-of-type(3) {
+						margin-top: 0;
+					}
+					&:nth-of-type(4) {
+						width: 100%;
+						margin-top: 0;
+					}
+					&:nth-of-type(5) {
+						width: 100%;
+						margin-top: 0;
+						.icon__text {
+							width: 100%;
+							margin: 0;
+						}
+					}
+				}
+			}
+		}
+		/*------------------------------------*\
+		    :: Layout for 6 icons
+		\*------------------------------------*/
+		&[class*="--6"]  {
+			.icon {
+				width: 33.33336%;
+				&:nth-of-type(4),
+				&:nth-of-type(5),
+				&:nth-of-type(6) {
+					margin-top: em(45px);
+				}
+				@include bp($max:768px) {
+					width: 50%;
+					&:nth-of-type(4) {
+						margin-top: 0;
+					}
+					&:nth-of-type(5), 
+					&:nth-of-type(6) {
+						margin-top: 0;
+					}
+				}
+				@include bp($max:640px) {
+					width: 100%;
+				}
+			}
+		}
+	}
+}

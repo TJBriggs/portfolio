@@ -1,0 +1,28 @@
+/*------------------------------------*\
+    ::Torso With Sidebar
+\*------------------------------------*/
+[class*="torso--sidebar"] {
+    [class*="torso__content"]{
+		@include grid-column(8);
+		padding-right: $pad*3;
+		padding-bottom: 50px;
+		@include bp($max:768px) {
+			width: 100%;
+			padding: 20px $pad*2 40px;
+		}
+		@include bp($max:480px) {
+        	padding: 20px $pad 30px;
+        }
+    }
+    [class*="torso__sidebar"]{
+        @include grid-column(4);
+        padding-left: $pad*3;
+        @include bp($max:768px) {
+        	width: 100%;
+        	padding: 0 $pad;
+        }
+        @include bp($max:480px) {
+        	padding: 0 $pad;
+        }
+    }
+}

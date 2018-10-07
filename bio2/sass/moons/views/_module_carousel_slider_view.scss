@@ -1,0 +1,80 @@
+/*------------------------------------*\
+    ::  Carousel Slider Styles
+\*------------------------------------*/
+.carousel-slider {
+	background-color: $color-2;
+	.section-title {
+		background-color: $color-2;
+		border-bottom: 8px solid $color-1;
+		text-align: center;
+		span {
+			background-color: $color-1;
+			color: $color-2;
+			line-height: 60px;
+			strong {
+				text-transform: none;
+			}
+		}
+		@include bp($max:400px) {
+			span {
+				font-size: 6.35vw;
+			}
+		}
+	}
+	&__slide {
+		background-size: 0;
+		&:after {
+			filter: grayscale(1); // Set images to black and white
+			background-image: inherit;
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		.carousel-slider__content {
+			background-color: rgba(5, 42, 44, 0.75);
+		}
+		h3 {
+			text-transform: none;
+			color: $color-2;
+			font-weight: 100;
+			text-align: center;
+			&:after {
+				background-color: $color-1-light;
+			}
+		}
+		p {
+			color: $color-2;
+			line-height: 1.5em;
+			text-align: left;
+		}
+	}
+	/*------------------------------------*\
+	    ::  Owl Arrows & Dots
+	\*------------------------------------*/
+	.owl-prev, .owl-next {
+		background-color: $color-2;
+	}
+	.owl-pagination {
+		.owl-page {
+			cursor: pointer;
+			span {
+				background-color: transparent;
+				border: 2px solid $color-1-light;
+				border-radius: 50%;
+				transition: background 400ms;
+			}
+			&.active {
+				pointer-events: none;
+				span {
+					background-color: $color-1-light;
+				}
+
+			}
+			&:hover {
+				span {
+					background-color: rgba(47, 138, 201, 0.6);
+				}
+			}
+		}
+	}
+}	

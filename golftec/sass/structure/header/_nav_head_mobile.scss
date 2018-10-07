@@ -1,0 +1,95 @@
+/*------------------------------------------*\
+    ::  Navigation Styles (Tablet & Mobile)
+\*------------------------------------------*/	
+.main-head__nav {
+	@include bp($max:1024px) {
+		.head-nav {
+			width: 0;
+			margin: 0;
+			padding: 0;
+			position: fixed;
+			top: 95px;
+			right: 0;
+			bottom: 0;
+			z-index: 9999;
+			background-color: rgba(0, 0, 0, 0.92);
+			transition: width 400ms;
+			@include bp($max:640px) {
+				top: 65px;
+			}
+			.main-head__trigger.active ~ & { // when nav is toggled
+	            width: 60%; 
+	            bookmark: bookmark;
+	            overflow-y: scroll;
+	            @include bp($max:750px) {
+	            	width: 100%;
+	            }
+	        }
+	        // General li & a styles
+			ul, li {
+				list-style-type: none;
+				list-style-image: none;
+			}
+		}
+		.head-nav a {
+			text-decoration: none;
+			transition: color 400ms;
+			white-space: nowrap;
+			font-family: $fam-body;
+			text-transform: uppercase;
+		}
+		.menu {
+			margin: 0;
+			padding: 0 $pad*2.5 1.5em;
+			@include bp($max:400px) {
+				padding: 0 $pad*1.5;
+			}
+			> li {
+				width: 100%;
+				margin-bottom: 1.25em;
+				padding: 0;
+				> a {
+					display: inline-block;
+					width: auto;
+					height: 45px;
+					letter-spacing: 0.035em;
+					line-height: 45px;
+					color: $color-5;
+					font-size: 1.15em;
+					font-weight: 400;
+					letter-spacing: 0.065em;
+					text-align: right;
+					text-transform: uppercase;
+					white-space: nowrap;
+					transition: color 400ms;
+					&:hover {
+						color: $color-3;
+					}
+				}
+				// Hide Book a Lesson
+				&:last-of-type {
+					display: none;
+				}
+			}
+		}
+		.sub-menu {
+			margin: 0;
+			padding: 0;
+			> li {
+				width: 100%;
+				> a {
+					width: auto;
+					color: $color-3;
+					font-size: 0.75em;
+					white-space: nowrap;
+					&.active {
+						color: $color-5;
+					}
+					&:hover {
+						color: $color-5-light;
+					}
+				}
+			}
+		}
+	}
+}

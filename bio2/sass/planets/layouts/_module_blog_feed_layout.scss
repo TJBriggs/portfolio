@@ -1,0 +1,51 @@
+/*------------------------------------*\
+    ::  Blog Feed Layout
+\*------------------------------------*/	
+.blog-feed {
+	width: 100%;
+	overflow: hidden;
+	&__wrap {
+		display: flex;
+		flex-wrap: wrap;
+		padding: 0 $pad;
+		@include bp($max:768px) {
+			padding: 0 $pad*3;
+		}
+		@include bp($max:480px) {
+			padding: 0 $pad;
+		}
+	}
+	.single-torso__image {
+		width: 48%;
+		&:first-of-type {
+			margin-right: 2%;
+		}
+		&:last-of-type {
+			margin-left: 2%;
+		}
+		@include bp($max:768px) {
+			width: 100%;
+			&:first-of-type, &:last-of-type {
+				margin: 0;
+			}
+			&:first-of-type {
+				margin-bottom: emCalc(35px);
+			}
+
+		}
+		.post__overlay {
+			p {
+				padding-top: emCalc(20px);
+			}
+		}
+	}
+	&__btn {
+		margin: emCalc(40px) $pad 0;
+		@include bp($max:768px) {
+			margin: emCalc(35px) $pad*3 0;
+		}
+		@include bp($max:480px) {
+			margin: emCalc(35px) $pad 0;
+		}
+	}
+}

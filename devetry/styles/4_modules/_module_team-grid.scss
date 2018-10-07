@@ -1,0 +1,248 @@
+/*------------------------------------*\
+    ::  Team Grid Styles
+\*------------------------------------*/ 
+.team-grid {
+    width: 100%;
+    overflow: hidden;
+    &__section-title {
+        text-align: center;
+    }
+    &__main-wrap {
+        width: 100%;
+        margin-top: 4em;
+        overflow: hidden;
+        position: relative;
+        @include bp($max:768px) {
+            margin-top: 3em;
+        }
+        @include bp($max:640px) {
+            overflow: visible;
+        }
+    }
+    &__feature-wrap {
+        float: left;
+        width: 100%;
+        display: inline-block;
+        @include bp($max:768px) {
+            float: none;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+    }
+    &__grid-featured {
+        float: left;
+        height: 425px;
+        width: 28.5%;
+        margin-right: 7.25%;
+        margin-bottom: 2.5em;
+        overflow: hidden;
+        position: relative;
+        box-shadow: 2px 4px 10px 0px rgba(0, 0, 0, 0.05), -2px 4px 10px 0px rgba(0, 0, 0, 0.05);
+        transition: box-shadow 400ms;
+        &:last-of-type {
+            margin-right: 0;
+        }
+        @include bp($max:1024px) {
+            width: 31.3333333%;
+            margin-right: 3%;
+        }
+        @include bp($max:768px) {
+            float: none;
+            width: 48%;
+            margin-right: 4%;
+            
+        }
+        @include bp($max:640px) {
+            height: 485px;
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto 1.5em;
+            box-shadow: none;
+            border-bottom: 1px solid #cdcdcd;
+            &:last-of-type {
+                margin-right: auto;
+            }
+        }
+    }
+    &__btn {
+        display: none;
+        width: 98%;
+        max-width: 400px;
+        margin: 1.5em auto 3.5em;
+        @include bp($max:640px) {
+            display: block;
+        }
+    }
+    &__team-wrap {
+        float: left;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        @include bp($max:768px) {
+            float: none;
+        }
+        @include bp($max:640px) {
+            display: none;
+        }
+    }
+    &__grid-member {
+        height: 425px;
+        width: 28.5%;
+        margin-right: 7.25%;
+        margin-bottom: 2.5em;
+        overflow: hidden;
+        position: relative;
+        box-shadow: 2px 4px 10px 0px rgba(0, 0, 0, 0.05), -2px 4px 10px 0px rgba(0, 0, 0, 0.05);
+        transition: box-shadow 400ms;
+        &:first-of-type {
+            margin-right: 0;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        &.member--4, &.member--7, &.member--10, &.member--13, &.member--16, 
+        &.member--19, &.member--22, &.member--25, &.member--28 {
+            margin-right: 0;
+        }
+        &:after {
+            content: '';
+            width: 100%;
+            height: 0;
+            @extend %btog;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transition: height 400ms;
+        }
+        @include bp($max:1024px) {
+            width: 31.3333333%;
+            margin-right: 3%;
+        }
+        @include bp($max:768px) {
+            width: 48%;
+            margin-right: 4%;
+            &:first-of-type {
+                margin-right: 4%;
+                position: relative;
+            }
+            &.member--4, &.member--7, &.member--10, &.member--13, &.member--16, 
+            &.member--19, &.member--22, &.member--25, &.member--28 {
+                margin-right: 4%;
+            }
+            &:nth-of-type(3n) {
+                margin-right: 4%;
+            }
+            &:nth-of-type(even) {
+                margin-right: 0;
+            }
+        }
+        @include bp($max:640px) {
+            height: 485px;
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto 1.5em;
+            box-shadow: none;
+            border-bottom: 1px solid #cdcdcd;
+            &:first-of-type, &.member--4, &.member--7, &.member--10, &.member--13, &.member--16, 
+            &.member--19, &.member--22, &.member--25, &.member--28 {
+                margin-right: auto;
+            }
+            &:nth-of-type(even) {
+                margin: 0 auto 1.5em;
+            }
+            &:nth-of-type(3n) {
+                margin: 0 auto 1.5em;
+            }
+            &:after {
+                display: none;
+            }
+        }
+    }
+    &__image {
+        height: 290px;
+        backface-visibility: hidden;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        filter: grayscale(100%);
+        transition: filter 400ms;
+        @include bp($max:640px) {
+            height: 350px;
+            filter: grayscale(0%);
+        }
+    }
+    &__text {
+        height: 100%;
+        padding: $pad*4 $pad*1.5;
+        position: absolute;
+        width: 100%;
+        top: 68%;
+        left: 0;
+        right: 0;
+        background-color: $color-3;
+        transition: padding 400ms, top 400ms;
+        h5 {
+            color: $color-1;
+        }
+        ul {
+            margin: 1.5em 0 0 0;
+            opacity: 0;
+            padding: 0;
+            list-style-type: none;
+            transition: margin 400ms, opacity 400ms;
+            li {
+                &:before {
+                    display: none;
+                }
+                @include bp($max:960px) {
+                    font-size: 16px;
+                }
+            }
+        }
+        @include bp($max:640px) {
+            padding: $pad*1.5; 
+            top: 60%;
+            ul {
+                margin: 0.7em 0 0 0;
+                opacity: 1;
+            }
+        }
+    }
+    // Grid Item Hover
+    &__grid-featured, &__grid-member {
+        &:hover, &.hover {
+            box-shadow: 5px -3px 25px 3px rgba(0, 0, 0, 0.05), -5px -3px 25px 3px rgba(0, 0, 0, 0.05);
+            .team-grid__image {
+                filter: grayscale(0%);
+            }
+            .team-grid__text {
+                padding: $pad*1.5 $pad*1.5; // hover 
+                top: 53%;
+                ul {
+                    margin: 1em 0 0 0;
+                    opacity: 1;
+                }
+                @include bp($max:768px) {
+                    top: 56%;
+                }
+            }
+            &:after {
+                height: 12px;
+            }
+            @include bp($max:640px) {
+                box-shadow: none;
+                .team-grid__text {
+                    padding: $pad*1.5; // hover 
+                    top: 60%;
+                    ul {
+                        margin: 0.7em 0 0 0;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}

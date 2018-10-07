@@ -1,0 +1,173 @@
+/*------------------------------------*\
+    :: Header
+\*------------------------------------*/
+// General header styles go here.
+.main-head {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9000;
+    height: auto;
+    width: 100%;
+    transition: top 400ms;
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    &__inner {
+        position: relative;
+    }
+    .main-head__banner {
+        float: left;
+        display: flex;
+        align-items: center;
+        height: 40px;
+        width: 100%;
+        position: relative;
+        z-index: 9999;
+        box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.25);
+        color: $color-3;
+        @extend %orange-gradient;
+        @extend %museo-300;
+        font-size: 15px;
+        text-decoration: none;
+        text-align: center;
+        text-transform: uppercase;
+        @include bp($max:640px) {
+            height: 65px;
+        }
+        span {
+            margin: 0;
+            font-size: 15px;
+            i {
+                margin-left: 5px;
+                font-size: 18px;
+                font-weight: 400;
+                transition: margin-left 400ms;
+            }
+        }
+        &:hover {
+            span {
+                i {
+                    margin-left: 15px;
+
+                }
+            }
+        }
+    }
+    .main-head__inner {
+        position: relative;
+    }
+    /*------------------------------------*\
+        :: Hide banner on scroll
+    \*------------------------------------*/ 
+    &.banner-hidden {
+        top: -40px;
+        @include bp($max:640px) {
+            top: -65px;
+        }
+    }   
+}
+.main-head__wrap {
+    float: left;
+    height: 84px;
+    width: 100%;
+    background-color: $color-5;
+    box-shadow: 0 0 24px 0 rgba(0,0,0,0.25);
+    position: relative;
+    @include bp($max:960px) {
+        height: 58px;
+        &:after {
+            content: '';
+            height: 10px;
+            width: 100%;
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            right: 0;
+            z-index: 500;
+            background-color: transparent;
+            box-shadow: inset 0 10px 15px -10px rgba(0,0,0,0.25);
+        }
+    }
+}
+.main-head__logo {
+	display: inline-flex;
+    height: 84px;
+    align-items: center;
+    svg, img {
+        display: inline-block;
+    	height: auto;
+        max-height: 36px;
+    	width: 143px;
+    }
+    @media (max-width:960px) {
+        height: 58px;
+    }
+}
+.main-head__trigger-wrap {
+    display: none;
+    height: 58px;
+    width: 58px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    @extend %blue-gradient;
+    @media (max-width:960px) {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+.main-head__trigger {
+    display: inline-block;
+    height: 25px;
+    width: 34px;
+    position: relative;
+    span {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 2px;
+        width: 100%;
+        margin: 0 auto;
+        background-color: $color-3;
+        opacity: 1;
+        transform: rotate(0deg);
+        transition: all .25s ease-in-out;
+        &:nth-child(1) {
+            top: 0px;
+        }
+        &:nth-child(2),
+        &:nth-child(3) {
+            top: 10px;
+        }
+        &:nth-child(4) {
+            top: 20px;
+        }
+    }
+    &.active {
+        span {
+            &:nth-child(1) {
+                left: 50%;
+                width: 0%;
+            }
+
+            &:nth-child(2) {
+                transform: rotate(45deg);
+            }
+
+            &:nth-child(3) {
+                transform: rotate(-45deg);
+            }
+
+            &:nth-child(4) {
+                left: 50%;
+                width: 0%;
+            }
+        }
+    }
+}

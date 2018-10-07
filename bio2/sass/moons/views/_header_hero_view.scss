@@ -1,0 +1,43 @@
+/*------------------------------------*\
+    ::  Hero Styles
+\*------------------------------------*/
+.hero-block__text {
+	font-size: 1em;
+	h1 {
+		color: $color-1;
+		font-size: 2em;
+		font-weight: 100;
+		@include bp($max:640px) {
+			font-size: emCalc(23px);
+		}
+	}
+	p {
+		color: $color-1-light;
+		font-size: 1.4375em;
+		@include bp($max:640px) {
+			font-size: 1.125em;
+		}
+	}
+}
+/*------------------------------------*\
+    ::  Static Specific Styles
+\*------------------------------------*/
+.hero-block--static {
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+/*------------------------------------*\
+    ::  Video Specific Styles
+\*------------------------------------*/
+.hero-block--video {
+	.hero-block__text {
+		@include bp($max:400px) {
+			font-size: 4vw;
+			.btn {
+				font-size: 15px;
+				line-height: 31px;
+			}
+		}
+	}
+}	

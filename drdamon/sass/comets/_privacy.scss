@@ -1,0 +1,12 @@
+/*-------------------------------------------*\
+    ::Page Styles - Privacy Policy
+\*-------------------------------------------*/
+.page-privacy-policy {
+	.privacy-policy {
+		padding: 190px $pad 60px;
+		@include bp($solarsystem) {
+			border-top: 8px solid $color-2;
+			padding-top: 0px;
+		}
+	}
+}

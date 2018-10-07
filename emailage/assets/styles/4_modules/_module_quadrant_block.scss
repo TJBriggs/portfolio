@@ -1,0 +1,73 @@
+/*------------------------------------*\
+    ::  Quadrant Block Styles
+\*------------------------------------*/
+.quadrant-block {
+    width: 100%;
+    overflow: hidden;
+    .quadrant-block__text {
+        width: 100%;
+    }
+    .quadrant-block__colored-title {
+        text-align: center;
+        color: $accent-blue;
+    }
+    .quadrant-block__text-blocks {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 3.9em;
+    }
+    .quadrant-block__text-block {
+        width: 47%;
+        margin-bottom: 2em;
+        &:nth-last-of-type(-n+2) {
+            margin-bottom: 0;
+        }
+        @include bp($max:640px) {
+            width: 100%;
+            &:nth-last-of-type(-n+2) {
+                margin-bottom: 1.75em;
+            }
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+/*------------------------------------*\
+    :: Styles for Icons
+\*------------------------------------*/
+.quadrant-block {
+    &.quadrant-block--icons {
+        .quadrant-block__text {
+            width: 100%;
+            max-width: 829px;
+            margin: 0 auto;
+        }
+        .quadrant-block__text-block {
+            display: flex;
+            width: 47%;
+            margin-bottom: 2em;
+            &:nth-last-of-type(-n+2) {
+                margin-bottom: 0;
+            }
+            .quadrant-block__icon-wrap {
+                width: 25%;
+                max-width: 65px;
+                margin-right: 5%;
+            }
+            .quadrant-block__text-wrap {
+                width: 70%;
+            }   
+            @include bp($max:640px) {
+                width: 100%;
+                &:nth-last-of-type(-n+2) {
+                    margin-bottom: 1.75em;
+                }
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}

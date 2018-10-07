@@ -1,0 +1,91 @@
+/*------------------------------------*\
+    :: Nav in the Footer
+\*------------------------------------*/
+// Footer navigation styles go here.
+.main-foot__nav {
+    float: right;
+    width: 40%;
+    margin-top: 2.5em;
+    @include bp($max: 960px) {
+        float: none;
+        width: 100%;
+        margin: 1.5em 0 0;
+        text-align: center;
+    }
+}
+.foot-nav {
+    @include nav();
+    @include bp($max: 960px) {
+        display: inline-block;
+    }
+    .menu {
+        float: right;
+        margin: 0;
+        padding: 0;
+        display: inline-block;
+        > li {
+            margin-right: 1.5em;
+            @include bp($max: 350px) {
+                margin-right: 0.8em;
+            }
+            > a {
+                display: block;
+                position: relative;
+                padding: 1em;
+                color: $color-3-dark;
+                @extend %pn-xbold;
+                font-size: 16px;
+                letter-spacing: 0.04em;
+                text-decoration: none;
+                transition: color 400ms;
+                &:before {
+                    content: '';
+                    height: 10px;
+                    width: 10px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    opacity: 0;
+                    border: 2px solid $color-1;
+                    border-width: 2px 0 0 2px;
+                    transform: translate3d(10px, 10px, 0);
+                    transition: transform 400ms, opacity 400ms;
+                    transition-timing-function: cubic-bezier(0.17, 0.67, 0.05, 1.29);
+                }
+                &:after {
+                    content: '';
+                    width: 10px;
+                    height: 10px;
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    opacity: 0;
+                    border: 2px solid #d94f5c;
+                    border-width: 0 2px 2px 0;
+                    transform: translate3d(-10px, -10px, 0);
+                    transition: transform 400ms, opacity 400ms;
+                    transition-timing-function: cubic-bezier(0.17, 0.67, 0.05, 1.29);
+                }
+                &:hover {
+                    color: $color-1;
+                    &:before {
+                        opacity: 1;
+                        transform: translate3d(0, 0, 0);
+                    }
+                    &:after {
+                        opacity: 1;
+                        transform: translate3d(0, 0, 0);
+                    }
+                }
+            }
+            &.current-menu-item {
+                a {
+                    color: $color-1;
+                }
+            }
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+    }
+}

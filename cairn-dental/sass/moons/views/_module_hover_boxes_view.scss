@@ -1,0 +1,70 @@
+/*------------------------------------*\
+    ::  Hover Box Styles
+\*------------------------------------*/	
+.hover-boxes {
+	background: $color-4;
+}
+.hover-box__box {
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	.hover-box__content {
+		background-color: rgba(0, 0, 0, 0.45);
+		transition: background-color 400ms;
+		@include bp($max:900px) {
+			background-color: rgba(0, 0, 0, 0.65);
+		}
+	}
+	.hover-box__title {
+		color: $color-4;
+		font-family: $fam-light;
+		font-size: em(30px);
+		text-align: center;
+		transform: translateY(-50%);
+		transition: top 400ms, color 400ms;
+		@include bp($max:900px) {
+			color: $color-2;
+		}
+		@include bp($max:350px) {
+			font-size: em(26px);
+		}
+	}
+	.hover-box__text {
+		transform: translateY(-50%);
+		color: $color-4;
+		font-family: $fam-light;
+		font-size: em(15px);
+		opacity: 0;
+		transition: opacity 400ms, top 400ms;
+		@include bp($max:900px) {
+			opacity: 1;
+		}
+	}
+	.hover-box__button {
+		background-color: rgba(116, 170,202, 0.56);
+		color: $color-4;
+		letter-spacing: 0.075em;
+		text-align: center;
+		text-decoration: none;
+		transition: bottom 400ms, background-color 400ms;
+		span {
+			color: $color-4;
+			font-family: $fam-light;
+			font-size: em(20px);
+		}
+		&:hover {
+			background-color: $color-2;
+		}
+	}
+	&:hover {
+		.hover-box__content {
+			background-color: rgba(0, 0, 0, 0.65);
+		}
+		.hover-box__title {
+			color: $color-2;
+		}
+		.hover-box__text {
+			opacity: 1;
+		}
+	}
+}

@@ -1,0 +1,59 @@
+/*------------------------------------*\
+    :: Blog Single
+\*------------------------------------*/
+// This is where the blog single page styles go.
+.single-torso {
+	.single-torso__content {
+		padding: 5em 0;
+		@include bp($max:960px) {
+			padding: 3em 0;
+		}
+		.single-torso__content-inner {
+			width: 100%;
+			max-width: 1000px;
+			margin: 0 auto;
+			padding: 0 $pad*2;
+			text-align: center;
+		   	@include bp($max:500px) {
+		        padding: 0 $pad;
+		   	}
+		}
+	}
+	.blog-content {
+		width: 100%;
+		overflow: hidden;
+		padding: 4.5em 0 2.75em;
+		background-color: $color-1-dark;
+		@include bp($max:640px) {
+			padding: 2.75em 0;
+		}
+		.blog-article {
+			margin-bottom: 0;
+			@include bp($max:640px) {
+				&:first-of-type {
+					margin-bottom: 2em;
+				}
+			}
+		}
+		h2 {
+			max-width: 650px;
+			margin: 0 auto 2.25em;
+            position: relative;
+            color: $color-3;
+            text-align: center;
+            &:after {
+                content: '';
+                height: 3px;
+                width: 45px;
+                position: absolute;
+                bottom: -25px;
+                background-color: $color-3;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+		}
+		a, span {
+			color: $color-3;
+		}
+	}
+}

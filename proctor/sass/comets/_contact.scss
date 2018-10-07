@@ -1,0 +1,64 @@
+/*-------------------------------------------*\
+    ::Page Styles - Contact Us
+\*-------------------------------------------*/
+.page-contact {
+	.main-head {
+		.main-head__wrap {
+			background: rgba(0, 0, 0, 0.75);
+			z-index: 500;
+			@include bp($planetary) {
+				height: 95px;
+			}
+		}
+	}
+
+	.page__group--contact {
+		box-shadow: 0px -3px 3px -2px rgba(0, 0, 0, 0.45);
+		float: left;
+		position: relative;
+		margin-top: 550px;
+		padding-bottom: 60px;
+		width: 100%;
+		z-index: 5;
+		@include bp($solarsystem) {
+			margin-top: 0px;
+		}
+	}
+	.page__group {
+		strong {
+			border-bottom: 1px solid $color-1;
+			color: $color-2;
+			display: block;
+			font-family: $fam-heading;
+			font-weight: bold;
+			font-size: emCalc(20px);
+			line-height: 1.5em;
+			margin-bottom: 5px;
+			width: 100%;
+		}
+		p, a {
+			color: #555555;
+			line-height: 1.6em;
+			font-size: emCalc(14px);
+		}
+		a {
+			text-decoration: none;
+			transition: 400ms;
+			&:hover {
+				color: $color-1;
+			}
+		}
+	}
+}
+.touch {
+	.page-contact {
+		.main-head {
+			.main-head__wrap {
+				@include bp($max:1024px) {
+					background: rgba(0, 0, 0, 1);
+					position: static;
+				}
+			}
+		}
+	}
+}

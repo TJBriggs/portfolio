@@ -1,0 +1,52 @@
+/*------------------------------------*\
+    :: Global Modifiers
+\*------------------------------------*/    
+// This is where you place any modifiers that are available to most modules
+[class*="--marg-top"] {
+    margin-top: 4em;
+    @include bp($max:959px) {
+        margin-top: 2em;
+    }
+}
+[class*="--marg-top-lg"] {
+    margin-top: 8em;
+    @include bp($max:959px) {
+        margin-top: 4em;
+    }
+}
+[class*="--marg-bot"] {
+    margin-bottom: 4em;
+    @include bp($max:959px) {
+        margin-bottom: 2em;
+    }
+}
+[class*="--marg-bot-lg"] {
+    margin-bottom: 8em;
+    @include bp($max:959px) {
+        margin-bottom: 4em;
+    }
+}
+[class*="--pad-top"] {
+    padding-top: 4em;
+    @include bp($max:959px) {
+        padding-top: 2em;
+    }
+}
+[class*="--pad-top-lg"] {
+    padding-top: 8em;
+    @include bp($max:959px) {
+        padding-top: 4em;
+    }
+}
+[class*="--pad-bot"] {
+    padding-bottom: 4em;
+    @include bp($max:959px) {
+        padding-bottom: 2em;
+    }
+}
+[class*="--pad-bot-lg"] {
+    padding-bottom: 8em;
+    @include bp($max:959px) {
+        padding-bottom: 4em;
+    }
+}

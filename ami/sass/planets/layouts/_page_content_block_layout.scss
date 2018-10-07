@@ -1,0 +1,266 @@
+/*-----------------------------------------*\
+    ::Template Part Content Block Layout
+\*-----------------------------------------*/
+.content-block {
+    width: 100%;
+    padding-bottom: em(45px);
+    p { 
+        overflow: hidden; // remove horizontal scroll on mobile
+    }
+}
+.content__group {
+    p {
+        img.alignnone { // center images
+            margin: 5px auto;
+        }
+    }
+}
+.content--1 {
+    .content__group--1 {
+        @include col(12);
+    }
+}
+.content--2 {
+    &.content__two-col--half {
+        .content__group {
+            @include col(6);
+            &.content__group--no-prev {
+                margin-left: 50%;
+            }
+        }
+    }
+    &.content__two-col--two {
+        .content__group--1 {
+            @include col(8);
+        }
+        .content__group--2 {
+            @include col(4);
+            &.content__group--no-prev {
+                margin-left: 66.66667%;
+            }
+        }
+    }
+    &.content__two-col--one {
+        .content__group--1 {
+            @include col(4);
+        }
+        .content__group--2 {
+            @include col(8);
+            &.content__group--no-prev {
+                margin-left: 33.33333%;
+            }
+        }
+    }
+    @include bp($max:1024px){
+        [class*=" content__group--"]{ //it's a specificity thing
+            &.content__group {
+                @include col(11, $center:true);
+                &[class*="no-prev"]{
+                    margin-left: 50%;
+                }
+            }
+        }
+    }
+    @include bp($planetary){
+        [class*=" content__group--"]{ //it's a specificity thing
+            &.content__group {
+                width: 100%;
+                &[class*="no-prev"]{
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}
+.content--3 {
+    .content__group {
+        @include col(4);
+        &.content__group--no-prev {
+            margin-left: 33.33333%;
+        }
+        &.content__group--no-prev-2 {
+            margin-left: 66.66667%;
+        }
+        @include bp($max:1024px){
+            width: 100%;
+            &[class*="no-prev"]{
+                margin-left: 0;
+            }
+        }
+    }
+}
+/*------------------------------------*\
+    ::  Modifiers Start
+\*------------------------------------*/
+.content-block {
+    /*----------------------------------------------*\
+        :: Background Modifiers
+    \*----------------------------------------------*/
+    // Static background image
+    &[class*="--image"] {
+        position: relative;
+        &:before { // overlay
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 0;
+        }
+        .content-block__inner {
+            position: relative;
+            z-index: 50;
+        }
+    }
+    // Parallax background image
+    &[class*="--parallax"] {
+        padding: 0;
+        .content-block__inner {
+            position: relative;
+            z-index: 50;
+            .content__group {
+                margin-bottom: emCalc(45px);// makes up for removing padding from &.bg--parallax
+            }
+        }
+        .content-block__overlay {
+            background: rgba(255,255,255,0.85);
+        }
+    }
+    /*------------------------------------*\
+        :: Alternating Halves Modifiers
+    \*------------------------------------*/
+    // This modifier swaps the float of images so that on tablet the image always ends up above the text
+    &.content--2 {
+        &.content__two-col--half {
+            &[class*="--right-image"] {
+                .content__group--1 { // swap float
+                    float: right;
+                    text-align: right;
+                }
+                .content__group--2 { // swap float
+                    float: left;
+                }
+                @include bp($max:1024px) { // remove float and center image 
+                    .content__group--1,
+                    .content__group--2 {
+                        float: none;
+                    }
+                    .content__group--1 {
+                        text-align: center;
+                    }
+                }
+            }
+            &[class*="--left-image"] {
+                @include bp($max:1024px) {
+                    .content__group--1 { // center image at tablet
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+    
+    /*------------------------------------*\
+        ::  Vertical Align Left Element
+    \*------------------------------------*/
+    // Push the image or content on the left down to vertically align with the element to the right
+    &[class*="--valign-left"] {
+        .content__group--2 {
+            margin-top: emCalc(60px);
+            @include bp($max:1024px) {
+                margin-top: 0;
+            }
+        }
+    }
+    &[class*="--valign-left-small"] {
+        .content__group--2 {
+            margin-top: emCalc(40px);
+            @include bp($max:1024px) {
+                margin-top: 0;
+            }
+        }
+    }
+    /*------------------------------------*\
+        ::  Vertical Align Right Element
+    \*------------------------------------*/
+    // Push the image or content on the right down to vertically align with the element to the Left
+    &[class*="--valign-right"] {
+        .content__group--2 {
+            margin-top: emCalc(60px);
+            @include bp($max:1024px) {
+                margin-top: 0;
+            }
+        }
+    }
+    &[class*="--valign-right-small"] {
+        .content__group--2 {
+            margin-top: emCalc(40px);
+            @include bp($max:1024px) {
+                margin-top: 0;
+            }
+        }
+    }
+    /*------------------------------------*\
+        ::  First Section Modifier
+    \*------------------------------------*/
+    // Add margin above the first alternating image at tablet
+    &[class*="--first-section"] {
+        .content__group--1 { // swap float
+            margin-top: emCalc(25px);
+            @include bp($max:1024px) {
+                margin-top: emCalc(70px);
+            }
+        }
+    }
+    &[class*="--padding-bottom-large"] {
+        padding-bottom: em(95px);
+        @include bp($max:1024px) {
+            padding-bottom: em(45px);
+        }
+    }
+    /*------------------------------------*\
+        ::  Level Text
+    \*------------------------------------*/
+    // Push the 2nd column text down to align with paragraph text in the first column (with header)
+    &[class*="--level-text"] {
+        .content__group--2 { // swap float
+            p {
+                &:first-of-type {
+                    margin-top: em(79px);
+                    @include bp($max:1024px) {
+                        margin-top: 1em;
+                    }
+                }
+            }
+        }
+    }
+    /*------------------------------------*\
+        ::  Level Text
+    \*------------------------------------*/
+    // Push the 2nd column text down to align with paragraph text in the first column (with header)
+    &[class*="--remove-padding-bottom"] {
+        padding-bottom: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

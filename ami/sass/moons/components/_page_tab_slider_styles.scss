@@ -1,0 +1,86 @@
+/*------------------------------------*\
+    ::  Tab Slider Styles
+\*------------------------------------*/
+.tab-slider {
+    .tab-slider__slides {
+        .tab-slider__slide {
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            .slide__overlay {
+                background: rgba(0,0,0,0.65);
+                .slide__text-wrap {
+                    h2 {
+                        color: $color-4;
+                        &:first-of-type {
+                            &:after { // underline styles
+                                background: $color-3;
+                            }
+                        }
+                    }
+                    h4 {
+                        color: $color-4;
+                        font-style: italic;
+                        text-transform: none;
+                        margin: 0 0;
+                    }
+                    p {
+                        color: $color-4;
+                    }
+                    @include bp($max:1024px) {
+                        text-align: center;
+                    }
+                    @include bp($max:440px) {
+                        h2 {
+                            &:first-of-type {
+                                font-size: em(24px);
+                            }
+                        }
+                        h4 {
+                            font-size: em(20px);
+                        }
+                        p {
+                            font-size: em(15px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .tab-slider__nav {
+        .tabs {
+            .tab {
+                background: #c3cbce;
+                color: $color-1;
+                cursor: pointer;
+                font-family: $fam-head-bold;
+                font-size: em(15px);
+                line-height: 65px;
+                list-style-type: none;
+                text-align: center;
+                text-transform: uppercase;
+                transition: background 400ms;
+                &:hover {
+                    background: $color-2;
+                }
+                &.flex-active {
+                    background: $color-2;
+                }
+                .tab__icon {
+                    svg {
+                        fill: $color-1;
+                    }
+                }
+                .tab__name {
+                    font-size: em(13px);
+                }
+                @include bp($max:1024px) {
+                	line-height: 0;
+                    .tab__icon {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}

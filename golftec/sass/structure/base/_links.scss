@@ -1,0 +1,153 @@
+/*------------------------------------*\
+    ::Links
+    ------------------------------------*
+    ::Normalize.css v3.0.0 | MIT License | git.io/normalize
+\*------------------------------------*/
+/*------------------------------------*\
+    ::  Standard Links
+\*------------------------------------*/    
+a {
+	background: transparent;
+    text-decoration: none;
+    color: $color-2;
+    &:hover {
+        outline: 0;
+        text-decoration: underline; 
+    }
+}
+/*------------------------------------*\
+    ::  Custom Links
+\*------------------------------------*/ 
+a.text-link {
+    background: transparent;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $color-3;
+    font-family: $fam-heading;
+    font-size: 0.75em;
+    font-weight: 200;
+    letter-spacing: 0.065em;
+    &:after {
+        content: '>';
+        margin-left: 5px;
+        position: relative;
+        top: -1px;
+        transition: margin 400ms;
+    }
+    &:hover {
+        outline: 0;
+        text-decoration: none; 
+        &:after {
+            margin-left: 15px;
+        }
+    }
+    &.text-link--icon {
+        img {
+            height: 18px;
+            width: 18px;
+            margin-right: 10px;
+            position: relative;
+            top: 4px;
+            border: none;
+        }
+    }
+}   
+/*------------------------------------*\
+    :: Button Styles  
+\*------------------------------------*/  
+// a link with btn class  
+.btn {
+    @extend %btn;
+}
+// input with a type of reset
+input[type="reset"],
+input[type="submit"],
+input[type="button"] {
+    @extend %btn;
+    transition: background-color 400ms;
+    &:hover {
+        background-color: $color-2-dark;
+    }
+}
+// button element
+button {
+    display: inline-block;
+    width: auto;
+    margin: 1.5em 0;
+    padding: 0.9em $pad*1.25 0.7em; // Vertically center due to line-height
+    text-align: center;
+    position: relative;
+    background-color: #e12127;
+    border: none;
+    border-radius: 0;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1em;
+    line-height: 1.35em; // Need line height for long button text on mobile
+    letter-spacing: 0.085em;
+    text-decoration: none;
+    text-transform: uppercase;
+    outline: 0;
+    overflow: hidden;
+    transition: background-color 400ms;
+    &:hover {
+        background-color: #b91c21;
+    }
+}
+/*------------------------------------*\
+    ::  KSS MarkUp (Ignore)
+\*------------------------------------*/   
+// Links
+//
+// This section defines global link and button styling throughout the site.
+//
+// Styleguide 3
+
+// Standard Links
+//
+// :link - Normal state.
+//
+// :hover - Hover state.
+//
+// Markup:
+// <a href="#" class="{{modifier_class}}">Standard Link</a>
+//
+// Styleguide 3.1
+
+// Custom Links
+//
+// :link - Normal state.
+//
+// :hover - Hover state.
+//
+// Markup:
+// <div class="kssmodifier__example kss-dark-example">
+// <a href="#" class="text-link {{modifier_class}}">Custom Link</a>
+// </div>
+// <br>
+//
+// Styleguide 3.2
+
+// Buttons
+//
+// Buttons can be styled using the `class="btn"`. However, some button elements can not utilize CSS psuedo selectors so a simple hover state is being used as a fallback.
+//
+// :link             - Normal state.
+// :visited          - Previously visited link.
+// :active           - Link currently activated.
+// :hover            - Mouse over link.
+// :focus            - Tabbed-to link.
+// :disabled         - Inactive link.
+// .naked            - Naked button
+// .dark.naked       - Dark Naked button
+//
+// Markup:
+// <div class="kss-btn-wrap">
+// <a href="#" class="btn {{modifier_class}}">Link</a>
+// <button name="button" class="{{modifier_class}}">Button (element)</button>
+// <input type="reset" value="Reset" class="{{modifier_class}}" />
+// <input type="submit" value="Submit" class="{{modifier_class}}" />
+// <input type="button" value="Button (type)" class="{{modifier_class}}" />
+// </div>
+//
+// Styleguide 3.3

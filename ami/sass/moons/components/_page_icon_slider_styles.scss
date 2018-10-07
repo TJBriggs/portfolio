@@ -1,0 +1,61 @@
+/*------------------------------------*\
+    ::  Icon Slider Styles
+\*------------------------------------*/
+.icon-slider {
+	.icon-slider__overlay {
+		background: rgba(33, 38, 56, 0.80);
+		.icon-slider__slider-wrap {
+			.icon-slider__title {
+				font-size: em(36px);
+				text-align: center;
+			}
+			.icon-slider__nav {
+				.icons {
+					.icon {
+						cursor: pointer;
+						list-style-type: none;
+						text-align: center;
+						img {
+							opacity: 0.35;
+							transition: opacity 400ms;
+						}
+						&.flex-active, &:hover {
+							img {
+								opacity: 1;
+							}
+						}
+					}
+				}
+			}
+			.icon-slider__slider {
+				.icon-slider__slides {
+					.icon-slider__text {
+						h2 {
+							&:first-of-type {
+								line-height: 1.15em;
+								strong {
+									color: $color-4;
+								}
+								&:after {
+									background: $color-3;
+								}
+							}
+						}
+					}
+					@include bp($max:1024px) {
+						text-align: center;
+					}
+				}
+			}
+		}
+	}
+	/*----------------------------------------------*\
+	    :: Background Modifiers
+	\*----------------------------------------------*/
+	// Static bg image
+	&[class*="--image"] {
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+}

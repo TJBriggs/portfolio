@@ -1,0 +1,44 @@
+/*------------------------------------*\
+    ::404 Stylin
+\*------------------------------------*/
+.error404 {
+	.fourofour {
+		width: 100%;
+		padding: em(220px) $pad*2 em(190px);
+		background: #f2f6f6;
+		text-align: center;
+		h2 {
+			&:first-of-type {
+				margin-top: 0;
+				margin-bottom: em(23px);
+				position: relative;
+				font-family: $fam-head-bold;
+				text-align: center;
+			    &:after { // underline styles
+			    	content: '';
+			    	height: 4px;
+			    	width: 100px;
+			    	margin: 10px auto 0 -50px;
+			    	position: absolute;
+			    	bottom: -20px;
+			    	left: 50%;
+			    	z-index: 1;
+			        background: $color-3;
+			    }
+
+			}
+		}
+		p {
+			color: $color-1;
+		}
+		@include bp($max:1024px) {
+			padding: em(180px) $pad*2 em(100px);
+		}
+		@include bp($max:768px) {
+			padding: em(180px) $pad*2 em(70px);
+		}
+		@include bp($max:480px) {
+			padding: em(150px) $pad em(50px);
+		}
+	}
+}

@@ -1,0 +1,39 @@
+/*----------------------------------------*\
+    ::  Content Block W/Slider Styles
+\*----------------------------------------*/
+.content-block-slider {
+	background-color: $color-4;	
+}
+.block__slider-wrap {
+	.slider__image {
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+}
+.block__text-wrap {
+	h3 {
+		font-size: em(32px);
+	}
+}
+/*------------------------------------*\
+    ::  Owl Slider Styles
+\*------------------------------------*/	
+.js-owl-carousel--image-slider {
+	.owl-pagination {
+		.owl-page {
+			cursor: pointer;
+			span {
+				background-color: rbga(255, 255, 255, 0.40);
+				border: 2px solid $color-4;
+				border-radius: 50%;
+				transition: background 400ms;
+			}
+			&.active, &:hover {
+				span {
+					background-color: rgba(116, 170, 202, 0.65);
+				}
+			}
+		}
+	}
+}

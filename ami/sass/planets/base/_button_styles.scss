@@ -1,0 +1,50 @@
+/*------------------------------------*\
+    ::  Button Styles
+\*------------------------------------*/
+.btn {
+	display: inline-block;
+	height: 50px;
+	min-width: em(180px);
+	margin: em(10px) 0;
+	padding: 0 $pad*2;
+	background: transparent;
+	border: 1px solid $color-1;
+	color: $color-1;
+	font-family: $fam-body;
+	font-size: em(18px);
+	letter-spacing: 0.04em;
+	line-height: 50px;
+	text-align: center;
+	white-space: nowrap;
+	word-spacing: 0.1em;
+	transition: 350ms;
+	&:visited {
+		color: $color-1;
+	}
+	&:hover {
+		background: $color-2;
+		border: 1px solid $color-2;
+		text-decoration: none;
+	}
+	@include bp($max:1024px) {
+		display: block;
+		width: em(250px);
+	}
+	@include bp($max:580px) {
+		width: 100%;
+	}
+}
+/*------------------------------------*\
+    ::  Modifiers
+\*------------------------------------*/
+[class*="--bg-lblue"], [class*="--bg-nblue"], 
+[class*="--image"], [class*="--parallax"], .case-studies {
+	.btn {
+		border: 1px solid $color-4;
+		color: $color-4;
+		&:hover {
+			background: $color-2;
+			border: 1px solid $color-2;
+		}
+	}
+}

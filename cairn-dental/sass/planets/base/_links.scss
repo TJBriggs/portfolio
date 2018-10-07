@@ -1,0 +1,52 @@
+/*------------------------------------*\
+    ::Links
+    ------------------------------------*
+    ::Normalize.css v3.0.0 | MIT License | git.io/normalize
+\*------------------------------------*/
+a {
+	background: transparent;
+	color: $color-2;
+	text-decoration: none;
+}
+a:active,
+a:hover {
+	outline: 0;
+	text-decoration: underline;
+}
+
+.btn {
+	display: inline-block;
+	height: 50px; // offset for 2px border on top and bottom
+	width: auto;
+	padding: 0 $pad*2;
+	background-color: $color-2;
+	border: 2px solid $color-2;
+	border-radius: em(4px);
+	color: $color-4;
+	font-family: $fam-semi;
+	font-size: em(16px);
+	letter-spacing: 0.075em;
+	line-height: 46px; // offset for 2px border on top and bottom
+	text-align: center;
+	text-decoration: none;
+	transition: background-color 400ms, color 400ms;
+	&:hover {
+		background-color: transparent;
+		color: $color-2;
+		text-decoration: none;
+	}
+}
+
+.btn-alt {
+	height: 36px;
+	line-height: 32px;
+	text-align: center;
+	text-decoration: none;
+	transition: background-color 400ms, border 400ms, color 400ms;
+	&:hover {
+		background-color: rgba($color-2, 0.30);
+		border: 2px solid $color-4;
+		color: $color-4;
+		text-decoration: none;
+	}
+}

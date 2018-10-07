@@ -1,0 +1,285 @@
+/*------------------------------------*\
+    ::  Figure Block Styles
+\*------------------------------------*/
+.figure-block {
+    width: 100%;
+    padding-top: 3em;
+    padding-bottom: 3em;
+    @include bp($max:767px) {
+        padding-top: 0;
+        padding-bottom: 2em;
+    }
+    .figure-block__inner {
+        position: relative;
+        text-align: center;
+        @include bp($max:767px) {
+            padding: 3em $pad*2;
+        }
+        @include bp($max:500px) {
+            padding: 2em $pad;
+        }
+    }
+    .figure-block__content-wrap {
+        display: flex;
+        width: 100%;
+        justify-content: flex-start;
+    }
+    .figure-block__text-wrap {
+        height: 30vw;
+        min-height: 500px;
+        width: 65vw;
+        max-width: 640px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        text-align: left;
+        @include bp($max:1050px) {
+            width: 60vw;
+        }
+        @include bp($max:960px) {
+            width: 53vw;
+        }
+        @include bp($max:767px) {
+            height: auto;
+            min-height: 0;
+            width: 100%;
+            max-width: none;
+        }
+    }
+    .figure-block__text {
+        h4 {
+            width: 100%;
+            margin-left: 0;
+            margin-right: 0;
+        }
+        .figure-block__paragraph-text {
+            margin-top: 1.15em;
+            & > *:first-child {
+                margin-top: 0;
+            }
+            & > *:last-child {
+                margin-bottom: 0;
+            }
+        }
+        .btn {
+            margin-top: 2.9em;
+        }
+    }
+    .figure-block__figure-wrap {
+        height: 475px;
+        width: 475px;
+        position: absolute;
+        top: 50%;
+        right: -130px;
+        overflow: hidden;
+        background-color: $accent-blue;
+        border-radius: 50%;
+        box-shadow: 0 0 26px 0 rgba(189, 195, 198, 100);
+        transform: translateY(-50%);
+        img {
+            height: 100%;
+            width: 100%;
+        }
+        @include bp($max:960px) {
+            right: -180px;
+        }
+        @include bp($max:767px) {
+            display: inline-block;
+            height: 350px;
+            width: 350px;
+            position: static;
+            right: 0;
+            top: 0;
+            transform: translateY(0);
+        }
+        @include bp($max:400px) {
+            height: 290px;
+            width: 290px;
+        }
+    }
+}
+/*---------------------------------------*\
+    :: Basic Layout Modifier Left | Right
+\*---------------------------------------*/    
+.figure-block {
+    &.figure-block--figure-left {
+        .figure-block__content-wrap {
+            justify-content: flex-end;
+        }
+        .figure-block__text-wrap {
+            @include bp($max:1050px) {
+                width: 55vw;
+            }
+            @include bp($max:767px) {
+                width: 100%;
+            }
+        }
+        .figure-block__figure-wrap {
+            left: -130px;
+            @include bp($max:960px) {
+                left: -180px;
+            }
+            @include bp($max:767px) {
+                left: 0;
+            }
+        }
+    }
+}
+/*---------------------------------------*\
+    :: Content Type Modifier for Basic
+\*---------------------------------------*/   
+.figure-block--basic {
+    .figure-block__content-wrap {
+        @include bp($max:767px) {
+            margin-top: 3em;
+        }
+    }
+} 
+/*---------------------------------------*\
+    :: Content Type Modifier for Quote
+\*---------------------------------------*/   
+.figure-block--quote {
+    .figure-block__text {
+        display: inline-flex;
+        @include bp($max:767px) {
+            flex-wrap: wrap;
+        }
+    }
+    .figure-block__quote {
+        display: inline-block;
+        width: 24.2424242%;
+        max-width: 150px;
+        margin-right: $pad*2;
+        fill: $accent-blue;
+        @include bp($max:767px) {
+            display: block;
+            width: 100%;
+            max-width: 100px;
+            margin-bottom: 1em;
+        }
+    }
+    .figure-block__quote-text {
+        width: 75.7575758%;
+        @include bp($max:767px) {
+            width: 100%;
+            max-width: none;
+        }
+        h4 {
+            margin-top: 1.75em;
+            color: $accent-blue;
+        }
+        h5 {
+            margin-top: 0.75em;
+        }
+    }
+} 
+/*------------------------------------*\
+    :: Statistic Styles
+\*------------------------------------*/ 
+.figure-block__figure-wrap {
+    &.figure--stat {
+        display: inline-flex;
+        align-items: center;
+        justify-content: flex-start;
+        .figure-block__stat {
+            width: 100%;
+            display: inline-block;
+            margin: $pad*4;
+            @include bp($max:1100px) {
+                margin: $pad*3;
+            }
+            @include bp($max:850px) {
+                margin: $pad*2;
+            }
+            @include bp($max:767px) {
+                margin: $pad*2.5;
+            }
+            h1 {
+                font-size: 110px;
+                color: $color-3;
+                text-align: left;
+                .stat__text {
+                    position: relative;
+                    right: 30px;
+                }
+                @include bp($max:960px) {
+                    font-size: 100px;
+                    .stat__text {
+                        right: 25px;
+                    }
+                }
+                @include bp($max:767px) {
+                    font-size: 90px;
+                    text-align: center;
+                    word-spacing: -20px;
+                    .stat__text {
+                        position: static;
+                        right: 0;
+                    }
+                }
+                @include bp($max:640px) {
+                    font-size: 75px;
+                }
+            }
+            h4 {
+                float: left;
+                color: $color-3;
+                padding-right: $pad;
+                @extend %museo-300;
+                font-size: 28px;
+                text-align: left;
+                @include bp($max:1100px) {
+                    font-size: 24px;
+                    max-width: 265px;
+                }
+                @include bp($max:960px) {
+                    font-size: 20px;
+                    max-width: 255px;
+                }
+                @include bp($max:767px) {
+                    font-size: 20px;
+                    text-align: center;
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+}   
+// Layout Modifier if figure on left
+.figure-block--figure-left {
+    .figure-block__figure-wrap {
+        &.figure--stat {
+            justify-content: flex-start;
+            .figure-block__stat {
+                h1 {
+                    text-align: right;
+                    word-spacing: -20px;
+                    .stat__text {
+                        right: 0;
+                    }
+                    @include bp($max:767px) {
+                        text-align: center;
+                        .stat__text {
+                            position: static;
+                            right: 0;
+                        }
+                    }
+                }
+                h4 {
+                    float: right;
+                    padding-left: $pad;
+                    text-align: right;
+                    @include bp($max:767px) {
+                        text-align: center;
+                        padding-left: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+.figure-block__figure-wrap {
+    &.figure--image {
+        background-color: transparent!important;
+    }
+}

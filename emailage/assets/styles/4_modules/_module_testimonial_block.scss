@@ -1,0 +1,48 @@
+/*------------------------------------*\
+    ::  Testimonial Block Styles
+\*------------------------------------*/
+.testimonial-block {
+    width: 100%;
+    overflow: hidden;
+    .testimonial-block__wrap {
+        max-width: 660px;
+        width: 100%;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+        &:before, &:after {
+            height: auto;
+            width: 147px;
+            position: absolute;
+            top: 0;
+            z-index: 10;
+            @include bp($max:1024px) {
+                width: 10vw;
+            }
+        }
+        &:before {
+            content: url('./assets/images/icons/quote-left.svg');
+            right: 105%;
+            @include bp($max:960px) {
+                display: inline-block;
+                position: static;
+                height: 93px;
+                width: 100px;
+                margin-bottom: 2em;
+            }
+        }
+        &:after {
+            content: url('./assets/images/icons/quote-right.svg');
+            left: 105%;
+            @include bp($max:960px) {
+                display: none;
+            } 
+        }
+        h4 {
+            margin-top: 1.75em;
+        }
+        h5 {
+            margin-top: 0.75em;
+        }
+    }
+}

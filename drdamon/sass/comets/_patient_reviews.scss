@@ -1,0 +1,374 @@
+
+.reviews {
+	box-shadow: 0px -3px 10px -2px rgba(0, 0, 0, 0.45);
+	@include col(12);
+	background: #fff;
+	padding: 35px 0 30px;
+	.section__title-wrap {
+		margin: 0 0 60px;
+		h2 {
+			color: $color-1;
+		}
+		@include bp($max:768px) {
+			margin: 0 0 30px;
+		}
+	}
+}
+//////////////////////////////
+// Base review text styles
+//////////////////////////////
+.review-text {
+	color: #555555;
+	transition: 400ms;
+	@include bp($solarsystem) {
+		width: 50%;
+		padding-right: $pad;
+		padding-left: $pad*3;
+	}
+	@include bp($max: 768px) {
+		@include col(8, $center:true);
+		padding: 20px 0 30px;
+	}
+	@include bp($planetary) {
+		@include col(10, $center:true);
+	}
+	h4 {
+		color: $color-2;
+		font-size: emCalc(24px);
+		margin: 0;
+		padding: 0;
+		@include bp($max: 768px) {
+			text-align: center;
+		}
+	}
+	span {
+		color: $color-1;
+		display: block;
+		font-size: emCalc(16px);
+		margin-bottom: 5px;
+		@include bp($max: 768px) {
+			text-align: center;
+		}
+	}
+	p {
+		margin: 0;
+		padding: 0;
+		font-size: emCalc(16px);
+        line-height: 1.875rem;
+        @include bp($max: 768px) {
+			text-align: center;
+		}
+    }
+	.signature {
+		margin-top: 5px;
+		margin-right: $pad;
+		p {
+			color: $color-1;
+		}
+		@include bp($max: 768px) {
+			float: none;
+			width: 100%;
+			text-align: center;
+		}
+	}
+}
+//////////////////////////////
+// Base polaroid styles
+//////////////////////////////
+.polaroid {  
+	background: #ebebeb;
+    max-width: 400px;
+    padding: 4.2% 0 0 0;
+    position: relative; 
+    text-align: center;
+    z-index: 0;
+    transition: 400ms;
+    &:before{ 
+        background: transparent;
+        content: ""; 
+        z-index: -1; 
+        position: absolute; 
+        width: 47%; 
+        top: 160px; 
+        bottom: 12px; 
+        left: 10px; 
+        transform: rotate(-3deg); 
+        box-shadow: 0px 15px 10px rgba(0, 0, 0, 0.45);
+        @include bp($min: 1615px) {
+            width: 45%;
+        } 
+        @include bp($max: 960px) {
+            width: 44%;
+        } 
+    } 
+    &:after{ 
+        background: transparent;
+        content: ""; 
+        z-index: -1; 
+        position: absolute; 
+        width: 44%; 
+        top: 14px; 
+        right: 9px; 
+        bottom: 12px; 
+        transform: rotate(3deg); 
+        box-shadow: 0px 15px 10px rgba(0, 0, 0, 0.45), 8px 12px 12px rgba(0, 0, 0, 0.45); 
+        @include bp($min: 1615px) {
+            width: 45%;
+        } 
+        @include bp($max: 960px) {
+            width: 44%;
+        } 
+    }
+    figure {
+        background: #ebebeb;
+        width: 100%;
+        margin: 0 auto;
+        .img-wrap {
+            width: 90%;
+            margin: 0 auto;
+            img {
+                max-width: 100%;                                
+            }
+        }
+        figcaption {
+            font-family: $fultons-reg;
+            font-size: emCalc(22px);
+            font-weight: bold;
+            padding: 15px 0 15px;
+            width: 85%;
+            word-spacing: -0.1em;
+            margin: 0 auto;
+        }
+    } 
+}
+
+.review-row { // General row styles
+	@include col(12);
+	padding: 20px 0;
+	opacity: 0;
+	transition: opacity 1000ms;
+	transition-delay: 400ms;
+	&:first-of-type {
+		opacity: 1;
+	}
+	&:nth-of-type(2) {
+		opacity: 1;
+	}
+	@include bp($planetary) {
+		padding: 10px 0;
+	}
+	&.visible {
+        opacity: 1;
+    }
+    
+	&:last-of-type {
+		margin-bottom: 80px;
+	}
+	.review-text { // Text styles for alternating layout
+		@include col(6.5);
+		padding: 50px 0;
+		@include bp($solarsystem) {
+			width: 50%;
+			padding-right: $pad;
+			padding-left: $pad*3;
+		}
+		@include bp($solarsystem) {
+			width: 50%;
+			padding-right: $pad;
+			padding-left: $pad*3;
+		}
+	}
+	.polaroid-wrap { // Polaroid styles for alternating layout
+		@include col(5);
+		@include bp($max: 768px) {
+			@include col(8, $center: true);
+		}
+		@include bp($planetary) {
+			@include col(11, $center:true);
+		}
+		.polaroid {
+	        width: 75%;
+	        @include bp($max:768px) {
+	            width: 65%;
+	        }
+	        @include bp($planetary) {
+	            width: 85%;
+	        }
+	    }
+	}
+}
+///////////////////////////////////
+// Layout Modifiers
+///////////////////////////////////
+// Alternate Left and Right
+.review-row:nth-of-type(odd) {
+	.review-text {
+		float: left;
+		margin-left: 4%;
+	}
+	.polaroid-wrap {
+		float: right;
+		.polaroid {
+			float: right;
+			margin-right: 15%;
+			transform: rotate(8deg);
+		}
+	}
+	@include bp($solarsystem) {
+		.review-text {
+			padding-left: 5%;
+			margin-left: 3%;
+		}
+		.polaroid-wrap {
+			.polaroid {
+				margin-right: 25%;
+			}
+		}
+		
+	}
+	@include bp($max:768px) {
+		.review-text {
+			@include col(9.5, $center:true);
+			float: none;
+			padding: 50px 0 50px 2%;
+		}
+		.polaroid-wrap {
+			float: none;
+			margin: 0px auto;
+			.polaroid {
+				float: none;
+				margin: 0 auto;
+				transform: rotate(0deg);
+			}
+		}
+	}
+}
+//  straighten polaroids on touch to avoid jagged image frames
+.touch {
+	.review-row:nth-of-type(odd) {
+		.polaroid-wrap {
+			.polaroid {
+				transform: rotate(0deg);
+			}
+		}
+	}
+	.review-row:nth-of-type(even) {
+		.polaroid-wrap {
+			.polaroid {
+				transform: rotate(0deg);
+			}
+		}
+	}
+}
+
+.review-row:nth-of-type(even) {
+	.review-text {
+		float: right;
+		margin-right: 4%;
+	}
+	.polaroid-wrap {
+		float: left;
+		.polaroid {
+			float: left;
+			margin-left: 15%;
+			transform: rotate(-12deg);
+		}
+	}
+	@include bp($solarsystem) {
+		.review-text {
+			padding-right: 5%;
+			margin-right: 3%;
+
+		}
+		.polaroid-wrap {
+			margin: 30px auto;
+			.polaroid {
+				margin-left: 25%;
+			}
+		}
+		
+	}
+	@include bp($max:768px) {
+		.review-text {
+			@include col(9.5, $center:true);
+			float: none;
+			padding: 50px 0 50px 2%;
+		}
+		.polaroid-wrap {
+			margin: 0px auto;
+			float: none;
+			.polaroid {
+				float: none;
+				margin: 0 auto;
+				transform: rotate(0deg);
+			}
+		}
+	}
+}
+/////////////////////////////////////////////
+// Every 3rd and 4th Review side-by-side
+/////////////////////////////////////////////
+.review-row--modifier {
+	@include col(6);
+	margin-top: 80px;
+	opacity: 0;
+	padding: 20px 0;
+	transition: opacity 1000ms;
+	transition-delay: 400ms;
+	&.visible {
+		opacity: 1;
+	}
+	@include bp($max:768px) {
+		@include col(12);
+		margin-top: 0;
+	}
+	@include bp($planetary) {
+		padding: 10px 0;
+	}
+	.review-text {
+		@include col(9.5, $center:true);
+		float: none;
+		padding: 50px 0 50px 2%;
+	}
+	.polaroid-wrap { // Polaroid styles for side-by-side layout
+		@include col(11, $center:true, $collapse: true);
+		float: none;
+		@include bp($max: 768px) {
+			@include col(8, $center: true);
+		}
+		@include bp($planetary) {
+			@include col(11, $center:true);
+			margin-top: 0;
+		}
+		.polaroid {
+	        width: 65%;
+	        margin: 0 auto;
+	        @include bp($max:768px) {
+	            width: 68.5%;
+	        }
+	        @include bp($planetary) {
+	            width: 85%;
+	        }
+	    }
+	}
+}
+///////////////////////////////////////////////////////////
+// Remove animations and reset elements for touch screens
+///////////////////////////////////////////////////////////
+.touch .page-our-patient-reviews {
+	.review-row, .review-row--modifier {
+		opacity: 1;
+		transition: none;
+		transition-delay: none;
+	}
+}
+
+
+
+
+
+
+
+
+
+

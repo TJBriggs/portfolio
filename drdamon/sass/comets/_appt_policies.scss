@@ -1,0 +1,17 @@
+/*-------------------------------------------*\
+    ::Page Styles - Appointment Policies
+\*-------------------------------------------*/
+.page-appointment-policies {
+	.page__group--intro {
+    	padding-bottom: 50px;
+	}
+	.callout {
+		padding: 60px 0;
+		.callout__image {
+			@include bp($planetary) {
+				margin-top: 25px;
+				width: 100%;
+			}
+		}
+	}
+}

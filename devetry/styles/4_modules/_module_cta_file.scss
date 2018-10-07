@@ -1,0 +1,164 @@
+/*------------------------------------*\
+	:: CTA Bar
+\*------------------------------------*/
+.cta-file {
+	background-color: $color-3;
+	overflow: hidden;
+	width: 100%;
+
+	&__inner {
+		padding-top: 2.5em;
+		padding-bottom: 2.5em;
+
+		@include bp($max:640px) {
+			padding-top: 1.75em;
+			padding-bottom: 1.75em;
+		}
+	}
+
+	&__main-wrap {
+		display: flex;
+		flex-wrap: wrap;
+		width: 100%;
+	}
+
+	// Text Element Styles
+	&__text-wrap {
+		align-items: center;
+		display: flex;
+		flex-basis: 70%;
+		padding-right: 125px;
+		@include bp($max:960px) {
+			flex-basis: 100%;
+			padding-right: 0;
+		}
+	}
+
+	&__text {
+		@include bp($max:960px) {
+			max-width: 640px;
+			margin: 0 auto;
+		}
+	}
+
+	&__heading {
+		font-size: 32px;
+		@include bp($max:640px) {
+			font-size: 28px;
+		}
+	}
+
+	&__subheading {
+		font-size: 28px;
+		margin-top: 0.25em;
+		@include bp($max:900px) {
+			margin-top: 0.75em;
+		}
+		@include bp($max:640px) {
+			font-size: 24px;
+		}
+	}
+
+	&__main-text {
+		p {
+			font-size: 15px;
+			letter-spacing: 0.025em;
+			margin: $pad*1.25 0;
+		}
+		@include bp($max:900px) {
+			display: none;
+		}
+	}
+
+	// Image Element Styles
+	&__image-wrap {
+		align-items: center;
+		display: flex;
+		flex-basis: 30%;
+		justify-content: center;
+		padding-left: 25px;
+		@include bp($max:960px) {
+			flex-basis: 100%;
+			margin-top: 1.75em;
+			padding-left: 0;
+			img {
+				max-width: 380px;
+				margin: 0 auto;
+			}
+		}
+	}
+
+	// Modifiers
+	&--white, &--lgray {
+		.cta-file__heading {
+			color: $color-1;
+		}
+		input[type=email] {
+			background-color: #dfdfdf;
+		}
+	}
+
+	&--blue {
+		background-color: $color-1;
+		color: $color-3;
+
+		.cta-file__subheading {
+			color: $color-1-dark;
+		}
+
+		input[type=submit] {
+			display: inline-block;
+			min-width: 190px;
+			padding: 1.05em $pad*2;
+			background-color: transparent!important;
+			border: 2px solid $color-3!important;
+			color: $color-3!important;
+			@extend %kbold;
+			font-size: 16px;
+			text-align: center;
+			text-transform: uppercase;
+			text-decoration: none;
+			box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.10);
+			transition: all 300ms;
+			&:hover {
+				background-color: $color-3!important;
+				box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.05);
+				border: 2 px solid $color-3!important;
+				color: $color-1!important;
+			}
+		}
+	}
+
+	&--lgray {
+		background-color: $color-6;
+	}
+
+	&--gray {
+		background-color: $color-1-dark;
+		color: $color-3;
+	}
+
+	&--image-left {
+		.cta-file__main-wrap {
+			flex-direction: row-reverse;
+		}
+
+		// Text Element Styles
+		.cta-file__text-wrap {
+			padding-right: 0;
+			padding-left: 125px;
+			@include bp($max:960px) {
+				padding-left: 0;
+			}
+		}
+
+		// Image Element Styles
+		.cta-file__image-wrap {
+			padding-left: 0;
+			padding-right: 25px;
+			@include bp($max:960px) {
+				padding-right: 0;
+			}
+		}
+	}
+}

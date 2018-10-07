@@ -1,0 +1,316 @@
+/*------------------------------------*\
+    ::  Icon CTAs Layout
+\*------------------------------------*/
+.icon-ctas {
+	padding: em(15px) 0 em(40px);
+	.cta-wrap {
+		width: 100%;
+		margin-top: em(55px);
+		overflow: hidden;
+		@include bp($max:640px) {
+			margin-top: em(35px);
+		}
+		.cta {
+			float: left;
+			display: block;
+			width: 25%; // set to design of 4 ctas - modifiers below for other counts
+			.cta__link {
+				display: inline-block;
+				width: auto;
+				height: auto;
+			}
+			.cta__icon {
+				display: inline-block;
+				height: 130px;
+				width: 130px;
+				padding: 15px;
+				&:before {
+					content: '';
+					display: inline-block;
+					height: 100%;
+					vertical-align: middle;
+				}
+				img {
+					height: 70px;
+					width: 70px;
+					margin-right: em(5px); // nudges images to center
+					vertical-align: middle;
+				}
+			}
+			.cta__text {
+				min-height: 205px;
+				width: 99.99%;
+				margin-top: em(30px);
+				padding: 0 $pad*1.25;
+				.cta__main-title {
+					margin: 0;
+				}
+				.cta__sub-title {
+					margin: 0;
+				}
+				.cta__blurb {
+					margin-top: em(15px);
+				}
+			}
+			@include bp($max:1024px) {
+				width: 50%;
+			}
+			@include bp($max:640px) {
+				width: 100%;
+				margin-bottom: em(25px);
+				padding: 0 $pad*2;
+				position: relative;
+				.cta__link {
+					float: left;
+					display: block;
+					position: absolute;
+					top: 0;
+					left: $pad*2;
+				}
+				.cta__icon {
+					display: inline-block;
+					height: 70px;
+					width: 70px;
+					padding: 10px;
+					&:before {
+						display: none;
+					}
+					img {
+						height: 35px;
+						width: 35px;
+						margin: em(5px) em(1px) em(5px) 0;
+						vertical-align: middle;
+					}
+				}
+				.cta__text {
+					height: auto;
+					min-height: 0;
+					margin: 0;
+					padding: 0;
+					.cta__main-title,
+					.cta__sub-title {
+						margin-left: 90px;
+						padding: 0;
+					}
+					.cta__main-title {
+						margin-top: em(12px);
+					}
+					.cta__blurb {
+						display: block;
+						margin: em(15px) 0 0 90px;
+					}
+				}
+			}
+			@include bp($max:560px) {
+				.cta__text {
+					.cta__main-title,
+					.cta__sub-title {
+						margin-top: em(3px);
+						margin-left: 100px;
+					}
+					.cta__blurb {
+						margin: em(25px) 0 0 0;
+					}
+				}
+			}
+			@include bp($max:480px) {
+				padding: 0 $pad;
+				.cta__text {
+					.cta__blurb {
+						margin: em(25px) $pad 0;
+					}
+				}
+			}
+			@include bp($max:375px) {
+				.cta__text {
+					.cta__main-title {
+						margin-top: 0;
+					}
+					.cta__blurb {
+						margin: em(30px) $pad 0;
+					}
+				}
+			}
+			@include bp($max:320px) {
+				.cta__link {
+					left: $pad;
+				}
+				.cta__text {
+					.cta__main-title,
+					.cta__sub-title {
+						margin-left: 85px;
+					}
+					.cta__blurb {
+						margin: em(30px) 0 0 0;
+					}
+				}
+			}
+		}
+		/*------------------------------------*\
+		    ::  Layout for 2 CTAs
+		\*------------------------------------*/
+		&[class*="--2"] {
+			.cta {
+				width: 50%;
+				@include bp($max:640px) {
+					width: 100%;
+				}
+			}
+		}
+		/*------------------------------------*\
+		    :: Layout for 3 CTAs
+		\*------------------------------------*/
+		&[class*="--3"]  {
+			.cta {
+				width: 33.33336%;
+				@include bp($max:768px) {
+					width: 50%;
+					&:nth-of-type(3) {
+						width: 100%;
+						margin-top: em(45px);
+						.cta__text {
+							width: 50%;
+							margin: 0 auto;
+						}
+					}
+				}
+				@include bp($max:640px) {
+					width: 100%;
+					&:nth-of-type(3) {
+						width: 100%;
+						margin-top: 0;
+						.cta__text {
+							width: 100%;
+							margin: 0;
+						}
+					}
+				}
+			}
+		}
+		/*------------------------------------*\
+		    :: Layout for 5 CTAs
+		\*------------------------------------*/
+		&[class*="--5"] {
+			.cta {
+				width: 33.33336%;
+				&:nth-of-type(4),
+				&:nth-of-type(5) {
+					width: 50%;
+					margin-top: em(45px);
+				}
+				@include bp($max:768px) {
+					width: 50%;
+					&:nth-of-type(4) {
+						margin-top: 0;
+					}
+					&:nth-of-type(5) {
+						width: 100%;
+						margin-top: em(45px);
+						.cta__text {
+							width: 50%;
+							margin: 0 auto;
+						}
+					}
+				}
+				@include bp($max:640px) {
+					width: 100%;
+					&:nth-of-type(3) {
+						margin-top: 0;
+					}
+					&:nth-of-type(4) {
+						width: 100%;
+						margin-top: 0;
+					}
+					&:nth-of-type(5) {
+						width: 100%;
+						margin-top: 0;
+						.cta__text {
+							width: 100%;
+							margin: 0;
+						}
+					}
+				}
+			}
+		}
+		/*------------------------------------*\
+		    :: Layout for 6 CTAs
+		\*------------------------------------*/
+		&[class*="--6"]  {
+			.cta {
+				width: 33.33336%;
+				&:nth-of-type(4),
+				&:nth-of-type(5),
+				&:nth-of-type(6) {
+					margin-top: em(45px);
+				}
+				@include bp($max:768px) {
+					width: 50%;
+					&:nth-of-type(4) {
+						margin-top: 0;
+					}
+					&:nth-of-type(5), 
+					&:nth-of-type(6) {
+						margin-top: 0;
+					}
+				}
+				@include bp($max:640px) {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+/*------------------------------------*\
+    ::  Scale Transitions
+\*------------------------------------*/
+// Hide icons add transition
+.no-touch {
+	.icon-ctas {
+		.cta-wrap { 
+			.cta {
+				.cta__icon {
+					transform: scale(0);
+					transition-property: transform;
+					transition-duration: 400ms;
+				}
+				&:nth-of-type(2) {
+					.cta__icon {
+						transition-delay: 200ms;
+					}
+				}
+				&:nth-of-type(3) {
+					.cta__icon {
+						transition-delay: 400ms;
+					}
+				}
+				&:nth-of-type(4) {
+					.cta__icon {
+						transition-delay: 600ms;
+					}
+				}
+				&:nth-of-type(5) {
+					.cta__icon {
+						transition-delay: 800ms;
+					}
+				}
+				&:nth-of-type(6) {
+					.cta__icon {
+						transition-delay: 1000ms;
+					}
+				}
+			}
+		}
+	}
+	// Scale icons up when in view
+	.icon-ctas {
+		.cta-wrap {
+			.cta {
+				.cta__icon {
+					&.visible {
+						transform: scale(1);
+					}
+				}
+			}
+		}
+	}
+}

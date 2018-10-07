@@ -1,0 +1,225 @@
+/*------------------------------------*
+    :: Our Work Styles
+*------------------------------------*/
+.page-our-work {
+	padding: 0 0 35px;
+	.iso-intro {
+		text-align: center;
+		.section-title {
+			margin-bottom: 25px;
+		}
+		.section__blurb {
+			margin-bottom: 50px;
+			word-spacing: 1px;
+			p {
+				&:first-of-type {
+					margin-top: 0;
+				}
+				&:last-of-type {
+					@include bp($max:320px) {
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+	}
+}
+.filter-nav {
+	width: 80%;
+	margin: 0 auto 40px;
+	padding: 0;
+	overflow: hidden;
+	.project-filter {
+		color: lighten($color-3, 5%);
+		color: #676767;
+	 	cursor: pointer;
+	 	display: block;
+	 	float: left;
+	 	font-family: $fam-semi-bold;
+	 	font-size: emCalc(18px);
+	 	height: 50px;
+	 	letter-spacing: 1px;
+		line-height: 50px;
+	 	position: relative;
+		text-align: center;
+		width: 20%;
+		z-index: 1;
+		&:hover {
+			color: $color-1;
+		}
+		&.actifilter {
+			background: $color-1;
+			color: $color-1;
+			color: $white;
+		}
+	}
+	@include bp($max:768px) {
+		width: 95%;
+	}
+	@include bp($max:500px) {
+		margin-bottom: 25px;
+		.project-filter {
+			width: 50%;
+			margin-bottom: 10px;
+			&:first-of-type {
+				width: 50%;
+				margin: 0 25% 10px;
+				
+			}
+		}
+	}
+}
+.iso__container {
+	overflow: hidden;
+	margin-bottom: 100px;
+	.project__wrap {
+		float: left;
+		margin: 5px 0.47%;
+		padding: 0;
+		width: 24.05%;
+		.holder {
+			margin: 0;
+			padding: 0;
+			width: 100%;
+			.project-tile {
+				background-repeat: no-repeat;
+				background-size: cover;
+				display: block;
+				height: 275px;
+				margin: 0;
+				padding: 0;
+				position: relative;
+				width: 100%;
+				z-index: 1;
+				&:after {
+					content: '';
+					display: block;
+					border: none;
+					background: url("images/global/dotted-overlay.png");
+					backface-visibility: hidden;
+					width: 100%;
+					height: 100%;
+					opacity: 0;
+					position: absolute;
+					top: 0;
+					right: 0;
+					bottom: 0;
+					left: 0;
+					z-index: 1;
+					transition: opacity 400ms;
+				}
+				.project__text {
+					position: absolute;
+					top: 0;
+					right: 0;
+					bottom: 0;
+					left: 0;
+					height: 100%;
+					opacity: 0;
+					padding: 35% 10%;
+					width: 100%;
+					z-index: 15;
+					transition: opacity 450ms;
+					h3 {
+						color: $color-1;
+						font-family: $fam-semi-bold;
+						font-size: emCalc(20px);
+						margin: 0 0 5px 0;
+						padding: 0;
+					}
+					.project__blurb {
+						color: $white;
+						font-family: $fam-heading;
+						font-size: emCalc(16px);
+						letter-spacing: 0.05em;
+						margin: 0;
+					}
+				}
+				&:hover {
+					&:after {
+						border: 2px solid $color-1;
+						opacity: 1;
+					}
+					.project__text {
+						opacity: 1;
+					}
+				}
+			}
+		}
+		&.half {
+			margin: 5px 0.5%;
+			width: 49%;	
+			.project-tile {
+				height: 350px;
+				.project__text {
+					padding: 23% 5%;
+				}
+			}
+		}
+		@include bp ($max:768px) {
+			margin: 5px 1%;
+			width: 48%;
+			.holder {
+				.project-tile {
+					.project__text {
+						padding: 22% 5%;
+					}
+				}
+			}
+			&.half {
+				margin: 5px 1%;
+				width: 98%;	
+				.project-tile {
+					//height: 350px;
+					.project__text {
+						padding: 19% 5%;
+					}
+				}
+			}
+		}
+		@include bp ($max:480px) {
+			margin: 5px 1%;
+			width: 98%;
+			.holder {
+				.project-tile {
+					height: 275px;
+					.project__text {
+						padding: 19% 5%;
+					}
+				}
+			}
+			&.half {
+				//margin: 5px 1%;
+				//width: 98%;	
+				.project-tile {
+					height: 275px;
+					.project__text {
+						padding: 19% 5%;
+					}
+				}
+			}	
+		}
+		@include bp ($max:320px) {
+			.holder {
+				.project-tile {
+					.project__text {
+						padding: 22% 5%;
+					}
+				}
+			}
+			&.half {
+				.project-tile {
+					.project__text {
+						padding: 22% 5%;
+					}
+				}
+			}	
+		}
+	}
+}
+
+.iso__container {
+	.item {
+		//transition-delay: 200ms;
+	}
+}

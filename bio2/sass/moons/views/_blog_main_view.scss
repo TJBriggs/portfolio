@@ -1,0 +1,115 @@
+/*------------------------------------*\
+    ::  Main Blog Page Styles
+\*------------------------------------*/	
+.archive, .category, .blog-feed {
+	.main-torso {
+		background-color: $color-2;
+	}
+	.category__wrap {
+		ul {
+			list-style-type: none;
+			list-style-image: none;
+		}
+		li {
+			&:after {
+				color: $color-1;
+				font-size: emCalc(20px);
+			}
+			a {
+				color: $color-1-light;
+				font-size: emCalc(19px);
+				text-decoration: none;
+				text-transform: uppercase;
+				@include bp($max:960px) {
+					font-size: emCalc(16px);
+				}
+				&:after {
+					background-color: $color-1-light;
+				}
+				&:hover {
+					text-decoration: none;
+				}
+			}
+			&.current-cat {
+				a {
+					&:after {
+						width: 100%;
+					}
+				}
+			}
+		}
+		// Special li for tag title since there is no link
+		.tag-title {
+			color: $color-1-light;
+			font-size: emCalc(19px);
+			text-decoration: none;
+			text-transform: uppercase;
+			@include bp($max:960px) {
+				font-size: emCalc(16px);
+			}
+		}
+	}
+	.single-torso__image {
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		.post-date {
+			color: $color-2;
+			font-size: emCalc(20px);
+			font-weight: 100;
+		}
+		p {
+			color: $color-2;
+			line-height: 1.4em;
+		}
+		.read-more {
+			color: $color-1-light;
+			font-size: emCalc(18px);
+			font-weight: 100;
+			text-decoration: none;
+			&:after {
+				color: $color-2;
+			}
+			&:hover {
+				&:after {
+					margin-left: 15px;
+				}
+			}
+		}
+	}
+	.post__overlay {
+		background-color: rgba(34, 33, 34, 0.8);
+	}
+	.social-links {
+		li {
+			list-style-type: none;
+			list-style-image: none;
+			cursor: pointer;
+		}
+		a {
+			svg {
+				cursor: pointer;
+				fill: $color-2;
+				transition: fill 400ms;
+			}
+			&:hover {
+				svg {
+					fill: $color-1-light;
+				}
+			}
+		}
+	}
+	.post-tag {
+		color: $color-1-light;
+		transition: color 400ms;
+		a {
+			color: $color-1-light;
+			font-size: 16px;
+			text-decoration: none;
+			transition: color 400ms;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+}

@@ -1,0 +1,293 @@
+/*-----------------------------------------*\
+    ::  Content Block Layout
+\*-----------------------------------------*/
+.content-block {
+    width: 100%;
+    p { 
+        overflow: hidden; // remove horizontal scroll on mobile
+    }
+}
+.content-block__overlay {
+    height: 100%;
+    width: 100%; 
+}
+.content__group { 
+    // Remove top margin from first element
+    & > *:first-child {
+        margin-top: 0;
+    }
+    // Remove bottom margin from last element
+    & > *:last-child {
+        margin-bottom: 0;
+        @include bp($max:1024px) {
+            margin-bottom: $pad;
+        }
+    }
+    // Set all header to consistent margins
+    h1, h2, h3, h4, h5, h6 {
+        margin: 15px 0;
+    }
+    // Center images at 1024px or less
+    p {
+        img {
+            //margin: 0 auto;
+            @include bp($max:1024px) {
+                display: block;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+.content--1 {
+    .content__group--1 {
+        padding: 0 $pad;
+        @include bp($max:1024px) {
+            max-width: 91.66667%;
+            margin: 0 auto;
+        }
+        @include bp($max:480px) {
+            max-width: 100%;
+            margin: 0 auto;
+        }
+    }
+}
+.content--2 {
+    &.content__two-col--half {
+        .content__group {
+            @include col(6);
+            &.content__group--no-prev {
+                margin-left: 50%;
+            }
+        }
+
+    }
+    &.content__two-col--two {
+        .content__group--1 {
+            @include col(8);
+        }
+        .content__group--2 {
+            @include col(4);
+            &.content__group--no-prev {
+                margin-left: 66.66667%;
+            }
+        }
+    }
+    &.content__two-col--one {
+        .content__group--1 {
+            @include col(4);
+        }
+        .content__group--2 {
+            @include col(8);
+            &.content__group--no-prev {
+                margin-left: 33.33333%;
+            }
+        }
+    }
+    @include bp($max:1024px){
+        [class*=" content__group--"]{ //it's a specificity thing
+            &.content__group {
+                @include col(11, $center:true);
+                &[class*="no-prev"]{
+                    width: 91.6667%;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+        }
+    }
+    @include bp($planetary){
+        [class*=" content__group--"]{ //it's a specificity thing
+            &.content__group {
+                width: 100%;
+                &[class*="no-prev"]{
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}
+.content--3 {
+    .section-title {
+        @include bp($max:1024px) {
+            width: 100%;
+        }
+        @include bp($max:768px) {
+            max-width: 500px;
+            padding-left: 0;
+        }
+        @include bp($max:555px) {
+            max-width: none;
+            width: 100%;
+            padding: 0 $pad;
+        }
+    }
+    .content__group {
+        @include col(4);
+        &.content__group--no-prev {
+            margin-left: 33.33333%;
+        }
+        &.content__group--no-prev-2 {
+            margin-left: 66.66667%;
+        }
+        @include bp($max:768px){
+            width: 100%;
+            h1, h2, h3, h4, h5, h6 {
+                max-width: 500px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            p {
+                max-width: 500px;
+                margin-left: auto;
+                margin-right: auto;
+                img {
+                    max-width: 500px;
+                    margin: 18px auto 10px;
+                    @include bp($max:500px) {
+                        width: 100%;
+                        max-width: none;
+                    }
+                }
+            }
+            &--1 { // Remove top margins from first content__group when they stack
+                & > *:first-child {
+                    margin-top: 0;
+                    img {
+                        margin-top: 0;
+                    }
+                }
+            }
+            &[class*="no-prev"]{
+                margin-left: 0;
+            }
+        }
+    }
+}
+/*------------------------------------*\
+    ::  Content Modifiers
+\*------------------------------------*/
+// Add border to left column
+.content-block--border-left {
+    &.content--2 {
+        &.content__two-col--half {
+            .content__group--1 {
+                padding-right: $pad*2.25;
+                position: relative;
+                &:after {
+                    content: '';
+                    height: 100%;
+                    width: 1px;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                }
+            }
+            .content__group--2 {
+                padding-left: $pad*2.5;
+            }
+        }
+        @include bp($max:1024px) {
+            &.content__two-col--half {
+                .content__group--1 {
+                    padding-right: $pad;
+                    &:after {
+                        display: none;
+                    }
+                }
+                .content__group--2 {
+                    padding-left: $pad;
+                }
+            }
+        }
+    }    
+}
+// Add border to right column
+.content-block--border-right {
+    &.content--2 {
+        &.content__two-col--half {
+            .content__group--1 {
+                padding-right: $pad*2.25;
+            }
+            .content__group--2 {
+                padding-left: $pad*2.5;
+                position: relative;
+                &:after {
+                    content: '';
+                    height: 100%;
+                    width: 1px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                }
+            }
+        }
+        @include bp($max:1024px) {
+            &.content__two-col--half {
+                .content__group--1 {
+                    padding-right: $pad;
+                }
+                .content__group--2 {
+                    padding-left: $pad;
+                    &:after {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }    
+}
+// Float swap for two column layout
+.content__two-col--half {
+    &[class*="--image-swap"] {
+        .content__group--1 {
+            float: right;
+            @include bp($max:1024px) {
+                float: none;
+            }
+        }
+        .content__group--2 {
+            float: left;
+            @include bp($max:1024px) {
+                float: none;
+            }
+        }
+    }
+}
+// Push the image or content on the left down to 
+// vertically align with the element to the right
+[class*="--valign-left"] {
+    .content__group--1 {
+        margin-top: emCalc(40px);
+        @include bp($max:1024px) {
+            margin-top: 0;
+        }
+    }
+}
+[class*="--valign-left-small"] {
+    .content__group--1 {
+        margin-top: emCalc(20px);
+        @include bp($max:1024px) {
+            margin-top: 0;
+        }
+    }
+}
+// Push the image or content on the right down to 
+// vertically align with the element to the left
+[class*="--valign-right"] {
+    .content__group--2 {
+        margin-top: emCalc(40px);
+        @include bp($max:1024px) {
+            margin-top: 0;
+        }
+    }
+}
+[class*="--valign-right-small"] {
+    .content__group--2 {
+        margin-top: emCalc(20px);
+        @include bp($max:1024px) {
+            margin-top: 0;
+        }
+    }
+}

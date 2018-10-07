@@ -1,0 +1,98 @@
+/*------------------------------------*\
+	:: Extends
+\*------------------------------------*/
+// All SASS extends should go here and as a genereal
+// rule, extends should be created for repetitive styling
+// It can also be helpfull to create extends for all typefaces,
+// and h1-h6 elements. This will allow you to extend that styling
+// to other text level semantics if neccessary.
+// Assign typeface extends and headline extends in 'styles/1_global/semantics/_text_level_semantics.scss'
+
+// Example of extend for typeface
+// %pn-xbold {
+//     font-family: ProximaNova-Extrabld, serif;
+//     font-weight: normal;
+//     font-style: normal;
+// }
+
+// Example of extend for h1 element
+// %h1 {
+//     @extend %pn-xbold;
+//     font-size: 3.5em;
+//     text-transform: uppercase;
+//     letter-spacing: 7px;
+// }
+%kreg {
+	font-family: karlaregular, serif;
+	font-weight: normal;
+	font-style: normal;
+}
+%kreg-italic {
+	font-family: karlaitalic, serif;
+	font-weight: normal;
+	font-style: normal;
+}
+%kbold {
+	font-family: karlabold, serif;
+	font-weight: normal;
+	font-style: normal;
+}
+%kbold-italic {
+	font-family: karlabolditalic, serif;
+	font-weight: normal;
+	font-style: normal;
+}
+
+%h1 { // Hero Text
+	@extend %kreg;
+	font-size: 45px;
+	line-height: 1.2em;
+}
+%h2 { // Main Headlines
+	@extend %kreg;
+	font-size: 45px;
+	line-height: 1.2em;
+}
+%h3 { // Tab Text Title
+	@extend %kbold;
+	font-size: 30px;
+}
+%h4 { // Tab Title
+	@extend %kreg;
+	font-size: 25px;
+	line-height: 1.4em;
+}
+%h5 { // Form Subtitles
+	@extend %kbold;
+	font-size: 25px;
+}
+%h6 { // Team Member Title
+	@extend %kbold;
+	font-size: 16px;
+	text-transform: uppercase;
+}
+/*------------------------------------*\
+	:: Gradients & Overlays
+\*------------------------------------*/
+%btog {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#2b76b7+0,8e9192+100 */
+	background: rgb(43,118,183); /* Old browsers */
+	background: -moz-linear-gradient(left, rgba(43,118,183,1) 0%, rgba(142,145,146,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left, rgba(43,118,183,1) 0%,rgba(142,145,146,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right, rgba(43,118,183,1) 0%,rgba(142,145,146,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2b76b7', endColorstr='#8e9192',GradientType=1 ); /* IE6-9 */
+}
+%gtob {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#8e9192+0,2b76b7+100 */
+	background: rgb(142,145,146); /* Old browsers */
+	background: -moz-linear-gradient(left, rgba(142,145,146,1) 0%, rgba(43,118,183,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left, rgba(142,145,146,1) 0%,rgba(43,118,183,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right, rgba(142,145,146,1) 0%,rgba(43,118,183,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8e9192', endColorstr='#2b76b7',GradientType=1 ); /* IE6-9 */
+}
+%hero-overlay {
+	background-color: rgba(62, 64, 70, 0.76);
+}
+%callout-overlay {
+	background-color: rgba(40, 48, 58, 0.75);
+}

@@ -1,0 +1,114 @@
+/*-------------------------------------------*\
+    ::Page Styles - Contact Us
+\*-------------------------------------------*/
+.page-your-doctor {
+	.page__group--intro {
+		padding-bottom: 0;
+		.thirds__group {
+			margin-top: 20px;
+		}
+	}
+	.page__group--full-text {
+		box-shadow: 0px 4px 3px 0px rgba(0, 0, 0, 0.45);
+		padding-bottom: 30px;
+		p {
+			&:first-of-type {
+				margin-top: 0;
+			}
+		}
+	}
+	
+	.page__group--checklist {
+		box-shadow: 0px 1px 8px 3px rgba(0, 0, 0, 0.45);
+		padding: 50px 0;
+		h2 {
+			margin: 10px 0 0;
+			overflow: hidden;
+		}
+		ul {
+			margin: 5px 0 0;
+			padding: 0;
+			position: relative;
+			li {
+				margin-left: 40px;
+				font-size: emCalc(16px);
+				font-family: $fam-body-light;
+				line-height: 2.15em;
+				list-style-type: none;
+				&:before {
+					@extend .icon--checkbox:before;
+	                @extend .icon;
+	                position: absolute;
+	                left: 0;
+	                color: $color-3;
+	                font-size: emCalc(27px);
+				}
+			}
+		}
+	}
+	.page__group--second-fam {
+		padding: 30px 0;
+		@include bp($solarsystem) {
+			padding: 30px 0 40px;
+		}
+		.thirds__group--1 {
+			h2 {
+			margin: 15px 0 0;
+			}
+			p {
+				&:first-of-type {
+					margin: 5px 0 0;
+				}
+			}
+		}
+	}
+	////////////////////////////////////
+	// Parallax Section Styles
+	///////////////////////////////////
+	.page__group--parallax {
+		backround: transparent;
+		position: relative;
+		height: 500px;
+		.parallax-img {
+			background-attachment: fixed;
+			background-position: center;
+	        background-repeat: no-repeat;
+	        background-size: cover;
+		    position: absolute;
+		    top: 0px;
+		    bottom: 0;
+		    right: 0;
+		    left: 0;
+		    z-index: -1;
+		    @include bp($solarsystem) {
+		    	background-attachment: scroll;
+				position: relative;
+				min-height: 500px;
+				height: 500px;
+				z-index: 0;
+			}
+		    h2 {
+				color: $color-4;
+				line-height: 1.2em;
+				margin: 35px 0 15px;
+				overflow: hidden;
+			}
+			p {
+				color: #252525;
+			}
+			img {
+				width: 100%;
+				@include bp($solarsystem) {
+					width: 70%;
+				}
+				@include bp($max:640px) {
+					width: 100%;
+				}
+			} 
+		}
+	}
+}
+
+
+
+

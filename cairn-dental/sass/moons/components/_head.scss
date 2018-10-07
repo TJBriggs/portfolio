@@ -1,0 +1,195 @@
+/*------------------------------------*\
+    ::Header
+\*------------------------------------*/
+.main-head {
+	height: 121px;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 9999;
+	background-color: $color-4;
+	transition: height 500ms;
+	@include bp($max:480px) {
+		height: 75px;
+	}
+	.main-head__border {
+		height: 100%;
+		border-bottom: 4px solid #989a94;
+	}
+	.main-head__inner {
+		height: 100%;
+		position: relative;
+	}
+	.main-head__logo {
+		display: block;
+		height: auto;
+		max-height: 70px;
+		width: em(355px);
+		position: absolute;
+		left: $pad*2;
+		top: em(23px);
+		z-index: 9999;
+		transition: top 500ms;
+		img {
+			max-height: 70px;
+		}
+		@include bp($max:640px) {
+			width: em(325px);
+			top: em(29px);
+		}
+		@include bp($max:480px) {
+			width: em(270px);
+			top: em(9px);
+			left: $pad;
+		}
+		@include bp($max:375px) {
+			width: em(230px);
+			top: em(15px);
+		}
+	}
+	.main-head__phone {
+		position: absolute;
+		top: em(23px);
+		right: $pad*2;
+		z-index: 9999;
+		color: $color-2;
+		font-family: $fam-semi;
+		text-decoration: none;
+		transition: color 400ms, top 500ms;
+		&:hover {
+			color: $color-1;
+		}
+		@include bp($max:1024px) {
+			top: em(46px);
+			right: em(113px);
+		}
+		@include bp($max:640px) {
+			display: none;
+		}
+	}
+	.main-head__trigger {
+	    position: absolute;
+	    top: em(34px);
+	    right: $pad*2;
+	    width: 3.4em;
+	    height: 3.4em;
+	    cursor: pointer;
+	    transform: rotate(0deg);
+	    transition: top 500ms;
+	    @include bp($min: $solarsystem + 1){
+	        display: none;
+	    }
+	    @include bp($max:640px) {
+			top: em(37px);
+	    }
+	    @include bp($max:480px){
+	    	top: em(12px);
+	    	right: $pad;
+	    }
+	    // Shrink nav toggle for small phones
+	    @include bp($max:375px) {
+	    	font-size: 0.7rem;
+	    	top: em(28px);
+	    }
+	    span {
+	        display: block;
+	        position: absolute;
+	        left: 0;
+	        margin-top: .4em;
+	        width: 100%;
+	        height: .4em;
+	        background-color: $color-1;
+	        opacity: 1;
+	        transform: rotate(0deg);
+	        transition: all .25s ease-in-out;
+	        &:nth-child(1) {
+	            top: 0px;
+	        }
+	        &:nth-child(2),
+	        &:nth-child(3) {
+	            top: .8em;
+	        }
+	        &:nth-child(4) {
+	            top: 1.6em;
+	        }
+	    }
+	    &.active {
+	        span {
+	            &:nth-child(1) {
+	                left: 50%;
+	                width: 0%;
+	            }
+
+	            &:nth-child(2) {
+	                transform: rotate(45deg);
+	            }
+
+	            &:nth-child(3) {
+	                transform: rotate(-45deg);
+	            }
+
+	            &:nth-child(4) {
+	                left: 50%;
+	                width: 0%;
+	            }
+	        }
+	    }
+	}
+}
+
+/*------------------------------------*\
+    ::  Sticky Nav Styles
+\*------------------------------------*/	
+.nav--small {
+	height: 0px;
+	.main-head__logo {
+		top: -100px; // starting top: 23px;
+	}
+	.main-head__phone {
+		top: -100px; // starting top: 23px;
+	}
+	.main-head__trigger {
+		top: -89px; // starting top: 34px;
+	}
+	// Adjust the top values so they all 
+	// move up at the same time on scroll
+	@include bp($max:1024px) {
+		.main-head__phone {
+			top: -77px; // starting top: 46px; 
+		}
+	}
+	@include bp($max:640px) {
+		.main-head__logo {
+			top: -100px; // starting top: 29px;
+		}
+		.main-head__trigger {
+			top: -92px; // starting top: 37px;
+		}
+	}
+	@include bp($max:480px) {
+		.main-head__logo {
+			top: -75px; // starting top: 9px;
+		}
+		.main-head__trigger {
+			top: -72px; // starting top: 12px;
+		}
+	}
+	@include bp($max:375px) {
+		.main-head__logo {
+			top: -75px; // starting top: 15px;
+		}
+		.main-head__trigger {
+			top: -69px; // starting top: 21px;
+		}
+	}
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,101 @@
+/*------------------------------------*\
+    :: Header
+\*------------------------------------*/
+// General header styles go here.
+.main-head {
+    height: 115px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9000;
+    background-color: transparent;
+    box-shadow: none;
+    &.nav--visible {
+        background-color: $color-3-light;
+        box-shadow: 0 6px 20px 0 rgba(155, 155, 155, 0.25);
+    }
+    @include bp($max:768px) {
+        height: 85px;
+    }
+}
+.main-head__inner {
+    height: 100%;
+    position: relative;
+}
+.main-head__logo {
+	display: inline-block;
+	height: auto;
+	width: 100%;
+    max-width: 185px;
+    margin: 1.58em 0;
+    @include bp($max:768px) {
+        max-width: 180px;
+        margin: 0.95em 0;
+    }
+}
+.main-head__trigger-wrap {
+    display: none;
+    height: 52px;
+    width: 62px;
+    position: absolute;
+    top: 17px;
+    right: $pad*2;
+    z-index: 9980;
+    background-color: $color-1;
+    text-align: center;
+    @include bp($max:768px) {
+        display: block;
+    }
+}
+.main-head__trigger {
+    display: inline-block;
+    height: 32px;
+    width: 32px;
+    margin-top: 10px;
+    position: relative;
+    span {
+        display: block;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        margin: 0 auto;
+        height: .4em;
+        background-color: $color-3-light;
+        opacity: 1;
+        transform: rotate(0deg);
+        transition: all .25s ease-in-out;
+        &:nth-child(1) {
+            top: 0px;
+        }
+        &:nth-child(2),
+        &:nth-child(3) {
+            top: .8em;
+        }
+        &:nth-child(4) {
+            top: 1.6em;
+        }
+    }
+    &.active {
+        span {
+            &:nth-child(1) {
+                left: 50%;
+                width: 0%;
+            }
+
+            &:nth-child(2) {
+                transform: rotate(45deg);
+            }
+
+            &:nth-child(3) {
+                transform: rotate(-45deg);
+            }
+
+            &:nth-child(4) {
+                left: 50%;
+                width: 0%;
+            }
+        }
+    }
+}

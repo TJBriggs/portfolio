@@ -1,0 +1,143 @@
+/*------------------------------------*\
+    ::Grouping Content
+    ------------------------------------*
+    ::Normalize.css v3.0.0 | MIT License | git.io/normalize
+\*------------------------------------*/
+figure {
+	margin: 1em 40px;
+}
+hr {
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+	height: 0;
+}
+pre {
+	overflow: auto;
+}
+code,
+kbd,
+pre,
+samp {
+	font-family: monospace, monospace;
+	font-size: 1em;
+}
+// Normal Lists
+ul, ol {
+	li {
+		margin-bottom: 0.5em;
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+	// nested ul or ol
+	ul, ol {
+		margin-top: 0.5em;
+	}
+}
+// Checklist
+ul.checklist {
+	padding: 0;
+	li {
+		margin: 0 0 1em 0;
+		position: relative;
+		padding-left: 2.75em;
+		list-style: none;
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+		&:before {
+			content: '';
+			height: 22px;
+			width: 22px;
+			position: absolute;
+			top: 0.25em;
+			left: 0;
+			background: url('images/global/bullet-image.png') no-repeat left top;
+		}
+	}
+}
+/*------------------------------------*\
+    ::  Wrap All The THings
+\*------------------------------------*/	
+.wrap-all-the-things {
+	overflow: hidden;
+}
+/*------------------------------------*\
+    ::  Main Torso
+\*------------------------------------*/
+.main-torso {
+	overflow: hidden;
+
+}	
+/*------------------------------------*\
+    ::  Main Torso Group Styles
+\*------------------------------------*/	
+.main-torso__group {
+	width: 100%;
+	overflow: hidden;
+}
+/*------------------------------------*\
+    :: Main Wrapper
+\*------------------------------------*/
+[class*="__inner"] {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: 1140px;
+}
+/*------------------------------------*\
+    ::  KSS MarkUp (Ignore)
+\*------------------------------------*/ 	
+// Lists
+//
+// These are standard list styles.
+//
+// Styleguide 2.5
+
+// Unordered Lists
+//
+// Markup:
+// <ul>
+//      <li>Unordered List Item</li>
+//      <li>Unordered List Item</li>
+//      <li>Unordered List Item
+//          <ul>
+//              <li>Nested List Item</li>
+//              <li>Nested List Item</li>
+//              <li>Nested List Item</li>
+//          </ul>
+//      </li>
+// </ul>
+//
+// Styleguide 2.5.1
+
+// Ordered Lists
+//
+// Markup:
+// <ol>
+//      <li>Ordered List Item</li>
+//      <li>Ordered List Item</li>
+//      <li>Ordered List Item
+//          <ol>
+//              <li>Nested List Item</li>
+//              <li>Nested List Item</li>
+//              <li>Nested List Item</li>
+//          </ol>
+//      </li>
+// </ol>
+//
+// Styleguide 2.5.2
+
+// Custom Checklist
+//
+// Markup:
+// <ul class="checklist">
+//      <li>That fact-based coaching, supported by technology, leads to measurable improvement.</li>
+//      <li>That there is no “one” technique that works for everyone, but there are acceptable ranges based on tour averages that will help every golfer play better.</li>
+//      <li>That an on-going, comprehensive approach creates faster, more lasting results than occasional lessons.</li>
+//      <li>That an experienced coach with deep understanding of your game will deliver consistent improvement.</li>
+// </ul>
+//
+// Styleguide 2.5.3

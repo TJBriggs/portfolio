@@ -1,0 +1,211 @@
+/*------------------------------------*\
+    ::  Fitting Info Styles
+\*------------------------------------*/	
+.fitting-info {
+	@extend %bg-cover;
+	&__overlay {
+		height: 100%;
+		width: 100%;
+		background-color: rgba(47, 41, 49, 0.87);
+	}
+	&__inner {
+		padding: 3.5em $pad*2;
+		@include bp($max:500px) {
+			padding: 2.75em $pad;
+		}
+		h3 { // Section Title
+			margin: 0;
+			padding: 0 $pad;
+			color: $color-3;
+			font-size: 1.75em;
+			text-align: center;
+			@include bp($max:575px) {
+				font-size: 1.5em;
+			}
+			@include bp($max:400px) {
+				font-size: 1.3em;
+			}
+		}
+	}
+	&__main-wrap {
+		display: flex;
+		flex-wrap: wrap;
+		margin-top: 3.4em;
+		padding-bottom: 3.4em;
+		border-bottom: 1px solid #686967;
+		@include bp($max:767px) {
+			margin-top: 2.5em;
+			padding-bottom: 2.5em;
+		}
+	}
+	&__stat-col {
+		width: 33.333333%;
+		padding: 0;
+		@include bp($max:767px) {
+			width: 100%;
+			max-width: 500px;
+			margin: 0 auto 2.5em;
+		}
+		h6 {
+			width: 100%;
+			margin: 0;
+			color: $color-3;
+			font-size: 0.925em;
+			text-align: center;
+			@include bp($max:767px) {
+				font-size: 1.1em;
+			}
+		}
+		.fitting-info__stat-wrap {
+			display: flex;
+			flex-wrap: wrap;
+			width: 100%;
+			margin-top: 1.5em;
+			@include bp($max:767px) {
+				margin-top: 2em;
+			}
+		}
+		.fitting-info__stat {
+			width: 20%;
+			margin-right: 5%;
+			color: $color-3;
+			text-align: center;
+			text-transform: uppercase;
+			@include bp($max:960px) {
+				width: 26%;
+				margin-right: 5%;
+			}
+			@include bp($max:767px) {
+				text-align: right;
+			}
+			strong {
+				display: inline-block;
+				height: 45px;
+				width: 100%;
+				border: 2px solid $color-3;
+				color: $color-3;
+				font-family: $fam-heading;
+				font-weight: bold;
+				font-size: 1.1em;
+				line-height: 41px; // Offset for 4px border
+				span {
+					color: $color-3;
+					font-family: $fam-heading;
+					font-weight: bold;
+				}
+				@include bp($max:767px) {
+					height: 45px;
+					width: auto;
+					padding: 0 $pad;
+				}
+			}
+		}
+		.fitting-info__text {
+			width: 75%;
+			margin: 0;
+			color: $color-3;
+			font-family: $fam-heading;
+			font-size: 0.8em;
+			font-weight: 100;
+			@include bp($max:960px) {
+				width: 69%;
+				max-width: 265px;
+			}
+		}
+		&:nth-of-type(2) { // Middle Stat
+			padding: 0 $pad*2;
+			@include bp($max:767px) {
+				padding: 0;
+			}
+		}
+	}
+	&__testimonial {
+		text-align: center;
+		h5 {
+			color: $color-3;
+		}
+		p {
+			max-width: 715px;
+			margin: 0 auto;
+			color: $color-3;
+			font-size: 0.85em;
+			font-style: italic;
+			line-height: 1.65em;
+		}
+		.btn {
+			margin-top: 3em;
+			margin-bottom: 0;
+		}
+		@include bp($max:767px) {
+			h5, p {
+				padding: 0 $pad;
+			}
+		}
+	}
+}
+/*------------------------------------*\
+    ::  KSS MarkUp (Ignore)
+\*------------------------------------*/   
+// Fitting Info
+//
+// Demo:<br><a href="../modules/module-fitting-info.php" target="_blank">module-fitting-info.php</a>
+//
+// Stylesheet:<br>
+// <a href="../sass/structure/modules/_module_fitting_info.scss" target="_blank">_module_fitting_info.scss</a><br>
+//
+// Path To The Code:<br>
+// golftec/golftec/modules/module-fitting-info.php<br>
+// golftec/golftec/js/stats-src/1_snap.svg.js<br>
+// golftec/golftec/js/stats-src/2_inview.js<br>
+// golftec/golftec/js/stats-src/3_stat.js
+//
+// Markup:
+// <article class="fitting-info main-torso__group" style="background-image: url('../images/modules/fitting-info/fitting-info-bg.jpg')">
+//     <div class="fitting-info__overlay">
+//         <div class="fitting-info__inner">
+//             <h3>The Results From TECfit<br><strong>Custom Club Fittings Are Serious</strong></h3>
+//             <div class="fitting-info__main-wrap">
+//                 <div class="fitting-info__stat-col">
+//                     <h6>Why Get Custom Fit?</h6>
+//                     <div class="fitting-info__stat-wrap">
+//                         <div class="fitting-info__stat stat__frame">
+//                             <strong><span class="stat__number">90</span>%</strong>
+//                         </div> <!-- // fitting-info__stat -->
+//                         <p class="fitting-info__text">
+//                             of US golfers may be playing with the wrong golf equipment, including incorrect length, lie, head/shaft combination and grip size.​
+//                         </p>
+//                     </div> <!-- // fitting-info__stat-wrap -->
+//                 </div> <!-- // fitting-info__stat-col -->
+//                 <div class="fitting-info__stat-col">
+//                     <h6>Immediate Improvement</h6>
+//                     <div class="fitting-info__stat-wrap">
+//                         <div class="fitting-info__stat stat__frame">
+//                             <strong><span class="stat__number">92</span>%</strong>
+//                         </div> <!-- // fitting-info__stat -->
+//                         <p class="fitting-info__text">
+//                             of golfers who were custom fit with a launch monitor saw immediate improvement in their game.​
+//                         </p>
+//                     </div> <!-- // fitting-info__stat-wrap -->
+//                 </div> <!-- // fitting-info__stat-col -->
+//                 <div class="fitting-info__stat-col">
+//                     <h6>Custom Done Right</h6>
+//                     <div class="fitting-info__stat-wrap">
+//                         <div class="fitting-info__stat stat__frame">
+//                             <strong><span class="stat__number">1000</span></strong>
+//                         </div> <!-- // fitting-info__stat -->
+//                         <p class="fitting-info__text">
+//                             club/shaft combinations are evaluated to deliver you a tour-level custom fitting experience​
+//                         </p>
+//                     </div> <!-- // fitting-info__stat-wrap -->
+//                 </div> <!-- // fitting-info__stat-col -->
+//             </div> <!-- // fitting-info__main-wrap -->
+//             <div class="fitting-info__testimonial">
+//                 <h5>Ben M. - On His Club Fitting Experience</h5>
+//                 <p>“I can’t believe how much better I’m playing since getting new custom fit clubs. My TECfit showed me how badly fit my old irons were for my game - too short, wrong shafts, wrong grip size. Immediately after changing to my new Mizuno’s I’m 10 yards longer with every club and my bad shots aren’t as bad. I won’t waste my money on golf equipment that hasn’t been properly fit for me ever again.<br>Thanks Erik for the great fitting experience.”​</p>
+//                 <a class="fitting-info__btn btn" href="#">Book A TECfit</a>
+//             </div> <!-- // fitting-info__testimonial -->
+//         </div> <!-- // fitting-info__inner -->
+//     </div> <!-- // fitting-info__overaly -->
+// </article> <!-- // fitting-info -->
+//
+// Styleguide 6.17

@@ -1,0 +1,140 @@
+/*------------------------------------*\
+    :: Main CTA Buttons Under Masthead
+\*------------------------------------*/
+.main-cta {
+    box-shadow: 0px 1px 8px 3px rgba(0, 0, 0, 0.45);
+    padding: 35px 0;
+    .main-cta__text {
+        h2 {
+            color: $color-1;
+            font-family: $fultons-reg;
+            font-size: emCalc(34px);
+            margin: 0;
+            padding: 0;
+        }
+        p {
+            font-family: $italic;
+            font-size: emCalc(18px);
+            letter-spacing: 0.01em;
+            line-height: 1.5em;
+            margin: 0 auto;
+            width: 60%;
+        }
+        @include bp($max: 960px) {
+            h2 {
+                font-size: emCalc(32px);
+            }
+            p {
+                font-size: emCalc(16px);
+                width: 65%;
+            } 
+        }
+        @include bp($max: 640px) {
+            h2 {
+                font-size: emCalc(28px);
+            }
+            p {
+                font-size: emCalc(14px);
+                width: 80%;
+            } 
+        }
+        @include bp($planetary) {
+            h2 {
+                font-size: emCalc(24px);
+            }
+            p {
+                font-size: emCalc(12px);
+                width: 80%;
+            } 
+        }
+    }
+    .main-cta__buttons {
+        margin-top: 30px;
+        position: relative;
+        @include bp($max: 640px) {
+            margin-top: 15px;
+        }
+        .main_cta_btn {
+            color: $white;
+            width: 23%;
+            &:first-of-type {
+                float: left;
+                margin-left: 23%;
+                &:before {
+                    @extend .icon;
+                    @extend .icon--arrow;
+                    color: #231f20;
+                    display: inline-block;
+                    font-size: emCalc(100px);
+                    position: absolute;
+                    left: 12%;
+                    top: -45px;
+                    transform: rotate(140deg);
+                    transition: 400ms;
+                }
+                &:hover {
+                    background: darken($color-1,10%);
+                    &:before {
+                        left: 15%;
+                        transition: 400ms;
+                    }
+                }
+            }
+            &:last-of-type {
+                float: right;
+                margin-right: 23%;
+                &:before {
+                    @extend .icon;
+                    @extend .icon--arrow;
+                    color: #231f20;
+                    display: inline-block;
+                    font-size: emCalc(100px);
+                    position: absolute;
+                    right: 12%;
+                    top: -45px;
+                    transform: rotate(40deg) scaleY(-1);                    
+                    transition: 400ms;
+                }
+                &:hover {
+                    background: darken($color-1,10%);
+                    &:before {
+                        right: 15%;
+                        transition: 400ms;
+                    }
+                }
+            }
+            @include bp($max: 960px) {
+                font-size: emCalc(16px);
+                height: 50px;
+                padding: 7px;
+                width: 35%;
+                &:first-of-type, &:last-of-type {
+                    &:before {
+                        display: none;
+                    }
+                }
+                &:first-of-type {
+                    margin-left: 10%;
+                }
+                &:last-of-type {
+                    margin-right: 10%;   
+                }
+
+            }
+            @include bp($max: 640px) {
+                font-size: emCalc(16px);
+                height: 50px;
+                padding: 7px;
+                width: 80%;
+                &:first-of-type, &:last-of-type {
+                    &:before {
+                        display: none;
+                    }
+                }
+                &:last-of-type {
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
+}

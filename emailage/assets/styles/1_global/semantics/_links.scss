@@ -1,0 +1,88 @@
+/*------------------------------------*\
+    :: Links
+\*------------------------------------*/
+// Add your text link styles here.
+a {
+    color: $color-1;
+    text-decoration: none;
+    outline: none;
+    &:hover {
+        text-decoration: underline;
+        outline: none;
+    }
+}
+
+/*------------------------------------*\
+    ::  Buttons
+\*------------------------------------*/	
+// Add you button styles here.
+.btn {
+    display: inline-block;
+    min-width: 275px;
+    padding: 1.2em $pad 0.92em;
+    position: relative;
+    @extend %blue-gradient;
+    @extend %br;
+    box-shadow: 0 0 13px 0 rgba(0,0,0,0.25);
+    color: $color-3;
+    @extend %museo-500;
+    font-size: 15px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: box-shadow 400ms;
+    &:after {
+        content: '\f105';
+        color: $color-3;
+        font-family: "FontAwesome";
+        font-size: 15px;
+        font-weight: 400;
+        opacity: 0;
+        transition: margin-left 400ms, opacity 400ms;
+    }
+    &:hover {
+        box-shadow: none;
+        text-decoration: none;
+        &:after {
+            opacity: 1;
+            margin-left: 16px;
+        }
+    }
+    &--primary {
+        @extend %blue-gradient;
+    }
+    &--secondary {
+        @extend %blue-gradient;
+    }
+    &--orange {
+        @extend %orange-gradient;
+    }
+    &--green {
+        @extend %green-gradient;
+    }
+    &--teal {
+        @extend %teal-gradient;
+    }
+    &--red {
+        @extend %red-gradient;
+    }
+}
+.tag-btn {
+    display: inline-block;
+    width: auto;
+    padding: 7px 9px 3px;
+    @extend %blue-gradient;
+    border-radius: 20px;
+    color: $color-3;
+    @extend %museo-500;
+    font-size: 14px;
+    text-align: center;
+    text-transform: uppercase;
+    text-transform: uppercase;
+    &:hover {
+        text-decoration: none;
+        background-image: -webkit-linear-gradient(top left, $color-1 100%, $color-1 100%);
+        background-image: -o-linear-gradient(top left, $color-1 100%, $color-1 100%);
+        background-image: linear-gradient(to bottom right, $color-1 100%, $color-1 100%);
+    }
+}

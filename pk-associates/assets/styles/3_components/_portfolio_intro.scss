@@ -1,0 +1,111 @@
+/*------------------------------------*\
+    :: Portfolio Intro
+\*------------------------------------*/
+// These styles cover the initial section of the portfolio single page
+.portfolio-intro {
+    width: 100%;
+    padding-top: 11.5em;
+    overflow: hidden;
+    @include bp($max:1024px) {
+        padding-top: 8.75em;
+    }
+    @include bp($max:768px) {
+        padding-top: 7.5em;
+    }
+    &__breadcrumb {
+        @extend %h5;
+        color: $color-3-dark;
+        text-transform: uppercase;
+        transition: color 400ms;
+        &:before {
+            display: inline-block;
+            margin-right: 7px;
+            position: relative;
+            top: 1px;
+            content: '\f100';
+            color: $color-1;
+            font-family: fontAwesome;
+            font-size: 1.35em;
+            transition: transform 400ms;
+        }
+        &:hover {
+            color: $color-1;
+            text-decoration: none;
+            &:before {
+                transform: translateX(-5px);
+            }
+        }
+    }
+    &__title {
+        margin: 1em 0 0.5em;
+        color: $color-1;
+        @include bp($max:1024px) {
+            margin: 0.75em 0 0.5em;
+        }
+    }
+    &__wrap {
+        overflow: hidden;
+        padding-bottom: 4em;
+        @include bp($max:959px) {
+            margin-bottom: 1em;
+        }
+    }
+    &__text {
+        width: 53%;
+        padding-right: $pad*2.5;
+        & > *:first-child {
+            margin-top: 0;
+        }
+        & > *:last-child {
+            margin-bottom: 0;
+        }
+        @include bp($max:767px) {
+            width: 100%;
+            padding-right: 0;
+        }
+    }
+    &__categories {
+        float: right;
+        width: 47%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        p {
+            margin: 0;
+            font-size: 14px;
+        }
+        @include bp($max:767px) {
+            width: 100%;
+            margin-bottom: 2.25em;
+            p {
+                font-size: 16px;
+            }
+        }
+    }
+    &__category-wrap {
+        width: 100%;
+        margin-top: 1.5em;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        &:first-of-type {
+            margin-top: 0;
+        }
+        div {
+            width: 50%;
+            &:first-of-type {
+                padding-right: $pad;
+            }
+
+        }
+        @include bp($max:399px) {
+            margin-top: 1em;
+            div {
+                width: 100%;
+                &:last-of-type {
+                    margin-top: 1em;
+                }
+            }  
+        }
+    }
+}

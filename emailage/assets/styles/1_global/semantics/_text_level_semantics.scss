@@ -1,0 +1,107 @@
+/*------------------------------------*\
+    :: Text Level Semantics
+\*------------------------------------*/
+// Define your text and typeface related styles here.
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    font-weight: normal;
+    color: $color-7;
+}
+h1 {
+    @extend %museo-500;
+    font-size: 2.441em;
+    @media (max-width: 767px) {
+        font-size: 1.61em;
+    }
+}
+h2 {
+    @extend %museo-300;
+    font-size: 1.953em;
+    @media (max-width: 767px) {
+        font-size: 1.38em;
+    }
+}
+h3 {
+    //@extend %calluna-bold;
+    @extend %museo-300;
+    font-size: 1.563em;
+    font-weight: bold;
+    letter-spacing: 0.03em;
+    @media (max-width: 767px) {
+        font-size: 1.22em;
+    }
+}
+h4 {
+    @extend %museo-700;
+    font-size: 1em;
+}
+h5 {
+    @extend %museo-900;
+    font-size: 0.8em;
+    text-transform: uppercase;
+}
+h6 {
+    @extend %museo-500;
+    font-size: 0.8em;
+    text-transform: uppercase;
+}
+p {
+    line-height: 1.45em;
+    letter-spacing: 0.04em;
+}
+.main-torso ul {
+    margin: 0;
+    padding: 0 0 0 0.25em;
+    list-style-type: none;
+    li {
+        &:before {
+            content: '\2022';
+            font-size: 20px;
+            margin-right: 1em;
+        }
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+}
+strong {
+    @extend %museo-700;
+    font-weight: normal;
+}
+[class*="__intro-wrap"] {
+    width: 100%;
+    max-width: 829px; // special size for this design
+    margin: 0 auto;
+}
+[class*="__colored-title"],
+[class*="__main-colored-title"],
+[class*="__large-title"],
+[class*="__lead-text"],
+[class*="__intro-text"],
+[class*="__paragraph-text"] {
+    width: 100%;
+    margin-bottom: 1.15em;
+}
+[class*="__colored-title"],
+[class*="__main-colored-title"] {
+    text-transform: uppercase;
+    margin-bottom: 2.25em;
+    @include bp($max:767px) {
+        text-align: center;
+    }
+}
+[class*="__large-title"] {
+    text-align: center;
+}
+[class*="__lead-text"] {
+    @extend %h3;
+}
+[class*="__intro-text"],
+[class*="__paragraph-text"] {
+    & > *:first-child {
+        margin-top: 0;
+    }
+    & > *:last-child {
+        margin-bottom: 0;
+    }
+}

@@ -1,0 +1,111 @@
+/*------------------------------------*\
+    :: Newsletter Styles
+\*------------------------------------*/
+.cta-newsletter {
+	width: 100%;
+	overflow: hidden;
+	background-color: $color-5;
+	&__main-wrap {
+		display: flex;
+		flex-wrap: wrap;
+		align-content: center;
+		padding: 4em 0;
+		@include bp($max:960px) {
+			padding: 3em 0;
+		}
+	}
+	&__text-wrap {
+		width: 50%;
+		display: flex;
+		align-items: center;
+		@include bp($max:768px) {
+			width: 100%;
+		}
+	}
+
+	&__text {
+		padding-right: $pad*3;
+		@include bp($max:768px) {
+			padding-right: 0;
+			margin-bottom: 1.5em;
+		}
+		h3 {
+			color: $color-1;
+			margin-bottom: 0;
+		}
+		.newsletter-cta__blurb {
+			& > *:first-child {
+				margin-top: 0;
+			}
+			& > *:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&__form-wrap {
+		width: 50%;
+		@include bp($max:768px) {
+			width: 100%;
+		}
+		.newsletter-cta__form {
+			display: flex;
+			align-items: center;
+			height: 100%;
+		}
+		// Form Mods
+		.gform_wrapper {
+			width: 100%;
+			margin: 0!important;
+			.validation_error {
+				display: none!important;
+			}
+		}
+		form {
+			display: flex;
+			align-items: center;
+			@include bp($max:960px) {
+				flex-wrap: wrap;
+			}
+		}
+		.gform_body {
+			display: inline-block;
+			.gform_fields {
+				overflow: visible!important;
+			}
+			.gfield {
+				max-width: none!important;
+				min-width: 100%!important;
+				margin-bottom: 0!important;
+				&.gfield_error {
+					margin-bottom: 0!important;
+				}
+			}
+			input[type=email] {
+				box-shadow: 0px 0px 12px 3px rgba(0, 0, 0, 0.05);
+			}
+			@include bp($max:639px) {
+				width: 100%;
+			}
+		}
+		.gform_footer {
+			display: inline-block;
+			width: auto!important;
+			margin: 0 0 0 0.75em!important;
+			padding: 0!important;
+			input[type=submit] {
+				float: right;
+				width: auto!important;
+			}
+			@include bp($max:960px) {
+				margin: 1em 0 0 0!important;
+			}
+			@include bp($max:500px) {
+				width: 100%!important;
+				input[type=submit] {
+				width: 100%!important;
+				}
+			}
+		}
+	}
+}

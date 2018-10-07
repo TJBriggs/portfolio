@@ -1,0 +1,408 @@
+/*------------------------------------*\
+    :: Global Modifiers
+\*------------------------------------*/    
+// This is where you place any modifiers that are available to most modules
+// Background Color Options
+[class*="--bg-blue"] {
+    background-color: $bg-blue;
+}
+[class*="--bg-gray"] {
+    background-color: $bg-gray;
+}
+[class*="--bg-green"] {
+    background-color: $bg-green;
+}
+[class*="--bg-orange"] {
+    background-color: $bg-orange;
+}
+[class*="--bg-red"] {
+    background-color: $bg-red;
+}
+[class*="--bg-teal"] {
+    background-color: $bg-teal;
+}
+// Margin and Padding settings
+[class*="--marg-top"] {
+    margin-top: 5em;
+    @include bp($max:768px) {
+        margin-top: 4em;
+    }
+}
+[class*="--marg-top-lg"] {
+    margin-top: 8em;
+    @include bp($max:768px) {
+        margin-top: 6em;
+    }
+}
+[class*="--marg-bot"] {
+    margin-bottom: 5em;
+    @include bp($max:768px) {
+        margin-bottom: 4em;
+    }
+}
+[class*="--marg-bot-lg"] {
+    margin-bottom: 8em;
+    @include bp($max:768px) {
+        margin-bottom: 6em;
+    }
+}
+[class*="--pad-top"] {
+    padding-top: 3.75em;
+    @include bp($max:768px) {
+        padding-top: 3em;
+    }
+}
+[class*="--pad-top-md"] {
+    padding-top: 0;
+    @include bp($max:768px) {
+        padding-top: 4em;
+    }
+}
+[class*="--pad-top-lg"] {
+    padding-top: 8em;
+    @include bp($max:768px) {
+        padding-top: 6em;
+    }
+}
+[class*="--pad-bot"] {
+    padding-bottom: 3.75em;
+    @include bp($max:768px) {
+        padding-bottom: 3em;
+    }
+}
+[class*="--pad-bot-lg"] {
+    padding-bottom: 8em;
+    @include bp($max:768px) {
+        padding-bottom: 6em;
+    }
+}
+// Modifier to and extra padding-top on mobile
+[class*="--extra-padding-top-mobile"] {
+    @include bp($max:767px) {
+        padding-top: 7em;
+    }
+}
+// Modifier to center lead text
+[class*="--ctr-lead"] {
+    [class*="__lead-text"] {
+        text-align: center;
+    }
+}
+/*------------------------------------*\
+    :: Adjust padding of section 
+    :: directly below hero
+\*------------------------------------*/
+.main-torso__module {
+    &:first-of-type {
+        padding-top: 0;
+        @include bp($max:768px) {
+            padding-top: 3em;
+        }
+        @include bp($max:500px) {
+            padding-top: 3em;
+        }
+    }
+}
+/*------------------------------------*\
+    :: Curved Accents 
+\*------------------------------------*/ 
+// Left to Right: Curve Down or Curve Up
+// --main- is used on a few modules that need to add
+// accent colors to sub-element like the hover CTAs 
+// or Color Boxes. --main- allows us to apply modifiers
+// to the entire block while still applying different 
+// mods to the sub-elements
+[class*="--dn"],
+[class*="--up"],
+[class*="--lg-up"], 
+[class*="--lg-dn"],
+[class*="--main-dn"],
+[class*="--main-up"],
+[class*="--main-lg-up"], 
+[class*="--main-lg-dn"] {
+    position: relative;
+    overflow: visible;
+    padding-bottom: 13em;
+    @include bp($max:1440px) {
+        padding-bottom: 11em; 
+    }
+    @include bp($max:500px) {
+        padding-bottom: 8em; 
+    }
+    &:after {
+        content: '';
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 100%;
+        min-width: 1920px; 
+        position: absolute;
+        left: 0;
+        right: 0;
+        z-index: 10;
+        @include bp($max:1440px) {
+            min-width: 1440px; 
+        }
+    }
+} 
+
+// Smaller Curves
+[class*="--up"],
+[class*="--main-up"] {
+    &:after {
+        height: 128px; 
+        bottom: -13px; 
+        @include bp($max:1440px) {
+            height: 100px; 
+            bottom: -13px; 
+        }
+        @include bp($max:500px) {
+            min-width: 500px;
+            height: 40px; 
+            bottom: -13px; 
+        }
+    }
+} 
+
+[class*="--dn"],
+[class*="--main-dn"] {
+    &:after {
+        height: 128px; 
+        bottom: -13px; 
+        @include bp($max:1440px) {
+            height: 100px; 
+            bottom: -13px; 
+        }
+        @include bp($max:500px) {
+            min-width: 500px;
+            height: 40px; 
+            bottom: -13px; 
+        }
+    }
+}
+// Large Curves
+[class*="--lg-up"],
+[class*="--main-lg-up"] {
+    &:after {
+        height: 135px; 
+        bottom: -10px;
+        @include bp($max:1440px) {
+            height: 100px; 
+            bottom: -10px; 
+        }
+        @include bp($max:500px) {
+            min-width: 500px;
+            height: 45px; 
+            bottom: -13px; 
+        }
+    }
+    & ~ .main-torso__module {
+        @include bp($max:768px) {
+            padding-top: 6em;
+        }
+    }
+}
+
+[class*="--lg-dn"],
+[class*="--main-lg-dn"] {
+    &:after {
+        height: 135px; 
+        bottom: -10px;
+        @include bp($max:1440px) {
+            height: 100px; 
+            bottom: -10px; 
+        }
+        @include bp($max:500px) {
+            min-width: 500px;
+            height: 45px; 
+            bottom: -13px; 
+        }
+    }
+    & ~ .main-torso__module {
+        @include bp($max:768px) {
+            padding-top: 6em;
+        }
+    }
+}
+// Curve Colors
+[class*="--dn"],
+[class*="--main-dn"] {
+    &[class*="--cv-blue"],
+    &[class*="--main-cv-blue"] {
+        &:after {
+            background-image: url('./assets/images/accent-curves/dn-bl.svg');
+        }
+    }
+    &[class*="--cv-gray"],
+    &[class*="--main-cv-gray"] {
+        &:after {
+            background-image: url('./assets/images/accent-curves/dn-gr.svg');
+        }
+    }
+    &[class*="--cv-green"],
+    &[class*="--main-cv-green"] {
+        &:after {
+            background-image: url('./assets/images/accent-curves/dn-gn.svg');
+        }
+    }
+    &[class*="--cv-orange"],
+    &[class*="--main-cv-orange"] {
+        &:after {
+            background-image: url('./assets/images/accent-curves/dn-og.svg');
+        }
+    }
+    &[class*="--cv-red"],
+    &[class*="--main-cv-red"] {
+        &:after {
+            background-image: url('./assets/images/accent-curves/dn-rd.svg');
+        }
+    }
+    &[class*="--cv-teal"],
+    &[class*="--main-cv-teal"] {
+        &:after {
+            background-image: url('./assets/images/accent-curves/dn-tl.svg');
+        }
+    }
+    &[class*="--cv-white"],
+    &[class*="--main-cv-white"] {
+        &:after {
+            background-image: url('./assets/images/accent-curves/dn-wh.svg');
+        }
+    }
+}
+[class*="--up"],
+[class*="--main-up"] {
+    &[class*="--cv-blue"],
+    &[class*="--main-cv-blue"] {
+        &:after {
+            background-image: url('./assets/images/accent-curves/up-bl.svg');
+        }
+    }
+    &[class*="--cv-gray"],
+    &[class*="--main-cv-gray"] {
+        &:after {
+            background-image: url('./assets/images/accent-curves/up-gr.svg');
+        }
+    }
+    &[class*="--cv-green"],
+    &[class*="--main-cv-green"] {
+        &:after {
+            background-image: url('./assets/images/accent-curves/up-gn.svg');
+        }
+    }
+    &[class*="--cv-orange"],
+    &[class*="--main-cv-orange"] {
+        &:after {
+            background-image: url('./assets/images/accent-curves/up-og.svg');
+        }
+    }
+    &[class*="--cv-red"],
+    &[class*="--main-cv-red"] {
+        &:after {
+            background-image: url('./assets/images/accent-curves/up-rd.svg');
+        }
+    }
+    &[class*="--cv-teal"],
+    &[class*="--main-cv-teal"] {
+        &:after {
+            background-image: url('./assets/images/accent-curves/up-tl.svg');
+        }
+    }
+    &[class*="--cv-white"],
+    &[class*="--main-cv-white"] {
+        &:after {
+            background-image: url('./assets/images/accent-curves/up-wh.svg');
+        }
+    }
+}
+[class*="--lg-dn"],
+[class*="--main-lg-dn"] {
+    &[class*="--cv-blue"],
+    &[class*="--main-cv-blue"] {
+        &:after {
+            background-image: url('./assets/images/accent-curves/lg-dn-bl.svg');
+        }
+    }
+    &[class*="--cv-gray"],
+    &[class*="--main-cv-gray"] {
+        &:after {
+            background-image: url('./assets/images/accent-curves/lg-dn-gr.svg');
+        }
+    }
+    &[class*="--cv-green"],
+    &[class*="--main-cv-green"] {
+        &:after {
+            background-image: url('./assets/images/accent-curves/lg-dn-gn.svg');
+        }
+    }
+    &[class*="--cv-orange"],
+    &[class*="--main-cv-orange"] {
+        &:after {
+            background-image: url('./assets/images/accent-curves/lg-dn-og.svg');
+        }
+    }
+    &[class*="--cv-red"],
+    &[class*="--main-cv-red"] {
+        &:after {
+            background-image: url('./assets/images/accent-curves/lg-dn-rd.svg');
+        }
+    }
+    &[class*="--cv-teal"],
+    &[class*="--main-cv-teal"] {
+        &:after {
+            background-image: url('./assets/images/accent-curves/lg-dn-tl.svg');
+        }
+    }
+    &[class*="--cv-white"],
+    &[class*="--main-cv-white"] {
+        &:after {
+            background-image: url('./assets/images/accent-curves/lg-dn-wh.svg');
+        }
+    }
+}
+[class*="--lg-up"], 
+[class*="--main-lg-up"] {
+    &[class*="--cv-blue"],
+    &[class*="--main-cv-blue"] {
+        &:after {
+            background-image: url('./assets/images/accent-curves/lg-up-bl.svg');
+        }
+    }
+    &[class*="--cv-gray"],
+    &[class*="--main-cv-gray"] {
+        &:after {
+            background-image: url('./assets/images/accent-curves/lg-up-gr.svg');
+        }
+    }
+    &[class*="--cv-green"],
+    &[class*="--main-cv-green"] {
+        &:after {
+            background-image: url('./assets/images/accent-curves/lg-up-gn.svg');
+        }
+    }
+    &[class*="--cv-orange"],
+    &[class*="--main-cv-orange"] {
+        &:after {
+            background-image: url('./assets/images/accent-curves/lg-up-og.svg');
+        }
+    }
+    &[class*="--cv-red"],
+    &[class*="--main-cv-red"] {
+        &:after {
+            background-image: url('./assets/images/accent-curves/lg-up-rd.svg');
+        }
+    }
+    &[class*="--cv-teal"],
+    &[class*="--main-cv-teal"] {
+        &:after {
+            background-image: url('./assets/images/accent-curves/lg-up-tl.svg');
+        }
+    }
+    &[class*="--cv-white"],
+    &[class*="--main-cv-white"] {
+        &:after {
+            background-image: url('./assets/images/accent-curves/lg-up-wh.svg');
+        }
+    }
+}
+
+

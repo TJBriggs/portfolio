@@ -1,0 +1,123 @@
+/*------------------------------------*\
+    ::  Main Blog Page Layout
+\*------------------------------------*/	
+.archive, .category {
+	.cat-torso__inner {
+		padding: 25px $pad 0;
+	}
+	.category__wrap {
+		width: 100%;
+		overflow: hidden;
+		ul {
+			margin: 0;
+			padding: 25px 0 20px;
+			text-align: left;
+		}
+		li {
+			display: inline-block;
+			width: auto;
+			margin-bottom: 15px;
+			a {
+				display: inline-block;
+				padding: 10px $pad*2;
+			}
+		}
+	}
+	.cat-torso__content {
+		display: flex;
+		flex-wrap: wrap;
+		padding: 50px 0 0;
+		@include bp($max:960px) {
+			padding: 30px 0 30px;
+		}
+		@include bp($max:700px) {
+			padding: 30px 0 0px;
+		}
+	}
+	.single-torso__item {
+		width: 33.33333%;
+		padding: 0 10px 50px;
+		@include bp($max:960px) {
+			width: 50%;
+		}
+		@include bp($max:700px) {
+			width: 100%;
+			padding: 0 $pad 50px;
+		}
+		@include bp($max:480px) {
+			padding: 0 0 50px;
+		}
+	}
+	.single-torso__image {
+		height: 315px;
+		width: 100%;
+		@include bp($max:700px) {
+			height: 350px;
+		}
+		@include bp($max:480px) {
+			height: 300px;
+		}
+		@include bp($max:400px) {
+			height: 275px;
+		}
+		@include bp($max:370px) {
+			height: 225px;
+		}
+	}
+	.post__overlay {
+		height: 100%;
+		width: 100%;
+		position: relative;
+	}
+	.social-links {
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: 100;
+		margin: 0;
+		padding: 20px 15px;
+		li {
+			margin-bottom: 5px;
+			&:last-of-type { // add some space between linkedin and pinterest icon
+				margin-top: 7px;
+			}
+		}
+		a {
+			display: block;
+			svg {
+				height: 22px;
+				width: 22px;
+			}
+		}
+	}
+	.single-torso__posted {
+		h4 {
+			margin: 20px 0 15px 0;
+		}
+		.tag-icon {
+			height: 14px;
+			width: 14px;
+			margin: 0 5px 0 0;
+			position: relative;
+			top: 1px;
+		}
+		.post-tag {
+			display: inline-block;
+			margin-bottom: 15px;
+		}
+		.post-date {
+			display: inline-block;
+			width: 100%;
+			margin-bottom: 12px;
+		}
+	}
+	.single-torso__post {
+		p {
+			margin: 0;
+		}
+		.continue {
+			display: inline-block;
+			margin: 20px 0 0 0;
+		}
+	}
+}

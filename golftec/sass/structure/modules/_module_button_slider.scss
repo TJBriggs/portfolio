@@ -1,0 +1,338 @@
+/*------------------------------------*\
+    ::  Button Slider Styles
+\*------------------------------------*/	
+.button-slider {
+	background-color: $color-4-lightest;
+	&__inner {
+		position: relative;
+	}
+	&__slide { // Have to put the BG image on this div otherwise it gets cut off
+		display: flex;
+		width: 100%;
+		flex-wrap: wrap;
+		background-position: top left;
+		background-repeat: no-repeat;
+		background-size: contain;
+		@include bp($max:960px) {
+			background-position: top center; // Depending on BG image this may need to change
+			background-size: auto;
+		}
+		@include bp($max:640px) {
+			height: 22em; // Have to set heights so that BG image touches top and bottom of module
+		}
+	}
+	// Left Column Styles
+	&__left {
+		height: 35em;  // Forces module height so that BG image touches top and bottom of module
+		width: 48%;
+		margin-right: 4%;
+		&:before { // Vertically centering the Unknown
+			content: '';
+			display: inline-block;
+  			height: 100%; 
+  			vertical-align: middle;
+		}
+		@include bp($max:960px) {
+			height: 30em;
+			width: 100%;
+			margin-right: 0;
+		}
+		@include bp($max:640px) {
+			height: 100%;
+			text-align: center;
+		}
+	}
+	&__content {
+		display: inline-block; // Vertically centering the unknown
+		width: 97%;
+		max-width: 470px;
+		margin: 0 auto;
+		padding: 0 $pad;
+  		text-align: left;
+  		vertical-align: middle; // Vertically centering the unknown
+  		h2 {
+			margin: 0;
+			line-height: 1.15em;
+			strong {
+				color: $color-2;
+			}
+  		}
+  		@include bp($max:960px) {
+  			max-width: 800px;
+  			margin: 0 auto;
+  			padding: 0 $pad*4;
+  			h2 {
+  				max-width: 450px;
+  			}
+  		}
+  		@include bp($max:640px) {
+  			max-width: 400px;
+  			margin: 0 auto;
+  			padding: 0 $pad;
+  			transform: translateY(-1.5em);
+  			h2 {
+  				max-width: 330px;
+  				font-size: 1.75em;
+  			}
+  		}
+	}
+	// Right Column Styles
+	&__right {
+		width: 48%;
+		padding-top: 3.5em;
+	    & > *:first-child { // Remove top margin from first element
+	        margin-top: 0;
+	    }
+		p {
+			max-width: 460px;
+			font-size: 0.9em;
+		}
+		@include bp($max:960px) {
+			width: 100%;
+			padding: 3.5em $pad*5 2em;
+			background-color: $color-3;
+			p {
+				max-width: 550px;
+				font-size: 1em;
+			}
+		}
+		// Hide at mobile
+		@include bp($max:640px) {
+			display: none;
+		}
+	}
+	// Button Navigation Styles
+	&__nav-wrap {
+		width: 48%;
+		padding-right: $pad;
+		position: absolute;
+		bottom: 4em;
+		right: 0;
+		overflow: hidden;
+		@include bp($max:960px) {
+			width: 100%;
+			padding: 0 $pad*5 2.5em;
+			position: static;
+			background-color: $color-3;
+			border-bottom: 1px solid $color-2;
+		}
+		@include bp($max:640px) {
+			width: 100%;
+			padding: 0;
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background-color: rgba(48, 42, 50, 0.2);
+			border: none;
+			text-align: center;
+		}
+	}
+	&__nav {
+		display: inline-block;
+		width: auto;
+		min-width: 320px;
+		@include bp($max:640px) {
+			padding: 0.75em 0;
+		}
+	}
+	&__nav-btn {
+		display: block;
+		float: left;
+		height: 47px;
+		width: 48%;
+		margin: 0 4% 1em 0;
+		border: 2px solid $color-4-darkest;
+		.button-slider__hover-wrap {
+			box-sizing: content-box;
+			display: inline-block;
+			height: 100%;
+			width: 100%;
+			position: relative;
+			z-index: 10;
+			transition: border 300ms;
+			&:after { // For hover effects
+	    		content: '';
+	      		height: 100%;
+	      		width: 0;
+		      	position: absolute;
+	      		top: 0;
+	      		left: 0;
+		      	z-index: -1;
+	      		background-color: $color-2;
+	      		transition: width 300ms;
+	    	}
+		}
+    	// Button Icon
+		img,svg {
+			display: inline-block;
+			height: 25px;
+			width: 25px;
+			margin: 0 0.75em;
+			position: relative;
+			top: 7px;
+			fill: $color-4-darkest;
+			transition: fill 300ms;
+		}
+		// Button Text
+		span {
+			color: $color-4-darkest;
+			font-weight: normal;
+			font-size: 0.85em;
+			transition: color 300ms;
+		}
+		// Far Right Buttons
+		&:nth-of-type(even) {
+			margin-right: 0;
+		}
+		// Hover & Active Effects
+		&:hover, &.active {
+			text-decoration: none;
+			border: 2px solid $color-2;
+			.button-slider__hover-wrap {
+				&:after {
+        			width: 100%;
+      			}
+			}
+      		svg {
+      			fill: $color-3;
+      		}
+      		span {
+      			color: $color-3;
+      		}
+   		}
+   		// Media Queries
+   		@include bp($max:1200px) {
+   			span {
+				font-size: 1.075vw; // Scale button text
+				font-weight: bold;
+   			}
+		}
+		@include bp($max:960px) {
+			max-width: 285px;
+			span {
+				font-size: 0.7em;
+				font-weight: bold;
+			}
+		}
+		@include bp($max:640px) {
+			display: inline-block;
+			float: none;
+			max-width: none;
+			margin: 0 3.5% 0 0;
+			width: auto;
+			span {
+				display: none;
+			}
+			&:nth-of-type(even) {
+				margin-right: 3.5%;
+			}
+			&:last-of-type {
+				margin-right: 0;
+			}
+		}
+	}
+}
+/*------------------------------------*\
+    ::  KSS MarkUp (Ignore)
+\*------------------------------------*/ 
+// Button Slider
+//
+// Demo:<br><a href="../modules/module-button-slider.php" target="_blank">module-button-slider.php</a>
+//
+// Stylesheet:<br>
+// <a href="../sass/structure/modules/_module_button_slider.scss" target="_blank">_module_button_slider.scss</a><br>
+//
+// Path To The Code:<br>
+// golftec/golftec/modules/module-button-slider.php<br>
+// golftec/golftec/js/sliders-src/button-slider.js
+//
+// Markup:
+// <article class="button-slider main-torso__group">
+//     <div class="button-slider__inner">
+//         <div class="button-slider__slides owl-carousel js-owl-carousel--button-slider">
+//             <div class="button-slider__slide" style="background-image: url('../images/modules/button-slider/slide-1-bg.png')">
+//                 <div class="button-slider__left">
+//                     <div class="button-slider__content">
+//                         <h2><strong>Improve Faster</strong><br> with Advanced Training Technology<br>&amp; Retention Tools.</h2>
+//                         <a class="button-slider__btn btn" href="#">Our Technology</a>
+//                     </div> <!-- // button-slider__content -->
+//                 </div> <!-- // button-slider__left -->
+//                 <div class="button-slider__right"> <!-- // Content here will need character limits due to absolute positioning of buttons -->
+//                     <p>As part of our fact-based diagnosis and lessons, our Motion Measurement System will identify twelve critical elements of the mechanics of your swing, including: shoulder turn, shoulder tilt, shoulder bend, hip turn, hip tilt, hip bend and more. Your Coach will use the quantified mechanics of your golf swing to guide and measure your swing changes for a more effective golf swing.
+//                     </p>
+//                     <p>Only GolfTEC’s patented TECswing software allows you to see real-time video and motion measurement simultaneously. Combining the objective measurements with video analysis simplifies your improvement process and focuses in on the swing changes you are making.​
+//                     </p>
+//                 </div> <!-- // button-slider__right -->
+//             </div> <!-- // button-slider__slide -->
+//             <div class="button-slider__slide" style="background-image: url('../images/placeholders/placeholder.png')">
+//                 <div class="button-slider__left">
+//                     <div class="button-slider__content">
+//                         <h2><strong>Improve Faster</strong><br> with Advanced Training Technology<br>&amp; Retention Tools.</h2>
+//                         <a class="button-slider__btn btn" href="#">Our Technology</a>
+//                     </div> <!-- // button-slider__content -->
+//                 </div> <!-- // button-slider__left -->
+//                 <div class="button-slider__right"> <!-- // Content here will need character limits due to absolute positioning of buttons -->
+//                     <p>As part of our fact-based diagnosis and lessons, our Motion Measurement System will identify twelve critical elements of the mechanics of your swing, including: shoulder turn, shoulder tilt, shoulder bend, hip turn, hip tilt, hip bend and more. Your Coach will use the quantified mechanics of your golf swing to guide and measure your swing changes for a more effective golf swing.
+//                     </p>
+//                     <p>Only GolfTEC’s patented TECswing software allows you to see real-time video and motion measurement simultaneously. Combining the objective measurements with video analysis simplifies your improvement process and focuses in on the swing changes you are making.​
+//                     </p>
+//                 </div> <!-- // button-slider__right -->
+//             </div> <!-- // button-slider__slide -->
+//             <div class="button-slider__slide" style="background-image: url('../images/placeholders/placeholder.png')">
+//                 <div class="button-slider__left">
+//                     <div class="button-slider__content">
+//                         <h2><strong>Improve Faster</strong><br> with Advanced Training Technology<br>&amp; Retention Tools.</h2>
+//                         <a class="button-slider__btn btn" href="#">Our Technology</a>
+//                     </div> <!-- // button-slider__content -->
+//                 </div> <!-- // button-slider__left -->
+//                 <div class="button-slider__right"> <!-- // Content here will need character limits due to absolute positioning of buttons -->
+//                     <p>As part of our fact-based diagnosis and lessons, our Motion Measurement System will identify twelve critical elements of the mechanics of your swing, including: shoulder turn, shoulder tilt, shoulder bend, hip turn, hip tilt, hip bend and more. Your Coach will use the quantified mechanics of your golf swing to guide and measure your swing changes for a more effective golf swing.
+//                     </p>
+//                     <p>Only GolfTEC’s patented TECswing software allows you to see real-time video and motion measurement simultaneously. Combining the objective measurements with video analysis simplifies your improvement process and focuses in on the swing changes you are making.​
+//                     </p>
+//                 </div> <!-- // button-slider__nav-wrap -->
+//             </div> <!-- // button-slider__slide -->
+//             <div class="button-slider__slide" style="background-image: url('../images/placeholders/placeholder.png')">
+//                 <div class="button-slider__left">
+//                     <div class="button-slider__content">
+//                         <h2><strong>Improve Faster</strong><br> with Advanced Training Technology<br>&amp; Retention Tools.</h2>
+//                         <a class="button-slider__btn btn" href="#">Our Technology</a>
+//                     </div> <!-- // button-slider__content -->
+//                 </div> <!-- // button-slider__left -->
+//                 <div class="button-slider__right"> <!-- // Content here will need character limits due to absolute positioning of buttons -->
+//                     <p>As part of our fact-based diagnosis and lessons, our Motion Measurement System will identify twelve critical elements of the mechanics of your swing, including: shoulder turn, shoulder tilt, shoulder bend, hip turn, hip tilt, hip bend and more. Your Coach will use the quantified mechanics of your golf swing to guide and measure your swing changes for a more effective golf swing.
+//                     </p>
+//                     <p>Only GolfTEC’s patented TECswing software allows you to see real-time video and motion measurement simultaneously. Combining the objective measurements with video analysis simplifies your improvement process and focuses in on the swing changes you are making.​
+//                     </p>
+//                 </div> <!-- // button-slider__right -->
+//             </div> <!-- // button-slider__slide -->
+//         </div> <!-- // button-slider__slides -->
+//         <div class="button-slider__nav-wrap">
+//             <div class="button-slider__nav">
+//                 <a class="button-slider__nav-btn" href="javascript:void(0);">
+//                     <span class="button-slider__hover-wrap">
+//                         <img class="js-ajax-replace" src="../images/modules/button-slider/swing-icon.svg" alt="Swing Icon"><span>TECswing Software</span>
+//                     </span>
+//                 </a>
+//                 <a class="button-slider__nav-btn" href="javascript:void(0);">
+//                     <span class="button-slider__hover-wrap">
+//                         <img class="js-ajax-replace" src="../images/modules/button-slider/motion-icon.svg" alt="Motion Icon"><span>Motion Measurement</span>
+//                     </span>
+//                 </a>
+//                 <a class="button-slider__nav-btn" href="javascript:void(0);">
+//                     <span class="button-slider__hover-wrap">
+//                         <img class="js-ajax-replace" src="../images/modules/button-slider/speed-icon.svg" alt="Speed Icon"><span>High-Speed Video Analysis</span>
+//                     </span>
+//                 </a>
+//                 <a class="button-slider__nav-btn" href="javascript:void(0);">
+//                     <span class="button-slider__hover-wrap">
+//                         <img class="js-ajax-replace" src="../images/modules/button-slider/web-icon.svg" alt="Web Icon"><span>Web Lesson Portal</span>
+//                     </span>
+//                 </a>
+//             </div> <!-- // button-slider__nav -->
+//         </div> <!-- // button-slider__nav-wrap -->
+//     </div> <!-- // button-slider__inner -->
+// </article> <!-- // button-slider -->
+//
+// Styleguide 6.5

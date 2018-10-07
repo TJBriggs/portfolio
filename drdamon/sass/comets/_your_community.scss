@@ -1,0 +1,56 @@
+/*-------------------------------------------*\
+    ::Page Styles - Your Community
+\*-------------------------------------------*/
+.page-your-community {
+	.page__group--athletics {
+		padding: 35px 0 50px;
+		.thirds__group--2 {
+			h2 {
+				color: $color-2;
+			}
+		}
+	}
+	.page__group--smiles {
+		padding: 30px 0 50px;
+	}
+	.page__group--toys-intro {
+		padding-top: 20px;
+		h2 {
+			margin-bottom: 10px;
+		}
+	}
+	.page__group--toys-sbs {
+		padding-bottom: 30px;
+		.thirds__group--1 {
+			@include bp($solarsystem) {
+				p {
+					margin-top: 25px;
+					text-align: center;
+				}
+			}
+		}
+	}
+	.page__group--sponsors {
+		padding: 35px 0 60px;
+		.section__title-wrap {
+			margin-bottom: 25px;
+		}
+		.thirds__group {
+			h2 {
+				font-size: emCalc(28px);
+				text-align: center;
+				overflow: hidden;
+			}
+			p {
+				text-align: center;
+			}
+		}
+		.thirds__group--2 {
+			border-left: 1px solid lighten($bg-gray, 45%);
+			border-right: 1px solid lighten($bg-gray, 45%);
+			@include bp($solarsystem) {
+				border: none;
+			}
+		}
+	}
+}

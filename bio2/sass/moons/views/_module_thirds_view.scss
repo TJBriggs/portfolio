@@ -1,0 +1,28 @@
+/*------------------------------------*\
+    ::  Thirds-block Styles
+\*------------------------------------*/	
+.thirds {
+	&__video, &__image {
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	&__video {
+		cursor: pointer;
+		svg {
+			opacity: 0.65;
+			transition: opacity 400ms;
+		}
+		&:hover {
+			svg {
+				opacity: 1;
+			}
+		}
+	}
+	&__content {
+		color: #fff;
+	}
+}
+/*------------------------------------*\
+    ::  Modifiers
+\*------------------------------------*/

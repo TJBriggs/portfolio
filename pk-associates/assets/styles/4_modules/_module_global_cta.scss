@@ -1,0 +1,28 @@
+/*------------------------------------*\
+    :: Global CTA
+\*------------------------------------*/
+.global-cta {
+    width: 100%;
+    padding: 5.25em 0; 
+    background-color: $color-2-light;
+    background: -moz-radial-gradient(center, ellipse cover, #f9faf5 0%, #edefe1 100%); /* FF3.6-15 */
+    background: -webkit-radial-gradient(center, ellipse cover, #f9faf5 0%,#edefe1 100%); /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(ellipse at center, #f9faf5 0%,#edefe1 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9faf5', endColorstr='#edefe1',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    @include bp($max:500px) {
+        padding: 3.5em 0;
+    }
+}
+.global-cta__wrap {
+    text-align: center;
+    max-width: 750px;
+    width: 100%;
+    margin: 0 auto;
+    h4 {
+        margin: 0.55em 0 0 0;  
+    }
+}
+.global-cta__btn {
+  margin: 2em 0 0 0;
+}
+

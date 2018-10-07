@@ -1,0 +1,222 @@
+/*------------------------------------*\
+	:: Form Block Styles
+\*------------------------------------*/
+.form-block {
+	width: 100%;
+	overflow: hidden;
+	padding: 4em 0;
+	background-color: $color-3;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	@include bp($max:768px) {
+		padding: 3em 0;
+	}
+	&__main-wrap {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row-reverse;
+		justify-content: flex-start;
+		align-items: center;
+		@include bp($max:767px) {
+			flex-direction: row;
+		}
+	}
+	&__form-wrap {
+		width: 50%;
+		@include bp($max:767px) {
+			width: 100%;
+		}
+	}
+	&__image-wrap {
+		width: 50%;
+		text-align: center;
+		figcaption {
+			margin-top: 1em;
+			@extend %kbold;
+			font-size: 18px;
+			text-transform: uppercase;
+		}
+		@include bp($max:767px) {
+			width: 100%;
+		}
+	}
+
+}
+// Modifiers and style for Form Block with Text
+.form-block--text {
+	.form-block__main-wrap {
+		flex-direction: row;
+		align-items: flex-start;
+	}
+	.form-block__text-wrap {
+		width: 50%;
+		padding-right: $pad*4;
+		@include bp($max:768px) {
+			width: 100%;
+			padding-right: 0;
+		}
+		.form-block__text {
+			min-height: 425px;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: contain;
+			@include bp($max:768px) {
+				min-height: 300px;
+			}
+			@include bp($max:500px) {
+				padding-bottom: 1.5em;
+			}
+		}
+		h2 {
+			font-size: 36px;
+			padding-top: 65px;
+			position: relative;
+			color: $color-3;
+			strong {
+				color: $color-3;
+			}
+			&:after {
+				content: "";
+				height: 3px;
+				width: 45px;
+				position: absolute;
+				top: 20px;
+				left: 0;
+				background-color: $color-3;
+			}
+		}
+		p {
+			color: $color-3;
+			font-size: 18px;
+			line-height: 1.5em;
+		}
+		@include bp($max:768px) {
+			width: 100%;
+		}
+	}
+	.form-block__form-wrap {
+		@include bp($max:768px) {
+			width: 100%;
+		}
+	}
+	// Form Mods
+	.gfield .gfield_label {
+		display: block!important;
+		margin-bottom: 0.4em;
+		color: $color-3;
+		font-weight: normal;
+		.gfield_required {
+			display: none;
+		}
+	}
+	.gform__half, .gform__half.gfield_error {
+		width: 48%!important;
+		margin-right: 4%!important;
+		@include bp($max:500px) {
+			width: 100%!important;
+			margin-right: 0!important;
+		}
+	}
+	.gform__last, .gform__half.gform__last.gfield_error {
+		margin-right: 0!important;
+	}
+	.gfield_error {
+		background-color: transparent!important;
+		label {
+			color: $color-3!important;
+		}
+	}
+	.gfield_error .validation_message {
+		top: 30px;
+		padding: 0 $pad!important;
+	}
+	.validation_error {
+		background-color: $color-3!important;
+		padding: 16px $pad*2!important;
+	}
+	.gform_footer {
+		@include bp($min:501px) {
+			input[type=submit] {
+				float: right;
+				width: auto!important;
+
+			}
+		}
+	}
+	.gform_confirmation_wrapper {
+		height: 100%;
+		min-height: 425px;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		@include bp($max:960px) {
+			min-height: 165px;
+		}
+		.gform_confirmation_message {
+			color: $color-3;
+			text-align: center;
+			padding: 0 $pad;
+		}
+	}
+}
+
+// Overlap Mods
+.form-block--text {
+	background-color: $color-1-dark;
+	color: $color-3;
+	.small-rule {
+		background-color: $color-3;
+	}
+	&.form-block--overlap {
+		background-color: $color-3;
+		overflow: visible;
+		padding: 0 $pad*2;
+		.form-block__inner {
+			background-color: $color-1-dark;
+			max-width: 1080px;
+			margin-bottom: -300px;
+			padding: 3em $pad*4;
+			position: relative;
+			top: -300px;
+			z-index: 500;
+			background-color: $color-1-dark!important;
+			border-radius: 5px;
+			box-shadow: 12px 3px 7px -4px rgba(0, 0, 0, 0.15), -12px 3px 7px -4px rgba(0, 0, 0, 0.15);
+		}
+		@include bp($max:1080px) {
+			.form-block__inner {
+			   max-width: none;
+			}
+		}
+		@include bp($max:960px) {
+			.form-block__inner {
+				margin-bottom: -200px;
+				top: -200px;
+			}
+			.form-block__text-wrap {
+				width: 100%;
+				padding-right: 0;
+				.form-block__text {
+					min-height: 265px;
+				}
+			}
+			.form-block__form-wrap {
+				width: 100%;
+			}
+		}
+		@include bp($max:640px) {
+			padding: 0 $pad;
+			.form-block__inner {
+				margin-bottom: -250px;
+				padding: 2em $pad*2;
+				top: -250px;
+			}
+
+		}
+	}
+	&.form-block--lgray {
+		background-color: $color-6;
+	}
+}

@@ -1,0 +1,267 @@
+/*------------------------------------*\
+    ::  Hero Layout Styles
+\*------------------------------------*/	
+.hero-block {
+	width: 100%;
+	overflow: hidden;
+}
+.hero-block--static {
+	height: em(650px);
+	position: relative;
+	@include bp($max:1024px) {
+		height: em(450px);
+	}
+	@include bp($max:640px) {
+		height: em(340px);
+	}
+}
+.hero-block__overlay {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+.overlay__inner {
+	padding: 0 $pad*2; 
+	@include bp($max:480px) {
+		padding: 0 $pad;
+	}
+}
+.overlay__content {
+	height: 80px;
+	width: 100%;
+	margin: em(43px) 0 em(45px);
+	&:before { // centering the unknown
+		content: '';
+  		display: inline-block;
+  		height: 100%;
+  		vertical-align: middle;
+  		margin-right: -0.25em; /* Adjusts for spacing */	
+	}
+	@include bp($max:1024px) {
+		height: auto;
+		&:before {
+			display: none;
+		}
+	}
+	@include bp($max:640px) {
+		margin: em(28px) 0 em(30px);
+	}
+}
+.title__wrap {
+	display: inline-block;
+	width: 22%;
+	vertical-align: middle;
+	h1 {
+		margin: 0;
+		padding: 0;
+	}
+	@include bp($max:1024px) {
+		width: 100%;
+		margin-bottom: em(25px);
+	}
+	@include bp($max:640px) {
+		margin-bottom: em(15px);
+	}
+}
+.text__wrap {
+	display: inline-block;
+	width: 44%;
+	margin: 0 4%;
+	vertical-align: middle;
+	p {
+		margin: 0;
+		padding: 0;
+	}
+	@include bp($max:1024px) {
+		width: 100%;
+		margin: 0 0 em(30px) 0;
+	}
+	@include bp($max:640px) {
+		margin-bottom: em(20px);
+	}
+}
+.btn__wrap {
+	display: inline-block;
+	width: 25%;
+	vertical-align: middle;
+	@include bp($max:1024px) {
+		width: 100%;
+	}
+	.btn-hero {
+		height: 45px;
+		width: 100%;
+		padding: 0 $pad;
+		@include bp($max:1024px) {
+			width: auto;
+			padding: 0 $pad*2;
+		}
+	}
+}
+/*------------------------------------*\
+    ::  Slider Specific styles
+\*------------------------------------*/	
+.item {
+	height: em(650px);
+	position: relative;
+ 	.overlay__content {
+		height: em(210px);
+		margin: 0;
+		padding: 0 $pad*2;
+		position: relative;
+	}
+	.slider-icon {
+		position: absolute;
+		bottom: 50%;
+		transform: translateY(50%);
+		@include bp($max:1285px) {
+			width: 15px;
+		}
+		// Absolutely positioning arrows
+		// at different screen sizes so they
+		// don't overlap slider text or get 
+		// pushed off the screen
+		&.icon-prev {
+			left: -$pad*8;
+			@include bp($max:1400px) {
+				left: -$pad*4;
+			}
+			@include bp($max:1285px) {
+				left: -$pad*2;
+			}
+			@include bp($max:1175px) {
+				left: -$pad;
+			}
+			@include bp($max:1024px) {
+				left: 0;
+			}
+			@include bp($max:640px) {
+				left: -$pad;
+			}
+			@include bp($max:480px) {
+				left: 0;
+			}
+		}
+		&.icon-next {
+			right: -$pad*8;
+			@include bp($max:1400px) {
+				right: -$pad*4;
+			}
+			@include bp($max:1285px) {
+				right: -$pad*2;
+			}
+			@include bp($max:1175px) {
+				right: -$pad;
+			}
+			@include bp($max:1024px) {
+				right: 0;
+			}
+			@include bp($max:640px) {
+				right: -$pad;
+			}
+			@include bp($max:480px) {
+				right: 0;
+			}
+		}
+	}
+	.text__wrap {
+		width: 68%;
+		margin: 0 4% 0 0;
+		h1 {
+			margin: 0 0 em(5px) 0;
+		}
+	}
+	.btn__wrap {
+		width: 27%;
+	}
+	@include bp($max:1024px) {
+		height: em(450px);
+		.overlay__content {
+			height: auto;
+			padding: em(43px) $pad*4 em(47px);
+			&:before {
+				display: none;
+			}
+		}
+		.text__wrap {
+			width: 100%;
+			h1 {
+				margin-bottom: 15px;
+			}
+			p {
+				margin-bottom: 18px;
+			}
+		}
+		.btn__wrap {
+			width: 100%;
+		}
+	}
+	@include bp($max:640px) {
+		height: em(340px);
+		.overlay__content {
+			padding: em(32px) $pad*2 em(35px);
+		}
+		.text__wrap {
+			h1 {
+				margin-bottom: 10px;
+			}
+		}
+	}
+	@include bp($max:375px) {
+		.btn__wrap {
+			.btn-hero {
+				padding: 0 $pad;
+			}
+		}
+	}
+}
+/*------------------------------------*\
+    ::  Owl Carousel Styles
+\*------------------------------------*/	
+.owl-carousel--hero {
+	position: relative;
+	float: left;
+	width: 100%;
+	// Hacking the slider buttons so arrows
+	// are always visually centered
+	// transparent block needs to cover placeholder
+	// arrows at all times
+	.owl-prev, .owl-next {
+		width: 25.5%;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		cursor: pointer;
+		//background: rgba(0, 0, 0, 0.35);
+		@include bp($max:2000px) {
+			width: 20%;
+		}
+		@include bp($max:1700px) {
+			width: 13%;
+		}
+		@include bp($max:1400px) {
+			width: 10%;
+		}
+		@include bp($max:1400px) {
+			width: 10%;
+		}
+		@include bp($max:1285px) {
+			width: 7%;
+		}
+		@include bp($max:1175px) {
+			width: 6%;
+		}
+		@include bp($max:768px) {
+			width: 8%;
+		}
+		@include bp($max:425px) {
+			width: 12%;
+		}
+	}
+	.owl-prev {
+		left: 0;
+	}
+	.owl-next {
+		right: 0;
+	}
+}

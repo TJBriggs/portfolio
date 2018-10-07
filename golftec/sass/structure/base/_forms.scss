@@ -1,0 +1,380 @@
+/*------------------------------------*\
+    ::Forms
+    ------------------------------------*
+    ::Normalize.css v3.0.0 | MIT License | git.io/normalize
+\*------------------------------------*/
+button,
+input,
+optgroup,
+select,
+textarea {
+	color: inherit;
+	font: inherit;
+	margin: 0;
+}
+button {
+	overflow: visible;
+}
+button,
+select {
+	text-transform: none;
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	-webkit-appearance: button;
+	cursor: pointer;
+}
+button[disabled],
+html input[disabled] {
+	cursor: default;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+input {
+	line-height: normal;
+}
+input[type="checkbox"],
+input[type="radio"] {
+	box-sizing: border-box;
+	padding: 0;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+	height: auto;
+}
+input[type="search"] {
+	-webkit-appearance: textfield;
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+fieldset {
+	border: 1px solid #c0c0c0;
+	margin: 0 2px;
+	padding: 0.35em 0.625em 0.75em;
+}
+legend {
+	border: 0;
+	padding: 0;
+}
+textarea {
+	overflow: auto;
+}
+optgroup {
+	font-weight: bold;
+}
+/*------------------------------------*\
+    ::  Dark Form Styles
+\*------------------------------------*/	
+form.form-dark {
+	padding: $pad*0.5 $pad $pad*1.5;
+	background-color: rgba(44, 41, 45, 0.7);
+	overflow: hidden;
+}
+/*------------------------------------*\
+    ::  Labels
+\*------------------------------------*/	
+label {
+	display: inline-block;
+	padding-bottom: 0.75em;;
+	margin-top: 0.75em;
+	color: $color-3;
+	font-size: 0.7em;
+	font-weight: 100;
+	letter-spacing: 0.095em;
+}
+/*------------------------------------*\
+    ::  Text Fields
+\*------------------------------------*/	
+input[type="text"],
+input[type="search"],
+input[type="email"],
+input[type="url"],
+input[type="tel"],
+input[type="number"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+select, textarea {
+	float: left;
+	height: 45px;
+	width: 100%;
+	padding: 0 15px;
+	border: none;
+	border-radius: 0;
+	color: $txt-color-1;
+	outline: 0;
+	&::placeholder {
+		color: #c8c6c7;
+	}
+	&:focus {
+		outline: 0;
+		box-shadow: inset 0px 0px 1px 2px #c8c6c7;
+	}
+}
+textarea {
+	padding: 15px;
+	height: 8em;
+}
+/*------------------------------------*\
+    ::  Radio Buttons & Checkboxes
+\*------------------------------------*/
+input[type="radio"],
+input[type="checkbox"]{
+	display: inline-block;
+	color: $color-3;
+}	
+// Radio Value Labels
+.radio-label, .checkbox-label {
+	margin: 0 1em;
+}
+/*------------------------------------*\
+    ::  Select Styles
+\*------------------------------------*/
+select {
+	-webkit-appearance: menulist-button;
+	display: block;
+	height: 45px;
+	line-height: 45px;
+	position: relative;
+	z-index: 500;
+	opacity: 0; // Hidden so custom styled dropdown is in view
+}	
+// Styled box that sets below hidden select field
+.select-box__styled {
+	height: 45px;
+	position: absolute;
+	top: auto;
+	left: 0;
+	bottom: 2px;
+	right: 0;
+	z-index: 400;
+	background-color: $color-3;
+	.select-box__wrap {
+		position: relative;
+	}
+	//opacity: 0;
+	.dropdown-text {
+		display: inline-block;
+		height: 100%;
+		width: 100%;
+		padding: 0 10px;
+		font-size: 0.65em;
+		line-height: 46px;
+		color: #c8c6c7;
+	}
+	.arrow-down {
+		display: inline-block;
+		position: absolute;
+		top: 13px;
+		right: 15px;
+		svg {
+			height: 20px;
+			width: 20px;
+			fill: #454046;
+			transform: rotate(90deg);
+		}
+	}
+}
+.lock-icon {
+	height: 13px;
+	width: 13px;
+	margin-right: 8px;
+}
+/*------------------------------------*\
+    ::  Field Groupings
+\*------------------------------------*/	
+.field-wrap {
+	float: left;
+	position: relative;
+	&.field-wrap--full {
+		width: 100%;
+	}
+	&.field-wrap--half {
+		width: 49.25%;
+		margin-right: 1.5%;
+		&.field-wrap--last {
+			width: 49.25%;
+			margin: 0;
+		}
+		@include bp($max:500px) {
+			width: 100%;
+			margin-right: 0;
+			&.field-wrap--last {
+				width: 100%;
+				margin: 0;
+			}
+		}
+	}
+	&.field-wrap--third {
+		width: 32.333333%;
+		margin-right: 1.5%; 
+		&.field-wrap--last {
+			margin: 0;
+		}
+	}
+}
+/*------------------------------------*\
+    ::  KSS MarkUp (Ignore)
+\*------------------------------------*/    
+// Forms
+//
+// This section defines the various form element styles.
+//
+// Styleguide 4
+
+// Text
+//
+// Markup:
+// <form class="form-dark">
+// <div class="field-wrap field-wrap--third">
+//    <label for="text">Text Field</label><br>
+//    <input type="text" name="text" id="text" placeholder="text">
+// </div>
+// <div class="field-wrap field-wrap--third" style="overflow:hidden;">
+//    <label for="search">Search</label><br>
+//    <input type="search" name="search" id="search" placeholder="search">
+// </div>
+// <div class="field-wrap field-wrap--third field-wrap--last">
+//    <label for="email">Email</label><br>
+//    <input type="email" name="email" id="email" placeholder="email">
+// </div>
+// <div class="field-wrap field-wrap--third">
+//    <label for="url">URL</label><br>
+//    <input type="url" name="url" id="url" placeholder="url">
+// </div>
+// <div class="field-wrap field-wrap--third">
+//    <label for="tel">Tel</label><br>
+//    <input type="tel" name="tel" id="tel" placeholder="tel">
+// </div>
+// <div class="field-wrap field-wrap--third field-wrap--last">
+//    <label for="number">Number</label><br>
+//    <input type="number" name="number" id="number" placeholder="number">
+// </div>
+// <div class="field-wrap field-wrap--third">
+//    <label for="range">Range</label><br>
+//    <input type="range" name="range" id="range" placeholder="range">
+// </div>
+// <div class="field-wrap field-wrap--third">
+//    <label for="date">Date</label><br>
+//    <input type="date" name="date" id="date" placeholder="date">
+// </div>
+// <div class="field-wrap field-wrap--third field-wrap--last">
+//    <label for="month">Month</label><br>
+//    <input type="month" name="month" id="month" placeholder="month">
+// </div>
+// <div class="field-wrap field-wrap--third">
+//    <label for="week">Week</label><br>
+//    <input type="week" name="week" id="week" placeholder="week">
+// </div>
+// <div class="field-wrap field-wrap--third">
+//    <label for="time">Time</label><br>
+//    <input type="time" name="time" id="time" placeholder="time">
+// </div>
+// <div class="field-wrap field-wrap--third field-wrap--last">
+//    <label for="datetime">Datetime</label><br>
+//    <input type="datetime" name="datetime" id="datetime" placeholder="datetime">
+// </div>
+// <div class="field-wrap field-wrap--full">
+//    <label for="textarea">Textarea</label><br>
+//    <textarea id="textarea" placeholder="Textarea"></textarea>
+// </div>
+// </form>
+//
+// Styleguide 4.1
+
+// Radio Button
+//
+// Markup:
+// <form class="form-dark">
+//   <div class="field-wrap field-wrap--full">
+//   <label for="radio">Radio Button Label</label><br>
+//   <input type="radio" name="radio-button" id="option-1" value="Value 1"><label class="radio-label" for="option-1">Option #1</label>
+//   <input type="radio" name="radio-button" id="option-2" value="Value 2" checked><label class="radio-label" for="option-2">Option #2</label>
+// 	 </div>
+// </form>
+//
+// Styleguide 4.2
+
+// Checkbox
+//
+// Markup:
+// <form class="form-dark">
+//   <div class="field-wrap field-wrap--full">
+//   <label for="checkbox">checkbox Label</label><br>
+//   <input type="checkbox" name="checkbox" id="option-1" value="Value 1"><label class="checkbox-label" for="option-1">Option #1</label>
+//   <input type="checkbox" name="checkbox" id="option-2" value="Value 2" checked><label class="checkbox-label" for="option-2">Option #2</label>
+//   </div>
+// </form>
+//
+// Styleguide 4.3
+
+// Select
+//
+// Markup:
+// <form class="form-dark">
+//   <div class="field-wrap field-wrap--full">
+//   <label for="location"><img class="lock-icon" src="../images/global/lock-icon.svg" alt="Padlock Icon">please select a location</label>
+//   <select name="location" id="location-field">
+//       <option value="">-- Select --</option>
+//       <option value="">Denver</option>
+//   </select>
+//   <div class="select-box__styled">
+//   <div class="select-box__wrap">
+//       <span class="dropdown-text">*Choose Your Preferred Center</span>
+//       <span class="arrow-down">
+//           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><path d="M223 12.3L777 497 223 987.7V12.3z"/></svg>
+//       </span>
+//   </div>
+//   </div>
+//   </div>
+// </form>
+//
+// Styleguide 4.4
+
+// Field Groupings
+//
+//  This section shows the existing layout options for form fields.
+//
+// Markup:
+// <form class="form-dark">
+// <div class="field-wrap field-wrap--third">
+//    <label for="text">Field-wrap--third</label><br>
+//    <input type="text" name="text" id="text" placeholder="field-wrap--third">
+// </div>
+// <div class="field-wrap field-wrap--third">
+//    <label for="text">Field-wrap--third</label><br>
+//    <input type="text" name="text" id="text" placeholder="field-wrap--third">
+// </div>
+// <div class="field-wrap field-wrap--third field-wrap--last">
+//    <label for="text">Field-wrap--third field-wrap--last</label><br>
+//    <input type="text" name="text" id="text" placeholder="field-wrap--third field-wrap--last">
+// </div>
+// <div class="field-wrap field-wrap--half">
+//    <label for="text">Field-wrap--half</label><br>
+//    <input type="text" name="text" id="text" placeholder="field-wrap--half">
+// </div>
+// <div class="field-wrap field-wrap--half field-wrap--last">
+//    <label for="text">Field-wrap--half field-wrap--last</label><br>
+//    <input type="text" name="text" id="text" placeholder="field-wrap--half field-wrap--last">
+// </div>
+// <div class="field-wrap field-wrap--full">
+//    <label for="text">Field-wrap--full</label><br>
+//    <input type="text" name="text" id="text" placeholder="field-wrap--full">
+// </div>
+// </form>
+//
+// Styleguide 4.5

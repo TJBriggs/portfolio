@@ -1,0 +1,74 @@
+.ctas {
+	padding: 35px 0 55px;
+	.ctas__section-intro {
+		p {
+			@include bp($solarsystem) {
+                margin: 15px $pad*2 0;
+            }
+            @include bp($planetary) {
+                margin: 15px $pad 0;
+			}
+		}
+	}
+	ul {
+		margin: 0;
+		padding: 0;
+		.cta--full {
+			@include col(12);
+		}
+		.cta--half {
+			@include col(6);
+			@include bp($planetary) {
+				@include col(12);
+			}
+		}
+		.cta--thirds {
+			@include col(4);
+			@include bp($max:767px) {
+				@include col(12);
+			}
+		}
+		.cta {
+			float: left;
+			list-style-type: none;
+			text-align: center;
+			.btn {
+				color: $white;
+				font-size: emCalc(18px);
+				margin: 30px auto 0;
+				padding-bottom: 15px;
+				width: 100%;
+				transition: all 400ms;
+				@include bp($min:768px, $max:959px) { // reduce font-size to avoid overflow
+					font-size: emCalc(14px);
+				}
+				&:before {
+					color: $white;
+                    font-size: emCalc(130px);
+                    margin: 25px 0 0;
+                    padding: 45px 0 65px 0;
+                    transition: all 400ms;
+                    width: 100%;
+    			}
+    			&:hover {
+    				color: $color-2;
+					background: $color-1;
+					&:before {
+						color: $color-2;
+					}
+    			}
+
+			}
+			@include bp($planetary) {
+				.btn {
+					font-size: emCalc(16px);
+					&:before {
+	                    font-size: emCalc(80px);
+	                    margin: 25px 0 0;
+	                    padding: 15px 0 30px 0;
+	    			}
+				}
+			}
+		}
+	}
+}

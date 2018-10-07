@@ -1,0 +1,444 @@
+/*------------------------------------*\
+    ::Nav in the Header
+\*------------------------------------*/
+/*-----------------------------------------------------*\
+    :: Create Mobile Arrow icon outside media query
+\*-----------------------------------------------------*/
+.menu-item-has-children {
+    &:before{
+    	@extend %icon;
+    	@include icon(mobile-arrow);
+    }
+}
+/*------------------------------------*\
+    ::  Mobile Nav Button Styles
+\*------------------------------------*/
+.main-head__m-nav {
+	display: none;
+	position: absolute;
+	top: -3px;
+	right: $pad;
+	z-index: 9999;
+	margin: em(3px) 0 0 0;
+	padding: {top:0px;right:$button-size/4;bottom:0;left:$button-size/4;}
+	font-size: 3em;
+	line-height: 1em;
+	text-align: right;
+	backface-visibility: hidden;
+	cursor: pointer;
+	transition: .3s;
+	transition: margin 0s;
+	@include bp($max:1024px) {
+		display: block;
+	}
+	.hamburger { // Animating Hamburger
+		@include line($color: $color-4);
+		position: relative;
+		&:before, &:after {
+			@include line($color: $color-4);
+			position: absolute;
+			left: 0;
+			content: '';
+			transform-origin: $button-size/14 center;
+		}
+		&:before { top: $button-size/4; }
+		&:after { top: -$button-size/4; }
+		&.x-in-disguise{
+		    background: transparent;
+		    &:before, &:after{
+		      transform-origin: 50% 50%;
+		      top: 0;
+		      width: $button-size;
+		    }
+		    &:before{
+		      transform: rotate3d(0,0,1,45deg); 
+		      background: $color-4;
+		    }
+		    &:after{
+		      transform: rotate3d(0,0,1,-45deg);
+		      background: $color-4;
+		    }
+		}
+	}
+	&:hover {
+		opacity: 1;
+		.hamburger{
+			@include line($color: $color-2);
+			&:before, &:after{
+				@include line($color: $color-2);
+			}
+			&.x-in-disguise{
+			    background: transparent;
+			    color: $color-1;
+			}
+		}
+	}
+}
+.head-nav {
+	@include bp ($min:1025px){ //desktop only
+		@include nav(
+		    $type: 'dropdown',           		//nav type: dropdown or nested
+		    //$fade: .3s,                  		//fade speed (take out for no animation)
+		    $easy-hover: 50px,           		//amount of invisible overflow for sub menu (take out to not use)
+		    $easy-hover-top: 1.2em       		//set top easy-hover value (you can also set $easy-hover-right, -bottom, and -left separately)
+		);
+		float: right;
+		width: 77%;
+		margin-top: em(16px);
+		//transition: width 0ms;
+		.menu {
+			width: 100%;
+			margin: 0;
+			padding: 0 $pad;
+			> li {
+				width: 20%;
+				text-align: right;
+				position: relative;
+				> a {
+					width: 100%;
+					padding: 0 0 5px;
+					position: relative;
+					color: $color-4;
+					font-family: $fam-nav;
+					font-size: em(14.5px);
+					transition: color 400ms;
+					&:after {
+						position: absolute;
+						top: 100%;
+						left: 0px;
+						width: 100%;
+						height: 1px;
+						background: $color-2;
+						content: '';
+						opacity: 0;
+						transform: translateY(-10px);
+						transition: height 0.3s, opacity 0.3s, transform 0.3s;
+					}
+				}
+				&:first-of-type { // add a little space between services and our expertise
+					> a {
+						margin-right: em(35px);
+					}
+				}
+				&:hover {
+					> a {
+						color: $color-4;
+						text-decoration: none;
+						&:after {
+							height: 4px;
+							opacity: 1;
+							transform: translateY(0px);
+						}
+					}
+				}
+		        &.current-menu-item { // active state
+			    	> a {
+			    		&:after {
+			    			height: 4px;
+			    			opacity: 1;
+			    			transform: translateY(0px);
+			    		}
+			    	}
+				}
+				&:nth-of-type(1) { // center sub-menu differently to offset the right margin on the first li > a
+					.sub-menu {
+						position: absolute;
+						top: 43px;
+						left: -36px;
+					}
+				}
+				// balance out spacing of nav since clients has changed to case studies
+				&.menu-item-35 { // Partners
+					width: 19%;
+				}
+				&.menu-item-34 { // Case Studies
+					width: 23%;
+				}
+				&.menu-item-33 { // Contact
+					width: 18%;
+				}
+			}
+		}
+	    .sub-menu {
+		    width: 275px;
+			position: absolute;
+			top: 43px;
+			left: -10px; // normal sub-menu placement
+			margin: 0;
+			padding: 0 em(15px) 15px;
+			background: $color-1;
+			backface-visibility: hidden;
+	        > li {
+	            height: 40px;
+				width: 100%;
+				margin: 0;
+				padding: 0;
+				position: relative;
+				border-bottom: 1px solid $color-4;
+				&:after {
+					content: "";
+					height: 1px;
+					width: 0;
+					position: absolute;
+					bottom: -1px;
+					left: 0;
+					background: $color-2;
+					transition: width 400ms;
+				}
+	            > a {
+	            	display: block;
+	            	height: 100%;
+	            	width: 100%;
+	            	margin: 0;
+					padding: 0;
+					position: relative;
+					color: $color-4;
+					font-size: em(14px);
+					line-height: 40px;
+					text-align: left;
+	                text-decoration: none;
+					transition: color 400ms;
+					&:visited {
+						color: $color-4;
+					}
+	            }
+	            &:hover, &:focus {
+	            	&:after {
+	            		width: 100%;
+	            	}
+	            	a {
+	            		color: $color-2;
+	            		outline: none;
+	            	}
+	            }
+	            &.current-menu-item {
+			    	> a {
+			    		color: $color-2;
+			    	}
+	    		}
+	        }
+	    }
+	}
+    /*------------------------------------*\
+        :: Tablet Styles
+    \*------------------------------------*/
+    @include bp($max:1024px){
+    	height: 50em;
+    	width: 0;
+    	position: absolute;
+        right: 0;
+        top: 86px;
+        margin: 0;
+        padding: 0;
+        background: rgba(46, 60, 97, 0.95);
+        border-top: 1px solid $color-4;
+        border-bottom: 1px solid $color-4;
+        box-shadow: 0 3px 3px 0 rgba(0,0,0,.35);
+        overflow: hidden;
+        transition: width 400ms;
+        &.heynav {
+            width: 100%;
+        }
+        .menu {
+            float: none;
+            text-align: left;
+            margin: 0;
+            padding: 0 $pad*1.25 1.5em;
+            > li {
+            	//background: red;
+                display: block;
+                width: 100%;
+                margin: 0;
+                padding: 0 50px 0 0;
+                position: relative;
+                border-bottom: 1px solid $color-4;
+                white-space: nowrap;
+                &:after {
+                	content: '';
+                	height: 1px;
+                	width: 0;
+                	position: absolute;
+                	top: 100%;
+                	bottom: -1px;
+                	left: 0;
+                	right: 0;
+                	background: $color-2;
+                	opacity: 1;
+                	transform: translateY(0px);
+                	transition: width 400ms;
+                }
+                a {
+                	display: block;
+                	height: 50px;
+                	width: 100%;
+                	padding-left: $pad;
+                	color: $color-4;
+                    letter-spacing: 0.08em;
+					word-spacing: 0.1em;
+	                line-height: 54px;
+                    text-align: left;
+                    text-decoration: none;
+                    transition: color 400ms;
+                    
+                    &:visited {
+                		color: $color-4;
+                	}
+                }
+                &:hover, &:focus {
+                	&:after {
+                		height: 1px;
+                		width: 100%;
+                	}
+                	a {
+                		color: $color-2;
+                		outline: none;
+                	}
+				}
+                &.current-menu-item {
+			    	> a {
+			    		color: $color-2;
+			    		font-family: $fam-head-bold
+			    	}
+	        	}
+	        	&.menu-item-has-children {
+	        		position: relative;
+                    &:before{
+                    	content: '\E001'; // nav arrow
+                    	display: block;
+                    	position: absolute;
+                    	top: em(8px);
+                        right: 0;
+                        backface-visibility: hidden;
+                        color: $color-4;
+                        cursor: pointer;
+                        font-size: em(20px);
+                        z-index: 100;
+                        transition: transform 300ms;
+                        &.arrowactive{
+                            transform: rotate(90deg);
+                        }
+                    }
+                }
+                .sub-menu {
+                    border-top: none;
+                    margin: 0;
+                    padding: 0;
+                    max-height: 0;
+                    overflow: hidden;
+                    transition: 300ms;
+                    width: 100%;
+                    > li {
+                    	//background: tan;
+                    	width: 100%;
+                    	margin: 0;
+                    	right: -50px;
+                    	padding: 0;
+                    	position: relative;
+                    	list-style-type: none;
+                        text-align: left;
+                        // border-bottom: 1px solid $color-4;
+                        // &:after {
+                        // 	content: '';
+                        // 	height: 1px;
+                        // 	width: 0;
+                        // 	position: absolute;
+                        // 	top: 100%;
+                        // 	bottom: -1px;
+                        // 	left: 0;
+                        // 	background: $color-2;
+                        // 	opacity: 1;
+                        // 	transform: translateY(0px);
+                        // 	transition: width 400ms;
+                        // }
+                        > a {
+                        	width: 100%;
+                        	padding-left: 0;
+                        	position: static;
+                        	font-size: em(14px);
+                        	border-bottom: 1px solid $color-4;
+                        	color: $color-4;
+                        	text-indent: 1em;
+                        	&:after {
+                        		content: '';
+                        		height: 1px;
+                        		position: absolute;
+                        		top: 49px;
+                        		left: 0;
+                        		right: 100%;
+                        		z-index: 500;
+                        		background: $color-2;
+                        		opacity: 1;
+                        		transform: translateY(0px);
+                        		transition: right 400ms;
+                        	}
+                        	&:visited {
+                        		color: $color-4;
+                        	}
+        	                &:hover, &:focus {
+        	                	color: $color-2;
+        	                	outline: none;
+        	                	&:after {
+        	                		height: 1px;
+        	                		right: 0;
+        	                	}
+        					}
+                        }
+                        
+                        &.current-menu-item {
+					    	> a {
+					    		color: $color-2;
+					    		font-family: $fam-head-bold	
+					    	}
+		        		}
+                    }   
+                }
+                &.hey_sub-nav{
+                	border: none;
+                	position: relative;
+                	&:after { // recreate border for main nav elements
+                		content: '';
+                		height: 1px;
+                		width: 100%;
+                		position: absolute;
+                		top: em(49px);
+                		z-index: 400;
+                		background: $color-4;
+                	}
+                    .sub-menu{
+                        display: inline;
+                        height: auto;
+                        overflow: hidden;
+                        > li {
+                        	max-width: 922px; // won't let the sub-menu li's extend past the regular li's
+                        }
+                    }
+                    &:before{
+                        transform: rotate(90deg);
+                    }
+                }
+            }
+        }
+    }
+}
+/*-----------------------------------------------------------*\
+    ::  Expand Mobile Nav and enable scroll (mobile only)
+\*-----------------------------------------------------------*/
+body, .touch {
+	.main-head {
+		&.hey_main-head {
+			height: 100%;
+			overflow-y: scroll;
+			.heynav {
+				@include bp($solarsystem) {
+					height: 100%;
+					min-height: em(700px);
+					.menu {
+						overflow-y: scroll;
+						height: 100%;
+					}
+				}
+			}
+		}
+	}
+}
+

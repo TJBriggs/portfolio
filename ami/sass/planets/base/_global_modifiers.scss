@@ -1,0 +1,53 @@
+/*------------------------------------*\
+    ::  Global Modifiers
+\*------------------------------------*/
+// increase padding slightly -- our team section on expertise page
+[class*="--padding-top"] {
+	padding-top: em(15px);
+	@include bp($max:1024px) {
+		padding-top: 0;
+	}
+}
+// large top padding -- Infographic section on home page
+[class*="--padding-top-large"] {
+	padding-top: em(65px);
+	@include bp($max:640px) {
+		padding-top: em(30px);
+	}
+}
+// large top padding -- Infographic section on home page
+[class*="--padding-bottom-large"] {
+	padding-bottom: em(95px);
+	@include bp($max:1024px) {
+		padding-bottom: em(45px);
+	}
+}
+// remove top padding
+[class*="--remove-padding-bottom"] {
+    padding-bottom: 0;
+}
+// smaller top margin between button and text
+[class*="--btn-margin-small"] {
+    .btn {
+    	margin-top: em(5px);
+    }
+}
+// forces h2 underline to be red
+[class*="--red-accents"] {
+    h2 {
+    	&:after {
+    		background: $color-3;
+    	}
+    }
+}
+// If red accents is selected and bg is lblue or nblue 
+// force the strong text to be bold white rather than green
+[class*="--bg-lblue"], [class*="--bg-nblue"] {
+	&[class*="--red-accents"] {
+	    h2 {
+	    	strong {
+	    		color: $color-4;
+	    	}
+	    }
+	}
+}

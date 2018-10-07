@@ -1,0 +1,126 @@
+/*------------------------------------*\
+    ::  Figure Columns Styles
+\*------------------------------------*/
+.figure-columns {
+    width: 100%;
+    .figure-columns__inner {
+        position: relative;
+        text-align: center;
+        @include bp($max:767px) {
+            padding: 0 $pad*2;
+        }
+        @include bp($max:500px) {
+            padding: 0 $pad;
+        }
+    }
+    .figure-columns__content-wrap {
+        display: flex;
+        width: 100%;
+        justify-content: flex-start;
+    }
+    .figure-columns__text-wrap {
+        width: 65vw;
+        max-width: 660px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        text-align: left;
+        @include bp($max:767px) {
+            height: auto;
+            width: 100%;
+            max-width: none;
+            margin-top: 3em;
+        }
+    }
+    .figure-columns__text {
+        h4 {
+            width: 100%;
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+    .figure-columns__text-blocks {
+        overflow: hidden;
+        margin-top: 3.9em;
+    }
+    .figure-columns__text-block {
+        float: left;
+        width: 47%;
+        margin-bottom: 2em;
+        margin-right: 6%;
+        &:nth-last-of-type(-n+2) {
+            margin-bottom: 0;
+        }
+        &:nth-of-type(2n) {
+            margin-right: 0;
+        }
+        @include bp($max:640px) {
+            width: 100%;
+            &:nth-last-of-type(-n+2) {
+                margin-bottom: 1.75em;
+            }
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .figure-columns__figure-container {
+        height: 51vw;
+        max-height: 635px;
+        width: 51vw;
+        max-width: 635px;
+        position: absolute;
+        top: 0;
+        right: -270px;
+        overflow: hidden;
+        @include bp($max:1200px) {
+            right: -21vw;
+        }
+        img {
+            height: 51vw;
+            max-height: 635px;
+            width: 51vw;
+            max-width: 635px;
+        }
+        @include bp($max:767px) {
+            display: inline-block;
+            height: 50vw;
+            max-height: 550px;
+            min-height: 300px;
+            width: 50vw;
+            max-width: 500px;
+            min-width: 300px;
+            margin-top: 1.5em;
+            position: static;
+            right: 0;
+            top: 0;
+            transform: translateY(0);
+            img {
+                max-height: 550px;
+                min-height: 300px;
+                max-width: 550px;
+                min-width: 300px;
+            }
+        }
+    }
+}
+/*---------------------------------------*\
+    :: Basic Layout Modifier Left | Right
+\*---------------------------------------*/    
+.figure-columns {
+    &.figure-columns--figure-left {
+        .figure-columns__content-wrap {
+            justify-content: flex-end;
+        }
+        .figure-columns__figure-container {
+            right: auto;
+            left: -300px;
+            @include bp($max:1200px) {
+                left: -21vw;
+            }
+            @include bp($max:767px) {
+                left: 0;
+            }
+        }
+    }
+}	

@@ -1,0 +1,56 @@
+/*------------------------------------*\
+    ::  FAQs Styles
+\*------------------------------------*/	
+.faqs {
+	background: $color-4;
+}
+.faqs__inner {
+	.section-title {
+		color: $txt-color-2;
+		font-size: em(24px);
+		@include bp($max:400px) {
+			font-size: em(19.5px);
+		}
+	}
+}
+.accordion {
+	border-bottom: 1px solid $color-1;
+}
+.accordion__link {
+	color: $txt-color-3;
+	cursor: pointer;
+	font-family: $fam-light;
+	font-size: em(30px);
+	transition: color 400ms;
+	@include bp($max:700px) {
+		font-size: em(26px);
+	}
+	span {
+		svg {
+			fill: $txt-color-3;
+			transition: fill 400ms, transform 400ms;
+		}
+	}
+	&.active {
+		color: $color-2;
+		span {
+			svg {
+				fill: $color-2;
+				transform: rotate(90deg);
+			}
+		}
+	}
+}
+.accordion__content {
+	p, li, span, a {
+		color: $color-1;
+		font-family: $fam-light;
+	}
+	a {
+		color: $color-2;
+	}
+	strong {
+		color: $txt-color-3;
+		font-family: $fam-reg;
+	}
+}

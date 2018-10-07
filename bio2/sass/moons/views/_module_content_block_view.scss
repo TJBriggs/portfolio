@@ -1,0 +1,33 @@
+/*------------------------------------*\
+    ::  Content Block Styles
+\*------------------------------------*/
+.content-block {
+    p { 
+        line-height: 1.5em;
+    }
+}
+/*------------------------------------*\
+    ::  Content Modifiers
+\*------------------------------------*/
+.content-block--border-left {
+    &.content--2 {
+        &.content__two-col--half {
+            .content__group--1 {
+                &:after {
+                    background-color: $color-1-light;
+                }
+            }
+        }
+    }    
+}
+.content-block--border-right {
+    &.content--2 {
+        &.content__two-col--half {
+            .content__group--2 {
+                &:after {
+                    background-color: $color-1-light;
+                }
+            }
+        }
+    }    
+}

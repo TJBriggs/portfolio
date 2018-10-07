@@ -1,0 +1,128 @@
+/*------------------------------------*\
+    :: Styleguide  
+\*------------------------------------*/    
+.colors__wrap {
+    width: 100%;
+    max-width: 768px;
+    margin: 0 auto;
+    .primary-color {
+        height: 185px;
+        width: 100%;
+        margin: 2em auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .secondary-color {
+        float: left;
+        height: 185px;
+        width: 30.7%;
+        margin-right: $pad*2;
+        margin-bottom: 2em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &.last {
+            margin-right: 0;
+        }
+    }
+    .example-gradient {
+        height: 185px;
+        width: 100%;
+        margin: 2em auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @extend %beige-gradient;
+    }
+    span {
+        color: #000;
+        @extend %pn-black;
+        font-size: 14px;
+        line-height: 1.25em;
+        text-align: center;
+    }
+}
+.headline__wrap, 
+.body__wrap,
+.link__wrap,
+.button__wrap {
+    width: 100%;
+    max-width: 768px;
+    margin: 2em auto;
+    overflow: hidden;
+    p {
+        float: left;
+        border-top: 1px solid #cdcdcd;
+        padding: 1em 0;
+    }
+    .btn {
+        float: left;
+        margin-right: $pad;
+    }
+    blockquote {
+        p {
+            margin: 0;
+            padding: 0;
+            border-top: none;
+        }
+    }
+}
+.headline__wrap,
+.body__wrap,
+.link__wrap {
+    p {
+        width: 100%;
+    }
+}
+.button__wrap {
+    p {
+        padding: $pad;
+    }
+}
+.overlay__wrap {
+    width: 100%;
+    max-width: 768px;
+    margin: 2em auto;
+    overflow: hidden;
+    h1 {
+        margin-bottom: 0.5em;
+    }
+    .example-overlay {
+        float: left;
+        height: 300px;
+        width: 48%;
+        margin-right: 4%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        span {
+            color: #000;
+            @extend %pn-black;
+        }
+        &:last-of-type {
+            margin-right: 0;
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+        &.overlay--top {
+            &:after {
+                @extend %gradient-top;
+            }
+        }
+        &.overlay--bottom {
+            &:after {
+                @extend %gradient-bottom;
+            }
+        }
+
+    }
+}

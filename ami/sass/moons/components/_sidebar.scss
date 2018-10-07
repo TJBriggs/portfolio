@@ -1,0 +1,48 @@
+/*------------------------------------*\
+    ::Sidebar
+\*------------------------------------*/
+.single-torso__sidebar {
+	ul {
+		margin: 0;
+		padding: 0;
+	}
+	li {
+		margin-bottom: 15px;
+		list-style-type: none;
+		a {
+			color: #717372;
+			font-family: $fam-rob-reg;
+			font-weight: bold;
+			transition: color 400ms;
+			&:hover {
+				color: $color-2;
+				text-decoration: none;
+			}
+		}
+	}
+	@include bp($max:1000px) {
+		ul {
+			width: 100%;
+			text-align: center;
+			padding: 25px 0 20px;
+			border-top: 2px solid #9cabb1;
+		}
+		li {
+			display: inline-block;
+			width: auto;
+			margin-bottom: 15px;
+			&:after {
+				content: '|';
+				margin: 0 13px;
+				font-size: em(20px);
+				position: relative;
+				top: 2px;
+			}
+			&:last-of-type {
+				&:after {
+					display: none;
+				}
+			}
+		}
+	}
+}

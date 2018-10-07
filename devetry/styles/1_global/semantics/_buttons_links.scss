@@ -1,0 +1,70 @@
+/*------------------------------------*\
+	:: Links
+\*------------------------------------*/
+// Add your text link styles here.
+.main-torso {
+	a:not(.btn) {
+		color: $color-1;
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+/*------------------------------------*\
+	::  Buttons
+\*------------------------------------*/
+// Add you button styles here.
+.btn {
+	display: inline-block;
+	min-width: 190px;
+	padding: 1.2em $pad*2;
+	background-color: $color-3;
+	color: $color-1;
+	@extend %kbold;
+	font-size: 16px;
+	text-align: center;
+	text-transform: uppercase;
+	text-decoration: none;
+	box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.10);
+	transition: background-color 300ms, box-shadow 300ms, border 300ms, color 300ms;
+	&:hover {
+		background-color: $color-1;
+		box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.05);
+		color: $color-3;
+	}
+	&.btn--blue {
+		background-color: $color-1;
+		color: $color-3;
+		transition: all 300ms;
+		&:hover {
+			background-color: $color-3;
+			color: $color-1;
+		}
+	}
+	&.btn--rounded {
+		border: 3px solid $color-1;
+		border-radius: 5px;
+		min-width: 184px;
+		padding: 1em $pad*2;
+		transition: border 400ms;
+		&:hover {
+			background-color: $color-1;
+			color: $color-3;
+			border: 3px solid $color-3;
+			box-shadow: 0px 0px 12px 3px rgba(0, 0, 0, 0.15);
+		}
+	}
+	&.btn--alt {
+		background-color: transparent;
+		border: 2px solid $color-3;
+		color: $color-3;
+		padding: 1.05em $pad*2;
+		&:hover {
+			background-color: $color-3;
+			color: $color-1;
+			border: 2 px solid $color-3;
+		}
+	}
+}

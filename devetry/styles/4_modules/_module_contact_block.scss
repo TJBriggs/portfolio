@@ -1,0 +1,105 @@
+/*------------------------------------*\
+	:: Contact Block Styles
+\*------------------------------------*/
+.contact-block {
+	width: 100%;
+	background-color: $color-3;
+	&__main-wrap {
+		display: flex;
+		flex-wrap: wrap;
+		width: 100%;
+		max-width: 960px;
+		margin: 0 auto -200px;
+		position: relative;
+		top: -200px;
+		box-shadow: 12px 3px 7px -4px rgba(0, 0, 0, 0.15), -12px 3px 7px -4px rgba(0, 0, 0, 0.15);
+		border-radius: 5px;
+	}
+	&__map {
+		height: 830px;
+		display: inline-block;
+		width: 44.7004608%;
+		backface-visibility: hidden;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		border-top-left-radius: 5px;
+		border-bottom-left-radius: 5px;
+		position: relative;
+		@include bp($max:850px) {
+			height: 300px;
+			width: 100%;
+			background-image: url('assets/images/contact-map-850.png')!important;
+			background-position: center;
+			border-top-left-radius: 5px;
+			border-top-right-radius: 5px;
+			border-bottom-left-radius: 0;
+		}
+		@include bp($max:640px) {
+			height: 240px;
+		}
+		&:before {
+			content: '';
+			background-color: rgba(0, 0, 0, 0.60);
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index: 1;
+			opacity: 0;
+			transition: opacity 400ms;
+			border-top-left-radius: 5px;
+			border-bottom-left-radius: 5px;
+			@include bp($max:850px) {
+				border-top-left-radius: 5px;
+				border-top-right-radius: 5px;
+				border-bottom-left-radius: 0;
+			}
+		}
+		&:after {
+			content: 'Get Directions';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			z-index: 2;
+			@extend %kreg;
+			color: $color-3;
+			font-size: 1.5em;
+			transform: translate(-50%, -50%);
+			text-align: center;
+			opacity: 0;
+			transition: opacity 400ms;
+		}
+		&:hover {
+			&:before {
+				opacity: 1;
+			}
+			&:after {
+				opacity: 1;
+			}
+		}
+	}
+	&__form-wrap {
+		width: 55.2995392%;
+		padding: $pad*2 $pad*3;
+		background-color: $color-1-dark;
+		border-top-right-radius: 5px;
+		border-bottom-right-radius: 5px;
+		.subtitle {
+			color: $color-3;
+		}
+		.gform_confirmation_message {
+			color: $color-3;
+		}
+		@include bp($max:850px) {
+			width: 100%;
+			border-top-right-radius: 0;
+			border-bottom-right-radius: 5px;
+			border-bottom-left-radius: 5px;
+		}
+		@include bp($max:640px) {
+			padding: $pad*2 $pad;
+		}
+	}
+}

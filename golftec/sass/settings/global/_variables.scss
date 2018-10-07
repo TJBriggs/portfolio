@@ -1,0 +1,230 @@
+//    ::Variables
+//    ----------------------------------*
+//    ::Colors
+//    ::Breakpoints
+//    ::Layout
+//    ::Text Styling
+
+//primary colors / page anchor tags
+$color-1:           #128141; // GolfTEC Green - rgba(18, 129, 65, 1);
+$color-1-light:     #3D8A5E; // Close to tranparent overlays - rgba(61, 138, 94, 1);
+$color-1-dark:      #0c5a2d; // Not used yet - rgba(12, 90, 45, 1);
+
+$color-2:           #e12127; // GolfTEC Red - rgba(225, 33, 39, 1);
+$color-2-light:     #E33A43; // Lighter red on button shine - rgba(227, 58, 67, 1);
+$color-2-dark:      #b91c21; // Darker red on input hovers - rgba(185, 28, 33, 1);
+
+//secondary colors / global nav and Local Nav.
+$color-3:           #FFF;    // White - rgba(255, 255, 255, 1);
+$color-4:           #71706e; // Main Gray in map areas - rgba(113, 112, 110, 1);
+$color-4-light:  	#f0f0f0; // Ligh Gray BG in Blog Feed - rgba(240, 240, 240, 1);
+$color-4-lightest:  #f7f7f7; // Lightest Gray BG in Half Half - rgba(247, 247, 247, 1);
+$color-4-dark:     	#413943; // Light Gray in Footer - rgba(65, 57, 67, 1);
+$color-4-darkest:   #2f2931; // Dark Gray in Footer - rgba(47, 41, 49, 1);
+
+$color-5:           #cbb457; // Gold in Mobile Nav - rgba(203, 180, 87, 1);
+$color-5-light:     lighten($color-5, 20%);
+$color-6:			#000; // Black - rgba(0, 0, 0, 1);
+//alert colors
+$color-good:        #6ADE72;
+$color-bad:         #DE5D5D;
+$color-meh:         #EBE857;
+
+/*------------------------------------*\
+    ::Breakpoints
+\*------------------------------------*/
+$galaxy:        1140px;
+$solarsystem:   1024px;
+$planetary:     480px;
+
+/*------------------------------------*\
+    ::Layout
+\*------------------------------------*/
+$pad:       0.9375rem;
+
+/*------------------------------------*\
+    ::Text Styling
+\*------------------------------------*/
+
+//font colors
+$txt-color-1:       #2c2c2c; // Body Text - rgba(44, 44, 44, 1);
+$txt-color-2:       #453a48; // Utility Nav - rgba(69, 58, 72, 1);
+$txt-color-3:       #545056; // Gray Text - rgba(84, 80, 86, 1);
+
+//font families
+$fam-heading:       'roboto', sans-serif;
+$fam-body:          'raleway', sans-serif;
+$fam-nav:           $fam-heading;
+
+//internal/page anchor tags
+$a-color-link:      $color-2;
+$a-color-visited:   $a-color-link;
+$a-color-hover:     lighten($a-color-link,20%);
+$a-color-active:    lighten($a-color-link,30%);
+
+/*------------------------------------*\
+    ::  KSS MarkUp (Ignore)
+\*------------------------------------*/ 
+// Global
+//
+// Global variables, settings, functions, etc.
+//
+//
+// Styleguide 1
+
+//    ::Colors
+
+// Color Variables
+//
+// <div class="swatch">
+// <div class="group-title" style="width:100%;"><p>Primary Palette</p></div>
+// <div class="swatch__card">
+// <div class="swatch__item" style="background-color:#128141;">
+// `#128141`
+// </div>
+// <div class="swatch__var">`$color-1`</div>
+// </div>
+// <div class="swatch__card">
+// <div class="swatch__item" style="background-color:#3D8A5E;">
+// `#3D8A5E`
+// </div>
+// <div class="swatch__var">`$color-1-light`</div>
+// </div>
+// <div class="swatch__card">
+// <div class="swatch__item" style="background-color:#0c5a2d;">
+// `#0c5a2d`
+// </div>
+// <div class="swatch__var">`$color-1-dark`</div>
+// </div>
+// <div class="swatch__card">
+// <div class="swatch__item" style="background-color:#e12127;">
+// `#e12127`
+// </div>
+// <div class="swatch__var">`$color-2`</div>
+// </div>
+// <div class="swatch__card">
+// <div class="swatch__item" style="background-color:#E33A43;">
+// `#E33A43`
+// </div>
+// <div class="swatch__var">`$color-2-light`</div>
+// </div>
+// <div class="swatch__card">
+// <div class="swatch__item" style="background-color:#b91c21;">
+// `#b91c21`
+// </div>
+// <div class="swatch__var">`$color-2-dark`</div>
+// </div>
+// <div class="swatch__card">
+// <div class="swatch__item" style="background-color:#FFF;">
+// `#FFF`
+// </div>
+// <div class="swatch__var">`$color-3`</div>
+// </div>
+// <div class="swatch__card">
+// <div class="swatch__item" style="background-color:#71706e;">
+// `#71706e`
+// </div>
+// <div class="swatch__var">`$color-4`</div>
+// </div>
+// <div class="swatch__card">
+// <div class="swatch__item" style="background-color:#f0f0f0;">
+// `#f0f0f0`
+// </div>
+// <div class="swatch__var">`$color-4-light`</div>
+// </div>
+// <div class="swatch__card">
+// <div class="swatch__item" style="background-color:#f7f7f7;">
+// `#f7f7f7`
+// </div>
+// <div class="swatch__var">`$color-4-lightest`</div>
+// </div>
+// <div class="swatch__card">
+// <div class="swatch__item" style="background-color:#413943;">
+// `#413943`
+// </div>
+// <div class="swatch__var">`$color-4-dark`</div>
+// </div>
+// <div class="swatch__card">
+// <div class="swatch__item" style="background-color:#2f2931;">
+// `#2f2931`
+// </div>
+// <div class="swatch__var">`$color-4-darkest`</div>
+// </div>
+// <div class="swatch__card">
+// <div class="swatch__item" style="background-color:#cbb457;">
+// `#cbb457`
+// </div>
+// <div class="swatch__var">`$color-5`</div>
+// </div>
+// <div class="swatch__card">
+// <div class="swatch__item" style="background-color:#e3d7a5;">
+// `#e3d7a5`
+// </div>
+// <div class="swatch__var">`$color-5-light`</div>
+// </div>
+// <div class="swatch__card">
+// <div class="swatch__item" style="background-color:#000;">
+// `#000`
+// </div>
+// <div class="swatch__var">`$color-6`</div>
+// </div>
+// </div>
+//
+// <div class="text-swatch">
+// <div class="group-title" style="width:100%;"><p>Primary Text Colors</p></div>
+// <div class="swatch__card">
+// <div class="text__item" style="background-color:#FFF;">
+// <p style="color: #2c2c2c">Body Text...Curabitur blandit tempus porttitor. Maecenas sed diam eget risus varius blandit sit amet non magna.
+// <p style="color: #2c2c2c">#2c2c2c</p>
+// </p>
+// </div>
+// <div class="text__var">`$txt-color-1`</div>
+// </div>
+// <div class="swatch__card">
+// <div class="text__item" style="background-color:#FFF;">
+// <p style="color: #453a48">Utility Nav...Curabitur blandit tempus porttitor. Maecenas sed diam eget risus varius blandit sit amet non magna.
+// <p style="color: #453a48">#453a48</p>
+// </p>
+// </div>
+// <div class="text__var">`$txt-color-2`</div>
+// </div>
+// <div class="swatch__card">
+// <div class="text__item" style="background-color:#FFF;">
+// <p style="color: #545056">Light Body Text...Curabitur blandit tempus porttitor. Maecenas sed diam eget risus varius blandit sit amet non magna.
+// <p style="color: #545056">#545056</p>
+// </p>
+// </div>
+// <div class="text__var">`$txt-color-3`</div>
+// </div>
+// </div>
+//
+// <div class="text-swatch">
+// <div class="group-title" style="width:100%;"><p>Secondary Text Colors</p></div>
+// <div class="swatch__card">
+// <div class="text__item" style="background-color:#128141;">
+// <p style="color: #fff">White Text...Curabitur blandit tempus porttitor. Maecenas sed diam eget risus varius blandit sit amet non magna.
+// <p style="color: #fff">#fff</p>
+// </p>
+// </div>
+// <div class="text__var">`$color-3`</div>
+// </div>
+// <div class="swatch__card">
+// <div class="text__item" style="background-color:#FFF;">
+// <p style="color: #e12127">Red Text...Curabitur blandit tempus porttitor. Maecenas sed diam eget risus varius blandit sit amet non magna.
+// </p>
+// <p style="color: #e12127">#e12127</p>
+// </div>
+// <div class="text__var">`$color-2`</div>
+// </div>
+// <div class="swatch__card">
+// <div class="text__item" style="background-color:#FFF;">
+// <p style="color: #128141">Green Text...Curabitur blandit tempus porttitor. Maecenas sed diam eget risus varius blandit sit amet non magna.
+// <p style="color: #128141">#128141</p>
+// </p>
+// </div>
+// <div class="text__var">`$color-1`</div>
+// </div>
+// </div>
+// </div>
+//
+// Styleguide 1.1

@@ -1,0 +1,67 @@
+/*------------------------------------*\
+    :: Basic Hero & 404 Hero
+\*------------------------------------*/ 
+.fourofour-torso {
+    height: 100%;
+}
+.basic-hero, .hero-fourofour {
+    width: 100%;
+    background-color: $color-3-light;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: luminosity;
+    &__overlay {
+        height: 100%;
+        width: 100%;
+        @extend %white-overlay;
+    }
+    &__content-wrap {
+        text-align: center;
+    }
+    &__content {
+        display: inline-block;
+        width: 100%;
+        max-width: 825px;
+        margin: 0 auto;
+        padding: 200px $pad*2 200px;
+        h1 {
+            color: $color-1;
+            text-align: left;
+        }
+        @include bp($max:768px) {
+            margin-top: 85px;
+            padding: 100px $pad*2 100px;
+        }
+        @include bp($max:500px) {
+            padding: 65px $pad 35px;
+            h1 {
+                font-size: 40px;
+            }
+        }
+    }
+}
+// Modifier if text is present 
+.basic-hero--text {
+    .basic-hero__content {
+        padding: 150px $pad*2 50px;
+        h4 {
+            margin-top: 1em;
+            text-align: left;
+        }
+        @include bp($max:768px) {
+            padding: 40px $pad*2 25px;
+        }
+        @include bp($max:500px) {
+            padding: 20px $pad 5px;
+        }
+    }
+}
+// Seperate BG image for 404 page
+.hero-fourofour {
+    background-image: url('/wp-content/themes/pka/assets/images/hero-404.png');
+    h4 {
+        margin-top: 1em;
+        text-align: left;
+    }
+}

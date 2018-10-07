@@ -1,0 +1,393 @@
+/*------------------------------------*\
+    ::  Hero Slider Styles
+\*------------------------------------*/	
+// Only need to target these elements when the hero slider is on the page. May require
+// some js or php to add this class to the html element for specificity (depending on CMS)
+html.hero-type--slider { 
+    &,
+    body,
+    .main-torso,
+    .wrap-all-the-things {
+    	display: inline;
+        height: 100%; // Forces an override of the normal wrappers to get a height of 100%;
+        @include bp($max:960px){
+            height: auto;
+        }
+    }
+}
+.hero-block--slider {
+	height: 100%;
+    @include bp($max:960px){
+    	margin-top: 96px;
+		position: relative;
+    }
+    @include bp($max:767px){
+    	margin-top: 65px;
+    }
+}
+.hero-block__slide {
+    height: 100vh;
+    width: 100%;
+	min-height: 500px;
+	@extend %bg-cover;
+	@include bp($max:960px) {
+		min-height: 0;
+		height: 495px;
+	}
+	@include bp($max:640px) {
+		height: 450px;
+	}
+}
+.hero-block__slide-overlay {
+    width: 100%;
+    height: 100%;
+    @extend %overlay;
+    text-align: center; // For layout purposes
+	&:before { // Centering the unknown
+		content: '';
+		height: 100%;
+		margin-left: -0.25em;
+		display: inline-block;
+		vertical-align: middle;
+	}
+}
+.hero-block__slide-content {
+	display: inline-block; // Centering the unknown
+	width: 95%;
+	margin: 0 auto;
+	vertical-align: middle; // Centering the unknown
+	h1 {
+		margin: 0 0 0.65em 0;
+		color: $color-3;
+		font-size: 2.9em;
+		font-weight: 200;
+		@include bp($max:960px) {
+			margin: 0 0 0.45em 0;
+			font-size: 2.5em;
+		}
+		@include bp($max:640px) {
+			font-size: 7vw;
+		}
+		@include bp($max:400px) {
+			max-width: 250px;
+			margin: 0 auto 0.45em;
+			font-size: 34px;
+		}
+	}
+	p {
+		margin: 0 0 0.30em 0;
+		color: $color-3;
+		font-family: $fam-heading;
+		font-size: 1.45em;
+		font-style: italic;
+		font-weight: 200;
+		@include bp($max:960px) {
+			margin: 0 0 0.2em 0;
+			font-size: 1.3em;
+		}
+		@include bp($max:640px) {
+			font-size: 4vw;
+			margin-bottom: 1.5em;
+		}
+	}
+	.hero-block__btn {
+		@include bp($max:400px) {
+			font-size: 4vw;
+		}
+	}
+}
+/*------------------------------------*\
+    ::  CTA Elements
+\*------------------------------------*/	
+.hero-block__cta-wrap {
+	width: 100%;
+	position: absolute;
+	bottom: 4em;
+	left: 0;
+	right: 0;
+	text-align: center; // For layout purposes
+	@include bp($max:960px) {
+		bottom: 2em;
+	}
+}
+.hero-block__ctas {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	@include bp($max:640px) {
+		display: none;
+	}
+	> li {
+		float: left;
+		min-width: 200px; // Adds spacing so that other links don't move on hovers
+		list-style-type: none;
+	}
+}
+/*------------------------------------*\
+    ::  Video Slide Styles
+\*------------------------------------*/
+.hero-block__slide--video {
+	position: relative;
+	background-color: $color-6;
+	@extend %bg-cover;
+	.hero-block__video-wrap {
+	 	overflow: hidden;
+	    position: absolute;
+	    top: 0;
+	    bottom: 0;
+	    right: 0;
+	    left: 0;
+	}
+	.hero-block__frame {
+		padding-bottom: 45.7%;
+		position: absolute;
+		top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        height: 100vw;
+        width: 157vw;
+        transform: translateX(-50%) translateY(-50%);
+        // Adjust width to fill entire screen with video
+        @include bp($max:1500px) {
+			width: 195vw;
+        }
+        @include bp($max:1200px) {
+			width: 245vw;
+        }
+        @include bp($max:960px) {
+        	width: 120vw;
+        }
+        @include bp($max:768px) {
+			width: 140vw;
+        }
+        @include bp($max:640px) {
+			width: 167vw;
+        }
+		@include bp($max:480px) {
+			width: 200vw;
+        }
+        @include bp($max:400px) {
+			width: 250vw;
+        }
+	}
+	iframe {
+		min-height: 100%;
+		min-width: 100%;
+		position: absolute;
+	    top: 0;
+	    bottom: 0;
+	    right: 0;
+	    left: 0;
+	}
+	.hero-block__slide-overlay {
+		position: absolute;
+	    top: 0;
+	    left: 0;
+	    right: 0;
+	    bottom: 0;
+	    width: 100%;
+	    height: 100%;
+	}
+	.hero-block__slide-content {
+		.hero-block__btn {
+			&:nth-of-type(2) {
+				margin-left: 0.5em;
+			}
+			@include bp($max:640px) {
+				width: 75%;
+				margin: 0 auto;
+				&:nth-of-type(2) {
+					margin-left: 0;
+					margin-top: 0.65em;
+				}
+			}
+			@include bp($max:480px) {
+				width: 95%;
+			}
+		}
+	}
+}	
+/*------------------------------------*\
+    ::  Owl Specific Styles
+\*------------------------------------*/	
+.hero-block--slider{
+	.owl-carousel{
+		z-index: auto;
+		height: 100%;
+	}
+	.owl-wrapper-outer{
+		height: 100%;
+	}
+	.owl-wrapper{
+		height: 100%;
+		display: flex!important; // Forces the wrapper to go full height
+	}
+	.owl-item{
+		overflow: hidden;
+		cursor: pointer;
+	}
+	// Arrows
+	.owl-prev, .owl-next {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		opacity: 0.75;
+		transition: opacity 400ms;
+		&:hover {
+			opacity: 1;
+		}
+		@include bp($max:700px) {
+			display: none;
+		}
+	}
+	.owl-prev {
+		left: $pad*2;
+	}
+	.owl-next {
+		right: $pad*2;
+	}
+	// Pagination
+	.owl-pagination {
+		width: 100%;
+		position: absolute;
+		bottom: 9em;
+		right: 0;
+		left: 0;
+		text-align: center; // For layout purposes
+		@include bp($max:960px) {
+			bottom: 5.5em;
+		}
+		@include bp($max:640px) {
+			bottom: 3.5em;
+		}
+		.owl-page {
+			display: inline-block;
+			margin-right: 0.75em;
+			&:last-of-type {
+				margin-right: 0;
+			}
+			span {
+				display: inline-block;
+				height: 15px;
+				width: 15px;
+				border: 2px solid $color-3;
+				border-radius: 50%;
+				background-color: transparent;
+				transition: background-color 400ms;
+			}
+			&.active {
+				span {
+					background-color: rgba(255, 255, 255,1);
+				}
+			}
+			&:hover {
+				span {
+					background-color: rgba(255, 255, 255, 0.6);
+				}
+			}
+		}
+	}
+}
+/*------------------------------------*\
+    ::  KSS MarkUp (Ignore)
+\*------------------------------------*/ 
+// Hero Slider
+//
+// Because this component will only work in a full page setting, the example below is a screenshot. Click the demo link to view this section in action.
+//
+// Demo:<br><a href="../pages/page-home.php" target="_blank">module-hero-slider.php</a>
+//
+// Stylesheet:<br>
+// <a href="../sass/structure/modules/_module_hero_slider.scss" target="_blank">_module_hero_slider.scss</a><br>
+//
+// Path To The Code:<br>
+// golftec/golftec/modules/module-hero-slider.php
+// golftec/golftec/js/sliders-src/hero-slider.js
+//
+// Markup:
+// <img class="hero-placeholder-image" src="../images/placeholders/hero-slider-placeholder.jpg" alt="Hero Slider Placeholder"> <!-- // Ignore - Styleguide Only -->
+// <section class="hero-block hero-block--slider">
+//     <div class="owl-carousel js-owl-carousel--hero-slider">
+//         <div class="hero-block__slide hero-block__slide--video" data-fallback-img="../images/modules/hero/video-placeholder.png">
+//             <?php 
+//                 $video_id = "3ggLrz_NJhE"; // GolfTEC Vid ID
+//             ?>
+//             <div class="hero-block__video-wrap">
+//                 <div class="hero-block__frame">
+//                     <div class="player" data-video-id="<?php echo $video_id; ?>"></div>
+//                 </div> <!-- // hero-block__frame -->  
+//                 <div class="hero-block__slide-overlay">
+//                     <div class="hero-block__slide-content">
+//                         <h1><strong>Swing</strong> Better. <strong>Play</strong> Better.</h1>
+//                         <p>With the World Leader in Golf Instruction</p>
+//                         <a class="hero-block__btn btn" href="#">Schedule Swing Evaluation</a>
+//                         <a class="hero-block__btn btn fancybox-media" href="https://www.youtube.com/watch?v=3ggLrz_NJhE">Watch Full Video</a>
+//                     </div> <!-- // hero-block__slide-content -->  
+//                 </div> <!-- // hero-block__slide-overlay --> 
+//             </div> <!-- // hero-block__video-wrap -->  
+//         </div> <!-- // hero-block__slide -->  
+//         <div class="hero-block__slide" style="background-image: url('../images/modules/hero/home-hero-1-opt.jpg')">
+//             <div class="hero-block__slide-overlay">
+//                 <div class="hero-block__slide-content">
+//                     <h1><strong>Swing</strong> Better. <strong>Play</strong> Better.</h1>
+//                     <p>With the World Leader in Golf Instruction</p>
+//                     <a class="hero-block__btn btn" href="#">Schedule Swing Evaluation</a>
+//                 </div> <!-- // hero-block__slide-content -->  
+//             </div> <!-- // hero-block__slide-overlay -->  
+//         </div> <!-- // hero-block__slide --> 
+//         <div class="hero-block__slide hero-block__slide--video" data-fallback-img="../images/modules/hero/video-placeholder.png">
+//             <?php 
+//                 // Youtube ID
+//                 $video_id = "nZbFkgGtdhw"; // Vid #2 ID
+//             ?>
+//             <div class="hero-block__video-wrap">
+//                 <div class="hero-block__frame">
+//                     <div class="player" data-video-id="<?php echo $video_id; ?>"></div>
+//                 </div> <!-- // hero-block__frame -->  
+//                 <div class="hero-block__slide-overlay">
+//                     <div class="hero-block__slide-content">
+//                         <h1><strong>Swing</strong> Better. <strong>Play</strong> Better.</h1>
+//                         <p>With the World Leader in Golf Instruction</p>
+//                         <a class="hero-block__btn btn" href="#">Schedule Swing Evaluation</a>
+//                         <a class="hero-block__btn btn fancybox-media" href="https://www.youtube.com/watch?v=nZbFkgGtdhw">Watch Full Video</a>
+//                     </div> <!-- // hero-block__slide-content -->  
+//                 </div> <!-- // hero-block__slide-overlay --> 
+//             </div> <!-- // hero-block__video-wrap -->  
+//         </div> <!-- // hero-block__slide -->
+//         <div class="hero-block__slide" style="background-image: url('../images/modules/hero/home-hero-1-opt.jpg')">
+//         <div class="hero-block__slide-overlay">
+//             <div class="hero-block__slide-content">
+//                 <h1><strong>Swing</strong> Better. <strong>Play</strong> Better.</h1>
+//                 <p>With the World Leader in Golf Instruction</p>
+//                 <a class="hero-block__btn btn" href="#">Schedule Swing Evaluation</a>
+//             </div> <!-- // hero-block__slide-content -->  
+//         </div> <!-- // hero-block__slide-overlay -->  
+//     </div> <!-- // hero-block__slide -->
+//     </div> <!-- // owl-carousel -->
+//     <div class="hero-block__cta-wrap">
+//         <ul class="hero-block__ctas">
+//             <li>
+//                 <a class="text-link text-link--icon" href="#">
+//                     <img src="../images/modules/hero/golftec-icon.svg" alt="golfTEC Icon">
+//                     Request Pricing
+//                 </a>
+//             </li>
+//             <li>
+//                 <a class="text-link text-link--icon" href="#">
+//                     <img src="../images/modules/hero/location-icon.svg" alt="Location Icon">
+//                     Find a Location
+//                 </a>
+//             </li>
+//             <li>
+//                 <a class="text-link text-link--icon" href="#">
+//                     <img src="../images/modules/hero/coach-icon.svg" alt="Coach Icon">
+//                     Talk to a Coach
+//                 </a>
+//             </li>
+//         </ul> <!-- // hero-block__ctas -->
+//     </div> <!-- // hero-block__cta-wrap -->
+// </section> <!-- // hero-block -->
+//
+// Styleguide 5.3

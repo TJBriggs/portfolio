@@ -1,0 +1,72 @@
+/*------------------------------------*
+    :: Facebook Overrides
+*------------------------------------*/
+.cff-wrapper {
+    float: left;
+    height: 300px;
+    width: 50%;
+    position: relative;
+    z-index: 5;
+    #cff {
+        padding: 52px 0 0;
+        width: 100%; 
+        .cff-item {
+            background: $white;
+            border-radius: 0.2em;
+            box-shadow: 0px 1px 5px -1px rgba(0, 0, 0, 0.45);
+            padding: $pad*2;
+            &:after { // facebook icon
+                content: '\f101';
+                color: $color-1;
+                font-family: ico;
+                font-size: emCalc(26px);
+                height: 50px;
+                width: 50px;
+                position: absolute;
+                top: 82px;
+                right: -8px;
+                z-index: 100;
+            }
+            .cff-author {
+                a {
+                    color: $color-1;
+                    &:hover {
+                        color: darken($color-1, 10%);
+                    }
+                }
+                
+            }
+            .cff-post-text {
+                a {
+                    color: $color-1;
+                    &:hover {
+                        color: darken($color-1, 10%);
+                    }
+                }
+            }
+            .cff-viewpost-facebook {
+                float: right; 
+                margin-top: 10px;
+                color: $color-4;
+                &:hover {
+                    color: $color-1;
+                    text-decoration: none;
+                }
+            }
+            .cff-shared-link {
+                display: none;
+            }
+        }
+        .cff-likebox {
+            display: none;
+        }
+    }
+    @include bp($max:768px) {
+        height: 250px;
+        width: 100%;
+    }
+    @include bp($max:479px) {
+        height: 275px;
+        width: 100%;
+    }
+}

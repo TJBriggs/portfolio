@@ -1,0 +1,152 @@
+/*------------------------------------*\
+    ::  Static Hero Styles
+\*------------------------------------*/
+/*------------------------------------*\
+    ::  Hero Slider Styles
+\*------------------------------------*/
+.hero-block--static {
+	position: relative;
+	overflow: hidden;
+	@include bp($max:960px) {
+		margin-top: 96px;
+	}
+	@include bp($max:767px) {
+		margin-top: 65px;
+	}
+}	
+.hero-block__image {
+    height: 47em;
+    width: 100%;
+	@extend %bg-cover;
+	@include bp($max:960px) {
+		height: 31em;
+	}
+	@include bp($max:640px) {
+		height: 23.5em;
+	}
+}
+.hero-block__overlay {
+    width: 100%;
+    height: 100%;
+    @extend %overlay;
+    text-align: center; // For layout purposes
+	&:before { // Centering the unknown
+		content: '';
+		height: 100%;
+		margin-left: -0.25em;
+		display: inline-block;
+		vertical-align: middle;
+	}
+}
+.hero-block__content {
+	display: inline-block; // Centering the unknown
+	width: 95%;
+	margin: 17.5% auto 0;
+	vertical-align: middle; // Centering the unknown
+	@include bp($max:960px) {
+		margin: 0 auto;
+	}
+	h1 {
+		margin: 0;
+		color: $color-3;
+		font-size: 2.9em;
+		font-weight: 200;
+		@include bp($max:960px) {
+			margin: 0 0 0.45em 0;
+			font-size: 2.5em;
+		}
+		@include bp($max:640px) {
+			font-size: 7.5vw;
+		}
+		@include bp($max:400px) {
+			max-width: 250px;
+			margin: 0 auto 0.45em;
+			font-size: 34px;
+		}
+	}
+	.hero-block__btn {
+		@include bp($max:960px) {
+			margin-top: 0;
+		}
+		@include bp($max:400px) {
+			font-size: 4vw;
+		}
+	}
+}
+/*------------------------------------*\
+    ::  CTA Elements
+\*------------------------------------*/	
+.hero-block__cta-wrap {
+	width: 100%;
+	position: absolute;
+	bottom: 4em;
+	left: 0;
+	right: 0;
+	text-align: center; // For layout purposes
+	@include bp($max:960px) {
+		bottom: 2em;
+	}
+}
+.hero-block__ctas {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	@include bp($max:640px) {
+		display: none;
+	}
+	> li {
+		float: left;
+		min-width: 200px; // Adds spacing so that other links don't move on hovers
+		list-style-type: none;
+	}
+}
+/*------------------------------------*\
+    ::  KSS MarkUp (Ignore)
+\*------------------------------------*/ 
+// Hero Static
+//
+// Demo:<br><a href="../modules/module-hero-static.php" target="_blank">module-hero-static.php</a>
+//
+// Stylesheet:<br>
+// <a href="../sass/structure/modules/_module_hero_static.scss" target="_blank">_module_hero_static.scss</a><br>
+//
+// Path To The Code:<br>
+// golftec/golftec/modules/module-hero-static.php
+//
+// Markup:
+// <section class="hero-block hero-block--static">
+//     <div class="hero-block__image" style="background-image: url('../images/modules/hero/center-hero.jpg')">
+//         <div class="hero-block__overlay">
+//             <div class="hero-block__content">
+//                 <h1><strong>Fort Collins</strong> South</h1>
+//                 <a class="hero-block__btn btn" href="#">Schedule Swing Evaluation</a>
+//             </div> <!-- // hero-block__content -->
+//         </div> <!-- // hero-block__overlay -->
+//     </div> <!-- // hero-block__image -->
+//     <div class="hero-block__cta-wrap">
+//         <ul class="hero-block__ctas">
+//             <li>
+//                 <a class="text-link text-link--icon" href="#">
+//                     <img src="../images/modules/hero/golftec-icon.svg" alt="golfTEC Icon">
+//                     Request Pricing
+//                 </a>
+//             </li>
+//             <li>
+//                 <a class="text-link text-link--icon" href="#">
+//                     <img src="../images/modules/hero/location-icon.svg" alt="Location Icon">
+//                     Find a Location
+//                 </a>
+//             </li>
+//             <li>
+//                 <a class="text-link text-link--icon" href="#">
+//                     <img src="../images/modules/hero/coach-icon.svg" alt="Coach Icon">
+//                     Talk to a Coach
+//                 </a>
+//             </li>
+//         </ul> <!-- // hero-block__ctas -->
+//     </div> <!-- // hero-block__cta-wrap -->
+// </section> <!-- // hero-block -->
+//
+//
+// Styleguide 5.4

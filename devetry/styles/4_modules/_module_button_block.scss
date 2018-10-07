@@ -1,0 +1,138 @@
+/*------------------------------------*\
+	:: Button Block Styles
+\*------------------------------------*/
+.button-block {
+	width: 100%;
+	overflow: hidden;
+	background-color: $color-3;
+
+	&__main-wrap {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.button-block--left {
+		justify-content: flex-start;
+	}
+
+	.button-block--right {
+		justify-content: flex-end;
+	}
+
+	.btn {
+		display: flex;
+		align-items: center;
+		flex: 0 1 260px;
+		min-width: 0;
+		padding: 17px 0;
+		span {
+			display: flex;
+			align-items: center;
+			i {
+				font-size: 30px;
+				@include bp($max:640px) {
+					font-size: 26px;
+				}
+				@include bp($max:500px) {
+					font-size: 21px;
+				}
+			}
+		}
+		@include bp($max:640px) {
+			background-color: transparent;
+			border: none;
+			box-shadow: none;
+			flex: 1 1 50%;
+			padding: 0;
+			&:hover {
+				color: $color-2;
+			}
+		}
+	}
+
+	.btn--left {
+		justify-content: flex-start;
+		span {
+			&:first-of-type {
+				flex-basis: 30px;
+				justify-content: flex-end;
+				@include bp($max:640px) {
+					flex-basis: 20px;
+					justify-content: flex-start;
+				}
+				@include bp($max:480px) {
+					flex-basis: 15px;
+					font-size: 12px;
+					justify-content: flex-start;
+				}
+			}
+			&:last-of-type {
+				flex: 1;
+				justify-content: center;
+				transform: translateY(1px);
+				padding: 0 $pad;
+				@include bp($max:640px) {
+					justify-content: flex-start;
+					padding: 0 $pad*0.5;
+				}
+				@include bp($max:480px) {
+					flex: 1 1 auto;
+					font-size: 12px;
+					padding: 0;
+				}
+			}
+		}
+	}
+
+	.btn--right {
+		justify-content: flex-end;
+		span {
+			&:first-of-type {
+				flex: 1;
+				justify-content: center;
+				transform: translateY(1px);
+				padding: 0 $pad;
+				@include bp($max:640px) {
+					justify-content: flex-end;
+					padding: 0 $pad*0.5;
+				}
+				@include bp($max:480px) {
+					flex: 1 1 auto;
+					font-size: 12px;
+					justify-content: flex-end;
+					padding: 0;
+				}
+			}
+			&:last-of-type {
+				flex-basis: 30px;
+				justify-content: flex-start;
+				@include bp($max:640px) {
+					flex-basis: 20px;
+					justify-content: flex-end;
+				}
+				@include bp($max:480px) {
+					flex-basis: 15px;
+					font-size: 12px;
+				}
+			}
+		}
+	}
+
+	// Modifiers
+	&--btn-pad-top {
+		.button-block__main-wrap {
+			padding-top: 2em;
+		}
+	}
+	&--btn-pad-bot {
+		.button-block__main-wrap {
+			padding-bottom: 2em;
+		}
+	}
+	&--gray {
+		background-color: $color-1-dark;
+	}
+	&--lgray {
+		background-color: $color-6;
+	}
+}

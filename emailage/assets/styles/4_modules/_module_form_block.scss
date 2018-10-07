@@ -1,0 +1,82 @@
+/*------------------------------------*\
+    ::  Form Block Styles
+\*------------------------------------*/
+.form-block {
+    width: 100%;
+    overflow: hidden;
+    &__main-wrap {
+        width: 100%;
+        max-width: 660px;
+        margin: 0 auto;
+    }
+    &__contact-info {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center; 
+    }
+    &__phone, &__email {
+        display: inline-flex;
+        align-items: center;
+        color: $accent_gray;
+        .icon {
+            img, svg {
+                display: inline-block;
+                fill: $accent-gray-icon;
+                transition: all 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            }
+        }
+        .text {
+            text-align: left;
+            margin-left: $pad*2;
+        }
+        &:hover {
+            text-decoration: none;
+            .icon {
+                img, svg {
+                    transform: scale(1.2);
+                    fill: $accent-gray-dark;
+                }
+            }
+        }
+    }
+    &__phone {
+        width: 30%;
+        padding-right: $pad*2;
+        .icon {
+            display: inline-block;
+            text-align: center;
+            img, svg {
+                height: 48px;
+                width: 30px;
+            }
+        }
+        @include bp($max:640px) {
+            width: 100%;
+        }
+    } 
+    &__email {
+        width: 70%;
+        justify-content: flex-end;
+        .icon {
+            display: inline-block;
+            text-align: center;
+            img, svg {
+                height: 36px;
+                width: 36px;
+            }
+        }
+        @include bp($max:640px) {
+            justify-content: flex-start;
+            width: 100%;
+            margin-top: 3em;
+        }
+    }  
+    &__form-wrap {
+        width: 100%;
+        margin: 4em 0 0;
+        @include bp($max:640px) {
+            margin: 2em 0 0;
+        }
+    }   
+}

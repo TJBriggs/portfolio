@@ -1,0 +1,70 @@
+/*------------------------------------*\
+    ::masthead
+\*------------------------------------*/
+.masthead{
+    position: fixed;
+    right: 0;
+    left: 0;
+    overflow: hidden;
+    top: 135px;
+    z-index: 0;
+    .masthead__image {
+        height: 485px;
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        @include bp($solarsystem){
+            height: 470px;
+        }
+        @include bp($planetary){
+            height: 345px;
+        }
+        .masthead-text__quote {
+            padding: 0 $pad 0 0;
+            position: absolute;
+            bottom: 0px;            
+            width: 100%;
+            h2 {
+                color: $white;
+                font-family: $fultons-reg;
+                font-size: emCalc(38px);
+                line-height: 1.5em;
+                text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.35);
+                width: 90%;
+                span {
+                    display: inline-block;
+                    font-size: emCalc(70px);
+                    position: relative;
+                }
+            }
+            @include bp($solarsystem){
+                bottom: 0px;
+                margin-left: 4%;
+                h2 {
+                    font-size: emCalc(32px);
+                    span {
+                        font-size: emCalc(40px);
+                    }
+                }
+            }
+            @include bp($max: 600px) {
+                h2 {
+                    font-size: emCalc(22px);
+                    span {
+                        font-size: emCalc(34px);
+                    }
+                }
+            } 
+        }
+    }
+    @include bp($solarsystem) { // Make masthead static for mobile (remove parallax effect)
+        border-top: 6px solid $color-2;
+        position: static;
+        left: 0;
+        right: 0;
+        width: 100%;
+    }
+}

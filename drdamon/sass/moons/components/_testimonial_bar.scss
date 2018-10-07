@@ -1,0 +1,104 @@
+/*------------------------------------*\
+    ::Testimonial Bar
+\*------------------------------------*/
+.testimonials {
+	padding: 25px 0 30px;
+	@include bp($solarsystem) {
+		padding: 20px 0 25px;
+	}
+	@include bp($max: 768px) {
+		padding: 20px 0 20px;
+	}
+	.testimonial__text {
+		margin: 0 auto;
+		opacity: 0;
+		overflow: hidden;
+		position: relative;
+		top: 100px;
+		width: 80%;
+		text-align: center;
+		z-index: -1;
+		p {
+			color: #fff;
+			font-family: $italic;
+			font-size: emCalc(24px);
+			line-height: 1.5em;
+			margin: 0 0 15px 0;
+			padding: 0;
+			&:first-of-type {
+				&:before {
+					@extend .icon--bubble:before;
+       				@extend .icon;
+       				font-size: emCalc(32px);
+       				margin: 10px 0 10px;
+       				width: 100%;
+				}
+			}
+			&:last-of-type {
+				display: block;
+				font-size: emCalc(15px);
+			}
+		}
+		@include bp($solarsystem) {
+			p {
+				font-size: emCalc(22px);
+				margin: 0 0 10px 0;
+				&:last-of-type {
+					font-size: emCalc(13px);
+				}
+			}
+		}
+		@include bp($max: 850px) {
+			p {
+				font-size: emCalc(20px);
+			}
+
+		}
+		@include bp($max: 768px) {
+			p {
+				font-size: emCalc(17px);
+			}
+
+		}
+		@include bp($planetary) {
+			p {
+				font-size: emCalc(16px);
+			}
+		}
+		&.visible {
+			animation-name: testSlideUp;
+            animation-duration: 600ms;
+            animation-timing-function: linear;
+            animation-delay: 0ms;
+            animation-fill-mode: forwards; 
+		}
+	}
+}
+///////////////////////////////////////////////////////////
+// Remove animations and reset elements for touch screens
+///////////////////////////////////////////////////////////
+.touch .page-home {
+	.testimonial__text {
+		opacity: 1;
+		top: 0px;
+	}
+}
+//////////////////////////
+// Keyframes
+//////////////////////////
+@keyframes testSlideUp {
+    0% {
+    	opacity: 0;
+        top: 100px;
+        z-index: -1;
+    }
+    70% {
+    	opacity: 0;
+        z-index: 0;
+    }
+    100% {
+    	opacity: 1;
+        top: 0px;
+        z-index: 0;
+    }
+}

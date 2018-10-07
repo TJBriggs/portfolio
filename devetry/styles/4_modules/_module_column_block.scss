@@ -1,0 +1,301 @@
+/*------------------------------------*\
+	:: Column Block Styles
+\*------------------------------------*/
+.column-block {
+	width: 100%;
+	overflow: hidden;
+	.column-block__main-wrap {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.column-block__image-wrap,
+	.column-block__text-wrap {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		@include bp($max:900px) {
+			max-width: 640px;
+			margin: 0 auto;
+			justify-content: center;
+		}
+	}
+
+	.column-block__image-wrap {
+		padding-left: 0;
+		padding-right: 50px;
+		@include bp($max:900px) {
+			padding: 0;
+		}
+	}
+
+	.column-block__text-wrap {
+		padding-left: 50px;
+		padding-right: 0;
+		@include bp($max:900px) {
+			padding: 0;
+		}
+	}
+
+	.column-block__text-icon {
+		display: inline-block;
+		height: 120px;
+		width: 120px;
+		fill: $color-1;
+		@include bp($max:640px) {
+			height: 60px;
+			width: 60px;
+		}
+	}
+
+	.column-block__headline-wrap {
+		display: flex;
+		flex-wrap: wrap;
+		@include bp($max:900px) {
+			align-items: center;
+			flex-wrap: nowrap;
+			margin-bottom: 1em;
+		}
+	}
+
+	.column-block__headline {
+		width: 100%;
+		font-style: normal;
+		font-weight: normal;
+		letter-spacing: 0.025em;
+	}
+
+	.column-block__main-text {
+		width: 100%;
+	}
+
+	// Circular Image Styles
+	.column-block__circular-image {
+		display: inline-block;
+		height: 220px;
+		width: 220px;
+		position: relative;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		border-radius: 50%;
+		transition: all 400ms;
+	}
+
+	.column-block__circular-icon {
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		height: 76px;
+		width: 76px;
+		position: absolute;
+		right: -37px;
+		top: 50%;
+		transform: translateY(-50%);
+		@extend %gtob;
+		border-radius: 50%;
+		svg {
+			height: 38px;
+			width: 38px;
+			fill: $color-3;
+		}
+	}
+
+	.column-block__testimonial-wrap {
+		align-self: flex-start;
+		margin-top: 3.5em;
+		@include bp($max:900px) {
+			margin-top: 2em;
+		}
+		@include bp($max:640px) {
+			margin-top: 1.5em;
+		}
+	}
+
+	.column-block__testimonial-logo {
+		@include bp($max:640px) {
+			height: auto;
+			max-width: 55%;
+		}
+	}
+
+	.column-block__testimonial {
+		margin-top: 1.5em;
+		p {
+			color: $color-2-light;
+			font-size: 32px;
+			strong {
+				@extend %kreg;
+				color: $color-1;
+			}
+
+			@include bp($max:640px) {
+				font-size: 26px;
+			}
+		}
+	}
+}
+
+// Modifiers
+.column-block--half {
+	.column-block__image-wrap,
+	.column-block__text-wrap {
+		width: 50%;
+		@include bp($max:900px) {
+			width: 100%;
+		}
+	}
+
+	.column-block__image-wrap {
+		@include bp($max:900px) {
+			max-width: 380px;
+		}
+	}
+
+	.column-block__text-wrap {
+		@include bp($max:900px) {
+			margin-top: 1.5em;
+		}
+	}
+
+	.column-block__headline {
+		font-family: karlaregular, serif;
+		font-size: 32px;
+		margin-top: 0.5em;
+		@include bp($max:900px) {
+			display: inline-block;
+			line-height: 1.2em;
+			margin: 0 0 0 15px;
+			width: 50%;
+		}
+		@include bp($max:640px) {
+			font-size: 26px;
+		}
+	}
+	.btn {
+		margin-top: 1em;
+	}
+}
+// Thirds General Modifiers
+.column-block--thirds {
+	.column-block__image-wrap {
+		width: 33.333333%;
+		padding: 0;
+		@include bp($max:900px) {
+			width: 100%;
+			margin-bottom: 2em;
+			max-width: 380px;
+		}
+	}
+	.column-block__regular-image {
+		width: 100%;
+		text-align: center;
+	}
+	.column-block__text-wrap {
+		width: 66.666667%;
+		padding: 0;
+		@include bp($max:900px) {
+			width: 100%;
+		}
+	}
+	.column-block__headline {
+		color: $color-1;
+		font-family: karlabold, serif;
+		font-size: 35px;
+		margin-bottom: -10px; // pull up margin due to line-height issues
+		@include bp($max:640px) {
+			font-size: 30px;
+		}
+	}
+
+	.column-block__main-text {
+		margin: 1.75em 0;
+		@include bp($max:900px) {
+			margin: 0.8em 0;
+		}
+	}
+}
+
+// Image Right Modifiers
+.column-block--image-right {
+	// Half Modifiers
+	.column-block__main-wrap {
+		flex-direction: row-reverse;
+	}
+	.column-block__image-wrap {
+		padding-right: 0;
+		padding-left: 50px;
+		@include bp($max:900px) {
+			padding: 0;
+		}
+	}
+	.column-block__text-wrap {
+		padding-right: 50px;
+		padding-left: 0;
+		@include bp($max:900px) {
+			padding: 0;
+		}
+	}
+	// Thirds Modifiers
+	&.column-block--thirds {
+		.column-block__image-wrap {
+			padding: 0;
+			justify-content: flex-end;
+			@include bp($max:900px) {
+				justify-content: center;
+			}
+		}
+		.column-block__circular-icon {
+			left: -37px;
+			@include bp($max:900px) {
+				left: auto;
+				right: -37px;
+			}
+		}
+		.column-block__text-wrap {
+			padding: 0;
+		}
+	}
+}
+
+// Thirds and Regular Image Modifier
+// Adds padding to the right of the image
+.column-block--thirds.column-block--image-regular {
+	.column-block__image-wrap {
+		padding-right: 20px;
+		@include bp($max:900px) {
+			padding-right: 0;
+		}
+	}
+	.column-block__text-wrap {
+		padding-left: 20px;
+		@include bp($max:900px) {
+			padding-left: 0;
+		}
+	}
+}
+// Adds padding to the left of the image
+.column-block--thirds.column-block--image-regular.column-block--image-right {
+	.column-block__image-wrap {
+		padding-right: 0;
+		padding-left: 20px;
+		@include bp($max:900px) {
+			padding-left: 0;
+		}
+	}
+	.column-block__text-wrap {
+		padding-left: 0;
+		padding-right: 20px;
+		@include bp($max:900px) {
+			padding-right: 0;
+		}
+	}
+}
+
+// Color Modifiers
+.column-block--gray {
+	background-color: $color-1-dark;
+	color: $color-3;
+}
+.column-block--lgray {
+	background-color: $color-6;
+}

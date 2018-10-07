@@ -1,0 +1,166 @@
+/*------------------------------------*\
+    :: Event Page Styles
+\*------------------------------------*/
+$content_width: 57.5%;
+$content_max: 660px;
+.hero-block--event {
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    @include bp($max:768px) {
+        background-size: 100% 25%;
+        background-position: top;
+    }
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 10;
+        background-color: rgba(248, 249, 249, 0.8);
+    }
+    .hero-block__inner {
+        position: relative;
+        z-index: 20;
+        @include bp($max:768px) {
+            padding: 0;
+        }
+    }
+    .hero-block__event-text {
+        width: $content_width;
+        max-width: $content_max;
+        padding-right: $pad;
+        .hero-block__colored-title {
+            text-align: left;
+        }
+        @include bp($max:800px) {
+            max-width: 390px;
+        }
+        @include bp($max:768px) {
+            width: 100%;
+            max-width: none;
+            padding: 3.55em $pad*2 4em!important;
+        }
+        @include bp($max:500px) {
+            padding: 3.55em $pad*2 5.55em;
+        }
+    }
+    .hero-block__form-wrap {
+        width: 38%;
+        max-width: 400px;
+        position: absolute;
+        top: 65px;
+        right: 0px;
+        z-index: 10;
+        .hero-block__form-container {
+            padding: $pad*2;
+            @extend %br;
+            background-color: $color-3;
+            box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.25);
+        }
+        @include bp($max:1100px) {
+            right: 2%;
+        }
+        @include bp($max:768px) {
+            position: static;
+            width: 100%;
+            top: 0;
+            right: 0;
+            max-width: none;
+            margin: 0 auto;
+            padding: 3em $pad*2 0;
+            position: relative;
+            background-color: $color-3;
+            .hero-block__form-container {
+                position: relative;
+                top: 30px;
+                background-color: $color-3;
+                box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.25);
+            }
+        }
+        @include bp($max:500px) {
+            .hero-block__form-container {
+                width: 100%;
+                padding: $pad*2 0;
+                border-radius: none;
+                box-shadow: none;
+
+            }
+        }
+    }
+}
+.event-page__content { // This is the main wrap
+    padding-bottom: 5em;
+    @include bp($max:768px) {
+        width: 100%;
+        margin-top: 5em;
+        padding-bottom: 4em;
+    }
+}
+.event-page__main-content {
+    min-height: 465px;
+    width: $content_width;
+    max-width: $content_max;
+    padding-right: $pad;
+    @include bp($max:800px) {
+        max-width: 390px;
+    }
+    @include bp($max:768px) {
+        min-height: 0;
+        width: 100%;
+        max-width: none;
+        padding: 3em 0 0 0;
+    }
+}
+.event-page__icons {
+    width: 100%;
+    padding-top: 5em;
+    text-align: center;
+    @include bp($max:768px) {
+        padding-top: 4em;
+    }
+}
+.event-page__icon-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    .event-page__icon-wrap {
+        height: auto;
+        width: 30%;
+    }
+    @include bp($max:768px) {
+        justify-content: center;
+        .event-page__icon-wrap {
+            width: 50%;
+            margin-bottom: 2.5em;
+            text-align: center;
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+            img {
+                display: inline-block;
+                max-width: 200px;
+            }
+        }
+    }
+    @include bp($max:500px) {
+        .event-page__icon-wrap {
+            img {
+                max-width: 150px;
+            }
+        }
+    }
+    @include bp($max:400px) {
+        .event-page__icon-wrap {
+            img {
+                max-width: 120px;
+            }
+        }
+    }
+}

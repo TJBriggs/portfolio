@@ -1,0 +1,77 @@
+/*------------------------------------*\
+    ::  Team Grid Styles
+\*------------------------------------*/
+.team-grid {
+	background-color: $color-4;
+}
+/*------------------------------------*\
+    ::  Grid Content
+\*------------------------------------*/	
+.member {
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	.member__main-image {
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		transition: opacity 400ms;
+	}
+	.member__hover-name {
+		background-color: rgba(0, 0, 0, 0.45);
+		color: $color-4;
+		font-family: $fam-light;
+		font-size: 17px;
+		text-align: center;
+		@include bp($max:1024px) {
+			font-size: 15px;
+		}
+		@include bp($max:768px) {
+			font-size: 17px;
+		}
+		@include bp($max:640px) {
+			font-size: 15px;
+		}
+	}
+	&:hover {
+		.member__main-image {
+			opacity: 0;
+		}
+	}
+}
+/*------------------------------------*\
+    ::  Dropdown Content
+\*------------------------------------*/	
+.closer {
+    svg {
+        fill: $color-4;
+        transition: fill 400ms;
+        &:hover {
+        	fill: $color-2;
+        }
+    }
+    @include bp($max:800px) {
+		svg {
+			fill: $color-1;
+		}
+	}
+}
+.member-info__content-right {
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.member-info__name {
+	color: $color-2;
+	@include bp($max:480px) {
+		font-size: 28px;
+	}
+	@include bp($max:370px) {
+		font-size: 24px;
+	}
+}
+.member-info__title {
+	@include bp($max:370px) {
+		font-size: 18px;
+	}
+}

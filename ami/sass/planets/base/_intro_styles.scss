@@ -1,0 +1,24 @@
+/*-----------------------------------------*\
+    ::  Intro Styles for any section type
+\*-----------------------------------------*/
+[class*="__intro"] {
+    padding: 0 $pad*3.35;
+    @include bp($max:640px) {
+        padding: 0 $pad;
+    }
+    p {
+    	text-align: center;
+        &:first-of-type {
+            margin-top: 0;
+        }
+        @include bp($max:1024px) {
+            padding: 0 $pad*2;
+            &:last-of-type { // give the last paragraph space between the next content
+                margin-bottom: 30px;
+            }
+        }
+        @include bp($max:480px) {
+            padding: 0 $pad;
+        }
+    }
+}

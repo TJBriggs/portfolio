@@ -1,0 +1,140 @@
+/*------------------------------------*\
+    ::Your Team
+\*------------------------------------*/
+.your-team {
+	background: #fff;
+	padding: 35px 0 40px;
+	.section__title-wrap {
+		color: $color-1;
+	}
+	.section-intro {
+		margin-top: 20px;
+		margin-bottom: 30px;
+		p {
+			color: #555555;
+			font-size: 0.875em;
+			letter-spacing: 0.02em;
+	        line-height: 1.875rem;
+	        margin: 0 $pad 15px;
+	        @include bp($solarsystem) {
+	        	margin: 0 $pad*2 15px;
+	        }
+	        a {
+	        	color: $color-1;
+	        	text-decoration: none;
+	        	transition: 400ms;
+	        	&:hover {
+	        		color: lighten($color-1, 15%);
+	        	}
+	        }
+		}
+	}
+	.employee-wrap {
+		@include col(3.75, $collapse:true);
+		position: relative;
+		padding: 0;
+		margin: 0 1% 30px;
+		overflow: hidden;
+		@include bp($solarsystem) {
+			@include col(4.6, $collapse:true);
+			margin: 0 5.5% 30px;
+		}
+		@include bp($max: 640px) {
+			@include col(7.5, $center: true, $collapse:true);
+		}
+		@include bp($max: 480px) {
+			@include col(10, $center: true, $collapse:true);
+		}
+		.img-wrap {
+			backface-visiblity: none;
+			width: 100%;
+			margin: 0 auto;
+			text-align: center;
+			overflow: hidden;
+			position: relative;
+			.main-img {
+				backface-visiblity: none;
+				position: relative;
+				top: 0;
+				left: 0;
+				opacity: 1;
+				transition: 400ms;
+				img {
+					max-width: 100%;
+				}
+			}
+			.hover-img {
+				backface-visiblity: none;
+				position: absolute;
+				top: 0;
+				left: 0;
+				opacity: 0;
+				transition: 400ms;
+				img {
+					max-width: 100%;
+				}
+			}
+		}
+		.info-wrap {
+			position: absolute;
+			backface-visiblity: none;
+			background: rgba($color-4, 0.85%);
+			border-bottom: 5px solid $color-1;
+			bottom: 0px;
+			padding: 0;
+			margin: 0;
+			transform: translateY(86px);
+			transform: translateY(20px);
+			transition: 400ms;
+			width: 100%;
+			z-index: 10;
+			h4 {
+				border-bottom: 5px solid $color-1;
+				color: $white;
+				letter-spacing: 0.02em;
+				margin: 0;
+				padding: 10px 0;
+				text-align: center;
+				width: 100%;
+
+			}
+			p {
+				color: $white;
+				font-family: $fam-body-light;
+				font-size: emCalc(13px);
+				line-height: 1.7em;
+				height: 0; // Hide paragraph text until hover so boxes don't pop up on resize
+				margin: 5px $pad;
+				span {
+					display: inline-block;
+					color: $color-1;
+					font-size: emCalc(14px);
+					margin-right: 5px;
+				}
+				@include bp($max:479px){
+					font-size: emCalc(11px);
+				}
+			}
+			@include bp($max:479px){
+				p {
+					font-size: emCalc(11px);
+				}
+			}
+		}
+		&:hover, &.hover { //hover effects
+			.img-wrap .main-img {
+				opacity: 0;
+			}
+			.img-wrap .hover-img {
+				opacity: 1;
+				transform: scale(1.15, 1.15);
+			}
+			.info-wrap {
+				transform: translateY(0px);
+				p {
+					height: inherit; // Show paragraph text on hover
+				}
+			}
+		}
+	}
+}

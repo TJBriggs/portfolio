@@ -1,0 +1,15 @@
+/*------------------------------------*\
+    ::Fonts
+\*------------------------------------*/
+
+// EXAMPLE:
+// @include font-face(nobile, '/fonts/nobile');
+// @include font-face(nobile, '/fonts/nobile_bold', bold);
+@include font-face(nexa, 'nexa_light_macroman/Nexa_Light-webfont', normal);
+@include font-face(nexa-reg, 'nexa_regular_macroman/Nexa_Regular-webfont');
+@include font-face(opensans-semi, 'opensans/opensans-semibold');
+@include font-face(opensans-bld, 'opensans/OpenSans-Bold-webfont');
+@include font-face(opensans-reg, 'opensans/opensans-regular');
+@include font-face(droid-ital, 'droid/DroidSerif-Italic-webfont');
+@include font-face(droid-reg, 'droid/DroidSerif-webfont');
+@include font-face(fultons-reg, 'fultons/fultonshandregular-webfont');

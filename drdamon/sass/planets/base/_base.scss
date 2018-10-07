@@ -1,0 +1,66 @@
+/*------------------------------------*\
+    ::Base
+    ------------------------------------*
+    ::Normalize.css v3.0.0 | MIT License | git.io/normalize
+\*------------------------------------*/
+html {
+	font-family: $fam-body;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+body {
+	margin: 0;
+	font-family: $fam-body;
+}
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+.page-torso__content:first-child {
+	box-shadow: 0px -3px 10px -2px rgba(0, 0, 0, 0.45);
+	margin-top: 615px;
+	@include bp($solarsystem) {
+		box-shadow: none;
+		margin-top: 0px;
+	}
+}
+.page-torso__inner {
+	padding: 0 $pad;
+}
+
+// Type Styles
+h1, h2, h3, h4, h5, h6 {
+	font-smoothing: antialiased;
+	font-weight: normal;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+}
+h2 {
+	font-family: $fam-heading;
+	font-size: 2.250em;
+	font-weight: normal;
+	letter-spacing: 0.01em;
+}
+h3 {
+	font-family: $fam-heading;
+}
+
+p, li {
+    font-size: 0.975em;
+    letter-spacing: 0.02em;
+    line-height: 1.875rem;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+.hide {
+	display: none; // Hide SVG Sprite
+}
+
+.screen-reader-text {
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
+}
+

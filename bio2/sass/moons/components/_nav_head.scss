@@ -1,0 +1,311 @@
+/*---------------------------------------*\
+    ::Nav in the Header (Desktop Styles)
+\*---------------------------------------*/
+@include bp($min:1025px) {
+	.head-nav {
+		@include nav(
+		    $type: 'dropdown',           		//nav type: dropdown or nested
+		    $fade: .3s,                  		//fade speed (take out for no animation)
+		    $easy-hover: 50px,           		//amount of invisible overflow for sub menu (take out to not use)
+		    $easy-hover-top: 1.2em       		//set top easy-hover value (you can also set $easy-hover-right, -bottom, and -left separately)
+		);
+		float: right;
+		width: 80%;
+		position: relative;
+		top: em(45px); 
+		top: em(57px); 
+		transition: top 500ms;
+	}
+	// General Styles
+	.head-nav a {
+		display: block;
+		text-decoration: none;
+		transition: color 400ms;
+	}
+	// Main menu styles
+	.menu {
+		float: right;
+		margin: 0;
+		padding: 0;
+		position: relative;
+		> li {
+			margin: 0 $pad*1.25;
+			position: relative;
+			transition: margin 400ms;
+			&:nth-of-type(6) { // Contact
+				margin-right: 0;
+			}
+			&.nav-search {
+				display: none;
+			}
+			> a {
+				height: em(44px);
+				font-size: em(18px);
+				font-weight: 100;
+				color: $color-2;
+				letter-spacing: 0.025em;
+				text-transform: uppercase;
+				&:hover {
+					color: $color-1-light;
+				}
+			}
+			// Active state
+			&.current-menu-item {
+				> a {
+					color: $color-1-light;
+				}
+			}
+		}
+	}
+	// Sub Menu Styles
+	.sub-menu {
+		margin: 0;
+		padding: em(5px) $pad;
+		position: relative;
+		z-index: 9999;
+		overflow: hidden;
+		background-color: $color-1;
+		border: 3px solid $color-1-light;
+		border-top: none;
+		> li {
+			width: 100%;
+			> a {
+				height: em(35px);
+				padding: em(5px) 0;
+				color: $color-2;
+				font-size: em(14px);
+				font-weight: 100;
+				letter-spacing: 0.03em;
+				transition: color 400ms;
+				&:hover {
+					color: $color-1-light;
+				}
+			}
+			// Active state
+			&.current-menu-item {
+				> a {
+					color: $color-1-light;
+				}
+			}
+		}
+	}
+	// Adjusting Sub-Menu widths based on text lengths
+	.menu-item-1293 { // Clinical
+		.sub-menu {
+			width: 148px;
+			left: -32px;
+		}
+	}
+	.menu-item-1297 { // about
+		.sub-menu {
+			width: 204px;
+			left: -68px;
+		}
+	}
+	.menu-item-1305 { // News
+		.sub-menu {
+			width: 165px;
+			left: -53px;
+		}
+	}
+	.menu-item-1301 { // Contact
+		.sub-menu {
+			width: 180px;
+			left: -46px;
+			@include bp($max:1215px) {
+				left: auto;
+				right: 0;
+			}
+		}
+	}
+}
+/*------------------------------------*\
+    ::  Tablet Styles
+\*------------------------------------*/	
+@include bp($max:1024px) {
+	.head-nav {
+		width: 0;
+		margin: 0;
+		padding: 0;
+		position: fixed;
+		top: em(110px);
+		right: 0;
+		bottom: 0;
+		z-index: 9999;
+		background-color: rgba(15, 32, 41, 0.95);
+		transition: width 400ms;
+		@include bp($max:640px) {
+			top: em(90px);
+		}
+		.main-head__trigger.active ~ .main-head__nav & { // when nav is toggled
+            width: 100%;
+            overflow-y: scroll;
+        }
+        // General li & a styles
+		ul, li {
+			list-style-type: none;
+			list-style-image: none;
+		}
+	}
+	.head-nav a {
+		display: block;
+		text-decoration: none;
+		transition: color 400ms;
+		white-space: nowrap;
+	}
+	.menu {
+		margin: 0;
+		padding: 1.5em $pad*2 1.5em;
+		> li {
+			padding: 0 40px 0 0;
+			text-align: right;
+			&.menu-item-has-children {
+        		position: relative;
+                &:after{
+                	content: '+';
+                	display: block;
+                	position: absolute;
+                	top: 8px;
+                    right: 0;
+                    backface-visibility: hidden;
+                    color: $color-2-dark;
+                    cursor: pointer;
+                    font-size: em(28px);
+                    font-weight: 200;
+                    z-index: 100;
+                    transition: transform 250ms, color 400ms;
+                }
+                &.active{
+                	&:after {
+	                    content: '\2014';
+                	}
+                }
+            }
+			> a {
+				display: inline-block;
+				height: 45px;
+				letter-spacing: 0.035em;
+				line-height: 45px;
+				color: $color-2;
+				font-size: em(22px);
+				font-weight: bold;
+				text-align: right;
+				text-transform: uppercase;
+				transition: color 400ms;
+				&:hover {
+					color: $color-1-light;
+				}
+			}
+			// Active State
+			&.current-menu-item {
+				> a {
+					color: $color-1-light;
+				}
+			}
+		}
+	}
+	.sub-menu {
+		height: 0;
+		visibility: hidden;
+		> li {
+			text-align: right;
+			> a {
+				display: inline-block;
+				height: 45px;
+				line-height: 45px;
+				color: $color-2-dark;
+				font-size: em(18px);
+				letter-spacing: 0.035em;
+				text-align: right;
+				transition: color 400ms;
+				&:hover {
+					color: $color-1-light;
+				}
+			}
+			// Active State
+			&.current-menu-item {
+				> a {
+					//color: $txt-color-2;
+				}
+			}
+		}
+	}
+	.menu-item-has-children {
+		&.active {
+			.sub-menu {
+				height: auto;
+				visibility: visible;
+			}
+		}
+	}
+	.nav-search {
+		display: none;
+	}	
+}
+@include bp($max:767px) {
+	/*------------------------------------*\
+	    ::  Nav Search Styles
+	\*------------------------------------*/
+	.nav-search {
+		display: block;
+		margin-top: 20px;
+		margin-bottom: 0;
+		padding: 0!important;
+		.search-wrap {
+			width: 100%;
+			padding: 0;
+			overflow: hidden;
+			position: relative;
+			z-index: 40;
+			border-bottom-right-radius: 10px;
+			border-top-right-radius: 10px;
+			&:after {
+				content: url('images/global/search.png');
+				height: 50px;
+				width: 80px;
+				padding: 11px 27px 0 0;
+				position: absolute;
+				top: 0px;
+				right: 0px;
+				z-index: 60;
+				background-color: $color-1-light;
+				border: 1px solid $color-1-light;
+				@include bp($max:480px) {
+					width: 60px;
+					padding: 11px 17px 0 0;
+				}
+			}
+		}
+		input[type="search"] {
+			float: left;
+			width: 100%;
+			position: relative;
+			z-index: 50;
+			border: none;
+			border-bottom-left-radius: 10px;
+			border-top-left-radius: 10px;
+		}
+		input[type="submit"] {
+			height: 50px;
+			width: 80px;
+			padding: 0;
+			float: right;
+			position: absolute;
+			top: 0;
+			right: 0;
+			z-index: 500;
+			opacity: 0;
+
+			background-color: red;
+			border: none;
+		}
+	}
+}
+/*------------------------------------*\
+    ::  Phone Styles
+\*------------------------------------*/	
+@include bp($max:480px) {
+	.head-nav {
+		top: em(75px);
+	}
+}

@@ -1,0 +1,72 @@
+/*------------------------------------*\
+    ::  Contact Styles
+\*------------------------------------*/	
+.content-block--contact {
+	.content__group--1 {
+		h6 {
+			text-transform: none;
+			&:nth-of-type(2) {
+				margin-top: emCalc(45px);
+			}
+		}
+		@include bp($max:1024px) {
+			padding-bottom: emCalc(45px);
+			display: flex;
+			flex-wrap: wrap;
+			overflow: hidden;
+			.corporate-info, .european-info {
+				width: 50%;
+				h6 {
+					margin-top: 0;
+				}
+			}	
+			.european-info {
+				padding: 0 $pad*2;
+			}
+		}
+		@include bp($max:600px) {
+			padding-bottom: emCalc(35px);
+			.corporate-info, .european-info {
+				width: 100%;
+			}
+			.european-info {
+				padding: 15px 0 0 0;
+			}
+		}
+	}
+	.content__group--2 {
+		textarea {
+			height: 201px;
+		}
+	}
+}
+.content-block--social-links {
+	.link-wrap {
+		overflow: hidden;
+		margin-top: emCalc(35px);
+		a {
+			display: inline-block;
+			float: left;
+			margin-right: emCalc(7px);
+			img, svg {
+				height: 30px;
+				width: 30px;
+				margin: 0;
+				fill: $color-1-light;
+				transition: fill 400ms;
+			}
+			&:last-of-type {
+				margin-right: 0;
+			}
+			&:hover {
+				svg {
+					fill: $color-1;
+				}
+			}
+		}
+		// hide weird br tags that WP is placing between links
+		br {
+			display: none;
+		}
+	}
+}

@@ -1,0 +1,340 @@
+/*------------------------------------*\
+	:: Forms
+\*------------------------------------*/
+// Add your custom styles for form elements here.
+// layout styles
+.gform_fields {
+	overflow: hidden!important;
+}
+.gfield {
+	float: left;
+	width: 100%;
+	margin: 0 0 0.8em 0!important;
+	padding: 0!important;
+	position: relative;
+	clear: none!important;
+	.gfield_label { display: none!important;}
+	&.gfield_error {
+		max-width: unset!important;
+		margin-bottom: 0!important;
+		border:  none!important;
+		label {
+			margin-top: 0!important;
+			color: #8d8f90!important;
+		}
+	}
+	&.gform__no-marg-bot {
+		margin-bottom: 0!important;
+	}
+	.ginput_container {
+		margin-top: 0!important;
+	}
+}
+.gfield.subtitle {
+	width: 100%;
+	h5 {
+		@include bp($max:640px) {
+			font-size: 18px;
+		}
+	}
+}
+#field_1_3 {
+	@include bp($max:500px) {
+		margin-top: 0.5em!important;
+	}
+}
+.gform__half {
+	float: left!important;
+	width: 49%;
+	margin-right: 2%!important;
+	&.gfield_error {
+		width: 49%!important;
+	}
+	@include bp($max:500px) {
+		width: 100%;
+		margin-right: 0!important;
+		&.gfield_error {
+			width: 100%!important;
+		}
+	}
+}
+.gform__full {
+	&.gfield_error {
+		width: 100%!important;
+		max-width: none!important;
+		min-width: 100%!important;
+	}
+}
+.gform__last {
+	margin-right: 0!important;
+}
+input[type=text],
+input[type=email],
+input[type=tel],
+textarea {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	height: 62px;
+	width: 100%!important;
+	//padding-top: 25px!important;
+	padding-left: $pad!important;
+	padding-right: $pad!important;
+	outline: 0;
+	border: none;
+	box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.03);
+	color: $color-2;
+	font-family: karlaregular, serif;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 16px!important;
+}
+
+textarea {
+	height: 130px!important;
+	padding: 15px $pad $pad!important;
+}
+
+select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	float: left;
+	height: 62px;
+	width: 100%!important;
+	padding: 0 $pad!important;
+	background-color: $color-3;
+	background-image: url('assets/images/form-arrow.png');
+	background-position: 95% 50%;
+	background-repeat: no-repeat;
+	border: none;
+	border-radius: 0;
+	color: $color-2-light!important;
+	box-shadow: none;
+	outline: 0;
+}
+#field_2_10 {
+	margin-bottom: 0!important;
+	label {
+		display: none;
+	}
+}
+
+#field_2_2 {
+	textarea {
+		float: left;
+		height: 62px!important;
+		@include bp($max:415px) {
+			height: 103px!important;
+		}
+		@include bp($max:350px) {
+			padding-top: 50px!important;
+		}
+	}
+}
+
+#field_2_3,
+#field_2_11 {
+	h5 {
+		margin-top: 1em;
+	}
+}
+
+// Gform Footer
+.gform_footer {
+	input[type=submit] {
+		-webkit-appearance: none!important;
+		height: 59px;
+		width: 100%!important;
+		outline: 0;
+		border: 0;
+		margin: 0!important;
+		@extend .btn;
+		padding: 0 $pad!important;
+		background-color: $color-1;
+		color: $color-3;
+		cursor: pointer;
+		&:hover {
+			background-color: darken($color-1, 7%);
+			color: $color-3;
+		}
+	}
+}
+
+// Ebook CTA Form Styles
+.cta-file {
+	.gform_wrapper {
+		margin-top: 2em;
+
+		@include bp($max:900px) {
+			margin-top: 1.5em;
+		}
+	}
+
+	form {
+		display: flex;
+
+		@include bp($max:1000px) {
+			justify-content: space-between;
+		}
+
+		@include bp($max:960px) {
+			justify-content: flex-start;
+		}
+
+		@include bp($max:640px) {
+			flex-wrap: wrap;
+		}
+		.validation_error {
+			box-shadow: none;
+			flex: 0 1 525px;
+			padding-top: 0!important;
+		}
+	}
+
+	.gform_body {
+		flex: 0 1 320px;
+
+		@include bp($max:1000px) {
+			flex: 0.4 1 300px;
+		}
+
+		@include bp($max:640px) {
+			flex: 1 1 100%;
+		}
+
+		ul li {
+			width: 100%;
+			margin-bottom: 0!important;
+		}
+	}
+
+	.gform_footer {
+		flex: 0 1 185px;
+		height: 63px;
+		margin: 0 0 0 2.5%!important;
+		padding: 0!important;
+		transform: translateY(-0.025em);
+
+		@include bp($max:1000px) {
+			flex: 0.1 1 185px;
+			margin: 0!important;
+		}
+
+		@include bp($max:960px) {
+			margin: 0 0 0 2.5%!important;
+		}
+
+		@include bp($max:640px) {
+			flex: 1 1 100%;
+			margin: 1em 0 0 0!important;
+			transform: translateY(0);
+		}
+
+		.gform_button {
+			height: 63px;
+			font-size: 15px!important;
+		}
+	}
+}
+
+.validation_error {
+	border-top: none!important;
+	border-bottom: 3px solid #BE4643!important;
+	color: #BE4643!important;
+	@extend %kbold;
+	font-size: 14px!important;
+	letter-spacing: 0.03em;
+	box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.03);
+}
+
+#gform_wrapper_1 {
+	.validation_error {
+		background-color: $color-3;
+		padding-left: 110px!important;
+		padding-right: 110px!important;
+		@include bp($max:1200px) {
+			padding-left: 80px!important;
+			padding-right: 80px!important;
+		}
+		@include bp($max:960px) {
+			padding-left: $pad!important;
+			padding-right: $pad!important;
+		}
+	}
+}
+
+#gform_wrapper_3 {
+	.validation_error {
+		color: $color-3!important;
+		padding-left: 60px!important;
+		padding-right: 60px!important;
+		@include bp($max:960px) {
+			padding-left: $pad!important;
+			padding-right: $pad!important;
+		}
+	}
+}
+
+.validation_message {
+	width: 100%;
+	margin: 0!important;
+	padding: 0 $pad!important;
+	line-height: 62px!important;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 100;
+	background-color: $color-3;
+	border: none;
+	color: #BE4643!important;
+	cursor: pointer;
+	@extend %kreg;
+	&.instruction {
+		display: none!important;
+	}
+}
+
+#gform_confirmation_wrapper_3 {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+}
+
+.gform_confirmation_message {
+	@extend %kreg;
+}
+
+// Form Validations Overrides
+.gform_wrapper li.gfield_error input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]), .gform_wrapper li.gfield_error textarea {
+	border: none!important;
+	margin-bottom: 0!important;
+}
+#field_1_6,
+#field_2_6 {
+	&.gfield_error {
+		label {
+			position: absolute;
+			top: 20px;
+			left: $pad;
+			font-family: karlaregular, serif;
+			font-weight: normal!important;
+			font-style: normal;
+			font-size: 18px!important;
+			span {
+				display: none;
+			}
+		}
+	}
+}
+
+// Ebook Override
+.cta-file {
+	.gform_wrapper.gform_validation_error .gform_body ul li.gfield.gfield_error:not(.gf_left_half):not(.gf_right_half) {
+		max-width: none!important;
+	}
+}

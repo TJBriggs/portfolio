@@ -1,0 +1,13 @@
+/*------------------------------------*\
+    ::  Investors Custom Styles 
+\*------------------------------------*/	
+.page-investors {
+	.content-block--investor-relations {
+		// First section - reduce padding-bottom at 1024px;
+		.content-block__inner {
+			@include bp($max:1024px) {
+				padding-bottom: 0;
+			}
+		}
+	}
+}

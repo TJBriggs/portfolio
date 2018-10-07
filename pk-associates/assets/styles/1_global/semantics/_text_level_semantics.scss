@@ -1,0 +1,81 @@
+/*------------------------------------*\
+    :: Text Level Semantics
+\*------------------------------------*/
+body {
+    color: $color-3-dark;
+}
+// Define your text and typeface related styles here.
+h1, h2, h3, h4, h5, h6 { // Set margins to 0
+    margin: 0;
+}
+h1 {
+    @extend %h1;
+}
+h2 {
+    @extend %h2;
+}
+h3 {
+    @extend %h3;
+}
+h4 {
+    @extend %h4;
+}
+h5 {
+    @extend %h5;
+}
+h6 {
+    @extend %h6;
+}
+p, li {
+    @extend %rb-light;
+    font-size: 1.05em;
+    line-height: 1.5em;
+}
+blockquote {
+    max-width: 500px;
+    margin: 0 auto;
+    p {
+        margin: 0;
+        padding: 0;
+        border-top: none;
+        color: $color-1;
+        @extend %h3;
+        font-size: 32px;
+        line-height: 1.3em;
+        &:last-of-type {
+            color: $color-3-dark;
+            @extend %rb-light;
+            font-size: 1.05em;
+            line-height: 1.5em;
+            text-transform: lowercase;
+        }
+    }
+    h5 {
+        margin-top: 0.85em;
+    }
+}
+ul {
+    &:not(.menu) {
+        margin: 0;
+        padding: 0 0 0 35px;
+        list-style-type: none;
+        li {
+            //padding-left: 30px;
+            position: relative;
+            &:before {
+                content: '\f111';
+                font-family: FontAwesome;
+                color: $color-1;
+                font-size: 0.4em;
+                position: absolute;
+                top: 0;
+                left: -25px;
+            }
+        }
+    }
+}
+sup {
+    font-size: 14px;
+    position: relative;
+    top: 2px;
+}

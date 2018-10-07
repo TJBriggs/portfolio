@@ -1,0 +1,70 @@
+/*------------------------------------*\
+    ::  Location Map
+\*------------------------------------*/
+$desk-map: 585px;
+$tab-map: 500px;
+$phone-map: 460px;
+$phone-map-small: 367px;
+// Header Map Styles
+.header-map {
+    //position: absolute;
+    top: 0;
+    height: $desk-map;
+    width: 100%;
+    position: relative;
+    z-index: 8000;
+    margin: 0px auto 0;
+    img {
+        display: block;
+        max-width: none; 
+    }
+    @include bp($solarsystem) {
+        height: $tab-map;
+    }
+    @include bp($max:580px) {
+        height: $phone-map;
+    }
+    @include bp($max:320px) {
+        height: $phone-map-small;
+    }
+}
+// General Map Styles
+.infowindow {
+    color: #000;
+}
+.gm-style {
+    img {max-width: none;}
+    @include bp($max:376px) { // give map the light gray background when scaled for small phones
+        background: #f2f6f6;
+        
+    }
+}
+.gm-style-iw {
+    overflow: hidden !important; // Overrides google map inline style that gives the info box a vertical scrollbar when not needed
+    width: 155px;
+    p {
+        &:first-of-type {
+            margin-bottom: 5px;
+            img { // ami logo
+                margin-bottom: 0px;
+                max-width: 115px;
+            }
+        }
+    }
+    h5 {
+        margin: 0 0 em(5px);
+        color: $color-1;
+        font-family: $fam-head-bold;
+        font-size: em(18px);
+        text-transform: uppercase;
+        strong {
+            display: inline-block;
+            color: #474747;
+            font-family: $fam-rob-bold;
+        }
+    }
+    @include bp($max:580px) {
+        position: relative;
+        top: 200px;
+    }
+}

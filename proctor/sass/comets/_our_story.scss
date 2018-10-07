@@ -1,0 +1,59 @@
+/*------------------------------------*
+    :: Our Story Page Styles
+*------------------------------------*/
+.page-our-story {
+	.thirds {
+		padding-bottom: 60px;
+		.thirds__group--1 {
+
+			p {
+				line-height: 2.0em;
+				&:first-of-type {
+					margin-top: 0;
+				}
+			}
+		}
+	}
+	.page__group--our-story {
+		.parallax__content--center {
+			border-top: 10px solid $color-1;
+	        .parallax-content__inner {
+	            .content-wrapper {
+	                float: none;
+	                width: 90%;
+	                margin: 0 auto;
+	                height: auto;
+	                text-align: center;
+	                .parallax__title {
+	                	color: $white;
+	                	margin-top: 170px;
+	                }
+	                .parallax__button {
+	                    width: 25%;
+	                    margin-bottom: 130px;
+	                }
+	                @include bp($max:768px) {
+	                	.parallax__title {
+		                	margin-top: 140px;
+		                }
+	                    .parallax__button {
+	                        width: 40%;
+	                        margin-bottom: 0px;
+	                    }
+	                }
+	                @include bp($max:500px) {
+	                    .parallax__button {
+	                        width: 70%;
+	                    }
+	                }
+	                @include bp($max:370px) {
+	                	.parallax__title {
+	                		font-size: emCalc(30px);
+		                	margin-top: 180px;
+		                }
+	                }
+	            }
+	        }
+	    }
+	}
+}

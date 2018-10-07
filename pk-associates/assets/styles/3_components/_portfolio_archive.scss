@@ -1,0 +1,411 @@
+/*------------------------------------*\
+    :: Portfolio Archive
+\*------------------------------------*/
+// Hero Styles
+.portfolio-hero-html {
+    body {
+        overflow: hidden;
+        @media screen and (max-width:959px) , screen and (max-height:700px) {
+            overflow: auto;
+            padding-top: 85px;
+        }  
+    }
+    .portfolio-archive-hero {
+        display: table-row;
+        height: 100%;
+        .basic-hero__overlay {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .basic-hero__content {
+                padding: 0;
+            }
+        }
+        @media screen and (max-width:959px) , screen and (max-height:700px) {
+            display: block;
+        }
+        & + section { // hide .main-torso
+            height: 0;
+            display: none;
+        }
+    }
+}
+.all-projects {
+        body {
+            overflow: visible;
+        }
+        .portfolio-archive-hero {
+            & + section { // hide .main-torso
+                height: auto;
+                display: block;
+            }
+        }
+    }
+.portfolio-archive-hero {
+    .basic-hero__content {
+        padding: 150px $pad*2 100px!important;
+        //padding: 0;
+        @include bp($max:959px) {
+            margin: 0;
+            padding: 130px $pad*2 50px!important;
+        }
+        @include bp($max:768px) {
+            margin: 0;
+            padding: 100px $pad*2 50px!important;
+        }
+        @include bp($max:600px) {
+            margin: 0;
+            padding: 100px $pad*2 35px!important;
+        }
+        @include bp($max:500px) {
+            padding: 100px $pad 35px!important;
+        }
+    }
+    .basic-hero__filters {
+        width: 100%;
+        margin-top: 3em;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        @include bp($max:600px) {
+            margin-top: 35px;
+        }
+    }
+    .basic-hero__sector-wrap {
+        width: 48%;
+        position: relative;
+        @include bp($max:600px) {
+            width: 100%;
+        }
+        .facetwp-facet-market_sectors {
+            height: 80px;
+            width: 100%;
+            position: relative;
+            .fs-wrap {
+                height: 100%;
+                width: 100%;
+                outline: none;
+            }
+            .fs-label-wrap {
+                height: 100%;
+                border: 4px solid $color-2-light;
+                cursor: pointer;
+                outline: none;
+                .fs-label {
+                    height: 100%;
+                    width: 100%;
+                    padding: 27px $pad;
+                    background-color: $color-3-light;
+                    @extend %rb-light;
+                    color: #757575;
+                    font-size: 18px;
+                    text-align: left;
+                    text-transform: lowercase;
+                }
+            }
+            .fs-options {
+                max-height: 145px;
+                border: 1px solid #ddd;
+            }
+            .fs-dropdown {
+                max-height: 145px;
+                width: 100%;
+                border: none;
+                .fs-search {
+                    height: 40px;
+                    border-top: 1px solid #ddd;
+                    border-left: 1px solid #ddd;
+                    border-right: 1px solid #ddd;
+                    input[type=search] {
+                        height: 100%;
+                        padding: 0 10px;
+                        @extend %rb-light;
+                        color: #757575;
+                        font-size: 18px;
+                        text-transform: lowercase;
+                    }
+                }
+                .fs-option {
+                    display: flex;
+                    align-items: center;
+                    height: 40px;
+                    text-align: left;
+                    padding: 0 $pad;
+                    background-color: $color-3-light;
+                    transition: background-color 400ms;
+                    .fs-option-label {
+                        @extend %rb-light;
+                        color: #757575;
+                        font-size: 16px;
+                        text-transform: lowercase;
+                    }
+                    &:nth-of-type(odd) {
+                        background-color: #dcdcdc;
+                    }
+                    &:hover {
+                        background-color: #F1F1F1;
+                    }
+                    &:nth-of-type(odd) {
+                        &:hover {
+                            background-color: #d0d0d0;
+                        }
+                    }
+                }
+            }
+            .fs-arrow {
+                width: 15px;
+                height: 15px;
+                border: none;
+                border-right: 3px solid $color-2-dark;
+                border-bottom: 3px solid $color-2-dark;
+                position: absolute;
+                outline: none;
+                top: 0;
+                right: 25px;
+                bottom: 0;
+                margin: auto;
+                transform: rotate(45deg);
+            }
+        }
+    }
+    .basic-hero__search-wrap {
+        width: 48%;
+        @include bp($max:600px) {
+            width: 100%;
+            margin-top: 1em;
+        }
+        .facetwp-search {
+            -webkit-appearance: none;
+            -moz-appearance:    none;
+            appearance:         none;
+            height: 80px;
+            width: 100%;
+            padding: 0 $pad;
+            background-color: $color-3-light;
+            border: 4px solid $color-2-light;
+            outline: none;
+            @extend %rb-light;
+            font-size: 18px;
+        }
+    }
+    .facetwp-facet {
+        margin-bottom: 0;
+    }
+    .facetwp-btn {
+        right: 25px!important;
+    }
+}
+// Grid Styles
+$grid_pad: 1.25em;
+$width_1: 27.69%; // 292px Box 2 & 4
+$width_2: 31.85%; // 399px Box 1
+$width_3: 40.46%; // 507px Box 3 & 5
+$width_4: 44.62%; // 612px Last Box
+$height_1: 40.15vw; // Box 1
+$height_2: 20.15vw; // Box 2
+.portfolio-grid {
+    width: 100%;
+    overflow: hidden;
+    background-color: $color-3-light;
+}
+.grid {
+    width: 100%;
+}
+.grid__item {
+    float: left;
+    padding: 0 $grid_pad $grid_pad 0;
+    text-decoration: none;
+    position: relative;
+    .grid__content {
+        height: 100%;
+        width: 100%;
+        background-color: rgba(204, 45, 48, 0);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        &:hover {
+            background-color: rgba(204, 45, 48, 1);
+            background-blend-mode: multiply;
+        }
+    }
+    .grid__overlay {
+        display: block;
+        height: 100%;
+        width: 100%;
+        padding: $pad*2;
+        position: relative;
+        @extend %gradient-top;
+        text-align: right;
+        overflow: hidden;
+        @include bp($max:1250px) {
+            padding: $pad $pad*2;
+        }
+        h3 {
+            width: 100%;
+            float: right;
+            color: $color-3-light;
+            position: relative;
+            top: 20px;
+            text-shadow: 0 0 5px rgba(0, 0, 0, 0.75);
+            transition: top 400ms;
+            &:after {
+                content: '';
+                height: 3px;
+                width: 100%;
+                position: absolute;
+                bottom: -50px;
+                left: 0;
+                right: 0;
+                background-color: $color-3-light;
+                opacity: 0;
+                transition: bottom 400ms, opacity 400ms;
+            }
+        }
+        .grid__categories {
+            position: absolute;
+            bottom: -70px;
+            right: $pad*2;
+            opacity: 0;
+            transition: bottom 400ms, opacity 400ms;
+            h5 {
+                @extend %bn-book;
+                font-size: 22px;
+                font-weight: 400;
+                letter-spacing: 0.05em;
+                color: $color-3-light;
+                margin: 0;
+                text-shadow: 0 0 5px rgba(0, 0, 0, 0.75);
+            }
+        }
+        &:hover {
+            h3 {
+                top: 0;
+                &:after {
+                    bottom: -10px;
+                    opacity: 1;
+                }
+            }
+            .grid__categories {
+                bottom: 15px;
+                opacity: 1;
+            }
+        }
+    }
+    &--1 {
+        height: $height_1;
+        width: $width_2;
+    }
+    &--2 {
+        height: $height_2;
+        width: $width_1;
+    }
+    &--3 {
+        height: $height_2;
+        width: $width_3;
+        padding-right: 0;
+    }
+    &--4 {
+        height: $height_2;
+        width: $width_1;
+    }
+    &--5 {
+        float: right;
+        height: $height_1;
+        width: $width_3;
+        padding-right: 0;
+    }
+    &--6 {
+        height: $height_1;
+        width: $width_1;
+        padding-right: $grid_pad;
+    }
+    &--7 {
+        height: 20vw;
+        width: $width_2;
+    }
+    &--8 {
+        height: $height_2;
+        width: $width_1;
+    }
+    &--9 {
+        float: right;
+        height: $height_2;
+        width: $width_4;
+        padding-right: 0;
+    }
+    // Change layouts
+    &--1, &--2, &--3, &--4, &--5,
+    &--6, &--7, &--8, &--9 {
+        @include bp($max:960px) {
+            float: left;
+            width: 33.333%;
+            height: 30vw;
+            padding-right: $grid_pad;
+        }
+    }
+    &--3, &--6, &--9 {
+        @include bp($max:960px) {
+            padding-right: 0;
+        }
+    }
+    &--1, &--2, &--3, &--4, &--5,
+    &--6, &--7, &--8, &--9 {
+        @include bp($max:768px) {
+            height: 40vw;
+            width: 50%;
+            padding-right: $grid_pad;
+        }
+    }
+    &:nth-of-type(even) {
+        @include bp($max:768px) {
+            padding-right: 0;
+        }
+    }
+    &--1, &--2, &--3, &--4, &--5,
+    &--6, &--7, &--8, &--9 {
+        @include bp($max:640px) {
+            height: 290px;
+            width: 100%;
+            padding-right: 0;
+        }
+    }
+}
+// Additional Projects  
+.additional-projects {
+    width: 100%;
+    padding: 3em 0 6em;
+    overflow: hidden;
+    background-color: $color-3-light;
+    h2 {
+        position: relative;
+        top: 8px;
+        color: $color-1;
+    }
+    .additional-projects__wrap {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 1.5em;
+        ul {
+            width: 50%;
+            padding: 0 0 0 27px;
+            //overflow: hidden;
+            li {
+                @extend %rb-black;
+                font-size: 20px;
+                font-weight: 300;
+                letter-spacing: 0.075em;
+                line-height: 1.2em;
+                margin-top: 10px;
+                padding-right: $pad;
+                text-transform: capatilize;
+                &:first-of-type {
+                    margin-top: 0;
+                }
+                &:before {
+                    top: 0px;
+                    font-size: 8px;
+                }
+            }
+        }
+    }
+}

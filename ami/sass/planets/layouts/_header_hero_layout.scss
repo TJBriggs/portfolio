@@ -1,0 +1,147 @@
+/*------------------------------------*\
+    ::  Hero Layout
+\*------------------------------------*/
+.hero-block {
+	width: 100%;
+	position: relative;
+	&:before { // centering unknown
+		content: '';
+	  	display: inline-block;
+	  	height: 100%;
+	  	margin-right: -0.25em; // Adjusts for spacing 
+	  	vertical-align: middle;
+	}
+	&:after { // vignette general styles
+		content: '';
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+	}
+	/*------------------------------------*\
+	    :: Full Hero Layout
+	\*------------------------------------*/
+	&.hero-block--full {
+		height: 100%;
+		min-height: 100%;
+		@include bp($max:1024px) {
+			height: 680px;
+			min-height: 0;
+		}
+		@include bp($max:768px) {
+			height: 960px;
+		}
+		@include bp($max:767px) {
+			height: 500px;
+		}
+		@include bp($max:480px) {
+			height: 460px;
+		}
+	}
+	.hero-block__text {
+		display: inline-block; // centering unknown
+		width: 100%;
+		margin-top: 23%; // offset so text isn't completely centered until mobile
+		padding: 0 $pad;
+		position: relative;
+		overflow: hidden;
+		z-index: 50;
+		vertical-align: middle; // centering unknown
+		@media screen and ( max-height: 800px ){ // for small screen heights center text vertically
+			margin-top: 0;
+		}
+		@include bp($max:767px) {
+			margin-top: 10%;
+		}
+		@include bp($max:480px) {
+			margin-top: 28%;
+		}
+		.hero-block__intro-text {
+			margin: 0;
+			@include bp($max:480px) {
+				display: none; // hide this text on mobile
+			}
+		}
+		.hero-block__bold-text {
+			margin: em(3px) 0 0;
+			padding-bottom: em(15px);
+			position: relative;
+			&:after { // underline styles
+				content: '';
+				height: 4px;
+				width: 100px;
+				margin: 0 auto 0 -50px;
+				position: absolute;
+				bottom: 0;
+				left: 50%;
+				z-index: 1;			
+			}
+			@include bp($max:767px) {
+				padding-bottom: em(10px);
+			}
+			@include bp($max:480px) {
+				width: 70%;
+				margin: 0 auto;
+				padding-bottom: em(12px);
+			}
+			@include bp($max:479px) {
+				width: 100%;
+			}
+		}
+		.hero-block__button-text {
+			margin-top: em(25px);
+			@include bp($max:767px) {
+				margin-top: em(20px);
+			}
+			@include bp($max:480px) {
+				margin-top: em(17px);
+			}
+		}
+		.hero-block__scroll-btn {
+			display: block;
+			width: 65px;
+			margin: em(25px) auto 0;
+			svg {
+				max-height: 65px;
+				width: 65px;
+			}
+			@include bp($max:480px) {
+				width: 50px;
+				margin: em(20px) auto 0;
+				svg {
+					max-height: 50px;
+					width: 50px;
+				}
+			}
+		}
+	}
+	/*------------------------------------*\
+	    ::  Half Hero Layout
+	\*------------------------------------*/
+	&.hero-block--half {
+		height: 585px;
+		@include bp($max:767px) {
+			height: 500px;
+		}
+		@include bp($max:480px) {
+			height: 460px;
+		}
+	}
+	.hero-block__title { // main title for sub pages
+		display: inline-block; // centering unknown
+		height: auto;
+		width: 80%;
+		margin: 4.5% 10% 0; // vertically center between bottom of header and bottom of hero
+		padding: 0 $pad;
+		position: relative;
+		overflow: hidden;
+		z-index: 100;
+		vertical-align: middle; // centering unknown
+		@include bp($max:767px) {
+			margin: 15% 10% 0; // vertically center between bottom of header and bottom of hero
+		}
+	}
+}

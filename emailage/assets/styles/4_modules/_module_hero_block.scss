@@ -1,0 +1,347 @@
+/*------------------------------------*\
+    ::  Hero Block Styles
+\*------------------------------------*/
+.hero-block {
+    width: 100%;
+    margin-top: 84px;
+    margin-bottom: 5em;
+    position: relative;
+    background-color: $color-5;
+    @include bp($max:960px) {
+        margin-top: 58px;
+    }
+    @include bp($max:767px) {
+        margin-bottom: 0;
+    }
+    .hero-block__inner {
+        padding: 4.6em $pad*2 6.55em;
+        position: relative;
+        @include bp($max:500px) {
+            padding: 4.6em $pad 6.55em;
+        }
+    }
+    .hero-block__colored-title {
+        margin-bottom: 1.5em;
+        color: $accent-gray;
+    }
+    h1 {
+        @extend %h2; // Style like H2 on all pages but home
+    }
+    .btn {
+        margin-top: 1.5em;
+    }
+    &.hero-block--figure {
+        .hero-block__inner {
+            @media (max-width:767px) {
+                padding: 0;
+            }
+        }
+        .hero-block__text {
+            width: 100%;
+            width: 58vw;
+            max-width: 660px;
+            .hero-block__colored-title {
+                text-align: left;
+            }
+            @include bp($max:800px) {
+                max-width: 390px;
+            }
+            @include bp($max:767px) {
+                width: 100%;
+                max-width: none;
+                padding: 3.55em $pad*2 6.55em;
+            }
+        }
+        .hero-block__figure-wrap {
+            height: auto;
+            width: 475px;
+            position: absolute;
+            top: 0;
+            right: -123px;
+            z-index: 50;
+            text-align: center;
+            img {
+                position: relative;
+                z-index: 50;
+            }
+            
+        }
+    }
+    &.hero-block--centered {
+        text-align: center;
+        .hero-block__text {
+            width: 100%;
+            max-width: 660px;
+            margin: 0 auto;
+        }
+    }
+}
+/*---------------------------------------*\
+    :: Curved Accents Centered Content
+\*---------------------------------------*/  
+.hero-block--centered {
+    .hero-block__inner {
+        @include bp($max:500px) {
+            padding: 4.6em $pad 5em;
+        }
+    }
+    &.hero-block--accent-down {
+        &:after {
+            content: '';
+            position: absolute;
+            height: 60px;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: url('./assets/images/accent-curves/hero-down-lg.svg');
+        }
+        @include bp($max:1440px) {
+            &:after {
+                height: 50px;
+                bottom: 0;
+                background-image: url('./assets/images/accent-curves/hero-down.svg');
+            }
+        }
+        @include bp($max:767px) {
+            &:after {
+                height: 110px;
+                bottom: -50px;
+                background-image: url('./assets/images/accent-curves/hero-down-767.svg');
+            }
+            
+        }
+        @include bp($max:500px) {
+            &:after {
+                height: 110px;
+                bottom: -50px;
+                background-image: url('./assets/images/accent-curves/hero-down-500.svg');
+            }
+            
+        }
+    }
+    &.hero-block--accent-up {
+        &:after {
+            content: '';
+            position: absolute;
+            height: 60px;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: url('./assets/images/accent-curves/hero-up-lg.svg');
+        }
+        .hero-block__text {
+            padding-bottom: 2em;
+        }
+        @include bp($max:1440px) {
+            &:after {
+                height: 50px;
+                bottom: 0;
+                background-image: url('./assets/images/accent-curves/hero-up.svg');
+            }
+        }
+        @include bp($max:767px) {
+            &:after {
+                height: 110px;
+                bottom: -50px;
+                background-image: url('./assets/images/accent-curves/hero-up-767.svg');
+            } 
+        }
+        @include bp($max:500px) {
+            &:after {
+                height: 110px;
+                bottom: -50px;
+                background-image: url('./assets/images/accent-curves/hero-up-500.svg');
+            }
+        }
+    }
+}
+.hero-block--figure {
+    &.hero-block--accent-down {
+        &:after {
+            content: '';
+            position: absolute;
+            height: 70px;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 15;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: url('./assets/images/accent-curves/hero-down-lg.svg');
+        }
+        @include bp($max:1440px) {
+            &:after {
+                height: 50px;
+                bottom: 0;
+                background-image: url('./assets/images/accent-curves/hero-down.svg');
+            }
+        }
+        @include bp($max:767px) {
+            &:after {
+                display: none;
+            } 
+            .hero-block__figure-wrap, .hero-block__form-wrap {
+                width: 100%;
+                padding: 0 $pad*2;
+                position: relative;
+                right: 0;
+                background-color: $color-3;
+                &:before {
+                    content: '';
+                    position: absolute;
+                    height: 110px;
+                    width: 100%;
+                    max-width: 767px;
+                    top: -60px;
+                    left: 0;
+                    right: 0;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    background-image: url('./assets/images/accent-curves/hero-down-767.svg');
+                }
+                img {
+                    top: -30px;
+                }
+            }
+        }
+        @include bp($max:500px) {
+            .hero-block__figure-wrap, .hero-block__form-wrap {
+                width: 100%;
+                padding: 0 $pad;
+                position: relative;
+                right: 0;
+                background-color: $color-3;
+                &:before {
+                    height: 110px;
+                    width: 100%;
+                    max-width: 500px;
+                    top: -70px;
+                    background-image: url('./assets/images/accent-curves/hero-down-500.svg');
+                }
+                img {
+                    top: -30px;
+                }
+            }
+        }
+    }
+}
+.hero-block--figure {
+    &.hero-block--accent-up {
+        &:after {
+            content: '';
+            position: absolute;
+            height: 70px;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 15;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: url('./assets/images/accent-curves/hero-up-lg.svg');
+        }
+        @include bp($max:1440px) {
+            &:after {
+                height: 50px;
+                bottom: 0;
+                background-image: url('./assets/images/accent-curves/hero-up.svg');
+            }
+        }
+        @include bp($max:767px) {
+            &:after {
+                display: none;
+            } 
+            .hero-block__figure-wrap, .hero-block__form-wrap {
+                width: 100%;
+                padding: 0 $pad*2;
+                position: relative;
+                right: 0;
+                background-color: $color-3;
+                &:before {
+                    content: '';
+                    position: absolute;
+                    height: 110px;
+                    width: 100%;
+                    max-width: 767px;
+                    top: -60px;
+                    left: 0;
+                    right: 0;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    background-image: url('./assets/images/accent-curves/hero-up-767.svg');
+                }
+                img {
+                    top: -30px;
+                }
+            }
+        }
+        @include bp($max:500px) {
+            .hero-block__figure-wrap, .hero-block__form-wrap {
+                width: 100%;
+                padding: 0 $pad;
+                position: relative;
+                right: 0;
+                background-color: $color-3;
+                &:before {
+                    height: 110px;
+                    width: 100%;
+                    max-width: 500px;
+                    top: -70px;
+                    background-image: url('./assets/images/accent-curves/hero-up-500.svg');
+                }
+                img {
+                    top: -30px; 
+                }
+            }
+        }
+    }
+}
+/*------------------------------------*\
+    :: Blog and Event Hero Styling
+\*------------------------------------*/  
+.hero-block__colored-title {
+    &.date {
+        margin: 1.8em 0 0;
+        text-transform: none;
+    }
+}
+
+/*------------------------------------*\
+    :: Home Specific Styling
+\*------------------------------------*/    
+.home {
+    .hero-block {
+        h1 {
+            @extend %h1; // Style as H1 on home
+            letter-spacing: 0.02em;
+        }
+        @include bp($max:500px) {
+            .hero-block__figure-wrap {
+                img {
+                    top: -70px;
+                }
+            }
+        }
+    }
+    &.banner-present {
+        .hero-block {
+            margin-top: 127px;
+            @include bp($max:960px) {
+                margin-top: 101px;
+            }
+        }
+    }
+}

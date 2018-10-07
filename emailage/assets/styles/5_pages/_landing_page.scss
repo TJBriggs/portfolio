@@ -1,0 +1,233 @@
+/*------------------------------------*\
+    :: Landing Page Styles
+\*------------------------------------*/
+// Hide weird ghost hero from crappy sage page wrapping crap crap crap
+.hero-block--none {
+    display: none;
+}
+$content_width: 57.5%;
+$content_max: 660px;
+.hero-block--landing {
+    .hero-block__inner {
+        @include bp($max:768px) {
+            padding: 0;
+        }
+    }
+    .hero-block__landing-text {
+        width: $content_width;
+        max-width: $content_max;
+        padding-right: $pad;
+        .hero-block__colored-title {
+            text-align: left;
+        }
+        @include bp($max:768px) {
+            width: 100%;
+            max-width: none;
+            padding: 3.55em $pad*2 4em!important;
+        }
+        @include bp($max:800px) {
+            max-width: 390px;
+        }
+        @include bp($max:768px) {
+            width: 100%;
+            max-width: none;
+            padding: 3.55em $pad*2 4em!important;
+        }
+
+        @include bp($max:500px) {
+            padding: 3.55em $pad*2 5.55em;
+        }
+    }
+    .hero-block__form-wrap {
+        width: 38%;
+        max-width: 400px;
+        position: absolute;
+        top: 65px;
+        right: 0px;
+        z-index: 100;
+        .hero-block__form-container {
+            padding: $pad*2;
+            @extend %br;
+            background-color: $color-3;
+            box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.25);
+        }
+        @include bp($max:1100px) {
+            right: 2%;
+        }
+        @include bp($max:768px) {
+            position: static;
+            width: 100%;
+            top: 0;
+            right: 0;
+            max-width: none;
+            margin: 0 auto;
+            padding: 3em $pad*2 0;
+            position: relative;
+            background-color: $color-3;
+            .hero-block__form-container {
+                position: relative;
+                top: 30px;
+                background-color: $color-3;
+                box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.25);
+            }
+        }
+        @include bp($max:500px) {
+            .hero-block__form-container {
+                width: 100%;
+                padding: $pad*2 0;
+                border-radius: none;
+                box-shadow: none;
+
+            }
+        }
+    }
+}
+.landing-page__content {
+    padding-bottom: 5em;
+    @include bp($max:768px) {
+        width: 100%;
+        margin-top: 5em;
+        padding-bottom: 6em;
+    }
+}
+.landing-page__icons {
+    width: 575px;
+    padding-right: $pad;
+    h4 {
+        margin-bottom: 2em;
+    }
+    @include bp($max:1440px) {
+        width: $content_width;
+        max-width: $content_max;
+    }
+    @include bp($max:768px) {
+        width: 100%;
+        max-width: none;
+    }
+}
+.landing-page__icon-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    .landing-page__icon-wrap {
+        height: auto;
+        width: 30%;
+    }
+    @include bp($max:768px) {
+        justify-content: center;
+        .landing-page__icon-wrap {
+            width: 50%;
+            margin-bottom: 2.5em;
+            text-align: center;
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+            img {
+                display: inline-block;
+                max-width: 200px;
+            }
+        }
+    }
+    @include bp($max:500px) {
+        .landing-page__icon-wrap {
+            img {
+                max-width: 150px;
+            }
+        }
+    }
+    @include bp($max:400px) {
+        .landing-page__icon-wrap {
+            img {
+                max-width: 120px;
+            }
+        }
+    }
+}
+.landing-page__stats {
+    width: 575px;
+    margin-top: 3.5em;
+    padding-right: $pad;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    @include bp($max:1440px) {
+        width: $content_width;
+        max-width: $content_max;
+    }
+    @include bp($max:768px) {
+        width: 100%;
+        max-width: none;
+        margin-top: 5em;
+        padding-right: 0;
+        justify-content: center;
+    }
+    .landing-page__stat {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        height: 257px;
+        width: 257px;
+        border-radius: 50%;
+        box-shadow: 0 0 26px 0 rgba(189, 195, 198, 100);
+        color: $color-3;
+        @include bp($max:1024px) {
+            height: 25vw;
+            max-height: 257px;
+            width: 25vw;
+            max-width: 257px;
+        }
+        @include bp($max:850px) {
+            height: 23.5vw;
+            max-height: 250px;
+            width: 23.5vw;
+            max-width: 250px;
+        }
+        @include bp($max:768px) {
+            height: 257px;
+            max-height: none;
+            width: 257px;
+            max-width: none;
+            &:last-of-type {
+                margin-left: 5%;
+            }
+        }
+        @include bp($max:640px) {
+            height: 300px;
+            width: 300px;
+            margin: 0 auto;
+            &:last-of-type {
+                margin: 2em auto 0;
+            }
+        }
+    }
+    .landing-page__stat-content {
+        display: inline-block;
+        h1 {
+            font-size: 4.75em;
+            text-align: center;
+            word-spacing: -25px;
+
+            .stat__number, .stat__text {
+                display: inline;
+                color: $color-3;
+            }
+        }
+        h4 {
+            max-width: 250px;
+            padding: 0 $pad;
+            @extend %museo-300;
+            font-size: 1em;
+            text-align: center;
+            color: $color-3;
+        }
+        @include bp($max:850px) {
+            font-size: 80%;
+        }
+        @include bp($max:768px) {
+            font-size: 100%;
+        }
+    }
+}

@@ -1,0 +1,38 @@
+/*------------------------------------*\
+    :: Wrappers
+\*------------------------------------*/	
+.main-wrap {
+    overflow: hidden;
+}
+// Set Padding
+[class*="__inner"],
+[class*="-inner"] {
+    padding: 0 $pad*2;
+    @include bp($max: 500px) {
+        padding: 0 $pad;
+    }
+}
+// Set custom widths
+[class*="__inner"] {
+    width: 100%;
+    max-width: 1060px;
+    margin: 0 auto;
+}
+[class*="__narrow-inner"] {
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto;
+
+}
+[class*="__wide-inner"] {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0;
+    @include bp($max:640px) {
+        padding: 0 $pad*2;
+    }
+    @include bp($max: 500px) {
+        padding: 0 $pad;
+    }
+}

@@ -1,0 +1,99 @@
+/*------------------------------------*\
+    ::  Icon Slider Layout
+\*------------------------------------*/	
+.icon-slider {
+	width: 100%;
+	.section-title {
+		margin-bottom: emCalc(45px);
+	}
+	&__inner {
+		padding: 0 $pad;
+	}
+	// Nav Elements
+	&__nav {
+		width: 100%;
+		margin-bottom: 0;
+		padding: 0;
+		position: relative;
+		text-align: center; // for layout purposes
+		&:after { // Underline
+			content: '';
+			height: 1px;
+			width: 90%;
+			position: absolute;
+			left: 5%;
+			bottom: 30px;
+			@include bp($max:600px) {
+				width: 100%;
+				left: 0;
+				bottom: 11px;
+			}
+		}
+	}
+	.nav-item {
+		display: inline-block;
+		width: 24%;
+		margin: 0;
+		padding-bottom: 2.25em;
+		position: relative;
+		@include bp($max:600px) {
+			width: 49%;
+			padding-bottom: 1.25em;
+		}
+		&:after { // Active Arrow
+			content: '';
+			height: 0;
+			width: 0;
+			position: absolute;
+			left: 50%;
+			bottom: 30px;
+			transform: translateX(-50%);
+			@include bp($max:600px) {
+				display: none;
+			}
+		}
+		&__link {
+			display: block;
+			height: 100%;
+			width: 100%;
+			text-align: center; // for layout purposes
+		}
+		img, svg {
+			display: inline-block;
+			height: 90px;
+			width: 90px;
+			@include bp($max:960px) {
+				height: 75px;
+				width: 75px;
+			}
+			@include bp($max:400px) {
+				height: 60px;
+				width: 60px;
+			}
+		}
+	}
+	// Slide Elements
+	&__slides {
+		width: 100%;
+	}
+	&__slide {
+		width: 80%;
+		margin: 0 auto;
+		padding: 0.75em 0 0;
+		& > *:first-child {
+       		margin-top: 0;
+    	}
+		@include bp($max:960px) {
+			width: 90%;
+		}
+		@include bp($max:640px) {
+			padding: 1em 0 0;
+		}
+		@include bp($max:480px) {
+			width: 100%;
+		}
+		@include bp($max:479px) {
+			padding: 1.35em 0 0;
+		}
+	}
+}

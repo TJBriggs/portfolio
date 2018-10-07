@@ -1,0 +1,362 @@
+/*------------------------------------*\
+    ::  Trustbar Layout
+\*------------------------------------*/
+.trust-bar {
+	.title-wrap {
+		margin-top: em(75px);
+		@include bp($max:400px) {
+			margin-top: em(55px);
+		}
+	}
+	.trust-bar__logos {
+		width: 100%;
+		margin: em(55px) 0 em(25px);
+		overflow: hidden;
+		// @include bp($max:1024px) {
+		// 	margin: em(55px) 0 em(35px);
+		// }
+		@include bp($max:768px) {
+			margin: em(55px) 0 em(15px);
+		}
+		@include bp($max:400px) {
+			margin: em(35px) 0 0;
+		}
+		.trust-bar__logo {
+			display: block;
+			float: left;
+			min-height: 110px;
+			width: 20%;
+			margin: 0 0 em(60px) 0;
+			img {
+				//max-height: 100px;
+				//max-width: 150px;
+				@include bp($max:400px) {
+					max-width: 125px;
+				}
+			}
+		}
+		/*--------------------------------------------*\
+		    :: Modifiers for Different Logo Counts
+		\*--------------------------------------------*/
+		&[class*="--3"] {
+			.trust-bar__logo {
+				width: 33.3333336%;
+			}
+			@include bp($max:575px) {
+				.trust-bar__logo {
+					width: 50%;
+					&:nth-of-type(3) {
+						width: 50%;
+						margin: 0 25%;
+					}
+				}
+			}
+			@include bp($max:400px) {
+				.trust-bar__logo {
+					margin-bottom: em(15px);
+					&:nth-of-type(3) {
+						margin: 0 25%;
+					}
+				}
+			}
+		}
+		&[class*="--4"] {
+			.trust-bar__logo {
+				width: 25%;
+			}
+			@include bp($max:730px) {
+				.trust-bar__logo {
+					width: 50%;
+					&:nth-of-type(3),
+					&:nth-of-type(4) {
+						width: 50%;
+						margin: 0;
+					}
+				}
+			}
+			@include bp($max:400px) {
+				.trust-bar__logo {
+					margin-bottom: em(15px);
+				}
+			}
+		}
+		&[class*="--5"] {
+			.trust-bar__logo {
+				width: 33.3333336%;
+				margin-bottom: em(25px);
+				&:nth-of-type(4),
+				&:nth-of-type(5) {
+					width: 50%;
+				}
+			}
+			@include bp($max:575px) {
+				.trust-bar__logo {
+					width: 50%;
+					&:nth-of-type(5) {
+						width: 50%;
+						margin: 0 25%;
+					}
+				}
+			}
+			@include bp($max:400px) {
+				.trust-bar__logo {
+					margin-bottom: em(15px);
+					&:nth-of-type(5) {
+						width: 50%;
+						margin: 0 25%;
+					}
+				}
+			}
+		}
+		&[class*="--6"] {
+			.trust-bar__logo {
+				width: 33.3333336%;
+			}
+			@include bp($max:575px) {
+				.trust-bar__logo {
+					width: 50%;
+					&:nth-of-type(5),
+					&:nth-of-type(6) {
+						margin-bottom: 0;
+					}
+				}
+			}
+			@include bp($max:400px) {
+				.trust-bar__logo {
+					margin-bottom: em(15px);
+					&:nth-of-type(5),
+					&:nth-of-type(6) {
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+		&[class*="--7"] {
+			.trust-bar__logo {
+				width: 25%;
+				&:nth-of-type(5),
+				&:nth-of-type(6),
+				&:nth-of-type(7) {
+					width: 33.3333336%;
+				}
+			}
+			@include bp($max:768px) {
+				.trust-bar__logo {
+					width: 33.3333336%;
+					&:nth-of-type(7) {
+						width: 33.3333336%;
+						margin: 0 33.3333336% 0;
+					}
+				}
+			}
+			@include bp($max:575px) {
+				.trust-bar__logo {
+					width: 50%;
+					&:nth-of-type(5),
+					&:nth-of-type(6),
+					&:nth-of-type(7) {
+						width: 50%;
+					}
+					&:nth-of-type(7) {
+						margin: 0 25% 0;
+					}
+				}
+			}
+			@include bp($max:400px) {
+				.trust-bar__logo {
+					margin-bottom: em(15px);
+					&:nth-of-type(5),
+					&:nth-of-type(6),
+					&:nth-of-type(7) {
+						margin-bottom: em(15px);
+					}
+					&:nth-of-type(7) {
+						margin: 0 25% 0;
+					}
+				}
+			}
+		}
+		&[class*="--8"] {
+			.trust-bar__logo {
+				width: 25%;
+			}
+			@include bp($max:768px) {
+				.trust-bar__logo {
+					width: 33.3333336%;
+					&:nth-of-type(7),
+					&:nth-of-type(8) {
+						width: 50%;
+						margin-bottom: 0;
+					}
+				}
+			}
+			@include bp($max:575px) {
+				.trust-bar__logo {
+					width: 50%;
+					&:nth-of-type(7),
+					&:nth-of-type(8) {
+						width: 50%;
+						margin-bottom: 0;
+					}
+				}
+			}
+			@include bp($max:400px) {
+				.trust-bar__logo {
+					margin-bottom: em(15px);
+					&:nth-of-type(7),
+					&:nth-of-type(8) {
+						margin: 0 0;
+					}
+				}
+			}
+		}
+		&[class*="--9"] {
+			.trust-bar__logo {
+				width: 20%;
+				&:nth-of-type(6),
+				&:nth-of-type(7),
+				&:nth-of-type(8),
+				&:nth-of-type(9) {
+					width: 25%;
+				}
+			}
+			@include bp($max:915px) {
+				.trust-bar__logo {
+					width: 33.3333336%;
+					&:nth-of-type(6),
+					&:nth-of-type(7),
+					&:nth-of-type(8),
+					&:nth-of-type(9) {
+						width: 33.3333336%;
+					}
+					&:nth-of-type(7),
+					&:nth-of-type(8),
+					&:nth-of-type(9) {
+						margin-bottom: 0;
+					}
+				}
+			}
+			@include bp($max:575px) {
+				.trust-bar__logo {
+					width: 50%;
+					&:nth-of-type(6),
+					&:nth-of-type(7),
+					&:nth-of-type(8),
+					&:nth-of-type(9) {
+						width: 50%;
+					}
+					&:nth-of-type(9) {
+						width: 50%;
+						margin: 0 25% 0;
+					}
+				}
+			}
+			@include bp($max:400px) {
+				.trust-bar__logo {
+					margin-bottom: em(15px);
+					&:nth-of-type(6),
+					&:nth-of-type(7),
+					&:nth-of-type(8),
+					&:nth-of-type(9) {
+						width: 50%;
+						margin: 0 0 em(15px) 0;
+					}
+					&:nth-of-type(9) {
+						width: 50%;
+						margin: 0 25%;
+					}
+				}
+			}
+		}
+		&[class*="--10"] {
+			.trust-bar__logo {
+				width: 20%;
+			}
+			@include bp($max:1024px) {
+				.trust-bar__logo {
+					width: 25%;
+					&:nth-of-type(9),
+					&:nth-of-type(10) {
+						width: 25%;
+						margin-bottom: 0;
+					}
+					&:nth-of-type(9) {
+						margin-left: 25%;
+
+					}
+					&:nth-of-type(10) {
+						margin-right: 25%;
+					}
+				}
+			}
+			@include bp($max:768px) {
+				.trust-bar__logo {
+					width: 33.3333336%;
+					&:nth-of-type(7),
+					&:nth-of-type(8),
+					&:nth-of-type(9) {
+						width: 33.3333336%;
+						margin: 0 0 em(30px) 0;
+					}
+					&:nth-of-type(10) {
+						width: 33.3333336%;
+						margin: 0 33.3333336% 0;
+					}
+				}
+			}
+			@include bp($max:575px) {
+				.trust-bar__logo {
+					width: 50%;
+					&:nth-of-type(7),
+					&:nth-of-type(8),
+					&:nth-of-type(9),
+					&:nth-of-type(10) {
+						width: 50%;
+						margin: 0 0 em(30px) 0;
+					}
+					&:nth-of-type(9),
+					&:nth-of-type(10) {
+						width: 50%;
+						margin: 0;
+					}
+				}
+			}
+			@include bp($max:400px) {
+				.trust-bar__logo {
+					margin-bottom: em(15px);
+					&:nth-of-type(7),
+					&:nth-of-type(8),
+					&:nth-of-type(9),
+					&:nth-of-type(10) {
+						width: 50%;
+						margin: 0 0 em(15px) 0;
+					}
+					&:nth-of-type(9),
+					&:nth-of-type(10) {
+						width: 50%;
+						margin: 0;
+					}
+				}
+			}
+		}
+	}
+	/*----------------------------------------------*\
+	    :: Background Modifiers
+	\*----------------------------------------------*/
+	// Static background image
+	&[class*="--image"] {
+	    position: relative;
+	    .trust-bar__inner {
+	        position: relative;
+	        z-index: 50;
+	    }
+	}
+	// Parallax background image
+	&[class*="--parallax"] {
+	    padding: 0;
+	    .trust-bar__inner {
+	        position: relative;
+	        z-index: 50;
+	    }
+	}
+}

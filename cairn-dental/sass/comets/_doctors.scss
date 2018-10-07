@@ -1,0 +1,49 @@
+/*------------------------------------*\
+    ::  Doctor Page Custom Styles
+\*------------------------------------*/	
+.page-id-11 {
+	.content-block--stat-section {
+		.content__group--2 {
+			p {
+				strong {
+					display: block;
+					max-width: 70%;
+					font-size: 15px;
+					font-family: $fam-bold;
+				}
+				&:last-of-type {
+					strong {
+						max-width: 90%;
+					}
+				}
+			}
+			@include bp($max:1024px) {
+				p {
+					strong {
+						max-width: 90%;
+						margin: 0 auto;
+						text-align: center;
+					}
+					&:last-of-type {
+						strong {
+							max-width: 90%;
+							margin: 0 auto;
+						}
+					}
+				}
+			}
+			@include bp($max:480px) {
+				p {
+					strong {
+						max-width: 100%;
+					}
+					&:last-of-type {
+						strong {
+							max-width: 100%;
+						}
+					}
+				}
+			}
+		}
+	}
+}

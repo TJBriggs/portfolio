@@ -1,0 +1,57 @@
+/*------------------------------------*\
+    ::Sidebar
+\*------------------------------------*/
+.single-torso__sidebar, 
+.arch-torso__sidebar, 
+.cat-torso__sidebar {
+	ul{
+		padding: 0;
+		margin-bottom: 50px;
+	}
+	li {
+		width: 100%;
+		margin: {bottom:5px;}
+		list-style: none;
+		h3 {
+			color: $color-2;
+			font-family: $fam-heading;
+			font-size: emCalc(32px);
+			margin-bottom: 15px;
+		}
+		a {
+			background: $color-1;
+			color: $color-2;
+			display: block;
+			font-size: emCalc(14px);
+			padding: {top:$pad;bottom:$pad;left:$pad;}
+			position: relative;
+			text-decoration: none;
+			z-index: 1;
+			transition: color 200ms;
+			width: 100%;
+			&:after{
+				content: '';
+				position: absolute;
+				z-index: -1;
+				transition: all 0.3s;
+				width: 0%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				background: $color-2;
+				transition: width 200ms;
+			}
+			&:hover{
+				color: #fff;
+				&:after{
+					width: 100%;
+				}
+			}
+		}
+	}
+	@include bp($max: 700px) {
+		&[class$="__sidebar"]{
+			display: none;
+		}	    
+	}
+}

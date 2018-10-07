@@ -1,0 +1,81 @@
+/*------------------------------------*\
+    ::  CTA w-Figure Styles
+\*------------------------------------*/
+.cta-figure {
+    width: 100%;
+    overflow: hidden;
+    .cta-figure__colored-title.mobile {
+        display: none;
+        text-align: center;
+        margin-bottom: 4em;
+        @include bp($max:767px) {
+            display: block;
+        }
+    }
+    .cta-figure__main-wrap {
+        width: 100%;
+        max-width: 1060px; // special size for this design
+        position: relative;
+        margin: 0 auto;
+        padding: 0 $pad*2;
+        @include bp($max:1440px) {
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row-reverse;
+            align-items: flex-start;
+        }
+        @include bp($max:767px) {
+            padding: 0 $pad*2;
+        }
+        @include bp($max:500px) {
+            padding: 0 $pad;
+        }
+    }
+    .cta-figure__figure-wrap {
+        @include bp($min:1441px) {
+            position: absolute;
+            top: 0;
+            right: -130px;
+            z-index: 50;
+        }
+        @include bp($max:1440px) {
+            position: static;
+            height: auto;
+            width: 37.45vw;
+            padding-right: $pad*2;
+            text-align: center;
+        }
+        @include bp($max:767px) {
+            width: 100%;
+            max-width: 475px;
+            padding-right: 0;
+            margin: 0 auto;
+        }
+    }
+    .cta-figure__text {
+        width: 660px;
+        @include bp($max:1440px) {
+            width: 58vw;
+            max-width: 660px;
+        }
+        @include bp($max:767px) {
+            width: 100%;
+            max-width: none;
+            margin-top: 2em;
+            min-height: 0!important;
+        }
+    }
+    .cta-figure__colored-title.desktop {
+        text-align: left;
+        @include bp($max:767px) {
+            display: none!important;
+        }
+    }
+    .btn {
+        margin-top: 1.5em;
+    }
+}
+        

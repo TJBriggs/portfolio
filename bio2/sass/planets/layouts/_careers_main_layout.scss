@@ -1,0 +1,67 @@
+/*------------------------------------*\
+    ::  Careers Main Layout
+\*------------------------------------*/
+.careers {
+	width: 100%;
+	overflow: hidden;
+	&__inner {
+		padding: 0 $pad emCalc(45px);
+		@include bp($max:1024px) {
+			padding: 0 $pad*3 emCalc(45px);
+		}
+		@include bp($max:480px) {
+			padding: 0 $pad emCalc(45px);
+		}
+	}
+	.careers__select-wrap {
+		height: 50px;
+		width: 100%;
+		margin: 45px 0 45px;
+		position: relative;
+		select {
+			-webkit-appearance: menulist-button;
+			height: 50px;
+			max-width: 1130px;
+			position: relative;
+			z-index: 500;
+		}
+		.select-box--blue {
+			height: 50px;
+			width: 100%;
+			padding: 0 $pad;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 400;
+			span {
+				display: inline-block;
+				height: 50px;
+				width: 90%;
+			}
+			.arrow-down {
+				display: inline-block;
+				width: auto;
+				position: absolute;
+				top: 8px;
+				right: $pad*1.5;
+				svg {
+					height: 26px;
+					width: 26px;
+					transform: rotate(90deg);
+				}
+			}
+		}
+	}
+	&__content {
+		float: left;
+		width: 100%;
+	}
+	&__post {
+		h5 {
+			margin-bottom: emCalc(10px);
+		}
+		p {
+			margin-bottom: 0;
+		}
+	}
+}	

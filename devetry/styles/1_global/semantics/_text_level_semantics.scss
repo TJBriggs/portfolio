@@ -1,0 +1,66 @@
+/*------------------------------------*\
+	:: Text Level Semantics
+\*------------------------------------*/
+body {
+	// color: $color-3-dark;
+	@extend %kreg;
+	font-size: 18px;
+	background-color: $color-3;
+	color: $color-2;
+}
+// Define your text and typeface related styles here.
+h1, h2, h3, h4, h5, h6 { // Set margins to 0
+	margin: 0;
+}
+h1 {
+	@extend %h1;
+	@include bp($max:960px) {
+		font-size: 40px;
+	}
+	@include bp($max:640px) {
+		font-size: 30px;
+	}
+	strong {
+		@extend %kbold;
+	}
+}
+h2 {
+	@extend %h2;
+	@include bp($max:960px) {
+		font-size: 40px;
+	}
+	@include bp($max:640px) {
+		font-size: 30px;
+	}
+	strong {
+		@extend %kbold;
+		color: $color-1;
+	}
+}
+h3 {
+	@extend %h3;
+}
+h4 {
+	@extend %h4;
+}
+h5 {
+	@extend %h5;
+}
+h6 {
+	@extend %h6;
+}
+hr.small-rule {
+	border: 0;
+	height: 3px;
+	width: 45px;
+	margin-top: 0;
+	margin-bottom: 42px;
+	background-color: $color-2;
+}
+p, li {
+	font-size: 18px;
+	line-height: 1.4em;
+	strong {
+		@extend %kbold;
+	}
+}

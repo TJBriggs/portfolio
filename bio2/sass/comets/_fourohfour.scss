@@ -1,0 +1,26 @@
+/*------------------------------------*\
+    ::404 Stylin
+\*------------------------------------*/
+.error404 {
+	.fourofour__inner {
+		padding: 0 $pad*3;
+		@include bp($max:640px) {
+			padding: 0 $pad*2;
+		}
+		@include bp($max:480px) {
+			padding: 0 $pad;
+		}
+	}
+	.fourofour__content{
+		@include col(12);
+		text-align: center;
+		h1 {
+			font-size: emCalc(34px);
+			font-weight: bold;
+			text-transform: none;
+		}
+		p {
+			font-size: emCalc(18px);
+		}
+	}
+}

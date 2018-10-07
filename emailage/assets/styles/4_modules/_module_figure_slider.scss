@@ -1,0 +1,59 @@
+/*------------------------------------*\
+    ::  Figure Slider Styles
+\*------------------------------------*/
+// This module's styles mainly come from Figure-block
+// Owl Control styles are below
+.figure-block__slide {
+    overflow: hidden;
+    @include bp($max:767px) {
+        .figure-block__content-wrap {
+            margin-top: 3em;
+        }
+    }
+}
+.figure-block {
+    .owl-carousel {
+        position: relative;
+        .owl-wrapper {
+            display: flex!important;
+        }
+        .owl-controls {
+            position: absolute;
+            left: 0;
+            bottom: 15%;
+            right: 0;
+            z-index: 100;
+            @include bp($max:767px) {
+                bottom: 0;
+            }
+        }
+        .pagination-wrap {
+            text-align: center;
+        }
+        .owl-pagination {  
+            display: inline-block;
+            padding: 0 $pad*2;
+            @include bp($max: 500px) {
+                padding: 0 $pad;
+            }      
+            .owl-page {
+                display: inline-block;
+                height: 12px;
+                width: 12px;
+                margin-left: 15px;
+                border-radius: 50%;
+                background-color: #BDC3C6;
+                transition: background-color 400ms;
+                &:first-of-type {
+                    margin-left: 0;
+                }
+                &.active {
+                    background-color: $accent-blue;
+                }
+                &:hover {
+                    background-color: darken(#BDC3C6, 10%);
+                }
+            }
+        }
+    }
+}

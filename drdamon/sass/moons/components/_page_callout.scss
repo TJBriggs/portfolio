@@ -1,0 +1,74 @@
+.callout {
+	padding: 30px 0 45px;
+	.section__title-wrap {
+        font-size: 16px;
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+        transform: translate3d(0, 0, 0);
+        text-align: center;
+        width: 100%;
+        h2 {
+        	color: $color-1;
+	        margin: 0 0 25px 0;
+	        overflow: hidden;
+	    }
+    }
+	h2.callout__subheader {
+		line-height: 1.2em;
+		margin: 0 0 15px 0;
+	}
+	img {
+		width: 100%;
+	}
+	.btn {
+		margin-top: 25px;
+		width: 50%;
+		@include bp($max: 990px){
+			margin: 25px auto 0 auto;
+		}
+	}
+}
+
+.callout__text, .callout__image,
+.callout__image--swapped,
+.callout__text--swapped {
+	@include col(6);
+}
+
+
+.callout__text, .callout__image {
+	float: left;
+	@include bp($max: 990px){
+		@include col(11, $center:true);
+		float: none;
+	}
+}
+
+.callout__text {
+	padding: 0 1.875rem;
+	@include bp($max: 990px){
+		padding: 0 $pad;
+	}
+}
+
+
+.callout__image--swapped {
+	float: left;
+	@include bp($max: 990px){
+		@include col(11, $center:true);
+		float: none;
+	}
+}
+
+.callout__text--swapped {
+	float: right;
+	padding: 0 1.875rem;
+	@include bp($max: 990px){
+		@include col(11, $center:true);
+		float: none;
+	}
+}
+
+
+

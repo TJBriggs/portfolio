@@ -1,0 +1,10 @@
+/*------------------------------------*\
+    :: RFI Page or Schedule a Call
+\*------------------------------------*/
+// Hide RFI CTA since we are on that page
+.page-id-640 {
+	background-color: $color-5;
+    .main-head__cta {
+        display: none;
+    }
+}

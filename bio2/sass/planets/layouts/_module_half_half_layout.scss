@@ -1,0 +1,102 @@
+/*------------------------------------*\
+    ::  Half Half Layout
+\*------------------------------------*/
+.half-half {
+	width: 100%;
+	position: relative;
+	&__video, &__image {
+		display: block;
+		height: 100%;
+		width: 50%;
+		position: absolute;
+		right: 0;
+		z-index: 25;
+		svg {
+			height: 70px;
+			width: 70px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+		@include bp($max:960px) {
+			position: relative;
+			float: left;
+			height: 400px;
+			width: 100%;
+			margin-bottom: 35px;
+			svg {
+				top: 200px;
+				left: 50%;
+				transform: translate(-50%, -35px);
+			}
+		}
+		@include bp($max:640px) {
+			height: 320px;
+			svg {
+				top: 160px;
+			}
+		}
+		@include bp($max:480px) {
+			height: 280px;
+			svg {
+				height: 60px;
+				width: 60px;
+				top: 140px;
+				transform: translate(-50%, -30px);
+			}
+		}
+	}
+	html &__inner { // for specificity
+		max-width: 1440px;
+		position: relative;
+		z-index: 10;
+	}
+	&__content {
+		float: left;
+		width: 50%;
+		padding: 3em;
+		// Remove top margin from first element
+    	& > *:first-child {
+			margin-top: 0;
+    	}
+		@inlcude bp($max:1175px) {
+			padding: 3em 1.5em;
+		}
+		@include bp($max:1024px) {
+			padding: 3em $pad*2;
+		}
+		@include bp($max:960px) {
+			float: none;
+			width: 100%;
+			padding: 1.5em $pad*2;
+		}
+		@include bp($max:480px) {
+			padding: 1.5em $pad;
+		}
+	}
+}
+/*------------------------------------*\
+    ::  Modifiers
+\*------------------------------------*/
+// Change layout so image and text alternates
+.half-half--right {
+	.half-half__video,.half-half__image {
+		left: 0;
+		right: auto;
+		@include bp($max:960px) {
+			margin-bottom: 10px; // Pushes the title down slightly
+		}
+	}
+	.half-half__content {
+		float: right;
+	}
+}
+// Remove top padding at tablet so spacing is even between sections
+.half-half--no-pad-top-tab {
+	.half-half__content {
+		@include bp($max:960px) {
+			padding: 0 $pad*2 1.5em;
+		}
+	}
+}

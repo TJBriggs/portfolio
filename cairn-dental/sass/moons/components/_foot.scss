@@ -1,0 +1,261 @@
+/*------------------------------------*\
+    ::Footer
+\*------------------------------------*/
+@include sticky-footer(
+    $wrap: '.wrap-all-the-things',
+    $row:  '.main-head, .main-torso, .main-foot',
+    $flex: '.main-torso'
+);
+.main-foot {
+	width: 100%;
+	background-color: $color-1;
+	background-image: url('images/global/foot_topo_pat.png');
+	background-repeat: repeat;
+	.main-foot__inner {
+		overflow: hidden;
+		padding: em(40px) $pad*2 0;
+		@include bp($max:675px) {
+			padding: em(20px) $pad*2 0;
+		}
+	}
+	.main-foot__blog {
+		float: left;
+		width: 60%;
+		padding-bottom: em(20px);
+		position: relative;
+		@include bp($max:959px) {
+			padding-top: em(25px);
+			
+		}
+		@include bp($max:768px) {
+			padding-top: em(25px);
+			padding-bottom: em(40px);
+		}
+		@include bp($max:700px) {
+			margin-bottom: em(25px);
+		}
+		@include bp($max:675px) {
+			float: none;
+			width: 100%;
+			padding-bottom: em(30px);
+			border-bottom: 3px solid $color-4;
+		}
+		&:after {
+			content: '';
+			height: 100%;
+			width: 3px;
+			background-color: $color-4;
+			position: absolute;
+			top: 0;
+			right: 0;
+			@include bp($max:675px) {
+				display: none;
+			}
+		}
+	}
+	.blog__image {
+		float: left;
+		width: 40%;
+		@include bp($max:959px) {
+			display: none;
+		}
+	}
+	.blog__content {
+		float: left;
+		width: 60%;
+		padding: 0 8%;
+		@include bp($max:959px) {
+			float: none;
+			width: 100%;
+		}
+		@include bp($max:480px) {
+			padding: 0;
+		}
+	}
+	.blog__title, .blog__date, .blog__text {
+		color: $color-4;
+	}
+	.blog__title, .blog__date {
+		margin: 0;
+		font-size: em(16px);
+	}
+	.blog__text {
+		margin-top: em(12px);
+		font-size: em(14.5px);
+	}
+	.btn-alt {
+		margin-top: em(15px);
+	}
+	.main-foot__content {
+		float: left;
+		width: 40%;
+		overflow: hidden;
+		@include bp($max:675px) {
+			float: none;
+			width: 100%;
+		}
+	}
+	.main-foot__logo {
+		float: left;
+		width: 49%;
+		margin-top: em(7px);
+		text-align: center;
+		@include bp($max:1024px) {
+			width: 100%;
+		}
+		@include bp($max:675px) {
+			margin-top: em(30px);
+		}
+		.logo {
+			display: inline-block;
+			width: 85%;
+			margin: 0 auto;
+			@include bp($max:1024px) {
+				width: 55%;
+			}
+			@include bp($max:768px) {
+				width: 60%;
+			}
+			@include bp($max:675px) {
+				width: 175px;
+			}
+		}
+		.social-share {
+			width: 100%;
+			margin: em(35px) 0 em(15px);
+			overflow: hidden;
+			text-align: left;
+			// Have to nudge widths to keep the iframe buttons
+			// from running into each other
+			// facebook button is smaller then others
+			@include bp($max:1024px) {
+				width: 65%;
+				margin: em(35px) auto em(15px);
+			}
+			@include bp($max:960px) {
+				width: 70%;
+			}
+			@include bp($max:825px) {
+				width: 75%;
+			}
+			@include bp($max:725px) {
+				width: 80%;
+			}
+			@include bp($max:675px) {
+				width: 225px;
+				margin: em(35px) auto em(15px);
+			}
+		}
+		.btn-social {
+			float: left;
+			display: inline-block;
+			height: em(27px);
+			// Facebook
+			&:first-of-type {
+				width: 27%;
+				margin-right: 5.5%;
+				// Have to nudge margin to keep the iframe buttons
+				// from running into each other
+				// facebook button is smaller then others
+				@include bp($max:1024px) {
+					margin-right: 7.5%;
+				}
+				@include bp($max:825px) {
+					margin-right: 7%;
+				}
+				@include bp($max:768px) {
+					margin-right: 6%;
+				}
+				@include bp($max:675px) {
+					margin-right: 6.7%;
+				}
+			}
+			// Twitter centering
+			&:nth-of-type(2) {
+				text-align: center;
+				iframe {
+					display: inline-block;
+				}
+			}
+			// LinkedIn
+			&:last-of-type {
+				float: right;
+			}
+		}
+	}
+	.main-foot__copy-wrap {
+		float: left;
+		width: 100%;
+		margin: em(35px) 0;
+		text-align: center;
+		overflow: hidden;
+		@include bp($max:700px) {
+			float: none;
+			max-width: 450px; // Special Thanks
+			max-width: 400px; // Credits
+			margin: em(25px) auto em(25px);
+		}
+		span {
+			display: inline-block;
+			color: $color-4;
+			font-family: $fam-reg;
+			font-size: 0.85em;
+			line-height: 2em;
+			&.separator {
+				margin: 0 em(10px);
+			}
+			a {
+				display: inline-block;
+				color: $color-4;
+				text-decoration: none;
+				transition: color 400ms;
+				&:hover {
+					color: $color-2-light;
+				}
+			}
+			@include bp($max:700px) {
+				&.separator {
+					&.privacy-pipe {
+						display: none;
+					}
+				}
+
+			}
+			@include bp($max:565px) {
+				width: 100%;
+				margin: em(7px);
+				text-align: left;
+				&.separator {
+					display: none;
+					&.privacy-pipe {
+						display: none;
+					}
+				}
+				&.privacy, &.design {
+					float: left;
+					width: auto;
+				}
+				a {
+					display: inline;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

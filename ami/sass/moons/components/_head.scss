@@ -1,0 +1,120 @@
+/*------------------------------------*\
+    ::Header
+\*------------------------------------*/
+.main-head {
+	height: em(90px); 
+	width: 100%;
+	position: fixed;
+	top: 0;
+	z-index: 9999;
+	background: rgba(0,0,0,0.45);
+	border-top: 4px solid $color-1;
+	transition: background 400ms;
+	&.main-head--dark { // on scroll or if mobile nav is open darken header
+		background: rgba(0,0,0,0.80);
+	}
+	&.hey_main-head { // if mobile nav is open darken the header only when in tablet and mobile
+		@include bp($max:1024px) {
+			background: rgba(0,0,0,0.85);
+		}
+	}
+	.main-head__inner {
+		height: 100%;
+		.main-head__logo {
+			float: left;
+			display: block;
+			height: 60px;
+			margin: em(13px) $pad;
+			padding: 0;
+			width: 200px;
+			svg {
+				max-height: 60px;
+				width: 200px;
+				fill: $color-4;
+			}
+			@include bp($max:375px) {
+				width: 160px;
+				margin: em(14px) $pad;
+				svg {
+					width: 160px;
+				}
+			}
+		}
+		.main-head__utility-nav {
+			height: auto;
+			width: 100%;
+			margin-top: 0;
+			text-align: right; // force all links to the right
+			@include bp($max:1024px) {
+				width: auto;
+				position: absolute;
+				top: em(30.5px);
+				right: em(100px);
+				text-align: none;
+			}
+			@include bp($max:640px) {
+				top: em(26px);
+				right: em(90px);
+			}
+			@include bp($max:375px) {
+				right: em(75px);
+			}
+			a {
+				display: inline-block;
+				margin-left: em(18px);
+				padding: em(7px) 0 em(8px);
+				color: $color-4;
+				font-family: $fam-body;
+				font-size: em(13px);
+				letter-spacing: 0.07em;
+				word-spacing: 0.05em;
+				transition: color 400ms;
+				&.phone-number {
+					height: 100%;
+					.phone-icon {
+						display: none;
+						width: 30px;
+						svg {
+							max-height: 30px;
+							width: 30px;
+							fill: $white;
+							transition: fill 400ms;
+						}
+					}
+					@include bp($max:1024px) {
+						padding: em(3px) em(15px) em(6px);
+						font-size: em(16px);
+					}
+					@include bp($max:640px) {
+						.phone-icon {
+							display: block;							
+						}
+						.number-text {
+							display: none;
+						}
+					}
+				}
+				&[class*="-login"] {
+					//background: $color-1;
+					padding: em(7px) 0 em(8px) em(15px);
+					@include bp($max:1024px) {
+						display: none;
+					}
+				}
+				&.agency-login {
+					//margin-right: $pad;
+					padding-right: $pad;
+				}
+				&:hover {
+					color: $color-2;
+					text-decoration: none;
+					.phone-icon {
+						svg {
+							fill: $color-2;
+						}
+					}
+				}
+			}
+		}
+	}
+}

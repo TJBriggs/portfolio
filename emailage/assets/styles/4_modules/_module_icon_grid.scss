@@ -1,0 +1,70 @@
+/*------------------------------------*\
+    ::  Icon Grid Styles
+\*------------------------------------*/
+.icon-grid {
+    width: 100%;
+    overflow: hidden;
+    .icon-grid__icon-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+    }
+    .icon-grid__colored-title {
+        text-align: center;
+    }
+    .icon-grid__icon {
+        width: 30%;
+        margin-top: 2.4em;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        transition: padding 400ms;
+        img {
+            max-width: 170px;
+        }
+        &:nth-of-type(-n + 3) {
+            margin-top: 1.4em;
+        }
+        @include bp($max:960px) {
+            margin-top: 2.4em;
+            padding: 0 $pad*2;
+            &:nth-of-type(-n + 3) {
+                margin-top: 1em;
+            }
+        }
+        @include bp($max:767px) {
+            width: 50%;
+            margin-top: 0.5em;
+            padding: 0 $pad;
+            &:nth-of-type(-n + 3) {
+                margin-top: 0.5em;
+            }
+            &:nth-of-type(-n + 2) {
+                margin-top: 0;
+            }
+        }
+        @include bp($max:500px) {
+            img {
+                max-width: 150px;
+            }
+        }
+    }
+    // Modifier for 4 icons
+    .icon-grid__icon-wrap {
+        &.two-by-two {
+            max-width: 660px;
+            margin-left: auto;
+            margin-right: auto;
+            .icon-grid__icon {
+                width: 50%;
+                img {
+                    max-width: 220px;
+                    @include bp($max:500px) {
+                        max-width: 150px;
+                    }
+                }
+            }
+        }
+    }
+}

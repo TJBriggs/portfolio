@@ -1,0 +1,234 @@
+/*------------------------------------*\
+    ::  Column Callout Styles
+\*------------------------------------*/	
+.column-callout {
+	background-color: $color-3;
+	&__inner {
+		display: flex;
+		flex-wrap: wrap;
+		max-width: 1140px;
+		margin: 0 auto;
+	}
+	&__text-wrap {
+		width: 50%;
+		padding: 3.5em 0 4.5em $pad*2;
+		& > *:first-child { // Remove top margin from first element
+			margin-top: 0;
+    	}
+		p {
+			max-width: 450px;
+		}
+		.btn {
+			margin-bottom: 0;
+		}
+		@include bp($max:767px) {
+			width: 100%;
+			padding: 3.5em $pad*2 4.5em;
+			text-align: center;
+			h5 {
+				color: $color-1;
+			}
+			p {
+				margin: 0 auto;
+			}
+		}
+		@include bp($max:375px) {
+			h5 {
+				font-size: 1.2em;
+			}
+		}
+	}
+	&__image {
+		width: 50%;
+		background-position: top left;
+		background-size: cover;
+		background-repeat: no-repeat;
+		transform: translateX(250%);
+		transition: transform 1200ms;
+		@include bp($max:767px) {
+			display: none;
+		}
+	}
+	&.visible { // When visible trigger animation
+		.column-callout__image {
+			transform: translateX(0);
+		}
+	}
+	/*---------------------------------------*\
+	    ::  Modifier to swap text and image
+	\*---------------------------------------*/	
+	&.column-callout--img-left {
+		.column-callout__inner {
+			flex-direction: row-reverse;
+		}
+		.column-callout__image {
+			background-position: top right;
+			transform: translateX(-250%);
+		}
+		&.visible {
+			.column-callout__image {
+				transform: translateX(0);
+			}
+		}
+	}
+	/*------------------------------------*\
+	    :: Modifiers 
+	\*------------------------------------*/
+	// Icon Bullets
+	// Places icons as bullets next to paragraph elements
+	// Place the BG Image on the inner and hide the normal spot for BG Image
+	// Since image needs to touch top and bottom of section 
+	&.column-callout--icon-bullets {
+		background-position: -250% 0;
+		background-repeat: no-repeat;
+		background-size: contain;
+		transition: background-position 1200ms;
+		@include bp($max:767px) {
+			background-image: none !important; // Override inline style to hide image
+		}
+		.column-callout__image {
+			@include bp($max:959px) {
+				display: none;
+			}
+		}
+		.column-callout__text-wrap {
+			@include bp($max:1024px) {
+				width: 45%;
+				margin-right: $pad*2;
+			}
+			@include bp($max:959px) {
+				margin-left: 55%;
+				padding: 2em 0;
+			}
+			@include bp($max:767px) {
+				width: 100%;
+				max-width: 450px;
+				margin: 0 auto;
+				padding: 2.75em $pad;
+				text-align: left;
+			}
+			h4 {
+				margin: 0;
+			}
+			h6 {
+				margin: 1em 0 2em;
+				color: $color-1;
+				font-style: italic;
+			}
+			p {
+				position: relative;
+				padding-left: 60px;
+				font-size: 0.8em;
+				@include bp($max:767px) {
+					margin-bottom: $pad;
+				}
+				&:before {
+					content: '';
+					height: 40px ;
+					width: 40px;
+					position: absolute;
+					top: 10px;
+					left: 0;
+				}
+				// Load a different Icon for each paragraph
+				&:first-of-type { // G Icon
+					&:before {
+						content: url('images/modules/column-callout/g-icon.svg');
+					}
+				}
+				&:nth-of-type(2) { // Trophy Icon
+					&:before {
+						top: 5px;
+						content: url('images/modules/column-callout/trophy-icon.svg');
+					}
+				}
+				&:nth-of-type(3) { // Ball Icon
+					&:before {
+						content: url('images/modules/column-callout/ball-icon.svg');
+					}
+				}
+				&:last-of-type { // Swing Icon
+					margin-bottom: 0;
+					&:before {
+						height: 50px;
+						width: 50px;
+						top: 5px;
+						left: -5px;
+						content: url('images/modules/column-callout/swing-icon.svg');
+					}
+				}
+				// Hide all icons
+				@include bp($max:959px) {
+					padding-left: 0;
+					&:before {
+						display: none;
+					}
+				}
+			}
+		}
+		// When in view slide in BG Image
+		// Lots of nudging to keep the BG image next to the text
+		// If the imaged didn't need to touch the top and bottom this would be unnecessary
+		&.visible { 
+			background-position: 20vw 0;
+			@include bp($max:2300px) {
+				background-position: 16vw 0;
+			}
+			@include bp($max:2000px) {
+				background-position: 10vw 0;
+			}
+			@include bp($max:1700px) {
+				background-position: 2vw 0;
+			}
+			@include bp($max:1450px) {
+				background-position: -5vw 0;
+			}
+			@include bp($max:1250px) {
+				background-position: -12vw 0;
+			}
+			@include bp($max:1100px) {
+				background-position: -170px 0;
+			}
+			@include bp($max:1024px) {
+				background-position: -270px 0;
+			}
+			@include bp($max:959px) {
+				background-size: auto;
+				background-position: -270px 0;
+			}
+			@include bp($max:885px) {
+				background-position: -340px 0;
+			}
+			@include bp($max:767px) {
+				background-image: none !important; // Override inline style to hide image
+			}
+		}
+	}	
+}
+/*------------------------------------*\
+    ::  KSS MarkUp (Ignore)
+\*------------------------------------*/   
+// Column Callout
+//
+// Demo &amp; Modifiers:<br><a href="../modules/module-column-callout.php" target="_blank">module-column-callout.php</a>
+//
+// Stylesheet:<br>
+// <a href="../sass/structure/modules/_module_column_callout.scss" target="_blank">_module_column_callout.scss</a><br>
+//
+// Path To The Code:<br>
+// golftec/golftec/modules/module-column-callout.php<br>
+// golftec/golftec/js/scripts-src/waypoints.js
+//
+// Markup:
+// <article class="column-callout visible main-torso__group">
+//     <div class="column-callout__inner">
+//         <div class="column-callout__text-wrap">
+//             <h5><strong>Book a TECfit Club Fitting</strong><br>and Learn how to Maximize Your Game</h5>
+//             <p>The normal cost of a component TECfit club fitting is $125, or complete a full bag TECfit for $250*. Take this first easy step and you're on your way to better fitted golf equipment to maximize your game!</p>
+//             <a class="column-callout__btn btn" href="#">Maximize Your Game</a>
+//         </div> <!-- // column-callout__text-wrap -->
+//         <div class="column-callout__image visible" style="background-image: url('../images/modules/column-callout/column-callout-clubs.png')"></div>
+//     </div> <!-- // column-callout__inner -->
+// </article> <!-- // column-callout -->
+//
+// Styleguide 6.18

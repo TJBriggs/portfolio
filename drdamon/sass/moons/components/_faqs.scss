@@ -1,0 +1,64 @@
+.faqs {
+	background: #fff;
+	padding: 35px 0;
+
+	.faq-intro {
+		@include col(12);
+        @include bp($solarsystem) {
+			@include col(11, $center:true);
+		}
+		p {
+            color: #555555;
+            margin: 15px 0 0;
+        }
+        .btn {
+        	color: $white;
+        	margin-top: 20px;
+        	@include bp($planetary) {
+        		margin-bottom: 30px;
+        		width: 100%;
+        	}
+        	&:visited {
+        		color: $white;
+        	}
+        }
+	}
+	#accordion-container {
+		@include col(12);
+		@include bp($solarsystem) {
+			@include col(11, $center:true);
+		}
+		h3 {
+			color: $color-2;
+			font-family: $fam-heading;
+			font-size: emCalc(28px);
+			margin: 40px 0 15px;
+			padding: 0;
+			&:first-of-type {
+				margin-top: 20px;
+			}
+		}
+		h4 {
+			&:focus {
+				outline: none;
+			}
+		}
+		p, li, span {
+			color: #555555;
+			font-size: 0.875em;
+			letter-spacing: 0.02em;
+	        line-height: 1.875rem;
+		}
+	}
+}
+.page-faqs {
+	.faqs {
+		padding-top: 35px;
+		padding-bottom: 70px;
+		.section__title-wrap {
+		    h2 {
+		    	color: $color-1;
+		    }
+		}
+	}
+}

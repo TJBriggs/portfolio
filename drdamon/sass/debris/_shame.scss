@@ -1,0 +1,23 @@
+/*------------------------------------*\
+            (╯°□°）╯︵ ┻━┻
+\*------------------------------------*/
+.wrap-all-the-things { // Uncover masthead so that it is clickable
+	position: relative !important;
+	z-index: 100 !important;
+	overflow: hidden; // needed for static masthead on mobile
+}
+
+.page-torso__content { // Move content above parallax effects
+	position: relative !important;
+	z-index: 110 !important;
+	@include bp($solarsystem) { // hide box shadows for static mastheads
+		overflow: hidden;
+	}
+}
+
+/////////////////////////////////////
+//  Overide addThis plugin style
+/////////////////////////////////////
+#at4-share {
+	top: 33% !important;
+}

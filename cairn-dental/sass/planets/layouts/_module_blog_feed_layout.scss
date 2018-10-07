@@ -1,0 +1,134 @@
+/*------------------------------------*\
+    ::  Blog Feed Layout
+\*------------------------------------*/	
+.blog-feed {
+	.feed__wrap {
+		display: flex;
+		flex-wrap: wrap;
+		padding: 50px 0 0;
+		@include bp($max:960px) {
+			padding: 50px 0 50px;
+		}
+		@include bp($max:700px) {
+			padding: 50px 0 20px;
+		}
+	}
+	.single-torso__item {
+		width: 33.33333%;
+		padding: 0 10px 50px;
+		@include bp($max:960px) {
+			width: 100%;
+			padding: 0 $pad*2 50px;
+			&:last-of-type {
+				padding-bottom: 0;
+			}
+		}
+		@include bp($max:700px) {
+			width: 100%;
+			padding: 0 $pad*2 35px;
+			&:last-of-type {
+				padding-bottom: 30px;
+			}
+		}
+		@include bp($max:480px) {
+			padding: 0 $pad 30px;
+		}
+	}
+	.single-torso__image {
+		height: 315px;
+		width: 100%;
+		@include bp($max:960px) {
+			float: left;
+			height: 275px;
+			width: 40%;
+		}
+		@include bp($max:700px) {
+			float: none;
+			height: 350px;
+			width: 100%;
+		}
+		@include bp($max:480px) {
+			height: 300px;
+		}
+		@include bp($max:400px) {
+			height: 275px;
+		}
+		@include bp($max:370px) {
+			height: 225px;
+		}
+	}
+	.post__overlay {
+		height: 100%;
+		width: 100%;
+		position: relative;
+	}
+	.social-links {
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: 100;
+		margin: 0;
+		padding: 20px 15px;
+		@include bp($max:960px) {
+			right: auto;
+			left: 0;
+		}
+		li {
+			margin-bottom: 5px;
+			&:last-of-type { // add some space between linkedin and pinterest icon
+				margin-top: 7px;
+			}
+		}
+		a {
+			display: block;
+			svg {
+				height: 22px;
+				width: 22px;
+			}
+		}
+	}
+	.copy__wrap {
+		width: 100%;
+		@include bp($max:960px) {
+			float: left;
+			width: 55%;
+			margin-left: 5%;
+		}
+		@include bp($max:700px) {
+			float: none;
+			width: 100%;
+			margin-top: 27px;
+			margin-left: 0;
+		}
+	}
+	.single-torso__posted {
+		h4 {
+			margin: 20px 0 15px 0;
+		}
+		.tag-icon {
+			height: 14px;
+			width: 14px;
+			margin: 0 5px 0 0;
+			position: relative;
+			top: 1px;
+		}
+		.post-tag {
+			display: inline-block;
+			margin-bottom: 15px;
+		}
+		.post-date {
+			display: inline-block;
+			width: 100%;
+			margin-bottom: 12px;
+		}
+	}
+	.single-torso__post {
+		p {
+			margin: 0;
+		}
+		.btn {
+			display: inline-block;
+			margin: 20px 0 0 0;
+		}
+	}
+}

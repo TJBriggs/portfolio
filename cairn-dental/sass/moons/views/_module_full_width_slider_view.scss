@@ -1,0 +1,49 @@
+/*------------------------------------*\
+    ::  Full Width Slider Styles
+\*------------------------------------*/	
+.full-width-slider__slide {
+	background-position: top left;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	// @include bp($max:640px) {
+	// 	background-position: center center;
+	// }
+}
+.slide__overlay {
+	background-color: rgba(0, 0, 0, 0.45);
+}
+.slide__text {
+	h3 {
+		color: $color-4;
+		font-family: $fam-semi;
+		font-size: em(28px);
+		@include bp($max:1024px) {
+			font-family: $fam-reg;
+			font-size: em(24px);
+		}
+		@include bp($max:640px) {
+			font-family: $fam-reg;
+			font-size: em(20px);
+		}
+	}
+	p {
+		color: $color-4;
+		font-family: $fam-light;
+		font-size: em(20px);
+		@include bp($max:640px) {
+			font-size: em(16px);
+		}
+	}
+}
+/*------------------------------------*\
+    ::  Owl Arrows
+\*------------------------------------*/
+.owl-carousel--full {
+	.owl-prev {
+		cursor: pointer;
+	}
+	.owl-next {
+		cursor: pointer;
+	}
+}	
