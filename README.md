@@ -1,8 +1,4 @@
-<div style="text-align:center">
-	<img src="http://thadbriggs.com/images/logos/logo.svg" alt="Thad Briggs Logo" width="50" height="30"> 
-	<h1 style="text-align:center">THADDEUS BRIGGS PORTFOLIO</h1>
-</div>
-<hr>
+# <img src="http://thadbriggs.com/images/logos/logo.svg" alt="Thad Briggs Logo" width="50" height="30"> THADDEUS BRIGGS PORTFOLIO
 
 Thanks for visiting my portfolio repo. Below you will find my resume as well as a collection of my favorite sites. I was the lead developer on each of these projects.
 
