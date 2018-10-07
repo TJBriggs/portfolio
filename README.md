@@ -18,6 +18,8 @@ Thanks for visiting my portfolio repo. Below you will find a collection of my fa
 
 ![Image of ami + partners Website](http://thadbriggs.com/images/projects/ami.png "ami + partners Website")
 
+<http://www.advantagemediainc.com/>
+
 <br>
 
 ## Bio2 Medical
@@ -25,6 +27,8 @@ Thanks for visiting my portfolio repo. Below you will find a collection of my fa
 <br>
 
 ![Image of Bio2 Medical Website](http://thadbriggs.com/images/projects/bio2.png "Bio2 Medical Website")
+
+<https://bio2medical.com/>
 
 <br>
 
@@ -34,6 +38,8 @@ Thanks for visiting my portfolio repo. Below you will find a collection of my fa
 
 ![Image of Cairn Dental Website](http://thadbriggs.com/images/projects/cairn.png "Cairn Dental Website")
 
+<https://devetry.com>
+
 <br>
 
 ## Devetry
@@ -41,6 +47,11 @@ Thanks for visiting my portfolio repo. Below you will find a collection of my fa
 <br>
 
 ![Image of Devetry Website](http://thadbriggs.com/images/projects/devetry.png "Devetry Website")
+
+<https://devetry.com>
+
+Devetry specializes in app development and they wanted a creative way to feature their amazing work. Check out the video slider on the home page. The videos play when they're in view or when the slides change.
+
 
 <br>
 
@@ -50,6 +61,8 @@ Thanks for visiting my portfolio repo. Below you will find a collection of my fa
 
 ![Image of Emailage Website](http://thadbriggs.com/images/projects/emailage.png "Emailage Website")
 
+<https://emailage.com>
+
 <br>
 
 ## Golftec
@@ -57,6 +70,8 @@ Thanks for visiting my portfolio repo. Below you will find a collection of my fa
 <br>
 
 ![Image of Golftec Website](http://thadbriggs.com/images/projects/golftec.png "Golftec Website")
+
+<https://www.golftec.com/>
 
 <br>
 
@@ -66,6 +81,8 @@ Thanks for visiting my portfolio repo. Below you will find a collection of my fa
 
 ![Image of PK Associates Website](http://thadbriggs.com/images/projects/pka.png "PK Associates Website")
 
+<https://pkastructural.com/>
+
 <br>
 
 ## Proctor Productions
@@ -74,6 +91,8 @@ Thanks for visiting my portfolio repo. Below you will find a collection of my fa
 
 ![Image of Proctor Productions Website](http://thadbriggs.com/images/projects/proctor.png "Proctor Productions Website")
 
+<https://www.proctorproductions.com/>
+
 <br>
 
 ## Szymanowski Orthodontics
@@ -81,6 +100,8 @@ Thanks for visiting my portfolio repo. Below you will find a collection of my fa
 <br>
 
 ![Image of Szymanowski Orthodontics Website](http://thadbriggs.com/images/projects/damon.png "Szymanowski Orthodontics Website")
+
+<http://www.drdamonsmiles.com/>
 
 <br>
 
