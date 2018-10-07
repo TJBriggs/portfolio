@@ -198,17 +198,21 @@ My first site at Zenman, the boss wanted to challenge me to see what I could do.
 
 Due to a strict non-disclosure agreement, I can't share my code for the work I did while employed at 10Up however here is a brief summary of the projects I worked on:
 
-**Microsoft In Culture**<br>
-<https://www.microsoft.com/inculture><br>
-Conducted user testing and bug fixes. Also built various new features and components
-
-**Microsoft Today In Tech**<br> 
-<https://blogs.microsoft.com/today-in-tech><br>
-Conducted user testing and bug fixes. Minor component updates throughout the site.
-
-**Microsoft AI Blog**<br>
+**Microsoft - AI Blog**<br>
 <https://blogs.microsoft.com/ai><br>
 Completed minor bug fixes and styling changes throughout the site.
+
+**Microsoft - In Culture**<br>
+<https://www.microsoft.com/inculture><br>
+Conducted user testing and bug fixes. Also built various new features and components.
+
+**Microsoft - Industry Blogs**<br>
+<https://cloudblogs.microsoft.com/industry-blog/><br>
+Built complex navigation feature with AJAX filtering.
+
+**Microsoft - Today In Tech**<br> 
+<https://blogs.microsoft.com/today-in-tech><br>
+Conducted user testing and bug fixes. Minor component updates throughout the site.
 
 **NBA2K League**<br>
 <https://2kleague.nba.com><br>
@@ -217,7 +221,6 @@ Built several components, features, and page templates under a tight deadline.
 **ABC News - FiveThirtyEight**<br>
 <https://fivethirtyeight.com><br>
 Built several features, components, and AMP updates.
-
 
 **ESPN - TheUndefeated**<br>
 <https://theundefeated.com><br>
