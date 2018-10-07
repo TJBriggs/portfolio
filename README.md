@@ -1,12 +1,10 @@
-# Thad Briggs Portfolio
+# [ ![My Logo](http://thadbriggs.com) ](http://thadbriggs.com/images/logos/logo.svg "Title text for link") THADDEUS BRIGGS PORTFOLIO
 
 Thanks for visiting my portfolio repo. This is a collection of my work. I was the lead developer on each of these projects.
 
 ## ami + partners
 
 ![Image of ami + partners Website](http://thadbriggs.com/images/projects/ami.png "ami + partners Website")
-
-<img src="http://thadbriggs.com/images/projects/ami.png" alt="Image of ami + partners Website" title"ami + partners Website" style="box-shadow: 0 0 10px 0px rgba(0,0,0, 0.20);" />
 
 ## Bio2 Medical
 
