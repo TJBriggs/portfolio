@@ -3,16 +3,10 @@
 Thanks for visiting my portfolio repo. Below you will find a collection of my favorite sites. I was the lead developer on each of these projects.
 
 |Quick Links|
-|:----------------|
-|[ami + partners][ami]|
-|[Bio2 Medical][bio2]|
-|[Cairn Dental][cairn]|
-|[Devetry][devetry]|
-|[Emailage][emailage]|
-|[Golftec][golftec]|
-|[PK Associates][pka]|
-|[Proctor Productions][proctor]|
-|[Szymanowski Orthodontics][damon]|
+|:----------------|:------------|:------------|
+|[ami + partners][ami]|[Bio2 Medical][bio2]|[Cairn Dental][cairn]|
+|[Devetry][devetry]|[Emailage][emailage]|[Golftec][golftec]|
+|[PK Associates][pka]|[Proctor Productions][proctor]|[Szymanowski Orthodontics][damon]|
 |[Resume][resume]|
 
 ## ami + partners
