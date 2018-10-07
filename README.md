@@ -1,8 +1,10 @@
 # <img src="http://thadbriggs.com/images/logos/logo.svg" alt="Thad Briggs Logo" width="42" height="25"> THADDEUS BRIGGS PORTFOLIO
 
-Thanks for visiting my portfolio repo. Below you will find my resume as well as a collection of my favorite sites. I was the lead developer on each of these projects.
+Thanks for visiting my portfolio repo. Below you will find a collection of my favorite sites. I was the lead developer on each of these projects.
 
-<img src="thad_briggs_resume.png" alt="Thad Briggs Logo" width="612" height="792">
+|Table of Contents|
+|:----------------|
+|[ami + partners][ami]|
 
 ## ami + partners
 
@@ -39,3 +41,18 @@ Thanks for visiting my portfolio repo. Below you will find my resume as well as 
 ## Szymanowski Orthodontics
 
 ![Image of Szymanowski Orthodontics Website](http://thadbriggs.com/images/projects/damon.png "Szymanowski Orthodontics Website")
+
+## Resume
+
+<img src="thad_briggs_resume.png" alt="Thad Briggs Logo" width="612" height="792">
+
+[ami]: #ami--partners
+[bio2]: https://github.com/TJBriggs/portfolio#bio2-medical
+[cairn]: https://github.com/TJBriggs/portfolio#cairn-dental
+[devetry]: https://github.com/TJBriggs/portfolio#devetry
+[emailage]: https://github.com/TJBriggs/portfolio#emailage
+[golftec]: https://github.com/TJBriggs/portfolio#golftec
+[pka]: https://github.com/TJBriggs/portfolio#pk-associates
+[proctor]: https://github.com/TJBriggs/portfolio#proctor-productions
+[damon]: https://github.com/TJBriggs/portfolio#szymanowski-orthodontics
+[resume]: https://github.com/TJBriggs/portfolio#resume
