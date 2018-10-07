@@ -6,7 +6,7 @@ Thanks for visiting my portfolio repo. This is a collection of my work. I was th
 
 ![Image of ami + partners Website](http://thadbriggs.com/images/projects/ami.png "ami + partners Website")
 
-<img src="http://thadbriggs.com/images/projects/ami.png" alt="Image of ami + partners Website" title"ami + partners Website" style="box-shadow: 0 0 10px 0px rgba(0,0,0, 0.20);">
+<img src="http://thadbriggs.com/images/projects/ami.png" alt="Image of ami + partners Website" title"ami + partners Website" style="box-shadow: 0 0 10px 0px rgba(0,0,0, 0.20);" />
 
 ## Bio2 Medical
 
