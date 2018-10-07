@@ -20,6 +20,16 @@ Thanks for visiting my portfolio repo. Below you will find a collection of my fa
 
 <a href="http://advantagemediainc.com/" target="_blank">http://advantagemediainc.com</a>
 
+One of my favorite sites to date. I love the clean, yet rich design which appeals directly to AMI's target audience - marketing executives. This site is thoughtfully laid out and takes a content first approach.
+
+#### Project Highlights:
+
+* Sticky Navigation
+* Parallax Scrolling
+* CSS/SVG Animations
+* Custom Post Types
+* User-friendly Case Studies
+
 <br>
 
 ## Bio2 Medical
@@ -52,6 +62,13 @@ Thanks for visiting my portfolio repo. Below you will find a collection of my fa
 
 Devetry specializes in app development and they wanted a creative way to feature their amazing work. Check out the video slider on the home page. The videos play when they're in view or when the slides change.
 
+#### Project Highlights:
+
+* Unique Video Slider
+* Distinctive Image Grid
+* Strategic Landing Pages
+* Project Case Studies
+* AJAX Filtering
 
 <br>
 
