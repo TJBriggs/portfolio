@@ -1,4 +1,4 @@
-# [ <img src="http://thadbriggs.com/images/logos/logo.svg" alt="Thad Briggs Logo" height="20" width="33"> ](http://thadbriggs.com "Thad Briggs Portfolio") THADDEUS BRIGGS PORTFOLIO
+# [ <img src="http://thadbriggs.com/images/logos/logo.svg" alt="Thad Briggs Logo" width="50" height="30"> ](http://thadbriggs.com "Thad Briggs Portfolio") THADDEUS BRIGGS PORTFOLIO
 
 Thanks for visiting my portfolio repo. This is a collection of my work. I was the lead developer on each of these projects.
 
