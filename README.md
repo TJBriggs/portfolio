@@ -18,7 +18,7 @@ Thanks for visiting my portfolio repo. Below you will find a collection of my fa
 
 ![Image of ami + partners Website](http://thadbriggs.com/images/projects/ami.png "ami + partners Website")
 
-<http://advantagemediainc.com/>
+<a href="http://advantagemediainc.com/" target="_blank">http://advantagemediainc.com</a>
 
 <br>
 
@@ -28,7 +28,7 @@ Thanks for visiting my portfolio repo. Below you will find a collection of my fa
 
 ![Image of Bio2 Medical Website](http://thadbriggs.com/images/projects/bio2.png "Bio2 Medical Website")
 
-<https://bio2medical.com/>
+<a href="https://bio2medical.com/" target="_blank">https://bio2medical.com</a>
 
 <br>
 
@@ -38,7 +38,7 @@ Thanks for visiting my portfolio repo. Below you will find a collection of my fa
 
 ![Image of Cairn Dental Website](http://thadbriggs.com/images/projects/cairn.png "Cairn Dental Website")
 
-<http://cairndental.com/>
+<a href="http://cairndental.com/" target="_blank">http://cairndental.com</a>
 
 <br>
 
@@ -48,7 +48,7 @@ Thanks for visiting my portfolio repo. Below you will find a collection of my fa
 
 ![Image of Devetry Website](http://thadbriggs.com/images/projects/devetry.png "Devetry Website")
 
-<https://devetry.com>
+<a href="https://devetry.com" target="_blank">https://devetry.com</a>
 
 Devetry specializes in app development and they wanted a creative way to feature their amazing work. Check out the video slider on the home page. The videos play when they're in view or when the slides change.
 
@@ -61,7 +61,7 @@ Devetry specializes in app development and they wanted a creative way to feature
 
 ![Image of Emailage Website](http://thadbriggs.com/images/projects/emailage.png "Emailage Website")
 
-<https://emailage.com>
+<a href="https://emailage.com" target="_blank">https://emailage.com</a>
 
 <br>
 
@@ -71,7 +71,7 @@ Devetry specializes in app development and they wanted a creative way to feature
 
 ![Image of Golftec Website](http://thadbriggs.com/images/projects/golftec.png "Golftec Website")
 
-<https://golftec.com/>
+<a href="https://golftec.com/" target="_blank">https://golftec.com</a>
 
 <br>
 
@@ -81,7 +81,7 @@ Devetry specializes in app development and they wanted a creative way to feature
 
 ![Image of PK Associates Website](http://thadbriggs.com/images/projects/pka.png "PK Associates Website")
 
-<https://pkastructural.com/>
+<a href="https://pkastructural.com/" target="_blank">https://pkastructural.com</a>
 
 <br>
 
@@ -91,7 +91,7 @@ Devetry specializes in app development and they wanted a creative way to feature
 
 ![Image of Proctor Productions Website](http://thadbriggs.com/images/projects/proctor.png "Proctor Productions Website")
 
-<https://proctorproductions.com/>
+<a href="https://proctorproductions.com/" target="_blank">https://proctorproductions.com</a>
 
 <br>
 
@@ -101,7 +101,7 @@ Devetry specializes in app development and they wanted a creative way to feature
 
 ![Image of Szymanowski Orthodontics Website](http://thadbriggs.com/images/projects/damon.png "Szymanowski Orthodontics Website")
 
-<http://drdamonsmiles.com/>
+<a href="http://drdamonsmiles.com/" target="_blank">http://drdamonsmiles.com</a>
 
 <br>
 
