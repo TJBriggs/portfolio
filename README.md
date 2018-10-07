@@ -38,7 +38,7 @@ Thanks for visiting my portfolio repo. Below you will find a collection of my fa
 
 ![Image of Cairn Dental Website](http://thadbriggs.com/images/projects/cairn.png "Cairn Dental Website")
 
-<https://devetry.com>
+<http://www.cairndental.com/>
 
 <br>
 
