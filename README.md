@@ -2,6 +2,8 @@
 
 Thanks for visiting my portfolio repo. Below you will find my resume as well as a collection of my favorite sites. I was the lead developer on each of these projects.
 
+<img src="thad_briggs_resume.png" alt="Thad Briggs Logo" width="612" height="792">
+
 ## ami + partners
 
 ![Image of ami + partners Website](http://thadbriggs.com/images/projects/ami.png "ami + partners Website")
