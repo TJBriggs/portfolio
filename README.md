@@ -9,7 +9,7 @@ Thanks for visiting my portfolio repo. Below you will find a collection of my fa
 |[ami + partners][ami]|[Bio2 Medical][bio2]|[Cairn Dental][cairn]|
 |[Devetry][devetry]|[Emailage][emailage]|[Golftec][golftec]|
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[PK Associates][pka]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Proctor Productions][proctor]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|[Szymanowski Orthodontics][damon]|
-|&nbsp;|[Resume][resume]|&nbsp;|
+|[10Up Projects][10up]|[Resume][resume]|&nbsp;|
 
 <br>
 
@@ -192,6 +192,39 @@ My first site at Zenman, the boss wanted to challenge me to see what I could do.
 
 <br>
 
+## 10Up Projects
+
+<br>
+
+Due to a strict non-disclosure agreement, I can't share my code for the work I did while employed at 10Up however here is a brief summary of the projects I worked on:
+
+#### Microsoft In Culture<br>
+<https://www.microsoft.com/inculture><br>
+Various features and components
+
+#### Microsoft Today In Tech<br> 
+<https://blogs.microsoft.com/today-in-tech><br>
+User testing, bug fixes and minor component updates
+
+#### Microsoft AI Blog<br>
+<https://blogs.microsoft.com/ai><br>
+Minor bug fixes and styling changes
+
+#### NBA2K League<br>
+<https://2kleague.nba.com><br>
+Several components, features, and page templates
+
+#### ABC News - FiveThirtyEight<br>
+<https://fivethirtyeight.com><br>
+Several features, components, and AMP work
+
+
+#### ESPN - TheUndefeated<br>
+<https://theundefeated.com><br>
+Several features, components, and AMP work
+
+<br>
+
 ## Resume
 
 <br>
@@ -209,4 +242,5 @@ My first site at Zenman, the boss wanted to challenge me to see what I could do.
 [pka]: #pk-associates
 [proctor]: #proctor-productions
 [damon]: #szymanowski-orthodontics
+[10up]: #10up-projects
 [resume]: #resume
