@@ -196,7 +196,9 @@ My first site at Zenman, the boss wanted to challenge me to see what I could do.
 
 <br>
 
-<img src="thad_briggs_resume.png" alt="Thad Briggs Logo" width="612" height="792">
+[ <img src="thad_briggs_resume.png" alt="Thad Briggs Logo" width="612" height="792"> ](thad_briggs_resume.pdf)
+
+
 
 [ami]: #ami--partners
 [bio2]: #bio2-medical
