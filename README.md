@@ -18,9 +18,9 @@ Thanks for visiting my portfolio repo. Below you will find a collection of my fa
 
 ![Image of ami + partners Website](http://thadbriggs.com/images/projects/ami.png "ami + partners Website")
 
-**Site:** <a href="http://advantagemediainc.com/" target="_blank">http://advantagemediainc.com</a>
+<a href="http://advantagemediainc.com/" target="_blank">Site</a>
 
-**Code:** [ami](/ami)
+[Code](/ami)
 
 One of my favorite sites to date. I love the clean, yet rich design which appeals directly to AMI's target audience - marketing executives. This site is thoughtfully laid out and takes a content first approach.
 
