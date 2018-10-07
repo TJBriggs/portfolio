@@ -207,7 +207,7 @@ Completed minor bug fixes and styling changes throughout the site.
 Conducted user testing and bug fixes. Also built various new features and components.
 
 **Microsoft - Industry Blogs**<br>
-<https://cloudblogs.microsoft.com/industry-blog/><br>
+<https://cloudblogs.microsoft.com/industry-blog><br>
 Built complex navigation feature with AJAX filtering.
 
 **Microsoft - Today In Tech**<br> 
