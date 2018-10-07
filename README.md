@@ -2,7 +2,7 @@
 
 Thanks for visiting my portfolio repo. Below you will find a collection of my favorite sites. I was the lead developer on each of these projects.
 
-|Quick Links|
+|Quick Links|&nbsp;|&nbsp|
 |:----------------|:------------|:------------|
 |[ami + partners][ami]|[Bio2 Medical][bio2]|[Cairn Dental][cairn]|
 |[Devetry][devetry]|[Emailage][emailage]|[Golftec][golftec]|
