@@ -1,6 +1,10 @@
-# [ <img src="http://thadbriggs.com/images/logos/logo.svg" alt="Thad Briggs Logo" width="50" height="30"> ](http://thadbriggs.com "Thad Briggs Portfolio") THADDEUS BRIGGS PORTFOLIO
+<div style="text-align:center">
+	<img src="http://thadbriggs.com/images/logos/logo.svg" alt="Thad Briggs Logo" width="50" height="30"> 
+	<h1 style="text-align:center">THADDEUS BRIGGS PORTFOLIO</h1>
+</div>
+<hr>
 
-Thanks for visiting my portfolio repo. This is a collection of my work. I was the lead developer on each of these projects.
+Thanks for visiting my portfolio repo. Below you will find my resume as well as a collection of my favorite sites. I was the lead developer on each of these projects.
 
 ## ami + partners
 
