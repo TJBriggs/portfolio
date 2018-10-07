@@ -18,7 +18,7 @@ Thanks for visiting my portfolio repo. Below you will find a collection of my fa
 
 ![Image of ami + partners Website](http://thadbriggs.com/images/projects/ami.png "ami + partners Website")
 
-<http://www.advantagemediainc.com/>
+<http://advantagemediainc.com/>
 
 <br>
 
@@ -38,7 +38,7 @@ Thanks for visiting my portfolio repo. Below you will find a collection of my fa
 
 ![Image of Cairn Dental Website](http://thadbriggs.com/images/projects/cairn.png "Cairn Dental Website")
 
-<http://www.cairndental.com/>
+<http://cairndental.com/>
 
 <br>
 
@@ -71,7 +71,7 @@ Devetry specializes in app development and they wanted a creative way to feature
 
 ![Image of Golftec Website](http://thadbriggs.com/images/projects/golftec.png "Golftec Website")
 
-<https://www.golftec.com/>
+<https://golftec.com/>
 
 <br>
 
@@ -91,7 +91,7 @@ Devetry specializes in app development and they wanted a creative way to feature
 
 ![Image of Proctor Productions Website](http://thadbriggs.com/images/projects/proctor.png "Proctor Productions Website")
 
-<https://www.proctorproductions.com/>
+<https://proctorproductions.com/>
 
 <br>
 
@@ -101,7 +101,7 @@ Devetry specializes in app development and they wanted a creative way to feature
 
 ![Image of Szymanowski Orthodontics Website](http://thadbriggs.com/images/projects/damon.png "Szymanowski Orthodontics Website")
 
-<http://www.drdamonsmiles.com/>
+<http://drdamonsmiles.com/>
 
 <br>
 
