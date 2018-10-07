@@ -1,4 +1,4 @@
-# [ ![My Logo](http://thadbriggs.com) ](http://thadbriggs.com/images/logos/logo.svg "Title text for link") THADDEUS BRIGGS PORTFOLIO
+# [ <img src="http://thadbriggs.com/images/logos/logo.svg" alt="Thad Briggs Logo"> ](http://thadbriggs.com "Thad Briggs Portfolio") THADDEUS BRIGGS PORTFOLIO
 
 Thanks for visiting my portfolio repo. This is a collection of my work. I was the lead developer on each of these projects.
 
