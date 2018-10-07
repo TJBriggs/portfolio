@@ -18,9 +18,7 @@ Thanks for visiting my portfolio repo. Below you will find a collection of my fa
 
 ![Image of ami + partners Website](http://thadbriggs.com/images/projects/ami.png "ami + partners Website")
 
-<a href="http://advantagemediainc.com/" target="_blank">Site</a>
-
-[Code](/ami)
+<a href="http://advantagemediainc.com/" target="_blank">View Site</a> | [View Code](/ami)
 
 One of my favorite sites to date. I love the clean, yet rich design which appeals directly to AMI's target audience - marketing executives. This site is thoughtfully laid out and takes a content first approach.
 
@@ -40,7 +38,7 @@ One of my favorite sites to date. I love the clean, yet rich design which appeal
 
 ![Image of Bio2 Medical Website](http://thadbriggs.com/images/projects/bio2.png "Bio2 Medical Website")
 
-<a href="https://bio2medical.com/" target="_blank">https://bio2medical.com</a>
+<a href="https://bio2medical.com/" target="_blank">View Site</a> | [View Code](/bio2-medical)
 
 This medical device company specializes in state-of-the-art technology. It's vital that their website appeal to modern medical professionals, but remain user-friendly for those less tech savvy.
 
@@ -60,7 +58,7 @@ This medical device company specializes in state-of-the-art technology. It's vit
 
 ![Image of Cairn Dental Website](http://thadbriggs.com/images/projects/cairn.png "Cairn Dental Website")
 
-<a href="http://cairndental.com/" target="_blank">http://cairndental.com</a>
+<a href="http://cairndental.com/" target="_blank">View Site</a> | [View Code](/cairn-dental)
 
 Cairns are the piles of stones placed next to hiking trails. They mark the path and help guide hikers to their destination. I love the rebrand of this dental practice and how it targets the outdoor enthusiasts of Golden, CO.
 
@@ -80,7 +78,7 @@ Cairns are the piles of stones placed next to hiking trails. They mark the path 
 
 ![Image of Devetry Website](http://thadbriggs.com/images/projects/devetry.png "Devetry Website")
 
-<a href="https://devetry.com" target="_blank">https://devetry.com</a>
+<a href="https://devetry.com" target="_blank">View Site</a> | [View Code](/devetry)
 
 Devetry specializes in app development and they wanted a creative way to feature their amazing work. Check out the video slider on the home page. The videos play when they're in view or when the slide changes.
 
@@ -100,7 +98,7 @@ Devetry specializes in app development and they wanted a creative way to feature
 
 ![Image of Emailage Website](http://thadbriggs.com/images/projects/emailage.png "Emailage Website")
 
-<a href="https://emailage.com" target="_blank">https://emailage.com</a>
+<a href="https://emailage.com" target="_blank">View Site</a> | [View Code](/emailage)
 
 I thoroughly enjoyed building this website. I love how the design incorporates soft curves, circular imagery, and custom icon illustrations. Modular development with feature-rich integrations lead to this highly customizable experience.
 
@@ -120,7 +118,7 @@ I thoroughly enjoyed building this website. I love how the design incorporates s
 
 ![Image of Golftec Website](http://thadbriggs.com/images/projects/golftec.png "Golftec Website")
 
-<a href="https://golftec.com/" target="_blank">https://golftec.com</a>
+<a href="https://golftec.com/" target="_blank">View Site</a> | [View Code](/golftec)
 
 This project was the blueprint for GolfTEC's website redesign. It consists of a styleguide, pattern library, custom modules, and demo pages which were integrated with their company's proprietary CMS.
 
@@ -140,7 +138,7 @@ This project was the blueprint for GolfTEC's website redesign. It consists of a 
 
 ![Image of PK Associates Website](http://thadbriggs.com/images/projects/pka.png "PK Associates Website")
 
-<a href="https://pkastructural.com/" target="_blank">https://pkastructural.com</a>
+<a href="https://pkastructural.com/" target="_blank">View Site</a> | [View Code](/pk-associates)
 
 This structural engineering firm is known for their award-winning designs. Since their work speaks for itself, the portfolio page is the key to their marketing funnel. Check out the custom portfolio grid which features AJAX filtering & search.
 
@@ -160,7 +158,7 @@ This structural engineering firm is known for their award-winning designs. Since
 
 ![Image of Proctor Productions Website](http://thadbriggs.com/images/projects/proctor.png "Proctor Productions Website")
 
-<a href="https://proctorproductions.com/" target="_blank">https://proctorproductions.com</a>
+<a href="https://proctorproductions.com/" target="_blank">View Site</a> | [View Code](/proctor-productions)
 
 Nominated for an Awwward, this site originally featured full screen videos, nested sliders, and AJAX sorting for their work section. The team page highlights the fun & creative culture at Proctor.
 
@@ -180,7 +178,7 @@ Nominated for an Awwward, this site originally featured full screen videos, nest
 
 ![Image of Szymanowski Orthodontics Website](http://thadbriggs.com/images/projects/damon.png "Szymanowski Orthodontics Website")
 
-<a href="http://drdamonsmiles.com/" target="_blank">http://drdamonsmiles.com</a>
+<a href="http://drdamonsmiles.com/" target="_blank">View Site</a> | [View Code](/szymanowski-orthodontics)
 
 My first site at Zenman, the boss wanted to challenge me to see what I could do. This design has all the bells & whistles: parallax scrolling, CSS/SVG animations, background videos, and much more!
 
