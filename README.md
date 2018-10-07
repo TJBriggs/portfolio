@@ -40,6 +40,16 @@ One of my favorite sites to date. I love the clean, yet rich design which appeal
 
 <a href="https://bio2medical.com/" target="_blank">https://bio2medical.com</a>
 
+This medical device company specializes in state-of-the-art technology. It's vital that their website appeal to modern medical professionals, but remain user-friendly for those less tech savvy.
+
+#### Project Highlights:
+
+* YouTube Video Hero
+* Multi-Lingual Content
+* Client Portal
+* Timeline Carousel
+* Custom Search
+
 <br>
 
 ## Cairn Dental
@@ -49,6 +59,16 @@ One of my favorite sites to date. I love the clean, yet rich design which appeal
 ![Image of Cairn Dental Website](http://thadbriggs.com/images/projects/cairn.png "Cairn Dental Website")
 
 <a href="http://cairndental.com/" target="_blank">http://cairndental.com</a>
+
+Cairns are the piles of stones placed next to hiking trails. They mark the path and help guide hikers to their destination. I love the rebrand of this dental practice and how it targets the outdoor enthusiasts of Golden, CO.
+
+#### Project Highlights:
+
+* Subtle Hover Effects
+* Custom Post Types
+* Clean, Modern Blog
+* Social Sharing
+* Interactive FAQs
 
 <br>
 
@@ -60,7 +80,7 @@ One of my favorite sites to date. I love the clean, yet rich design which appeal
 
 <a href="https://devetry.com" target="_blank">https://devetry.com</a>
 
-Devetry specializes in app development and they wanted a creative way to feature their amazing work. Check out the video slider on the home page. The videos play when they're in view or when the slides change.
+Devetry specializes in app development and they wanted a creative way to feature their amazing work. Check out the video slider on the home page. The videos play when they're in view or when the slide changes.
 
 #### Project Highlights:
 
@@ -80,6 +100,16 @@ Devetry specializes in app development and they wanted a creative way to feature
 
 <a href="https://emailage.com" target="_blank">https://emailage.com</a>
 
+I thoroughly enjoyed building this website. I love how the design incorporates soft curves, circular imagery, and custom icon illustrations. Modular development with feature-rich integrations lead to this highly customizable experience.
+
+#### Project Highlights:
+
+* Multi-Lingual Site
+* Soft, Modern Design
+* Flexible Modules & Layouts
+* Adaptive Placeholders
+* AJAX Filtering & Search
+
 <br>
 
 ## Golftec
@@ -89,6 +119,16 @@ Devetry specializes in app development and they wanted a creative way to feature
 ![Image of Golftec Website](http://thadbriggs.com/images/projects/golftec.png "Golftec Website")
 
 <a href="https://golftec.com/" target="_blank">https://golftec.com</a>
+
+This project was the blueprint for GolfTEC's website redesign. It consists of a styleguide, pattern library, custom modules, and demo pages which were integrated with their company's proprietary CMS.
+
+#### Project Highlights:
+
+* KSS Styleguide
+* Unique Navigation
+* Static/Video Slider
+* Subtle Hover Animations
+* Complex Location Maps
 
 <br>
 
@@ -100,6 +140,16 @@ Devetry specializes in app development and they wanted a creative way to feature
 
 <a href="https://pkastructural.com/" target="_blank">https://pkastructural.com</a>
 
+This structural engineering firm is known for their award-winning designs. Since their work speaks for itself, the portfolio page is the key to their marketing funnel. Check out the custom portfolio grid which features AJAX filtering & search.
+
+#### Project Highlights:
+
+* Creative Portfolio Grid
+* AJAX Filtering & Search
+* Custom Taxonomies
+* Unique Design & Interface
+* Strategic Content Funnel
+
 <br>
 
 ## Proctor Productions
@@ -110,6 +160,16 @@ Devetry specializes in app development and they wanted a creative way to feature
 
 <a href="https://proctorproductions.com/" target="_blank">https://proctorproductions.com</a>
 
+Nominated for an Awwward, this site originally featured full screen videos, nested sliders, and AJAX sorting for their work section. The team page highlights the fun & creative culture at Proctor.
+
+#### Project Highlights:
+
+* Mosaic Project Filtering
+* Parallax Scrolling
+* CSS/SVG Animations
+* Background Video
+* Fun Team Hover Effects
+
 <br>
 
 ## Szymanowski Orthodontics
@@ -119,6 +179,16 @@ Devetry specializes in app development and they wanted a creative way to feature
 ![Image of Szymanowski Orthodontics Website](http://thadbriggs.com/images/projects/damon.png "Szymanowski Orthodontics Website")
 
 <a href="http://drdamonsmiles.com/" target="_blank">http://drdamonsmiles.com</a>
+
+My first site at Zenman, the boss wanted to challenge me to see what I could do. This design has all the bells & whistles: parallax scrolling, CSS/SVG animations, background videos, and much more!
+
+#### Project Highlights:
+
+* Animated Header
+* Random Heros Images
+* Slow Parallax Scrolling
+* CSS/SVG Animations
+* Background Video
 
 <br>
 
