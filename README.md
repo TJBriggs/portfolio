@@ -8,7 +8,7 @@ Thanks for visiting my portfolio repo. Below you will find a collection of my fa
 |:----------------:|:------------:|:------------:|
 |[ami + partners][ami]|[Bio2 Medical][bio2]|[Cairn Dental][cairn]|
 |[Devetry][devetry]|[Emailage][emailage]|[Golftec][golftec]|
-|[PK Associates][pka]|[Proctor Productions][proctor]|[Szymanowski Orthodontics][damon]|
+|&nbsp;&nbsp;&nbsp;[PK Associates][pka]&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;[Proctor Productions][proctor]&nbsp;&nbsp;|[Szymanowski Orthodontics][damon]|
 |&nbsp;|[Resume][resume]|&nbsp;|
 
 <br>
