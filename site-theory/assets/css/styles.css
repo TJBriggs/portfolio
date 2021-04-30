@@ -1,0 +1,22 @@
+/**
+ *
+ * Frontend Styles
+ *
+ */
+@charset "UTF-8";
+
+/* Resets - include normalize.css via NPM */
+@import url("normalize.css");
+
+/* Global - global pieces like variables, custom properties, extends */
+@import url("1_global/_index");
+
+/* Components - styling for components/elements like
+ navigation, sidebars, reusable elements */
+@import url("2_components/_index");
+
+/* Block - Frontend styling for custom WordPress Blocks */
+@import url("3_blocks/_index");
+
+/* Page - styles specific to a certain page or page template */
+@import url("4_pages/_index");

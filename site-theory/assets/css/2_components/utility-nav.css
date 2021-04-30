@@ -1,0 +1,77 @@
+/**
+ *
+ * Utility Navigation Styles
+ *
+ */
+
+.site-header__utility {
+	display: flex;
+	transition: opacity 300ms var(--easeInSine);
+
+	@media (--bp-nav-mobile) {
+		display: none;
+	}
+}
+
+.site-header__utility-nav {
+	align-items: center;
+	display: flex;
+	justify-content: flex-end;
+
+	> ul {
+		align-items: center;
+		display: flex;
+		list-style-type: none;
+		margin: 0.75rem 0;
+		padding: 0;
+
+		> li {
+			margin: 0 1rem;
+
+			> a {
+				align-items: center;
+				display: inline-flex;
+				font-size: 1.4rem;
+				font-weight: 400;
+				justify-content: center;
+				padding: 0 0.5rem;
+			}
+		}
+	}
+}
+
+.site-header__mobile-links {
+	width: 100%;
+
+	.site-header__mobile-menu {
+		display: flex;
+		flex-direction: column;
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+
+		li {
+			border-bottom: 1px solid var(--c-lgray);
+			display: inline-block;
+			height: auto;
+
+			a {
+				color: var(--c-black);
+				display: inline-block;
+				font-weight: var(--f-bold);
+				padding: 1.4rem 2rem;
+				text-decoration: none;
+				text-transform: uppercase;
+				transition:
+					background-color 350ms var(--easeInSine),
+					color 350ms var(--easeInSine);
+
+				&:active,
+				&:hover,
+				&:focus {
+					color: var(--c-black);
+				}
+			}
+		}
+	}
+}

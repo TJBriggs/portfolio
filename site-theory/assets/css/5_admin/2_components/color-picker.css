@@ -1,0 +1,31 @@
+/**
+ *
+ * Color Picker Component
+ *
+ */
+
+.color-picker {
+	background-color: var(--c-white);
+	border: 1px solid var(--c-gray);
+	border-radius: 4px;
+	display: none;
+	max-width: 335px;
+	padding: 0.5rem;
+	width: 100%;
+
+	label {
+		margin-bottom: 0.5rem;
+	}
+
+	.components-button {
+		padding: 0;
+	}
+
+	.components-text-control__input {
+		margin-bottom: 0 !important;
+	}
+
+	.is-selected & {
+		display: block;
+	}
+}

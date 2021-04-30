@@ -1,0 +1,163 @@
+/**
+ *
+ * Base Styles
+ *
+ */
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	background-color: var(--c-white);
+	color: var(--t-main);
+	display: flex;
+	flex-direction: column;
+	font-display: swap;
+	font-family: var(--f-main);
+	font-feature-settings: "liga", "kern";
+	font-size: 1.5rem;
+	-webkit-font-smoothing: auto;
+	-moz-osx-font-smoothing: grayscale;
+	font-weight: var(--f-default);
+	letter-spacing: 0;
+	line-height: 1.5;
+	margin: 0;
+	min-height: 100vh;
+	text-rendering: optimizeLegibility;
+	width: 100%;
+}
+
+.site-container {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	justify-content: flex-start;
+
+	.default & {
+		padding-top: 72px;
+
+		@media (--bp-nav-desk) {
+			padding-top: 86px;
+		}
+	}
+
+	.layout-1 & {
+		padding-top: 74px;
+
+		@media (--bp-nav-desk) {
+			padding-top: 123px;
+		}
+	}
+
+	.layout-2 & {
+		padding-top: 70px;
+
+		@media (min-width: 401px) {
+			padding-top: 78px;
+		}
+
+		@media (--bp-nav-desk) {
+			padding-top: 80px;
+		}
+	}
+
+	.layout-3 & {
+		padding-top: 68px;
+
+		@media (--bp-nav-desk) {
+			padding-top: 117px;
+		}
+	}
+
+}
+
+
+::selection {
+	background-color: var(--c-black);
+	color: var(--c-white);
+}
+
+/* Responsive Images */
+img {
+	display: block;
+	height: auto;
+	max-width: 100%;
+}
+
+/* Main Wrapper Styles */
+[class*="__inner"] {
+	margin: 0 auto;
+	max-width: 1306px;
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+	width: 100%;
+
+	@media (min-width: 501px) {
+		padding-left: 3rem;
+		padding-right: 3rem;
+	}
+}
+
+/* Print Styles */
+@media print {
+	.site-header-menu,
+	.menu-button,
+	.site-footer-lower,
+	.site-footer-social { display: none; }
+	.site-footer { border-top: 0; }
+}
+
+/**
+ *
+ * WordPress Screen Reader Text
+ * https://make.wordpress.org/accessibility/handbook/markup/the-css-class-screen-reader-text/
+ *
+ */
+.screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+	word-wrap: normal !important;
+}
+
+.screen-reader-text:focus {
+	background-color: var(--c-lgray);
+	clip: auto !important;
+	clip-path: none;
+	color: var(--c-dgray);
+	display: block;
+	font-size: 1em;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar. */
+}
+
+/**
+ * Resources on prefers-reduced-motion:
+ * https://webkit.org/blog-files/prefers-reduced-motion/prm.htm
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion
+ */
+@media (prefers-reduced-motion: reduce) {
+
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0 !important;
+		transition-duration: 0 !important;
+	}
+}

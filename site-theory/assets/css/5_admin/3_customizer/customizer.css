@@ -1,0 +1,151 @@
+/**
+ *
+ * Customizer Styles
+ *
+ */
+
+.wp-customizer {
+
+	/**
+	 *
+	 * General customizer styles
+	 *
+	 */
+	.customize-pane-child {
+		display: flex;
+		flex-wrap: wrap;
+
+		.section-meta,
+		.customize-control {
+			border-bottom: 1px solid var(--c-lgray);
+			clear: none;
+			display: inline-block;
+			margin-bottom: 1.25rem;
+			padding-bottom: 1.25rem;
+			width: 100%;
+		}
+
+		.customize-control {
+
+			&:last-of-type {
+				border-bottom: none !important;
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	.customize-control-title {
+		line-height: 1.2;
+		margin-bottom: 0.5rem;
+	}
+
+	.customize-control-description p {
+		margin-top: 0.25rem;
+	}
+
+	#customize-control-header_logo {
+		border-bottom: none;
+		padding-bottom: 0;
+	}
+
+	/**
+	 *
+	 * Control styles
+	 *
+	 */
+
+	/* Range Slider */
+	.range-slider {
+
+		&__title {
+			margin-bottom: 0.25rem;
+			width: 100%;
+		}
+
+		.customize-control-notifications-container {
+			width: 100% !important;
+		}
+
+		&__wrap {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		&__slider {
+			width: 69%;
+		}
+
+		&__value {
+			width: 21% !important;
+		}
+
+		&__units {
+			align-items: center;
+			display: flex;
+			width: 5% !important;
+		}
+	}
+
+	#customize-theme-controls #sub-accordion-section-header_settings,
+	#customize-theme-controls #sub-accordion-section-footer_settings {
+		display: flex !important;
+		flex-wrap: wrap !important;
+		overflow: visible !important;
+
+		#customize-control-header_bg_color,
+		#customize-control-utility_bg_color,
+		#customize-control-button_bg_color,
+		#customize-control-button_text_color,
+		#customize-control-footer_bg_color,
+		#customize-control-footer_font_color,
+		#customize-control-footer_phone,
+		#customize-control-footer_tel_url {
+			border-bottom: none;
+			display: inline-block;
+			margin-bottom: 0.5rem;
+			padding-bottom: 0.5rem;
+			width: 50%;
+		}
+
+		#customize-control-main_nav_color,
+		#customize-control-utility_nav_color,
+		#customize-control-button_bg_color,
+		#customize-control-button_text_color {
+			border-bottom: none;
+			display: inline-block;
+			margin-bottom: 0.5rem;
+			padding-bottom: 0.5rem;
+			width: 50%;
+		}
+
+		#customize-control-button_toggle {
+			margin-bottom: 0;
+			padding-bottom: 0.85rem;
+		}
+
+		#customize-control-footer_phone,
+		#customize-control-footer_tel_url {
+			margin-right: 3%;
+			width: 48.5%;
+		}
+
+		#customize-control-footer_tel_url {
+			margin-right: 0;
+		}
+
+		#customize-control-utility_bg_color,
+		#customize-control-utility_nav_color {
+			display: none;
+		}
+
+		.wp-picker-active {
+			background-color: var(--c-white) !important;
+			border-radius: 5px;
+			box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.15);
+			left: 5%;
+			padding: 0.75rem;
+			position: absolute;
+			z-index: 50;
+		}
+	}
+}

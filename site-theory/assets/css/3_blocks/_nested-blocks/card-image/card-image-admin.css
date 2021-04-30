@@ -1,0 +1,74 @@
+/**
+ *
+ * Card Text Admin Styles
+ *
+ */
+
+.wp-block {
+	> .card-image {
+		background-color: var(--c-lgray);
+		display: flex;
+		width: 100%;
+
+		.card-image__display {
+			display: block;
+			height: 100%;
+			line-height: 0;
+			overflow: hidden;
+			width: 100%;
+		}
+
+		.card-image__bg-image {
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			display: block;
+			height: 100%;
+			line-height: 0;
+			min-height: 320px;
+			overflow: hidden;
+			width: 100%;
+		}
+
+		.image-picker {
+			margin-right: 1%;
+			width: 49%;
+		}
+
+		.card-image__link-wrap {
+			display: none;
+			padding: 0.5rem;
+			width: 49%;
+		}
+
+		.link-fields {
+
+			.block-editor-url-input__button {
+				margin-bottom: 1rem;
+				position: static;
+				right: auto;
+				top: auto;
+				width: 100%;
+			}
+
+			&__url-display {
+				width: 100%;
+			}
+		}
+	}
+
+	&.is-selected {
+
+		.card-image {
+			padding: 2rem;
+		}
+
+		.card-image__display {
+			display: none;
+		}
+
+		.card-image__link-wrap {
+			display: block;
+		}
+	}
+}
