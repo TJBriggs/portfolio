@@ -1,0 +1,30 @@
+/**
+ *
+ * Footer Navigation Styles
+ *
+ */
+ .site-footer__nav {
+	width: calc( 100% - 110px );
+ }
+
+ .site-footer__menu {
+	display: flex;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+
+	li {
+
+		a {
+			color: var(--c-white);
+			font-size: 18px;
+			padding: 0 20px;
+		}
+
+		&:first-of-type {
+			a {
+				padding-left: 0;
+			}
+		}
+	}
+ }

@@ -1,0 +1,40 @@
+/**
+ *
+ * Wrapper Styles
+ *
+ */
+
+/* Sticky Footer */
+.site-container {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	width: 100%;
+
+	.main-container {
+		flex: 1 0 auto;
+	}
+
+	.site-footer {
+		flex-shrink: 0;
+	}
+}
+
+.site-footer {
+	flex-shrink: 0;
+}
+
+[class*="__inner"] {
+	margin: 0 auto;
+	max-width: 1140px;
+	padding-left: calc(var(--pad));
+	padding-right: calc(var(--pad));
+	width: 100%;
+}
+
+@media ( max-width: 768px ) {
+	[class*="__inner"] {
+		padding-left: calc(var(--pad) * 1.5);
+		padding-right: calc(var(--pad) * 1.5);
+	}
+}

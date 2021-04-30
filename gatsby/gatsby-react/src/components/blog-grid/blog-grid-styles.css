@@ -1,0 +1,57 @@
+/**
+ *
+ * Blog Grid
+ *
+ */
+.blog-grid {
+	overflow: hidden;
+	padding: 50px 0;
+	width: 100%;
+
+	&__inner {
+		padding-left: 0;
+		paddidng-right: 0;
+	}
+
+
+	.blog-grid__wrap {
+		display: flex;
+		flex-wrap: wrap;
+		transition: max-height 1000ms, opacity 1000ms, transform 1000ms;
+
+		.blog-grid__trigger {
+			align-items: flex-start;
+			display: flex;
+			height: 0;
+			justify-content: center;
+			width: 100%;
+
+			img {
+				display: inline-block;
+				opacity: 0;
+				transition: opacity 500ms;
+			}
+
+			&.loading {
+				height: 75px;
+				img {
+					opacity: 0.45;
+				}
+			}
+		}
+
+		&.hidden {
+			height: 0;
+			max-height: 0;
+			transform: translateY(75px);
+			opacity: 0;
+		}
+
+		&.fade-in {
+			height: auto;
+			max-height: 1500px;
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+}

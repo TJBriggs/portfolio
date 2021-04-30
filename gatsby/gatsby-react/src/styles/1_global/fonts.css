@@ -1,0 +1,18 @@
+/**
+ *
+ * Fonts
+ * Path based on dist folder at root of theme
+ * where minified css is being served
+ */
+
+/* @font-face {
+	font-family: font-name;
+	font-stretch: normal;
+	font-style: normal;
+	font-weight: 400;
+	src: url("../../assets/fonts/font-directory-name/font-file-name.eot");
+	src:
+		url("../../assets/fonts/font-directory-name/font-file-name.eot?#iefix") format("embedded-opentype"),
+		url("../../assets/fonts/font-directory-name/font-file-name.woff2") format("woff2"),
+		url("../../assets/fonts/font-directory-name/font-file-name.woff") format("woff");
+} */

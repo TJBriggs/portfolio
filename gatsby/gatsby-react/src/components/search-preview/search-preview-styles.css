@@ -1,0 +1,17 @@
+.hit-content {
+	&__title {
+		color: var(--c-purple);
+		a {
+			color: inherit;
+		}
+	}
+	&__category {
+		color: var(--c-dgray);
+		margin-top: 5px;
+		text-transform: capitalize;
+	}
+	&__text {
+		font-size: 18px;
+		margin-top: 10px;
+	}
+}

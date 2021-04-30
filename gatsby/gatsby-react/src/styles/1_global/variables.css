@@ -1,0 +1,78 @@
+:root {
+
+	/**
+	 *
+	 * Global Variables Using CSS Custom Properties
+	 * https://preset-env.cssdb.org/features#custom-properties
+	 *
+	 * Example usage: color: var(--some-color);
+	 *
+	 */
+
+	/* Example styles erase as needed */
+
+	/* Colors */
+	--c-black: #000;
+	--c-white: #fff;
+	--c-gray: #cdcdcd;
+	--c-dgray: #666666;
+	--c-pink: #AF449D;
+	--c-purple: #663399;
+
+	/* Text Colors */
+	--t-main: #666;
+
+	/* Fonts */
+	--f-main: georgia, sans-serif;
+
+	/* Utilities */
+	--border-radius: 0.25em;
+	--box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.45);
+	--box-shadow-off: 0 0 5px 0 rgba(0, 0, 0, 0);
+	--pad: 0.9375rem;
+
+	/**
+	 *
+	 * Breakpoints Using CSS Custom Media Queries
+	 * https://preset-env.cssdb.org/features#custom-media-queries
+	 *
+	 * Example usage: @media (--bp-small) {}
+	 *
+	 * Pixel to Rem Converter - Default Pixel Size 16
+	 * https://www.ninjaunits.com/converters/pixels/pixels-rem/
+	 *
+	 *
+	 */
+	@custom-media --bp-small ( min-width: 480px );
+	@custom-media --bp-medium ( min-width: 768px );
+	@custom-media --bp-large ( min-width: 1024px );
+	@custom-media --bp-xlarge ( min-width: 1200px );
+	@custom-media --bp-xxlarge ( min-width: 1440px );
+	@custom-media --bp-nav-mobile ( max-width: 1024px );
+	@custom-media --bp-nav-desk ( min-width: 1025px );
+}
+
+/**
+ *
+ * Sass Variables
+ * Use Sass like syntax for variables with PostCSS plugin
+ * https://github.com/postcss/postcss-simple-vars
+ *
+ */
+$small-breakpoint:  480px !default;
+$medium-breakpoint: 768px !default;
+$large-breakpoint:  1024px !default;
+$xlarge-breakpoint:  1200px !default;
+$xxlarge-breakpoint: 1440px !default;
+
+$nav-breakpoint: 1024px !default;
+$desktop-breakpoint: $nav-breakpoint;
+$mobile-breakpoint: calc(#{$nav-breakpoint} - 1);
+
+$mobile-menu: "(max-width: #{$mobile-breakpoint})";
+$desktop-menu: "(min-width: #{$desktop-breakpoint})";
+
+$small: "(min-width: #{$small-breakpoint})";
+$medium: "(min-width: #{$medium-breakpoint})";
+$large: "(min-width: #{$large-breakpoint})";
+$xlarge: "(min-width: #{$xlarge-breakpoint})";

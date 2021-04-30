@@ -1,0 +1,38 @@
+/**
+ *
+ * CPT Grid Item
+ *
+ */
+.cpt-grid__item {
+	margin: 30px 1%;
+	width: 31.3336%;
+
+	@media ( max-width: 800px ) {
+		width: 48%;
+		margin: 30px 1%;
+	}
+
+	.cpt-grid__image {
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		height: 225px;
+		width: 100%;
+	}
+
+	.cpt-grid__headline {
+		font-size: 32px;
+		margin: 12px 0;
+	}
+
+	p {
+		font-size: 18px;
+		margin: 0;
+	}
+
+	.cpt-grid__link {
+		display: inline-block;
+		font-size: 18px;
+		margin-top: 15px;
+	}
+}

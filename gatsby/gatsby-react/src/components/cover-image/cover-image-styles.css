@@ -1,0 +1,13 @@
+/**
+ *
+ * Cover Image
+ *
+ */
+.cover-image {
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	color: var(--c-white);
+	padding: 5rem 0;
+}
+
