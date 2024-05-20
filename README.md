@@ -6,8 +6,8 @@ Thanks for visiting my portfolio repository. Below you will find a collection of
 
 |&nbsp;|&nbsp;|Quick Links|&nbsp;|&nbsp;|
 |:----------------:|:------------:|:------------:|:------------:|:------------:|
-|[NESN][nesn]|[vauto][vauto]|[Cummins][cummins]|[Golftec][golftec]|[PK Associates][pka]|[ami + partners][ami]|
-|[Bio2 Medical][bio2]|[Cairn Dental][cairn]||[Devetry][devetry]|[Emailage][emailage]|[Proctor Productions][proctor]|
+|[NESN][nesn]|[vAuto][vauto]|[Cummins][cummins]|[Golftec][golftec]|[PK Associates][pka]|[ami + partners][ami]|
+|[Bio2 Medical][bio2]|[Cairn Dental][cairn]|[Devetry][devetry]|[Emailage][emailage]|[Proctor Productions][proctor]|
 |[Szymanowski Orthodontics][damon]|[10up Projects][10up]|[The Mx Group Projects][mx]|[Resume][resume]|
 
 <br>
