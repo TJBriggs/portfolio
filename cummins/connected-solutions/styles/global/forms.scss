@@ -1,0 +1,63 @@
+/**
+ *
+ * Forms
+ *
+ */
+
+.form-fields {
+	display: flex;
+	flex-wrap: wrap;
+
+	>div {
+		margin-bottom: 20px;
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+
+}
+
+.field--half {
+
+
+	@media (min-width: 481px) {
+		margin-right: 3%;
+		width: 48.5% !important;
+	}
+}
+
+.field--third {
+
+	@media (min-width: 481px) {
+		margin-right: calc(6% / 2);
+		width: 31.3336% !important;
+	}
+}
+
+.field--fourth {
+
+	@media (min-width: 481px) {
+		margin-right: 3%;
+		width: 48.5% !important;
+	}
+
+	@media (min-width: $bp-medium) {
+		margin-right: calc(6% / 3);
+		width: 23.5% !important;
+	}
+
+	&.fourth--break {
+		@media (min-width: 481px) {
+			margin-right: 0;
+		}
+
+		@media (min-width: $bp-medium) {
+			margin-right: calc(6% / 3);
+		}
+	}
+}
+
+.field--last {
+	margin-right: 0;
+}

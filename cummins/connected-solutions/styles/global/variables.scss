@@ -1,0 +1,132 @@
+/**
+*
+* Variables
+*
+* Custom Media Queries
+* Must be outside Root To Cascade Properly
+* Breakpoints Using CSS Custom Media Queries
+* https://preset-env.cssdb.org/features#custom-media-queries
+*
+* Example usage: @media (--bp-small) {}
+*
+*/
+
+/* CSS Custom Properties - Media Queries */
+@custom-media --bp-small (min-width: $bp-small);
+@custom-media --bp-medium (min-width: $bp-medium);
+@custom-media --bp-large (min-width: $bp-large);
+@custom-media --bp-xlarge (min-width: 1200px);
+@custom-media --bp-xxlarge (min-width: 1440px);
+@custom-media --bp-nav-mobile (max-width: 1023px);
+@custom-media --bp-nav-desk (min-width: $bp-large);
+
+/* Sass Media - Queries */
+$bp-small: 480px;
+$bp-medium: 769px;
+$bp-large: 1024px;
+$bp-xlarge: 1200px;
+$bp-xxlarge: 1440px;
+$bp-nav-mobile: 1023px;
+$bp-nav-desk: 1024px;
+
+:root {
+	/* Primary Colors */
+	--c-red-10: #F4ADA7;
+	--c-red-60: #DA291C;
+	--c-red-70: #BF2419;
+	--c-red-80: #A41D13;
+	--c-white: #FFFFFF;
+	--c-gray-10: #F4F4F4;
+	--c-gray-20: #E5E5E5;
+	--c-gray-30: #C6C6C6;
+	--c-gray-40: #A8A8A8;
+	--c-gray-50: #8D8D8D;
+	--c-gray-60: #6F6F6F;
+	--c-gray-70: #4C4C4C;
+	--c-gray-80: #393939;
+	--c-gray-100: #131313;
+	--c-black: #000000;
+
+	/* Icon Colors */
+	--c-green: #89C052;
+	--c-blue: #38ADD8;
+	--c-red: var(--c-red-70);
+	--c-orange: #FF832B;
+	--c-yellow: #F1C21B;
+	--c-gray: var(--c-gray-70);
+
+	--default-text: var(--c-gray-100);
+
+	--c-success: var(--c-green);
+	--c-error: var(--c-red);
+
+	/* Font Families */
+	--font-base: "Open Sans", sans-serif;
+
+	/* Font Weights */
+	--font-extra-bold: 800;
+	--font-bold: 700;
+	--font-semi-bold: 600;
+	--font-medium: 500;
+	--font-regular: 400;
+
+	/* Standard Padding */
+	--padding: 16px;
+
+	/* Border Radius */
+	--radius-xlarge: 100px;
+	--radius-large: 50px;
+	--radius-medium: 30px;
+	--radius-default: 20px;
+	--radius-default-small: 12px;
+	--radius-small: 8px;
+	--radius-xsmall: 4px;
+	--radius-tiny: 2px;
+
+	/* Box Shadows */
+	--shadow-large: 0px 20px 40px rgba(0, 0, 0, 0.2);
+
+	/* Beziers - Cubic */
+	--easeInCubic: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+	--easeOutCubic: cubic-bezier(0.215, 0.61, 0.355, 1);
+	--easeInOutCubic: cubic-bezier(0.645, 0.045, 0.355, 1);
+
+	/* Beziers - Circ */
+	--easeInCirc: cubic-bezier(0.6, 0.04, 0.98, 0.335);
+	--easeOutCirc: cubic-bezier(0.075, 0.82, 0.165, 1);
+	--easeInOutCirc: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+
+	/* Beziers - Expo */
+	--easeInExpo: cubic-bezier(0.95, 0.05, 0.795, 0.035);
+	--easeOutExpo: cubic-bezier(0.19, 1, 0.22, 1);
+	--easeInOutExpo: cubic-bezier(1, 0, 0, 1);
+
+	/* Beziers - Quad */
+	--easeInQuad: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+	--easeOutQuad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	--easeInOutQuad: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+
+	/* Beziers - Quart */
+	--easeInQuart: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+	--easeOutQuart: cubic-bezier(0.165, 0.84, 0.44, 1);
+	--easeInOutQuart: cubic-bezier(0.77, 0, 0.175, 1);
+
+	/* Beziers - Quint */
+	--easeInQuint: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+	--easeOutQuint: cubic-bezier(0.23, 1, 0.32, 1);
+	--easeInOutQuint: cubic-bezier(0.86, 0, 0.07, 1);
+
+	/* Beziers - Sine */
+	--easeInSine: cubic-bezier(0.47, 0, 0.745, 0.715);
+	--easeOutSine: cubic-bezier(0.39, 0.575, 0.565, 1);
+	--easeInOutSine: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+
+	/* Beziers - Back */
+	--easeInBack: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+	--easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	--easeInOutBack: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+	/* Transitions */
+	--default-duration: 400ms;
+	--default-easing: ease-in-out;
+}

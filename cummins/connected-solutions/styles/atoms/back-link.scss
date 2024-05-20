@@ -1,0 +1,30 @@
+/**
+ *
+ * Back Link
+ *
+ */
+.back-link {
+	align-items: center;
+	display: flex;
+	height: 50px;
+
+	@media (min-width: 481px) {
+		height: auto;
+	}
+
+	.icon {
+		color: var(--default-text);
+		font-size: 12px;
+		margin-right: 10px;
+	}
+
+	.link__text {
+		@extend %h4-compact;
+		color: var(--default-text);
+		display: none;
+
+		@media (min-width: 481px) {
+			display: block;
+		}
+	}
+}

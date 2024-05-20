@@ -1,0 +1,152 @@
+/**
+ *
+ * Utility Classes
+ *
+ */
+
+/* Ornamental Styles */
+.rounded-bottom-right {
+	border-bottom-right-radius: var(--radius-medium);
+	border-collapse: separate;
+	width: 100vw;
+}
+
+.rounded-top-xsmall {
+	border-top-left-radius: var(--radius-xsmall);
+	border-top-right-radius: var(--radius-xsmall);
+}
+
+.rounded-top-small {
+	border-top-left-radius: var(--radius-small);
+	border-top-right-radius: var(--radius-small);
+}
+
+.rounded-top-default {
+	border-top-left-radius: var(--radius-default-small);
+	border-top-right-radius: var(--radius-default-small);
+
+	@media (min-width: $bp-medium) {
+
+		border-top-left-radius: var(--radius-default);
+		border-top-right-radius: var(--radius-default);
+	}
+}
+
+.rounded-top-medium {
+	border-top-left-radius: var(--radius-medium);
+	border-top-right-radius: var(--radius-medium);
+}
+
+.rounded-top-large {
+	border-top-left-radius: var(--radius-large);
+	border-top-right-radius: var(--radius-large);
+}
+
+.rounded-top-xlarge {
+	border-top-left-radius: var(--radius-xlarge);
+	border-top-right-radius: var(--radius-xlarge);
+}
+
+.rounded-bottom-xsmall {
+	border-bottom-left-radius: var(--radius-xsmall);
+	border-bottom-right-radius: var(--radius-xsmall);
+}
+
+.rounded-bottom-small {
+	border-bottom-left-radius: var(--radius-small);
+	border-bottom-right-radius: var(--radius-small);
+}
+
+.rounded-bottom-default {
+	border-bottom-left-radius: var(--radius-default);
+	border-bottom-right-radius: var(--radius-default);
+}
+
+.rounded-bottom-default {
+	border-bottom-left-radius: var(--radius-default-small);
+	border-bottom-right-radius: var(--radius-default-small);
+
+	@media (min-width: $bp-medium) {
+
+		border-bottom-left-radius: var(--radius-default);
+		border-bottom-right-radius: var(--radius-default);
+	}
+}
+
+.rounded-bottom-medium {
+	border-bottom-left-radius: var(--radius-medium);
+	border-bottom-right-radius: var(--radius-medium);
+}
+
+.rounded-bottom-large {
+	border-bottom-left-radius: var(--radius-large);
+	border-bottom-right-radius: var(--radius-large);
+}
+
+.rounded-bottom-xlarge {
+	border-bottom-left-radius: var(--radius-xlarge);
+	border-bottom-right-radius: var(--radius-xlarge);
+}
+
+/* mobile only */
+.mobile-only {
+	display: block;
+
+	@media (min-width: $bp-medium) {
+		display: none;
+	}
+}
+
+/* mobile only */
+.desktop-only {
+	display: none;
+
+	@media (min-width: $bp-medium) {
+		display: block;
+	}
+}
+
+/* Screen Reader Text */
+.screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+	word-wrap: normal !important;
+}
+
+.screen-reader-text:focus {
+	background-color: gray;
+	clip: auto !important;
+	clip-path: none;
+	color: white;
+	display: block;
+	font-size: 1em;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	width: auto;
+	z-index: 9999;
+}
+
+/**
+* Resources on prefers-reduced-motion:
+* https://webkit.org/blog-files/prefers-reduced-motion/prm.htm
+* https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion
+*/
+@media (prefers-reduced-motion: reduce) {
+
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0 !important;
+		transition-duration: 0 !important;
+	}
+}

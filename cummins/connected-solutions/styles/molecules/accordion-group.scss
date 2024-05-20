@@ -1,0 +1,32 @@
+/**
+ *
+ * Accordion Group
+ *
+ */
+.accordion-group {
+	border-radius: var(--radius-small);
+	margin-top: 30px;
+
+	&__heading {
+		@extend .rounded-top-small;
+		align-items: center;
+		background-color: var(--c-gray-70);
+		color: var(--c-white);
+		display: flex;
+		min-height: 42px;
+		padding: 0 var(--padding);
+	}
+
+	&__add-button {
+		@extend .rounded-bottom-small;
+		align-items: center;
+		background-color: var(--c-gray-70);
+		color: var(--c-white);
+		display: flex;
+		justify-content: center;
+		margin-top: 5px;
+		min-height: 32px;
+		padding: 0 20px;
+
+	}
+}

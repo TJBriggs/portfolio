@@ -1,0 +1,107 @@
+/**
+ *
+ * Base Styles
+ *
+ */
+* {
+	box-sizing: border-box;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+html {
+	font-size: 16px;
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: var(--c-gray-10);
+	color: var(--default-text);
+	font-family: var(--font-base);
+	font-feature-settings: "liga", "kern";
+	font-size: 1rem;
+	-webkit-font-smoothing: auto;
+	-moz-osx-font-smoothing: grayscale;
+	font-weight: var(--font-regular);
+	letter-spacing: 0;
+	line-height: lh(20px, 16px);
+	margin: 0;
+	overflow-x: hidden;
+	text-rendering: optimizeLegibility;
+	width: 100%;
+
+	/* Adjust padding sizes for different screen sizes */
+	--padding-inner: 16px;
+
+	@media (min-width: $bp-large) {
+		--padding-inner: 24px;
+	}
+
+	.modal--open & {
+		overflow: hidden;
+	}
+}
+
+main {
+	height: 100%;
+	padding: 48px 0;
+
+	@media (min-width: $bp-medium) {
+		left: 76px;
+		padding: 74px 0;
+		position: relative;
+		width: calc(100% - 76px);
+	}
+}
+
+a,
+button,
+select,
+[class*="__toggle"] {
+	cursor: pointer;
+}
+
+/* Selection Styles */
+::selection {
+	background-color: var(--link-color);
+	color: var(--c-white);
+}
+
+/* Elements being linked to by # is the target element. */
+:target::before {
+	content: "";
+	display: block;
+	height: 80px;
+	margin: -80px 0 0;
+
+	@media (--bp-nav-desk) {
+		height: 120px;
+		margin: -120px 0 0;
+	}
+}
+
+/* Responsive Images & SVGs */
+svg {
+	max-width: 100%;
+}
+
+figure {
+	margin: 0;
+}
+
+/* Responsive Image */
+img {
+	display: inline-block;
+	height: auto;
+	line-height: 0;
+	max-height: 100%;
+	max-width: 100%;
+	width: 100%;
+}
+
+.dialog-button-wrap {
+	margin-top: 20px;
+
+	.button {
+		margin: 10px 15px;
+	}
+}

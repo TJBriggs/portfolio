@@ -1,0 +1,26 @@
+/**
+ *
+ * Add Single Asset Modal
+ *
+ */
+
+/* Global Styles */
+.add-single,
+.edit-single {
+
+	.modal__children {
+		padding: 20px var(--padding) 35px;
+
+		@media (min-width: 640px) {
+			padding: 20px var(--padding) 65px;
+		}
+	}
+}
+
+/* Add Single Styles */
+.add-single {
+
+	.edit-mode {
+		display: none;
+	}
+}

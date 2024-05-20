@@ -1,0 +1,70 @@
+/**
+ *
+ * Button Styles
+ *
+ */
+.button {
+	align-items: center;
+	background-color: var(--c-cummins-red);
+	border-radius: var(--radius-xlarge);
+	font-size: 18px;
+	display: inline-flex;
+	justify-content: center;
+	padding: 14px 20px;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: background-color var(--default-duration) var(--default-easing),
+		border var(--default-duration) var(--default-easing),
+		color var(--default-duration) var(--default-easing);
+	width: auto;
+
+	&:hover,
+	&.hover {
+		background-color: var(--c-red-10);
+	}
+
+	&:focus,
+	&.focus {
+		border: 2px solid var(--c-red-11);
+	}
+
+	&:disabled,
+	&.disabled {
+		background-color: var(--c-tech-12);
+		pointer-events: none;
+	}
+
+	.icon {
+		margin-right: 10px;
+	}
+
+	&.full {
+		width: 100%;
+	}
+
+	&.primary {
+		color: var(--c-white);
+	}
+
+	&.secondary {
+		background-color: var(--c-white);
+		border: 1px solid var(--c-tech-8);
+		color: var(--default-text);
+		transition: background-color var(--default-duration) var(--default-easing),
+			border var(--default-duration) var(--default-easing),
+			box-shadow var(--default-duration) var(--default-easing),
+			color var(--default-duration) var(--default-easing);
+
+		&:hover,
+		&.hover {
+			background-color: var(--c-tech-8);
+			border-color: transparent;
+			box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+		}
+
+		&:focus,
+		&.focus {
+			border: 1px solid var(--default-text);
+		}
+	}
+}

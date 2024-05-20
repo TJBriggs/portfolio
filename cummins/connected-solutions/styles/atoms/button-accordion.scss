@@ -1,0 +1,18 @@
+/**
+ *
+ * Button Accordion
+ *
+ */
+.button-accordion {
+
+	&__content {
+		display: none;
+	}
+
+	&.expanded {
+
+		.button-accordion__content {
+			display: block;
+		}
+	}
+}

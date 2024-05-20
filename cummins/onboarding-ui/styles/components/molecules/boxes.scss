@@ -1,0 +1,87 @@
+/**
+ *
+ * Boxes Styles
+ *
+ */
+.boxes {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 15px;
+	max-height: 432px;
+	overflow-y: auto;
+	padding-right: 20px;
+	padding-top: 20px;
+	width: calc(100% + 20px);
+
+	&__box {
+		border: 1px solid var(--c-cummins-red);
+		border-radius: var(--radius-small);
+		margin-bottom: 30px;
+		margin-right: 3%;
+		padding: 35px 10px;
+		position: relative;
+		width: 48.5%;
+
+		&:nth-child(even) {
+			margin-right: 0;
+		}
+	}
+
+	&__box-label {
+		background-color: var(--c-white);
+		font-size: 16px;
+		font-weight: var(--font-bold);
+		line-height: 1.1;
+		max-width: 75%;
+		padding: 2px;
+		position: absolute;
+		top: 0;
+		left: 15px;
+		text-transform: none;
+		transform: translateY(-50%);
+	}
+
+	.input-wrap {
+		position: relative;
+	}
+
+	input[type="text"] {
+		margin-bottom: 15px;
+	}
+
+	.remove-input {
+		font-size: 10px;
+		position: absolute;
+		right: 15px;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	.text-input {
+
+		.tooltip {
+			margin-left: 7px;
+		}
+	}
+
+	&__button-wrap {
+		text-align: center;
+	}
+
+	.button {
+		display: inline-flex;
+		padding: 5px 20px;
+		width: 140px;
+
+		.icon {
+			font-size: 10px;
+			position: relative;
+			top: 1px;
+		}
+
+		&__text {
+			font-size: 12px;
+			text-transform: none;
+		}
+	}
+}

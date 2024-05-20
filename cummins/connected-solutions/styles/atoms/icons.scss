@@ -1,0 +1,33 @@
+/**
+ *
+ * Icon Component Styles
+ *
+ */
+.round {
+
+	.icon {
+		color: var(--c-gray-100);
+		display: inline-flex;
+		fill: currentColor;
+
+		&.large {
+			font-size: 33px;
+		}
+
+		&.medium {
+			font-size: 22px;
+		}
+
+		&.small {
+			font-size: 19px;
+		}
+
+		&.xsmall {
+			font-size: 15px;
+		}
+
+		&.color-white {
+			color: var(--c-white);
+		}
+	}
+}

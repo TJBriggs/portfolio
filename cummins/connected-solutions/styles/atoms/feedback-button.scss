@@ -1,0 +1,49 @@
+/**
+ *
+ * Feedback Button
+ *
+ */
+.feedback-button.pre-field.large {
+	filter: drop-shadow(0px 4px 4px rgba(67, 72, 82, 0.2));
+	border-radius: 100px 0px 0px 100px;
+	border: none !important;
+	min-width: 100px !important;
+	position: fixed;
+	right: -75px;
+	top: 50%;
+	transform: translateY(-50%);
+	transition: right var(--default-duration) var(--default-easing) !important;
+	width: auto !important;
+	z-index: 9999;
+
+	&.shrink {
+		right: -75px;
+	}
+
+	@media (min-width: $bp-medium) {
+		right: 0;
+	}
+
+	.icon {
+		font-size: 18px !important;
+		margin-left: 2px !important;
+	}
+
+	.button__text {
+		margin: 0 3px 0 15px;
+		transition: margin var(--default-duration) var(--default-easing) !important;
+
+		@media (min-width: $bp-medium) {
+			margin: 0 3px 0 10px;
+		}
+	}
+
+	&:hover,
+	&.hover {
+		right: 0;
+
+		.button__text {
+			margin: 0 10px;
+		}
+	}
+}

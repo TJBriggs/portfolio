@@ -1,0 +1,21 @@
+/**
+ *
+ * Bulk User Access
+ *
+ */
+
+.bulk-user-role {
+
+	.modal__children {
+		padding-top: 30px;
+	}
+
+	.status-fields {
+		max-width: 250px;
+		margin: 20px auto 25px;
+
+		@media (min-width: 480px) {
+			margin: 35px auto 50px;
+		}
+	}
+}

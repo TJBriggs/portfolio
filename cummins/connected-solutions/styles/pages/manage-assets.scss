@@ -1,0 +1,104 @@
+/**
+ *
+ * Manage Assets Page
+ *
+ */
+.page-manage-assets {
+
+	/* Header Rounded Box */
+	.button-row {
+		display: flex;
+		flex-flow: column wrap;
+		margin: 30px auto 0;
+		max-width: 500px;
+
+		@media (min-width: $bp-large) {
+			flex-flow: row wrap;
+			justify-content: space-between;
+			margin-top: 45px;
+			max-width: none;
+		}
+
+		.add-buttons {
+			width: 100%;
+
+			@media (min-width: $bp-large) {
+				width: 309px;
+			}
+
+			.button-dropdown {
+				width: 100%;
+
+				@media (min-width: 415px) {
+					width: calc(50% - 10px);
+				}
+
+
+				.button {
+					width: 100%;
+				}
+			}
+		}
+
+		.search-export {
+			margin-top: 20px;
+			width: 100%;
+
+			@media (min-width: $bp-large) {
+				justify-content: flex-end;
+				margin-top: 0;
+				width: calc(100% - 309px);
+			}
+		}
+
+		.search-field {
+			min-width: 0;
+			width: 100%;
+
+			@media (min-width: 515px) {
+				min-width: 375px;
+			}
+
+			@media (min-width: $bp-large) {
+				min-width: 300px;
+				width: auto;
+			}
+
+			@media (min-width: 1275px) {
+				margin-right: 6.5vw;
+				min-width: 375px;
+			}
+		}
+
+		.export-button {
+			margin: 0 auto;
+			min-width: 144px;
+
+			@media (min-width: $bp-large) {
+				margin: 0;
+			}
+		}
+	}
+
+	.table-filters {
+
+		.sort-by {
+			margin-top: 20px;
+			width: 100%;
+
+			.button-dropdown {
+				width: 100%;
+
+				.button {
+					width: 100%;
+				}
+			}
+
+			@media (min-width: 550px) {
+				margin-top: 0;
+				order: 2;
+				width: 170px;
+			}
+		}
+	}
+}

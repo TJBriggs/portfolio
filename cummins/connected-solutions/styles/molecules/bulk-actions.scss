@@ -1,0 +1,22 @@
+/**
+ *
+ * Bulk Actions
+ *
+ */
+.bulk-actions {
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	width: 100%;
+
+	@media (min-width: $bp-medium) {
+		width: auto;
+	}
+
+	.button-dropdown {
+		@media (min-width: $bp-medium) {
+			margin-left: 15px;
+		}
+	}
+}

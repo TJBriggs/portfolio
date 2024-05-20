@@ -1,0 +1,31 @@
+/**
+ *
+ * Rounded Box
+ *
+ */
+.rounded-box {
+	background-color: var(--c-white);
+	border-radius: var(--radius-default);
+	padding: 30px var(--padding);
+}
+
+.flush-no-bottom-round {
+
+	.rounded-box {
+		align-items: center;
+		border-radius: var(--radius-default);
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		margin: 15px 0;
+		width: 100%;
+
+		@media (min-width: $bp-medium) {
+			border-radius: 0;
+			border-top-left-radius: var(--radius-default);
+			border-top-right-radius: var(--radius-default);
+			margin-bottom: 0;
+			padding: 30px var(--padding);
+		}
+	}
+}

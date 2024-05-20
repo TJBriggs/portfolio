@@ -1,0 +1,21 @@
+/**
+ *
+ * Sort By Button Dropdown
+ *
+ */
+.sort-by {
+	width: 100%;
+
+	.button {
+		min-width: 0;
+		width: 100%;
+	}
+
+	.button__text {
+
+		.count {
+			display: inline-block;
+			padding: 0 10px;
+		}
+	}
+}

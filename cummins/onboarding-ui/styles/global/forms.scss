@@ -1,0 +1,62 @@
+/**
+ *
+ * Form Field Layouts
+ *
+ */
+.form-fields {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.field--half {
+	margin-bottom: 13px;
+	width: 100%;
+
+	@media (min-width: 480px) {
+		margin-bottom: 0;
+		margin-right: 3%;
+		width: 48.5% !important;
+	}
+}
+
+.field--third {
+	margin-bottom: 13px;
+	width: 100%;
+
+	@media (min-width: 480px) {
+		margin-bottom: 0;
+		margin-right: calc(6% / 2);
+		width: 31.3336% !important;
+	}
+}
+
+.field--fourth {
+	margin-bottom: 13px;
+	width: 100%;
+
+	@media (min-width: 480px) {
+		margin-bottom: 0;
+		margin-right: 3%;
+		width: 48.5% !important;
+	}
+
+	@media (min-width: 769px) {
+		margin-right: calc(6% / 3);
+		width: 23.5% !important;
+	}
+
+	&.fourth--break {
+		@media (min-width: 480px) {
+			margin-right: 0;
+		}
+
+		@media (min-width: 769px) {
+			margin-right: calc(6% / 3);
+		}
+	}
+}
+
+.field--last {
+	margin-bottom: 0;
+	margin-right: 0;
+}

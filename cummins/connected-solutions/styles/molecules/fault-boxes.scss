@@ -1,0 +1,68 @@
+/**
+ *
+ * Fault Boxes
+ *
+ */
+.fault-boxes {
+
+	h4 {
+		margin-bottom: 10px;
+	}
+
+	&__wrap {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		grid-column-gap: 25px;
+		grid-row-gap: 20px;
+
+		@media (min-width: 650px) {
+			grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+			grid-column-gap: 35px;
+			grid-row-gap: 25px;
+		}
+	}
+
+	&__box {
+		background-color: var(--c-gray-10);
+		border-radius: var(--radius-default);
+		padding: 25px var(--padding);
+	}
+
+	&__checkbox {
+		align-items: center;
+		display: flex;
+
+		>span {
+			display: inline-block;
+			height: 24px !important;
+			width: 24px !important;
+		}
+	}
+
+	.checkbox-field {
+		padding-left: 15px;
+		width: calc(100% - 24px);
+
+		label {
+			padding-right: 0;
+		}
+	}
+
+	&__select {
+		align-items: flex-end;
+		display: flex;
+		justify-content: space-between;
+		margin-top: 15px;
+	}
+
+	.select-field {
+		padding-right: 15px;
+
+		>label {
+			padding: 0 15px 0 0;
+			font-size: 13px;
+			font-style: normal;
+			font-weight: normal;
+		}
+	}
+}

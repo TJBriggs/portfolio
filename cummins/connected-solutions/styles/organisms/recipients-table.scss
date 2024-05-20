@@ -1,0 +1,168 @@
+/**
+ *
+ * Recipients Table
+ *
+ */
+.recipients-table {
+	$full-width: 1780px;
+
+	/**
+	* Globals
+	*/
+	.table-header,
+	.table-rows {
+
+		@media (min-width: $bp-medium) {
+			width: $full-width;
+		}
+
+		&__row {
+
+			@media (min-width: $bp-medium) {
+				width: $full-width;
+			}
+		}
+	}
+
+	/**
+	* Table Rows
+	*/
+	.table-rows {
+
+		@media (min-width: $bp-medium) {
+			width: $full-width;
+		}
+	}
+
+	/* Set matching column widths for desktop */
+	@media (min-width: $bp-medium) {
+
+		.table-header__cell,
+		.table-rows__cell {
+			margin-right: 0;
+			padding-right: 20px;
+			width: 100%;
+
+			>a {
+				margin-right: 15px;
+			}
+
+			&:last-of-type {
+				padding-right: 0;
+			}
+
+			&.col-1 {
+				// Email
+				max-width: 350px;
+			}
+
+			&.col-2 {
+				// Work Area
+				max-width: 350px;
+			}
+
+			&.col-3 {
+				// Language
+				max-width: 250px;
+			}
+
+			&.col-4 {
+				// Time Zone
+				max-width: 350px;
+			}
+
+			&.col-5 {
+				// Asset Groups
+				max-width: 350px;
+			}
+
+			&.col-6 {
+				// Actions
+				justify-content: center;
+				max-width: 85px;
+			}
+		}
+	}
+
+	/* Custom styles for elements in table rows */
+	.table-rows__cell {
+
+		&.col-6 {
+			// Actions
+
+			@media (max-width: 767px) {
+				background-color: var(--c-grey-dark);
+				border-bottom-left-radius: var(--radius-small);
+				border-bottom-right-radius: var(--radius-small);
+				bottom: 0;
+				left: 0;
+				min-height: 0;
+				position: absolute;
+				width: 100%;
+			}
+
+			.actions-wrap {
+
+				@media (max-width: $bp-medium) {
+					display: flex;
+					height: 100%;
+					padding: 7px 0;
+					width: 100%;
+				}
+
+				a {
+					padding: 0 8px;
+
+					&.edit {
+						display: inline-block;
+					}
+
+					&.eye {
+						display: none;
+					}
+
+					&.disabled {
+						pointer-events: none;
+						opacity: 0.25;
+					}
+
+					@media (max-width: $bp-medium) {
+						align-items: center;
+						border-left: 1px solid var(--c-white);
+						display: flex;
+						justify-content: center;
+						width: 100%;
+
+						&:first-of-type {
+							border-left: 0;
+						}
+
+						&.edit {
+							display: none;
+						}
+
+						&.eye {
+							display: flex;
+						}
+					}
+				}
+
+				.icon {
+					font-size: 18px;
+
+					@media (max-width: $bp-medium) {
+						color: var(--c-white);
+					}
+				}
+			}
+		}
+	}
+
+	.show-more {
+		display: block;
+
+		@media (min-width: $bp-medium) {
+			display: none;
+		}
+	}
+}

@@ -1,0 +1,386 @@
+/**
+ *
+ * Fault Insights Table
+ *
+ */
+.prognostics-tab {
+
+	@media (max-width: 768px) {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 463px;
+	}
+}
+
+.prognostics {
+	$full-width: 1780px;
+
+
+	.table__prognostics-wrap {
+		flex-wrap: wrap;
+		overflow-x: auto;
+	}
+
+	.sort-by {
+		margin-bottom: 20px;
+	}
+
+	/**
+	* Globals
+	*/
+	.table-header,
+	.table-rows {
+
+		@media (min-width: $bp-medium) {
+			width: $full-width;
+		}
+
+		&__row {
+
+			@media (min-width: $bp-medium) {
+				width: $full-width;
+			}
+		}
+	}
+
+	/**
+	* Table Rows
+	*/
+	.table-rows {
+
+		&__row {
+			border-bottom: 1px solid var(--c-gray-20);
+
+			&:last-of-type {
+				border-bottom: 0;
+			}
+
+			.close-modal {
+				display: none;
+			}
+		}
+	}
+
+	/* Mobile Styles for table rows and cells */
+	@media (max-width: 768px) {
+
+		.table-rows__row {
+			background-color: var(--c-white);
+			border-radius: var(--radius-default-small);
+			display: flex;
+			flex-wrap: wrap;
+			grid-template-columns: none;
+			grid-column-gap: 0;
+			grid-row-gap: 0;
+			padding-bottom: 50px;
+			position: relative;
+
+			&.mobile-modal--open {
+				background-color: var(--c-modal-bg);
+				border-top: 1px solid var(--c-gray-20);
+				bottom: 0;
+				border-radius: 0;
+				height: 100%;
+				left: 0;
+				overflow-y: auto;
+				padding-bottom: 78px;
+				padding-left: 20px;
+				padding-right: 20px;
+				position: fixed;
+				right: 0;
+				top: 48px;
+				width: 100%;
+				z-index: 100;
+			}
+		}
+
+		.table-rows__row-wrap {
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		.table-rows__cell {
+			align-items: flex-start !important;
+			display: inline-flex;
+			margin-bottom: 20px;
+			min-height: 0 !important;
+			text-align: left;
+			width: 100%;
+
+			@media (min-width: 400px) {
+				margin-right: 8%;
+				width: 46%;
+			}
+
+			&:nth-of-type(even) {
+				margin-right: 0;
+			}
+
+			.primary-heading {
+				color: var(--c-tech-10);
+				font-size: 14px;
+				font-weight: var(--font-semi-bold);
+				font-style: normal;
+				text-transform: uppercase;
+			}
+
+			&.col-1 {
+				margin-right: 0;
+				order: 2;
+				width: 100%;
+
+				.circle-icon__wrap {
+					align-items: center;
+					display: flex;
+				}
+
+				.status-text {
+					text-transform: capitalize;
+					margin-left: 10px;
+				}
+			}
+
+			&.col-2 {
+				margin-right: 8%;
+				order: 3;
+			}
+
+			&.col-3 {
+				margin-right: 0;
+				order: 1;
+				width: 100%;
+			}
+
+			&.col-4 {
+				margin-right: 0;
+				order: 4;
+			}
+
+			&.col-5 {
+				margin-right: 8%;
+				order: 5;
+			}
+
+			&.col-6 {
+				order: 6;
+			}
+
+			&.show-more {
+				order: 7;
+			}
+		}
+
+		.close-modal {
+			background-color: transparent;
+			color: var(--default-text);
+			display: none;
+			position: absolute;
+			right: 20px;
+			top: 25px;
+			font-size: 20px;
+
+			&.button--visible {
+				display: inline-block;
+			}
+		}
+
+		.show-details {
+			align-items: center;
+			background-color: var(--c-black);
+			border-radius: 0;
+			border-bottom-left-radius: var(--radius-default-small);
+			border-bottom-right-radius: var(--radius-default-small);
+			bottom: 0;
+			color: var(--c-white);
+			display: none;
+			font-size: 13px;
+			justify-content: center;
+			left: 0;
+			height: 35px;
+			position: absolute;
+			width: 100%;
+
+			&.button--visible {
+				display: flex;
+			}
+		}
+	}
+
+	/* Desktop Styles */
+	@media (min-width: $bp-medium) {
+
+		.table-rows__row {
+			display: block;
+
+			&:hover {
+				background-color: var(--c-gray-20);
+			}
+		}
+
+		.table-rows__row-wrap {
+			display: flex;
+			padding: 0;
+		}
+
+		.table-header__cell,
+		.table-rows__cell {
+			margin-right: 16px;
+			width: 100%;
+
+			&:last-of-type {
+				margin-right: 0;
+			}
+
+			&.col-1 {
+				// Status
+				width: 90px;
+				text-transform: capitalize;
+
+				.circle-icon {
+					margin: 0 10px 0 0;
+				}
+			}
+
+			&.col-2 {
+				// Date Notified
+				width: 115px;
+			}
+
+			&.col-3 {
+				// Components
+				width: 145px;
+			}
+
+			&.col-4 {
+				// Expected Failure
+				width: 140px;
+			}
+
+			&.col-5 {
+				// Max Miles
+				width: 100px;
+			}
+
+			&.col-6 {
+				// Min Miles
+				width: 100px;
+			}
+		}
+
+		.table-header__cell {
+
+			&.col-7 {
+				// Recommended Action
+				max-width: 220px;
+			}
+
+			&.col-8 {
+				// Asset Groups
+				max-width: 160px;
+			}
+
+			&.col-9 {
+				// SRT
+				width: 85px;
+			}
+
+			&.col-10 {
+				// Odometer Miles
+				width: 155px;
+			}
+
+			&.col-11 {
+				// ESN
+				width: 120px;
+			}
+
+			&.col-12 {
+				// Warranty
+				width: 120px;
+			}
+		}
+
+		.table-rows__cell {
+			height: 100%;
+			min-height: 72px;
+			//padding-left: 3px; // nudge text to right
+
+			&.col-1 {
+				padding-left: 0;
+			}
+		}
+	}
+
+	/**
+	* More Details
+	*/
+	.more-details {
+		margin: 0;
+		max-width: 100%;
+
+		@media (max-width: 768px) {
+			order: 7;
+			display: none;
+
+			&.more-details--open {
+				display: flex;
+			}
+		}
+
+		@media (min-width: $bp-medium) {
+			display: block;
+			width: 955px;
+
+			.more-details__wrap {
+				display: flex;
+			}
+
+			.table-rows__cell {
+				max-width: none;
+				text-align: left;
+
+				&.col-7 {
+					// Recommended Action
+					width: 220px;
+
+				}
+
+				&.col-8 {
+					// Asset Groups
+					width: 160px;
+
+					.asset-groups {
+						display: flex;
+						flex-wrap: wrap;
+						width: 100%;
+
+						&__group {
+							margin-bottom: 3px;
+							width: 50%;
+						}
+					}
+				}
+
+				&.col-9 {
+					// SRT
+					width: 85px;
+				}
+
+				&.col-10 {
+					// Odometer Miles
+					width: 155px;
+				}
+
+				&.col-11 {
+					// ESN
+					width: 120px;
+				}
+
+				&.col-12 {
+					// Warranty
+					width: 120px;
+				}
+			}
+		}
+	}
+}

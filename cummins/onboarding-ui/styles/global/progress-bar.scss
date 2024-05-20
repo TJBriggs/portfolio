@@ -1,0 +1,189 @@
+/**
+ *
+ * Progress Bar
+ *
+ */
+.progress-bar {
+	text-align: center;
+	width: 100%;
+
+	&__header {
+		text-align: center;
+	}
+
+	&__eyebrow {
+		color: var(--c-white);
+	}
+
+	&__heading {
+		color: var(--c-white);
+	}
+
+	&__wrap {
+		align-items: center;
+		display: inline-flex;
+		justify-content: space-between;
+		margin-top: 25px;
+		position: relative;
+		width: 100%;
+
+		&::after {
+			background-color: var(--c-tech-14);
+			content: '';
+			height: 4px;
+			left: 50%;
+			position: absolute;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			width: 90%;
+			z-index: 1;
+		}
+	}
+
+	&__step,
+	&__ring {
+		align-items: center;
+		background-color: var(--c-jet-black);
+		border: 1px solid var(--c-tech-13);
+		border-radius: 50%;
+		display: flex;
+		height: 38px;
+		justify-content: center;
+		position: relative;
+		width: 38px;
+		z-index: 2;
+	}
+
+	&__step {
+		background-color: var(--c-jet-black);
+		border: 1px solid var(--c-tech-13);
+		height: 38px;
+		width: 38px;
+		z-index: 2;
+	}
+
+	&__ring {
+		border: 1px solid var(--c-tech-9);
+		color: var(--c-tech-9);
+		font-size: 13px;
+		height: 29px;
+		width: 29px;
+		z-index: 3;
+	}
+
+	&__check {
+		display: none;
+		position: relative;
+		top: 1px;
+	}
+
+	/* Active & Completed States */
+	.progress-bar__step.active {
+		border-color: var(--c-cummins-red);
+
+		.progress-bar__ring {
+			border: 1px solid var(--c-white);
+			color: var(--c-white);
+		}
+	}
+
+	.progress-bar__step.complete {
+
+		.progress-bar__check {
+			display: block;
+		}
+
+		.progress-bar__number {
+			display: none;
+		}
+	}
+}
+
+.progress-callouts {
+	text-align: left;
+
+	h1 {
+		max-width: 300px;
+
+		@media (min-width: 480px) {
+			max-width: 435px;
+		}
+
+		@media (min-width: 700px) {
+			max-width: 465px;
+		}
+
+		@media (min-width: $bp-large) {
+			max-width: 300px;
+		}
+	}
+
+	ul {
+		list-style-type: none;
+		margin: 25px 0 0;
+		padding: 0;
+
+		@media (min-width: 700px) {
+			align-items: center;
+			display: flex;
+			justify-content: space-between;
+		}
+
+		@media (min-width: $bp-large) {
+			display: block;
+		}
+	}
+
+	li {
+		align-items: center;
+		color: var(--c-white);
+		display: flex;
+		font-size: 16px;
+		margin-bottom: 15px;
+
+		@media (min-width: 481px) {
+			font-size: 18px;
+			margin-bottom: 20px;
+		}
+
+		@media (min-width: 700px) {
+			display: inline-flex;
+			font-size: 16px;
+			margin-bottom: 0;
+		}
+
+		@media (min-width: $bp-large) {
+			font-size: 18px;
+			margin-bottom: 20px;
+		}
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+
+	span {
+		align-items: center;
+		border: 1px solid var(--c-cummins-red);
+		border-radius: 50%;
+		display: inline-flex;
+		height: 38px;
+		justify-content: center;
+		margin-right: 10px;
+		width: 38px;
+
+		@media (min-width: $bp-large) {
+			height: 48px;
+			margin-right: 20px;
+			width: 48px;
+		}
+	}
+
+	.icon {
+		font-size: 18px;
+
+		@media (min-width: $bp-large) {
+			font-size: 22px;
+		}
+	}
+}

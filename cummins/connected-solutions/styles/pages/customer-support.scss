@@ -1,0 +1,50 @@
+/**
+ *
+ * Customer Support
+ *
+ */
+.support-box {
+	margin-bottom: 15px;
+
+	@media (min-width: 481px) {
+		margin-bottom: 30px;
+	}
+
+	&:last-of-type {
+		margin-bottom: 0;
+	}
+
+	h2 {
+		margin-bottom: 15px;
+
+		@media (min-width: $bp-large) {
+			margin-bottom: 25px;
+		}
+	}
+
+	&__item {
+		margin-bottom: 15px;
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+
+		a {
+			display: inline-block;
+			font-weight: var(--font-bold);
+			margin-top: 5px;
+		}
+
+		.location-link {
+			align-items: center;
+			display: flex;
+			left: -5px;
+			position: relative;
+
+			.icon {
+				margin-right: 5px;
+				font-size: 25px;
+			}
+		}
+	}
+}

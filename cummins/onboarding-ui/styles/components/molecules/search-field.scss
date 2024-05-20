@@ -1,0 +1,43 @@
+/**
+ *
+ * Search Field Styles
+ *
+ */
+.search-field {
+	align-items: center;
+	display: flex;
+	margin-bottom: 20px !important;
+
+	.icon {
+		margin-right: 10px;
+		width: 18px;
+	}
+
+	&__search {
+		border-bottom: 1px solid black;
+		max-width: 320px;
+		width: calc(100% - 40px);
+
+		@media (min-width: $bp-small) {
+			max-width: 400px;
+		}
+
+		@media (min-width: $bp-large) {
+			max-width: 280px;
+		}
+
+		input[type="search"] {
+			border: none;
+			border-radius: 0;
+			height: auto;
+			min-height: 0;
+			padding: 5px 10px 5px 0;
+
+			&:focus,
+			&:active {
+				border: none;
+				outline: none;
+			}
+		}
+	}
+}

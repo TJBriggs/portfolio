@@ -1,0 +1,78 @@
+/**
+ *
+ * Circle Icon
+ *
+ */
+.circle-icon {
+	align-items: center;
+	border-radius: 50%;
+	color: var(--c-white);
+	display: inline-flex;
+	height: 24px;
+	justify-content: center;
+	width: 24px;
+
+	i {
+		font-size: 12px;
+	}
+
+	/* Sizes Default is Medium */
+	&.small {
+		height: 20px;
+		width: 20px;
+
+		i {
+			font-size: 8px;
+		}
+	}
+
+	&.large {
+		height: 40px;
+		width: 40px;
+
+		i {
+			font-size: 20px;
+		}
+	}
+
+	&.xlarge {
+		height: 60px;
+		width: 60px;
+
+		i {
+			font-size: 36px;
+		}
+	}
+
+	/* Background Colors */
+	&.red,
+	&.shutdown {
+		background-color: var(--c-red);
+	}
+
+	&.blue,
+	&.pm {
+		background-color: var(--c-blue);
+	}
+
+	&.orange,
+	&.service-3days,
+	&.service-7days {
+		background-color: var(--c-orange);
+	}
+
+	&.yellow,
+	&.derate {
+		background-color: var(--c-yellow);
+	}
+
+	&.green,
+	&.active {
+		background-color: var(--c-green);
+	}
+
+	&.gray,
+	&.inactive {
+		background-color: var(--c-gray);
+	}
+}

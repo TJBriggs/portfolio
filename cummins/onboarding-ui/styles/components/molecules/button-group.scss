@@ -1,0 +1,45 @@
+/**
+ *
+ * Button Group Styles
+ *
+ */
+.button-group {
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 45px auto 0;
+	max-width: 500px;
+	width: 100%;
+
+	&.horizontal {
+
+		.button {
+			margin-bottom: 20px;
+			width: 100%;
+
+			@media (min-width: 600px) {
+				margin-bottom: 0;
+				margin-right: 3%;
+				width: 48.5%;
+			}
+
+			&:last-of-type {
+				margin-bottom: 0;
+				margin-right: 0;
+			}
+		}
+	}
+
+	&.vertical {
+		flex-direction: column;
+
+		.button {
+			margin-bottom: 20px;
+
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+	}
+}

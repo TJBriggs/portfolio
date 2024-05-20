@@ -1,0 +1,79 @@
+/**
+ *
+ * Tab Toggles
+ *
+ */
+.tab-toggles {
+	display: inline-block;
+
+	&__wrap {
+		align-items: center;
+		background-color: var(--c-white);
+		border-radius: var(--radius-xlarge);
+		display: inline-flex;
+		padding: 10px;
+		width: auto;
+
+		&::after {
+			content: "";
+			background-color: var(--c-red-60);
+			border-radius: var(--radius-xlarge);
+		}
+	}
+
+	button {
+		background-color: transparent;
+		border-radius: var(--radius-xlarge);
+		color: var(--default-text);
+		padding: 5px 14px;
+
+		&.selected {
+			background-color: var(--c-red-60);
+			color: var(--c-white);
+		}
+	}
+
+	&.underline {
+
+		.tab-toggles__wrap {
+			background-color: transparent;
+			border-radius: 0;
+			border-bottom: 1px solid var(--c-gray-20);
+			border-top: 1px solid var(--c-gray-20);
+
+			@media (min-width: 900px) {
+				background-color: var(--c-white);
+				border: none;
+			}
+		}
+
+		button {
+			border-radius: 0;
+			position: relative;
+
+			&.selected {
+				background-color: transparent;
+				color: var(--default-text);
+
+				&::after {
+					background-color: var(--c-red-60);
+					border-radius: var(--radius-xlarge);
+					bottom: -10px;
+					content: "";
+					height: 5px;
+					left: 50%;
+					position: absolute;
+					transform: translateX(-50%);
+					width: 100px;
+				}
+			}
+
+			&.active,
+			&:active,
+			&:focus,
+			&.focus {
+				border: none;
+			}
+		}
+	}
+}

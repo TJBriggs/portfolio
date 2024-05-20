@@ -1,0 +1,67 @@
+/**
+ *
+ * Accordion Checkbox
+ *
+ */
+.accordion-checkbox {
+
+	&__parent {
+		display: flex;
+	}
+
+	&__toggle {
+		align-items: center;
+		display: flex;
+		font-size: 10px;
+		height: 18px;
+		justify-content: center;
+		width: 18px;
+	}
+
+	&__field {
+		align-items: center;
+		display: flex;
+		margin-bottom: 7px;
+	}
+
+	input[type="checkbox"] {
+		background-color: transparent;
+	}
+
+	&__content {
+		display: none;
+		margin-bottom: 15px;
+		margin-left: 42px;
+	}
+
+	/* Remove bottom margin from last checkbox */
+	&:last-of-type {
+
+		.accordion-checkbox__content {
+			margin-bottom: 0;
+
+			.accordion-checkbox__field {
+
+				&:last-of-type {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+
+	/* Expanded */
+	&.expanded {
+
+		.accordion-checkbox__toggle {
+
+			> .icon {
+				display: inline-block;
+				transform: rotate(90deg);
+			}
+		}
+
+		.accordion-checkbox__content {
+			display: block;
+		}
+	}
+}

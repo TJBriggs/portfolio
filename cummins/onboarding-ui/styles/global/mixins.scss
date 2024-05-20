@@ -1,0 +1,21 @@
+/**
+ *
+ * Sass Mixins
+ *
+ */
+@use "sass:math";
+
+/* Strip px from unit */
+@function stripUnit($value) {
+	@return math.div($value, $value * 0 + 1);
+}
+
+/* Convert px to rem */
+@function rem($pxValue) {
+	@return #{calc(stripUnit($pxValue) / stripUnit(16px))+rem};
+}
+
+/* Convert to relative line height */
+@function lh($lhValue, $fsValue) {
+	@return #{calc(stripUnit($lhValue) / stripUnit($fsValue))};
+}

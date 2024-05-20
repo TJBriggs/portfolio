@@ -1,0 +1,247 @@
+/**
+*
+* Variables
+*
+* Custom Media Queries
+* Must be outside Root To Cascade Properly
+* Breakpoints Using CSS Custom Media Queries
+* https://preset-env.cssdb.org/features#custom-media-queries
+*
+* Example usage: @media (--bp-small) {}
+*
+*/
+
+/* CSS Custom Properties - Media Queries */
+@custom-media --bp-small (min-width: $bp-small);
+@custom-media --bp-medium (min-width: $bp-medium);
+@custom-media --bp-large (min-width: $bp-large);
+@custom-media --bp-xlarge (min-width: 1200px);
+@custom-media --bp-xxlarge (min-width: 1440px);
+@custom-media --bp-nav-mobile (max-width: 1023px);
+@custom-media --bp-nav-desk (min-width: $bp-large);
+
+/* Sass Media - Queries */
+$bp-small: 480px;
+$bp-medium: 768px;
+$bp-large: 1024px;
+$bp-xlarge: 1200px;
+$bp-xxlarge: 1440px;
+$bp-nav-mobile: 1023px;
+$bp-nav-desk: 1024px;
+
+:root {
+	/* Primary Colors */
+	--c-cummins-red: #DA291C;
+	--c-jet-black: #000000;
+	--c-white: #FFFFFF;
+	--c-onan-green: #0BA48A;
+	--c-tech-gray: #E2E2E2;
+	--c-oceanic-blue: #0085AD;
+
+	--c-bg-grey: #faf6f6;
+
+	/* Accessory Colors */
+	--c-orange-light: #FDCD57;
+	--c-orange: #F3B845;
+	--c-orange-dark: #F89621;
+
+	--c-pink-light: #E99AC2;
+	--c-pink: #E887B7;
+	--c-pink-dark: #D470AC;
+
+	--c-grey-light: #A9B1BB;
+	--c-grey: #646C77;
+	--c-grey-dark: #434852;
+
+	--c-green-light: #B5D782;
+	--c-green: #9ECE6A;
+	--c-green-dark: #89C052;
+
+	--c-crimson-light: #E9553E;
+	--c-crimson: #EF4347;
+	--c-crimson-dark: #EF4347;
+
+	--c-blue-light: #6ECEEB;
+	--c-blue: #51C0E8;
+	--c-blue-dark: #38ADD8;
+
+	/* Cummins Red Tints */
+	--c-red-1: #FBE4E2;
+	--c-red-2: #F7C8C5;
+	--c-red-3: #F4ADA7;
+	--c-red-4: #F0918A;
+	--c-red-5: #EC766D;
+	--c-red-6: #E85A50;
+	--c-red-7: #E53F32;
+	--c-red-8: #DA291C;
+	--c-red-9: #BF2419;
+	--c-red-10: #A41F15;
+	--c-red-11: #881A12;
+	--c-red-12: #6D150E;
+	--c-red-13: #520F0B;
+	--c-red-14: #370A07;
+	--c-red-15: #1B0504;
+
+	/* Jet Black & Tech Gray Tints */
+	--c-tech-1: #FBFBFB;
+	--c-tech-2: #F8F8F8;
+	--c-tech-3: #F4F4F4;
+	--c-tech-4: #F0F0F0;
+	--c-tech-5: #EDEDED;
+	--c-tech-6: #E9E9E9;
+	--c-tech-7: #E5E5E5;
+	--c-tech-8: #E2E2E2;
+	--c-tech-9: #C6C6C6;
+	--c-tech-10: #A9A9A9;
+	--c-tech-11: #8D8D8D;
+	--c-tech-12: #717171;
+	--c-tech-13: #555555;
+	--c-tech-14: #383838;
+	--c-tech-15: #000000;
+
+	/* Onan Green Tints */
+	--c-green-1: #D8FCF6;
+	--c-green-2: #B1FAED;
+	--c-green-3: #89F7E4;
+	--c-green-4: #62F4DC;
+	--c-green-5: #3BF2D3;
+	--c-green-6: #14EFCA;
+	--c-green-7: #0ECBAB;
+	--c-green-8: #0BA48A;
+	--c-green-9: #0A9079;
+	--c-green-10: #087B68;
+	--c-green-11: #076756;
+	--c-green-12: #065245;
+	--c-green-13: #043E34;
+	--c-green-14: #032923;
+	--c-green-15: #011511;
+
+	/* Oceanic Blue Tints */
+	--c-blue-1: #D5F5FF;
+	--c-blue-2: #ABECFF;
+	--c-blue-3: #81E2FF;
+	--c-blue-4: #57D8FF;
+	--c-blue-5: #2CCEFF;
+	--c-blue-6: #02C5FF;
+	--c-blue-7: #00A5D7;
+	--c-blue-8: #0085AD;
+	--c-blue-9: #007497;
+	--c-blue-10: #006482;
+	--c-blue-11: #00536C;
+	--c-blue-12: #004357;
+	--c-blue-13: #003241;
+	--c-blue-14: #00212B;
+	--c-blue-15: #001116;
+
+	/* Validation & Alert Colors */
+	--c-success: #88C844;
+	--c-error: #D94452;
+	--c-error-medium: #EC948D;
+	--c-error-light: var(--c-red-2);
+	--c-warning-medium: #fee086;
+	--c-warning-light: #ffecb7;
+	--c-warning-text: var(--c-error);
+
+	/* Tag Colors */
+	--c-tag-red: var(--c-cummins-red);
+	--c-tag-pink: var(--c-red-1);
+	--c-tag-green: #E8FBE2;
+	--c-tag-violet: #EAE2FB;
+	--c-tag-gold: #F7C85A;
+
+	/* Circle Colors */
+	--immediate-action: var(--c-error);
+	--service-3days: #F08402;
+	--service-7days: #E5980A;
+	--planned-maintenance: var(--c-tag-gold);
+	--inactive: #60666B;
+	--okay: #80B953;
+
+	--default-text: var(--c-grey-dark);
+	--link-color: var(--c-oceanic-blue);
+
+	/* Font Families */
+	--font-base: "Open Sans", sans-serif;
+
+	/* Font Weights */
+	--font-extra-bold: 800;
+	--font-bold: 700;
+	--font-semi-bold: 600;
+	--font-medium: 500;
+	--font-regular: 400;
+	--font-light: 300;
+
+	/* Grid Widths */
+	--grid-mobile: 1000px;
+	--grid-xsmall: 620px;
+	--grid-small: 840px;
+	--grid-default: 1270px;
+	/* 1150px + 120px padding */
+	--grid-header: 1520px;
+	/* 1225px + 120px padding */
+	--grid-wide: 1520px;
+	/* 1440px + 120px padding */
+	--grid-full: 2040px;
+
+	/* Padding */
+	--padding-small: 20px;
+	--padding-medium: 40px;
+	--padding-large: 60px;
+
+	/* Border Radius */
+	--radius-xlarge: 100px;
+	--radius-large: 50px;
+	--radius-medium: 30px;
+	--radius-default: 20px;
+	--radius-default-small: 12px;
+	--radius-small: 8px;
+	--radius-xsmall: 4px;
+	--radius-tiny: 2px;
+
+	/* Box Shadows */
+	--shadow-large: 0px 20px 40px rgba(0, 0, 0, 0.2);
+
+	/* Beziers - Cubic */
+	--easeInCubic: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+	--easeOutCubic: cubic-bezier(0.215, 0.61, 0.355, 1);
+	--easeInOutCubic: cubic-bezier(0.645, 0.045, 0.355, 1);
+
+	/* Beziers - Circ */
+	--easeInCirc: cubic-bezier(0.6, 0.04, 0.98, 0.335);
+	--easeOutCirc: cubic-bezier(0.075, 0.82, 0.165, 1);
+	--easeInOutCirc: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+
+	/* Beziers - Expo */
+	--easeInExpo: cubic-bezier(0.95, 0.05, 0.795, 0.035);
+	--easeOutExpo: cubic-bezier(0.19, 1, 0.22, 1);
+	--easeInOutExpo: cubic-bezier(1, 0, 0, 1);
+
+	/* Beziers - Quad */
+	--easeInQuad: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+	--easeOutQuad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	--easeInOutQuad: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+
+	/* Beziers - Quart */
+	--easeInQuart: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+	--easeOutQuart: cubic-bezier(0.165, 0.84, 0.44, 1);
+	--easeInOutQuart: cubic-bezier(0.77, 0, 0.175, 1);
+
+	/* Beziers - Quint */
+	--easeInQuint: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+	--easeOutQuint: cubic-bezier(0.23, 1, 0.32, 1);
+	--easeInOutQuint: cubic-bezier(0.86, 0, 0.07, 1);
+
+	/* Beziers - Sine */
+	--easeInSine: cubic-bezier(0.47, 0, 0.745, 0.715);
+	--easeOutSine: cubic-bezier(0.39, 0.575, 0.565, 1);
+	--easeInOutSine: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+
+	/* Beziers - Back */
+	--easeInBack: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+	--easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	--easeInOutBack: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+	/* Transitions */
+	--default-duration: 400ms;
+	--default-easing: ease-in-out;
+}

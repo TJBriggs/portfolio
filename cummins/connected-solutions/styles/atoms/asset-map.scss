@@ -1,0 +1,41 @@
+/**
+ *
+ * Asset Map
+ *
+ */
+.asset-map {
+	margin-bottom: 30px;
+
+	&__default-inner {
+
+		@media (max-width: 767px) {
+			padding: 0;
+		}
+	}
+
+	.button-accordion {
+		text-align: center;
+	}
+
+	.button-accordion__button {
+		margin-top: 5px;
+		width: 245px;
+
+		@media (min-width: $bp-medium) {
+			display: none;
+		}
+	}
+
+	.button-accordion__content {
+		padding-top: 30px;
+
+		@media (min-width: $bp-medium) {
+			display: block !important;
+			padding-top: 0;
+		}
+	}
+
+	&__wrap {
+		@extend .rounded-bottom-large;
+	}
+}

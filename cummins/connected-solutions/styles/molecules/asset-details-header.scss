@@ -1,0 +1,33 @@
+/**
+ *
+ * Asset Details Header
+ *
+ */
+.details-header {
+	margin-bottom: 0;
+
+	@media (max-width: 768px) {
+		background-color: var(--c-white);
+	}
+
+	.page-header__wrap {
+		position: relative;
+	}
+
+	&__heading {
+		align-items: center;
+		display: flex;
+		left: 50%;
+		position: absolute;
+		top: 50%;
+		transform: translate(-50%, -50%);
+
+		@media (min-width: $bp-medium) {
+			display: none;
+		}
+
+		h1 {
+			margin: 0 10px;
+		}
+	}
+}

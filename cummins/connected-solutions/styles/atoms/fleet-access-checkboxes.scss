@@ -1,0 +1,27 @@
+/**
+ *
+ * Fleet Access Checkboxes
+ *
+ */
+.fleet-checkboxes {
+
+	>label {
+		margin-bottom: 8px;
+	}
+
+	&__container {
+		border: 1px solid var(--c-gray-20);
+		border-radius: var(--radius-xsmall);
+		padding: 20px;
+	}
+
+	&.is-disabled {
+		opacity: 0.65;
+
+		.accordion-checkbox__toggle {
+			.icon {
+				color: var(--c-gray-30);
+			}
+		}
+	}
+}

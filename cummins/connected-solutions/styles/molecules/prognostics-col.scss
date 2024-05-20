@@ -1,0 +1,133 @@
+/**
+ *
+ * Prognostics Table
+ *
+ */
+.prognostics-summary {
+
+	&__heading {
+		margin-bottom: 10px;
+	}
+
+	.sort-by {
+		margin-bottom: 10px;
+
+		@media (min-width: 551px) {
+			display: none;
+		}
+	}
+
+	&__table {
+
+		@media (min-width: 850px) {
+			max-width: 600px;
+		}
+	}
+
+	&__table-header {
+
+		@media (min-width: 551px) {
+			border-bottom: 1px solid var(--c-gray-20);
+		}
+	}
+
+	&__header-row,
+	&__table-row {
+		align-items: center;
+		display: flex;
+		padding: 10px 0;
+	}
+
+	&__header-row {
+
+		@media (max-width: 550px) {
+			display: none;
+		}
+
+		.prognostics-summary__cell {
+			@extend %h4-compact;
+		}
+	}
+
+	&__table-row {
+
+		@media (max-width: 550px) {
+			align-items: flex-start;
+			background-color: var(--c-white);
+			border-radius: var(--radius-default-small);
+			flex-wrap: wrap;
+		}
+
+		.prognostics-summary__cell {
+			@extend %p-compact;
+		}
+	}
+
+	/* Table Cells */
+	&__cell {
+		width: 100%;
+
+		&.col-1 {
+			@extend %h3;
+			max-width: 330px;
+
+			@media (max-width: 550px) {
+				margin-bottom: 5px;
+				width: 100%;
+			}
+		}
+
+		&.col-2 {
+			@extend %p-compact;
+			max-width: 330px;
+
+			@media (max-width: 550px) {
+				max-width: none;
+				width: 50%
+			}
+		}
+
+		&.col-3 {
+			@extend %p-compact;
+			text-align: right;
+			max-width: 50px;
+
+			@media (max-width: 550px) {
+				max-width: none;
+				padding-left: 10px;
+				width: 50%;
+				height: 100%;
+			}
+		}
+
+		h4.compact {
+			display: block;
+			margin-bottom: 5px;
+			padding: 0;
+
+			@media (min-width: 551px) {
+				display: none
+			}
+		}
+
+		.icon {
+			font-size: 14px;
+			margin-left: 5px;
+
+			@media (min-width: $bp-medium) {
+				font-size: 12px;
+			}
+
+			@media (min-width: 1250px) {
+				font-size: 14px;
+			}
+		}
+	}
+
+	.show-more {
+
+		@media (min-width: 551px) {
+			display: none;
+		}
+	}
+}

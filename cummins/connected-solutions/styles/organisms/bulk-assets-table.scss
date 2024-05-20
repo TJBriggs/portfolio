@@ -1,0 +1,448 @@
+/**
+ *
+ * Bulk Assets Table
+ *
+ */
+.bulk-assets {
+	width: 100%;
+	$full-width: 3732px;
+
+	.table__default-inner {
+		margin: 0;
+		max-width: none;
+		padding: 0;
+		width: 100%;
+	}
+
+	.table__wrap {
+		position: relative;
+	}
+
+	.table-header,
+	.table-rows {
+
+		@media (min-width: $bp-medium) {
+			padding: 0;
+			width: $full-width;
+		}
+
+		&__row {
+
+			@media (min-width: $bp-medium) {
+				width: $full-width;
+				padding: 0;
+				position: relative;
+			}
+		}
+	}
+
+	.utility-header {
+		height: 30px;
+		background-color: var(--c-red-60);
+		border-radius: 0;
+		width: $full-width;
+
+		@media (max-width: $bp-medium) {
+			display: none;
+		}
+
+		.table-header__row {
+
+			@media (min-width: $bp-medium) {
+				display: block;
+				height: 30px;
+				white-space: nowrap;
+				width: $full-width;
+			}
+		}
+
+		.table-header__cell {
+			align-items: center;
+			border-right: 1px solid var(--c-tech-10);
+			color: var(--c-white);
+			display: inline-flex;
+			font-weight: var(--font-semi-bold);
+			height: 30px;
+			justify-content: center;
+			padding: 0 30px;
+			text-align: center;
+			width: auto;
+
+			&:last-of-type {
+				border-right: none;
+			}
+
+			@media (min-width: $bp-medium) {
+				&.action-col {
+					width: 88px;
+				}
+
+				&.col-1 {
+					width: 397px;
+				}
+
+				&.col-2 {
+					width: 209px;
+				}
+
+				&.ag-col {
+					width: 150px;
+				}
+
+				&.comp-col {
+					width: 722px;
+				}
+			}
+		}
+	}
+
+	.primary-header,
+	.table-rows {
+
+		@media (min-width: $bp-medium) {
+			position: relative;
+		}
+
+		.table-header__cell,
+		.table-rows__cell {
+			width: 100%;
+
+			@media (min-width: $bp-small) {
+				width: 48%;
+			}
+
+			@media (min-width: $bp-medium) {
+				padding: 0 15px;
+				text-align: center;
+				width: auto;
+			}
+
+			&.border-col {
+
+				@media (min-width: $bp-medium) {
+					border-right: 1px solid var(--c-tech-10);
+				}
+			}
+
+
+			&:last-of-type {
+
+				&::after {
+					display: none;
+				}
+			}
+
+			&.action-col {
+				display: none;
+			}
+
+			@media (min-width: $bp-medium) {
+				&.action-col {
+					display: inline-flex;
+					justify-content: center;
+					width: 88px;
+					text-align: center;
+				}
+
+				&.col-1 {
+					// Asset ID
+					width: 96px;
+				}
+
+				&.col-2 {
+					// Serial Number
+					width: 135px;
+				}
+
+				&.col-3 {
+					// Description
+					width: 166px;
+				}
+
+				&.con-col-1 {
+					// Provider
+					width: 105px;
+				}
+
+				&.con-col-2 {
+					// Device ID
+					width: 104px;
+				}
+
+				&.ag-col {
+					// Asset Group
+					justify-content: center;
+					text-align: center;
+					width: 150px;
+
+					.select-field {
+						width: 100%;
+					}
+				}
+
+				&.comp-col-1 {
+					// Type
+					width: 130px;
+
+					.select-field {
+						width: 100%;
+					}
+				}
+
+				&.comp-col-2 {
+					// Serial Number
+					width: 135px;
+				}
+
+				&.comp-col-3 {
+					// Service Model
+					width: 132px;
+				}
+
+				&.comp-col-4 {
+					// Torque
+					width: 90px;
+				}
+
+				&.comp-col-5 {
+					// Horse Power
+					width: 125px;
+				}
+
+				&.comp-col-6 {
+					// Fuel Rating
+					width: 110px;
+				}
+
+				&.warning,
+				&.error {
+
+					select {
+						border-bottom: 1px solid var(--default-text);
+					}
+				}
+			}
+		}
+
+		.table-rows__cell {
+			height: auto;
+			margin-bottom: 15px;
+
+			@media (min-width: $bp-medium) {
+				height: 42px;
+				margin-bottom: 0;
+			}
+
+			&.border-col {
+
+				&:last-of-type {
+					border: none;
+				}
+			}
+
+			@media (min-width: $bp-medium) {
+				&.error {
+					background-color: var(--c-red-10);
+				}
+
+				&.warning {
+					background-color: var(--c-yellow);
+				}
+
+				.text-input__validation-message,
+				.select-field__validation-message {
+					width: 200px;
+				}
+			}
+		}
+	}
+
+	.primary-header {
+		height: 30px;
+
+		.table-header__row {
+			height: 30px;
+		}
+
+		.table-header__cell {
+			height: 30px;
+		}
+	}
+
+	.table-rows__row {
+		display: block;
+		background-color: var(--c-white);
+		height: auto;
+		margin: 0;
+		padding: 0;
+
+		@media(min-widht: $bp-medium) {
+			height: 42px;
+		}
+
+		&:nth-of-type(odd) {
+
+			@media (min-width: $bp-medium) {
+				background-color: var(--c-tech-2);
+			}
+		}
+
+		.component-heading {
+
+			@media (min-width: $bp-medium) {
+				display: none;
+			}
+		}
+	}
+
+	.primary-accordion {
+		width: 100%;
+
+		@media (min-width: $bp-medium) {
+			width: $full-width;
+		}
+
+		>.accordion__toggle {
+			background-color: var(--c-gray-70);
+
+			@media (min-width: $bp-medium) {
+				display: none;
+			}
+		}
+
+		>.accordion__content {
+
+			@media (min-width: $bp-medium) {
+				display: flex;
+				padding: 0;
+				width: $full-width;
+			}
+
+			&__row {
+
+				@media (min-width: $bp-medium) {
+					width: $full-width;
+					padding: 0;
+					position: relative;
+				}
+			}
+		}
+
+		&.expanded {
+
+			>.accordion__content {
+
+				@media (max-width: 767px) {
+					display: flex;
+					flex-wrap: wrap;
+					justify-content: space-between;
+					padding: 25px 15px;
+				}
+			}
+		}
+	}
+
+	.nested-accordion {
+		width: 100%;
+
+		@media (min-width: $bp-medium) {
+			border-right: 1px solid var(--c-tech-10);
+			display: block;
+			margin-top: 0;
+			width: 722px;
+		}
+
+		&.top-accordion {
+			margin-top: 10px;
+
+			@media (min-width: $bp-medium) {
+				margin-top: 0;
+			}
+		}
+
+		&:last-of-type {
+
+			@media (min-width: $bp-medium) {
+				border-right: none;
+			}
+		}
+
+		.accordion__toggle {
+			background-color: var(--c-gray-60);
+
+			@media (min-width: $bp-medium) {
+				display: none;
+			}
+
+			.error-indicators {
+				right: 20px;
+			}
+		}
+
+		.accordion__content {
+
+			@media (min-width: $bp-medium) {
+				display: flex;
+				padding: 0;
+				width: auto;
+			}
+
+			.table-rows__cell {
+				width: 100%;
+
+				@media (min-width: $bp-small) {
+					width: 48%;
+				}
+
+				@media (min-width: $bp-medium) {
+					&.comp-col-1 {
+						// Type
+						width: 130px;
+
+						.select-field {
+							width: 100%;
+						}
+					}
+
+					&.comp-col-2 {
+						// Serial Number
+						width: 135px;
+					}
+
+					&.comp-col-3 {
+						// Service Model
+						width: 132px;
+					}
+
+					&.comp-col-4 {
+						// Torque
+						width: 90px;
+					}
+
+					&.comp-col-5 {
+						// Horse Power
+						width: 125px;
+					}
+
+					&.comp-col-6 {
+						// Fuel Rating
+						width: 110px;
+					}
+				}
+			}
+		}
+
+		&.expanded {
+
+			.accordion__content {
+
+				@media (max-width: 767px) {
+					display: flex;
+					flex-wrap: wrap;
+					justify-content: space-between;
+					padding: 25px 0 10px;
+				}
+			}
+		}
+	}
+}

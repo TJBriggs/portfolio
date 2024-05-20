@@ -1,0 +1,324 @@
+/**
+ *
+ * Assets Table Specific Styles
+ *
+ */
+.assets-table {
+	$full-width: 1780px;
+
+	/**
+	* Globals
+	*/
+	.table-header,
+	.table-rows,
+	.subtable-header,
+	.subtable-rows {
+
+		@media (min-width: $bp-medium) {
+			width: $full-width;
+		}
+
+		&__row {
+
+			@media (min-width: $bp-medium) {
+				width: $full-width;
+			}
+		}
+	}
+
+	/**
+	* Table Rows
+	*/
+	.table-rows {
+
+		@media (min-width: $bp-medium) {
+			width: $full-width;
+		}
+	}
+
+	/**
+	* Subtable Styles
+	*/
+	.subtable {
+		display: none;
+		flex-direction: column;
+		padding: 10px 0 18px;
+
+		@media (min-width: $bp-medium) {
+			width: $full-width;
+
+			&.subtable--open {
+				display: flex;
+			}
+		}
+	}
+
+	.subtable-header {
+
+		&__cell {
+			font-size: 12px;
+			font-weight: var(--font-semi-bold);
+			min-height: 34px;
+			padding: 0 5px;
+		}
+	}
+
+	.subtable-rows {
+		flex-direction: column;
+
+		&__cell {
+			font-size: 12px;
+			height: 34px;
+			padding: 0 5px;
+		}
+	}
+
+	/* Set matching column widths for desktop */
+	@media (min-width: $bp-medium) {
+
+		.table-rows__row {
+
+			&:hover {
+				background-color: var(--c-gray-20);
+			}
+		}
+
+		.table-header__cell,
+		.table-rows__cell {
+			width: 100%;
+
+			&.col-1 {
+				// Select
+				max-width: 80px;
+			}
+
+			&.col-2 {
+				// Type
+				max-width: 75px;
+			}
+
+			&.col-3 {
+				// Asset ID
+				max-width: 120px;
+			}
+
+			&.col-4 {
+				// Asset Serial
+				max-width: 220px;
+			}
+
+			&.col-5 {
+				// Asset Description
+				max-width: 220px;
+			}
+
+			&.col-6 {
+				// Control Model
+				max-width: 220px;
+			}
+
+			&.col-7 {
+				// Asset Group
+				max-width: 220px;
+			}
+
+			&.col-8 {
+				// Subscription
+				max-width: 210px;
+			}
+
+			&.col-9 {
+				// Activation Date
+				max-width: 150px;
+			}
+
+			&.col-10 {
+				// Actions
+				justify-content: center;
+				max-width: 85px;
+				padding-left: 10px
+			}
+		}
+	}
+
+	/* Custom styles for elements in table rows */
+	.table-rows__cell {
+
+		&.col-1 {
+
+			.select-wrap {
+				align-items: center;
+				display: flex;
+
+				.icon {
+					margin-left: 10px;
+				}
+			}
+		}
+
+		&.col-2 {
+
+			.icon {
+				font-size: 35px;
+
+				@media (min-width: $bp-medium) {
+					font-size: 25px;
+				}
+			}
+		}
+
+		&.col-10 {
+			// Actions
+
+			@media (max-width: 768px) {
+				background-color: var(--c-black);
+				border-bottom-left-radius: var(--radius-small);
+				border-bottom-right-radius: var(--radius-small);
+				bottom: 0;
+				left: 0;
+				min-height: 0;
+				position: absolute;
+				width: 100%;
+			}
+
+			.actions-wrap {
+
+				@media (max-width: $bp-medium) {
+					display: flex;
+					height: 100%;
+					padding: 7px 0;
+					width: 100%;
+				}
+
+				a {
+					padding: 0 8px;
+
+					&.edit {
+						display: inline-block;
+					}
+
+					&.eye {
+						display: none;
+					}
+
+					@media (max-width: $bp-medium) {
+						align-items: center;
+						border-left: 1px solid var(--c-white);
+						display: flex;
+						justify-content: center;
+						width: 100%;
+
+						&:first-of-type {
+							border-left: 0;
+						}
+
+						&.edit {
+							display: none;
+						}
+
+						&.eye {
+							display: flex;
+						}
+					}
+				}
+
+				.icon {
+					font-size: 18px;
+
+					@media (max-width: 768px) {
+						color: var(--c-white);
+					}
+				}
+			}
+		}
+	}
+
+	/**
+	* Subtable Styles
+	*/
+	.subtable,
+	.subtable-header,
+	.subtable-rows {
+
+		@media (min-width: $bp-medium) {
+			width: calc($full-width - 15px); // 15px offsets padding for subtable
+		}
+	}
+
+	.subtable-header__row,
+	.subtable-rows__row {
+
+		@media (min-width: $bp-medium) {
+			width: calc($full-width - 15px); // 15px offsets padding for subtable
+		}
+	}
+
+	/* Subtables only appear on Desktop */
+	.subtable-header__cell,
+	.subtable-rows__cell {
+		margin-right: var(--padding);
+		width: 100%;
+
+		&:last-of-type {
+			margin-right: 0;
+		}
+
+		&.col-1 {
+			// Type
+			margin-left: 35px;
+			max-width: 60px;
+		}
+
+		&.col-2 {
+			// Component Serial #
+			max-width: 200px;
+		}
+
+		&.col-3 {
+			// Service Model
+			max-width: 200px;
+		}
+
+		&.col-4 {
+			// Callibration ID
+			max-width: 200px;
+		}
+
+		&.col-5 {
+			// Horse Power
+			max-width: 200px;
+		}
+
+		&.col-6 {
+			// Torque
+			max-width: 200px;
+		}
+
+		&.col-7 {
+			// Fuel Rating
+			max-width: 200px;
+		}
+
+		&.col-8 {
+			// Subscription
+			max-width: 200px;
+		}
+
+		&.col-9 {
+			// Activation Date
+			max-width: 200px;
+		}
+	}
+
+	/* Custom styles for elements in subtable rows */
+	.subtable-rows__cell {
+
+		&.col-1 {
+			// Type
+
+			.icon {
+				font-size: 20px;
+			}
+		}
+	}
+}

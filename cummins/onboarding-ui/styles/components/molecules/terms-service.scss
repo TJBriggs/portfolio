@@ -1,0 +1,30 @@
+/**
+ *
+ * Terms of Service Styles
+ *
+ */
+.terms {
+	max-height: 680px;
+	overflow-Y: auto;
+
+	&__heading {
+		display: block;
+		font-size: 12px;
+		margin-bottom: 5px;
+		text-transform: uppercase;
+	}
+
+	p {
+		font-size: 11px;
+		line-height: lh(20px, 11px);
+	}
+
+	&__subheading {
+		display: inline-block;
+		margin-right: 5px;
+	}
+
+	&__text {
+		padding: 0 15px;
+	}
+}

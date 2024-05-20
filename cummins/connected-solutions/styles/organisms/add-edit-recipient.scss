@@ -1,0 +1,61 @@
+/**
+ *
+ * Add Edit Recipient
+ *
+ */
+.add-recipient,
+.edit-recipient {
+
+	.modal__children {
+		padding: 30px 0 35px;
+
+		@media (min-width: 640px) {
+			padding: 45px 45px 65px;
+		}
+	}
+
+	.field-flex {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		padding: 0 20px;
+
+		> div {
+			margin-bottom: 15px;
+			width: 100%;
+
+			@media (min-width: 480px) {
+				width: calc(50% - 10px);
+			}
+
+			@media (min-width: 640px) {
+				width: calc(50% - 20px);
+			}
+
+			&:nth-of-type(odd) {
+
+				@media (min-width: 480px) {
+					margin-right: 20px;
+				}
+
+				@media (min-width: 640px) {
+					margin-right: 40px;
+				}
+			}
+		}
+	}
+
+	.field-grid {
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	}
+}
+
+.edit-user {
+
+	.modal__header-lower .edit-mode {
+
+		@media (max-width: 767px) {
+			display: inline-block;
+		}
+	}
+}

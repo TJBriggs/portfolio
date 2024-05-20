@@ -1,0 +1,56 @@
+/**
+ *
+ * Icon List Styles
+ *
+ */
+.icons-list {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+
+	&__item {
+		display: flex;
+		margin-bottom: 15px;
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+
+		@media (min-width: 481px) {
+			margin-bottom: 25px;
+		}
+	}
+
+	.circle-icon.large {
+		width: 40px;
+
+		@media (max-width: 481px) {
+			height: 24px;
+			width: 24px;
+		}
+
+		i {
+
+			@media (max-width: 481px) {
+				font-size: 12px;
+			}
+		}
+	}
+
+	&__text {
+		padding-left: 15px;
+		width: calc(100% - 24px);
+
+		@media (min-width: 481px) {
+			padding-left: 20px;
+			width: calc(100% - 40px);
+		}
+
+		p {
+
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+	}
+}

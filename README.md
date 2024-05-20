@@ -16,7 +16,7 @@ Thanks for visiting my portfolio repository. Below you will find a collection of
 
 <br>
 
-![Image of NESN Website](./images/golftec.png "NESN Website")
+![Image of NESN Website](./images/nesn.png "NESN Website")
 
 <a href="https://nesn.com/" target="_blank">View WordPress Site</a>
 <a href="https://nesn.com/watch/" target="_blank">View NESN 360 React App</a>
@@ -53,13 +53,14 @@ This project was the blueprint for GolfTEC's website redesign. It consists of a 
 
 <br>
 
-## Cummins Fleet Management
+## Cummins Connected Solutions
 
 <br>
 
-![Image of Cummins Next.js App](./images/cummins-react.png "Cummins Next.js Applicaion")
+![Image of Cummins Next.js App](./images/cummins-connected-solutions.png "Cummins Next.js Applicaion")
 
-[View Code](/cummins-react)
+[View Code](/cummins/connected-solutions)
+[View Code](/cummins/onboarding-ui)
 
 This project was the blueprint for GolfTEC's website redesign. It consists of a styleguide, pattern library, custom modules, and demo pages which were integrated with their company's proprietary CMS.
 

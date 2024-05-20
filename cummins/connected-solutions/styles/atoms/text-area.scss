@@ -1,0 +1,186 @@
+/**
+ *
+ * Text Input
+ *
+ */
+.text-area {
+	position: relative;
+	width: 100%;
+
+	::-webkit-input-placeholder {
+		/* Chrome/Opera/Safari */
+		color: var(--c-gray-40);
+		font-size: 14px;
+	}
+
+	::-moz-placeholder {
+		/* Firefox 19+ */
+		color: var(--c-gray-40);
+		font-size: 14px;
+	}
+
+	:-ms-input-placeholder {
+		/* IE 10+ */
+		color: var(--c-gray-40);
+		font-size: 14px;
+	}
+
+	:-moz-placeholder {
+		/* Firefox 18- */
+		color: var(--c-gray-40);
+		font-size: 14px;
+	}
+
+	textarea {
+		appearance: none;
+		background-image: none;
+		background-repeat: no-repeat;
+		background-size: 20px;
+		border: 1px solid var(--c-gray-20);
+		border-radius: var(--radius-xsmall);
+		display: block;
+		font-size: 16px;
+		outline: none;
+		padding: 10px;
+		transition: background-color var(--default-duration) var(--default-easing),
+			background-position var(--default-duration) var(--default-easing),
+			border-color var(--default-duration) var(--default-easing);
+		width: 100%;
+
+		&:hover,
+		&.hover {
+			background-color: var(--c-gray-10);
+		}
+
+		&:focus,
+		&.focus {
+			background-color: var(--c-white);
+			border: 1px solid var(--c-black);
+			outline: none !important;
+		}
+
+		&:disabled {
+			color: var(--c-gray-50);
+			opacity: 0.65;
+		}
+	}
+
+	&__validation-message {
+		color: var(--c-error);
+		font-size: 14px;
+		margin-top: 2px;
+	}
+
+	&.medium {
+
+		::-webkit-input-placeholder {
+			/* Chrome/Opera/Safari */
+			font-size: 13px;
+		}
+
+		::-moz-placeholder {
+			/* Firefox 19+ */
+			font-size: 13px;
+		}
+
+		:-ms-input-placeholder {
+			/* IE 10+ */
+			font-size: 13px;
+		}
+
+		:-moz-placeholder {
+			/* Firefox 18- */
+			font-size: 13px;
+		}
+
+		textarea {
+			background-size: 18px;
+			font-size: 13px;
+
+			&.success,
+			&.error {
+				padding-right: 33px;
+			}
+		}
+
+		.text-area__validation-message {
+			font-size: 12px;
+		}
+	}
+
+	&.small {
+
+		::-webkit-input-placeholder {
+			/* Chrome/Opera/Safari */
+			font-size: 12px;
+		}
+
+		::-moz-placeholder {
+			/* Firefox 19+ */
+			font-size: 12px;
+		}
+
+		:-ms-input-placeholder {
+			/* IE 10+ */
+			font-size: 12px;
+		}
+
+		:-moz-placeholder {
+			/* Firefox 18- */
+			font-size: 12px;
+		}
+
+		textarea {
+			background-size: 15px;
+			font-size: 12px;
+
+			&.success,
+			&.error {
+				padding-right: 30px;
+			}
+		}
+
+		.text-area__validation-message {
+			font-size: 11px;
+		}
+	}
+
+	/* State Modifiers */
+	&.hover {
+
+		textarea {
+			background-color: var(--c-gray-10);
+		}
+	}
+
+	&.focus {
+
+		textarea {
+			background-color: var(--c-white);
+			border: 1px solid var(--c-black);
+		}
+	}
+
+	/* Validation States */
+	&.success {
+
+		textarea {
+			background-image: url("../../public/icons/success.svg");
+			background-position: right 8px top 10px;
+			border: 1px solid var(--c-success);
+			padding-right: 35px;
+		}
+	}
+
+	&.error {
+
+		textarea {
+			background-image: url("../../public/icons/error.svg");
+			background-position: right 8px top 10px;
+			border: 1px solid var(--c-error);
+			font-size: 14px;
+			font-weight: var(--font-semi-bold);
+			padding-right: 35px;
+		}
+	}
+}

@@ -1,0 +1,462 @@
+/**
+ *
+ * Fleet Health Table Specific Styles
+ *
+ */
+
+.sort-header {
+
+	.heading {
+		margin-bottom: 10px;
+	}
+}
+
+.fleet-health-table {
+	$full-width: 3610px;
+	margin-top: 25px;
+
+	/**
+	* Globals
+	*/
+	.table-header,
+	.table-rows {
+
+		@media (min-width: $bp-medium) {
+			width: $full-width;
+		}
+
+		&__row {
+
+			@media (min-width: $bp-medium) {
+				align-items: center;
+				display: flex;
+				width: $full-width;
+			}
+		}
+	}
+
+	.table-header__row {
+
+		@media (min-width: $bp-medium) {
+			display: block;
+		}
+	}
+
+	/**
+	* Table Rows
+	*/
+	.table-rows {
+
+		@media (min-width: $bp-medium) {
+			width: $full-width;
+		}
+	}
+
+	/* Set matching column widths for desktop */
+	@media (min-width: $bp-medium) {
+
+		.table-header__cell,
+		.table-rows__cell {
+			margin-right: 0;
+			padding: 10px 20px 10px 0;
+			width: 100%;
+
+			>a {
+				margin-right: 15px;
+			}
+
+			&:last-of-type {
+				padding-right: 0;
+			}
+
+			&.col-1 {
+				// Status
+				max-width: 80px;
+			}
+
+			&.col-2 {
+				// Name
+				max-width: 150px;
+			}
+
+			&.col-3 {
+				// Asset Group
+				max-width: 150px;
+			}
+
+			&.col-4 {
+				// Primary Fault
+				max-width: 195px;
+			}
+
+			&.col-5 {
+				// Last Occurence
+				max-width: 210px;
+			}
+
+			&.col-6 {
+				// SPN
+				max-width: 100px;
+			}
+
+			&.col-7 {
+				// FMI
+				max-width: 100px;
+			}
+
+			&.col-8 {
+				// Fault Description
+				max-width: 500px;
+
+				>div {
+					width: 500px;
+				}
+			}
+
+			&.col-9 {
+				// Recommended Action
+				max-width: 500px;
+
+				>div {
+					width: 500px;
+				}
+			}
+
+			&.col-10 {
+				// Derate Notice
+				max-width: 450px;
+
+				>div {
+					width: 450px;
+				}
+			}
+
+			&.col-11 {
+				// Troubleshooting
+				max-width: 400px;
+
+				>div {
+					width: 400px;
+				}
+			}
+
+			&.col-12 {
+				// Component / System Probabilities
+				max-width: 285px;
+
+				>div {
+					width: 275px;
+				}
+			}
+
+			&.col-13 {
+				// Related Faults
+				max-width: 170px;
+
+				>div {
+					width: 170px;
+				}
+			}
+
+			&.col-14 {
+				// VIN
+				max-width: 170px;
+
+				>div {
+					width: 170px;
+				}
+			}
+
+			&.col-15 {
+				// EIN
+				max-width: 120px;
+
+				>div {
+					width: 120px;
+				}
+			}
+		}
+	}
+
+	.table-rows__row {
+		display: flex;
+		flex-flow: row wrap;
+		grid-template-columns: none;
+		grid-column-gap: 0;
+		grid-row-gap: 0;
+
+		@media (max-width: 449px) {
+			padding-left: 55px;
+			padding-bottom: 40px;
+			position: relative;
+		}
+
+		@media (min-width: 450px) and (max-width: 768px) {
+			padding-left: 80px;
+			padding-bottom: 40px;
+			position: relative;
+		}
+
+		@media (min-width: $bp-medium) {
+			flex-flow: row nowrap;
+		}
+	}
+
+	/* Custom styles for elements in table rows */
+	.table-rows__cell {
+		margin-bottom: 15px;
+		width: 100%;
+
+		label {
+			margin-bottom: 5px;
+		}
+
+		@media (min-width: 450px) {
+			width: 50%;
+		}
+
+		@media (min-width: 650px) {
+			width: 33.33%;
+		}
+
+		@media (min-width: $bp-medium) {
+			margin-bottom: 0;
+			width: 100%;
+		}
+
+		&.col-1 {
+			// Status Icon
+			height: 25px;
+			justify-content: center;
+			left: 15px;
+			position: absolute;
+			top: 25px;
+			width: 25px;
+
+			@media (min-width: 451px) and (max-width: 768px) {
+				height: 32px;
+				left: 20px;
+				width: 32px;
+			}
+
+			@media (min-width: $bp-medium) {
+				height: auto;
+				left: auto;
+				position: static;
+				top: auto;
+				width: 80px;
+			}
+
+			.icon-wrap {
+				align-items: center;
+				border-radius: 50%;
+				color: var(--c-white);
+				font-size: 14px;
+				display: flex;
+				height: 25px;
+				justify-content: center;
+				width: 25px;
+
+				@media (min-width: 450px) {
+					font-size: 16px;
+					height: 32px;
+					width: 32px;
+				}
+
+				&.immediate-action {
+					background-color: var(--c-red);
+				}
+
+				&.service-3days {
+					background-color: var(--c-orange);
+				}
+
+				&.service-7days {
+					background-color: var(--c-yellow);
+				}
+
+				&.planned-maintenance {
+					background-color: var(--c-blue);
+				}
+
+				&.inactive {
+					background-color: var(--c-gray);
+				}
+
+				&.okay {
+					background-color: var(--c-green);
+				}
+			}
+		}
+
+		&.col-2 {
+			// Name
+
+			@media (max-width: 768px) {
+				justify-content: center;
+				width: 100%;
+			}
+
+			>a {
+				color: var(--default-text);
+				text-decoration: underline;
+
+				@media (max-width: 768px) {
+					font-size: 18px;
+					font-weight: var(--font-semi-bold);
+				}
+			}
+		}
+
+		&.col-5 {
+			// Last Occurence
+			flex-wrap: wrap;
+
+			@media (min-width: 450px) and (max-width: 649px) {
+				width: 50%;
+			}
+
+			@media (min-width: 650px) and (max-width: 768px) {
+				width: 33.33%;
+			}
+
+			span {
+				display: inline-block;
+				width: 100%;
+			}
+		}
+
+		&.col-6 {
+			// SPN
+			width: 20%;
+
+			@media (min-width: 450px) and (max-width: 649px) {
+				width: 25%;
+			}
+
+			@media (min-width: 650px) and (max-width: 768px) {
+				width: 33.33%;
+			}
+		}
+
+		&.col-7 {
+			// FMI
+			margin-right: auto;
+			width: 20%;
+
+			@media (min-width: 450px) and (max-width: 649px) {
+				margin-right: 0;
+				width: 25%;
+			}
+
+			@media (min-width: 650px) and (max-width: 768px) {
+				width: 33.33%;
+			}
+		}
+
+		&.col-12 {
+			// Component / System Probabilities
+			flex-wrap: wrap;
+
+			.probability {
+				display: inline-block;
+				width: 100%;
+			}
+		}
+
+		&.col-13 {
+			// Related Faults
+			flex-wrap: wrap;
+
+			>div {
+
+				@media (max-width: 449px) {
+					margin-right: auto;
+					width: 40%;
+				}
+			}
+
+			.fault-code {
+				color: var(--default-text);
+				display: inline-block;
+				text-decoration: underline;
+				width: 35%;
+			}
+		}
+	}
+
+	.view-more-wrap {
+		align-items: center;
+		display: inline-flex;
+		width: auto;
+		white-space: nowrap;
+
+		&.visible {
+			display: block;
+			width: 100%;
+			white-space: normal;
+		}
+
+		@media (max-width: $bp-medium) {
+			display: none;
+		}
+
+		.table-rows__cell {
+			white-space: normal;
+
+			@media (max-width: 768px) {
+				width: 33.33%;
+			}
+
+			&.col-8,
+			&.col-9,
+			&.col-10,
+			&.col-11,
+			&.col-12 {
+
+				@media (max-width: 768px) {
+					width: 100%;
+				}
+			}
+
+			&.col-13,
+			&.col-14,
+			&.col-15 {
+				width: 100%;
+
+				@media (min-width: 450px) {
+					padding-right: 15px;
+					width: 50%;
+				}
+
+				@media (min-width: 650px) {
+					width: 33.33%;
+				}
+
+				@media (min-width: $bp-medium) {
+					padding-right: 0;
+				}
+			}
+		}
+	}
+
+	.view-more-button {
+		align-items: center;
+		background-color: var(--c-black);
+		@extend .rounded-bottom-small;
+		bottom: 0;
+		color: var(--c-white);
+		display: none;
+		height: 32px;
+		justify-content: center;
+		left: 0;
+		position: absolute;
+		right: 0;
+		text-align: center;
+		width: 100%;
+
+		@media (max-width: 768px) {
+			display: flex;
+		}
+	}
+}

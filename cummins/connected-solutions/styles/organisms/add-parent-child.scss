@@ -1,0 +1,67 @@
+/**
+ *
+ * Add Parent Child Group
+ *
+ */
+.add-parent,
+.add-child {
+
+	.modal-children__intro-text {
+		margin-bottom: 20px;
+	}
+
+	.field-wrap {
+		margin: 0 auto;
+		max-width: 360px;
+
+		> div {
+			margin-bottom: 10px;
+
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	.modal-buttons {
+
+		.button-group {
+			max-width: 400px;
+		}
+
+		.modal-button {
+			margin-bottom: 10px;
+			width: 100%;
+
+			.button {
+				width: 100%;
+			}
+
+			&.cancel {
+				width: 100%;
+
+				@media (min-width: 400px) {
+					width: calc(50% - 10px);
+				}
+			}
+
+			&.open-new {
+				margin-bottom: 10px;
+				width: 100%;
+
+				.button {
+					max-width: none;
+					width: 100%;
+				}
+			}
+
+			&.save {
+				width: 100%;
+
+				@media (min-width: 400px) {
+					width: calc(50% - 10px);
+				}
+			}
+		}
+	}
+}

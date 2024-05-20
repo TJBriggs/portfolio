@@ -1,0 +1,37 @@
+/**
+ *
+ * Show Count Button Dropdown
+ *
+ */
+.show-count {
+	margin-right: 35px;
+
+	.button {
+		min-width: 0;
+		width: 100px;
+
+		.button__text {
+
+
+			.count {
+				display: inline-block;
+				padding: 0 20px;
+				transition: padding var(--default-duration) var(--default-easing);
+			}
+		}
+
+		&:hover,
+		&.hover,
+		&:focus,
+		&.focus {
+
+			.button__text {
+
+				.count {
+
+					padding-left: 10px;
+				}
+			}
+		}
+	}
+}

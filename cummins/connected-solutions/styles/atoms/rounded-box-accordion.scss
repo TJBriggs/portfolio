@@ -1,0 +1,27 @@
+/**
+ *
+ * Rounded Box Accordion
+ *
+ */
+.rounded-accordion {
+	margin-bottom: 30px;
+
+	.accordion__toggle {
+		background-color: transparent;
+		margin: 0;
+		padding: 0;
+
+		.icon {
+			color: var(--default-text);
+			font-size: 14px;
+		}
+
+		h3 {
+			color: var(--default-text);
+		}
+	}
+
+	.accordion__content {
+		padding-bottom: 0;
+	}
+}

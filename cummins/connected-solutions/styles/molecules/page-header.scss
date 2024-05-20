@@ -1,0 +1,24 @@
+/**
+ *
+ * Page Header
+ *
+ */
+.page-header {
+	padding: 25px 0 25px;
+
+	@media (max-width: $bp-small) {
+		background-color: var(--c-white);
+		margin-bottom: 25px;
+		padding: 0;
+	}
+
+	&__wrap {
+		align-items: center;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.back-link {
+		display: inline-flex;
+	}
+}

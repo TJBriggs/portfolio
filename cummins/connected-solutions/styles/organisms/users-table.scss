@@ -1,0 +1,204 @@
+/**
+ *
+ * Assets Table Specific Styles
+ *
+ */
+.users-table {
+	$full-width: 1780px;
+
+	/**
+	* Globals
+	*/
+	.table-header,
+	.table-rows {
+
+		@media (min-width: $bp-medium) {
+			width: $full-width;
+		}
+
+		&__row {
+
+			@media (min-width: $bp-medium) {
+				width: $full-width;
+			}
+		}
+	}
+
+	/**
+	* Table Rows
+	*/
+	.table-rows {
+
+		@media (min-width: $bp-medium) {
+			width: $full-width;
+		}
+	}
+
+	/* Set matching column widths for desktop */
+	@media (min-width: $bp-medium) {
+
+		.table-header__cell,
+		.table-rows__cell {
+			margin-right: 0;
+			padding-right: 20px;
+			width: 100%;
+
+			>a {
+				margin-right: 15px;
+			}
+
+			&:last-of-type {
+				padding-right: 0;
+			}
+
+			&.col-1 {
+				// Select
+				max-width: 90px;
+			}
+
+			&.col-2 {
+				// Name
+				max-width: 312px;
+			}
+
+			&.col-3 {
+				// Email Address
+				max-width: 312px;
+			}
+
+			&.col-4 {
+				// Role
+				max-width: 312px;
+			}
+
+			&.col-5 {
+				// Fleet Access
+				max-width: 312px;
+			}
+
+			&.col-6 {
+				// Status
+				max-width: 312px;
+			}
+
+			&.col-7 {
+				// Actions
+				justify-content: center;
+				max-width: 110px;
+			}
+		}
+	}
+
+	/* Custom styles for elements in table rows */
+	.table-rows__cell {
+
+		&.col-1 {
+
+			.select-wrap {
+				align-items: center;
+				display: flex;
+
+				.icon {
+					margin-left: 10px;
+				}
+			}
+		}
+
+		&.col-2 {
+
+			.icon {
+				font-size: 35px;
+
+				@media (min-width: $bp-medium) {
+					font-size: 25px;
+				}
+			}
+		}
+
+		&.col-7 {
+			// Actions
+
+			@media (max-width: 768px) {
+				background-color: var(--c-black);
+				border-bottom-left-radius: var(--radius-small);
+				border-bottom-right-radius: var(--radius-small);
+				bottom: 0;
+				left: 0;
+				min-height: 0;
+				position: absolute;
+				width: 100%;
+			}
+
+			.actions-wrap {
+				align-items: flex-end;
+				display: flex;
+
+				@media (max-width: 768px) {
+					display: flex;
+					height: 100%;
+					padding: 7px 0;
+					width: 100%;
+				}
+
+				a {
+					padding: 0 8px;
+
+					&.edit {
+						display: inline-block;
+					}
+
+					&.eye {
+						display: none;
+					}
+
+					&.disabled {
+						pointer-events: none;
+						opacity: 0.25;
+					}
+
+					@media (max-width: 768px) {
+						align-items: center;
+						border-left: 1px solid var(--c-white);
+						display: flex;
+						justify-content: center;
+						width: 100%;
+
+						&:first-of-type {
+							border-left: 0;
+						}
+
+						&.edit {
+							display: none;
+						}
+
+						&.eye {
+							display: flex;
+						}
+					}
+				}
+
+				.actions-placeholder {
+					display: inline-block;
+					height: 18px;
+					width: 34px;
+				}
+
+				.icon {
+					font-size: 18px;
+
+					@media (max-width: 768px) {
+						color: var(--c-white);
+					}
+				}
+			}
+		}
+	}
+
+	.show-more {
+		display: block;
+
+		@media (min-width: $bp-medium) {
+			display: none;
+		}
+	}
+}

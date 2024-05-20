@@ -1,0 +1,48 @@
+/**
+ *
+ * Sort Icon Styles
+ *
+ */
+.sort-icon {
+	display: inline-block;
+	height: 13px;
+	margin-left: 8px;
+	position: relative;
+	width: 13px;
+
+	.icon {
+		left: 50%;
+		font-size: 13px;
+		position: absolute;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	.icon-sort-asc,
+	.icon-sort-desc {
+		opacity: 0;
+		transition: opacity 200ms var(--default-easing);
+	}
+
+	.sort--asc & {
+		.icon-sort-asc {
+			opacity: 1;
+		}
+
+		.icon-sort-default,
+		.icon-sort-desc {
+			opacity: 0;
+		}
+	}
+
+	.sort--desc & {
+		.icon-sort-desc {
+			opacity: 1;
+		}
+
+		.icon-sort-default,
+		.icon-sort-asc {
+			opacity: 0;
+		}
+	}
+}

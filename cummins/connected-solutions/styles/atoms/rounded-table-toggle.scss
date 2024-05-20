@@ -1,0 +1,86 @@
+/**
+ *
+ * Rounded Table Toggle
+ *
+ */
+.rounded-box.table-toggle {
+	background-color: transparent;
+	padding-bottom: 0;
+	padding-left: 0;
+	padding-right: 0;
+	position: relative;
+
+	@media (min-width: $bp-medium) {
+		background-color: var(--c-white);
+	}
+
+	&::after {
+		background-color: var(--c-white);
+		border-radius: var(--radius-default);
+		content: "";
+		height: 125px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: -1;
+
+		@media (min-width: 550px) {
+			height: 92px;
+		}
+
+		@media (min-width: $bp-medium) {
+			display: none;
+		}
+	}
+
+
+
+	.accordion {
+		padding-bottom: 30px;
+
+		&.expanded {
+			padding-bottom: 0;
+		}
+	}
+
+	.accordion__toggle {
+		flex-wrap: wrap;
+		padding: 0 30px;
+
+		h5 {
+			//margin-bottom: 10px;
+			width: 80%;
+
+			@media (min-width: 550px) {
+				width: auto;
+			}
+		}
+
+		.button {
+			margin-top: 15px;
+
+			@media (min-width: 550px) {
+				margin-left: 30px;
+				margin-top: 0;
+			}
+
+			.icon {
+				color: var(--c-white);
+			}
+		}
+	}
+
+	.accordion__content {
+		margin-top: 20px;
+		padding-bottom: 0;
+
+		@media (min-width: $bp-medium) {
+			margin-top: 0;
+		}
+	}
+
+	.table__default-inner {
+		padding: 0;
+	}
+}

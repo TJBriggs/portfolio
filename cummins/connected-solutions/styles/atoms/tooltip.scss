@@ -1,0 +1,76 @@
+/**
+ *
+ * Tooltip
+ *
+ */
+.tooltip {
+	display: inline-block;
+	height: 18px;
+	position: relative;
+	width: 18px;
+
+	.icon {
+		display: inline-block;
+		height: 18px;
+		width: 18px;
+	}
+
+	&__box {
+		align-items: flex-start;
+		background-color: var(--c-white);
+		box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+		bottom: 9px;
+		display: flex;
+		left: 9px;
+		opacity: 0;
+		padding: 10px 15px;
+		position: absolute;
+		transform: scale(0);
+		transform-origin: bottom left;
+		transition:
+			opacity var(--default-duration) var(--default-easing),
+			transform var(--default-duration) var(--default-easing),
+			visiblity var(--default-duration) var(--default-easing);
+		visibility: hidden;
+		width: 200px;
+		z-index: 50;
+
+		@media (min-width: 500px) {
+			width: 250px;
+		}
+
+		.icon {
+			font-size: 18px;
+		}
+
+		p {
+			font-size: 13px;
+			font-weight: var(--font-regular);
+			margin: 0;
+			padding-left: 10px;
+		}
+
+		&.reflect--left {
+			//bottom: 9px;
+			left: -191px;
+			// opacity: 0;
+			// transform: scale(1);
+			transform-origin: bottom right;
+			// visibility: visible;
+
+			@media (min-width: 500px) {
+				left: -241px;
+			}
+		}
+	}
+
+	&:hover,
+	&.hover {
+
+		.tooltip__box {
+			opacity: 1;
+			transform: scale(1);
+			visibility: visible;
+		}
+	}
+}

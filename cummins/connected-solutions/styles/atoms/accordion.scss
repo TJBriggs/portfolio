@@ -1,0 +1,85 @@
+/**
+ *
+ * Accordion
+ *
+ */
+.accordion {
+
+	&__toggle {
+		align-items: center;
+		background-color: var(--c-gray-60);
+		color: var(--c-white);
+		display: flex;
+		margin-top: 5px;
+		min-height: 32px;
+		padding: 0 var(--padding);
+		position: relative;
+
+		.icon {
+			display: inline-block;
+			font-size: 12px;
+			margin-right: 10px;
+			transition: transform 200ms var(--default-easing);
+		}
+
+		.error-indicators {
+			position: absolute;
+			right: 55px;
+			top: 50%;
+			transform: translateY(-50%);
+
+			&__box {
+				align-items: center;
+				border-radius: var(--radius-xsmall);
+				color: var(--c-black);
+				display: inline-flex;
+				font-size: 12px;
+				height: 18px;
+				justify-content: center;
+				margin: 0 5px;
+				width: 18px;
+
+				&.error-box {
+					background-color: var(--c-red-10);
+				}
+
+				&.warning-box {
+					background-color: var(--c-yellow);
+				}
+			}
+		}
+
+		.accordion__trash-link,
+		.accordion__undo-link {
+			position: absolute;
+			right: 5px;
+		}
+
+		h5 {
+			color: var(--c-white);
+		}
+
+		&.to-be-removed {
+			background-color: var(--c-red-10);
+		}
+	}
+
+	&__content {
+		display: none;
+		padding: 25px 0;
+	}
+
+	&.expanded {
+
+		>.accordion__toggle {
+
+			>.icon {
+				transform: scaleY(-1);
+			}
+		}
+
+		>.accordion__content {
+			display: block;
+		}
+	}
+}

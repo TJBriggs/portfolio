@@ -1,0 +1,435 @@
+/**
+ *
+ * Add Edit Bulk Assets
+ *
+ */
+.add-bulk {
+
+	.modal__children {
+		background-color: var(--c-gray-10);
+		position: relative;
+	}
+
+	.progress-header {
+		align-items: center;
+		background-color: var(--c-black);
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		left: 0;
+		min-height: 60px;
+		padding: 20px 25px;
+		position: absolute;
+		top: 0;
+		width: 100%;
+
+		@media (min-width: 600px) {
+			padding: 10px 25px;
+		}
+
+		p {
+			display: none;
+
+			@media (min-width: 600px) {
+				color: var(--c-white);
+				display: block;
+				font-size: 13px;
+				margin: 0;
+				text-transform: uppercase;
+				text-align: left;
+				width: auto;
+			}
+		}
+	}
+
+	.progress-bar {
+		text-align: center;
+		width: 100%;
+
+		@media (min-width: 600px) {
+			margin-top: 0;
+			text-align: left;
+			width: auto;
+		}
+
+		&__wrap {
+			align-items: center;
+			display: inline-flex;
+			position: relative;
+
+			&::after {
+				background-color: var(--c-tech-14);
+				content: '';
+				height: 4px;
+				left: 50%;
+				position: absolute;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				width: 90%;
+				z-index: 1;
+			}
+		}
+
+		&__step,
+		&__ring {
+			align-items: center;
+			background-color: var(--c-black);
+			border: 1px solid var(--c-tech-13);
+			border-radius: 50%;
+			display: flex;
+			height: 38px;
+			justify-content: center;
+			position: relative;
+			width: 38px;
+			z-index: 2;
+
+			&:last-of-type {
+				margin-right: 0;
+			}
+		}
+
+		&__step {
+			background-color: var(--c-black);
+			border: 1px solid var(--c-tech-13);
+			height: 38px;
+			margin-right: 40px;
+			width: 38px;
+			z-index: 2;
+
+			&:last-of-type {
+				margin-right: 0;
+			}
+		}
+
+		&__ring {
+			border: 1px solid var(--c-gray-30);
+			color: var(--c-gray-30);
+			font-size: 13px;
+			height: 29px;
+			width: 29px;
+			z-index: 3;
+		}
+
+		&__check {
+			display: none;
+		}
+
+		/* Active & Completed States */
+		.progress-bar__step.active {
+			border: 1px solid var(--c-red-60);
+
+			.progress-bar__ring {
+				border: 1px solid var(--c-white);
+				color: var(--c-white);
+			}
+		}
+
+		.progress-bar__step.complete {
+
+			.progress-bar__check {
+				display: block;
+			}
+
+			.progress-bar__number {
+				display: none;
+			}
+		}
+	}
+
+	.progress-view {
+		display: none;
+		padding-top: 125px;
+
+		@media (min-width: 600px) {
+			padding-top: 80px;
+		}
+
+		&.active {
+			display: flex;
+		}
+
+		&.step--3 {
+			flex-wrap: wrap;
+			padding-top: 115px;
+
+			@media (min-width: 850px) {
+				padding-top: 60px;
+			}
+		}
+	}
+
+	.step--1 {
+		align-items: center;
+		flex-flow: column;
+		justify-content: center;
+
+		.instruction-text {
+			font-size: 16px;
+			font-weight: var(--font-light);
+			letter-spacing: -0.025rem;
+			text-align: center;
+			margin: 0;
+
+			@media (min-width: 600px) {
+				font-size: 18px;
+			}
+		}
+
+		.button {
+			margin: 25px auto;
+			font-size: 16px;
+			width: 100%;
+
+			@media (min-width: 600px) {
+				font-size: 20px;
+				margin: 50px auto;
+				max-width: 455px;
+			}
+		}
+
+		.email-text {
+			font-size: 13px;
+			margin: 0;
+			text-align: center;
+		}
+	}
+
+	.step--2 {
+		align-items: center;
+		flex-flow: column;
+		justify-content: center;
+
+		.instruction-text {
+			font-size: 16px;
+			font-weight: var(--font-light);
+			letter-spacing: -0.025rem;
+			text-align: center;
+			margin: 0;
+
+			@media (min-width: 600px) {
+				font-size: 18px;
+			}
+		}
+
+		.upload-box {
+			align-items: center;
+			border: 1px solid var(--c-gray-20);
+			display: flex;
+			flex-flow: column;
+			height: 235px;
+			justify-content: center;
+			margin: 30px auto;
+			max-width: 445px;
+			width: 100%;
+
+			.icon {
+				color: var(--c-tech-10);
+				font-size: 50px;
+			}
+
+			p {
+				margin: 10px 0 0;
+				text-align: center;
+			}
+		}
+
+		.button {
+			margin: 0 auto;
+			font-size: 16px;
+			width: 100%;
+
+			@media (min-width: 600px) {
+				font-size: 20px;
+				margin: 0 auto;
+				max-width: 455px;
+			}
+		}
+	}
+
+	/* Modifiers for Modal Changes on Final Step */
+	&.final-step {
+
+		.modal__children {
+			padding-left: 0;
+			padding-right: 0;
+
+			@media (min-width: $bp-medium) {
+				padding-left: 45px;
+				padding-right: 45px;
+			}
+		}
+
+		.progress-header {
+			justify-content: space-evenly;
+			padding: 25px;
+
+			@media (min-width: 850px) {
+				justify-content: space-between;
+				padding: 0 25px;
+			}
+
+			@media (min-width: $bp-large) {
+				justify-content: flex-start;
+			}
+		}
+
+		.progress-header__text {
+
+			@media (min-width: 600px) {
+				text-align: center;
+				margin-bottom: 15px;
+				padding: 0 25px;
+				width: 100%;
+			}
+
+			@media (min-width: 850px) {
+				margin-bottom: 0;
+				padding: 0;
+				width: auto;
+			}
+		}
+
+		.progress-bar {
+			margin-bottom: 20px;
+
+			@media (min-width: 600px) {
+				margin-bottom: 0;
+			}
+
+			@media (min-width: $bp-large) {
+				margin-left: 100px;
+			}
+		}
+
+		.bulk-next {
+			width: 160px;
+
+			@media (min-width: $bp-large) {
+				position: absolute;
+				right: 20px;
+				width: 160px;
+			}
+		}
+
+		.error-header {
+			width: 100%;
+
+			.full-box__default-inner {
+				max-width: none;
+				padding: 0;
+			}
+
+			&__content {
+				align-items: center;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-around;
+				width: 100%;
+
+				p {
+					display: none;
+
+					@media (min-width: $bp-large) {
+						display: block;
+						font-size: 12px;
+						max-width: 180px;
+						margin: 0;
+						width: 33%;
+					}
+
+					@media (min-width: 1100px) {
+						max-width: 210px;
+					}
+
+					@media (min-width: 1300px) {
+						font-size: 14px;
+						max-width: 300px;
+					}
+				}
+			}
+
+			&__buttons {
+				display: flex;
+				flex-wrap: wrap;
+			}
+
+			&__button-wrap {
+				display: flex;
+				margin: 0;
+				justify-content: center;
+				width: 100%;
+
+				@media (min-width: 400px) {
+					margin: 0 10px;
+					width: auto;
+				}
+
+				@media (min-width: $bp-medium) {
+					margin: 0 15px;
+				}
+			}
+
+			.tab-button {
+				display: none;
+				align-items: center;
+				border-radius: var(--radius-xsmall);
+				color: var(--c-black);
+				font-size: 12px;
+				height: 40px;
+				justify-content: center;
+				width: 24px;
+
+				@media (min-width: $bp-medium) {
+					display: flex;
+				}
+
+				&.error {
+					background-color: var(--c-red-70);
+					color: var(--c-white);
+				}
+
+				&.warning {
+					background-color: var(--c-yellow);
+				}
+			}
+
+			.indicator {
+				align-items: center;
+				border-radius: var(--radius-xsmall);
+				color: var(--c-black);
+				display: flex;
+				font-size: 13px;
+				font-weight: var(--font-semi-bold);
+				height: 40px;
+				justify-content: center;
+				margin: 0 0 10px;
+				padding: 0 15px;
+				width: 200px;
+
+				@media (min-width: 400px) {
+					margin: 0;
+					width: auto;
+				}
+
+				@media (min-width: $bp-medium) {
+					margin: 0 5px;
+				}
+
+				&--error {
+					background-color: var(--c-red-70);
+					color: var(--c-white);
+					margin-bottom: 10px;
+
+					@media (min-width: 400px) {
+						margin-bottom: 0;
+					}
+				}
+
+				&--warning {
+					background-color: var(--c-yellow);
+					margin-bottom: 0px;
+				}
+			}
+		}
+	}
+}

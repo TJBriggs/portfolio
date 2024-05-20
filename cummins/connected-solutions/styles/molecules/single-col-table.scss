@@ -1,0 +1,119 @@
+/**
+ *
+ * Fleet Health Table
+ *
+ */
+.single-table {
+	width: 100%;
+
+	&__heading {
+		font-size: 24px;
+		font-weight: var(--font-regular);
+		line-height: lh(26px, 24px);
+		margin-bottom: 10px;
+
+		@media (min-width: $bp-medium) {
+			font-size: 16px;
+			margin-bottom: 10px;
+		}
+
+		@media (min-width: 1250px) {
+			font-size: 24px;
+			margin-bottom: 20px;
+		}
+	}
+
+	&__list {
+		list-style-type: none;
+		margin: 0;
+		padding: 10px 0 0;
+
+		&.no-heading {
+			padding: 0;
+		}
+
+		h3.compact {
+			margin-bottom: 10px;
+		}
+	}
+
+	&__list-item {
+		align-items: center;
+		display: flex;
+		flex-wrap: wrap;
+		padding: 10px 0;
+		position: relative;
+
+		&.total-count {
+			border-top: 1px solid var(--c-gray-20);
+
+			.single-table__count {
+				font-weight: var(--font-bold);
+			}
+		}
+	}
+
+	&__icon {
+		display: none;
+
+		@media (min-width: 400px) {
+			border-radius: 50%;
+			display: inline-block;
+			height: 32px;
+			width: 32px;
+		}
+
+		@media (min-width: $bp-medium) {
+			height: 24px;
+			width: 24px;
+		}
+
+		@media (min-width: 1250px) {
+			height: 32px;
+			width: 32px;
+		}
+	}
+
+	&__placeholder {
+		display: inline-block;
+		height: 32px;
+		width: 32px;
+	}
+
+	&__link {
+		color: var(--default-text) !important;
+		display: inline-block;
+		font-size: 16px;
+		margin-left: 16px;
+		width: auto;
+
+		@media (min-width: $bp-medium) {
+			font-size: 12px;
+		}
+
+		@media (min-width: 1250px) {
+			font-size: 16px;
+		}
+
+		&.total {
+			font-weight: var(--font-bold);
+			text-decoration: none !important;
+		}
+	}
+
+	&__count {
+		display: inline-block;
+		font-size: 16px;
+		margin-top: 0;
+		position: absolute;
+		right: 0;
+
+		@media (min-width: $bp-medium) {
+			font-size: 12px;
+		}
+
+		@media (min-width: 1250px) {
+			font-size: 16px;
+		}
+	}
+}

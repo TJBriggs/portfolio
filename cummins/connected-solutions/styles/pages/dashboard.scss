@@ -1,0 +1,71 @@
+/**
+ *
+ * Dashboard Page
+ *
+ */
+.page-home {
+
+	.dashboard-header {
+
+		@media (max-width: $bp-small) {
+			padding: 15px 0;
+		}
+
+
+		.page-header__wrap {
+
+			@media (max-width: 767px) {
+				justify-content: center;
+			}
+		}
+
+		.heading {
+
+			@media (max-width: 767px) {
+				display: none;
+			}
+		}
+	}
+
+	.fleet-summary {
+		justify-content: space-between;
+
+		.col-1 {
+			border-right: none !important;
+
+			@media (min-width: 850px) {
+				flex: 0 1 33%;
+			}
+
+		}
+
+		.col-2 {
+
+			@media (min-width: 850px) {
+				flex: 1 1 67% !important;
+			}
+
+			.rounded-box {
+				border: 1px solid var(--c-gray-20);
+				border-radius: var(--radius-default);
+				padding: var(--padding);
+
+				.summary-wrap {
+
+					@media (min-width: 850px) {
+						max-height: 325px;
+						overflow-y: auto;
+					}
+				}
+
+
+				p {
+
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+	}
+}

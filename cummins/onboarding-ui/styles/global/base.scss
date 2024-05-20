@@ -1,0 +1,113 @@
+/**
+ *
+ * Base Styles
+ *
+ */
+* {
+	box-sizing: border-box;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+html {
+	font-size: 16px;
+	scroll-behavior: smooth;
+}
+
+body {
+	color: var(--default-text);
+	font-family: var(--font-base);
+	font-feature-settings: "liga", "kern";
+	font-size: 1rem;
+	-webkit-font-smoothing: auto;
+	-moz-osx-font-smoothing: grayscale;
+	font-weight: var(--font-regular);
+	letter-spacing: 0;
+	line-height: lh(20px, 16px);
+	margin: 0;
+	overflow-x: hidden;
+	text-rendering: optimizeLegibility;
+	width: 100%;
+
+	/* Adjust padding sizes for different screen sizes */
+	--padding-inner: 20px;
+
+	@media (min-width: $bp-small) {
+		--padding-inner: 40px;
+	}
+
+	@media (min-width: $bp-xlarge) {
+		--padding-inner: 60px;
+	}
+
+	.modal--open & {
+		overflow: hidden;
+	}
+}
+
+::-webkit-scrollbar {
+	width: 12px;
+}
+
+::-webkit-scrollbar-track {
+	border-radius: var(--radius-small);
+	box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: var(--c-tech-11);
+	border-radius: var(--radius-small);
+	outline: none;
+}
+
+// .page-home {
+// 	background-color: var(--c-jet-black);
+// }
+
+a,
+button,
+select,
+[class*="__toggle"] {
+	cursor: pointer;
+}
+
+a:not(.button) {
+	color: var(--c-cummins-red);
+}
+
+/* Selection Styles */
+::selection {
+	background-color: var(--link-color);
+	color: var(--c-white);
+}
+
+/* Elements being linked to by # is the target element. */
+:target::before {
+	content: "";
+	display: block;
+	height: 80px;
+	margin: -80px 0 0;
+
+	@media (--bp-nav-desk) {
+		height: 120px;
+		margin: -120px 0 0;
+	}
+}
+
+/* Responsive Images & SVGs */
+svg {
+	max-width: 100%;
+}
+
+figure {
+	margin: 0;
+}
+
+/* Responsive Image */
+img {
+	display: inline-block;
+	height: auto;
+	line-height: 0;
+	max-height: 100%;
+	max-width: 100%;
+	width: 100%;
+}

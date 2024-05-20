@@ -1,0 +1,77 @@
+/**
+ *
+ * Inner Styles (for grid widths)
+ *
+ */
+[class*="__default-inner"] {
+	margin: 0 auto;
+	max-width: 1828px; // 1780 is width of tables + 24px padding on each side
+	padding-left: var(--padding-inner);
+	padding-right: var(--padding-inner);
+	width: 100%;
+}
+
+
+[class*="__wide-inner"] {
+	margin: 0 auto;
+	max-width: var(--grid-wide);
+	padding-left: var(--padding-inner);
+	padding-right: var(--padding-inner);
+	width: 100%;
+
+	@media (min-width: 1200px) {
+		max-width: var(--grid-wide);
+	}
+}
+
+[class*="__xsmall-inner"] {
+	margin: 0 auto;
+	max-width: var(--grid-mobile);
+	padding-left: var(--padding-inner);
+	padding-right: var(--padding-inner);
+	width: 100%;
+
+	@media (min-width: 1200px) {
+		max-width: var(--grid-xsmall);
+	}
+}
+
+[class*="__narrow-inner"] {
+	margin: 0 auto;
+	max-width: 828px; // 780 + 24px padding on each side
+	padding-left: var(--padding-inner);
+	padding-right: var(--padding-inner);
+	width: 100%;
+}
+
+[class*="__medium-inner"] {
+	margin: 0 auto;
+	max-width: var(--grid-mobile);
+	padding-left: var(--padding-inner);
+	padding-right: var(--padding-inner);
+	width: 100%;
+
+	@media (min-width: 1200px) {
+		max-width: var(--grid-medium);
+	}
+}
+
+[class*="__full-inner"] {
+	--grid-full: 2040px;
+	margin: 0 auto;
+	max-width: var(--grid-full);
+	width: 100%;
+}
+
+.field-grid {
+	display: grid;
+	column-gap: 20px;
+	grid-template-columns: repeat(auto-fit, minmax(185px, 1fr));
+	padding: 0 var(--padding);
+	row-gap: 15px;
+
+	@media (min-width: 850px) {
+		column-gap: 40px;
+		//grid-template-columns: repeat(auto-fit, minmax(185px, 1fr));
+	}
+}
