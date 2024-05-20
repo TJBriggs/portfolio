@@ -232,7 +232,7 @@ Built several features, components, and AMP updates.
 
 <br>
 
-[ <img src="thad_briggs_resume.png" alt="Thad Briggs Logo" width="612" height="792"> ](thad_briggs_resume.pdf "View Full Size")
+[ <img src="./images/thad-briggs-resume.png" alt="Thad Briggs Logo" width="612" height="792"> ](thad-briggs-resume.pdf "View Full Size")
 
 
 
