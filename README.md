@@ -213,14 +213,19 @@ I also built several new features, components, and page templates for the follow
 
 **Zekelman**<br> 
 <https://www.zekelman.com><br>
+
 **Picoma**<br>
 <https://www.picoma.com><br>
+
 **Atlas Tube**<br>
 <https://www.atlastube.com><br>
+
 **Western Tube**<br>
 <https://www.westerntube.com><br>
+
 **Hayes Modular**<br>
 <https://www.hayesmodular.com><br>
+
 **Sharon Tube**<br>
 <https://www.sharontube.com><br>
 
