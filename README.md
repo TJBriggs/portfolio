@@ -20,7 +20,7 @@ Thanks for visiting my portfolio repository. Below you will find a collection of
 
 [View Code](/ami)
 
-One of my favorite sites to date. I love the clean, yet rich design which appeals directly to AMI's target audience - marketing executives. This site is thoughtfully laid out and takes a content first approach.
+One of my favorite sites to date. I love the clean, yet rich design which appeals directly to AMI's target audience - marketing executives. This site is thoughtfully laid out and takes a content first approach. This website has been redesigned and rebuilt since my original work.
 
 #### Project Highlights:
 
@@ -31,8 +31,6 @@ One of my favorite sites to date. I love the clean, yet rich design which appeal
 * User-friendly Case Studies
 
 <br>
-* This website has been redesigned and rebuilt since my original work.
-<br>
 
 ## Bio2 Medical
 
@@ -42,7 +40,7 @@ One of my favorite sites to date. I love the clean, yet rich design which appeal
 
 [View Code](/bio2-medical)
 
-This medical device company specializes in state-of-the-art technology. It's vital that their website appeal to modern medical professionals, but remain user-friendly for those less tech savvy.
+This medical device company specialized in state-of-the-art technology. It's vital that their website appeal to modern medical professionals, but remain user-friendly for those less tech savvy. This company was acquired and the website is no longer available.
 
 #### Project Highlights:
 
@@ -53,8 +51,7 @@ This medical device company specializes in state-of-the-art technology. It's vit
 * Custom Search
 
 <br>
-* This company was acquired and the website is no longer available.
-<br>
+
 
 ## Cairn Dental
 
@@ -64,7 +61,7 @@ This medical device company specializes in state-of-the-art technology. It's vit
 
 [View Code](/cairn-dental)
 
-Cairns are the piles of stones placed next to hiking trails. They mark the path and help guide hikers to their destination. I love the rebrand of this dental practice and how it targets the outdoor enthusiasts of Golden, CO.
+Cairns are the piles of stones placed next to hiking trails. They mark the path and help guide hikers to their destination. I love the rebrand of this dental practice and how it targets the outdoor enthusiasts of Golden, CO. This website has been redesigned and rebuilt since my original work.
 
 #### Project Highlights:
 
@@ -75,8 +72,7 @@ Cairns are the piles of stones placed next to hiking trails. They mark the path 
 * Interactive FAQs
 
 <br>
-* This website has been redesigned and rebuilt since my original work.
-<br>
+
 
 ## Devetry
 
@@ -86,7 +82,7 @@ Cairns are the piles of stones placed next to hiking trails. They mark the path 
 
 [View Code](/devetry)
 
-Devetry specializes in app development and they wanted a creative way to feature their amazing work. Check out the video slider on the home page. The videos play when they're in view or when the slide changes.
+Devetry specializes in app development and they wanted a creative way to feature their amazing work. Check out the video slider on the home page. The videos play when they're in view or when the slide changes. Unfortunately, this website has been rebranded, redesigned, and rebuilt since my original work.
 
 #### Project Highlights:
 
@@ -97,8 +93,7 @@ Devetry specializes in app development and they wanted a creative way to feature
 * AJAX Filtering
 
 <br>
-* This website has been rebranded, redesigned, and rebuilt since my original work.
-<br>
+
 
 ## Emailage
 
@@ -108,7 +103,7 @@ Devetry specializes in app development and they wanted a creative way to feature
 
 [View Code](/emailage)
 
-I thoroughly enjoyed building this website. I love how the design incorporates soft curves, circular imagery, and custom icon illustrations. Modular development with feature-rich integrations lead to this highly customizable experience.
+I thoroughly enjoyed building this website. I love how the design incorporates soft curves, circular imagery, and custom icon illustrations. Modular development with feature-rich integrations lead to this highly customizable experience. Please note that this company was aquired by LexisNexis and this website is no longer available.
 
 #### Project Highlights:
 
@@ -119,7 +114,7 @@ I thoroughly enjoyed building this website. I love how the design incorporates s
 * AJAX Filtering & Search
 
 <br>
-* Please note that this site has been rebuilt and rebranded under LexisNexis since my original work.
+
 ## Golftec
 
 <br>
@@ -168,7 +163,7 @@ This structural engineering firm is known for their award-winning designs. Since
 
 [View Code](/proctor-productions)
 
-Nominated for an Awwward, this site originally featured full screen videos, nested sliders, and AJAX sorting for their work section. The team page highlights the fun & creative culture at Proctor.
+Nominated for an Awwward, this site originally featured full screen videos, nested sliders, and AJAX sorting for their work section. The team page highlights the fun & creative culture at Proctor. This website has been redesigned and rebuilt since my original work.
 
 #### Project Highlights:
 
@@ -179,8 +174,7 @@ Nominated for an Awwward, this site originally featured full screen videos, nest
 * Fun Team Hover Effects
 
 <br>
-* This website has been redesigned and rebuilt since my original work.
-<br>
+
 ## Szymanowski Orthodontics
 
 <br>
@@ -189,7 +183,7 @@ Nominated for an Awwward, this site originally featured full screen videos, nest
 
 [View Code](/szymanowski-orthodontics)
 
-My first site at Zenman, the boss wanted to challenge me to see what I could do. This design has all the bells & whistles: parallax scrolling, CSS/SVG animations, background videos, and much more!
+My first site at Zenman, the boss wanted to challenge me to see what I could do. This design has all the bells & whistles: parallax scrolling, CSS/SVG animations, background videos, and much more! This website has also been rebuilt since my original work.
 
 #### Project Highlights:
 
@@ -200,8 +194,7 @@ My first site at Zenman, the boss wanted to challenge me to see what I could do.
 * Background Video
 
 <br>
-* This website has been redesigned and rebuilt since my original work.
-<br>
+
 ## 10Up Projects
 
 <br>
