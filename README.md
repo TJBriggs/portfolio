@@ -6,10 +6,49 @@ Thanks for visiting my portfolio repository. Below you will find a collection of
 
 |&nbsp;|Quick Links|&nbsp;|
 |:----------------:|:------------:|:------------:|
-|[ami + partners][ami]|[Bio2 Medical][bio2]|[Cairn Dental][cairn]|
-|[Devetry][devetry]|[Emailage][emailage]|[Golftec][golftec]|
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[PK Associates][pka]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Proctor Productions][proctor]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|[Szymanowski Orthodontics][damon]|
-|[10up Projects][10up]|[The Mx Group Projects][mx][Resume][resume]|&nbsp;|
+|[Golftec][golftec]|[PK Associates][pka]|[ami + partners][ami]|[Bio2 Medical][bio2]|[Cairn Dental][cairn]|
+|[Devetry][devetry]|[Emailage][emailage]|[Proctor Productions][proctor]|[Szymanowski Orthodontics][damon]|
+|[10up Projects][10up]|[The Mx Group Projects][mx]|[Resume][resume]|&nbsp;|
+
+<br>
+
+## Golftec
+
+<br>
+
+![Image of Golftec Website](./images/golftec.png "Golftec Website")
+
+<a href="https://golftec.com/" target="_blank">View Site</a> | [View Code](/golftec)
+
+This project was the blueprint for GolfTEC's website redesign. It consists of a styleguide, pattern library, custom modules, and demo pages which were integrated with their company's proprietary CMS.
+
+#### Project Highlights:
+
+* KSS Styleguide
+* Unique Navigation
+* Static/Video Slider
+* Subtle Hover Animations
+* Complex Location Maps
+
+<br>
+
+## PK Associates
+
+<br>
+
+![Image of PK Associates Website](./images/pka.png "PK Associates Website")
+
+<a href="https://pkastructural.com/" target="_blank">View Site</a> | [View Code](/pk-associates)
+
+This structural engineering firm is known for their award-winning designs. Since their work speaks for itself, the portfolio page is the key to their marketing funnel. Check out the custom portfolio grid which features AJAX filtering & search.
+
+#### Project Highlights:
+
+* Creative Portfolio Grid
+* AJAX Filtering & Search
+* Custom Taxonomies
+* Unique Design & Interface
+* Strategic Content Funnel
 
 <br>
 
@@ -115,46 +154,6 @@ I thoroughly enjoyed building this website. I love how the design incorporates s
 
 <br>
 
-## Golftec
-
-<br>
-
-![Image of Golftec Website](./images/golftec.png "Golftec Website")
-
-<a href="https://golftec.com/" target="_blank">View Site</a> | [View Code](/golftec)
-
-This project was the blueprint for GolfTEC's website redesign. It consists of a styleguide, pattern library, custom modules, and demo pages which were integrated with their company's proprietary CMS.
-
-#### Project Highlights:
-
-* KSS Styleguide
-* Unique Navigation
-* Static/Video Slider
-* Subtle Hover Animations
-* Complex Location Maps
-
-<br>
-
-## PK Associates
-
-<br>
-
-![Image of PK Associates Website](./images/pka.png "PK Associates Website")
-
-<a href="https://pkastructural.com/" target="_blank">View Site</a> | [View Code](/pk-associates)
-
-This structural engineering firm is known for their award-winning designs. Since their work speaks for itself, the portfolio page is the key to their marketing funnel. Check out the custom portfolio grid which features AJAX filtering & search.
-
-#### Project Highlights:
-
-* Creative Portfolio Grid
-* AJAX Filtering & Search
-* Custom Taxonomies
-* Unique Design & Interface
-* Strategic Content Funnel
-
-<br>
-
 ## Proctor Productions
 
 <br>
@@ -207,7 +206,8 @@ Rebuilt our internal site from the ground up starting from a rebrand and redesig
 
 **Cummins**<br>
 <https://www.cummins.com/><br>
-Built all UI components for the Cummins website redesign. Collaborated with Drupal developers to integrate all features and components.
+During the Cummins website redesign, I built and styled all the UI components used on the new site. I created a style guide and component library which were integrated with their existing Drupal CMS.
+
 
 I also built several new features, components, and page templates for the following WordPress sites:
 
