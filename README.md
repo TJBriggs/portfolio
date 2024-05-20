@@ -8,7 +8,7 @@ Thanks for visiting my portfolio repository. Below you will find a collection of
 |:----------------:|:------------:|:------------:|
 |[Golftec][golftec]|[PK Associates][pka]|[ami + partners][ami]|[Bio2 Medical][bio2]|[Cairn Dental][cairn]|
 |[Devetry][devetry]|[Emailage][emailage]|[Proctor Productions][proctor]|[Szymanowski Orthodontics][damon]|
-|[10up Projects][10up]|[The Mx Group Projects][The Mx Group Projects]|[Resume][resume]|&nbsp;|
+|[10up Projects][10up]|[The Mx Group Projects][mx]|[Resume][resume]|&nbsp;|
 
 <br>
 
@@ -275,15 +275,15 @@ Built several features, components, and AMP updates.
 [ <img src="./thad-briggs-resume.png" alt="Thad Briggs Resume Thumbnail" width="612" height="792"> ](thad-briggs-resume.pdf "View Full Size")
 
 
-
+[golftec]: #golftec
+[pka]: #pk-associates
 [ami]: #ami--partners
 [bio2]: #bio2-medical
 [cairn]: #cairn-dental
 [devetry]: #devetry
 [emailage]: #emailage
-[golftec]: #golftec
-[pka]: #pk-associates
 [proctor]: #proctor-productions
 [damon]: #szymanowski-orthodontics
+[mx]: #the-mx-group-projects
 [10up]: #10up-projects
 [resume]: #resume
