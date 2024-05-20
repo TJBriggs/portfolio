@@ -8,7 +8,7 @@ Thanks for visiting my portfolio repository. Below you will find a collection of
 |:----------------:|:------------:|:------------:|:------------:|:------------:|
 |[NESN][nesn]|[vAuto][vauto]|[Cummins][cummins]|[Golftec][golftec]|[PK Associates][pka]|[ami + partners][ami]|
 |[Bio2 Medical][bio2]|[Cairn Dental][cairn]|[Devetry][devetry]|[Emailage][emailage]|[Proctor Productions][proctor]|
-|[Szymanowski Orthodontics][damon]|[10up Projects][10up]|[The Mx Group Projects][mx]|[Resume][resume]|
+|[Szymanowski Orthodontics][damon]|[10up Projects][10up]|[The Mx Group Projects][mx]|&nbsp;|[My Resume][resume]|
 
 <br>
 
