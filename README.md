@@ -1,4 +1,4 @@
-# <img src="https://tjbriggs-portfolio-images.s3.us-east-2.amazonaws.com/logo.svg" alt="Thad Briggs Logo" width="42" height="25"> THADDEUS BRIGGS PORTFOLIO
+# <img src="./images/logo.svg" alt="Thad Briggs Logo" width="42" height="25"> THADDEUS BRIGGS PORTFOLIO
 
 Thanks for visiting my portfolio repository. Below you will find a collection of my favorite sites. I was the lead developer on each of these projects.
 
