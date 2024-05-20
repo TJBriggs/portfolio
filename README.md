@@ -16,7 +16,7 @@ Thanks for visiting my portfolio repository. Below you will find a collection of
 ## ami + partners
 
 
-![Image of ami + partners Website](http://thadbriggs.com/images/projects/ami.png "ami + partners Website")
+![Image of ami + partners Website](./images/ami.png "ami + partners Website")
 
 <a href="http://advantagemediainc.com/" target="_blank">View Site</a> | [View Code](/ami)
 
@@ -36,7 +36,7 @@ One of my favorite sites to date. I love the clean, yet rich design which appeal
 
 <br>
 
-![Image of Bio2 Medical Website](http://thadbriggs.com/images/projects/bio2.png "Bio2 Medical Website")
+![Image of Bio2 Medical Website](./images/bio2.png "Bio2 Medical Website")
 
 <a href="https://bio2medical.com/" target="_blank">View Site</a> | [View Code](/bio2-medical)
 
@@ -56,7 +56,7 @@ This medical device company specializes in state-of-the-art technology. It's vit
 
 <br>
 
-![Image of Cairn Dental Website](http://thadbriggs.com/images/projects/cairn.png "Cairn Dental Website")
+![Image of Cairn Dental Website](./images/cairn.png "Cairn Dental Website")
 
 <a href="http://cairndental.com/" target="_blank">View Site</a> | [View Code](/cairn-dental)
 
@@ -76,7 +76,7 @@ Cairns are the piles of stones placed next to hiking trails. They mark the path 
 
 <br>
 
-![Image of Devetry Website](http://thadbriggs.com/images/projects/devetry.png "Devetry Website")
+![Image of Devetry Website](./images/devetry.png "Devetry Website")
 
 <a href="https://devetry.com" target="_blank">View Site</a> | [View Code](/devetry)
 
@@ -96,7 +96,7 @@ Devetry specializes in app development and they wanted a creative way to feature
 
 <br>
 
-![Image of Emailage Website](http://thadbriggs.com/images/projects/emailage.png "Emailage Website")
+![Image of Emailage Website](./images/emailage.png "Emailage Website")
 
 <a href="https://emailage.com" target="_blank">View Site</a> | [View Code](/emailage)
 
@@ -116,7 +116,7 @@ I thoroughly enjoyed building this website. I love how the design incorporates s
 
 <br>
 
-![Image of Golftec Website](http://thadbriggs.com/images/projects/golftec.png "Golftec Website")
+![Image of Golftec Website](./images/golftec.png "Golftec Website")
 
 <a href="https://golftec.com/" target="_blank">View Site</a> | [View Code](/golftec)
 
@@ -136,7 +136,7 @@ This project was the blueprint for GolfTEC's website redesign. It consists of a 
 
 <br>
 
-![Image of PK Associates Website](http://thadbriggs.com/images/projects/pka.png "PK Associates Website")
+![Image of PK Associates Website](./images/pka.png "PK Associates Website")
 
 <a href="https://pkastructural.com/" target="_blank">View Site</a> | [View Code](/pk-associates)
 
@@ -156,7 +156,7 @@ This structural engineering firm is known for their award-winning designs. Since
 
 <br>
 
-![Image of Proctor Productions Website](http://thadbriggs.com/images/projects/proctor.png "Proctor Productions Website")
+![Image of Proctor Productions Website](./images/proctor.png "Proctor Productions Website")
 
 <a href="https://proctorproductions.com/" target="_blank">View Site</a> | [View Code](/proctor-productions)
 
@@ -176,7 +176,7 @@ Nominated for an Awwward, this site originally featured full screen videos, nest
 
 <br>
 
-![Image of Szymanowski Orthodontics Website](http://thadbriggs.com/images/projects/damon.png "Szymanowski Orthodontics Website")
+![Image of Szymanowski Orthodontics Website](./images/damon.png "Szymanowski Orthodontics Website")
 
 <a href="http://drdamonsmiles.com/" target="_blank">View Site</a> | [View Code](/szymanowski-orthodontics)
 
