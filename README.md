@@ -9,7 +9,7 @@ Thanks for visiting my portfolio repository. Below you will find a collection of
 |[ami + partners][ami]|[Bio2 Medical][bio2]|[Cairn Dental][cairn]|
 |[Devetry][devetry]|[Emailage][emailage]|[Golftec][golftec]|
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[PK Associates][pka]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Proctor Productions][proctor]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|[Szymanowski Orthodontics][damon]|
-|[10up Projects][10up]|[Resume][resume]|&nbsp;|
+|[10up Projects][10up]|[The Mx Group Projects][mx][Resume][resume]|&nbsp;|
 
 <br>
 
@@ -192,6 +192,38 @@ My first site at Zenman, the boss wanted to challenge me to see what I could do.
 * Slow Parallax Scrolling
 * CSS/SVG Animations
 * Background Video
+
+<br>
+
+## The Mx Group Projects
+
+<br>
+
+Here are a few additional projects that I worked on at The Mx Group:
+
+**The Mx Group**<br>
+<https://www.themxgroup.com/><br>
+Rebuilt our internal site from the ground up starting from a rebrand and redesign. WordPress site built with Advanced Custom Fields.
+
+**Cummins**<br>
+<https://www.cummins.com/><br>
+Built all UI components for the Cummins website redesign. Collaborated with Drupal developers to integrate all features and components.
+
+I also built several new features, components, and page templates for the following WordPress sites:
+
+**Zekelman**<br> 
+<https://www.zekelman.com><br>
+**Picoma**<br>
+<https://www.picoma.com><br>
+**Atlas Tube**<br>
+<https://www.atlastube.com><br>
+**Western Tube**<br>
+<https://www.westerntube.com><br>
+**Hayes Modular**<br>
+<https://www.hayesmodular.com><br>
+**Sharon Tube**<br>
+<https://www.sharontube.com><br>
+
 
 <br>
 
