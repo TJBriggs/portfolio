@@ -6,9 +6,69 @@ Thanks for visiting my portfolio repository. Below you will find a collection of
 
 |&nbsp;|&nbsp;|Quick Links|&nbsp;|&nbsp;|
 |:----------------:|:------------:|:------------:|:------------:|:------------:|
-|[Golftec][golftec]|[PK Associates][pka]|[ami + partners][ami]|[Bio2 Medical][bio2]|[Cairn Dental][cairn]|
-|[Devetry][devetry]|[Emailage][emailage]|[Proctor Productions][proctor]|[Szymanowski Orthodontics][damon]|
-|[10up Projects][10up]|[The Mx Group Projects][mx]|[Resume][resume]|
+|[NESN][nesn]|[vauto][vauto]|[Cummins][cummins-react]|[Golftec][golftec]|[PK Associates][pka]|[ami + partners][ami]|[Bio2 Medical][bio2]|[Cairn Dental][cairn]|
+|[Devetry][devetry]|[Emailage][emailage]|[Proctor Productions][proctor]|[Szymanowski Orthodontics][damon]|[10up Projects][10up]|[The Mx Group Projects][mx]|[Resume][resume]|
+
+<br>
+
+## NESN
+
+<br>
+
+![Image of NESN Website](./images/golftec.png "NESN Website")
+
+<a href="https://nesn.com/" target="_blank">View WordPress Site</a>
+<a href="https://nesn.com/watch/" target="_blank">View NESN 360 React App</a>
+
+Due to a strict non-disclosure agreement, I can't share my code for the work I did while employed at NESN however here is a brief summary of my contributions:
+
+#### Project Highlights:
+
+* xxxxxxxxxxxxxxxx
+* xxxxxxxxxxxxxxxx
+* xxxxxxxxxxxxxxxx
+* xxxxxxxxxxxxxxxx
+* xxxxxxxxxxxxxxxx
+
+<br>
+
+## vAuto
+
+<br>
+
+![Image of vAuto Website](./images/vauto.png "vAuto Website")
+
+<a href="https://vauto.com/" target="_blank">View Site</a> | [View Code](/vauto)
+
+This project was the blueprint for GolfTEC's website redesign. It consists of a styleguide, pattern library, custom modules, and demo pages which were integrated with their company's proprietary CMS.
+
+#### Project Highlights:
+
+* xxxxxxxxxxxxxxxx
+* xxxxxxxxxxxxxxxx
+* xxxxxxxxxxxxxxxx
+* xxxxxxxxxxxxxxxx
+* xxxxxxxxxxxxxxxx
+
+<br>
+
+## Cummins Fleet Management
+
+<br>
+
+![Image of Cummins Next.js App](./images/cummins-react.png "Cummins Next.js Applicaion")
+
+[View Code](/cummins-react)
+
+This project was the blueprint for GolfTEC's website redesign. It consists of a styleguide, pattern library, custom modules, and demo pages which were integrated with their company's proprietary CMS.
+
+#### Project Highlights:
+
+* xxxxxxxxxxxxxxxx
+* xxxxxxxxxxxxxxxx
+* xxxxxxxxxxxxxxxx
+* xxxxxxxxxxxxxxxx
+* xxxxxxxxxxxxxxxx
 
 <br>
 
@@ -274,7 +334,9 @@ Built several features, components, and AMP updates.
 
 [ <img src="./thad-briggs-resume.png" alt="Thad Briggs Resume Thumbnail" width="612" height="792"> ](thad-briggs-resume.pdf "View Full Size")
 
-
+[nesn]: #nesn
+[vauto]: #vauto
+[cummins]: #cummins
 [golftec]: #golftec
 [pka]: #pk-associates
 [ami]: #ami--partners
