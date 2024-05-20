@@ -6,8 +6,9 @@ Thanks for visiting my portfolio repository. Below you will find a collection of
 
 |&nbsp;|&nbsp;|Quick Links|&nbsp;|&nbsp;|
 |:----------------:|:------------:|:------------:|:------------:|:------------:|
-|[NESN][nesn]|[vauto][vauto]|[Cummins][cummins-react]|[Golftec][golftec]|[PK Associates][pka]|[ami + partners][ami]|[Bio2 Medical][bio2]|[Cairn Dental][cairn]|
-|[Devetry][devetry]|[Emailage][emailage]|[Proctor Productions][proctor]|[Szymanowski Orthodontics][damon]|[10up Projects][10up]|[The Mx Group Projects][mx]|[Resume][resume]|
+|[NESN][nesn]|[vauto][vauto]|[Cummins][cummins]|[Golftec][golftec]|[PK Associates][pka]|[ami + partners][ami]|
+|[Bio2 Medical][bio2]|[Cairn Dental][cairn]||[Devetry][devetry]|[Emailage][emailage]|[Proctor Productions][proctor]|
+|[Szymanowski Orthodontics][damon]|[10up Projects][10up]|[The Mx Group Projects][mx]|[Resume][resume]|
 
 <br>
 
@@ -20,7 +21,7 @@ Thanks for visiting my portfolio repository. Below you will find a collection of
 <a href="https://nesn.com/" target="_blank">View WordPress Site</a>
 <a href="https://nesn.com/watch/" target="_blank">View NESN 360 React App</a>
 
-Due to a strict non-disclosure agreement, I can't share my code for the work I did while employed at NESN however here is a brief summary of my contributions:
+Due to a strict non-disclosure agreement, I can't share my code for the work I did while employed at NESN, however here is a brief summary of my contributions:
 
 #### Project Highlights:
 
@@ -296,7 +297,7 @@ I also built several new features, components, and page templates for the follow
 
 <br>
 
-Due to a strict non-disclosure agreement, I can't share my code for the work I did while employed at 10up however here is a brief summary of the projects I worked on:
+Due to a strict non-disclosure agreement, I can't share my code for the work I did while employed at 10up, however here is a brief summary of the projects I worked on:
 
 **Microsoft - AI Blog**<br>
 <https://blogs.microsoft.com/ai><br>
