@@ -9,7 +9,7 @@ Thanks for visiting my portfolio repository. Below you will find a collection of
 |[ami + partners][ami]|[Bio2 Medical][bio2]|[Cairn Dental][cairn]|
 |[Devetry][devetry]|[Emailage][emailage]|[Golftec][golftec]|
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[PK Associates][pka]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Proctor Productions][proctor]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|[Szymanowski Orthodontics][damon]|
-|[10Up Projects][10up]|[Resume][resume]|&nbsp;|
+|[10up Projects][10up]|[Resume][resume]|&nbsp;|
 
 <br>
 
@@ -18,7 +18,7 @@ Thanks for visiting my portfolio repository. Below you will find a collection of
 
 ![Image of ami + partners Website](./images/ami.png "ami + partners Website")
 
-<a href="http://advantagemediainc.com/" target="_blank">View Site</a> | [View Code](/ami)
+[View Code](/ami)
 
 One of my favorite sites to date. I love the clean, yet rich design which appeals directly to AMI's target audience - marketing executives. This site is thoughtfully laid out and takes a content first approach.
 
@@ -31,6 +31,8 @@ One of my favorite sites to date. I love the clean, yet rich design which appeal
 * User-friendly Case Studies
 
 <br>
+* This website has been redesigned and rebuilt since my original work.
+<br>
 
 ## Bio2 Medical
 
@@ -38,7 +40,7 @@ One of my favorite sites to date. I love the clean, yet rich design which appeal
 
 ![Image of Bio2 Medical Website](./images/bio2.png "Bio2 Medical Website")
 
-<a href="https://bio2medical.com/" target="_blank">View Site</a> | [View Code](/bio2-medical)
+[View Code](/bio2-medical)
 
 This medical device company specializes in state-of-the-art technology. It's vital that their website appeal to modern medical professionals, but remain user-friendly for those less tech savvy.
 
@@ -51,6 +53,8 @@ This medical device company specializes in state-of-the-art technology. It's vit
 * Custom Search
 
 <br>
+* This company was acquired and the website is no longer available.
+<br>
 
 ## Cairn Dental
 
@@ -58,7 +62,7 @@ This medical device company specializes in state-of-the-art technology. It's vit
 
 ![Image of Cairn Dental Website](./images/cairn.png "Cairn Dental Website")
 
-<a href="http://cairndental.com/" target="_blank">View Site</a> | [View Code](/cairn-dental)
+[View Code](/cairn-dental)
 
 Cairns are the piles of stones placed next to hiking trails. They mark the path and help guide hikers to their destination. I love the rebrand of this dental practice and how it targets the outdoor enthusiasts of Golden, CO.
 
@@ -71,6 +75,8 @@ Cairns are the piles of stones placed next to hiking trails. They mark the path 
 * Interactive FAQs
 
 <br>
+* This website has been redesigned and rebuilt since my original work.
+<br>
 
 ## Devetry
 
@@ -78,7 +84,7 @@ Cairns are the piles of stones placed next to hiking trails. They mark the path 
 
 ![Image of Devetry Website](./images/devetry.png "Devetry Website")
 
-<a href="https://devetry.com" target="_blank">View Site</a> | [View Code](/devetry)
+[View Code](/devetry)
 
 Devetry specializes in app development and they wanted a creative way to feature their amazing work. Check out the video slider on the home page. The videos play when they're in view or when the slide changes.
 
@@ -91,6 +97,8 @@ Devetry specializes in app development and they wanted a creative way to feature
 * AJAX Filtering
 
 <br>
+* This website has been rebranded, redesigned, and rebuilt since my original work.
+<br>
 
 ## Emailage
 
@@ -98,7 +106,7 @@ Devetry specializes in app development and they wanted a creative way to feature
 
 ![Image of Emailage Website](./images/emailage.png "Emailage Website")
 
-<a href="https://emailage.com" target="_blank">View Site</a> | [View Code](/emailage)
+[View Code](/emailage)
 
 I thoroughly enjoyed building this website. I love how the design incorporates soft curves, circular imagery, and custom icon illustrations. Modular development with feature-rich integrations lead to this highly customizable experience.
 
@@ -111,7 +119,7 @@ I thoroughly enjoyed building this website. I love how the design incorporates s
 * AJAX Filtering & Search
 
 <br>
-
+* Please note that this site has been rebuilt and rebranded under LexisNexis since my original work.
 ## Golftec
 
 <br>
@@ -158,7 +166,7 @@ This structural engineering firm is known for their award-winning designs. Since
 
 ![Image of Proctor Productions Website](./images/proctor.png "Proctor Productions Website")
 
-<a href="https://proctorproductions.com/" target="_blank">View Site</a> | [View Code](/proctor-productions)
+[View Code](/proctor-productions)
 
 Nominated for an Awwward, this site originally featured full screen videos, nested sliders, and AJAX sorting for their work section. The team page highlights the fun & creative culture at Proctor.
 
@@ -171,14 +179,15 @@ Nominated for an Awwward, this site originally featured full screen videos, nest
 * Fun Team Hover Effects
 
 <br>
-
+* This website has been redesigned and rebuilt since my original work.
+<br>
 ## Szymanowski Orthodontics
 
 <br>
 
 ![Image of Szymanowski Orthodontics Website](./images/damon.png "Szymanowski Orthodontics Website")
 
-<a href="http://drdamonsmiles.com/" target="_blank">View Site</a> | [View Code](/szymanowski-orthodontics)
+[View Code](/szymanowski-orthodontics)
 
 My first site at Zenman, the boss wanted to challenge me to see what I could do. This design has all the bells & whistles: parallax scrolling, CSS/SVG animations, background videos, and much more!
 
@@ -191,12 +200,13 @@ My first site at Zenman, the boss wanted to challenge me to see what I could do.
 * Background Video
 
 <br>
-
+* This website has been redesigned and rebuilt since my original work.
+<br>
 ## 10Up Projects
 
 <br>
 
-Due to a strict non-disclosure agreement, I can't share my code for the work I did while employed at 10Up however here is a brief summary of the projects I worked on:
+Due to a strict non-disclosure agreement, I can't share my code for the work I did while employed at 10up however here is a brief summary of the projects I worked on:
 
 **Microsoft - AI Blog**<br>
 <https://blogs.microsoft.com/ai><br>
@@ -222,7 +232,7 @@ Built several components, features, and page templates under a tight deadline.
 <https://fivethirtyeight.com><br>
 Built several features, components, and AMP updates.
 
-**ESPN - TheUndefeated**<br>
+**ESPN - TheUndefeated (Rebranded to Andscape)**<br>
 <https://theundefeated.com><br>
 Built several features, components, and AMP updates.
 
@@ -232,7 +242,7 @@ Built several features, components, and AMP updates.
 
 <br>
 
-[ <img src="./images/thad-briggs-resume.png" alt="Thad Briggs Logo" width="612" height="792"> ](thad-briggs-resume.pdf "View Full Size")
+[ <img src="./thad-briggs-resume.png" alt="Thad Briggs Resume Thumbnail" width="612" height="792"> ](thad-briggs-resume.pdf "View Full Size")
 
 
 
