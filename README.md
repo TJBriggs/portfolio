@@ -195,7 +195,7 @@ My first site at Zenman, the boss wanted to challenge me to see what I could do.
 
 <br>
 
-## 10Up Projects
+## 10up Projects
 
 <br>
 

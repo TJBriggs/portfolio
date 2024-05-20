@@ -1,5 +1,0 @@
-/* Global - global pieces like variables, custom properties, extends */
-@import url("1_global/_index");
-
-/* Base - base elements such as fonts, semantics, buttons, wrappers */
-@import url("2_base/_index");
