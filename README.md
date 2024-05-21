@@ -30,15 +30,16 @@ Thanks for visiting my portfolio repository. Below you will find a collection of
 <a href="https://nesn.com/" target="_blank">View Site</a>
 <a href="https://nesn.com/watch/" target="_blank">View React App</a>
 
-Due to a strict non-disclosure agreement, I can't share my code for the work I did while employed at NESN, however here is a brief summary of my work:
+Due to a strict non-disclosure agreement, I can't share my code for the work I did while employed at NESN, however I was the sole React developer for their WordPress editorial site and the NESN 360 streaming application.
 
 #### Project Highlights:
 
-* xxxxxxxxxxxxxxxx
-* xxxxxxxxxxxxxxxx
-* xxxxxxxxxxxxxxxx
-* xxxxxxxxxxxxxxxx
-* xxxxxxxxxxxxxxxx
+* Custom WordPress plugin to house and streamline block development
+* React single page application for streaming and VOD content
+* Custom blocks, block templates, and block patterns
+* Dynamic block content that consumed and displayed API data
+* Various React components using React Hooks, React Router, and the Context API
+* Refactor of the subscriber onboarding flow to integrate new customer facing promotions
 
 <br>
 
@@ -50,15 +51,15 @@ Due to a strict non-disclosure agreement, I can't share my code for the work I d
 
 <a href="https://vauto.com/" target="_blank">View Site</a> | [View Code](/vauto)
 
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.
+vAuto was my first WordPress site built with the Block Editor, also known as Gutenberg. To streamline block development, I created a WordPress plugin to house all React based blocks and components.
 
 #### Project Highlights:
 
-* xxxxxxxxxxxxxxxx
-* xxxxxxxxxxxxxxxx
-* xxxxxxxxxxxxxxxx
-* xxxxxxxxxxxxxxxx
-* xxxxxxxxxxxxxxxx
+* Enhanced editor experience, that matches the front end
+* Custom blocks, block templates, and block patterns
+* Dynamic block content generated from custom post types
+* Utilizes theme.json for seamless theme/block integration
+* Video features, animations, and interactive content
 
 <br>
 
@@ -91,15 +92,14 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.
 
 [View Code](/z-modular/theme-files)
 
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.
+This B2B marketing website was a lot of fun to build! Z Modular takes a modular approach to the building and construction process...similar to the approach I take when building web experiences!
 
 #### Project Highlights:
 
-* xxxxxxxxxxxxxxxx
-* xxxxxxxxxxxxxxxx
-* xxxxxxxxxxxxxxxx
-* xxxxxxxxxxxxxxxx
-* xxxxxxxxxxxxxxxx
+* Modular development and content managment with Advanced Custom Fields
+* Interactive video slider using the YouTube Data API
+* Fun video feature with appealing design and overlay
+* Ajax filtering for their community portfolio
 
 <br>
 
