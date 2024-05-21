@@ -107,16 +107,6 @@ const Header = ({ pageSlug }) => {
 										</li>
 									</ul>
 								</li>
-								<li className='app-header__menu-item'>
-									<a>Organisms</a>
-									<ul className='app-header__submenu organisms'>
-										<li className='app-header__submenu-item'>
-											<Link href='/component-library/organisms/tables/'>
-												<a className={pageSlug === 'tables' ? 'active' : ''}>Tables</a>
-											</Link>
-										</li>
-									</ul>
-								</li>
 							</ul>
 						</nav>
 					</div>

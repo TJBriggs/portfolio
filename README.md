@@ -67,7 +67,7 @@ vAuto was my first WordPress site built with the Block Editor, also known as Gut
 
 <br>
 
-![Image of Cummins Next.js App](./images/cummins-connected-solutions.png "Cummins Next.js Applicaion")
+![Image of Cummins Next.js App](./images/cummins.png "Cummins Next.js Applicaion")
 
 [View Code](/cummins/connected-solutions)
 [View Code](/cummins/onboarding-ui)
@@ -278,7 +278,7 @@ My first site at Zenman, the boss wanted to challenge me to see what I could do.
 #### Project Highlights:
 
 * Animated Header
-* Random Heros Images
+* Dynamic Heros Images
 * Slow Parallax Scrolling
 * CSS/SVG Animations
 * Background Video
