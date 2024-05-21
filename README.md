@@ -72,15 +72,17 @@ vAuto was my first WordPress site built with the Block Editor, also known as Gut
 [View Code](/cummins/connected-solutions)
 
 
-This project included to single page applications built with Next.Js. One is for their internal fleet managment software and the other is a multi-step onboarding form.
+The Cummins development team needed help building the UI for their internal fleet management application. This single page application is a workng prototype of all the components and UI elements I built and styled for thier integration.
 
 #### Project Highlights:
 
-* xxxxxxxxxxxxxxxx
-* xxxxxxxxxxxxxxxx
-* xxxxxxxxxxxxxxxx
-* xxxxxxxxxxxxxxxx
-* xxxxxxxxxxxxxxxx
+* Single page application built with React.js and Next.js
+* Robust design system based on atomic design principles
+* Visual style guide and component library
+* Complete page templates utilizing and connecting individual React components
+* Placeholder data to simplify the consumption of API data at the time of integration
+* Interactive form handling and state management to simulate data validation and functionality
+* Complex modal and table functionality throughout the application
 
 <br>
 
@@ -93,15 +95,14 @@ This project included to single page applications built with Next.Js. One is for
 [View Code](/cummins/onboarding-ui)
 
 
-This project included to single page applications built with Next.Js. One is for their internal fleet managment software and the other is a multi-step onboarding form.
+This basic single page application is a prototype of a multi-step onboarding form. The Cummins development team integrated these UI elements into their internal React application.
 
 #### Project Highlights:
 
-* xxxxxxxxxxxxxxxx
-* xxxxxxxxxxxxxxxx
-* xxxxxxxxxxxxxxxx
-* xxxxxxxxxxxxxxxx
-* xxxxxxxxxxxxxxxx
+* Single page application built with React.js and Next.js
+* Multi-step form functionality with various form elements
+* Flexible React components with prop handling and defined prop types
+* Custom animations using Framer Motion
 
 <br>
 
