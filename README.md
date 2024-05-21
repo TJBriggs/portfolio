@@ -8,7 +8,16 @@ Thanks for visiting my portfolio repository. Below you will find a collection of
 |:----------------:|:------------:|:------------:|:------------:|:------------:|
 |[NESN][nesn]|[vAuto][vauto]|[Cummins][cummins]|[Z Modular][zmodular]|[Golftec][golftec]|
 |[PK Associates][pka]|[ami + partners][ami]|[Bio2 Medical][bio2]|[Cairn Dental][cairn]|[Devetry][devetry]|
-|[Emailage][emailage]|[Proctor Productions][proctor]|[Szymanowski Orthodontics][damon]|[10up Projects][10up]|[The Mx Group Projects][mx]|[My Resume][resume]|
+|[Emailage][emailage]|[Proctor Productions][proctor]|[Szymanowski Orthodontics][damon]|[10up Projects][10up]|[The Mx Group Projects][mx]|
+
+<br>
+
+
+## Resume
+
+<br>
+
+[ <img src="./thad-briggs-resume.png" alt="Thad Briggs Resume Thumbnail" width="612" height="792"> ](thad-briggs-resume.pdf "View Full Size")
 
 <br>
 
@@ -18,8 +27,8 @@ Thanks for visiting my portfolio repository. Below you will find a collection of
 
 ![Image of NESN Website](./images/nesn-360.png "NESN Website")
 
-<a href="https://nesn.com/" target="_blank">View WordPress Site</a>
-<a href="https://nesn.com/watch/" target="_blank">View NESN 360 React App</a>
+<a href="https://nesn.com/" target="_blank">View Site</a>
+<a href="https://nesn.com/watch/" target="_blank">View React App</a>
 
 Due to a strict non-disclosure agreement, I can't share my code for the work I did while employed at NESN, however here is a brief summary of my work:
 
@@ -350,12 +359,6 @@ Built several features, components, and AMP updates.
 
 <br>
 
-## Resume
-
-<br>
-
-[ <img src="./thad-briggs-resume.png" alt="Thad Briggs Resume Thumbnail" width="612" height="792"> ](thad-briggs-resume.pdf "View Full Size")
-
 [nesn]: #nesn
 [vauto]: #vauto
 [cummins]: #cummins
@@ -371,4 +374,3 @@ Built several features, components, and AMP updates.
 [damon]: #szymanowski-orthodontics
 [mx]: #the-mx-group-projects
 [10up]: #10up-projects
-[resume]: #resume
