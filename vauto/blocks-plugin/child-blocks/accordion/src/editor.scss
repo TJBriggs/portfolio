@@ -1,0 +1,45 @@
+/**
+ *
+ * Editor Styles
+ *
+ */
+
+.accordion {
+
+	&__toggle {
+
+		&::after {
+			border-radius: 0 !important;
+			left: auto !important;
+			right: 28px !important;
+			top: 24px !important;
+		}
+	}
+
+	&__content {
+		display: block;
+	}
+
+	&--primary {
+		background-color: transparent;
+		border: 1px solid var(--wp--preset--color--black);
+		margin-bottom: var(--wp--custom--padding--small);
+
+		>.block-editor-inner-blocks {
+
+			>.block-editor-block-list__layout {
+
+				>.accordion__content {
+					padding: 0;
+
+					.accordion {
+
+						&:nth-of-type(odd) {
+							background-color: var(--wp--preset--color--gray-3);
+						}
+					}
+				}
+			}
+		}
+	}
+}

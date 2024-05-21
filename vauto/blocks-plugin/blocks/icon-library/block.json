@@ -1,0 +1,14 @@
+{
+	"$schema": "https://json.schemastore.org/block.json",
+	"apiVersion": 2,
+	"name": "mx/icon-library",
+	"version": "0.1.0",
+	"title": "Icon Library",
+	"category": "utilities",
+	"icon": "superhero-alt",
+	"description": "Visual representation of WordPress' core icon library. This library is different from Dashicons.",
+	"textdomain": "mx-blocks-plugin",
+	"editorScript": "file:./build/index.js",
+	"editorStyle": "file:./build/index.css",
+	"style": "file:./build/style-index.css"
+}

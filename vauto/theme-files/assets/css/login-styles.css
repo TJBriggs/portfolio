@@ -1,0 +1,118 @@
+.login {
+	align-items: center;
+	background-color: #ffffff;
+	display: flex;
+
+	#login {
+		margin: 0 auto;
+		padding-top: 0;
+		width: 260px;
+
+		@media (min-width: 400px) {
+			width: 320px;
+		}
+
+		h1 a {
+			background-color: transparent;
+			background-image: url("../images/logos/logo-color.svg") !important;
+			background-position: center;
+			background-size: 80%;
+			margin-bottom: 0;
+			transition: opacity 400ms;
+			width: auto;
+
+			&:hover {
+				box-shadow: none;
+				opacity: 0.75;
+			}
+		}
+
+		.message {
+			margin-top: 1.5rem;
+		}
+
+		form {
+			border: 0;
+			border-radius: 0;
+			box-shadow: none;
+			margin-top: 0;
+			max-width: 100%;
+			padding: 1.5rem;
+		}
+
+		form label {
+			color: #000000;
+			font-weight: 500;
+		}
+
+		input[type="text"],
+		input[type="password"] {
+			background-color: #ffffff;
+			border: 1px solid #d1d3d4;
+			border-radius: 0;
+			box-shadow: none;
+			font-weight: 400;
+			margin-top: 5px;
+			padding: 0.5rem 0.75rem;
+			transition: border 400ms;
+
+			&:focus {
+				border: 1px solid #07a0aa;
+			}
+		}
+
+		input[type="checkbox"] {
+			border-color: #07a0aa;
+			border-radius: 0;
+
+			&::before {
+				color: #ffffff;
+			}
+		}
+
+		#nav,
+		#backtoblog {
+			margin: 10px 0 0 1.5rem;
+			padding: 0;
+
+			a {
+				color: #07a0aa;
+				font-weight: 700;
+				outline: 0;
+				text-decoration: none;
+				transition: color 400ms;
+
+				&:hover {
+					color: #7bbdca;
+					opacity: 0.8;
+					text-decoration: none;
+				}
+			}
+		}
+
+		#wp-auth-check-wrap #wp-auth-check {
+			background-color: #ffffff !important;
+		}
+
+		.button-primary {
+			background-color: #e8171f;
+			border: 0;
+			border-radius: 0;
+			box-shadow: none;
+			font-weight: 500;
+			line-height: 1.3;
+			min-height: 32px;
+			outline: 0;
+			text-shadow: none;
+			text-transform: uppercase;
+			transition: background-color 400ms;
+
+			&:hover,
+			&:focus,
+			&:active {
+				background-color: #c71d2a;
+				box-shadow: none;
+			}
+		}
+	}
+}

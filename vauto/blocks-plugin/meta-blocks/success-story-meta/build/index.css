@@ -1,0 +1,127 @@
+/*!************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!../../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!../../node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!../../components/media-pickers/picker-styles.scss ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************/
+/**
+ *
+ * Media and File Picker Styles
+ *
+ */
+.picker {
+  overflow: hidden;
+}
+.picker label {
+  display: block;
+  margin-bottom: 8px;
+}
+.picker__preview-wrap {
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+.picker__preview-url {
+  display: flex;
+  margin-top: 10px;
+  width: 100%;
+}
+.picker__add-button {
+  margin: 0 0 2px 2px;
+}
+.picker__preview-remove {
+  height: 20px;
+  padding: 0;
+}
+.picker__preview-icon .dashicons-media-text {
+  display: inline-block;
+  font-size: 40px;
+  height: 40px;
+  width: 40px;
+}
+/*!****************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!../../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!../../node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/editor.scss ***!
+  \****************************************************************************************************************************************************************************************************************************************************/
+/**
+ *
+ * Editor Styles
+ *
+ */
+.wp-block-mx-success-story-meta .meta-fields {
+  width: 100%;
+}
+.wp-block-mx-success-story-meta .picker__preview-image {
+  background-color: #eeeeee;
+}
+.wp-block-mx-success-story-meta .ss-header__preview-wrap {
+  margin-top: 50px;
+  width: 100%;
+}
+.wp-block-mx-success-story-meta .ss-header__upper {
+  display: flex;
+  flex-wrap: wrap;
+}
+.wp-block-mx-success-story-meta .ss-header__image-wrap {
+  background-color: #ff4248;
+  display: flex;
+  width: 60%;
+}
+.wp-block-mx-success-story-meta .ss-header__copy {
+  width: 40%;
+}
+.wp-block-mx-success-story-meta .ss-header__lower {
+  background-color: var(--wp--preset--color--black);
+  color: var(--wp--preset--color--white);
+}
+.wp-block-mx-success-story-meta .ss-card__preview-wrap {
+  margin-top: 30px;
+  width: 100%;
+}
+.wp-block-mx-success-story-meta .ss-card {
+  border: 1px solid #c3c8cb;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 630px;
+  width: 50%;
+}
+.wp-block-mx-success-story-meta .ss-card__image-content {
+  position: relative;
+  width: 50%;
+}
+@media (min-width: 768px) {
+  .wp-block-mx-success-story-meta .ss-card__mobile-logo, .wp-block-mx-success-story-meta .ss-card__mobile-text {
+    display: none;
+  }
+}
+.wp-block-mx-success-story-meta .ss-card__line, .wp-block-mx-success-story-meta .ss-card__person, .wp-block-mx-success-story-meta .ss-card__overlay-image, .wp-block-mx-success-story-meta .ss-card__overlay-wrap {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+.wp-block-mx-success-story-meta .ss-card__line {
+  z-index: 1;
+}
+.wp-block-mx-success-story-meta .ss-card__person {
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 250px;
+  z-index: 2;
+}
+.wp-block-mx-success-story-meta .ss-card__overlay-image {
+  opacity: 0.85;
+  z-index: 3;
+}
+.wp-block-mx-success-story-meta .ss-card__overlay-wrap {
+  line-height: 0;
+  z-index: 4;
+}
+.wp-block-mx-success-story-meta .ss-card__overlay-inner {
+  padding: 20px;
+}
+.wp-block-mx-success-story-meta .ss-card__desktop-content {
+  width: 50%;
+}
+.wp-block-mx-success-story-meta .ss-box__preview-wrap {
+  margin-top: 30px;
+  max-width: 630px;
+  width: 100%;
+}
+
+/*# sourceMappingURL=index.css.map*/

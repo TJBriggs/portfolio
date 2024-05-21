@@ -1,0 +1,60 @@
+/**
+ *
+ * Success Story Header
+ *
+ */
+.ss-header {
+
+	&__upper {
+		position: relative;
+	}
+
+	&__prev,
+	&__next {
+		background-color: var(--wp--preset--color--black);
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+
+		a {
+			align-items: center;
+			display: flex;
+			height: 50px;
+			justify-content: center;
+			width: 50px;
+		}
+
+		svg {
+			height: auto;
+			max-width: 20px;
+		}
+	}
+
+	&__prev {
+		left: 30px;
+	}
+
+	&__next {
+		right: 30px;
+	}
+
+	&__main-wrap {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	&__image-wrap {
+		background-color: #ff4248;
+		display: flex;
+		width: 60%;
+	}
+
+	&__copy {
+		width: 40%;
+	}
+
+	&__lower {
+		background-color: var(--wp--preset--color--black);
+		color: var(--wp--preset--color--white);
+	}
+}

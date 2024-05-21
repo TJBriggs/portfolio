@@ -1,0 +1,1 @@
+.product-feature__callouts{-ms-grid-columns:1fr;display:-ms-grid;display:grid;gap:20px;grid-template-columns:1fr;margin-top:100px}@media(min-width:768px){.product-feature__callouts{-ms-grid-columns:1fr 2fr 1fr;grid-template-columns:1fr 2fr 1fr}}.product-feature .column--center{display:none}@media(min-width:768px){.product-feature .column--center{display:block}}

@@ -1,0 +1,13 @@
+{
+	"apiVersion": 2,
+	"name": "mx/ss-box",
+	"version": "0.1.0",
+	"title": "Ss Box",
+	"category": "mx-category",
+	"icon": "superhero-alt",
+	"description": "Starter block written with ESNext standard and JSX support.",
+	"textdomain": "ss-box",
+	"editorScript": "file:./build/index.js",
+	"editorStyle": "file:./build/index.css",
+	"style": "file:./build/style-index.css"
+}

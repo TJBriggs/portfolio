@@ -1,0 +1,53 @@
+/**
+ *
+ * Pagination Styles
+ *
+ */
+.pagination {
+	display: flex;
+	justify-content: space-between;
+	margin: var(--wp--custom--padding--medium) 0 var(--wp--custom--padding--large);
+	width: 100%;
+
+	&__item {
+
+		a {
+			align-items: center;
+			color: var(--wp--preset--color--link);
+			display: flex;
+			text-decoration: none;
+		}
+
+		svg {
+			height: 33px;
+
+			@media (--bp--xlarge) {
+				height: 50px;
+			}
+
+			* {
+				fill: var(--wp--preset--color--link);
+			}
+		}
+
+		span {
+			display: block;
+			font-size: 15px;
+			font-weight: var(--wp--custom--font-weight--bold);
+		}
+	}
+
+	&__prev {
+
+		svg {
+			margin-right: 15px;
+		}
+	}
+
+	&__next {
+
+		svg {
+			margin-left: 15px;
+		}
+	}
+}

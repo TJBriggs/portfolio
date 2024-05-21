@@ -1,0 +1,59 @@
+/**
+ *
+ * Frontend Styles
+ *
+ */
+.product-hero {
+	padding: 50px 0;
+
+	&__default-inner {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	&__copy,
+	&__image-wrap {
+		width: 100%;
+
+		@media (min-width: 768px) {
+			width: 40%;
+		}
+	}
+
+	&__tertiary-buttons {
+		gap: 15px 3%;
+		max-width: 460px;
+
+		.product-hero__link {
+			display: inline-block;
+			width: 48.5%;
+
+			&:nth-of-type(even) {
+				margin-right: 0;
+			}
+
+			a {
+				width: 100%;
+			}
+		}
+	}
+
+	&__primary-buttons {
+		max-width: 460px;
+	}
+
+	&__image-wrap {
+		padding: 0 50px 50px;
+		position: relative;
+	}
+
+	&__cards {
+		bottom: 0;
+		display: flex;
+		flex-wrap: wrap;
+		left: 0;
+		position: absolute;
+		width: 100%;
+	}
+}

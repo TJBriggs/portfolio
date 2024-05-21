@@ -1,0 +1,159 @@
+/**
+ *
+ * Success Story Cards
+ *
+ */
+.ss-card {
+	background-color: var(--wp--preset--color--white);
+	border: 1px solid var(--wp--preset--color--gray-2);
+	display: flex !important;
+	flex-wrap: wrap !important;
+	height: 500px !important;
+	margin: 0 auto;
+	padding-top: 50px;
+	position: relative;
+	width: 100%;
+
+	@media (min-width: 1025px) {
+		height: auto !important;
+		margin: 0;
+		padding-top: 15px;
+	}
+
+	&__image-content {
+		background-blend-mode: soft-light, normal, darken;
+		background-position: bottom;
+		background-repeat: no-repeat;
+		background-size: 100% 270px, contain;
+		width: 100%;
+
+		@media (min-width: 700px) {
+			background-size: 100% 242px, contain;
+		}
+
+		@media (min-width: 1025px) {
+			background-size: contain, contain, contain;
+			padding-top: 0;
+			position: relative;
+			width: 46%;
+		}
+	}
+
+	&__mobile-logo,
+	&__mobile-text {
+		@media (min-width: 1025px) {
+			display: none !important;
+		}
+	}
+
+	&__mobile-logo {
+		max-width: 100px;
+		position: absolute;
+		right: 20px;
+		top: 20px;
+	}
+
+	&__overlay-wrap {
+		line-height: 0;
+		z-index: 4;
+	}
+
+	&__overlay-inner {
+		bottom: 0;
+		padding: 25px 25px 55px;
+		position: absolute;
+		width: 100%;
+
+		@media (min-width: 700px) {
+			padding: 25px 131px 25px 25px;
+		}
+
+		@media (min-width: 1025px) {
+			padding: 25px;
+		}
+	}
+
+	&__mobile-name,
+	&__mobile-title-dealership {
+		color: var(--wp--preset--color--white);
+		text-shadow: 0 0 12px rgba(0, 0, 0, 0.65);
+	}
+
+	&__mobile-name {
+		margin: 20px 0 0;
+	}
+
+	&__mobile-title-dealership {
+		margin-bottom: 0;
+	}
+
+	&__mobile-text {
+		color: var(--wp--preset--color--white);
+
+		@media (min-width: 700px) {
+			max-width: 175px;
+		}
+	}
+
+	&__motto-image {
+		max-width: 175px;
+
+		@media (min-width: 700px) {
+			max-width: 185px;
+		}
+
+		@media (min-width: 1025px) {
+			max-width: 100%;
+		}
+	}
+
+	&__desktop-content {
+		display: none;
+
+		@media (min-width: 1025px) {
+			display: block;
+			padding: 30px 30px 76px;
+			width: 54%;
+		}
+	}
+
+	&__quote {
+		@media (min-width: 1025px) {
+			display: block;
+			font-size: 20px !important;
+			margin-bottom: 25px;
+		}
+
+		@media (min-width: 1200px) {
+			font-size: 28px !important;
+		}
+
+		@media (min-width: 1450px) {
+			font-size: 32px !important;
+		}
+	}
+
+	&__name,
+	&__title-dealership {
+		color: var(--wp--preset--color--black) !important;
+		margin-bottom: 0;
+		max-width: 200px;
+	}
+
+	&__product-logo {
+		margin-top: 20px;
+		max-width: 120px;
+	}
+
+	&__links {
+		bottom: 0;
+		position: absolute;
+		right: 0;
+	}
+
+	&.slick-slide {
+		@media (min-width: 1025px) {
+			margin: 1px; /* Fixes border clip issue on desktop */
+		}
+	}
+}

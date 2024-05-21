@@ -1,0 +1,17 @@
+{
+	"apiVersion": 2,
+	"name": "mx/media-block",
+	"version": "0.1.0",
+	"title": "Media Block",
+	"category": "media",
+	"icon": "editor-video",
+	"description": "Basic block that allows you to insert different media types.",
+	"parent": [
+		"mx/alternating-feature",
+		"mx/centered-media"
+	],
+	"textdomain": "mx-blocks-plugin",
+	"editorScript": "file:./build/index.js",
+	"editorStyle": "file:./build/index.css",
+	"style": "file:./build/style-index.css"
+}

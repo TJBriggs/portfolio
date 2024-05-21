@@ -1,0 +1,29 @@
+/**
+ *
+ * Editor Styles
+ *
+ */
+
+.cards--founders {
+
+	.mt-card {
+		min-height: 420px;
+		/* This may need to change depending on final images and person with longest title */
+
+		.mt-card__copy {
+			min-height: 230px;
+		}
+	}
+}
+
+.cards--founders {
+
+	.mt-card {
+		min-height: 485px;
+		/* This may need to change depending on final images and person with longest title */
+
+		.mt-card__copy {
+			min-height: 230px;
+		}
+	}
+}

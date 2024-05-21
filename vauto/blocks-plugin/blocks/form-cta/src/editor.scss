@@ -1,0 +1,23 @@
+/**
+ *
+ * Editor Styles
+ *
+ */
+
+.wp-block-mx-form-cta {
+
+
+	.icon-callout {
+
+		&.icon-left {
+
+			figure {
+				width: 50px !important;
+
+				>div {
+					width: 100% !important;
+				}
+			}
+		}
+	}
+}

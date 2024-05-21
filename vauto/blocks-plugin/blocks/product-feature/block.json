@@ -1,0 +1,47 @@
+{
+	"apiVersion": 2,
+	"name": "mx/product-feature",
+	"version": "0.1.0",
+	"title": "Product Feature",
+	"category": "features",
+	"icon": "schedule",
+	"description": "Complex block to feature product details.",
+	"attributes": {
+		"marginBottom": {
+			"type": "string",
+			"default": "none"
+		},
+		"marginTop": {
+			"type": "string",
+			"default": "none"
+		},
+		"paddingBottom": {
+			"type": "string",
+			"default": "default"
+		},
+		"paddingTop": {
+			"type": "string",
+			"default": "default"
+		},
+		"widthOption": {
+			"type": "string",
+			"default": "centered"
+		},
+		"widthIcon": {
+			"type": "string"
+		}
+	},
+	"supports": {
+		"anchor": true,
+		"reusable": true,
+		"html": false,
+		"color": {
+			"background": true,
+			"gradients": true
+		}
+	},
+	"textdomain": "mx-blocks-plugin",
+	"editorScript": "file:./build/index.js",
+	"editorStyle": "file:./build/index.css",
+	"style": "file:./build/style-index.css"
+}

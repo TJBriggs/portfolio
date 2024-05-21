@@ -1,0 +1,61 @@
+/*!***************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!../../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!../../node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/style.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************************/
+/**
+ *
+ * Frontend Styles
+ *
+ */
+.heading-button {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+.heading-button__heading {
+  margin-bottom: 20px;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .heading-button__heading {
+    align-items: center;
+    display: flex;
+    margin-bottom: 0;
+    width: 60%;
+  }
+}
+.heading-button__links {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .heading-button__links {
+    width: 30%;
+  }
+}
+.heading-button--text-link, .heading-button--arrow-link {
+  position: relative;
+}
+.heading-button--text-link .heading-button__heading, .heading-button--arrow-link .heading-button__heading {
+  margin-bottom: 10px;
+}
+@media (min-width: 481px) {
+  .heading-button--text-link .heading-button__heading, .heading-button--arrow-link .heading-button__heading {
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 768px) {
+  .heading-button--text-link .heading-button__heading, .heading-button--arrow-link .heading-button__heading {
+    width: 100%;
+  }
+}
+@media (min-width: 481px) {
+  .heading-button--text-link .heading-button__links, .heading-button--arrow-link .heading-button__links {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+  }
+}
+
+/*# sourceMappingURL=style-index.css.map*/

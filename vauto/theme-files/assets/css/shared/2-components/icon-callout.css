@@ -1,0 +1,32 @@
+/**
+ *
+ * Icon Callout Styles
+ *
+ */
+
+/* .icon-callout {
+	margin-block-start: 0 !important;
+
+	&.icon-left {
+		align-items: center;
+		display: flex;
+		flex-wrap: wrap;
+
+		figure {
+			align-items: center;
+			display: inline-flex;
+			width: 50px;
+		}
+
+		h3 {
+			display: inline-block;
+			margin: 0;
+			padding-left: 15px;
+			width: calc(100% - 50px);
+		}
+
+		p {
+			margin-top: 10px;
+		}
+	}
+} */

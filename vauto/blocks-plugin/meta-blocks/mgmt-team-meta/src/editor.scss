@@ -1,0 +1,56 @@
+/**
+ *
+ * Editor Styles
+ *
+ */
+
+.management-team {
+
+	&__default-inner {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.meta-fields {
+
+		@media (min-width: 768px) {
+			padding-right: 100px;
+			width: 70%;
+		}
+	}
+
+	.picker__preview-image {
+		background-color: #eeeeee;
+		display: inline-block;
+		width: auto;
+	}
+
+	.mt-card__preview-wrap {
+
+		@media (min-width: 768px) {
+			width: 30%;
+		}
+	}
+
+	.mt-modal__preview-wrap {
+		width: 100%;
+	}
+
+	.mt-modal {
+		display: flex;
+
+		&__meta {
+
+			@media (min-width: 768px) {
+				width: 40%;
+			}
+		}
+
+		&__bio {
+
+			@media (min-width: 768px) {
+				width: 60%;
+			}
+		}
+	}
+}

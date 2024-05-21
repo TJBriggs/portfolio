@@ -1,0 +1,50 @@
+{
+	"$schema": "https://json.schemastore.org/block.json",
+	"apiVersion": 2,
+	"name": "mx/callout-bar",
+	"version": "0.1.0",
+	"title": "Callout Bar",
+	"category": "callouts",
+	"description": "Centered callout with background-color.",
+	"attributes": {
+		"marginBottom": {
+			"type": "string",
+			"default": "none"
+		},
+		"marginTop": {
+			"type": "string",
+			"default": "none"
+		},
+		"paddingBottom": {
+			"type": "string",
+			"default": "none"
+		},
+		"paddingTop": {
+			"type": "string",
+			"default": "none"
+		},
+		"widthOption": {
+			"type": "string",
+			"default": "centered"
+		},
+		"widthIcon": {
+			"type": "string"
+		}
+	},
+	"example": {
+		"viewportWidth": 1200
+	},
+	"supports": {
+		"anchor": true,
+		"reusable": true,
+		"html": false,
+		"color": {
+			"background": true,
+			"gradients": true
+		}
+	},
+	"textdomain": "mx-blocks-plugin",
+	"editorScript": "file:./build/index.js",
+	"editorStyle": "file:./build/index.css",
+	"style": "file:./build/style-index.css"
+}

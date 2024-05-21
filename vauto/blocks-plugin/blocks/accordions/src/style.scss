@@ -1,0 +1,31 @@
+/**
+ *
+ * Frontend Styles
+ *
+ */
+.accordions {
+
+	&--sidebar {
+
+		.accordions__flexible-inner {
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		.accordions__main {
+
+			@media (min-width: 768px) {
+				width: 65%;
+			}
+		}
+
+		.accordions__sidebar {
+
+			@media (min-width: 768px) {
+				margin-top: 0;
+				padding-left: 100px;
+				width: 35%;
+			}
+		}
+	}
+}

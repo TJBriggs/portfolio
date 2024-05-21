@@ -1,0 +1,24 @@
+/**
+ *
+ * Frontend Styles
+ *
+ */
+.wp-block-embed-youtube,
+.wp-embed-aspect-16-9 {
+	margin: 0 auto !important;
+	max-width: 960px;
+
+	iframe {
+		aspect-ratio: 16 / 9;
+		height: auto;
+		width: 100%;
+	}
+
+	&.alignleft {
+		margin-left: 0 !important;
+	}
+
+	&.alignright {
+		margin-right: 0 !important;
+	}
+}

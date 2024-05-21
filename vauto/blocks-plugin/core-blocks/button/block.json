@@ -1,0 +1,119 @@
+{
+	"$schema": "https://json.schemastore.org/block.json",
+	"apiVersion": 2,
+	"name": "mx/button",
+	"version": "0.1.0",
+	"title": "Button",
+	"category": "design",
+	"description": "Prompt visitors to take action with a button-style link.",
+	"keywords": [
+		"link"
+	],
+	"textdomain": "mx-blocks-plugin",
+	"parent": [
+		"mx/button"
+	],
+	"attributes": {
+		"linkType": {
+			"type": "string",
+			"default": "basic"
+		},
+		"linkIcon": {
+			"type": "string"
+		},
+		"url": {
+			"type": "string",
+			"source": "attribute",
+			"selector": "a",
+			"attribute": "href"
+		},
+		"modalURL": {
+			"type": "string",
+			"source": "attribute",
+			"selector": "a",
+			"attribute": "data-src"
+		},
+		"videoID": {
+			"type": "string",
+			"default": ""
+		},
+		"videoType": {
+			"type": "string",
+			"default": "youtube"
+		},
+		"videoURL": {
+			"type": "string",
+			"default": ""
+		},
+		"title": {
+			"type": "string",
+			"source": "attribute",
+			"selector": "a",
+			"attribute": "title"
+		},
+		"text": {
+			"type": "string",
+			"source": "html",
+			"selector": "a"
+		},
+		"linkTarget": {
+			"type": "string",
+			"source": "attribute",
+			"selector": "a",
+			"attribute": "target"
+		},
+		"rel": {
+			"type": "string",
+			"source": "attribute",
+			"selector": "a",
+			"attribute": "rel"
+		},
+		"placeholder": {
+			"type": "string"
+		},
+		"backgroundColor": {
+			"type": "string"
+		},
+		"textColor": {
+			"type": "string"
+		},
+		"gradient": {
+			"type": "string"
+		},
+		"width": {
+			"type": "number"
+		}
+	},
+	"supports": {
+		"anchor": true,
+		"align": true,
+		"alignWide": false,
+		"__experimentalSelector": ".wp-block-button__link"
+	},
+	"styles": [
+		{
+			"name": "primary-button",
+			"label": "Primary",
+			"isDefault": true
+		},
+		{
+			"name": "secondary-button",
+			"label": "Secondary"
+		},
+		{
+			"name": "tertiary-button",
+			"label": "Tertiary"
+		},
+		{
+			"name": "text-link",
+			"label": "Text Link"
+		},
+		{
+			"name": "arrow-link",
+			"label": "Arrow Link"
+		}
+	],
+	"editorScript": "file:./build/index.js",
+	"editorStyle": "file:./build/index.css",
+	"style": "file:./build/style-index.css"
+}

@@ -1,0 +1,32 @@
+/*!***************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!../../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!../../node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/style.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************************/
+/**
+ *
+ * Frontend Styles
+ *
+ */
+.centered-text {
+  /* Background not full-width */
+}
+.centered-text__text {
+  padding: 0 var(--wp--custom--padding--small);
+}
+.centered-text__links {
+  margin-top: 30px;
+}
+.centered-text.layout-width--centered {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
+}
+
+.post-type-post .centered-text,
+.single-post .centered-text {
+  padding-bottom: var(--wp--custom--padding--medium);
+  padding-top: var(--wp--custom--padding--medium);
+}
+
+/*# sourceMappingURL=style-index.css.map*/

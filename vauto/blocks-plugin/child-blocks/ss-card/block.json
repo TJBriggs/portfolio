@@ -1,0 +1,13 @@
+{
+	"apiVersion": 2,
+	"name": "mx/ss-card",
+	"version": "0.1.0",
+	"title": "Success Story Card",
+	"category": "cards",
+	"icon": "analytics",
+	"description": "Basic card block to display a success story",
+	"textdomain": "mx-blocks-plugin",
+	"editorScript": "file:./build/index.js",
+	"editorStyle": "file:./build/index.css",
+	"style": "file:./build/style-index.css"
+}

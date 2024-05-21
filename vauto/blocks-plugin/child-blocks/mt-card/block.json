@@ -1,0 +1,13 @@
+{
+	"apiVersion": 2,
+	"name": "mx/mt-card",
+	"version": "0.1.0",
+	"title": "Management Team Card",
+	"category": "cards",
+	"icon": "businessman",
+	"description": "Starter block written with ESNext standard and JSX support.",
+	"textdomain": "mgmt-card",
+	"editorScript": "file:./build/index.js",
+	"editorStyle": "file:./build/index.css",
+	"style": "file:./build/style-index.css"
+}

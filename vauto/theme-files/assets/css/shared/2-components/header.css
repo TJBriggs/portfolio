@@ -1,0 +1,75 @@
+/**
+ *
+ * Header Styles
+ *
+ */
+.site-header {
+	background-color: var(--wp--preset--color--white);
+	border-bottom: 1px solid #cccccc;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 100;
+
+	.admin-bar & {
+		position: absolute;
+		top: 46px;
+
+		@media (min-width: 783px) {
+			position: fixed;
+			top: 32px;
+		}
+	}
+
+	&__wrap {
+		align-items: center;
+		display: flex;
+		padding: 8px 0;
+		position: relative;
+	}
+
+	&__logo {
+		display: flex;
+		height: 39px;
+		width: 166px;
+
+		img,
+		svg {
+			display: block;
+		}
+	}
+
+	&__nav-wrap {
+		width: calc(100% - 166px);
+	}
+}
+
+
+@media (min-width: 1101px) {
+
+	.site-header {
+
+		.site-header__default-inner {
+			padding-right: 0;
+
+			@media (min-width: 1200px) {
+				padding-right: var(--wp--custom--padding--small);
+			}
+		}
+
+		&__wrap {
+			padding: 16px 0 0;
+		}
+
+		&__logo {
+			height: 80px;
+			width: 196px;
+		}
+
+		&__nav-wrap {
+			margin-left: var(--wp--custom--padding--small);
+			width: calc(100% - 196px);
+		}
+	}
+}

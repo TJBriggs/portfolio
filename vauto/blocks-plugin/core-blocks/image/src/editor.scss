@@ -1,0 +1,192 @@
+// WordPress Core Variables
+$break-huge: 1440px;
+$break-wide: 1280px;
+$break-xlarge: 1080px;
+$break-large: 960px; // admin sidebar auto folds
+$break-medium: 782px; // adminbar goes big
+$break-small: 600px;
+$break-mobile: 480px;
+$break-zoomed-in: 280px;
+$grid-unit: 8px;
+$grid-unit-05: 0.5 * $grid-unit; // 4px
+$grid-unit-10: 1 * $grid-unit; // 8px
+$grid-unit-15: 1.5 * $grid-unit; // 12px
+$grid-unit-20: 2 * $grid-unit; // 16px
+$grid-unit-30: 3 * $grid-unit; // 24px
+$grid-unit-40: 4 * $grid-unit; // 32px
+$grid-unit-50: 5 * $grid-unit; // 40px
+$grid-unit-60: 6 * $grid-unit; // 48px
+$button-size: 36px;
+$border-width: 1px;
+
+figure.wp-block-image:not(.wp-block) {
+	margin: 0;
+}
+
+.wp-block-image {
+	position: relative;
+
+	.is-applying img,
+	&.is-transient img {
+		opacity: 0.3;
+	}
+
+	figcaption img {
+		display: inline;
+	}
+
+	// Shown while image is being uploaded
+	.components-spinner {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-top: -9px;
+		margin-left: -9px;
+	}
+
+	&:not(.is-style-rounded)>div:not(.components-placeholder) {
+		border-radius: inherit;
+	}
+}
+
+// This is necessary for the editor resize handles to accurately work on a non-floated, non-resized, small image.
+.wp-block-image .components-resizable-box__container {
+	display: inline-block;
+
+	img {
+		display: block;
+		width: inherit;
+		height: inherit;
+	}
+}
+
+.block-editor-block-list__block[data-type="core/image"] .block-editor-block-toolbar .block-editor-url-input__button-modal {
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: $border-width 0;
+
+	@media (min-width: $break-small) {
+		margin: $border-width;
+	}
+}
+
+[data-align="wide"]>.wp-block-image,
+[data-align="full"]>.wp-block-image {
+	img {
+		height: auto;
+		width: 100%;
+	}
+}
+
+.wp-block[data-align="left"],
+.wp-block[data-align="center"],
+.wp-block[data-align="right"] {
+	>.wp-block-image {
+		display: table;
+
+		>figcaption {
+			display: table-caption;
+			caption-side: bottom;
+		}
+	}
+}
+
+*:not([data-align]) {
+	>.wp-block-image {
+		display: grid;
+		grid-template-columns: [image] minmax(0, max-content) [placeholder] auto;
+
+		.components-placeholder {
+			grid-column: placeholder;
+		}
+
+		>div:not(.components-placeholder) {
+			grid-column: image;
+		}
+
+		>figcaption {
+			grid-column: image;
+			display: table-caption;
+			caption-side: bottom;
+		}
+	}
+}
+
+.wp-block[data-align="left"]>.wp-block-image {
+	margin-right: 1em;
+	margin-left: 0;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.wp-block[data-align="right"]>.wp-block-image {
+	margin-left: 1em;
+	margin-right: 0;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.wp-block[data-align="center"]>.wp-block-image {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+.wp-block-image__crop-area {
+	position: relative;
+	max-width: 100%;
+	width: 100%;
+}
+
+.wp-block-image__crop-icon {
+	padding: 0 8px;
+	min-width: 48px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	svg {
+		fill: currentColor;
+	}
+}
+
+.wp-block-image__zoom {
+	.components-popover__content {
+		overflow: visible;
+		min-width: 260px;
+	}
+
+	.components-range-control {
+		flex: 1;
+	}
+
+	.components-base-control__field {
+		display: flex;
+		margin-bottom: 0;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+}
+
+.wp-block-image__aspect-ratio {
+	height: $grid-unit-60 - $border-width - $border-width;
+	margin-bottom: -$grid-unit-10;
+	display: flex;
+	align-items: center;
+
+	.components-button {
+		width: $button-size;
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+.wp-block-mx-image {
+	&.aligncenter {
+		>div {
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+}

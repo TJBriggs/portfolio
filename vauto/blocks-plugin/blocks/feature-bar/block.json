@@ -1,0 +1,40 @@
+{
+	"$schema": "https://json.schemastore.org/block.json",
+	"apiVersion": 2,
+	"name": "mx/feature-bar",
+	"version": "0.1.0",
+	"title": "Feature Bar",
+	"category": "features",
+	"description": "Featue block with centered text and a background color.",
+	"textdomain": "mx-blocks-plugin",
+	"attributes": {
+		"marginBottom": {
+			"type": "string",
+			"default": "none"
+		},
+		"marginTop": {
+			"type": "string",
+			"default": "none"
+		},
+		"paddingBottom": {
+			"type": "string",
+			"default": "default"
+		},
+		"paddingTop": {
+			"type": "string",
+			"default": "default"
+		}
+	},
+	"supports": {
+		"anchor": true,
+		"reusable": true,
+		"html": false,
+		"color": {
+			"background": true,
+			"gradients": true
+		}
+	},
+	"editorScript": "file:./build/index.js",
+	"editorStyle": "file:./build/index.css",
+	"style": "file:./build/style-index.css"
+}

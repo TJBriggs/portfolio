@@ -1,0 +1,53 @@
+/**
+ *
+ * Post Picker Styles
+ *
+ */
+.post-picker {
+	background-color: var(--wp--preset--color--white);
+	padding: 15px;
+	width: 100%;
+
+	&__preview {
+		display: flex;
+		flex-wrap: wrap;
+
+		label {
+			display: block;
+			width: 100%;
+		}
+
+		p {
+			color: var(--wp--preset--color--black) !important;
+			display: inline-block;
+			margin: 0 !important;
+			width: calc(100% - 140px);
+		}
+
+		button {
+			display: inline-block;
+			width: 130px;
+			margin-left: 10px;
+		}
+	}
+
+
+	&__spinner {
+		align-items: center;
+		display: flex;
+
+		svg {
+			margin: 0;
+		}
+
+		span {
+			display: inline-block;
+			font-size: 12px;
+			margin-left: 10px;
+		}
+	}
+
+	&__posts {
+		margin-top: 15px;
+	}
+}

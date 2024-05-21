@@ -1,0 +1,8 @@
+/**
+ *
+ * Base Styles
+ *
+ */
+.admin-only {
+	display: none !important;
+}

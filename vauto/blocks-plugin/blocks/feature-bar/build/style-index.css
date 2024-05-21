@@ -1,0 +1,43 @@
+/*!***************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!../../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!../../node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/style.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************************/
+/**
+ *
+ * Frontend Styles
+ *
+ */
+.feature-bar {
+  align-items: center;
+  display: flex;
+  min-height: 200px;
+}
+.feature-bar__copy {
+  color: var(--wp--preset--color--white);
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .feature-bar__copy {
+    text-align: left;
+  }
+}
+.feature-bar__text {
+  margin-top: 5px;
+}
+.feature-bar__text a {
+  color: var(--wp--preset--color--white);
+  text-decoration: underline;
+}
+.feature-bar__text a:hover, .feature-bar__text a:focus {
+  text-decoration: none;
+}
+
+/* Modifers */
+.feature-bar--quote {
+  padding: var(--wp--custom--padding--large) 0;
+}
+.feature-bar--quote .feature-bar__heading {
+  font-weight: 400;
+  max-width: 1100px;
+}
+
+/*# sourceMappingURL=style-index.css.map*/

@@ -1,0 +1,29 @@
+{
+	"apiVersion": 2,
+	"name": "mx/accordion",
+	"version": "0.1.2",
+	"title": "Accordion",
+	"category": "text",
+	"icon": "plus-alt2",
+	"description": "Basic accordion block that shows and hides content.",
+	"attributes": {
+		"primaryAccordion": {
+			"type": "boolean",
+			"default": false
+		}
+	},
+	"supports": {
+		"anchor": true,
+		"reusable": false,
+		"html": false,
+		"color": {
+			"background": true,
+			"gradients": true,
+			"link": true
+		}
+	},
+	"textdomain": "mx-blocks-plugin",
+	"editorScript": "file:./build/index.js",
+	"editorStyle": "file:./build/index.css",
+	"style": "file:./build/style-index.css"
+}

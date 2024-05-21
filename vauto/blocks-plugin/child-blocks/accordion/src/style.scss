@@ -1,0 +1,65 @@
+/**
+ *
+ * Frontend Styles
+ *
+ */
+.accordion {
+
+	&:last-of-type {
+		margin-bottom: 0;
+	}
+
+	&__toggle {
+		cursor: pointer;
+		padding: var(--wp--custom--padding--small);
+		position: relative;
+
+		&::before,
+		&::after {
+			background-color: var(--wp--preset--color--black);
+			content: "";
+			position: absolute;
+			height: 20px;
+			right: 28px;
+			top: 24px;
+			transition: transform 150ms cubic-bezier(0.645, 0.045, 0.355, 1);
+			width: 3px;
+		}
+
+		&::after {
+			transform: rotate(90deg);
+		}
+	}
+
+	&__content {
+		padding: var(--wp--custom--padding--small);
+		display: none;
+	}
+
+	&--primary {
+		background-color: transparent;
+		border: 1px solid var(--wp--preset--color--black);
+		margin-bottom: var(--wp--custom--padding--small);
+
+		>.accordion__content {
+			padding: 0;
+
+			.accordion {
+
+				&:nth-of-type(odd) {
+					background-color: var(--wp--preset--color--gray-3);
+				}
+			}
+		}
+	}
+
+	&.expanded {
+
+		>.accordion__toggle {
+
+			&::before {
+				transform: rotate(+90deg);
+			}
+		}
+	}
+}

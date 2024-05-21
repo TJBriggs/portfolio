@@ -1,0 +1,33 @@
+{
+	"apiVersion": 2,
+	"name": "mx/heading-button",
+	"version": "0.1.0",
+	"title": "Heading w/Button",
+	"category": "ctas",
+	"icon": "button",
+	"description": "Basic block with a heading on the left and CTA button on the right.",
+	"attributes": {
+		"widthOption": {
+			"type": "string",
+			"default": "centered"
+		},
+		"widthIcon": {
+			"type": "string"
+		}
+	},
+	"supports": {
+		"anchor": true,
+		"reusable": true,
+		"html": false,
+		"color": {
+			"background": true
+		}
+	},
+	"example": {
+		"viewportWidth": 1200
+	},
+	"textdomain": "mx-blocks-plugin",
+	"editorScript": "file:./build/index.js",
+	"editorStyle": "file:./build/index.css",
+	"style": "file:./build/style-index.css"
+}

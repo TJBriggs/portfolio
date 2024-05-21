@@ -1,0 +1,147 @@
+/**
+ *
+ * Frontend Styles
+ *
+ */
+.cards {
+
+	.columns {
+		--wp--style--block-gap: 20px;
+	}
+
+	/* Override WP default card styles */
+	.card {
+		border: 1px solid var(--wp--preset--color--gray-2);
+		margin: 0;
+		max-width: none;
+		min-width: 0;
+		padding: 15px 15px 25px;
+		position: relative;
+
+		&__media {
+			line-height: 0;
+			margin: 0 auto 25px;
+		}
+
+		p {
+
+			&:last-of-type {
+				margin-bottom: 75px;
+			}
+		}
+
+		.wp-block-mx-buttons {
+			bottom: 25px;
+			left: 15px;
+			position: absolute;
+			right: 15px;
+			width: calc(100% - 30px);
+		}
+
+		&.add-tag--true {
+
+			&::before {
+				background-image: var(--wp--preset--gradient--orange-gradient);
+				content: "";
+				height: 100px;
+				left: 0;
+				position: absolute;
+				top: 0;
+				width: 45px;
+			}
+		}
+	}
+
+	&--centered-heading {
+
+		.columns {
+			margin-top: 50px;
+		}
+	}
+
+	&--horizontal {
+		.card {
+			align-items: center;
+			padding: 0;
+			display: flex;
+			flex-wrap: wrap;
+
+			&__media {
+				margin: 0;
+				width: 100%;
+
+				@media (min-width: 850px) {
+					height: 100%;
+					width: 40%;
+				}
+
+				img {
+					object-fit: cover;
+					height: 100%;
+					width: 100%;
+				}
+			}
+
+			&__copy {
+				padding: 25px 15px;
+
+				@media (min-width: 850px) {
+					padding: 15px;
+					width: 60%;
+				}
+
+				@media (min-width: 1024px) {
+					padding: 35px;
+				}
+			}
+
+			.wp-block-mx-buttons {
+				bottom: unset;
+				left: unset;
+				position: static;
+				right: unset;
+				width: auto;
+			}
+		}
+	}
+
+	&--single {
+
+		.column {
+			width: 100% !important;
+
+			@media (min-width: 640px) {
+				width: 75% !important;
+			}
+
+			@media (min-width: 768px) {
+				width: 50% !important;
+			}
+		}
+	}
+
+	&--icons {
+		.card__media {
+			max-width: 70px;
+		}
+	}
+
+	&--slider {
+
+		.cards__slider {
+			padding-bottom: 40px;
+		}
+
+		.slick-track {
+			gap: 20px;
+		}
+
+		.column {
+			margin: 0;
+		}
+
+		.slick-dots {
+			bottom: 0;
+		}
+	}
+}

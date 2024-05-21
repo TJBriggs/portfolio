@@ -1,0 +1,30 @@
+/**
+ *
+ * Editor Styles
+ *
+ */
+
+.product-hero {
+
+	&__tertiary-buttons {
+		gap: 15px 3% !important;
+	}
+
+	.wp-block-button__link {
+		width: 100%;
+	}
+
+	// &__image-wrap {
+	// 	position: relative !important;
+	// }
+
+	&__cards {
+		position: absolute !important;
+
+		.block-editor-block-list__layout {
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+	}
+}

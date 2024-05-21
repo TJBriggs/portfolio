@@ -1,0 +1,15 @@
+/**
+ *
+ * Frontend Styles
+ *
+ */
+.hero-card {
+
+	&__image {
+		width: 200px; // Temp width to get image to show in editor
+
+		img {
+			width: 200px;
+		}
+	}
+}

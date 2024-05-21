@@ -1,0 +1,38 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "mx/mgmt-team-meta",
+	"version": "0.1.2",
+	"title": "Management Team Fields",
+	"category": "meta",
+	"icon": "id-alt",
+	"description": "Meta Block for Management Team fields.",
+	"attributes": {
+		"allowedMediaTypes": {
+			"type": "array",
+			"default": [
+				"image/*"
+			]
+		},
+		"personMediaAlt": {
+			"type": "string"
+		},
+		"personMediaID": {
+			"type": "number"
+		},
+		"personMediaURL": {
+			"type": "string"
+		},
+		"personMediaLabelText": {
+			"type": "string",
+			"default": "Image"
+		}
+	},
+	"example": {
+		"viewportWidth": 1200
+	},
+	"textdomain": "mx-blocks-plugin",
+	"editorScript": "file:./build/index.js",
+	"editorStyle": "file:./build/index.css",
+	"style": "file:./build/style-index.css"
+}

@@ -1,0 +1,187 @@
+/*!***************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!../../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!../../node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/style.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************************/
+/**
+ *
+ * Frontend Styles
+ *
+ */
+@media (max-width: 767px) {
+  .cta-boxes .columns {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+}
+.cta-boxes .cta-box {
+  margin: 0;
+  min-height: 350px;
+  padding: 0 25px 46px;
+  position: relative;
+}
+@media (min-width: 480px) {
+  .cta-boxes .cta-box {
+    min-height: 350px;
+    padding: 0 35px 0;
+  }
+}
+@media (min-width: 640px) {
+  .cta-boxes .cta-box {
+    min-height: 400px;
+    padding: 0 75px;
+  }
+}
+@media (min-width: 768px) {
+  .cta-boxes .cta-box {
+    padding: 0 35px;
+    min-height: 410px;
+  }
+}
+@media (min-width: 1024px) {
+  .cta-boxes .cta-box {
+    min-height: 410px;
+    padding: 0 75px;
+  }
+}
+.cta-boxes .cta-box h1,
+.cta-boxes .cta-box h2,
+.cta-boxes .cta-box h3 {
+  margin-bottom: 15px;
+}
+.cta-boxes .cta-box p:last-of-type {
+  margin-bottom: 0;
+}
+.cta-boxes .cta-box .wp-block-mx-buttons {
+  bottom: 0;
+  position: absolute;
+  right: 0;
+  width: 100%;
+}
+@media (min-width: 480px) {
+  .cta-boxes .cta-box .wp-block-mx-buttons {
+    width: auto;
+  }
+}
+.cta-boxes .cta-box .wp-block-mx-buttons .wp-block-mx-button {
+  width: 100%;
+}
+.cta-boxes .cta-box .wp-block-mx-buttons .wp-block-mx-button a {
+  width: 100%;
+}
+.cta-boxes .cta-box .play-heading {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  top: 23px;
+}
+@media (min-width: 480px) {
+  .cta-boxes .cta-box .play-heading {
+    top: 0;
+  }
+}
+.cta-boxes .cta-box .play-heading figure {
+  text-align: center;
+  width: 100%;
+}
+@media (min-width: 480px) {
+  .cta-boxes .cta-box .play-heading figure {
+    width: 65px;
+  }
+}
+.cta-boxes .cta-box .play-heading h1,
+.cta-boxes .cta-box .play-heading h2,
+.cta-boxes .cta-box .play-heading h3 {
+  margin: 20px auto 0;
+  width: 100%;
+}
+@media (min-width: 480px) {
+  .cta-boxes .cta-box .play-heading h1,
+.cta-boxes .cta-box .play-heading h2,
+.cta-boxes .cta-box .play-heading h3 {
+    margin: 0;
+    padding-left: 15px;
+    max-width: calc(100% - 65px);
+    width: auto;
+  }
+}
+
+@media (max-width: 639px) {
+  .number-stats .column {
+    width: calc(50% - var(--offset-50));
+  }
+}
+.number-stats__text {
+  margin-bottom: 40px;
+}
+
+.icon-stats .columns {
+  margin-top: 75px !important;
+}
+@media (max-width: 639px) {
+  .icon-stats .column {
+    width: calc(50% - var(--offset-50));
+  }
+}
+.icon-stats .stat__icon {
+  margin: 0 auto 10px;
+  max-width: 75px;
+}
+@media (min-width: 640px) {
+  .icon-stats .stat__icon {
+    max-width: 150px;
+    margin: 0 auto 20px;
+  }
+}
+.icon-stats .stat__text {
+  margin-top: 0;
+}
+@media (min-width: 640px) {
+  .icon-stats .stat__text {
+    margin-top: 30px;
+  }
+}
+
+.basic-callouts .column h3 {
+  margin-bottom: 35px;
+}
+.basic-callouts__icon-subheading {
+  align-items: center;
+  display: flex;
+  margin-bottom: 15px;
+}
+.basic-callouts__icon-subheading figure {
+  height: auto;
+  line-height: 0;
+  max-width: 45px;
+}
+.basic-callouts__icon-subheading .basic-callouts__subheading {
+  margin-top: 0 !important;
+  padding-left: 15px;
+}
+.basic-callouts__icon-subheading.icon-above {
+  flex-wrap: wrap;
+}
+.basic-callouts__icon-subheading.icon-above .basic-callouts__subheading {
+  margin-top: 15px !important;
+  padding-left: 0;
+  width: 100%;
+}
+.basic-callouts--heading-button .columns {
+  margin-top: 50px;
+}
+
+.cover-ctas__ctas {
+  margin-top: 50px;
+}
+.cover-ctas .cover-cta .wp-block-cover {
+  min-height: 280px;
+  padding: 30px;
+}
+@media (min-width: 480px) {
+  .cover-ctas .cover-cta .wp-block-cover {
+    min-height: 350px;
+  }
+}
+
+/*# sourceMappingURL=style-index.css.map*/

@@ -1,0 +1,15 @@
+/**
+ *
+ * Editor Styles
+ *
+ */
+
+.jump-nav {
+	margin-top: 0;
+	position: absolute;
+	top: 0;
+
+	&__links {
+		margin-top: 0 !important;
+	}
+}

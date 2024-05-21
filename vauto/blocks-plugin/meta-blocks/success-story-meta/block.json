@@ -1,0 +1,90 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "mx/success-story-meta",
+	"version": "0.1.2",
+	"title": "Success Story Fields",
+	"category": "meta",
+	"icon": "id-alt",
+	"description": "Meta Block for Success Story fields.",
+	"attributes": {
+		"allowedMediaTypes": {
+			"type": "array",
+			"default": [
+				"image/*"
+			]
+		},
+		"mottoMediaAlt": {
+			"type": "string"
+		},
+		"mottoMediaID": {
+			"type": "number"
+		},
+		"mottoMediaURL": {
+			"type": "string"
+		},
+		"mottoMediaLabelText": {
+			"type": "string",
+			"default": "Motto Image"
+		},
+		"personMediaAlt": {
+			"type": "string"
+		},
+		"personMediaID": {
+			"type": "number"
+		},
+		"personMediaURL": {
+			"type": "string"
+		},
+		"personMediaLabelText": {
+			"type": "string",
+			"default": "Person Image"
+		},
+		"productMediaAlt": {
+			"type": "string"
+		},
+		"productMediaID": {
+			"type": "number"
+		},
+		"productMediaURL": {
+			"type": "string"
+		},
+		"productMediaLabelText": {
+			"type": "string",
+			"default": "Product Image"
+		},
+		"boxMediaAlt": {
+			"type": "string"
+		},
+		"boxMediaID": {
+			"type": "number"
+		},
+		"boxMediaURL": {
+			"type": "string"
+		},
+		"boxMediaLabelText": {
+			"type": "string",
+			"default": "CTA Box Image (optional)"
+		},
+		"statIconMediaAlt": {
+			"type": "string"
+		},
+		"statIconMediaID": {
+			"type": "number"
+		},
+		"statIconMediaURL": {
+			"type": "string"
+		},
+		"statIconMediaLabelText": {
+			"type": "string",
+			"default": "Stat Icon"
+		}
+	},
+	"example": {
+		"viewportWidth": 1200
+	},
+	"textdomain": "mx-blocks-plugin",
+	"editorScript": "file:./build/index.js",
+	"editorStyle": "file:./build/index.css",
+	"style": "file:./build/style-index.css"
+}

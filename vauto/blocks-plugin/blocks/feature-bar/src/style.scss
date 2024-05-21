@@ -1,0 +1,43 @@
+/**
+ *
+ * Frontend Styles
+ *
+ */
+.feature-bar {
+	align-items: center;
+	display: flex;
+	min-height: 200px;
+
+	&__copy {
+		color: var(--wp--preset--color--white);
+		text-align: center;
+
+		@media (min-width: 768px) {
+			text-align: left;
+		}
+	}
+
+	&__text {
+		margin-top: 5px;
+
+		a {
+			color: var(--wp--preset--color--white);
+			text-decoration: underline;
+
+			&:hover,
+			&:focus {
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+/* Modifers */
+.feature-bar--quote {
+	padding: var(--wp--custom--padding--large) 0;
+
+	.feature-bar__heading {
+		font-weight: 400;
+		max-width: 1100px;
+	}
+}

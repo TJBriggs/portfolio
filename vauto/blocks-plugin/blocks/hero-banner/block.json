@@ -1,0 +1,25 @@
+{
+	"$schema": "https://json.schemastore.org/block.json",
+	"apiVersion": 2,
+	"name": "mx/hero-banner",
+	"version": "0.1.0",
+	"title": "Hero Banner",
+	"category": "heros",
+	"description": "Basic hero block with text and an orange background.",
+	"example": {
+		"viewportWidth": 1200
+	},
+	"supports": {
+		"anchor": true,
+		"reusable": true,
+		"html": false,
+		"color": {
+			"background": true,
+			"gradients": true
+		}
+	},
+	"textdomain": "mx-blocks-plugin",
+	"editorScript": "file:./build/index.js",
+	"editorStyle": "file:./build/index.css",
+	"style": "file:./build/style-index.css"
+}

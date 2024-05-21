@@ -1,0 +1,24 @@
+/**
+ *
+ * Editor Styles
+ *
+ */
+
+.wp-block-mx-product-tabs {
+
+	.product-tab {
+		display: none !important;
+
+		&:first-of-type {
+			display: block !important;
+		}
+	}
+
+	&.is-selected,
+	&.has-child-selected {
+
+		.product-tab {
+			display: block !important;
+		}
+	}
+}

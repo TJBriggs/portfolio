@@ -1,0 +1,101 @@
+/**
+ *
+ * Frontend Styles
+ *
+ */
+.feature-hero {
+
+	&__cover {
+		overflow: hidden; // fixes video bleed below copy section
+		padding: 0;
+
+		video {
+
+			@media (min-width: 768px) {
+				margin-left: auto !important;
+				width: 50% !important;
+			}
+		}
+	}
+
+	.wp-block-cover__inner-container {
+		display: flex;
+		flex-flow: column-reverse wrap;
+		margin: 0 auto;
+		max-width: var(--wp--custom--grid-width--default);
+		width: 100%;
+
+		@media (min-width: 768px) {
+			flex-flow: row wrap;
+			padding-left: var(--padding-inner);
+			padding-right: var(--padding-inner);
+		}
+	}
+
+	&__cards-wrap {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-end;
+		justify-content: center;
+		width: 100%;
+
+		@media (min-width: 768px) {
+			padding-bottom: 150px;
+			width: 50%;
+		}
+	}
+
+	&__mobile-image {
+		max-width: 300px;
+		width: 100%;
+
+		@media (min-width: 768px) {
+			display: none;
+		}
+	}
+
+	&__cards {
+		display: flex;
+	}
+
+	&__copy {
+		background-color: var(--wp--preset--color--white);
+		padding: 50px 0;
+		position: relative;
+		width: 100%;
+		z-index: 2;
+
+		@media (min-width: 768px) {
+			padding: 100px 0;
+			width: 50%;
+		}
+
+		&::before {
+			background-color: var(--wp--preset--color--white);
+			content: "";
+			height: 102%;
+			left: -100%;
+			position: absolute;
+			top: -1%;
+			width: 100%;
+			z-index: -1;
+		}
+	}
+
+	&__desktop-image,
+	&__underline-buttons {
+
+		@media (min-width: 768px) {
+			max-width: 350px;
+		}
+	}
+
+	&__desktop-image {
+		display: none;
+
+
+		@media (min-width: 768px) {
+			display: block;
+		}
+	}
+}

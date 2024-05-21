@@ -1,0 +1,22 @@
+/**
+ *
+ * Frontend Styles
+ *
+ */
+.hero-banner {
+	padding: var(--wp--custom--padding--large) 0;
+
+	&__subheading {
+		color: var(--wp--preset--color--white);
+	}
+
+	&__heading {
+		margin-top: 5px !important;
+		margin-bottom: 0;
+	}
+
+	&__text {
+		color: var(--wp--preset--color--white);
+		margin: 5px auto 0 !important;
+	}
+}

@@ -1,0 +1,1 @@
+{"version":3,"file":"index.css","mappings":";;;AAAA;;;;EAAA,C","sources":["webpack://modal-content/./src/editor.scss"],"sourcesContent":["/**\n *\n * Editor Styles\n *\n */\n\n.wp-block-mx-modal-content {\n\n}\n"],"names":[],"sourceRoot":""}

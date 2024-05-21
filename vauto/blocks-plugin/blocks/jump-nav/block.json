@@ -1,0 +1,25 @@
+{
+	"apiVersion": 2,
+	"name": "mx/jump-nav",
+	"version": "0.1.1",
+	"title": "Jump Nav",
+	"category": "utilities",
+	"icon": "superhero-alt",
+	"description": "Group of links that jump to a section of the page",
+	"attributes": {
+		"widthOption": {
+			"type": "string",
+			"default": "full"
+		},
+		"widthIcon": {
+			"type": "string"
+		}
+	},
+	"example": {
+		"viewportWidth": 1200
+	},
+	"textdomain": "mx-blocks-plugin",
+	"editorScript": "file:./build/index.js",
+	"editorStyle": "file:./build/index.css",
+	"style": "file:./build/style-index.css"
+}

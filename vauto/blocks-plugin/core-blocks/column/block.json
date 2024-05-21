@@ -1,0 +1,52 @@
+{
+	"$schema": "https://json.schemastore.org/block.json",
+	"apiVersion": 2,
+	"name": "mx/column",
+	"version": "0.1.0",
+	"title": "Column",
+	"category": "design",
+	"parent": [
+		"mx/columns"
+	],
+	"description": "A single column within a columns block.",
+	"textdomain": "mx-blocks-plugin",
+	"attributes": {
+		"addTag": {
+			"type": "boolean",
+			"default": false
+		},
+		"verticalAlignment": {
+			"type": "string"
+		},
+		"width": {
+			"type": "string"
+		},
+		"allowedBlocks": {
+			"type": "array"
+		},
+		"templateLock": {
+			"type": [
+				"string",
+				"boolean"
+			],
+			"enum": [
+				"all",
+				"insert",
+				false
+			]
+		}
+	},
+	"supports": {
+		"anchor": true,
+		"reusable": false,
+		"html": false,
+		"color": {
+			"background": true,
+			"gradients": true,
+			"link": true
+		}
+	},
+	"editorScript": "file:./build/index.js",
+	"editorStyle": "file:./build/index.css",
+	"style": "file:./build/style-index.css"
+}

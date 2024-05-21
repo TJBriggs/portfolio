@@ -1,0 +1,13 @@
+{
+	"apiVersion": 2,
+	"name": "mx/repeater",
+	"version": "0.1.0",
+	"title": "Repeater",
+	"category": "design",
+	"icon": "insert",
+	"description": "Block that contains repeatable fields.",
+	"textdomain": "mx-block-plugins",
+	"editorScript": "file:./build/index.js",
+	"editorStyle": "file:./build/index.css",
+	"style": "file:./build/style-index.css"
+}

@@ -1,0 +1,1 @@
+{"version":3,"file":"index.css","mappings":";;;AAAA;;;;EAAA;AAOC;EACC;AADF,C","sources":["webpack://hero-banner/./src/editor.scss"],"sourcesContent":["/**\n *\n * Editor Styles\n *\n */\n\n.wp-block-mx-hero-banner {\n\t.hero-banner__subhead {\n\t\tcolor: var(--wp--preset--color--white);\n\t}\n}\n"],"names":[],"sourceRoot":""}

@@ -1,0 +1,67 @@
+/**
+ *
+ * Editor Styles
+ *
+ */
+
+.wp-block-mx-featured-stories {
+
+	.featured-stories__column {
+		&::after {
+			display: none;
+		}
+	}
+
+	.featured-stories__logo {
+		margin-bottom: 30px !important;
+
+		img {
+			height: 70px;
+			width: auto;
+		}
+	}
+
+	.featured-stories__heading {
+		margin-bottom: 10px;
+	}
+
+	&[data-type="mx/featured-stories"] {
+
+		.ss-card {
+
+			@media (min-width: 1025px) {
+				height: 500px !important;
+				width: 100% !important;
+			}
+
+			&__image-content {
+
+				@media (min-width: 1025px) {
+					background-size: 100% 242px, contain !important;
+					width: 100% !important;
+				}
+			}
+
+			&__mobile-logo,
+			&__mobile-text {
+				@media (min-width: 1025px) {
+					display: block !important;
+				}
+			}
+
+			&__motto-image {
+
+				@media (min-width: 1025px) {
+					max-width: 185px !important;
+				}
+			}
+
+			&__desktop-content {
+
+				@media (min-width: 1025px) {
+					display: none !important;
+				}
+			}
+		}
+	}
+}

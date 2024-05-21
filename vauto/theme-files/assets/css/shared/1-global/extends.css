@@ -1,0 +1,44 @@
+/**
+ *
+ * Extends
+ * Use Sass like syntax for extends with PostCSS plugin
+ * https://github.com/jonathantneal/postcss-extend-rule
+ *
+ */
+
+.has-font-family-primary {
+	font-family: var(--wp--preset--font-family--primary);
+}
+
+.has-font-family-secondary {
+	font-family: var(--wp--preset--font-family--secondary);
+}
+
+/* Add block padding for block examples */
+.has-normal-padding {
+	padding: var(--wp--custom--padding--large);
+}
+
+.has-orange-gradient-background {
+	background-image: var(--wp--preset--gradient--orange-gradient);
+}
+
+.has-yellow-gradient-background {
+	background-image: var(--wp--preset--gradient--yellow-gradient);
+}
+
+.has-blue-gradient-background {
+	background-image: var(--wp--preset--gradient--blue-gradient);
+}
+
+.has-blue-reverse-gradient-background {
+	background-image: var(--wp--preset--gradient--blue-reverse-gradient);
+}
+
+.has-black-gradient-background {
+	background-image: var(--wp--preset--gradient--black-radial-gradient);
+}
+
+.has-dark-gray-gradient-background {
+	background-image: var(--wp--preset--gradient--dark-gray-radial-gradient);
+}

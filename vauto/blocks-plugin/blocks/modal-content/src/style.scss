@@ -1,0 +1,64 @@
+/**
+ *
+ * Frontend Styles
+ *
+ */
+.modal-content {
+	max-width: 960px;
+	padding: 0;
+	width: 80%;
+
+	&__bg-color {
+		padding: var(--padding-inner);
+	}
+
+	&--cover-cta {
+
+		.modal-content__bg-color {
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		.cover-cta__images {
+
+			@media (min-width: 640px) {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+			}
+
+			@media (min-width: 1025px) {
+				display: block;
+				width: 40%;
+			}
+
+			figure {
+				margin: 0 auto 30px;
+
+				@media (min-width: 640px) {
+					margin: 0;
+					width: 47%;
+				}
+
+				@media (min-width: 1025px) {
+					margin: 0 auto 30px;
+					width: auto;
+				}
+
+				&:last-of-type {
+					margin: 0;
+				}
+			}
+		}
+
+		.cover-cta__copy {
+			margin-top: 30px;
+
+			@media (min-width: 1025px) {
+				margin-top: 0;
+				padding-left: 30px;
+				width: 60%;
+			}
+		}
+	}
+}

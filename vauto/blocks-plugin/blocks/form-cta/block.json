@@ -1,0 +1,66 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "mx/form-cta",
+	"version": "0.1.4",
+	"title": "Form CTA",
+	"category": "ctas",
+	"icon": "superhero-alt",
+	"description": "Form CTA with several variations. Layout options are available under Patterns > CTAs.  Optimal image size is 1000px by 564px.",
+	"attributes": {
+		"borderAll": {
+			"type": "boolean",
+			"default": false
+		},
+		"mediaAlign": {
+			"type": "string",
+			"default": "left"
+		},
+		"marginBottom": {
+			"type": "string",
+			"default": "none"
+		},
+		"marginTop": {
+			"type": "string",
+			"default": "none"
+		},
+		"paddingBottom": {
+			"type": "string",
+			"default": "default"
+		},
+		"paddingTop": {
+			"type": "string",
+			"default": "default"
+		},
+		"verticalOption": {
+			"type": "string",
+			"default": "middle"
+		},
+		"verticalIcon": {
+			"type": "string"
+		},
+		"widthOption": {
+			"type": "string",
+			"default": "centered"
+		},
+		"widthIcon": {
+			"type": "string"
+		}
+	},
+	"example": {
+		"viewportWidth": 1200
+	},
+	"supports": {
+		"anchor": true,
+		"reusable": true,
+		"html": false,
+		"color": {
+			"background": true,
+			"gradients": true
+		}
+	},
+	"textdomain": "mx-blocks-plugin",
+	"editorScript": "file:./build/index.js",
+	"editorStyle": "file:./build/index.css",
+	"style": "file:./build/style-index.css"
+}

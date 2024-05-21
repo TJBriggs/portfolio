@@ -1,0 +1,21 @@
+{
+	"apiVersion": 2,
+	"name": "mx/feature-hero",
+	"version": "0.1.0",
+	"title": "Feature Hero",
+	"category": "heros",
+	"icon": "format-image",
+	"description": "Product hero block to display logo, text, image and buttons.",
+	"supports": {
+		"anchor": true,
+		"reusable": true,
+		"html": false,
+		"color": {
+			"background": true
+		}
+	},
+	"textdomain": "mx-blocks-plugin",
+	"editorScript": "file:./build/index.js",
+	"editorStyle": "file:./build/index.css",
+	"style": "file:./build/style-index.css"
+}

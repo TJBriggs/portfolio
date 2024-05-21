@@ -1,0 +1,11 @@
+{
+  "packages": [
+    "core-blocks/*",
+    "meta-blocks/*",
+    "child-blocks/*",
+    "blocks/*",
+    "components/*",
+    "icons/*"
+  ],
+  "version": "0"
+}

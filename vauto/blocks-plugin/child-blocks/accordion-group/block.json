@@ -1,0 +1,22 @@
+{
+	"apiVersion": 2,
+	"name": "mx/accordion-group",
+	"version": "0.1.0",
+	"title": "Accordion Group",
+	"category": "text",
+	"icon": "plus-alt",
+	"description": "Group of accordion dropdowns with optional header.",
+	"supports": {
+		"anchor": true,
+		"reusable": true,
+		"html": false,
+		"color": {
+			"background": true,
+			"gradients": true
+		}
+	},
+	"textdomain": "mx-blocks-plugin",
+	"editorScript": "file:./build/index.js",
+	"editorStyle": "file:./build/index.css",
+	"style": "file:./build/style-index.css"
+}

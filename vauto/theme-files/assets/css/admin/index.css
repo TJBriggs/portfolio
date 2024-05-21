@@ -1,0 +1,11 @@
+/**
+ *
+ * Admin Specific Styles
+ *
+ * These are general admin styles. They are not enqueued with the block editor
+ * assets. Block related styles should be included in the mx-blocks-plugin.
+ *
+ * By default these styles are not enqueued. If you need admin styles, uncomment
+ * line 24 in includes/core.php.
+ */
+@import url("custom-meta-boxes/_index");

@@ -1,0 +1,64 @@
+{
+	"apiVersion": 2,
+	"name": "mx/alternating-feature",
+	"version": "0.1.7",
+	"title": "Alternating Feature",
+	"category": "features",
+	"description": "Feature block with several variations. Layout options are available under Patterns > Features.",
+	"attributes": {
+		"borderAll": {
+			"type": "boolean",
+			"default": false
+		},
+		"mediaAlign": {
+			"type": "string",
+			"default": "left"
+		},
+		"marginBottom": {
+			"type": "string",
+			"default": "none"
+		},
+		"marginTop": {
+			"type": "string",
+			"default": "none"
+		},
+		"paddingBottom": {
+			"type": "string",
+			"default": "default"
+		},
+		"paddingTop": {
+			"type": "string",
+			"default": "default"
+		},
+		"verticalOption": {
+			"type": "string",
+			"default": "middle"
+		},
+		"verticalIcon": {
+			"type": "string"
+		},
+		"widthOption": {
+			"type": "string",
+			"default": "centered"
+		},
+		"widthIcon": {
+			"type": "string"
+		}
+	},
+	"example": {
+		"viewportWidth": 1200
+	},
+	"supports": {
+		"anchor": true,
+		"reusable": true,
+		"html": false,
+		"color": {
+			"background": true,
+			"gradients": true
+		}
+	},
+	"textdomain": "mx-blocks-plugin",
+	"editorScript": "file:./build/index.js",
+	"editorStyle": "file:./build/index.css",
+	"style": "file:./build/style-index.css"
+}

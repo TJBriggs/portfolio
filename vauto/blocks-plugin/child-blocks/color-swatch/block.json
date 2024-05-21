@@ -1,0 +1,31 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "mx/color-swatch",
+	"version": "0.1.0",
+	"title": "Color Swatch",
+	"category": "utilities",
+	"icon": "superhero-alt",
+	"description": "Starter block written with ESNext standard and JSX support.",
+	"attributes": {
+		"colorValue": {
+			"type": "string",
+			"default": "#07A0AA"
+		}
+	},
+	"parent": [
+		"mx/feature-slide"
+	],
+	"supports": {
+		"anchor": true,
+		"reusable": true,
+		"html": false,
+		"color": {
+			"background": true
+		}
+	},
+	"textdomain": "mx-blocks-plugin",
+	"editorScript": "file:./build/index.js",
+	"editorStyle": "file:./build/index.css",
+	"style": "file:./build/style-index.css"
+}

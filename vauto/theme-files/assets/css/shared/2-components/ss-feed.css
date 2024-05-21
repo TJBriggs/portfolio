@@ -1,0 +1,23 @@
+/**
+ *
+ * Success Stories Filters & Feed
+ *
+ */
+.ss-feed {
+
+	.facetwp-template {
+		display: grid;
+		gap: 20px;
+		grid-template-columns: 1fr;
+		margin: 0 auto;
+		max-width: 400px;
+		padding: 40px 0 75px;
+
+		@media (min-width: 600px) {
+			grid-template-columns: 1fr 1fr;
+			margin: 0;
+			max-width: none;
+			padding: 50px 0 100px;
+		}
+	}
+}

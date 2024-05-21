@@ -1,0 +1,68 @@
+/*!******************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!../../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!../../node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!../../components/spacing-controls/spacing-controls.scss ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************/
+/**
+ *
+ * Spacing Controls Styles
+ *
+ */
+.spacing-controls .components-base-control__help {
+  margin-top: 10px;
+}
+/*!****************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!../../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!../../node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/editor.scss ***!
+  \****************************************************************************************************************************************************************************************************************************************************/
+/**
+ *
+ * Editor Styles
+ *
+ */
+.alternating-slider .wp-block-cover__background.has-background {
+  padding: 75px var(--padding-inner);
+}
+.alternating-slider__content {
+  margin-top: 0 !important;
+}
+@media (min-width: 1024px) {
+  .alternating-slider__content {
+    width: 30% !important;
+  }
+}
+.alternating-slider__subheading {
+  margin-top: 0 !important;
+}
+.alternating-slider__primary-links {
+  margin-top: 30px !important;
+}
+.alternating-slider__slider > .block-editor-inner-blocks > .block-editor-block-list__layout > .ss-card__wrap {
+  display: none;
+  margin-bottom: 15px;
+  width: 100%;
+}
+.alternating-slider__slider > .block-editor-inner-blocks > .block-editor-block-list__layout > .ss-card__wrap:first-of-type {
+  display: block;
+}
+.alternating-slider__slider > .block-editor-inner-blocks > .block-editor-block-list__layout > .ss-card__wrap:last-of-type {
+  margin-bottom: 0;
+}
+.alternating-slider.is-selected .alternating-slider__slider > .block-editor-inner-blocks > .block-editor-block-list__layout > .ss-card__wrap, .alternating-slider.has-child-selected .alternating-slider__slider > .block-editor-inner-blocks > .block-editor-block-list__layout > .ss-card__wrap {
+  display: block !important;
+}
+.alternating-slider--bg-image .alternating-slider__cover {
+  padding: 75px var(--padding-inner) !important;
+}
+@media (min-width: 1025px) {
+  .alternating-slider--bg-image .alternating-slider__cover {
+    padding: 100px var(--padding-inner) !important;
+  }
+}
+@media (min-width: 1400px) {
+  .alternating-slider--bg-image .alternating-slider__cover {
+    padding: 150px var(--padding-inner) !important;
+  }
+}
+.alternating-slider--bg-image .ss-card {
+  border: none !important;
+}
+
+/*# sourceMappingURL=index.css.map*/

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="57px" viewBox="0 0 50 57" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>play arrow</title>
+    <g id="null" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="UI-Library-2" transform="translate(-697.000000, -8524.000000)" stroke="#FFFFFF" stroke-width="2">
+            <g id="play-arrow" transform="translate(697.500000, 8524.500000)">
+                <path d="M24.5,5.51556444 L50.7768203,51.5 L-1.77682032,51.5 L24.5,5.51556444 Z" id="Polygon-11" transform="translate(24.500000, 28.000000) rotate(90.000000) translate(-24.500000, -28.000000) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

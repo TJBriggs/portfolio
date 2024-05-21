@@ -1,0 +1,26 @@
+/**
+ *
+ * Frontend Styles
+ *
+ */
+.centered-media {
+
+	&__text {
+		margin-bottom: 35px;
+		padding: 0 var(--wp--custom--padding--small);
+	}
+
+	&__media {
+		margin: 0 auto;
+		max-width: 750px;
+	}
+
+	/* Background not full-width */
+	&.layout-width--centered {
+		margin-left: 0;
+		margin-right: 0;
+		padding-left: 0;
+		padding-right: 0;
+		width: 100%;
+	}
+}

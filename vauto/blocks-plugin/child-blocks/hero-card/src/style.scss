@@ -1,0 +1,23 @@
+/**
+ *
+ * Frontend Styles
+ *
+ */
+.hero-card {
+	margin: 0;
+	position: relative;
+	width: 50%;
+
+	&__upper,
+	&__lower {
+
+		&.has-black-background-color {
+			color: var(--wp--preset--color--white);
+		}
+	}
+
+	&:nth-of-type(odd) {
+		top: -50%;
+		transform: translateY(50%);
+	}
+}

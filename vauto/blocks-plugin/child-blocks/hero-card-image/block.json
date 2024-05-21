@@ -1,0 +1,16 @@
+{
+	"apiVersion": 2,
+	"name": "mx/hero-card-image",
+	"version": "0.1.0",
+	"title": "Hero Card w/Image",
+	"category": "cards",
+	"icon": "superhero-alt",
+	"description": "Basic card to display stats and image in the hero section.",
+	"parent": [
+		"mx/repeater"
+	],
+	"textdomain": "mx-blocks-plugin",
+	"editorScript": "file:./build/index.js",
+	"editorStyle": "file:./build/index.css",
+	"style": "file:./build/style-index.css"
+}

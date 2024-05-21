@@ -1,0 +1,139 @@
+/**
+ *
+ * Frontend Styles
+ *
+ */
+
+.jump-nav {
+	left: 0;
+	padding: 10px 0;
+	position: fixed;
+	right: 0;
+	top: -50px;
+	transition:
+		var(--wp--custom--transition--slides) var(--wp--custom--transition--timing);
+	width: 100%;
+	z-index: 6;
+
+	&__default-inner {
+		background-color: var(--wp--preset--color--white);
+		border: 1px solid var(--wp--preset--color--black);
+	}
+
+	@media (min-width: 1024px) {
+		padding: var(--wp--custom--padding--small) 0;
+	}
+
+	&.jump-nav--show {
+		top: 62px;
+
+		.admin-bar & {
+			top: 0;
+
+			@media (min-width: 601px) {
+				top: 46px;
+			}
+
+			@media (min-width: 783px) {
+				top: 94px;
+			}
+		}
+
+		@media (min-width: 1101px) {
+			top: 115px;
+
+			.admin-bar & {
+				top: 147px;
+			}
+		}
+	}
+
+	&__wrap {
+		align-items: center;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+	}
+
+	&__heading {
+		font-size: var(--wp--preset--font-size--small) !important;
+		font-weight: var(--wp--custom--font-weight--bold);
+		text-transform: uppercase;
+	}
+
+	&__toggle {
+		align-items: center;
+		cursor: pointer;
+		display: flex;
+		height: 20px;
+		justify-content: center;
+		margin: 0;
+		position: relative;
+		width: 30px;
+
+		@media (min-width: 1024px) {
+			display: none;
+		}
+
+		&::before,
+		&::after {
+			background-color: var(--wp--preset--color--black);
+			content: "";
+			display: block;
+			height: 2px;
+			position: absolute;
+			transition:
+				var(--wp--custom--transition--slides) var(--wp--custom--transition--timing);
+			width: 13px;
+		}
+
+		&::after {
+			transform: rotate(90deg);
+
+			.jump-nav__toggle--active & {
+				transform: rotate(0deg);
+			}
+		}
+	}
+
+	&__links {
+		display: none;
+		margin-top: 0;
+		padding: 10px 0;
+		width: 100%;
+
+		@media (min-width: 1024px) {
+			display: flex !important;
+			padding: 0;
+			width: auto;
+		}
+
+		.jump-nav__link {
+
+			.wp-block-button__link {
+				color: var(--wp--preset--color--gray-3) !important;
+				display: block;
+				font-size: 14px;
+				font-weight: 300 !important;
+				padding: 8px 0;
+				text-align: left;
+				user-select: none;
+
+				&:hover,
+				&:focus {
+					color: var(--wp--preset--color--link);
+					text-decoration: underline !important;
+				}
+
+				@media (min-width: 1024px) {
+					padding: 0;
+					text-align: unset;
+				}
+
+				@media (min-width: 1200px) {
+					font-size: 15px;
+				}
+			}
+		}
+	}
+}

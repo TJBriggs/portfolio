@@ -1,0 +1,83 @@
+/*!************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!../../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!../../node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!../../components/media-pickers/picker-styles.scss ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************/
+/**
+ *
+ * Media and File Picker Styles
+ *
+ */
+.picker {
+  overflow: hidden;
+}
+.picker label {
+  display: block;
+  margin-bottom: 8px;
+}
+.picker__preview-wrap {
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+.picker__preview-url {
+  display: flex;
+  margin-top: 10px;
+  width: 100%;
+}
+.picker__add-button {
+  margin: 0 0 2px 2px;
+}
+.picker__preview-remove {
+  height: 20px;
+  padding: 0;
+}
+.picker__preview-icon .dashicons-media-text {
+  display: inline-block;
+  font-size: 40px;
+  height: 40px;
+  width: 40px;
+}
+/*!****************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!../../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!../../node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/editor.scss ***!
+  \****************************************************************************************************************************************************************************************************************************************************/
+/**
+ *
+ * Editor Styles
+ *
+ */
+.management-team__default-inner {
+  display: flex;
+  flex-wrap: wrap;
+}
+@media (min-width: 768px) {
+  .management-team .meta-fields {
+    padding-right: 100px;
+    width: 70%;
+  }
+}
+.management-team .picker__preview-image {
+  background-color: #eeeeee;
+  display: inline-block;
+  width: auto;
+}
+@media (min-width: 768px) {
+  .management-team .mt-card__preview-wrap {
+    width: 30%;
+  }
+}
+.management-team .mt-modal__preview-wrap {
+  width: 100%;
+}
+.management-team .mt-modal {
+  display: flex;
+}
+@media (min-width: 768px) {
+  .management-team .mt-modal__meta {
+    width: 40%;
+  }
+}
+@media (min-width: 768px) {
+  .management-team .mt-modal__bio {
+    width: 60%;
+  }
+}
+
+/*# sourceMappingURL=index.css.map*/

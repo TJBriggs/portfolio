@@ -1,0 +1,39 @@
+{
+	"$schema": "https://json.schemastore.org/block.json",
+	"apiVersion": 2,
+	"name": "mx/columns",
+	"version": "0.1.1",
+	"title": "Columns",
+	"category": "design",
+	"description": "Basic column block that allows repeatable content.",
+	"attributes": {
+		"columnCount": {
+			"type": "number",
+			"default": 4
+		},
+		"columnLayout": {
+			"type": "string",
+			"default": "flex"
+		},
+		"widthOption": {
+			"type": "string",
+			"default": "centered"
+		},
+		"widthIcon": {
+			"type": "string"
+		}
+	},
+	"supports": {
+		"anchor": true,
+		"reusable": false,
+		"html": false,
+		"color": {
+			"background": true,
+			"gradients": true
+		}
+	},
+	"textdomain": "mx-blocks-plugin",
+	"editorScript": "file:./build/index.js",
+	"editorStyle": "file:./build/index.css",
+	"style": "file:./build/style-index.css"
+}

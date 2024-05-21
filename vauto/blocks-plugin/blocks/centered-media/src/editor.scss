@@ -1,0 +1,17 @@
+/**
+ *
+ * Editor Styles
+ *
+ */
+.centered-media {
+
+	&__text {
+		margin-bottom: 40px !important;
+	}
+
+	/* Background not full-width */
+	&.layout-width--centered {
+		margin: 0 auto;
+		max-width: var(--wp--custom--grid-width--medium) !important;
+	}
+}

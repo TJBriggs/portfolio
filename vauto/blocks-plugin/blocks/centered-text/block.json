@@ -1,0 +1,50 @@
+{
+	"apiVersion": 2,
+	"name": "mx/centered-text",
+	"version": "0.1.2",
+	"title": "Centered Text",
+	"category": "text",
+	"icon": "editor-aligncenter",
+	"description": "Text block with several variations. Layout options are available under Patterns > Text.",
+	"textdomain": "mx-blocks-plugin",
+	"attributes": {
+		"marginBottom": {
+			"type": "string",
+			"default": "none"
+		},
+		"marginTop": {
+			"type": "string",
+			"default": "none"
+		},
+		"paddingBottom": {
+			"type": "string",
+			"default": "default"
+		},
+		"paddingTop": {
+			"type": "string",
+			"default": "default"
+		},
+		"widthOption": {
+			"type": "string",
+			"default": "centered"
+		},
+		"widthIcon": {
+			"type": "string"
+		}
+	},
+	"example": {
+		"viewportWidth": 1200
+	},
+	"supports": {
+		"anchor": true,
+		"reusable": true,
+		"html": false,
+		"color": {
+			"background": true,
+			"gradients": true
+		}
+	},
+	"editorScript": "file:./build/index.js",
+	"editorStyle": "file:./build/index.css",
+	"style": "file:./build/style-index.css"
+}

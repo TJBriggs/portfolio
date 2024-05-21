@@ -1,0 +1,142 @@
+/**
+ *
+ * Frontend Styles
+ *
+ */
+.form-cta {
+
+	&__wrap {
+		display: flex;
+		margin-top: 40px;
+		flex-wrap: wrap;
+
+		@media (min-width: 900px) {
+			margin-top: 50px;
+		}
+	}
+
+	&__centered-text {
+		padding: 0 40px;
+	}
+
+	&__content {
+		padding-left: 20px;
+		padding-right: 20px;
+
+		@media (min-width: 640px) {
+			padding-left: 40px;
+			padding-right: 40px;
+		}
+
+		@media (min-width: 900px) {
+			padding-left: 0;
+			padding-right: 25px;
+			width: 50%;
+		}
+
+		@media (min-width: 1200px) {
+			padding-right: 50px;
+		}
+	}
+
+	&__callouts {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		margin-top: 30px;
+		padding-bottom: 50px;
+
+		@media (min-width: 900px) {
+			padding-bottom: 75px;
+		}
+	}
+
+	&__callout {
+		margin-top: 30px;
+
+		@media (min-width: 480px) {
+			width: 48%;
+		}
+
+		&:nth-of-type(1) {
+			margin-top: 0;
+		}
+
+		&:nth-of-type(2) {
+
+			@media (min-width: 480px) {
+				margin-top: 0;
+			}
+		}
+
+		&:nth-of-type(even) {
+			margin-right: 0;
+		}
+	}
+
+	&__form {
+		margin-top: 0;
+		width: 100%;
+
+		@media (min-width: 900px) {
+			width: 50%;
+		}
+	}
+
+	&.border--true {
+		padding-left: var(--padding-inner);
+		padding-right: var(--padding-inner);
+
+		.form-cta__flexible-inner {
+			border: 1px solid var(--wp--preset--color--black);
+			padding-bottom: 0;
+			padding-left: 0;
+			padding-right: 0;
+			padding-top: 40px;
+
+			@media (min-width: 900px) {
+				padding-left: 25px;
+				padding-right: 0;
+				padding-top: 50px;
+			}
+
+			@media (min-width: 1200px) {
+				padding-left: 50px;
+			}
+		}
+	}
+}
+
+.icon-callout {
+
+	&.icon-left {
+		align-items: center;
+		display: flex;
+		flex-wrap: wrap;
+
+		figure {
+			align-items: center;
+			display: inline-flex;
+			width: 40px;
+
+			@media (min-width: 768px) {
+				width: 50px;
+			}
+		}
+
+		h4 {
+			display: inline-block;
+			margin: 0;
+			padding-left: 15px;
+			width: calc(100% - 40px);
+
+			@media (min-width: 768px) {
+				width: calc(100% - 50px);
+			}
+		}
+
+		p {
+			margin-top: 15px;
+		}
+	}
+}

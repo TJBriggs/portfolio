@@ -1,0 +1,20 @@
+/**
+ *
+ * Frontend Styles
+ *
+ */
+@charset "UTF-8";
+
+/* Global - global pieces like variables, custom properties, extends */
+@import url("1-global/_index");
+
+/* Components - styling for components/elements like
+header, footer, navigations, sidebars, reusable elements */
+@import url("2-components/_index");
+
+/* Block Overrides - Main block styling should
+be contained in mx-blocks-plugin */
+@import url("3-blocks/_index");
+
+/* Page - styles specific to a certain page or page template */
+@import url("4-pages/_index");

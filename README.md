@@ -6,9 +6,9 @@ Thanks for visiting my portfolio repository. Below you will find a collection of
 
 |&nbsp;|&nbsp;|Quick Links|&nbsp;|&nbsp;|
 |:----------------:|:------------:|:------------:|:------------:|:------------:|
-|[NESN][nesn]|[vAuto][vauto]|[Cummins][cummins]|[Golftec][golftec]|[PK Associates][pka]|
-|[ami + partners][ami]|[Bio2 Medical][bio2]|[Cairn Dental][cairn]|[Devetry][devetry]|[Emailage][emailage]|
-|[Proctor Productions][proctor]|[Szymanowski Orthodontics][damon]|[10up Projects][10up]|[The Mx Group Projects][mx]|[My Resume][resume]|
+|[NESN][nesn]|[vAuto][vauto]|[Cummins][cummins]|[Z Modular][zmodular]|[Golftec][golftec]|
+|[PK Associates][pka]|[ami + partners][ami]|[Bio2 Medical][bio2]|[Cairn Dental][cairn]|[Devetry][devetry]|
+|[Emailage][emailage]|[Proctor Productions][proctor]|[Szymanowski Orthodontics][damon]|[10up Projects][10up]|[The Mx Group Projects][mx]|[My Resume][resume]|
 
 <br>
 
@@ -21,7 +21,7 @@ Thanks for visiting my portfolio repository. Below you will find a collection of
 <a href="https://nesn.com/" target="_blank">View WordPress Site</a>
 <a href="https://nesn.com/watch/" target="_blank">View NESN 360 React App</a>
 
-Due to a strict non-disclosure agreement, I can't share my code for the work I did while employed at NESN, however here is a brief summary of my contributions:
+Due to a strict non-disclosure agreement, I can't share my code for the work I did while employed at NESN, however here is a brief summary of my work:
 
 #### Project Highlights:
 
@@ -41,7 +41,7 @@ Due to a strict non-disclosure agreement, I can't share my code for the work I d
 
 <a href="https://vauto.com/" target="_blank">View Site</a> | [View Code](/vauto)
 
-This project was the blueprint for GolfTEC's website redesign. It consists of a styleguide, pattern library, custom modules, and demo pages which were integrated with their company's proprietary CMS.
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.
 
 #### Project Highlights:
 
@@ -62,7 +62,27 @@ This project was the blueprint for GolfTEC's website redesign. It consists of a 
 [View Code](/cummins/connected-solutions)
 [View Code](/cummins/onboarding-ui)
 
-This project was the blueprint for GolfTEC's website redesign. It consists of a styleguide, pattern library, custom modules, and demo pages which were integrated with their company's proprietary CMS.
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.
+
+#### Project Highlights:
+
+* xxxxxxxxxxxxxxxx
+* xxxxxxxxxxxxxxxx
+* xxxxxxxxxxxxxxxx
+* xxxxxxxxxxxxxxxx
+* xxxxxxxxxxxxxxxx
+
+<br>
+
+## Z Modular
+
+<br>
+
+![Image of Z Modular Website](./images/z-modular.png "Z Modular Website")
+
+[View Code](/z-modular/theme-files)
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.
 
 #### Project Highlights:
 
@@ -100,7 +120,7 @@ This project was the blueprint for GolfTEC's website redesign. It consists of a 
 
 ![Image of PK Associates Website](./images/pka.png "PK Associates Website")
 
-<a href="https://pkastructural.com/" target="_blank">View Site</a> | [View Code](/pk-associates)
+<a href="https://pkastructural.com/" target="_blank">View Site</a> | [View Code](/pk-associates/theme-files)
 
 This structural engineering firm is known for their award-winning designs. Since their work speaks for itself, the portfolio page is the key to their marketing funnel. Check out the custom portfolio grid which features AJAX filtering & search.
 
@@ -119,7 +139,7 @@ This structural engineering firm is known for their award-winning designs. Since
 
 ![Image of ami + partners Website](./images/ami.png "ami + partners Website")
 
-[View Code](/ami)
+[View Code](/ami/theme-files)
 
 One of my favorite sites to date. I love the clean, yet rich design which appeals directly to AMI's target audience - marketing executives. This site is thoughtfully laid out and takes a content first approach. This website has been redesigned and rebuilt since my original work.
 
@@ -139,7 +159,7 @@ One of my favorite sites to date. I love the clean, yet rich design which appeal
 
 ![Image of Bio2 Medical Website](./images/bio2.png "Bio2 Medical Website")
 
-[View Code](/bio2-medical)
+[View Code](/bio2-medical/theme-files)
 
 This medical device company specialized in state-of-the-art technology. It's vital that their website appeal to modern medical professionals, but remain user-friendly for those less tech savvy. This company was acquired and the website is no longer available.
 
@@ -160,7 +180,7 @@ This medical device company specialized in state-of-the-art technology. It's vit
 
 ![Image of Cairn Dental Website](./images/cairn.png "Cairn Dental Website")
 
-[View Code](/cairn-dental)
+[View Code](/cairn-dental/theme-files)
 
 Cairns are the piles of stones placed next to hiking trails. They mark the path and help guide hikers to their destination. I love the rebrand of this dental practice and how it targets the outdoor enthusiasts of Golden, CO. This website has been redesigned and rebuilt since my original work.
 
@@ -181,7 +201,7 @@ Cairns are the piles of stones placed next to hiking trails. They mark the path 
 
 ![Image of Devetry Website](./images/devetry.png "Devetry Website")
 
-[View Code](/devetry)
+[View Code](/devetry/theme-files)
 
 Devetry specializes in app development and they wanted a creative way to feature their amazing work. Check out the video slider on the home page. The videos play when they're in view or when the slide changes. Unfortunately, this website has been rebranded, redesigned, and rebuilt since my original work.
 
@@ -202,7 +222,7 @@ Devetry specializes in app development and they wanted a creative way to feature
 
 ![Image of Emailage Website](./images/emailage.png "Emailage Website")
 
-[View Code](/emailage)
+[View Code](/emailage/theme-files)
 
 I thoroughly enjoyed building this website. I love how the design incorporates soft curves, circular imagery, and custom icon illustrations. Modular development with feature-rich integrations lead to this highly customizable experience. Please note that this company was aquired by LexisNexis and this website is no longer available.
 
@@ -222,7 +242,7 @@ I thoroughly enjoyed building this website. I love how the design incorporates s
 
 ![Image of Proctor Productions Website](./images/proctor.png "Proctor Productions Website")
 
-[View Code](/proctor-productions)
+[View Code](/proctor-productions/theme-files)
 
 Nominated for an Awwward, this site originally featured full screen videos, nested sliders, and AJAX sorting for their work section. The team page highlights the fun & creative culture at Proctor. This website has been redesigned and rebuilt since my original work.
 
@@ -242,7 +262,7 @@ Nominated for an Awwward, this site originally featured full screen videos, nest
 
 ![Image of Szymanowski Orthodontics Website](./images/damon.png "Szymanowski Orthodontics Website")
 
-[View Code](/szymanowski-orthodontics)
+[View Code](/szymanowski-orthodontics/theme-files)
 
 My first site at Zenman, the boss wanted to challenge me to see what I could do. This design has all the bells & whistles: parallax scrolling, CSS/SVG animations, background videos, and much more! This website has also been rebuilt since my original work.
 
@@ -339,6 +359,7 @@ Built several features, components, and AMP updates.
 [nesn]: #nesn
 [vauto]: #vauto
 [cummins]: #cummins
+[zmodular]: #z-modular
 [golftec]: #golftec
 [pka]: #pk-associates
 [ami]: #ami--partners

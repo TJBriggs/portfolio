@@ -1,0 +1,27 @@
+{
+	"$schema": "https://json.schemastore.org/block.json",
+	"apiVersion": 2,
+	"name": "mx/uberflip-embed",
+	"version": "0.1.1",
+	"title": "Uberflip Embed",
+	"category": "utilities",
+	"icon": "superhero",
+	"description": "Enter a Uberflip ID and Collection ID to display articles.",
+	"attributes": {
+		"collectionID": {
+			"type": "string",
+			"default": ""
+		},
+		"uberflipID": {
+			"type": "string",
+			"default": null
+		}
+	},
+	"parent": [
+		"mx/uberflip-features"
+	],
+	"textdomain": "mx-blocks-plugin",
+	"editorScript": "file:./build/index.js",
+	"editorStyle": "file:./build/index.css",
+	"style": "file:./build/style-index.css"
+}

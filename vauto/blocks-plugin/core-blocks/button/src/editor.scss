@@ -1,0 +1,148 @@
+// WordPress Core Breakpoints
+$break-huge: 1440px;
+$break-wide: 1280px;
+$break-xlarge: 1080px;
+$break-large: 960px;	// admin sidebar auto folds
+$break-medium: 782px;	// adminbar goes big
+$break-small: 600px;
+$break-mobile: 480px;
+$break-zoomed-in: 280px;
+
+.wp-block[data-align="center"] > .wp-block-button {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-block[data-align="right"] > .wp-block-button {
+	/*!rtl:ignore*/
+	text-align: right;
+}
+
+.wp-block-button {
+	position: relative;
+	cursor: text;
+
+	// Make placeholder text white unless custom colors or outline versions are chosen.
+	&:not(.has-text-color):not(.is-style-outline) [data-rich-text-placeholder]::after {
+		color: #fff;
+	}
+
+	// Add outline to button on focus to indicate focus-state
+	&:focus {
+		box-shadow: 0 0 0 1px #fff, 0 0 0 3px var(--wp-admin-theme-color);
+
+		// Windows' High Contrast mode will show this outline, but not the box-shadow.
+		outline: 2px solid transparent;
+		outline-offset: -2px;
+	}
+
+	// Increase placeholder opacity to meet contrast ratios.
+	&[data-rich-text-placeholder]::after {
+		opacity: 0.8;
+	}
+}
+
+.wp-block-button__inline-link {
+	//color: $gray-700;
+	color: blue;
+	height: 0;
+	overflow: hidden;
+	max-width: 290px;
+
+	&-input__suggestions {
+		max-width: 290px;
+	}
+
+	@media (min-width: $break-medium) {
+		max-width: 260px;
+
+		&-input__suggestions {
+			max-width: 260px;
+		}
+
+	}
+	@media (min-width: $break-large) {
+		max-width: 290px;
+
+		&-input__suggestions {
+			max-width: 290px;
+		}
+
+	}
+
+	.is-selected & {
+		height: auto;
+		overflow: visible;
+	}
+}
+
+.wp-button-label__width {
+	.components-button-group {
+		display: block;
+	}
+
+	.components-base-control__field {
+		margin-bottom: 12px;
+	}
+}
+
+// Display "table" is used because the button container should only wrap the content and not takes the full width.
+div[data-type="core/button"],
+div[data-type="mx/button"] {
+	display: table;
+}
+
+.modal-link__wrap,
+.video-link__wrap {
+	max-width: 250px;
+	margin: 16px;
+	min-width: auto;
+	width: 70vw;
+
+	input[type="text"] {
+		border: 1px solid #ddd;
+		padding: 11px 36px 11px 16px;
+		width: 100%;
+	}
+}
+
+.video-link__wrap {
+	label {
+		display: block;
+		font-weight: bold;
+		margin-bottom: 8px;
+	}
+
+	.components-radio-control .components-base-control__field {
+		display: flex;
+		margin-bottom: 15px;
+	}
+
+	.components-radio-control__option {
+		margin-right: 15px;
+
+		&:last-of-type {
+			margin-right: 0;
+		}
+
+		label {
+			display: inline-block;
+			font-weight: normal;
+			margin-bottom: 0;
+		}
+	}
+
+	.link-help {
+		margin-top: 15px;
+
+		label {
+			margin-bottom: 0;
+		}
+
+		strong {
+			font-size: 16px;
+			position: relative;
+		}
+	}
+}

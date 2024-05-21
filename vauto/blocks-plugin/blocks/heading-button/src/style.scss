@@ -1,0 +1,60 @@
+/**
+ *
+ * Frontend Styles
+ *
+ */
+.heading-button {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-bottom: 25px;
+
+
+	&__heading {
+		margin-bottom: 20px;
+		width: 100%;
+
+		@media (min-width: 768px) {
+			align-items: center;
+			display: flex;
+			margin-bottom: 0;
+			width: 60%;
+		}
+	}
+
+	&__links {
+		width: 100%;
+
+		@media (min-width: 768px) {
+			width: 30%;
+		}
+	}
+
+	&--text-link,
+	&--arrow-link {
+		position: relative;
+
+		.heading-button__heading {
+			margin-bottom: 10px;
+
+			@media (min-width: 481px) {
+				margin-bottom: 0;
+			}
+
+			@media (min-width: 768px) {
+				width: 100%;
+			}
+		}
+
+		.heading-button__links {
+
+			@media (min-width: 481px) {
+				position: absolute;
+				right: 0;
+				top: 50%;
+				transform: translateY(-50%);
+				width: auto;
+			}
+		}
+	}
+}

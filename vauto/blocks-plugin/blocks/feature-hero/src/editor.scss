@@ -1,0 +1,42 @@
+/**
+ *
+ * Editor Styles
+ *
+ */
+.feature-hero {
+
+	&__copy,
+	&__cards-wrap {
+		width: 100%;
+
+		@media (min-width: 768px) {
+			width: 50% !important;
+		}
+	}
+
+	&__cards {
+
+		.block-editor-block-list__layout {
+			display: flex;
+			flex-wrap: wrap;
+		}
+	}
+
+	&.is-selected,
+	&.has-child-selected {
+
+		.feature-hero__mobile-image {
+
+			@media (min-width: 768px) {
+				display: block;
+			}
+		}
+
+		.feature-hero__desktop-image {
+
+			@media (max-width: 767px) {
+				display: block;
+			}
+		}
+	}
+}

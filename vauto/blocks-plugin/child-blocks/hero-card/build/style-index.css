@@ -1,0 +1,1 @@
+.hero-card{margin:0;position:relative;width:50%}.hero-card__lower.has-black-background-color,.hero-card__upper.has-black-background-color{color:var(--wp--preset--color--white)}.hero-card:nth-of-type(odd){top:-50%;transform:translateY(50%)}

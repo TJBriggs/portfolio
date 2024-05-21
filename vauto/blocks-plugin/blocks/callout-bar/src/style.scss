@@ -1,0 +1,37 @@
+/**
+ *
+ * Frontend Styles
+ *
+ */
+.callout-bar {
+
+	&__bg-color {
+		padding: 25px 0;
+	}
+
+	&__heading {
+		align-items: center;
+		display: flex;
+		flex-flow: row wrap;
+
+		&.has-text-align-left {
+			justify-content: flex-start;
+		}
+
+		&.has-text-align-center {
+			justify-content: center;
+		}
+
+		&.has-text-align-right {
+			justify-content: flex-end;
+		}
+
+		img {
+			padding: 0 5px;
+		}
+	}
+
+	&__links {
+		margin-top: 0px !important;
+	}
+}

@@ -1,0 +1,17 @@
+{
+	"apiVersion": 2,
+	"name": "mx/product-tab",
+	"version": "0.1.0",
+	"title": "Product Tab",
+	"category": "features",
+	"icon": "schedule",
+	"description": "Complex tab panel to feature product details.",
+	"parent": [
+		"mx/repeater",
+		"mx/product-tabs"
+	],
+	"textdomain": "mx-blocks-plugin",
+	"editorScript": "file:./build/index.js",
+	"editorStyle": "file:./build/index.css",
+	"style": "file:./build/style-index.css"
+}

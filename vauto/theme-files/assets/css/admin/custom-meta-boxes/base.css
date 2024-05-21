@@ -1,0 +1,106 @@
+/**
+ *
+ * Base Meta Box Styles
+ *
+ */
+#mx_box_name_meta_box { /* This will change based on meta box name */
+
+	label {
+		display: inline-block;
+		font-weight: 700;
+		margin-bottom: 6px;
+		width: 100%;
+	}
+
+	textarea {
+		padding: 6px 8px;
+	}
+
+	select {
+		box-sizing: border-box;
+	}
+
+	input[type="text"],
+	input[type="email"],
+	input[type="tel"],
+	select,
+	textarea {
+		display: inline-block;
+		width: 100%;
+	}
+
+	.mx-meta-box {
+		column-gap: 1.5rem;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		padding: 1rem 0;
+		row-gap: 1.25rem;
+	}
+
+	.field-wrap {
+		width: 100%;
+
+		&--half {
+			@media (min-width: 768px) {
+				width: calc(50% - 1.5rem);
+			}
+		}
+
+		&--third {
+			@media (min-width: 768px) {
+				width: calc(50% - 1.5rem);
+			}
+
+			@media (min-width: 1024px) {
+				width: calc(33.333% - 1.5rem);
+			}
+		}
+
+		&--fourth {
+			@media (min-width: 768px) {
+				width: calc(50% - 1.5rem);
+			}
+
+			@media (min-width: 1200px) {
+				width: calc(25% - 1.5rem);
+			}
+		}
+	}
+}
+
+.mx-image-upload {
+	margin: 15px 0;
+
+	.preview-image {
+		max-width: 275px;
+	}
+
+	input[type="button"] {
+		background-color: transparent;
+		border: none;
+		color: #2271b1;
+		cursor: pointer;
+		padding: 0;
+		text-decoration: underline;
+	}
+}
+
+.mx-file-upload {
+
+	input[type="button"] {
+		background-color: transparent;
+		border: none;
+		color: #2271b1;
+		cursor: pointer;
+		margin-top: 15px;
+		padding: 0;
+		text-decoration: underline;
+	}
+
+	.file-url-preview {
+		border: none;
+		margin: 15px 0 0 0;
+		padding: 0;
+	}
+}
