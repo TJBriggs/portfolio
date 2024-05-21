@@ -383,7 +383,7 @@ Built several features, components, and AMP updates.
 
 [nesn]: #nesn
 [vauto]: #vauto
-[cummins]: #cummins
+[cummins]: #cummins-connected-solutions
 [zmodular]: #z-modular
 [golftec]: #golftec
 [pka]: #pk-associates
