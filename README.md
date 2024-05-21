@@ -67,12 +67,33 @@ vAuto was my first WordPress site built with the Block Editor, also known as Gut
 
 <br>
 
-![Image of Cummins Next.js App](./images/cummins.png "Cummins Next.js Applicaion")
+![Image of Cummins Connected Solutions App](./images/cummins-connected-solutions.png "Cummins Next.js Applicaion")
 
 [View Code](/cummins/connected-solutions)
+
+
+This project included to single page applications built with Next.Js. One is for their internal fleet managment software and the other is a multi-step onboarding form.
+
+#### Project Highlights:
+
+* xxxxxxxxxxxxxxxx
+* xxxxxxxxxxxxxxxx
+* xxxxxxxxxxxxxxxx
+* xxxxxxxxxxxxxxxx
+* xxxxxxxxxxxxxxxx
+
+<br>
+
+## Cummins Onboarding UI
+
+<br>
+
+![Image of Cummins Onboarding UI](./images/cummins-onboarding-ui.png "Cummins Onboarding UI")
+
 [View Code](/cummins/onboarding-ui)
 
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.
+
+This project included to single page applications built with Next.Js. One is for their internal fleet managment software and the other is a multi-step onboarding form.
 
 #### Project Highlights:
 
