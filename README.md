@@ -1,6 +1,6 @@
 # <img src="./images/logo.svg" alt="Thad Briggs Logo" width="42" height="25"> THADDEUS BRIGGS PORTFOLIO
 
-Thanks for visiting my portfolio repository. Below you will find a collection of my favorite sites. I was the lead developer on each of these projects.
+Thanks for visiting my portfolio repository. Below you will find a collection of web sites and web applications I have worked on over the years.
 
 <br>
 
@@ -16,7 +16,7 @@ Thanks for visiting my portfolio repository. Below you will find a collection of
 
 <br>
 
-![Image of NESN Website](./images/nesn.png "NESN Website")
+![Image of NESN Website](./images/nesn-360.png "NESN Website")
 
 <a href="https://nesn.com/" target="_blank">View WordPress Site</a>
 <a href="https://nesn.com/watch/" target="_blank">View NESN 360 React App</a>
