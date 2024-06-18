@@ -70,7 +70,7 @@ vAuto was my first WordPress site built with the Block Editor, also known as Gut
 
 [View Code](/cummins/connected-solutions)
 
-The Cummins development team needed help building the UI for their internal fleet management application. This single page application is a workng prototype of all the components and UI elements I built and styled for thier integration.
+The Cummins development team needed help building the UI for their internal fleet management application. This single page application is a workng prototype of all the components and UI elements I built and styled for their integration.
 
 #### Project Highlights:
 
