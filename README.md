@@ -4,14 +4,13 @@ Thanks for visiting my portfolio repository. Below you will find a collection of
 
 <br>
 
-|&nbsp;|&nbsp;|Quick Links|&nbsp;|&nbsp;|
-|:----------------:|:------------:|:------------:|:------------:|:------------:|
-|[NESN][nesn]|[vAuto][vauto]|[Cummins][cummins]|[Z Modular][zmodular]|[Golftec][golftec]|
-|[PK Associates][pka]|[ami + partners][ami]|[Bio2 Medical][bio2]|[Cairn Dental][cairn]|[Devetry][devetry]|
-|[Emailage][emailage]|[Proctor Productions][proctor]|[Szymanowski Orthodontics][damon]|[10up Projects][10up]|[The Mx Group Projects][mx]|
+|        &nbsp;        |             &nbsp;             |            Quick Links            |        &nbsp;         |           &nbsp;            |
+| :------------------: | :----------------------------: | :-------------------------------: | :-------------------: | :-------------------------: |
+|     [NESN][nesn]     |         [vAuto][vauto]         |        [Cummins][cummins]         | [Z Modular][zmodular] |     [Golftec][golftec]      |
+| [PK Associates][pka] |     [ami + partners][ami]      |       [Bio2 Medical][bio2]        | [Cairn Dental][cairn] |     [Devetry][devetry]      |
+| [Emailage][emailage] | [Proctor Productions][proctor] | [Szymanowski Orthodontics][damon] | [10up Projects][10up] | [The Mx Group Projects][mx] |
 
 <br>
-
 
 ## Resume
 
@@ -34,12 +33,12 @@ Due to a strict non-disclosure agreement, I can't share my code for the work I d
 
 #### Project Highlights:
 
-* Custom WordPress plugin to house and streamline block development
-* React single page application for streaming and VOD content
-* Custom blocks, block templates, and block patterns
-* Dynamic block content that consumed and displayed API data
-* Various React components using React Hooks, React Router, and the Context API
-* Refactor of the subscriber onboarding flow to integrate new customer facing promotions
+- Custom WordPress plugin to house and streamline block development
+- React single page application for streaming and VOD content
+- Custom blocks, block templates, and block patterns
+- Dynamic block content that consumed and displayed API data
+- Various React components using React Hooks, React Router, and the Context API
+- Refactor of the subscriber onboarding flow to integrate new customer facing promotions
 
 <br>
 
@@ -55,11 +54,11 @@ vAuto was my first WordPress site built with the Block Editor, also known as Gut
 
 #### Project Highlights:
 
-* Enhanced editor experience, that matches the front end
-* Custom blocks, block templates, and block patterns
-* Dynamic block content generated from custom post types
-* Utilizes theme.json for seamless theme/block integration
-* Video features, animations, and interactive content
+- Enhanced editor experience, that matches the front end
+- Custom blocks, block templates, and block patterns
+- Dynamic block content generated from custom post types
+- Utilizes theme.json for seamless theme/block integration
+- Video features, animations, and interactive content
 
 <br>
 
@@ -71,18 +70,17 @@ vAuto was my first WordPress site built with the Block Editor, also known as Gut
 
 [View Code](/cummins/connected-solutions)
 
-
 The Cummins development team needed help building the UI for their internal fleet management application. This single page application is a workng prototype of all the components and UI elements I built and styled for thier integration.
 
 #### Project Highlights:
 
-* Single page application built with React.js and Next.js
-* Robust design system based on atomic design principles
-* Visual style guide and component library
-* Complete page templates utilizing and connecting individual React components
-* Placeholder data to simplify the consumption of API data at the time of integration
-* Interactive form handling and state management to simulate data validation and functionality
-* Complex modal and table functionality throughout the application
+- Single page application built with React.js and Next.js
+- Robust design system based on atomic design principles
+- Visual style guide and component library
+- Complete page templates utilizing and connecting individual React components
+- Placeholder data to simplify the consumption of API data at the time of integration
+- Interactive form handling and state management to simulate data validation and functionality
+- Complex modal and table functionality throughout the application
 
 <br>
 
@@ -94,15 +92,14 @@ The Cummins development team needed help building the UI for their internal flee
 
 [View Code](/cummins/onboarding-ui)
 
-
 This basic single page application is a prototype of a multi-step onboarding form. The Cummins development team integrated these UI elements into their internal React application.
 
 #### Project Highlights:
 
-* Single page application built with React.js and Next.js
-* Multi-step form functionality with various form elements
-* Flexible React components with prop handling and defined prop types
-* Custom animations using Framer Motion
+- Single page application built with React.js and Next.js
+- Multi-step form functionality with various form elements
+- Flexible React components with prop handling and defined prop types
+- Custom animations using Framer Motion
 
 <br>
 
@@ -118,10 +115,10 @@ This B2B marketing website was a lot of fun to build! Z Modular takes a modular 
 
 #### Project Highlights:
 
-* Modular development and content managment with Advanced Custom Fields
-* Interactive video slider using the YouTube Data API
-* Fun video feature with appealing design and overlay
-* Ajax filtering for their community portfolio
+- Modular development and content managment with Advanced Custom Fields
+- Interactive video slider using the YouTube Data API
+- Fun video feature with appealing design and overlay
+- Ajax filtering for their community portfolio
 
 <br>
 
@@ -137,11 +134,11 @@ This project was the blueprint for GolfTEC's website redesign. It consists of a 
 
 #### Project Highlights:
 
-* KSS Styleguide
-* Unique Navigation
-* Static/Video Slider
-* Subtle Hover Animations
-* Complex Location Maps
+- KSS Styleguide
+- Unique Navigation
+- Static/Video Slider
+- Subtle Hover Animations
+- Complex Location Maps
 
 <br>
 
@@ -157,16 +154,15 @@ This structural engineering firm is known for their award-winning designs. Since
 
 #### Project Highlights:
 
-* Creative Portfolio Grid
-* AJAX Filtering & Search
-* Custom Taxonomies
-* Unique Design & Interface
-* Strategic Content Funnel
+- Creative Portfolio Grid
+- AJAX Filtering & Search
+- Custom Taxonomies
+- Unique Design & Interface
+- Strategic Content Funnel
 
 <br>
 
 ## ami + partners
-
 
 ![Image of ami + partners Website](./images/ami.png "ami + partners Website")
 
@@ -176,11 +172,11 @@ One of my favorite sites to date. I love the clean, yet rich design which appeal
 
 #### Project Highlights:
 
-* Sticky Navigation
-* Parallax Scrolling
-* CSS/SVG Animations
-* Custom Post Types
-* User-friendly Case Studies
+- Sticky Navigation
+- Parallax Scrolling
+- CSS/SVG Animations
+- Custom Post Types
+- User-friendly Case Studies
 
 <br>
 
@@ -196,14 +192,13 @@ This medical device company specialized in state-of-the-art technology. It's vit
 
 #### Project Highlights:
 
-* YouTube Video Hero
-* Multi-Lingual Content
-* Client Portal
-* Timeline Carousel
-* Custom Search
+- YouTube Video Hero
+- Multi-Lingual Content
+- Client Portal
+- Timeline Carousel
+- Custom Search
 
 <br>
-
 
 ## Cairn Dental
 
@@ -217,14 +212,13 @@ Cairns are the piles of stones placed next to hiking trails. They mark the path 
 
 #### Project Highlights:
 
-* Subtle Hover Effects
-* Custom Post Types
-* Clean, Modern Blog
-* Social Sharing
-* Interactive FAQs
+- Subtle Hover Effects
+- Custom Post Types
+- Clean, Modern Blog
+- Social Sharing
+- Interactive FAQs
 
 <br>
-
 
 ## Devetry
 
@@ -238,14 +232,13 @@ Devetry specializes in app development and they wanted a creative way to feature
 
 #### Project Highlights:
 
-* Unique Video Slider
-* Distinctive Image Grid
-* Strategic Landing Pages
-* Project Case Studies
-* AJAX Filtering
+- Unique Video Slider
+- Distinctive Image Grid
+- Strategic Landing Pages
+- Project Case Studies
+- AJAX Filtering
 
 <br>
-
 
 ## Emailage
 
@@ -259,11 +252,11 @@ I thoroughly enjoyed building this website. I love how the design incorporates s
 
 #### Project Highlights:
 
-* Multi-Lingual Site
-* Soft, Modern Design
-* Flexible Modules & Layouts
-* Adaptive Placeholders
-* AJAX Filtering & Search
+- Multi-Lingual Site
+- Soft, Modern Design
+- Flexible Modules & Layouts
+- Adaptive Placeholders
+- AJAX Filtering & Search
 
 <br>
 
@@ -279,11 +272,11 @@ Nominated for an Awwward, this site originally featured full screen videos, nest
 
 #### Project Highlights:
 
-* Mosaic Project Filtering
-* Parallax Scrolling
-* CSS/SVG Animations
-* Background Video
-* Fun Team Hover Effects
+- Mosaic Project Filtering
+- Parallax Scrolling
+- CSS/SVG Animations
+- Background Video
+- Fun Team Hover Effects
 
 <br>
 
@@ -299,11 +292,11 @@ My first site at Zenman, the boss wanted to challenge me to see what I could do.
 
 #### Project Highlights:
 
-* Animated Header
-* Dynamic Heros Images
-* Slow Parallax Scrolling
-* CSS/SVG Animations
-* Background Video
+- Animated Header
+- Dynamic Hero Images
+- Slow Parallax Scrolling
+- CSS/SVG Animations
+- Background Video
 
 <br>
 
@@ -321,10 +314,9 @@ Rebuilt our internal site from the ground up starting from a rebrand and redesig
 <https://www.cummins.com/><br>
 During the Cummins website redesign, I built and styled all the UI components used on the new site. I created a style guide and component library which were integrated with their existing Drupal CMS.
 
-
 I also built several new features, components, and page templates for the following WordPress sites:
 
-**Zekelman**<br> 
+**Zekelman**<br>
 <https://www.zekelman.com><br>
 
 **Picoma**<br>
@@ -341,7 +333,6 @@ I also built several new features, components, and page templates for the follow
 
 **Sharon Tube**<br>
 <https://www.sharontube.com><br>
-
 
 <br>
 
@@ -363,7 +354,7 @@ Conducted user testing and bug fixes. Also built various new features and compon
 <https://cloudblogs.microsoft.com/industry-blog><br>
 Built complex navigation feature with AJAX filtering.
 
-**Microsoft - Today In Tech**<br> 
+**Microsoft - Today In Tech**<br>
 <https://blogs.microsoft.com/today-in-tech><br>
 Conducted user testing and bug fixes. Minor component updates throughout the site.
 
