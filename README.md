@@ -109,7 +109,7 @@ This basic single page application is a prototype of a multi-step onboarding for
 
 ![Image of Z Modular Website](./images/z-modular.png "Z Modular Website")
 
-[View Code](/z-modular/theme-files)
+<a href="https://z-modular.com/" target="_blank">View Site</a> | [View Code](/z-modular/theme-files)
 
 This B2B marketing website was a lot of fun to build! Z Modular takes a modular approach to the building and construction process...similar to the approach I take when building web experiences!
 
