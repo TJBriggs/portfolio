@@ -12,14 +12,6 @@ Thanks for visiting my portfolio repository. Below you will find a collection of
 
 <br>
 
-## Resume
-
-<br>
-
-[ <img src="./thad-briggs-resume.png" alt="Thad Briggs Resume Thumbnail" width="612" height="792"> ](thad-briggs-resume.pdf "View Full Size")
-
-<br>
-
 ## NESN
 
 <br>
